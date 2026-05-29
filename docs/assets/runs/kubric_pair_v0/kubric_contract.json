@@ -1,0 +1,175 @@
+{
+  "run_id": "kubric_pair_v0",
+  "camera_trajectories": {
+    "cam_orbit_left": {
+      "description": "Fixed-radius leftward orbit around the scene center.",
+      "keyframes": [
+        {
+          "frame": 0,
+          "position": [
+            3.2,
+            -5.0,
+            3.0
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.6
+          ]
+        },
+        {
+          "frame": 47,
+          "position": [
+            0.2,
+            -5.8,
+            3.0
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.6
+          ]
+        },
+        {
+          "frame": 95,
+          "position": [
+            -3.2,
+            -5.0,
+            3.0
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.6
+          ]
+        }
+      ]
+    },
+    "cam_dolly_in": {
+      "description": "Forward dolly with a slight lateral correction.",
+      "keyframes": [
+        {
+          "frame": 0,
+          "position": [
+            1.0,
+            -7.2,
+            2.8
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.6
+          ]
+        },
+        {
+          "frame": 47,
+          "position": [
+            0.4,
+            -5.4,
+            2.6
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.6
+          ]
+        },
+        {
+          "frame": 95,
+          "position": [
+            0.0,
+            -3.9,
+            2.4
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.6
+          ]
+        }
+      ]
+    }
+  },
+  "physics_programs": {
+    "phys_bounce": {
+      "description": "Sphere dropped with horizontal velocity; gravity/collision produce bounce.",
+      "seed": 101,
+      "objects": [
+        {
+          "asset": "sphere",
+          "position": [
+            -1.7,
+            0.0,
+            2.0
+          ],
+          "velocity": [
+            1.4,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "phys_roll": {
+      "description": "Box starts with linear and angular velocity and rolls across the plane.",
+      "seed": 202,
+      "objects": [
+        {
+          "asset": "cube",
+          "position": [
+            -1.7,
+            0.0,
+            0.6
+          ],
+          "velocity": [
+            1.2,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            3.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  },
+  "clip_specs": [
+    {
+      "clip_id": "A_cam_orbit_phys_bounce",
+      "camera_id": "cam_orbit_left",
+      "physics_id": "phys_bounce"
+    },
+    {
+      "clip_id": "B_cam_orbit_phys_roll",
+      "camera_id": "cam_orbit_left",
+      "physics_id": "phys_roll"
+    },
+    {
+      "clip_id": "C_cam_dolly_phys_bounce",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_bounce"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "same_camera_diff_physics",
+      "clip_ids": [
+        "A_cam_orbit_phys_bounce",
+        "B_cam_orbit_phys_roll"
+      ],
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id"
+    },
+    {
+      "group_id": "diff_camera_same_physics",
+      "clip_ids": [
+        "A_cam_orbit_phys_bounce",
+        "C_cam_dolly_phys_bounce"
+      ],
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id"
+    }
+  ]
+}
