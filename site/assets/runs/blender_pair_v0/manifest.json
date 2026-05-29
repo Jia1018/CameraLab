@@ -1,0 +1,61 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "blender_pair_v0",
+  "generator": "blender_preview",
+  "description": "Blender-only 3D preview; not Kubric/PyBullet.",
+  "clips": [
+    {
+      "clip_id": "A_cam_orbit_phys_bounce",
+      "camera_id": "cam_orbit_left",
+      "physics_id": "phys_bounce",
+      "pair_groups": [
+        "same_camera_diff_physics",
+        "diff_camera_same_physics"
+      ],
+      "video": "videos/A_cam_orbit_phys_bounce.mp4",
+      "metadata": "metadata/A_cam_orbit_phys_bounce.json"
+    },
+    {
+      "clip_id": "B_cam_orbit_phys_roll",
+      "camera_id": "cam_orbit_left",
+      "physics_id": "phys_roll",
+      "pair_groups": [
+        "same_camera_diff_physics"
+      ],
+      "video": "videos/B_cam_orbit_phys_roll.mp4",
+      "metadata": "metadata/B_cam_orbit_phys_roll.json"
+    },
+    {
+      "clip_id": "C_cam_dolly_phys_bounce",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_bounce",
+      "pair_groups": [
+        "diff_camera_same_physics"
+      ],
+      "video": "videos/C_cam_dolly_phys_bounce.mp4",
+      "metadata": "metadata/C_cam_dolly_phys_bounce.json"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "same_camera_diff_physics",
+      "title": "Same camera, different physics",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "A_cam_orbit_phys_bounce",
+        "B_cam_orbit_phys_roll"
+      ]
+    },
+    {
+      "group_id": "diff_camera_same_physics",
+      "title": "Different camera, same physics",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "A_cam_orbit_phys_bounce",
+        "C_cam_dolly_phys_bounce"
+      ]
+    }
+  ]
+}
