@@ -1,0 +1,1997 @@
+{
+  "clip_id": "F_truck_multi_swirl",
+  "camera_id": "cam_truck_right",
+  "physics_id": "phys_multi_swirl",
+  "resolution": [
+    640,
+    480
+  ],
+  "fps": 24,
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -2.4,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.5,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.25139,
+          -0.0,
+          -0.35662
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            1.15,
+            0.0,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -1.3,
+            0.9,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.0,
+            -1.4,
+            0.22
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.03226,
+      "camera": {
+        "position": [
+          -2.24516,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.46774,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24909,
+          0.0,
+          -0.33535
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            1.12646,
+            0.23149,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -1.21613,
+            0.88158,
+            0.24
+          ],
+          "rotation_euler": [
+            0.08107,
+            0.52698,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.14091,
+            -1.30968,
+            0.45949
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.06452,
+      "camera": {
+        "position": [
+          -2.09032,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.43548,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24691,
+          0.0,
+          -0.31376
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            1.0568,
+            0.45351,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -1.13226,
+            0.82706,
+            0.24
+          ],
+          "rotation_euler": [
+            0.16215,
+            1.05395,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.27605,
+            -1.21935,
+            0.67701
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.09677,
+      "camera": {
+        "position": [
+          -1.93548,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.40323,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24484,
+          -0.0,
+          -0.29186
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.94388,
+            0.65696,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -1.04839,
+            0.73869,
+            0.24
+          ],
+          "rotation_euler": [
+            0.24322,
+            1.58093,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.39989,
+            -1.12903,
+            0.85262
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.12903,
+      "camera": {
+        "position": [
+          -1.78065,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.37097,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24289,
+          0.0,
+          -0.26967
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.79231,
+            0.83351,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.96452,
+            0.62007,
+            0.24
+          ],
+          "rotation_euler": [
+            0.32429,
+            2.10791,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.50735,
+            -1.03871,
+            0.9702
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.16129,
+      "camera": {
+        "position": [
+          -1.62581,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.33871,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24108,
+          0.0,
+          -0.24721
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.60831,
+            0.97594,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.88065,
+            0.47607,
+            0.24
+          ],
+          "rotation_euler": [
+            0.40537,
+            2.63488,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.59405,
+            -0.94839,
+            1.01897
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.19355,
+      "camera": {
+        "position": [
+          -1.47097,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.30645,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.2394,
+          -0.0,
+          -0.22449
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.3994,
+            1.07841,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.79677,
+            0.31257,
+            0.24
+          ],
+          "rotation_euler": [
+            0.48644,
+            3.16186,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.65643,
+            -0.85806,
+            0.99446
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.22581,
+      "camera": {
+        "position": [
+          -1.31613,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.27419,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23787,
+          -0.0,
+          -0.20153
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.17414,
+            1.13674,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.7129,
+            0.13629,
+            0.24
+          ],
+          "rotation_euler": [
+            0.56751,
+            3.68884,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.69193,
+            -0.76774,
+            0.89892
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.25806,
+      "camera": {
+        "position": [
+          -1.16129,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.24194,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23649,
+          -0.0,
+          -0.17835
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.05825,
+            1.14852,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.62903,
+            -0.04558,
+            0.24
+          ],
+          "rotation_euler": [
+            0.64859,
+            4.21581,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.6991,
+            -0.67742,
+            0.7411
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.29032,
+      "camera": {
+        "position": [
+          -1.00645,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.20968,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23527,
+          -0.0,
+          -0.15498
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.28825,
+            1.11329,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.54516,
+            -0.22559,
+            0.24
+          ],
+          "rotation_euler": [
+            0.72966,
+            4.74279,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.67765,
+            -0.5871,
+            0.53548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.32258,
+      "camera": {
+        "position": [
+          -0.85161,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.17742,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23421,
+          0.0,
+          -0.13143
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.50645,
+            1.03248,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.46129,
+            -0.39635,
+            0.24
+          ],
+          "rotation_euler": [
+            0.81073,
+            5.26977,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.62846,
+            -0.49677,
+            0.30093
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.35484,
+      "camera": {
+        "position": [
+          -0.69677,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.14516,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23332,
+          0.0,
+          -0.10774
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.70392,
+            0.90939,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.37742,
+            -0.5509,
+            0.24
+          ],
+          "rotation_euler": [
+            0.89181,
+            5.79675,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.55354,
+            -0.40645,
+            0.38104
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.3871,
+      "camera": {
+        "position": [
+          -0.54194,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.1129,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23261,
+          -0.0,
+          -0.08393
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.87257,
+            0.74908,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.29355,
+            -0.68288,
+            0.24
+          ],
+          "rotation_euler": [
+            0.97288,
+            6.32372,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.45596,
+            -0.31613,
+            0.60824
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.41935,
+      "camera": {
+        "position": [
+          -0.3871,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.08065,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23207,
+          0.0,
+          -0.06002
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -1.0055,
+            0.5581,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.20968,
+            -0.78691,
+            0.24
+          ],
+          "rotation_euler": [
+            1.05395,
+            6.8507,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.33971,
+            -0.22581,
+            0.79983
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.45161,
+      "camera": {
+        "position": [
+          -0.23226,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.04839,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23171,
+          0.0,
+          -0.03604
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -1.09726,
+            0.34427,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.12581,
+            -0.85873,
+            0.24
+          ],
+          "rotation_euler": [
+            1.13503,
+            7.37768,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.20955,
+            -0.13548,
+            0.93824
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.48387,
+      "camera": {
+        "position": [
+          -0.07742,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          -0.01613,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23153,
+          -0.0,
+          -0.01202
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -1.1441,
+            0.11634,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            -0.04194,
+            -0.89538,
+            0.24
+          ],
+          "rotation_euler": [
+            1.2161,
+            7.90465,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            0.07082,
+            -0.04516,
+            1.01077
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.51613,
+      "camera": {
+        "position": [
+          0.07742,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.01613,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23153,
+          0.0,
+          0.01202
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -1.1441,
+            -0.11634,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.04194,
+            -0.89538,
+            0.24
+          ],
+          "rotation_euler": [
+            1.29717,
+            8.43163,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.07082,
+            0.04516,
+            1.01077
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.54839,
+      "camera": {
+        "position": [
+          0.23226,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.04839,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23171,
+          -0.0,
+          0.03604
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -1.09726,
+            -0.34427,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.12581,
+            -0.85873,
+            0.24
+          ],
+          "rotation_euler": [
+            1.37825,
+            8.95861,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.20955,
+            0.13548,
+            0.93824
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.58065,
+      "camera": {
+        "position": [
+          0.3871,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.08065,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23207,
+          -0.0,
+          0.06002
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -1.0055,
+            -0.5581,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.20968,
+            -0.78691,
+            0.24
+          ],
+          "rotation_euler": [
+            1.45932,
+            9.48558,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.33971,
+            0.22581,
+            0.79983
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.6129,
+      "camera": {
+        "position": [
+          0.54194,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.1129,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23261,
+          0.0,
+          0.08393
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.87257,
+            -0.74908,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.29355,
+            -0.68288,
+            0.24
+          ],
+          "rotation_euler": [
+            1.54039,
+            10.01256,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.45596,
+            0.31613,
+            0.60824
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.64516,
+      "camera": {
+        "position": [
+          0.69677,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.14516,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23332,
+          -0.0,
+          0.10774
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.70392,
+            -0.90939,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.37742,
+            -0.5509,
+            0.24
+          ],
+          "rotation_euler": [
+            1.62147,
+            10.53954,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.55354,
+            0.40645,
+            0.38104
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.67742,
+      "camera": {
+        "position": [
+          0.85161,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.17742,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23421,
+          -0.0,
+          0.13143
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.50645,
+            -1.03248,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.46129,
+            -0.39635,
+            0.24
+          ],
+          "rotation_euler": [
+            1.70254,
+            11.06651,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.62846,
+            0.49677,
+            0.30093
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.70968,
+      "camera": {
+        "position": [
+          1.00645,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.20968,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23527,
+          0.0,
+          0.15498
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.28825,
+            -1.11329,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.54516,
+            -0.22559,
+            0.24
+          ],
+          "rotation_euler": [
+            1.78361,
+            11.59349,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.67765,
+            0.5871,
+            0.53548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 0.74194,
+      "camera": {
+        "position": [
+          1.16129,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.24194,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23649,
+          0.0,
+          0.17835
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            -0.05825,
+            -1.14852,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.62903,
+            -0.04558,
+            0.24
+          ],
+          "rotation_euler": [
+            1.86469,
+            12.12047,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.6991,
+            0.67742,
+            0.7411
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "t": 0.77419,
+      "camera": {
+        "position": [
+          1.31613,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.27419,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.23787,
+          0.0,
+          0.20153
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.17414,
+            -1.13674,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.7129,
+            0.13629,
+            0.24
+          ],
+          "rotation_euler": [
+            1.94576,
+            12.64744,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.69193,
+            0.76774,
+            0.89892
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "t": 0.80645,
+      "camera": {
+        "position": [
+          1.47097,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.30645,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.2394,
+          0.0,
+          0.22449
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.3994,
+            -1.07841,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.79677,
+            0.31257,
+            0.24
+          ],
+          "rotation_euler": [
+            2.02683,
+            13.17442,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.65643,
+            0.85806,
+            0.99446
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "t": 0.83871,
+      "camera": {
+        "position": [
+          1.62581,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.33871,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24108,
+          -0.0,
+          0.24721
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.60831,
+            -0.97594,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.88065,
+            0.47607,
+            0.24
+          ],
+          "rotation_euler": [
+            2.10791,
+            13.7014,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.59405,
+            0.94839,
+            1.01897
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "t": 0.87097,
+      "camera": {
+        "position": [
+          1.78065,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.37097,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24289,
+          -0.0,
+          0.26967
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.79231,
+            -0.83351,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            0.96452,
+            0.62007,
+            0.24
+          ],
+          "rotation_euler": [
+            2.18898,
+            14.22837,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.50735,
+            1.03871,
+            0.9702
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "t": 0.90323,
+      "camera": {
+        "position": [
+          1.93548,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.40323,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24484,
+          0.0,
+          0.29186
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            0.94388,
+            -0.65696,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            1.04839,
+            0.73869,
+            0.24
+          ],
+          "rotation_euler": [
+            2.27005,
+            14.75535,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.39989,
+            1.12903,
+            0.85262
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "t": 0.93548,
+      "camera": {
+        "position": [
+          2.09032,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.43548,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24691,
+          -0.0,
+          0.31376
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            1.0568,
+            -0.45351,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            1.13226,
+            0.82706,
+            0.24
+          ],
+          "rotation_euler": [
+            2.35113,
+            15.28233,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.27605,
+            1.21935,
+            0.67701
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "t": 0.96774,
+      "camera": {
+        "position": [
+          2.24516,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.46774,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.24909,
+          -0.0,
+          0.33535
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            1.12646,
+            -0.23149,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            1.21613,
+            0.88158,
+            0.24
+          ],
+          "rotation_euler": [
+            2.4322,
+            15.80931,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.14091,
+            1.30968,
+            0.45949
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          2.4,
+          -5.1,
+          2.35
+        ],
+        "look_at": [
+          0.5,
+          0.0,
+          0.55
+        ],
+        "rotation_euler": [
+          1.25139,
+          0.0,
+          0.35662
+        ]
+      },
+      "objects": [
+        {
+          "name": "swirl_sphere",
+          "position": [
+            1.15,
+            -0.0,
+            0.26
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "swirl_cube",
+          "position": [
+            1.3,
+            0.9,
+            0.24
+          ],
+          "rotation_euler": [
+            2.51327,
+            16.33628,
+            0.0
+          ]
+        },
+        {
+          "name": "vertical_bounce",
+          "position": [
+            -0.0,
+            1.4,
+            0.22
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "video": "videos/F_truck_multi_swirl.mp4"
+}

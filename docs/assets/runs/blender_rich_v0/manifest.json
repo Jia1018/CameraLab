@@ -1,0 +1,109 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "blender_rich_v0",
+  "generator": "blender_rich_preview",
+  "description": "Higher-resolution Blender-only paired preview with single/multi-object procedural motion and varied camera direction/speed.",
+  "resolution": [
+    640,
+    480
+  ],
+  "fps": 24,
+  "frames": 32,
+  "cycles_samples": 2,
+  "clips": [
+    {
+      "clip_id": "A_combo_bounce_diag",
+      "camera_id": "cam_combo_crane_orbit",
+      "physics_id": "phys_bounce_diag",
+      "pair_groups": [
+        "same_camera_combo_diff_physics"
+      ],
+      "video": "videos/A_combo_bounce_diag.mp4",
+      "metadata": "metadata/A_combo_bounce_diag.json"
+    },
+    {
+      "clip_id": "B_combo_two_cross",
+      "camera_id": "cam_combo_crane_orbit",
+      "physics_id": "phys_two_cross",
+      "pair_groups": [
+        "same_camera_combo_diff_physics",
+        "different_camera_same_multibody_physics"
+      ],
+      "video": "videos/B_combo_two_cross.mp4",
+      "metadata": "metadata/B_combo_two_cross.json"
+    },
+    {
+      "clip_id": "C_orbit_two_cross",
+      "camera_id": "cam_orbit_fast",
+      "physics_id": "phys_two_cross",
+      "pair_groups": [
+        "different_camera_same_multibody_physics"
+      ],
+      "video": "videos/C_orbit_two_cross.mp4",
+      "metadata": "metadata/C_orbit_two_cross.json"
+    },
+    {
+      "clip_id": "D_dolly_two_cross",
+      "camera_id": "cam_dolly_in_tilt",
+      "physics_id": "phys_two_cross",
+      "pair_groups": [
+        "different_camera_same_multibody_physics"
+      ],
+      "video": "videos/D_dolly_two_cross.mp4",
+      "metadata": "metadata/D_dolly_two_cross.json"
+    },
+    {
+      "clip_id": "E_truck_roll_reverse",
+      "camera_id": "cam_truck_right",
+      "physics_id": "phys_roll_reverse",
+      "pair_groups": [
+        "same_truck_camera_single_vs_multi"
+      ],
+      "video": "videos/E_truck_roll_reverse.mp4",
+      "metadata": "metadata/E_truck_roll_reverse.json"
+    },
+    {
+      "clip_id": "F_truck_multi_swirl",
+      "camera_id": "cam_truck_right",
+      "physics_id": "phys_multi_swirl",
+      "pair_groups": [
+        "same_truck_camera_single_vs_multi"
+      ],
+      "video": "videos/F_truck_multi_swirl.mp4",
+      "metadata": "metadata/F_truck_multi_swirl.json"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "same_camera_combo_diff_physics",
+      "title": "Same combo camera, different physics",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "A_combo_bounce_diag",
+        "B_combo_two_cross"
+      ]
+    },
+    {
+      "group_id": "different_camera_same_multibody_physics",
+      "title": "Different cameras, same multi-object physics",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "B_combo_two_cross",
+        "C_orbit_two_cross",
+        "D_dolly_two_cross"
+      ]
+    },
+    {
+      "group_id": "same_truck_camera_single_vs_multi",
+      "title": "Same truck camera, single vs multi-object physics",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "E_truck_roll_reverse",
+        "F_truck_multi_swirl"
+      ]
+    }
+  ]
+}

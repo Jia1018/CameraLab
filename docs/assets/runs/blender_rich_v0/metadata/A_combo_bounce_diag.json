@@ -1,0 +1,1165 @@
+{
+  "clip_id": "A_combo_bounce_diag",
+  "camera_id": "cam_combo_crane_orbit",
+  "physics_id": "phys_bounce_diag",
+  "resolution": [
+    640,
+    480
+  ],
+  "fps": 24,
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -3.57084,
+          -4.57046,
+          2.2
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.30966,
+          -0.0,
+          -0.66323
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -2.5,
+            -1.6,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.03226,
+      "camera": {
+        "position": [
+          -3.35706,
+          -4.69803,
+          2.23548
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.30282,
+          -0.0,
+          -0.62044
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -2.33871,
+            -1.49677,
+            0.57695
+          ],
+          "rotation_euler": [
+            0.0,
+            0.50671,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.06452,
+      "camera": {
+        "position": [
+          -3.13893,
+          -4.81571,
+          2.27097
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.29595,
+          0.0,
+          -0.57765
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -2.17742,
+            -1.39355,
+            0.8376
+          ],
+          "rotation_euler": [
+            0.0,
+            1.01342,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.09677,
+      "camera": {
+        "position": [
+          -2.91691,
+          -4.92337,
+          2.30645
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.28904,
+          0.0,
+          -0.53486
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -2.01613,
+            -1.29032,
+            1.06661
+          ],
+          "rotation_euler": [
+            0.0,
+            1.52013,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.12903,
+      "camera": {
+        "position": [
+          -2.69145,
+          -5.02089,
+          2.34194
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.2821,
+          -0.0,
+          -0.49207
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -1.85484,
+            -1.1871,
+            1.25049
+          ],
+          "rotation_euler": [
+            0.0,
+            2.02683,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.16129,
+      "camera": {
+        "position": [
+          -2.46301,
+          -5.10818,
+          2.37742
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.27512,
+          -0.0,
+          -0.44928
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -1.69355,
+            -1.08387,
+            1.37841
+          ],
+          "rotation_euler": [
+            0.0,
+            2.53354,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.19355,
+      "camera": {
+        "position": [
+          -2.23204,
+          -5.18515,
+          2.4129
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.26811,
+          0.0,
+          -0.40649
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -1.53226,
+            -0.98065,
+            1.44286
+          ],
+          "rotation_euler": [
+            0.0,
+            3.04025,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.22581,
+      "camera": {
+        "position": [
+          -1.99902,
+          -5.25177,
+          2.44839
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.26106,
+          0.0,
+          -0.3637
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -1.37097,
+            -0.87742,
+            1.44003
+          ],
+          "rotation_euler": [
+            0.0,
+            3.54696,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.25806,
+      "camera": {
+        "position": [
+          -1.7644,
+          -5.30798,
+          2.48387
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.25398,
+          -0.0,
+          -0.32092
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -1.20968,
+            -0.77419,
+            1.3701
+          ],
+          "rotation_euler": [
+            0.0,
+            4.05367,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.29032,
+      "camera": {
+        "position": [
+          -1.52865,
+          -5.35378,
+          2.51935
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.24687,
+          -0.0,
+          -0.27813
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -1.04839,
+            -0.67097,
+            1.23717
+          ],
+          "rotation_euler": [
+            0.0,
+            4.56038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.32258,
+      "camera": {
+        "position": [
+          -1.29222,
+          -5.38918,
+          2.55484
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.23973,
+          0.0,
+          -0.23534
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -0.8871,
+            -0.56774,
+            1.04908
+          ],
+          "rotation_euler": [
+            0.0,
+            5.06708,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.35484,
+      "camera": {
+        "position": [
+          -1.05558,
+          -5.41419,
+          2.59032
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.23256,
+          -0.0,
+          -0.19255
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -0.72581,
+            -0.46452,
+            0.81689
+          ],
+          "rotation_euler": [
+            0.0,
+            5.57379,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.3871,
+      "camera": {
+        "position": [
+          -0.81916,
+          -5.42887,
+          2.62581
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.22536,
+          -0.0,
+          -0.14976
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -0.56452,
+            -0.36129,
+            0.55428
+          ],
+          "rotation_euler": [
+            0.0,
+            6.0805,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.41935,
+      "camera": {
+        "position": [
+          -0.58343,
+          -5.43328,
+          2.66129
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.21812,
+          0.0,
+          -0.10697
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -0.40323,
+            -0.25806,
+            0.32331
+          ],
+          "rotation_euler": [
+            0.0,
+            6.58721,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.45161,
+      "camera": {
+        "position": [
+          -0.34883,
+          -5.42751,
+          2.69677
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.21086,
+          -0.0,
+          -0.06418
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -0.24194,
+            -0.15484,
+            0.59952
+          ],
+          "rotation_euler": [
+            0.0,
+            7.09392,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.48387,
+      "camera": {
+        "position": [
+          -0.1158,
+          -5.41166,
+          2.73226
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.20356,
+          0.0,
+          -0.02139
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            -0.08065,
+            -0.05161,
+            0.8581
+          ],
+          "rotation_euler": [
+            0.0,
+            7.60063,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.51613,
+      "camera": {
+        "position": [
+          0.11524,
+          -5.38586,
+          2.76774
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.19624,
+          0.0,
+          0.02139
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            0.08065,
+            0.05161,
+            1.08382
+          ],
+          "rotation_euler": [
+            0.0,
+            8.10734,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.54839,
+      "camera": {
+        "position": [
+          0.34387,
+          -5.35025,
+          2.80323
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.18889,
+          0.0,
+          0.06418
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            0.24194,
+            0.15484,
+            1.26341
+          ],
+          "rotation_euler": [
+            0.0,
+            8.61404,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.58065,
+      "camera": {
+        "position": [
+          0.56966,
+          -5.30499,
+          2.83871
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.18151,
+          -0.0,
+          0.10697
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            0.40323,
+            0.25806,
+            1.38629
+          ],
+          "rotation_euler": [
+            0.0,
+            9.12075,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.6129,
+      "camera": {
+        "position": [
+          0.79221,
+          -5.25025,
+          2.87419
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.17411,
+          0.0,
+          0.14976
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            0.56452,
+            0.36129,
+            1.44522
+          ],
+          "rotation_euler": [
+            0.0,
+            9.62746,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.64516,
+      "camera": {
+        "position": [
+          1.01113,
+          -5.18622,
+          2.90968
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.16668,
+          0.0,
+          0.19255
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            0.72581,
+            0.46452,
+            1.43674
+          ],
+          "rotation_euler": [
+            0.0,
+            10.13417,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.67742,
+      "camera": {
+        "position": [
+          1.22603,
+          -5.11313,
+          2.94516
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.15922,
+          0.0,
+          0.23534
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            0.8871,
+            0.56774,
+            1.36134
+          ],
+          "rotation_euler": [
+            0.0,
+            10.64088,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.70968,
+      "camera": {
+        "position": [
+          1.43654,
+          -5.03119,
+          2.98065
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.15174,
+          0.0,
+          0.27813
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            1.04839,
+            0.67097,
+            1.22347
+          ],
+          "rotation_euler": [
+            0.0,
+            11.14759,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 0.74194,
+      "camera": {
+        "position": [
+          1.6423,
+          -4.94065,
+          3.01613
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.14424,
+          0.0,
+          0.32092
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            1.20968,
+            0.77419,
+            1.03124
+          ],
+          "rotation_euler": [
+            0.0,
+            11.65429,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "t": 0.77419,
+      "camera": {
+        "position": [
+          1.84295,
+          -4.84176,
+          3.05161
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.13671,
+          -0.0,
+          0.3637
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            1.37097,
+            0.87742,
+            0.79596
+          ],
+          "rotation_euler": [
+            0.0,
+            12.161,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "t": 0.80645,
+      "camera": {
+        "position": [
+          2.03817,
+          -4.73479,
+          3.0871
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.12916,
+          0.0,
+          0.40649
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            1.53226,
+            0.98065,
+            0.53149
+          ],
+          "rotation_euler": [
+            0.0,
+            12.66771,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "t": 0.83871,
+      "camera": {
+        "position": [
+          2.22763,
+          -4.62002,
+          3.12258
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.12159,
+          -0.0,
+          0.44928
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            1.69355,
+            1.08387,
+            0.3466
+          ],
+          "rotation_euler": [
+            0.0,
+            13.17442,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "t": 0.87097,
+      "camera": {
+        "position": [
+          2.41103,
+          -4.49776,
+          3.15806
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.114,
+          -0.0,
+          0.49207
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            1.85484,
+            1.1871,
+            0.62196
+          ],
+          "rotation_euler": [
+            0.0,
+            13.68113,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "t": 0.90323,
+      "camera": {
+        "position": [
+          2.58806,
+          -4.36831,
+          3.19355
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.10639,
+          0.0,
+          0.53486
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            2.01613,
+            1.29032,
+            0.87836
+          ],
+          "rotation_euler": [
+            0.0,
+            14.18784,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "t": 0.93548,
+      "camera": {
+        "position": [
+          2.75846,
+          -4.23199,
+          3.22903
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.09876,
+          -0.0,
+          0.57765
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            2.17742,
+            1.39355,
+            1.10072
+          ],
+          "rotation_euler": [
+            0.0,
+            14.69455,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "t": 0.96774,
+      "camera": {
+        "position": [
+          2.92196,
+          -4.08912,
+          3.26452
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.09111,
+          -0.0,
+          0.62044
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            2.33871,
+            1.49677,
+            1.27594
+          ],
+          "rotation_euler": [
+            0.0,
+            15.20125,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          3.07831,
+          -3.94005,
+          3.3
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.65
+        ],
+        "rotation_euler": [
+          1.08344,
+          -0.0,
+          0.66323
+        ]
+      },
+      "objects": [
+        {
+          "name": "diag_fast_sphere",
+          "position": [
+            2.5,
+            1.6,
+            1.39372
+          ],
+          "rotation_euler": [
+            0.0,
+            15.70796,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "video": "videos/A_combo_bounce_diag.mp4"
+}
