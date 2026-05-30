@@ -37,6 +37,7 @@ CAMERA_PRIMITIVES = [
 
 CAMERA_SPECS = [
     {"id": "cam_static", "primitives": ["Static"], "speed": "none", "view": {"x": -1.1, "z": 0.45, "target_x": -0.25, "target_z": 0.08, "roll": -4.0}},
+    {"id": "cam_top_down_drift", "primitives": ["Pedestal_Down", "Tilt_Down", "Truck_Right"], "speed": "ease_in_out", "view": {"x": -0.4, "z": 0.0, "target_x": 0.0, "target_z": 0.0, "roll": 8.0}},
     {"id": "cam_dolly_in", "primitives": ["Dolly_In"], "speed": "slow", "view": {"x": 1.0, "z": -0.25, "target_x": 0.20, "target_z": -0.08, "roll": 2.5}},
     {"id": "cam_dolly_out_fast", "primitives": ["Dolly_Out"], "speed": "fast", "view": {"x": -0.8, "z": 0.35, "target_x": -0.15, "target_z": 0.04, "roll": -2.0}},
     {"id": "cam_truck_left_pan_right", "primitives": ["Truck_Left", "Pan_Right"], "speed": "medium", "view": {"x": 0.0, "z": 0.15, "target_x": 0.0, "target_z": 0.06, "roll": 1.0}},
@@ -252,12 +253,19 @@ def object_pose(kind: str, idx: int, t: float) -> tuple[Vector, tuple[float, flo
             return Vector((-1.8 + 3.6 * t, 0.6 * math.cos(a), 0.25)), (0.3 * a, 2.8 * a, 0)
         return Vector((0.6 * math.sin(a), -1.5 + 3.0 * t, 0.22 + 0.65 * abs(math.sin(3 * math.pi * t)))), (0, 0, 0)
     if kind == "hit_static_block":
+        contact_t = 0.68
+        contact_x = -0.02  # block min x (0.225) minus sphere radius (0.24), with a small visual gap
         if idx == 0:
-            x = -2.8 + 4.5 * min(t, 0.74)
-            if t > 0.74:
-                x = 0.53 - 1.1 * (t - 0.74)
-            return Vector((x, -0.2, 0.24 + 0.15 * abs(math.sin(6 * math.pi * t)))), (0, 0, 0)
-        return Vector((0.5 + 0.25 * max(0, t - 0.74), -0.2, 0.3)), (0, 0, 0.5 * max(0, t - 0.74))
+            if t <= contact_t:
+                u = t / contact_t
+                x = -2.8 + (contact_x + 2.8) * u
+            else:
+                u = (t - contact_t) / (1.0 - contact_t)
+                x = contact_x - 1.05 * u
+            z = 0.24 + 0.13 * abs(math.sin(5 * math.pi * t)) * (1.0 - 0.35 * max(0.0, t - contact_t))
+            return Vector((x, -0.2, z)), (0, 0, 0)
+        block_shift = 0.32 * max(0.0, t - contact_t) / (1.0 - contact_t)
+        return Vector((0.5 + block_shift, -0.2, 0.3)), (0, 0, 0.35 * block_shift)
     if kind == "static_with_dynamic_bg":
         if idx == 0:
             return Vector((0, -0.7, 0.28)), (0, 0, 0)
@@ -280,6 +288,10 @@ def camera_state(camera: dict, t: float) -> tuple[Vector, Vector, float, float]:
         pos.y = -6.2 + 2.2 * u
     elif cid == "cam_dolly_out_fast":
         pos.y = -3.6 - 3.0 * u
+    elif cid == "cam_top_down_drift":
+        pos = Vector((-1.4 + 2.8 * u, -0.55 + 0.35 * math.sin(math.pi * u), 6.8 - 0.7 * u))
+        target = Vector((0.0 + 0.4 * math.sin(2 * math.pi * u), -0.1 + 0.35 * u, 0.12))
+        lens = 42.0
     elif cid == "cam_truck_left_pan_right":
         pos.x = 2.2 - 4.4 * u
         target.x = -0.8 + 1.6 * u
@@ -328,20 +340,33 @@ def default_frames_for_physics(physics: dict) -> int:
 
 def build_clip_specs(max_clips: int, seed: int) -> list[ClipSpec]:
     specs = []
+    diagnostic_scene = SCENE_SPECS[0]
     forced = [
-        ("confusing_cam_push_static", "cam_dolly_in", "phys_static_center"),
-        ("confusing_static_obj_back", "cam_static", "phys_confusing_move_back"),
-        ("outframe_cam_push_obj_cross", "cam_out_of_frame_push", "phys_out_of_frame"),
+        ("ambiguous_cam_dolly_static", "cam_dolly_in", "phys_static_center", diagnostic_scene),
+        ("ambiguous_static_obj_toward_camera", "cam_static", "phys_move_toward", diagnostic_scene),
+        ("outframe_cam_push_obj_cross", "cam_out_of_frame_push", "phys_out_of_frame", None),
     ]
-    for clip_id, cam_id, phys_id in forced:
+    for clip_id, cam_id, phys_id, scene in forced:
         phys = next(p for p in PHYSICS_SPECS if p["id"] == phys_id)
-        specs.append(ClipSpec(clip_id, next(c for c in CAMERA_SPECS if c["id"] == cam_id), phys, scene_for_physics(phys), default_frames_for_physics(phys)))
-    for cam in CAMERA_SPECS:
-        for phys in PHYSICS_SPECS:
+        specs.append(ClipSpec(clip_id, next(c for c in CAMERA_SPECS if c["id"] == cam_id), phys, scene or scene_for_physics(phys), default_frames_for_physics(phys)))
+    used = {(spec.camera["id"], spec.physics["id"]) for spec in specs}
+    round_idx = 0
+    while len(specs) < max_clips:
+        added = False
+        for cam_idx, cam in enumerate(CAMERA_SPECS):
             if len(specs) >= max_clips:
-                return specs
+                break
+            phys = PHYSICS_SPECS[(cam_idx + round_idx) % len(PHYSICS_SPECS)]
+            key = (cam["id"], phys["id"])
+            if key in used:
+                continue
+            used.add(key)
             clip_id = f"clip_{len(specs):03d}_{cam['id']}_{phys['id']}"
             specs.append(ClipSpec(clip_id, cam, phys, scene_for_physics(phys), default_frames_for_physics(phys)))
+            added = True
+        if not added:
+            break
+        round_idx += 1
     return specs
 
 
@@ -461,8 +486,8 @@ def update_index(run_id: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-id", default="blender_bank_v0")
-    parser.add_argument("--clips", type=int, default=40)
-    parser.add_argument("--pairs", type=int, default=120)
+    parser.add_argument("--clips", type=int, default=60)
+    parser.add_argument("--pairs", type=int, default=160)
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     args = parser.parse_args(argv)
     run_dir = RUN_ROOT / args.run_id
@@ -470,8 +495,8 @@ def main() -> None:
     specs = build_clip_specs(args.clips, SEED)
     clips = [render_clip(spec, run_dir) for spec in specs]
     pair_groups = make_pairs(clips, args.pairs, SEED)
-    ambiguous_equivalence_groups = [{"group_id": "ambiguous_000_dolly_vs_object_depth", "title": "Ambiguous appearance: dolly-in static object vs static camera object moving away", "clip_ids": ["confusing_cam_push_static", "confusing_static_obj_back"], "reason": "These clips can look similar in a single view, but they are not supervised pair samples because both camera_id and physics_id differ.", "hidden_factor_difference": ["camera_motion", "physical_motion"], "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics pairs."}]
-    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Broad Blender-only preview bank with explicit scene_id. Same-physics pairs keep physics_id and scene_id fixed, while camera-only pairs keep camera_id fixed and vary physics/scene.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "scene_reference": SCENE_SPECS, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
+    ambiguous_equivalence_groups = [{"group_id": "ambiguous_000_dolly_vs_object_toward_camera", "title": "Ambiguous appearance: camera dolly-in vs object moving toward camera", "clip_ids": ["ambiguous_cam_dolly_static", "ambiguous_static_obj_toward_camera"], "reason": "These clips can look similar in a single view: one changes apparent scale through camera motion, the other through physical object motion. They are diagnostic examples, not supervised pair samples, because both camera_id and physics_id differ.", "hidden_factor_difference": ["camera_motion", "physical_motion"], "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics/scene pairs."}]
+    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Balanced Blender-only preview bank with explicit scene_id. Same-physics pairs keep physics_id and scene_id fixed, while camera-only pairs keep camera_id fixed and vary physics/scene.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "scene_reference": SCENE_SPECS, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     update_index(args.run_id)
     print(f"Wrote {len(clips)} clips and {len(pair_groups)} pairs to {run_dir}")

@@ -1,0 +1,894 @@
+{
+  "clip_id": "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+  "camera_id": "cam_dolly_out_fast",
+  "physics_id": "phys_roll_right_fast",
+  "scene_id": "scene_red_wall_stripes",
+  "scene_style": "vertical_stripes",
+  "fps": 24,
+  "frames_count": 24,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Dolly_Out"
+  ],
+  "camera_speed": "fast",
+  "camera_view_offset": {
+    "x": -0.8,
+    "z": 0.35,
+    "target_x": -0.15,
+    "target_z": 0.04,
+    "roll": -2.0
+  },
+  "physics_kind": "roll_right",
+  "physics_objects": 1,
+  "physics_speed": "fast",
+  "video": "videos/clip_026_cam_dolly_out_fast_phys_roll_right_fast.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -0.8,
+          -3.6,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -2.4,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.04348,
+      "camera": {
+        "position": [
+          -0.8,
+          -3.73043,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -2.1913,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            1.09273,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.08696,
+      "camera": {
+        "position": [
+          -0.8,
+          -3.86087,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -1.98261,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            2.18546,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.13043,
+      "camera": {
+        "position": [
+          -0.8,
+          -3.9913,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -1.77391,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            3.27818,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.17391,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.12174,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -1.56522,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            4.37091,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.21739,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.25217,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -1.35652,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            5.46364,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.26087,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.38261,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -1.14783,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            6.55637,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.30435,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.51304,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -0.93913,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            7.6491,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.34783,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.64348,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -0.73043,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            8.74182,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.3913,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.77391,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -0.52174,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            9.83455,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.43478,
+      "camera": {
+        "position": [
+          -0.8,
+          -4.90435,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -0.31304,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            10.92728,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.47826,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.03478,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            -0.10435,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            12.02001,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.52174,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.16522,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            0.10435,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            13.11273,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.56522,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.29565,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            0.31304,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            14.20546,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.6087,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.42609,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            0.52174,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            15.29819,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.65217,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.55652,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            0.73043,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            16.39092,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.69565,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.68696,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            0.93913,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            17.48365,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.73913,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.81739,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            1.14783,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            18.57637,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.78261,
+      "camera": {
+        "position": [
+          -0.8,
+          -5.94783,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            1.35652,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            19.6691,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.82609,
+      "camera": {
+        "position": [
+          -0.8,
+          -6.07826,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            1.56522,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            20.76183,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.86957,
+      "camera": {
+        "position": [
+          -0.8,
+          -6.2087,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            1.77391,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            21.85456,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.91304,
+      "camera": {
+        "position": [
+          -0.8,
+          -6.33913,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            1.98261,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            22.94728,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.95652,
+      "camera": {
+        "position": [
+          -0.8,
+          -6.46957,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            2.1913,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            24.04001,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          -0.8,
+          -6.6,
+          2.45
+        ],
+        "look_at": [
+          -0.15,
+          0.0,
+          0.59
+        ],
+        "roll": -0.03491,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_cube",
+          "position": [
+            2.4,
+            0.55,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            25.13274,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

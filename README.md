@@ -15,7 +15,7 @@ In the current bank generator, `scene_id` is explicit. A "same physics" pair mea
 - `scripts/generate_kubric_pairs.py`: Kubric-oriented contract scaffold; real Kubric rendering is still a future step.
 - `scripts/generate_blender_pairs.py`: small 3-clip Blender preview.
 - `scripts/generate_blender_rich_pairs.py`: hand-authored richer 6-clip Blender preview.
-- `scripts/generate_blender_bank_pairs.py`: combinatorial Blender bank used for the current review examples.
+- `scripts/generate_blender_bank_pairs.py`: balanced combinatorial Blender bank used for the current review examples.
 - `scripts/make_run_previews.py`: creates preview contact sheets from MP4s.
 - `scripts/sync_site_to_docs.sh`: copies `site/` to `docs/` and removes frame directories for GitHub Pages.
 - `site/`: local/generated working site. It may contain heavy `frames/` folders.
@@ -60,9 +60,9 @@ cd /workspace/writeable/code/camera_motion_disentangle
 /workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender \
   --background \
   --python scripts/generate_blender_bank_pairs.py \
-  -- --run-id blender_bank_v1 --clips 40 --pairs 120
+  -- --run-id blender_bank_v2 --clips 60 --pairs 160
 
-python3 scripts/make_run_previews.py --run-dir site/assets/runs/blender_bank_v1
+python3 scripts/make_run_previews.py --run-dir site/assets/runs/blender_bank_v2
 bash scripts/sync_site_to_docs.sh
 ```
 
@@ -95,4 +95,5 @@ The current bank generator avoids the earlier failure modes:
 - background geometry is no longer randomly placed in the main object-motion region;
 - same-physics pairs keep both `physics_id` and `scene_id` fixed;
 - background diversity comes mainly from wall/floor colors, wall height, panels/stripes, floor marks, and occasional edge/side objects;
-- camera specs include lateral/height/target offsets and nonzero roll, so starts are not always centered and level.
+- camera specs include lateral/height/target offsets, nonzero roll, and top-down starts, so views are not always centered and level.
+- the preview bank uses kinematic trajectories; contact examples enforce non-penetrating visual contact by construction.

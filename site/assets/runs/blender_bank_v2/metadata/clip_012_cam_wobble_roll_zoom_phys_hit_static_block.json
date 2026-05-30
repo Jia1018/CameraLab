@@ -1,0 +1,1281 @@
+{
+  "clip_id": "clip_012_cam_wobble_roll_zoom_phys_hit_static_block",
+  "camera_id": "cam_wobble_roll_zoom",
+  "physics_id": "phys_hit_static_block",
+  "scene_id": "scene_green_floor_marks",
+  "scene_style": "floor_marks",
+  "fps": 24,
+  "frames_count": 24,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Pan_Left",
+    "Pan_Right",
+    "Roll_Counterclockwise",
+    "Zoom_Out"
+  ],
+  "camera_speed": "variable",
+  "camera_view_offset": {
+    "x": -0.5,
+    "z": -0.15,
+    "target_x": 0.0,
+    "target_z": 0.0,
+    "roll": 4.0
+  },
+  "physics_kind": "hit_static_block",
+  "physics_objects": 2,
+  "physics_speed": "fast",
+  "video": "videos/clip_012_cam_wobble_roll_zoom_phys_hit_static_block.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.06981,
+        "lens": 42.0,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.8,
+            -0.2,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.04348,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.40743,
+          0.0,
+          0.72961
+        ],
+        "roll": -0.03685,
+        "lens": 40.9795,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.62225,
+            -0.2,
+            0.32204
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.08696,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.66999,
+          0.0,
+          0.79916
+        ],
+        "roll": -0.10559,
+        "lens": 40.1042,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.4445,
+            -0.2,
+            0.36728
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.13043,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.77518,
+          0.0,
+          0.77921
+        ],
+        "roll": -0.13313,
+        "lens": 39.477,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.26675,
+            -0.2,
+            0.35543
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.17391,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.79818,
+          0.0,
+          0.74372
+        ],
+        "roll": -0.13915,
+        "lens": 39.1288,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.089,
+            -0.2,
+            0.29179
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.21739,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.79999,
+          0.0,
+          0.728
+        ],
+        "roll": -0.13962,
+        "lens": 39.0088,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.91125,
+            -0.2,
+            0.27507
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.26087,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.8,
+          0.0,
+          0.72682
+        ],
+        "roll": -0.13963,
+        "lens": 39.0003,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.7335,
+            -0.2,
+            0.34621
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.30435,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.79976,
+          0.0,
+          0.72023
+        ],
+        "roll": -0.13956,
+        "lens": 38.9537,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.55575,
+            -0.2,
+            0.3697
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.34783,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.79206,
+          0.0,
+          0.68572
+        ],
+        "roll": -0.13755,
+        "lens": 38.7307,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.37801,
+            -0.2,
+            0.33501
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.3913,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.73818,
+          0.0,
+          0.59767
+        ],
+        "roll": -0.12344,
+        "lens": 38.2443,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.20026,
+            -0.2,
+            0.2577
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.43478,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.56099,
+          0.0,
+          0.45147
+        ],
+        "roll": -0.07705,
+        "lens": 37.4842,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.02251,
+            -0.2,
+            0.30755
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.47826,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          0.21509,
+          0.0,
+          0.32055
+        ],
+        "roll": 0.0135,
+        "lens": 36.5199,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.84476,
+            -0.2,
+            0.36249
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.52174,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.21509,
+          0.0,
+          0.32055
+        ],
+        "roll": 0.12612,
+        "lens": 35.4801,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.66701,
+            -0.2,
+            0.36249
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.56522,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.56099,
+          0.0,
+          0.45147
+        ],
+        "roll": 0.21668,
+        "lens": 34.5158,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.48926,
+            -0.2,
+            0.30755
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.6087,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.73818,
+          0.0,
+          0.59767
+        ],
+        "roll": 0.26307,
+        "lens": 33.7557,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.31151,
+            -0.2,
+            0.2577
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.65217,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.79206,
+          0.0,
+          0.68572
+        ],
+        "roll": 0.27717,
+        "lens": 33.2693,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.13376,
+            -0.2,
+            0.33501
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.69565,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.79976,
+          0.0,
+          0.72023
+        ],
+        "roll": 0.27919,
+        "lens": 33.0463,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.07136,
+            -0.2,
+            0.36899
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.51565,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.00548
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.73913,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.8,
+          0.0,
+          0.72682
+        ],
+        "roll": 0.27925,
+        "lens": 32.9997,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.21402,
+            -0.2,
+            0.34401
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.55913,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0207
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.78261,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.79999,
+          0.0,
+          0.728
+        ],
+        "roll": 0.27925,
+        "lens": 32.9912,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.35668,
+            -0.2,
+            0.27381
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.60261,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.03591
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.82609,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.79818,
+          0.0,
+          0.74372
+        ],
+        "roll": 0.27878,
+        "lens": 32.8712,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.49935,
+            -0.2,
+            0.28914
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.64609,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.05113
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.86957,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.77518,
+          0.0,
+          0.77921
+        ],
+        "roll": 0.27275,
+        "lens": 32.523,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.64201,
+            -0.2,
+            0.34777
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.68957,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.06635
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.91304,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.66999,
+          0.0,
+          0.79916
+        ],
+        "roll": 0.24522,
+        "lens": 31.8958,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.78467,
+            -0.2,
+            0.3569
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.73304,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.08157
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.95652,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.40743,
+          0.0,
+          0.72961
+        ],
+        "roll": 0.17648,
+        "lens": 31.0205,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.92734,
+            -0.2,
+            0.3141
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.77652,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.09678
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          -0.5,
+          -5.6,
+          1.95
+        ],
+        "look_at": [
+          -0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.06981,
+        "lens": 30.0,
+        "primitives": [
+          "Pan_Left",
+          "Pan_Right",
+          "Roll_Counterclockwise",
+          "Zoom_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.07,
+            -0.2,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.82,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.112
+          ]
+        }
+      ]
+    }
+  ]
+}

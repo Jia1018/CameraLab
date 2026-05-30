@@ -1,0 +1,3702 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "blender_bank_v2",
+  "generator": "blender_combinatorial_bank",
+  "description": "Balanced Blender-only preview bank with explicit scene_id. Same-physics pairs keep physics_id and scene_id fixed, while camera-only pairs keep camera_id fixed and vary physics/scene.",
+  "blender_version": "3.6.5",
+  "resolution": [
+    320,
+    240
+  ],
+  "fps": 24,
+  "cycles_samples": 1,
+  "camera_primitives_reference": [
+    "Dolly_In",
+    "Dolly_Out",
+    "Pedestal_Up",
+    "Pedestal_Down",
+    "Truck_Right",
+    "Truck_Left",
+    "Pan_Right",
+    "Pan_Left",
+    "Tilt_Up",
+    "Tilt_Down",
+    "Roll_Clockwise",
+    "Roll_Counterclockwise",
+    "Zoom_In",
+    "Zoom_Out",
+    "Static"
+  ],
+  "scene_reference": [
+    {
+      "id": "scene_gray_low_wall",
+      "ground": [
+        0.66,
+        0.68,
+        0.64,
+        1
+      ],
+      "wall": [
+        0.78,
+        0.79,
+        0.76,
+        1
+      ],
+      "side": [
+        0.7,
+        0.72,
+        0.72,
+        1
+      ],
+      "wall_height": 2.0,
+      "style": "plain"
+    },
+    {
+      "id": "scene_blue_tall_wall",
+      "ground": [
+        0.62,
+        0.67,
+        0.69,
+        1
+      ],
+      "wall": [
+        0.7,
+        0.77,
+        0.82,
+        1
+      ],
+      "side": [
+        0.64,
+        0.7,
+        0.74,
+        1
+      ],
+      "wall_height": 2.8,
+      "style": "horizontal_bands"
+    },
+    {
+      "id": "scene_warm_panel_wall",
+      "ground": [
+        0.69,
+        0.66,
+        0.6,
+        1
+      ],
+      "wall": [
+        0.8,
+        0.75,
+        0.67,
+        1
+      ],
+      "side": [
+        0.73,
+        0.69,
+        0.64,
+        1
+      ],
+      "wall_height": 2.35,
+      "style": "wall_panels"
+    },
+    {
+      "id": "scene_green_floor_marks",
+      "ground": [
+        0.6,
+        0.68,
+        0.62,
+        1
+      ],
+      "wall": [
+        0.74,
+        0.8,
+        0.73,
+        1
+      ],
+      "side": [
+        0.67,
+        0.73,
+        0.67,
+        1
+      ],
+      "wall_height": 2.15,
+      "style": "floor_marks"
+    },
+    {
+      "id": "scene_dark_side_blocks",
+      "ground": [
+        0.58,
+        0.6,
+        0.62,
+        1
+      ],
+      "wall": [
+        0.72,
+        0.73,
+        0.75,
+        1
+      ],
+      "side": [
+        0.52,
+        0.54,
+        0.57,
+        1
+      ],
+      "wall_height": 2.55,
+      "style": "side_blocks"
+    },
+    {
+      "id": "scene_red_wall_stripes",
+      "ground": [
+        0.66,
+        0.64,
+        0.62,
+        1
+      ],
+      "wall": [
+        0.8,
+        0.7,
+        0.68,
+        1
+      ],
+      "side": [
+        0.72,
+        0.66,
+        0.65,
+        1
+      ],
+      "wall_height": 2.25,
+      "style": "vertical_stripes"
+    }
+  ],
+  "clips": [
+    {
+      "clip_id": "ambiguous_cam_dolly_static",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_static_center",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_000_same_camera",
+        "pair_002_same_camera",
+        "pair_003_same_camera",
+        "pair_111_same_physics_scene",
+        "pair_112_same_physics_scene"
+      ],
+      "video": "videos/ambiguous_cam_dolly_static.mp4",
+      "metadata": "metadata/ambiguous_cam_dolly_static.json"
+    },
+    {
+      "clip_id": "ambiguous_static_obj_toward_camera",
+      "camera_id": "cam_static",
+      "physics_id": "phys_move_toward",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_010_same_camera",
+        "pair_013_same_camera"
+      ],
+      "video": "videos/ambiguous_static_obj_toward_camera.mp4",
+      "metadata": "metadata/ambiguous_static_obj_toward_camera.json"
+    },
+    {
+      "clip_id": "outframe_cam_push_obj_cross",
+      "camera_id": "cam_out_of_frame_push",
+      "physics_id": "phys_out_of_frame",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Dolly_In",
+        "Tilt_Up"
+      ],
+      "pair_groups": [
+        "pair_020_same_camera",
+        "pair_023_same_camera",
+        "pair_025_same_camera",
+        "pair_028_same_camera",
+        "pair_117_same_physics_scene",
+        "pair_118_same_physics_scene",
+        "pair_119_same_physics_scene",
+        "pair_121_same_physics_scene"
+      ],
+      "video": "videos/outframe_cam_push_obj_cross.mp4",
+      "metadata": "metadata/outframe_cam_push_obj_cross.json"
+    },
+    {
+      "clip_id": "clip_003_cam_static_phys_static_center",
+      "camera_id": "cam_static",
+      "physics_id": "phys_static_center",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_016_same_camera",
+        "pair_017_same_camera",
+        "pair_019_same_camera",
+        "pair_110_same_physics_scene",
+        "pair_111_same_physics_scene"
+      ],
+      "video": "videos/clip_003_cam_static_phys_static_center.mp4",
+      "metadata": "metadata/clip_003_cam_static_phys_static_center.json"
+    },
+    {
+      "clip_id": "clip_004_cam_top_down_drift_phys_move_away",
+      "camera_id": "cam_top_down_drift",
+      "physics_id": "phys_move_away",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Tilt_Down",
+        "Truck_Right"
+      ],
+      "pair_groups": [
+        "pair_030_same_camera",
+        "pair_032_same_camera",
+        "pair_036_same_camera",
+        "pair_039_same_camera",
+        "pair_123_same_physics_scene"
+      ],
+      "video": "videos/clip_004_cam_top_down_drift_phys_move_away.mp4",
+      "metadata": "metadata/clip_004_cam_top_down_drift_phys_move_away.json"
+    },
+    {
+      "clip_id": "clip_005_cam_dolly_in_phys_move_toward",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_move_toward",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_004_same_camera",
+        "pair_007_same_camera",
+        "pair_124_same_physics_scene"
+      ],
+      "video": "videos/clip_005_cam_dolly_in_phys_move_toward.mp4",
+      "metadata": "metadata/clip_005_cam_dolly_in_phys_move_toward.json"
+    },
+    {
+      "clip_id": "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_fast_diag_bounce",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_041_same_camera",
+        "pair_044_same_camera",
+        "pair_046_same_camera",
+        "pair_127_same_physics_scene",
+        "pair_129_same_physics_scene",
+        "pair_130_same_physics_scene"
+      ],
+      "video": "videos/clip_006_cam_dolly_out_fast_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_006_cam_dolly_out_fast_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_slow_roll_left",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Truck_Left",
+        "Pan_Right"
+      ],
+      "pair_groups": [
+        "pair_055_same_camera",
+        "pair_056_same_camera",
+        "pair_058_same_camera",
+        "pair_059_same_camera",
+        "pair_131_same_physics_scene",
+        "pair_132_same_physics_scene",
+        "pair_137_same_physics_scene",
+        "pair_138_same_physics_scene"
+      ],
+      "video": "videos/clip_007_cam_truck_left_pan_right_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_007_cam_truck_left_pan_right_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+      "camera_id": "cam_truck_right_roll",
+      "physics_id": "phys_roll_right_fast",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Truck_Right",
+        "Roll_Clockwise"
+      ],
+      "pair_groups": [
+        "pair_060_same_camera",
+        "pair_061_same_camera",
+        "pair_063_same_camera",
+        "pair_066_same_camera",
+        "pair_141_same_physics_scene",
+        "pair_143_same_physics_scene",
+        "pair_148_same_physics_scene"
+      ],
+      "video": "videos/clip_008_cam_truck_right_roll_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_008_cam_truck_right_roll_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+      "camera_id": "cam_crane_up_tilt_down",
+      "physics_id": "phys_two_cross_collision",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Pedestal_Up",
+        "Tilt_Down"
+      ],
+      "pair_groups": [
+        "pair_072_same_camera",
+        "pair_073_same_camera",
+        "pair_075_same_camera",
+        "pair_078_same_camera",
+        "pair_151_same_physics_scene",
+        "pair_156_same_physics_scene",
+        "pair_159_same_physics_scene"
+      ],
+      "video": "videos/clip_009_cam_crane_up_tilt_down_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_009_cam_crane_up_tilt_down_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction",
+      "camera_id": "cam_pedestal_down_zoom_in",
+      "physics_id": "phys_two_same_direction",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Zoom_In"
+      ],
+      "pair_groups": [
+        "pair_084_same_camera",
+        "pair_085_same_camera",
+        "pair_087_same_camera",
+        "pair_088_same_camera"
+      ],
+      "video": "videos/clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_011_cam_orbit_combo_phys_multi_swirl",
+      "camera_id": "cam_orbit_combo",
+      "physics_id": "phys_multi_swirl",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Truck_Right",
+        "Pan_Left",
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_092_same_camera",
+        "pair_094_same_camera",
+        "pair_096_same_camera",
+        "pair_099_same_camera"
+      ],
+      "video": "videos/clip_011_cam_orbit_combo_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_011_cam_orbit_combo_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_012_cam_wobble_roll_zoom_phys_hit_static_block",
+      "camera_id": "cam_wobble_roll_zoom",
+      "physics_id": "phys_hit_static_block",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Pan_Left",
+        "Pan_Right",
+        "Roll_Counterclockwise",
+        "Zoom_Out"
+      ],
+      "pair_groups": [
+        "pair_103_same_camera",
+        "pair_106_same_camera",
+        "pair_107_same_camera",
+        "pair_109_same_camera"
+      ],
+      "video": "videos/clip_012_cam_wobble_roll_zoom_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_012_cam_wobble_roll_zoom_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_013_cam_static_phys_move_away",
+      "camera_id": "cam_static",
+      "physics_id": "phys_move_away",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_011_same_camera",
+        "pair_014_same_camera",
+        "pair_015_same_camera",
+        "pair_019_same_camera",
+        "pair_123_same_physics_scene"
+      ],
+      "video": "videos/clip_013_cam_static_phys_move_away.mp4",
+      "metadata": "metadata/clip_013_cam_static_phys_move_away.json"
+    },
+    {
+      "clip_id": "clip_014_cam_top_down_drift_phys_move_toward",
+      "camera_id": "cam_top_down_drift",
+      "physics_id": "phys_move_toward",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Tilt_Down",
+        "Truck_Right"
+      ],
+      "pair_groups": [
+        "pair_033_same_camera",
+        "pair_036_same_camera",
+        "pair_037_same_camera",
+        "pair_124_same_physics_scene"
+      ],
+      "video": "videos/clip_014_cam_top_down_drift_phys_move_toward.mp4",
+      "metadata": "metadata/clip_014_cam_top_down_drift_phys_move_toward.json"
+    },
+    {
+      "clip_id": "clip_015_cam_dolly_in_phys_fast_diag_bounce",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_fast_diag_bounce",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_000_same_camera",
+        "pair_006_same_camera",
+        "pair_009_same_camera",
+        "pair_125_same_physics_scene",
+        "pair_126_same_physics_scene",
+        "pair_130_same_physics_scene"
+      ],
+      "video": "videos/clip_015_cam_dolly_in_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_015_cam_dolly_in_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_016_cam_dolly_out_fast_phys_slow_roll_left",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_slow_roll_left",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_040_same_camera",
+        "pair_043_same_camera",
+        "pair_044_same_camera",
+        "pair_133_same_physics_scene",
+        "pair_134_same_physics_scene",
+        "pair_137_same_physics_scene",
+        "pair_140_same_physics_scene"
+      ],
+      "video": "videos/clip_016_cam_dolly_out_fast_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_016_cam_dolly_out_fast_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_roll_right_fast",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Truck_Left",
+        "Pan_Right"
+      ],
+      "pair_groups": [
+        "pair_051_same_camera",
+        "pair_052_same_camera",
+        "pair_054_same_camera",
+        "pair_059_same_camera",
+        "pair_144_same_physics_scene",
+        "pair_147_same_physics_scene",
+        "pair_149_same_physics_scene"
+      ],
+      "video": "videos/clip_017_cam_truck_left_pan_right_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_017_cam_truck_left_pan_right_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+      "camera_id": "cam_truck_right_roll",
+      "physics_id": "phys_two_cross_collision",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Truck_Right",
+        "Roll_Clockwise"
+      ],
+      "pair_groups": [
+        "pair_061_same_camera",
+        "pair_062_same_camera",
+        "pair_068_same_camera",
+        "pair_069_same_camera",
+        "pair_151_same_physics_scene",
+        "pair_154_same_physics_scene",
+        "pair_157_same_physics_scene",
+        "pair_158_same_physics_scene"
+      ],
+      "video": "videos/clip_018_cam_truck_right_roll_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_018_cam_truck_right_roll_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_019_cam_crane_up_tilt_down_phys_two_same_direction",
+      "camera_id": "cam_crane_up_tilt_down",
+      "physics_id": "phys_two_same_direction",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Pedestal_Up",
+        "Tilt_Down"
+      ],
+      "pair_groups": [
+        "pair_071_same_camera",
+        "pair_074_same_camera",
+        "pair_077_same_camera",
+        "pair_078_same_camera"
+      ],
+      "video": "videos/clip_019_cam_crane_up_tilt_down_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_019_cam_crane_up_tilt_down_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl",
+      "camera_id": "cam_pedestal_down_zoom_in",
+      "physics_id": "phys_multi_swirl",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Zoom_In"
+      ],
+      "pair_groups": [
+        "pair_082_same_camera",
+        "pair_083_same_camera",
+        "pair_087_same_camera",
+        "pair_089_same_camera"
+      ],
+      "video": "videos/clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_021_cam_orbit_combo_phys_hit_static_block",
+      "camera_id": "cam_orbit_combo",
+      "physics_id": "phys_hit_static_block",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Truck_Right",
+        "Pan_Left",
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_091_same_camera",
+        "pair_093_same_camera",
+        "pair_097_same_camera",
+        "pair_099_same_camera"
+      ],
+      "video": "videos/clip_021_cam_orbit_combo_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_021_cam_orbit_combo_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+      "camera_id": "cam_wobble_roll_zoom",
+      "physics_id": "phys_out_of_frame",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Pan_Left",
+        "Pan_Right",
+        "Roll_Counterclockwise",
+        "Zoom_Out"
+      ],
+      "pair_groups": [
+        "pair_100_same_camera",
+        "pair_104_same_camera",
+        "pair_105_same_camera",
+        "pair_107_same_camera",
+        "pair_116_same_physics_scene",
+        "pair_119_same_physics_scene",
+        "pair_120_same_physics_scene",
+        "pair_122_same_physics_scene"
+      ],
+      "video": "videos/clip_022_cam_wobble_roll_zoom_phys_out_of_frame.mp4",
+      "metadata": "metadata/clip_022_cam_wobble_roll_zoom_phys_out_of_frame.json"
+    },
+    {
+      "clip_id": "clip_023_cam_out_of_frame_push_phys_vertical_drop",
+      "camera_id": "cam_out_of_frame_push",
+      "physics_id": "phys_vertical_drop",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Dolly_In",
+        "Tilt_Up"
+      ],
+      "pair_groups": [
+        "pair_021_same_camera",
+        "pair_024_same_camera",
+        "pair_025_same_camera",
+        "pair_026_same_camera"
+      ],
+      "video": "videos/clip_023_cam_out_of_frame_push_phys_vertical_drop.mp4",
+      "metadata": "metadata/clip_023_cam_out_of_frame_push_phys_vertical_drop.json"
+    },
+    {
+      "clip_id": "clip_024_cam_top_down_drift_phys_fast_diag_bounce",
+      "camera_id": "cam_top_down_drift",
+      "physics_id": "phys_fast_diag_bounce",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Tilt_Down",
+        "Truck_Right"
+      ],
+      "pair_groups": [
+        "pair_035_same_camera",
+        "pair_039_same_camera",
+        "pair_126_same_physics_scene",
+        "pair_127_same_physics_scene",
+        "pair_128_same_physics_scene"
+      ],
+      "video": "videos/clip_024_cam_top_down_drift_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_024_cam_top_down_drift_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_025_cam_dolly_in_phys_slow_roll_left",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_slow_roll_left",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_005_same_camera",
+        "pair_131_same_physics_scene",
+        "pair_134_same_physics_scene",
+        "pair_136_same_physics_scene",
+        "pair_139_same_physics_scene"
+      ],
+      "video": "videos/clip_025_cam_dolly_in_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_025_cam_dolly_in_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_roll_right_fast",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_042_same_camera",
+        "pair_043_same_camera",
+        "pair_045_same_camera",
+        "pair_049_same_camera",
+        "pair_142_same_physics_scene",
+        "pair_143_same_physics_scene",
+        "pair_144_same_physics_scene",
+        "pair_145_same_physics_scene",
+        "pair_146_same_physics_scene"
+      ],
+      "video": "videos/clip_026_cam_dolly_out_fast_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_026_cam_dolly_out_fast_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_027_cam_truck_left_pan_right_phys_two_cross_collision",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_two_cross_collision",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Truck_Left",
+        "Pan_Right"
+      ],
+      "pair_groups": [
+        "pair_050_same_camera",
+        "pair_052_same_camera",
+        "pair_056_same_camera",
+        "pair_057_same_camera",
+        "pair_153_same_physics_scene",
+        "pair_156_same_physics_scene",
+        "pair_158_same_physics_scene"
+      ],
+      "video": "videos/clip_027_cam_truck_left_pan_right_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_027_cam_truck_left_pan_right_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_028_cam_truck_right_roll_phys_two_same_direction",
+      "camera_id": "cam_truck_right_roll",
+      "physics_id": "phys_two_same_direction",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Truck_Right",
+        "Roll_Clockwise"
+      ],
+      "pair_groups": [
+        "pair_062_same_camera",
+        "pair_063_same_camera",
+        "pair_064_same_camera",
+        "pair_065_same_camera"
+      ],
+      "video": "videos/clip_028_cam_truck_right_roll_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_028_cam_truck_right_roll_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_029_cam_crane_up_tilt_down_phys_multi_swirl",
+      "camera_id": "cam_crane_up_tilt_down",
+      "physics_id": "phys_multi_swirl",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Pedestal_Up",
+        "Tilt_Down"
+      ],
+      "pair_groups": [
+        "pair_070_same_camera",
+        "pair_071_same_camera",
+        "pair_075_same_camera",
+        "pair_076_same_camera"
+      ],
+      "video": "videos/clip_029_cam_crane_up_tilt_down_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_029_cam_crane_up_tilt_down_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block",
+      "camera_id": "cam_pedestal_down_zoom_in",
+      "physics_id": "phys_hit_static_block",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Zoom_In"
+      ],
+      "pair_groups": [
+        "pair_081_same_camera",
+        "pair_083_same_camera",
+        "pair_084_same_camera",
+        "pair_086_same_camera"
+      ],
+      "video": "videos/clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_031_cam_orbit_combo_phys_out_of_frame",
+      "camera_id": "cam_orbit_combo",
+      "physics_id": "phys_out_of_frame",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Truck_Right",
+        "Pan_Left",
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_090_same_camera",
+        "pair_093_same_camera",
+        "pair_094_same_camera",
+        "pair_095_same_camera",
+        "pair_114_same_physics_scene",
+        "pair_115_same_physics_scene",
+        "pair_116_same_physics_scene",
+        "pair_121_same_physics_scene"
+      ],
+      "video": "videos/clip_031_cam_orbit_combo_phys_out_of_frame.mp4",
+      "metadata": "metadata/clip_031_cam_orbit_combo_phys_out_of_frame.json"
+    },
+    {
+      "clip_id": "clip_032_cam_wobble_roll_zoom_phys_vertical_drop",
+      "camera_id": "cam_wobble_roll_zoom",
+      "physics_id": "phys_vertical_drop",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Pan_Left",
+        "Pan_Right",
+        "Roll_Counterclockwise",
+        "Zoom_Out"
+      ],
+      "pair_groups": [
+        "pair_101_same_camera",
+        "pair_103_same_camera",
+        "pair_104_same_camera",
+        "pair_108_same_camera"
+      ],
+      "video": "videos/clip_032_cam_wobble_roll_zoom_phys_vertical_drop.mp4",
+      "metadata": "metadata/clip_032_cam_wobble_roll_zoom_phys_vertical_drop.json"
+    },
+    {
+      "clip_id": "clip_033_cam_out_of_frame_push_phys_confusing_move_back",
+      "camera_id": "cam_out_of_frame_push",
+      "physics_id": "phys_confusing_move_back",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Dolly_In",
+        "Tilt_Up"
+      ],
+      "pair_groups": [
+        "pair_021_same_camera",
+        "pair_023_same_camera",
+        "pair_027_same_camera",
+        "pair_029_same_camera"
+      ],
+      "video": "videos/clip_033_cam_out_of_frame_push_phys_confusing_move_back.mp4",
+      "metadata": "metadata/clip_033_cam_out_of_frame_push_phys_confusing_move_back.json"
+    },
+    {
+      "clip_id": "clip_034_cam_static_phys_fast_diag_bounce",
+      "camera_id": "cam_static",
+      "physics_id": "phys_fast_diag_bounce",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_010_same_camera",
+        "pair_015_same_camera",
+        "pair_018_same_camera",
+        "pair_125_same_physics_scene",
+        "pair_128_same_physics_scene",
+        "pair_129_same_physics_scene"
+      ],
+      "video": "videos/clip_034_cam_static_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_034_cam_static_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_035_cam_top_down_drift_phys_slow_roll_left",
+      "camera_id": "cam_top_down_drift",
+      "physics_id": "phys_slow_roll_left",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Tilt_Down",
+        "Truck_Right"
+      ],
+      "pair_groups": [
+        "pair_032_same_camera",
+        "pair_034_same_camera",
+        "pair_035_same_camera",
+        "pair_037_same_camera",
+        "pair_038_same_camera",
+        "pair_132_same_physics_scene",
+        "pair_135_same_physics_scene",
+        "pair_139_same_physics_scene",
+        "pair_140_same_physics_scene"
+      ],
+      "video": "videos/clip_035_cam_top_down_drift_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_035_cam_top_down_drift_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_036_cam_dolly_in_phys_roll_right_fast",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_roll_right_fast",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_001_same_camera",
+        "pair_006_same_camera",
+        "pair_007_same_camera",
+        "pair_141_same_physics_scene",
+        "pair_146_same_physics_scene",
+        "pair_149_same_physics_scene",
+        "pair_150_same_physics_scene"
+      ],
+      "video": "videos/clip_036_cam_dolly_in_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_036_cam_dolly_in_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_two_cross_collision",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_046_same_camera",
+        "pair_047_same_camera",
+        "pair_049_same_camera",
+        "pair_152_same_physics_scene",
+        "pair_157_same_physics_scene",
+        "pair_159_same_physics_scene"
+      ],
+      "video": "videos/clip_037_cam_dolly_out_fast_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_037_cam_dolly_out_fast_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_038_cam_truck_left_pan_right_phys_two_same_direction",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_two_same_direction",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Truck_Left",
+        "Pan_Right"
+      ],
+      "pair_groups": [
+        "pair_050_same_camera",
+        "pair_051_same_camera",
+        "pair_053_same_camera",
+        "pair_058_same_camera"
+      ],
+      "video": "videos/clip_038_cam_truck_left_pan_right_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_038_cam_truck_left_pan_right_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_039_cam_truck_right_roll_phys_multi_swirl",
+      "camera_id": "cam_truck_right_roll",
+      "physics_id": "phys_multi_swirl",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Truck_Right",
+        "Roll_Clockwise"
+      ],
+      "pair_groups": [
+        "pair_060_same_camera",
+        "pair_064_same_camera",
+        "pair_067_same_camera",
+        "pair_068_same_camera"
+      ],
+      "video": "videos/clip_039_cam_truck_right_roll_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_039_cam_truck_right_roll_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_040_cam_crane_up_tilt_down_phys_hit_static_block",
+      "camera_id": "cam_crane_up_tilt_down",
+      "physics_id": "phys_hit_static_block",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Pedestal_Up",
+        "Tilt_Down"
+      ],
+      "pair_groups": [
+        "pair_070_same_camera",
+        "pair_072_same_camera",
+        "pair_077_same_camera",
+        "pair_079_same_camera"
+      ],
+      "video": "videos/clip_040_cam_crane_up_tilt_down_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_040_cam_crane_up_tilt_down_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame",
+      "camera_id": "cam_pedestal_down_zoom_in",
+      "physics_id": "phys_out_of_frame",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Zoom_In"
+      ],
+      "pair_groups": [
+        "pair_080_same_camera",
+        "pair_086_same_camera",
+        "pair_088_same_camera",
+        "pair_089_same_camera",
+        "pair_113_same_physics_scene",
+        "pair_114_same_physics_scene",
+        "pair_117_same_physics_scene",
+        "pair_120_same_physics_scene"
+      ],
+      "video": "videos/clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame.mp4",
+      "metadata": "metadata/clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame.json"
+    },
+    {
+      "clip_id": "clip_042_cam_orbit_combo_phys_vertical_drop",
+      "camera_id": "cam_orbit_combo",
+      "physics_id": "phys_vertical_drop",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Truck_Right",
+        "Pan_Left",
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_091_same_camera",
+        "pair_092_same_camera",
+        "pair_095_same_camera",
+        "pair_098_same_camera"
+      ],
+      "video": "videos/clip_042_cam_orbit_combo_phys_vertical_drop.mp4",
+      "metadata": "metadata/clip_042_cam_orbit_combo_phys_vertical_drop.json"
+    },
+    {
+      "clip_id": "clip_043_cam_wobble_roll_zoom_phys_confusing_move_back",
+      "camera_id": "cam_wobble_roll_zoom",
+      "physics_id": "phys_confusing_move_back",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Pan_Left",
+        "Pan_Right",
+        "Roll_Counterclockwise",
+        "Zoom_Out"
+      ],
+      "pair_groups": [
+        "pair_101_same_camera",
+        "pair_102_same_camera",
+        "pair_105_same_camera",
+        "pair_106_same_camera"
+      ],
+      "video": "videos/clip_043_cam_wobble_roll_zoom_phys_confusing_move_back.mp4",
+      "metadata": "metadata/clip_043_cam_wobble_roll_zoom_phys_confusing_move_back.json"
+    },
+    {
+      "clip_id": "clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg",
+      "camera_id": "cam_out_of_frame_push",
+      "physics_id": "phys_static_with_dynamic_bg",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Dolly_In",
+        "Tilt_Up"
+      ],
+      "pair_groups": [
+        "pair_022_same_camera",
+        "pair_024_same_camera",
+        "pair_028_same_camera",
+        "pair_029_same_camera"
+      ],
+      "video": "videos/clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg.mp4",
+      "metadata": "metadata/clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg.json"
+    },
+    {
+      "clip_id": "clip_045_cam_static_phys_slow_roll_left",
+      "camera_id": "cam_static",
+      "physics_id": "phys_slow_roll_left",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_012_same_camera",
+        "pair_013_same_camera",
+        "pair_014_same_camera",
+        "pair_016_same_camera",
+        "pair_018_same_camera",
+        "pair_133_same_physics_scene",
+        "pair_135_same_physics_scene",
+        "pair_136_same_physics_scene",
+        "pair_138_same_physics_scene"
+      ],
+      "video": "videos/clip_045_cam_static_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_045_cam_static_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_046_cam_top_down_drift_phys_roll_right_fast",
+      "camera_id": "cam_top_down_drift",
+      "physics_id": "phys_roll_right_fast",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Tilt_Down",
+        "Truck_Right"
+      ],
+      "pair_groups": [
+        "pair_031_same_camera",
+        "pair_033_same_camera",
+        "pair_034_same_camera",
+        "pair_145_same_physics_scene",
+        "pair_147_same_physics_scene",
+        "pair_148_same_physics_scene"
+      ],
+      "video": "videos/clip_046_cam_top_down_drift_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_046_cam_top_down_drift_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_047_cam_dolly_in_phys_two_cross_collision",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_two_cross_collision",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_001_same_camera",
+        "pair_002_same_camera",
+        "pair_005_same_camera",
+        "pair_008_same_camera",
+        "pair_009_same_camera",
+        "pair_152_same_physics_scene",
+        "pair_154_same_physics_scene",
+        "pair_155_same_physics_scene"
+      ],
+      "video": "videos/clip_047_cam_dolly_in_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_047_cam_dolly_in_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_048_cam_dolly_out_fast_phys_two_same_direction",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_two_same_direction",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_045_same_camera",
+        "pair_047_same_camera",
+        "pair_048_same_camera"
+      ],
+      "video": "videos/clip_048_cam_dolly_out_fast_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_048_cam_dolly_out_fast_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_049_cam_truck_left_pan_right_phys_multi_swirl",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_multi_swirl",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Truck_Left",
+        "Pan_Right"
+      ],
+      "pair_groups": [
+        "pair_053_same_camera",
+        "pair_054_same_camera",
+        "pair_055_same_camera",
+        "pair_057_same_camera"
+      ],
+      "video": "videos/clip_049_cam_truck_left_pan_right_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_049_cam_truck_left_pan_right_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_050_cam_truck_right_roll_phys_hit_static_block",
+      "camera_id": "cam_truck_right_roll",
+      "physics_id": "phys_hit_static_block",
+      "scene_id": "scene_green_floor_marks",
+      "scene_style": "floor_marks",
+      "camera_primitives": [
+        "Truck_Right",
+        "Roll_Clockwise"
+      ],
+      "pair_groups": [
+        "pair_065_same_camera",
+        "pair_066_same_camera",
+        "pair_067_same_camera",
+        "pair_069_same_camera"
+      ],
+      "video": "videos/clip_050_cam_truck_right_roll_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_050_cam_truck_right_roll_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_051_cam_crane_up_tilt_down_phys_out_of_frame",
+      "camera_id": "cam_crane_up_tilt_down",
+      "physics_id": "phys_out_of_frame",
+      "scene_id": "scene_dark_side_blocks",
+      "scene_style": "side_blocks",
+      "camera_primitives": [
+        "Pedestal_Up",
+        "Tilt_Down"
+      ],
+      "pair_groups": [
+        "pair_073_same_camera",
+        "pair_074_same_camera",
+        "pair_076_same_camera",
+        "pair_079_same_camera",
+        "pair_113_same_physics_scene",
+        "pair_115_same_physics_scene",
+        "pair_118_same_physics_scene",
+        "pair_122_same_physics_scene"
+      ],
+      "video": "videos/clip_051_cam_crane_up_tilt_down_phys_out_of_frame.mp4",
+      "metadata": "metadata/clip_051_cam_crane_up_tilt_down_phys_out_of_frame.json"
+    },
+    {
+      "clip_id": "clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop",
+      "camera_id": "cam_pedestal_down_zoom_in",
+      "physics_id": "phys_vertical_drop",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Zoom_In"
+      ],
+      "pair_groups": [
+        "pair_080_same_camera",
+        "pair_081_same_camera",
+        "pair_082_same_camera",
+        "pair_085_same_camera"
+      ],
+      "video": "videos/clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop.mp4",
+      "metadata": "metadata/clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop.json"
+    },
+    {
+      "clip_id": "clip_053_cam_orbit_combo_phys_confusing_move_back",
+      "camera_id": "cam_orbit_combo",
+      "physics_id": "phys_confusing_move_back",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Truck_Right",
+        "Pan_Left",
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_090_same_camera",
+        "pair_096_same_camera",
+        "pair_097_same_camera",
+        "pair_098_same_camera"
+      ],
+      "video": "videos/clip_053_cam_orbit_combo_phys_confusing_move_back.mp4",
+      "metadata": "metadata/clip_053_cam_orbit_combo_phys_confusing_move_back.json"
+    },
+    {
+      "clip_id": "clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg",
+      "camera_id": "cam_wobble_roll_zoom",
+      "physics_id": "phys_static_with_dynamic_bg",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Pan_Left",
+        "Pan_Right",
+        "Roll_Counterclockwise",
+        "Zoom_Out"
+      ],
+      "pair_groups": [
+        "pair_100_same_camera",
+        "pair_102_same_camera",
+        "pair_108_same_camera",
+        "pair_109_same_camera"
+      ],
+      "video": "videos/clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg.mp4",
+      "metadata": "metadata/clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg.json"
+    },
+    {
+      "clip_id": "clip_055_cam_out_of_frame_push_phys_static_center",
+      "camera_id": "cam_out_of_frame_push",
+      "physics_id": "phys_static_center",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Dolly_In",
+        "Tilt_Up"
+      ],
+      "pair_groups": [
+        "pair_020_same_camera",
+        "pair_022_same_camera",
+        "pair_026_same_camera",
+        "pair_027_same_camera",
+        "pair_110_same_physics_scene",
+        "pair_112_same_physics_scene"
+      ],
+      "video": "videos/clip_055_cam_out_of_frame_push_phys_static_center.mp4",
+      "metadata": "metadata/clip_055_cam_out_of_frame_push_phys_static_center.json"
+    },
+    {
+      "clip_id": "clip_056_cam_static_phys_roll_right_fast",
+      "camera_id": "cam_static",
+      "physics_id": "phys_roll_right_fast",
+      "scene_id": "scene_red_wall_stripes",
+      "scene_style": "vertical_stripes",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_011_same_camera",
+        "pair_012_same_camera",
+        "pair_017_same_camera",
+        "pair_142_same_physics_scene",
+        "pair_150_same_physics_scene"
+      ],
+      "video": "videos/clip_056_cam_static_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_056_cam_static_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_057_cam_top_down_drift_phys_two_cross_collision",
+      "camera_id": "cam_top_down_drift",
+      "physics_id": "phys_two_cross_collision",
+      "scene_id": "scene_gray_low_wall",
+      "scene_style": "plain",
+      "camera_primitives": [
+        "Pedestal_Down",
+        "Tilt_Down",
+        "Truck_Right"
+      ],
+      "pair_groups": [
+        "pair_030_same_camera",
+        "pair_031_same_camera",
+        "pair_038_same_camera",
+        "pair_153_same_physics_scene",
+        "pair_155_same_physics_scene"
+      ],
+      "video": "videos/clip_057_cam_top_down_drift_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_057_cam_top_down_drift_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_058_cam_dolly_in_phys_two_same_direction",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_two_same_direction",
+      "scene_id": "scene_blue_tall_wall",
+      "scene_style": "horizontal_bands",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_003_same_camera",
+        "pair_004_same_camera",
+        "pair_008_same_camera"
+      ],
+      "video": "videos/clip_058_cam_dolly_in_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_058_cam_dolly_in_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_059_cam_dolly_out_fast_phys_multi_swirl",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_multi_swirl",
+      "scene_id": "scene_warm_panel_wall",
+      "scene_style": "wall_panels",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_040_same_camera",
+        "pair_041_same_camera",
+        "pair_042_same_camera",
+        "pair_048_same_camera"
+      ],
+      "video": "videos/clip_059_cam_dolly_out_fast_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_059_cam_dolly_out_fast_phys_multi_swirl.json"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "pair_000_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "ambiguous_cam_dolly_static",
+        "clip_015_cam_dolly_in_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_001_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_036_cam_dolly_in_phys_roll_right_fast",
+        "clip_047_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_002_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "ambiguous_cam_dolly_static",
+        "clip_047_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_003_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "ambiguous_cam_dolly_static",
+        "clip_058_cam_dolly_in_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_004_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_005_cam_dolly_in_phys_move_toward",
+        "clip_058_cam_dolly_in_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_005_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_025_cam_dolly_in_phys_slow_roll_left",
+        "clip_047_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_006_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_015_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_036_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_007_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_005_cam_dolly_in_phys_move_toward",
+        "clip_036_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_008_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_047_cam_dolly_in_phys_two_cross_collision",
+        "clip_058_cam_dolly_in_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_009_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_015_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_047_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_010_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "ambiguous_static_obj_toward_camera",
+        "clip_034_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_011_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_013_cam_static_phys_move_away",
+        "clip_056_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_012_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_045_cam_static_phys_slow_roll_left",
+        "clip_056_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_013_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "ambiguous_static_obj_toward_camera",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_014_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_013_cam_static_phys_move_away",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_015_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_013_cam_static_phys_move_away",
+        "clip_034_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_016_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_017_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_056_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_018_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_034_cam_static_phys_fast_diag_bounce",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_019_same_camera",
+      "title": "Same camera cam_static, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_013_cam_static_phys_move_away"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_020_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_055_cam_out_of_frame_push_phys_static_center"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_021_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_023_cam_out_of_frame_push_phys_vertical_drop",
+        "clip_033_cam_out_of_frame_push_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_022_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg",
+        "clip_055_cam_out_of_frame_push_phys_static_center"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_023_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_033_cam_out_of_frame_push_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_024_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_023_cam_out_of_frame_push_phys_vertical_drop",
+        "clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_025_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_023_cam_out_of_frame_push_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_026_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_023_cam_out_of_frame_push_phys_vertical_drop",
+        "clip_055_cam_out_of_frame_push_phys_static_center"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_027_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_033_cam_out_of_frame_push_phys_confusing_move_back",
+        "clip_055_cam_out_of_frame_push_phys_static_center"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_028_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_029_same_camera",
+      "title": "Same camera cam_out_of_frame_push, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_033_cam_out_of_frame_push_phys_confusing_move_back",
+        "clip_044_cam_out_of_frame_push_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_030_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_004_cam_top_down_drift_phys_move_away",
+        "clip_057_cam_top_down_drift_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_031_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_046_cam_top_down_drift_phys_roll_right_fast",
+        "clip_057_cam_top_down_drift_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_032_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_004_cam_top_down_drift_phys_move_away",
+        "clip_035_cam_top_down_drift_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_033_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_014_cam_top_down_drift_phys_move_toward",
+        "clip_046_cam_top_down_drift_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_034_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_035_cam_top_down_drift_phys_slow_roll_left",
+        "clip_046_cam_top_down_drift_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_035_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_024_cam_top_down_drift_phys_fast_diag_bounce",
+        "clip_035_cam_top_down_drift_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_036_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_004_cam_top_down_drift_phys_move_away",
+        "clip_014_cam_top_down_drift_phys_move_toward"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_037_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_014_cam_top_down_drift_phys_move_toward",
+        "clip_035_cam_top_down_drift_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_038_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_035_cam_top_down_drift_phys_slow_roll_left",
+        "clip_057_cam_top_down_drift_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_039_same_camera",
+      "title": "Same camera cam_top_down_drift, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_004_cam_top_down_drift_phys_move_away",
+        "clip_024_cam_top_down_drift_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_040_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_059_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_041_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_059_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_042_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_059_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_043_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_044_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_045_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_048_cam_dolly_out_fast_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_046_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_047_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_048_cam_dolly_out_fast_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_048_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_048_cam_dolly_out_fast_phys_two_same_direction",
+        "clip_059_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_049_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_050_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision",
+        "clip_038_cam_truck_left_pan_right_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_051_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+        "clip_038_cam_truck_left_pan_right_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_052_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_053_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_038_cam_truck_left_pan_right_phys_two_same_direction",
+        "clip_049_cam_truck_left_pan_right_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_054_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+        "clip_049_cam_truck_left_pan_right_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_055_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_049_cam_truck_left_pan_right_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_056_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_057_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision",
+        "clip_049_cam_truck_left_pan_right_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_058_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_038_cam_truck_left_pan_right_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_059_same_camera",
+      "title": "Same camera cam_truck_left_pan_right, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_060_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_039_cam_truck_right_roll_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_061_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_062_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+        "clip_028_cam_truck_right_roll_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_063_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_028_cam_truck_right_roll_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_064_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_028_cam_truck_right_roll_phys_two_same_direction",
+        "clip_039_cam_truck_right_roll_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_065_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_028_cam_truck_right_roll_phys_two_same_direction",
+        "clip_050_cam_truck_right_roll_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_066_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_050_cam_truck_right_roll_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_067_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_039_cam_truck_right_roll_phys_multi_swirl",
+        "clip_050_cam_truck_right_roll_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_068_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+        "clip_039_cam_truck_right_roll_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_069_same_camera",
+      "title": "Same camera cam_truck_right_roll, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+        "clip_050_cam_truck_right_roll_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_070_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_029_cam_crane_up_tilt_down_phys_multi_swirl",
+        "clip_040_cam_crane_up_tilt_down_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_071_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_019_cam_crane_up_tilt_down_phys_two_same_direction",
+        "clip_029_cam_crane_up_tilt_down_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_072_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_040_cam_crane_up_tilt_down_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_073_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_074_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_019_cam_crane_up_tilt_down_phys_two_same_direction",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_075_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_029_cam_crane_up_tilt_down_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_076_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_029_cam_crane_up_tilt_down_phys_multi_swirl",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_077_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_019_cam_crane_up_tilt_down_phys_two_same_direction",
+        "clip_040_cam_crane_up_tilt_down_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_078_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_019_cam_crane_up_tilt_down_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_079_same_camera",
+      "title": "Same camera cam_crane_up_tilt_down, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_040_cam_crane_up_tilt_down_phys_hit_static_block",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_080_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame",
+        "clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_081_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block",
+        "clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_082_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl",
+        "clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_083_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl",
+        "clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_084_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction",
+        "clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_085_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction",
+        "clip_052_cam_pedestal_down_zoom_in_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_086_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_030_cam_pedestal_down_zoom_in_phys_hit_static_block",
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_087_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction",
+        "clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_088_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_010_cam_pedestal_down_zoom_in_phys_two_same_direction",
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_089_same_camera",
+      "title": "Same camera cam_pedestal_down_zoom_in, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_020_cam_pedestal_down_zoom_in_phys_multi_swirl",
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_090_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_031_cam_orbit_combo_phys_out_of_frame",
+        "clip_053_cam_orbit_combo_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_091_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_021_cam_orbit_combo_phys_hit_static_block",
+        "clip_042_cam_orbit_combo_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_092_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_011_cam_orbit_combo_phys_multi_swirl",
+        "clip_042_cam_orbit_combo_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_093_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_021_cam_orbit_combo_phys_hit_static_block",
+        "clip_031_cam_orbit_combo_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_094_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_011_cam_orbit_combo_phys_multi_swirl",
+        "clip_031_cam_orbit_combo_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_095_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_031_cam_orbit_combo_phys_out_of_frame",
+        "clip_042_cam_orbit_combo_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_096_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_011_cam_orbit_combo_phys_multi_swirl",
+        "clip_053_cam_orbit_combo_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_097_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_021_cam_orbit_combo_phys_hit_static_block",
+        "clip_053_cam_orbit_combo_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_098_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_042_cam_orbit_combo_phys_vertical_drop",
+        "clip_053_cam_orbit_combo_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_099_same_camera",
+      "title": "Same camera cam_orbit_combo, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_011_cam_orbit_combo_phys_multi_swirl",
+        "clip_021_cam_orbit_combo_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_100_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+        "clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_101_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_032_cam_wobble_roll_zoom_phys_vertical_drop",
+        "clip_043_cam_wobble_roll_zoom_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_102_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_043_cam_wobble_roll_zoom_phys_confusing_move_back",
+        "clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_103_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_012_cam_wobble_roll_zoom_phys_hit_static_block",
+        "clip_032_cam_wobble_roll_zoom_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_104_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+        "clip_032_cam_wobble_roll_zoom_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_105_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+        "clip_043_cam_wobble_roll_zoom_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_106_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_012_cam_wobble_roll_zoom_phys_hit_static_block",
+        "clip_043_cam_wobble_roll_zoom_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_107_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_012_cam_wobble_roll_zoom_phys_hit_static_block",
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_108_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_032_cam_wobble_roll_zoom_phys_vertical_drop",
+        "clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_109_same_camera",
+      "title": "Same camera cam_wobble_roll_zoom, different physics/scene",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_012_cam_wobble_roll_zoom_phys_hit_static_block",
+        "clip_054_cam_wobble_roll_zoom_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics_or_scene"
+      ]
+    },
+    {
+      "group_id": "pair_110_same_physics_scene",
+      "title": "Same physics and scene phys_static_center / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_055_cam_out_of_frame_push_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_111_same_physics_scene",
+      "title": "Same physics and scene phys_static_center / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "ambiguous_cam_dolly_static",
+        "clip_003_cam_static_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_112_same_physics_scene",
+      "title": "Same physics and scene phys_static_center / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "ambiguous_cam_dolly_static",
+        "clip_055_cam_out_of_frame_push_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_113_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_114_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_031_cam_orbit_combo_phys_out_of_frame",
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_115_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_031_cam_orbit_combo_phys_out_of_frame",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_116_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+        "clip_031_cam_orbit_combo_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_117_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_118_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_119_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_120_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+        "clip_041_cam_pedestal_down_zoom_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_121_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_031_cam_orbit_combo_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_122_same_physics_scene",
+      "title": "Same physics and scene phys_out_of_frame / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_022_cam_wobble_roll_zoom_phys_out_of_frame",
+        "clip_051_cam_crane_up_tilt_down_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_123_same_physics_scene",
+      "title": "Same physics and scene phys_move_away / scene_blue_tall_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_004_cam_top_down_drift_phys_move_away",
+        "clip_013_cam_static_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_124_same_physics_scene",
+      "title": "Same physics and scene phys_move_toward / scene_warm_panel_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_005_cam_dolly_in_phys_move_toward",
+        "clip_014_cam_top_down_drift_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_125_same_physics_scene",
+      "title": "Same physics and scene phys_fast_diag_bounce / scene_green_floor_marks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_015_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_034_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_126_same_physics_scene",
+      "title": "Same physics and scene phys_fast_diag_bounce / scene_green_floor_marks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_015_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_024_cam_top_down_drift_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_127_same_physics_scene",
+      "title": "Same physics and scene phys_fast_diag_bounce / scene_green_floor_marks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_024_cam_top_down_drift_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_128_same_physics_scene",
+      "title": "Same physics and scene phys_fast_diag_bounce / scene_green_floor_marks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_024_cam_top_down_drift_phys_fast_diag_bounce",
+        "clip_034_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_129_same_physics_scene",
+      "title": "Same physics and scene phys_fast_diag_bounce / scene_green_floor_marks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_034_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_130_same_physics_scene",
+      "title": "Same physics and scene phys_fast_diag_bounce / scene_green_floor_marks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_006_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_015_cam_dolly_in_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_131_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_025_cam_dolly_in_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_132_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_035_cam_top_down_drift_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_133_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_134_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_025_cam_dolly_in_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_135_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_035_cam_top_down_drift_phys_slow_roll_left",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_136_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_025_cam_dolly_in_phys_slow_roll_left",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_137_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_138_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_007_cam_truck_left_pan_right_phys_slow_roll_left",
+        "clip_045_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_139_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_025_cam_dolly_in_phys_slow_roll_left",
+        "clip_035_cam_top_down_drift_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_140_same_physics_scene",
+      "title": "Same physics and scene phys_slow_roll_left / scene_dark_side_blocks, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_016_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_035_cam_top_down_drift_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_141_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_036_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_142_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_056_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_143_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_144_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_145_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_046_cam_top_down_drift_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_146_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_026_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_036_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_147_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+        "clip_046_cam_top_down_drift_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_148_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_008_cam_truck_right_roll_phys_roll_right_fast",
+        "clip_046_cam_top_down_drift_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_149_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_017_cam_truck_left_pan_right_phys_roll_right_fast",
+        "clip_036_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_150_same_physics_scene",
+      "title": "Same physics and scene phys_roll_right_fast / scene_red_wall_stripes, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_036_cam_dolly_in_phys_roll_right_fast",
+        "clip_056_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_151_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_152_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_047_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_153_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision",
+        "clip_057_cam_top_down_drift_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_154_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+        "clip_047_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_155_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_047_cam_dolly_in_phys_two_cross_collision",
+        "clip_057_cam_top_down_drift_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_156_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_157_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_158_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_018_cam_truck_right_roll_phys_two_cross_collision",
+        "clip_027_cam_truck_left_pan_right_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_159_same_physics_scene",
+      "title": "Same physics and scene phys_two_cross_collision / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_009_cam_crane_up_tilt_down_phys_two_cross_collision",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    }
+  ],
+  "ambiguous_equivalence_groups": [
+    {
+      "group_id": "ambiguous_000_dolly_vs_object_toward_camera",
+      "title": "Ambiguous appearance: camera dolly-in vs object moving toward camera",
+      "clip_ids": [
+        "ambiguous_cam_dolly_static",
+        "ambiguous_static_obj_toward_camera"
+      ],
+      "reason": "These clips can look similar in a single view: one changes apparent scale through camera motion, the other through physical object motion. They are diagnostic examples, not supervised pair samples, because both camera_id and physics_id differ.",
+      "hidden_factor_difference": [
+        "camera_motion",
+        "physical_motion"
+      ],
+      "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics/scene pairs."
+    }
+  ]
+}
