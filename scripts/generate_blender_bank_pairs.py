@@ -36,16 +36,16 @@ CAMERA_PRIMITIVES = [
 ]
 
 CAMERA_SPECS = [
-    {"id": "cam_static", "primitives": ["Static"], "speed": "none"},
-    {"id": "cam_dolly_in", "primitives": ["Dolly_In"], "speed": "slow"},
-    {"id": "cam_dolly_out_fast", "primitives": ["Dolly_Out"], "speed": "fast"},
-    {"id": "cam_truck_left_pan_right", "primitives": ["Truck_Left", "Pan_Right"], "speed": "medium"},
-    {"id": "cam_truck_right_roll", "primitives": ["Truck_Right", "Roll_Clockwise"], "speed": "medium"},
-    {"id": "cam_crane_up_tilt_down", "primitives": ["Pedestal_Up", "Tilt_Down"], "speed": "slow"},
-    {"id": "cam_pedestal_down_zoom_in", "primitives": ["Pedestal_Down", "Zoom_In"], "speed": "ease_in"},
-    {"id": "cam_orbit_combo", "primitives": ["Truck_Right", "Pan_Left", "Dolly_In"], "speed": "ease_in_out"},
-    {"id": "cam_wobble_roll_zoom", "primitives": ["Pan_Left", "Pan_Right", "Roll_Counterclockwise", "Zoom_Out"], "speed": "variable"},
-    {"id": "cam_out_of_frame_push", "primitives": ["Dolly_In", "Tilt_Up"], "speed": "fast"},
+    {"id": "cam_static", "primitives": ["Static"], "speed": "none", "view": {"x": -1.1, "z": 0.45, "target_x": -0.25, "target_z": 0.08, "roll": -4.0}},
+    {"id": "cam_dolly_in", "primitives": ["Dolly_In"], "speed": "slow", "view": {"x": 1.0, "z": -0.25, "target_x": 0.20, "target_z": -0.08, "roll": 2.5}},
+    {"id": "cam_dolly_out_fast", "primitives": ["Dolly_Out"], "speed": "fast", "view": {"x": -0.8, "z": 0.35, "target_x": -0.15, "target_z": 0.04, "roll": -2.0}},
+    {"id": "cam_truck_left_pan_right", "primitives": ["Truck_Left", "Pan_Right"], "speed": "medium", "view": {"x": 0.0, "z": 0.15, "target_x": 0.0, "target_z": 0.06, "roll": 1.0}},
+    {"id": "cam_truck_right_roll", "primitives": ["Truck_Right", "Roll_Clockwise"], "speed": "medium", "view": {"x": 0.0, "z": -0.20, "target_x": 0.0, "target_z": -0.04, "roll": -3.0}},
+    {"id": "cam_crane_up_tilt_down", "primitives": ["Pedestal_Up", "Tilt_Down"], "speed": "slow", "view": {"x": 1.3, "z": 0.0, "target_x": 0.30, "target_z": 0.0, "roll": 0.0}},
+    {"id": "cam_pedestal_down_zoom_in", "primitives": ["Pedestal_Down", "Zoom_In"], "speed": "ease_in", "view": {"x": -1.3, "z": 0.0, "target_x": -0.25, "target_z": 0.0, "roll": 3.5}},
+    {"id": "cam_orbit_combo", "primitives": ["Truck_Right", "Pan_Left", "Dolly_In"], "speed": "ease_in_out", "view": {"x": 0.4, "z": 0.20, "target_x": 0.0, "target_z": 0.05, "roll": -1.5}},
+    {"id": "cam_wobble_roll_zoom", "primitives": ["Pan_Left", "Pan_Right", "Roll_Counterclockwise", "Zoom_Out"], "speed": "variable", "view": {"x": -0.5, "z": -0.15, "target_x": 0.0, "target_z": 0.0, "roll": 4.0}},
+    {"id": "cam_out_of_frame_push", "primitives": ["Dolly_In", "Tilt_Up"], "speed": "fast", "view": {"x": 0.8, "z": 0.25, "target_x": 0.2, "target_z": 0.05, "roll": -2.5}},
 ]
 
 PHYSICS_SPECS = [
@@ -65,7 +65,14 @@ PHYSICS_SPECS = [
     {"id": "phys_static_with_dynamic_bg", "kind": "static_with_dynamic_bg", "objects": 3, "speed": "slow"},
 ]
 
-BACKGROUNDS = ["plain_wall", "blocks", "pillars", "mixed_shapes", "corridor", "cluttered_studio"]
+SCENE_SPECS = [
+    {"id": "scene_gray_low_wall", "ground": (0.66, 0.68, 0.64, 1), "wall": (0.78, 0.79, 0.76, 1), "side": (0.70, 0.72, 0.72, 1), "wall_height": 2.0, "style": "plain"},
+    {"id": "scene_blue_tall_wall", "ground": (0.62, 0.67, 0.69, 1), "wall": (0.70, 0.77, 0.82, 1), "side": (0.64, 0.70, 0.74, 1), "wall_height": 2.8, "style": "horizontal_bands"},
+    {"id": "scene_warm_panel_wall", "ground": (0.69, 0.66, 0.60, 1), "wall": (0.80, 0.75, 0.67, 1), "side": (0.73, 0.69, 0.64, 1), "wall_height": 2.35, "style": "wall_panels"},
+    {"id": "scene_green_floor_marks", "ground": (0.60, 0.68, 0.62, 1), "wall": (0.74, 0.80, 0.73, 1), "side": (0.67, 0.73, 0.67, 1), "wall_height": 2.15, "style": "floor_marks"},
+    {"id": "scene_dark_side_blocks", "ground": (0.58, 0.60, 0.62, 1), "wall": (0.72, 0.73, 0.75, 1), "side": (0.52, 0.54, 0.57, 1), "wall_height": 2.55, "style": "side_blocks"},
+    {"id": "scene_red_wall_stripes", "ground": (0.66, 0.64, 0.62, 1), "wall": (0.80, 0.70, 0.68, 1), "side": (0.72, 0.66, 0.65, 1), "wall_height": 2.25, "style": "vertical_stripes"},
+]
 COLORS = [(0.86, 0.24, 0.18, 1), (0.12, 0.52, 0.46, 1), (0.18, 0.35, 0.75, 1), (0.95, 0.62, 0.18, 1), (0.48, 0.28, 0.74, 1)]
 
 
@@ -74,7 +81,7 @@ class ClipSpec:
     clip_id: str
     camera: dict
     physics: dict
-    background: str
+    scene: dict
     frames: int
 
 
@@ -143,23 +150,28 @@ def add_cylinder(name: str, loc: tuple[float, float, float], radius: float, dept
     return obj
 
 
-def add_world(background: str, rng: random.Random) -> None:
-    add_cube("ground", (0, 0, -0.03), (9, 9, 0.06), (0.66, 0.68, 0.64, 1))
-    add_cube("back_wall", (0, 3.35, 1.2), (9, 0.08, 2.4), (0.78, 0.79, 0.76, 1))
-    add_cube("left_wall", (-4.25, 0, 1.1), (0.08, 6.5, 2.2), (0.70, 0.72, 0.72, 1))
+def add_world(scene: dict) -> None:
+    wall_height = scene["wall_height"]
+    add_cube("ground", (0, 0, -0.03), (9, 9, 0.06), scene["ground"])
+    add_cube("back_wall", (0, 3.35, wall_height / 2), (9, 0.08, wall_height), scene["wall"])
+    add_cube("left_wall", (-4.25, 0, wall_height / 2), (0.08, 6.5, wall_height), scene["side"])
 
-    if background in {"blocks", "mixed_shapes", "cluttered_studio"}:
-        for i in range(4 if background != "cluttered_studio" else 8):
-            x = rng.uniform(-3.0, 3.0)
-            y = rng.uniform(-0.6, 2.7)
-            h = rng.uniform(0.25, 0.9)
-            add_cube(f"static_block_{i}", (x, y, h / 2), (rng.uniform(0.25, 0.7), rng.uniform(0.25, 0.7), h), (0.35 + 0.08 * i, 0.36, 0.39, 1))
-    if background in {"pillars", "mixed_shapes", "corridor"}:
-        for i, x in enumerate([-2.7, -1.2, 1.2, 2.7]):
-            add_cylinder(f"pillar_{i}", (x, 2.0, 0.65), 0.13, 1.3, (0.42, 0.44, 0.46, 1))
-    if background in {"mixed_shapes", "cluttered_studio"}:
-        for i in range(3):
-            add_sphere(f"static_sphere_{i}", (rng.uniform(-3, 3), rng.uniform(0.8, 2.5), 0.18), 0.18, COLORS[(i + 2) % len(COLORS)])
+    style = scene["style"]
+    if style == "horizontal_bands":
+        for i, z in enumerate([0.55, 1.15, 1.75, 2.35]):
+            add_cube(f"wall_band_{i}", (0, 3.295, z), (8.3, 0.035, 0.035), (0.48, 0.57, 0.62, 1))
+    elif style == "wall_panels":
+        for i, x in enumerate([-2.8, -1.4, 0.0, 1.4, 2.8]):
+            add_cube(f"back_panel_{i}", (x, 3.29, 1.05), (0.72, 0.035, 1.45), (0.70, 0.63, 0.54, 1))
+    elif style == "floor_marks":
+        for i, (x, y) in enumerate([(-3.2, -2.3), (-2.4, 2.35), (2.6, -2.1), (3.2, 1.85)]):
+            add_cylinder(f"floor_mark_{i}", (x, y, 0.012), 0.07, 0.018, (0.34, 0.43, 0.36, 1))
+    elif style == "side_blocks":
+        for i, (x, y, sx, sy) in enumerate([(-3.55, -2.15, 0.45, 0.75), (3.45, -1.85, 0.55, 0.55), (-3.35, 2.35, 0.50, 0.45), (3.55, 2.25, 0.42, 0.70)]):
+            add_cube(f"side_low_block_{i}", (x, y, 0.14), (sx, sy, 0.28), (0.38, 0.40, 0.42, 1))
+    elif style == "vertical_stripes":
+        for i, x in enumerate([-3.6, -2.4, -1.2, 0.0, 1.2, 2.4, 3.6]):
+            add_cube(f"wall_stripe_{i}", (x, 3.29, wall_height / 2), (0.08, 0.035, wall_height * 0.84), (0.64, 0.43, 0.42, 1))
 
     bpy.ops.object.light_add(type="AREA", location=(0, -4.0, 5.0))
     light = bpy.context.object
@@ -295,11 +307,26 @@ def camera_state(camera: dict, t: float) -> tuple[Vector, Vector, float, float]:
         target = Vector((0.3 + 1.2 * u, 0.2 + 1.4 * u, 0.7 + 0.4 * u))
     else:
         raise ValueError(cid)
+
+    view = camera.get("view", {})
+    pos.x += view.get("x", 0.0)
+    pos.z += view.get("z", 0.0)
+    target.x += view.get("target_x", 0.0)
+    target.z += view.get("target_z", 0.0)
+    roll += math.radians(view.get("roll", 0.0))
     return pos, target, roll, lens
 
 
+def scene_for_physics(physics: dict) -> dict:
+    # Same-physics pairs must keep object motion and scene identical. Binding scene
+    # to physics_id makes that invariant explicit and easy to audit in manifests.
+    idx = PHYSICS_SPECS.index(physics) % len(SCENE_SPECS)
+    return SCENE_SPECS[idx]
+
+def default_frames_for_physics(physics: dict) -> int:
+    return [20, 24, 28, 32][PHYSICS_SPECS.index(physics) % 4]
+
 def build_clip_specs(max_clips: int, seed: int) -> list[ClipSpec]:
-    rng = random.Random(seed)
     specs = []
     forced = [
         ("confusing_cam_push_static", "cam_dolly_in", "phys_static_center"),
@@ -307,21 +334,20 @@ def build_clip_specs(max_clips: int, seed: int) -> list[ClipSpec]:
         ("outframe_cam_push_obj_cross", "cam_out_of_frame_push", "phys_out_of_frame"),
     ]
     for clip_id, cam_id, phys_id in forced:
-        specs.append(ClipSpec(clip_id, next(c for c in CAMERA_SPECS if c["id"] == cam_id), next(p for p in PHYSICS_SPECS if p["id"] == phys_id), rng.choice(BACKGROUNDS), rng.choice([16, 20, 24, 28])))
+        phys = next(p for p in PHYSICS_SPECS if p["id"] == phys_id)
+        specs.append(ClipSpec(clip_id, next(c for c in CAMERA_SPECS if c["id"] == cam_id), phys, scene_for_physics(phys), default_frames_for_physics(phys)))
     for cam in CAMERA_SPECS:
         for phys in PHYSICS_SPECS:
             if len(specs) >= max_clips:
                 return specs
             clip_id = f"clip_{len(specs):03d}_{cam['id']}_{phys['id']}"
-            frames = rng.choice([16, 20, 24, 28, 32])
-            specs.append(ClipSpec(clip_id, cam, phys, rng.choice(BACKGROUNDS), frames))
+            specs.append(ClipSpec(clip_id, cam, phys, scene_for_physics(phys), default_frames_for_physics(phys)))
     return specs
 
 
 def render_clip(spec: ClipSpec, run_dir: Path) -> dict[str, object]:
-    rng = random.Random(f"{SEED}_{spec.clip_id}")
     reset_scene(spec.frames)
-    add_world(spec.background, rng)
+    add_world(spec.scene)
     objects = create_dynamic_objects(spec.physics)
     bpy.ops.object.camera_add()
     camera = bpy.context.object
@@ -362,47 +388,63 @@ def render_clip(spec: ClipSpec, run_dir: Path) -> dict[str, object]:
     metadata_rel = Path("metadata") / f"{spec.clip_id}.json"
     metadata_path = run_dir / metadata_rel
     metadata_path.parent.mkdir(parents=True, exist_ok=True)
-    metadata = {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "background": spec.background, "fps": FPS, "frames_count": spec.frames, "resolution": [WIDTH, HEIGHT], "camera_primitives": spec.camera["primitives"], "camera_speed": spec.camera["speed"], "physics_kind": spec.physics["kind"], "physics_objects": spec.physics["objects"], "physics_speed": spec.physics["speed"], "video": str(video_rel), "frames": records}
+    metadata = {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "scene_id": spec.scene["id"], "scene_style": spec.scene["style"], "fps": FPS, "frames_count": spec.frames, "resolution": [WIDTH, HEIGHT], "camera_primitives": spec.camera["primitives"], "camera_speed": spec.camera["speed"], "camera_view_offset": spec.camera.get("view", {}), "physics_kind": spec.physics["kind"], "physics_objects": spec.physics["objects"], "physics_speed": spec.physics["speed"], "video": str(video_rel), "frames": records}
     metadata_path.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-    return {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "background": spec.background, "camera_primitives": spec.camera["primitives"], "pair_groups": [], "video": str(video_rel), "metadata": str(metadata_rel)}
+    return {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "scene_id": spec.scene["id"], "scene_style": spec.scene["style"], "camera_primitives": spec.camera["primitives"], "pair_groups": [], "video": str(video_rel), "metadata": str(metadata_rel)}
 
 
 def make_pairs(clips: list[dict[str, object]], target_pairs: int, seed: int) -> list[dict[str, object]]:
     rng = random.Random(seed + 99)
     by_cam = {}
-    by_phys = {}
+    by_phys_scene = {}
     for clip in clips:
         by_cam.setdefault(clip["camera_id"], []).append(clip)
-        by_phys.setdefault(clip["physics_id"], []).append(clip)
+        by_phys_scene.setdefault((clip["physics_id"], clip["scene_id"]), []).append(clip)
+
     pairs = []
+    seen_pairs = set()
+
     def add_pair(kind, title, a, b, controlled, varied, tags):
         if a["clip_id"] == b["clip_id"]:
             return
+        key = tuple(sorted([a["clip_id"], b["clip_id"]]))
+        if key in seen_pairs:
+            return
+        seen_pairs.add(key)
         group_id = f"pair_{len(pairs):03d}_{kind}"
         pairs.append({"group_id": group_id, "title": title, "controlled_factor": controlled, "varied_factor": varied, "clip_ids": [a["clip_id"], b["clip_id"]], "tags": tags})
         a["pair_groups"].append(group_id)
         b["pair_groups"].append(group_id)
 
-    clip_by_id = {clip["clip_id"]: clip for clip in clips}
     for cam, group in by_cam.items():
-        for _ in range(10):
-            if len(group) >= 2 and len(pairs) < target_pairs:
-                a, b = rng.sample(group, 2)
-                add_pair("same_camera", f"Same camera {cam}, different physics/background", a, b, "camera_id", "physics_id/background", ["same_camera", "different_physics"])
-    for phys, group in by_phys.items():
-        for _ in range(10):
-            if len(group) >= 2 and len(pairs) < target_pairs:
-                a, b = rng.sample(group, 2)
-                add_pair("same_physics", f"Same physics {phys}, different camera/background", a, b, "physics_id", "camera_id/background", ["same_physics", "different_camera"])
-    while len(pairs) < target_pairs:
+        candidates = [(a, b) for i, a in enumerate(group) for b in group[i + 1:] if a["physics_id"] != b["physics_id"] or a["scene_id"] != b["scene_id"]]
+        rng.shuffle(candidates)
+        for a, b in candidates[:10]:
+            if len(pairs) >= target_pairs:
+                return pairs
+            add_pair("same_camera", f"Same camera {cam}, different physics/scene", a, b, "camera_id", "physics_id/scene_id", ["same_camera", "different_physics_or_scene"])
+
+    for (phys, scene), group in by_phys_scene.items():
+        candidates = [(a, b) for i, a in enumerate(group) for b in group[i + 1:] if a["camera_id"] != b["camera_id"]]
+        rng.shuffle(candidates)
+        for a, b in candidates[:10]:
+            if len(pairs) >= target_pairs:
+                return pairs
+            add_pair("same_physics_scene", f"Same physics and scene {phys} / {scene}, different camera", a, b, "physics_id/scene_id", "camera_id", ["same_physics", "same_scene", "different_camera"])
+
+    attempts = 0
+    while len(pairs) < target_pairs and attempts < target_pairs * 50:
+        attempts += 1
         a, b = rng.sample(clips, 2)
         tags = ["mixed_combo"]
         if a["camera_id"] != b["camera_id"]:
             tags.append("different_camera")
         if a["physics_id"] != b["physics_id"]:
             tags.append("different_physics")
-        add_pair("mixed", "Mixed camera/physics/background comparison", a, b, "none", "camera_id/physics_id/background", tags)
-    return pairs[:target_pairs]
+        if a["scene_id"] != b["scene_id"]:
+            tags.append("different_scene")
+        add_pair("mixed", "Mixed camera/physics/scene comparison", a, b, "none", "camera_id/physics_id/scene_id", tags)
+    return pairs
 
 
 def update_index(run_id: str) -> None:
@@ -429,7 +471,7 @@ def main() -> None:
     clips = [render_clip(spec, run_dir) for spec in specs]
     pair_groups = make_pairs(clips, args.pairs, SEED)
     ambiguous_equivalence_groups = [{"group_id": "ambiguous_000_dolly_vs_object_depth", "title": "Ambiguous appearance: dolly-in static object vs static camera object moving away", "clip_ids": ["confusing_cam_push_static", "confusing_static_obj_back"], "reason": "These clips can look similar in a single view, but they are not supervised pair samples because both camera_id and physics_id differ.", "hidden_factor_difference": ["camera_motion", "physical_motion"], "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics pairs."}]
-    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Broad Blender-only preview bank with many camera primitives, object motions, backgrounds, confusing cases, out-of-frame cases, variable speeds, and 100-200 pair relationships.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
+    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Broad Blender-only preview bank with explicit scene_id. Same-physics pairs keep physics_id and scene_id fixed, while camera-only pairs keep camera_id fixed and vary physics/scene.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "scene_reference": SCENE_SPECS, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     update_index(args.run_id)
     print(f"Wrote {len(clips)} clips and {len(pair_groups)} pairs to {run_dir}")

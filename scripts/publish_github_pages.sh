@@ -19,11 +19,11 @@ fi
 git remote remove origin 2>/dev/null || true
 git remote add origin "$repo_url"
 
-git add README.md scripts site .gitignore
+git add README.md scripts site docs .gitignore
 git commit -m "Add camera motion disentanglement result site" || true
 git branch -M main
 git push -u origin main
 
 echo
 echo "Pushed to $repo_url"
-echo "Enable GitHub Pages in repo Settings -> Pages -> Deploy from branch -> main /site."
+echo "Enable GitHub Pages in repo Settings -> Pages -> Deploy from branch -> main /docs."

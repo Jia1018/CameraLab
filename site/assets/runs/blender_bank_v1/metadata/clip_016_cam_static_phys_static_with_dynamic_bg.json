@@ -1,0 +1,1518 @@
+{
+  "clip_id": "clip_016_cam_static_phys_static_with_dynamic_bg",
+  "camera_id": "cam_static",
+  "physics_id": "phys_static_with_dynamic_bg",
+  "scene_id": "scene_blue_tall_wall",
+  "scene_style": "horizontal_bands",
+  "fps": 24,
+  "frames_count": 24,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Static"
+  ],
+  "camera_speed": "none",
+  "camera_view_offset": {
+    "x": -1.1,
+    "z": 0.45,
+    "target_x": -0.25,
+    "target_z": 0.08,
+    "roll": -4.0
+  },
+  "physics_kind": "static_with_dynamic_bg",
+  "physics_objects": 3,
+  "physics_speed": "slow",
+  "video": "videos/clip_016_cam_static_phys_static_with_dynamic_bg.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -2.2,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            1.2,
+            0.22
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.04348,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -2.0087,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.54636,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            1.12174,
+            0.43912
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.08696,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -1.81739,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            1.09273,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            1.04348,
+            0.62196
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.13043,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -1.62609,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            1.63909,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.96522,
+            0.73824
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.17391,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -1.43478,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            2.18546,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.88696,
+            0.76872
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.21739,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -1.24348,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            2.73182,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.8087,
+            0.70834
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.26087,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -1.05217,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            3.27818,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.73043,
+            0.5671
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.30435,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -0.86087,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            3.82455,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.65217,
+            0.36839
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.34783,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -0.66957,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            4.37091,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.57391,
+            0.29489
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.3913,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -0.47826,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            4.91728,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.49565,
+            0.50577
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.43478,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -0.28696,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            5.46364,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.41739,
+            0.66933
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.47826,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            -0.09565,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            6.01,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.33913,
+            0.7585
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.52174,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            0.09565,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            6.55637,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.26087,
+            0.7585
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.56522,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            0.28696,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            7.10273,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.18261,
+            0.66933
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.6087,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            0.47826,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            7.6491,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.10435,
+            0.50577
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.65217,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            0.66957,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            8.19546,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            0.02609,
+            0.29489
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.69565,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            0.86087,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            8.74182,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.05217,
+            0.36839
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.73913,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            1.05217,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            9.28819,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.13043,
+            0.5671
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.78261,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            1.24348,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            9.83455,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.2087,
+            0.70834
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.82609,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            1.43478,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            10.38091,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.28696,
+            0.76872
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.86957,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            1.62609,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            10.92728,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.36522,
+            0.73824
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.91304,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            1.81739,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            11.47364,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.44348,
+            0.62196
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.95652,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            2.0087,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            12.02001,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.52174,
+            0.43912
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          -1.1,
+          -5.6,
+          2.55
+        ],
+        "look_at": [
+          -0.25,
+          0.0,
+          0.63
+        ],
+        "roll": -0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "foreground_static",
+          "position": [
+            0.0,
+            -0.7,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "background_slider",
+          "position": [
+            2.2,
+            1.4,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            12.56637,
+            0.0
+          ]
+        },
+        {
+          "name": "background_bouncer",
+          "position": [
+            1.5,
+            -0.6,
+            0.22
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

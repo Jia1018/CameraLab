@@ -1,0 +1,1206 @@
+{
+  "clip_id": "clip_026_cam_dolly_in_phys_hit_static_block",
+  "camera_id": "cam_dolly_in",
+  "physics_id": "phys_hit_static_block",
+  "scene_id": "scene_green_floor_marks",
+  "scene_style": "floor_marks",
+  "fps": 24,
+  "frames_count": 24,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Dolly_In"
+  ],
+  "camera_speed": "slow",
+  "camera_view_offset": {
+    "x": 1.0,
+    "z": -0.25,
+    "target_x": 0.2,
+    "target_z": -0.08,
+    "roll": 2.5
+  },
+  "physics_kind": "hit_static_block",
+  "physics_objects": 2,
+  "physics_speed": "fast",
+  "video": "videos/clip_026_cam_dolly_in_phys_hit_static_block.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          1.0,
+          -6.2,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.8,
+            -0.2,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.04348,
+      "camera": {
+        "position": [
+          1.0,
+          -6.10435,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.60435,
+            -0.2,
+            0.34963
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.08696,
+      "camera": {
+        "position": [
+          1.0,
+          -6.0087,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.4087,
+            -0.2,
+            0.38965
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.13043,
+      "camera": {
+        "position": [
+          1.0,
+          -5.91304,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.21304,
+            -0.2,
+            0.33466
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.17391,
+      "camera": {
+        "position": [
+          1.0,
+          -5.81739,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -2.01739,
+            -0.2,
+            0.26043
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.21739,
+      "camera": {
+        "position": [
+          1.0,
+          -5.72174,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.82174,
+            -0.2,
+            0.36255
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.26087,
+      "camera": {
+        "position": [
+          1.0,
+          -5.62609,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.62609,
+            -0.2,
+            0.38686
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.30435,
+      "camera": {
+        "position": [
+          1.0,
+          -5.53043,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.43043,
+            -0.2,
+            0.31794
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.34783,
+      "camera": {
+        "position": [
+          1.0,
+          -5.43478,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.23478,
+            -0.2,
+            0.28047
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.3913,
+      "camera": {
+        "position": [
+          1.0,
+          -5.33913,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -1.03913,
+            -0.2,
+            0.37318
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.43478,
+      "camera": {
+        "position": [
+          1.0,
+          -5.24348,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.84348,
+            -0.2,
+            0.38134
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.47826,
+      "camera": {
+        "position": [
+          1.0,
+          -5.14783,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.64783,
+            -0.2,
+            0.29976
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.52174,
+      "camera": {
+        "position": [
+          1.0,
+          -5.05217,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.45217,
+            -0.2,
+            0.29976
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.56522,
+      "camera": {
+        "position": [
+          1.0,
+          -4.95652,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.25652,
+            -0.2,
+            0.38134
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.6087,
+      "camera": {
+        "position": [
+          1.0,
+          -4.86087,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            -0.06087,
+            -0.2,
+            0.37318
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.65217,
+      "camera": {
+        "position": [
+          1.0,
+          -4.76522,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.13478,
+            -0.2,
+            0.28047
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.69565,
+      "camera": {
+        "position": [
+          1.0,
+          -4.66957,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.33043,
+            -0.2,
+            0.31794
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.73913,
+      "camera": {
+        "position": [
+          1.0,
+          -4.57391,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.52609,
+            -0.2,
+            0.38686
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.5,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.78261,
+      "camera": {
+        "position": [
+          1.0,
+          -4.47826,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.48313,
+            -0.2,
+            0.36255
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.51065,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0213
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.82609,
+      "camera": {
+        "position": [
+          1.0,
+          -4.38261,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.4353,
+            -0.2,
+            0.26043
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.52152,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.04304
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.86957,
+      "camera": {
+        "position": [
+          1.0,
+          -4.28696,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.38748,
+            -0.2,
+            0.33466
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.53239,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.06478
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.91304,
+      "camera": {
+        "position": [
+          1.0,
+          -4.1913,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.33965,
+            -0.2,
+            0.38965
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.54326,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.08652
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.95652,
+      "camera": {
+        "position": [
+          1.0,
+          -4.09565,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.29183,
+            -0.2,
+            0.34963
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.55413,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.10826
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          1.0,
+          -4.0,
+          1.85
+        ],
+        "look_at": [
+          0.2,
+          0.0,
+          0.47
+        ],
+        "roll": 0.04363,
+        "lens": 34.0,
+        "primitives": [
+          "Dolly_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "incoming_ball",
+          "position": [
+            0.244,
+            -0.2,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "target_static_block",
+          "position": [
+            0.565,
+            -0.2,
+            0.3
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.13
+          ]
+        }
+      ]
+    }
+  ]
+}
