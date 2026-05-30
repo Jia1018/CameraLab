@@ -1,0 +1,806 @@
+{
+  "clip_id": "clip_010_cam_static_phys_two_same_direction",
+  "camera_id": "cam_static",
+  "physics_id": "phys_two_same_direction",
+  "background": "pillars",
+  "fps": 24,
+  "frames_count": 16,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Static"
+  ],
+  "camera_speed": "none",
+  "physics_kind": "two_same_direction",
+  "physics_objects": 2,
+  "physics_speed": "mixed",
+  "video": "videos/clip_010_cam_static_phys_two_same_direction.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -1.8,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -3.0,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.06667,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -1.62,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -2.7,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            1.0472,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.13333,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -1.44,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -2.4,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            2.0944,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.2,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -1.26,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -2.1,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            3.14159,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.26667,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -1.08,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -1.8,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            4.18879,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.33333,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -0.9,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -1.5,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            5.23599,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.4,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -0.72,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -1.2,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            6.28319,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.46667,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -0.54,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -1.02126,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            7.33038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.53333,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -0.36,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -0.99981,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            8.37758,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.6,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            -0.18,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            -0.4445,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            9.42478,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.66667,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            0.0,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            0.0,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            10.47198,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.73333,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            0.18,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            0.3,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            11.51917,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.8,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            0.36,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            0.6,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            12.56637,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.86667,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            0.54,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            0.9,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            13.61357,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.93333,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            0.72,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            1.2,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            14.66077,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          0.0,
+          -5.6,
+          2.1
+        ],
+        "look_at": [
+          0.0,
+          0.0,
+          0.55
+        ],
+        "roll": 0.0,
+        "lens": 34.0,
+        "primitives": [
+          "Static"
+        ]
+      },
+      "objects": [
+        {
+          "name": "slow_lead",
+          "position": [
+            0.9,
+            -0.6,
+            0.24
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "fast_follow",
+          "position": [
+            1.5,
+            0.2,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            15.70796,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

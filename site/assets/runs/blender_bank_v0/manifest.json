@@ -1,0 +1,2475 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "blender_bank_v0",
+  "generator": "blender_combinatorial_bank",
+  "description": "Broad Blender-only preview bank with many camera primitives, object motions, backgrounds, confusing cases, out-of-frame cases, variable speeds, and 100-200 pair relationships.",
+  "blender_version": "3.6.5",
+  "resolution": [
+    320,
+    240
+  ],
+  "fps": 24,
+  "cycles_samples": 1,
+  "camera_primitives_reference": [
+    "Dolly_In",
+    "Dolly_Out",
+    "Pedestal_Up",
+    "Pedestal_Down",
+    "Truck_Right",
+    "Truck_Left",
+    "Pan_Right",
+    "Pan_Left",
+    "Tilt_Up",
+    "Tilt_Down",
+    "Roll_Clockwise",
+    "Roll_Counterclockwise",
+    "Zoom_In",
+    "Zoom_Out",
+    "Static"
+  ],
+  "clips": [
+    {
+      "clip_id": "confusing_cam_push_static",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_static_center",
+      "background": "blocks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_000_confusing",
+        "pair_002_same_camera",
+        "pair_031_same_physics",
+        "pair_035_same_physics",
+        "pair_037_same_physics",
+        "pair_038_same_physics",
+        "pair_039_same_physics"
+      ],
+      "video": "videos/confusing_cam_push_static.mp4",
+      "metadata": "metadata/confusing_cam_push_static.json"
+    },
+    {
+      "clip_id": "confusing_static_obj_back",
+      "camera_id": "cam_static",
+      "physics_id": "phys_confusing_move_back",
+      "background": "pillars",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_000_confusing",
+        "pair_017_same_camera",
+        "pair_041_same_physics",
+        "pair_042_same_physics",
+        "pair_046_same_physics",
+        "pair_047_same_physics",
+        "pair_048_same_physics",
+        "pair_049_same_physics"
+      ],
+      "video": "videos/confusing_static_obj_back.mp4",
+      "metadata": "metadata/confusing_static_obj_back.json"
+    },
+    {
+      "clip_id": "outframe_cam_push_obj_cross",
+      "camera_id": "cam_out_of_frame_push",
+      "physics_id": "phys_out_of_frame",
+      "background": "mixed_shapes",
+      "camera_primitives": [
+        "Dolly_In",
+        "Tilt_Up"
+      ],
+      "pair_groups": [
+        "pair_051_same_physics",
+        "pair_052_same_physics",
+        "pair_053_same_physics",
+        "pair_054_same_physics",
+        "pair_055_same_physics",
+        "pair_056_same_physics",
+        "pair_057_same_physics",
+        "pair_059_same_physics",
+        "pair_060_same_physics"
+      ],
+      "video": "videos/outframe_cam_push_obj_cross.mp4",
+      "metadata": "metadata/outframe_cam_push_obj_cross.json"
+    },
+    {
+      "clip_id": "clip_003_cam_static_phys_static_center",
+      "camera_id": "cam_static",
+      "physics_id": "phys_static_center",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_015_same_camera",
+        "pair_016_same_camera",
+        "pair_031_same_physics",
+        "pair_032_same_physics",
+        "pair_033_same_physics",
+        "pair_035_same_physics",
+        "pair_036_same_physics",
+        "pair_037_same_physics",
+        "pair_038_same_physics",
+        "pair_039_same_physics",
+        "pair_040_same_physics"
+      ],
+      "video": "videos/clip_003_cam_static_phys_static_center.mp4",
+      "metadata": "metadata/clip_003_cam_static_phys_static_center.json"
+    },
+    {
+      "clip_id": "clip_004_cam_static_phys_move_away",
+      "camera_id": "cam_static",
+      "physics_id": "phys_move_away",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_062_same_physics",
+        "pair_063_same_physics",
+        "pair_064_same_physics",
+        "pair_065_same_physics",
+        "pair_067_same_physics",
+        "pair_068_same_physics"
+      ],
+      "video": "videos/clip_004_cam_static_phys_move_away.mp4",
+      "metadata": "metadata/clip_004_cam_static_phys_move_away.json"
+    },
+    {
+      "clip_id": "clip_005_cam_static_phys_move_toward",
+      "camera_id": "cam_static",
+      "physics_id": "phys_move_toward",
+      "background": "blocks",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_071_same_physics",
+        "pair_072_same_physics",
+        "pair_073_same_physics",
+        "pair_075_same_physics",
+        "pair_077_same_physics",
+        "pair_078_same_physics",
+        "pair_079_same_physics",
+        "pair_080_same_physics"
+      ],
+      "video": "videos/clip_005_cam_static_phys_move_toward.mp4",
+      "metadata": "metadata/clip_005_cam_static_phys_move_toward.json"
+    },
+    {
+      "clip_id": "clip_006_cam_static_phys_fast_diag_bounce",
+      "camera_id": "cam_static",
+      "physics_id": "phys_fast_diag_bounce",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_014_same_camera",
+        "pair_016_same_camera",
+        "pair_018_same_camera",
+        "pair_019_same_camera",
+        "pair_081_same_physics",
+        "pair_082_same_physics",
+        "pair_084_same_physics",
+        "pair_085_same_physics",
+        "pair_087_same_physics",
+        "pair_089_same_physics"
+      ],
+      "video": "videos/clip_006_cam_static_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_006_cam_static_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_007_cam_static_phys_slow_roll_left",
+      "camera_id": "cam_static",
+      "physics_id": "phys_slow_roll_left",
+      "background": "mixed_shapes",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_012_same_camera",
+        "pair_018_same_camera",
+        "pair_091_same_physics",
+        "pair_092_same_physics",
+        "pair_095_same_physics",
+        "pair_096_same_physics",
+        "pair_098_same_physics",
+        "pair_099_same_physics",
+        "pair_100_same_physics"
+      ],
+      "video": "videos/clip_007_cam_static_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_007_cam_static_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_008_cam_static_phys_roll_right_fast",
+      "camera_id": "cam_static",
+      "physics_id": "phys_roll_right_fast",
+      "background": "pillars",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_017_same_camera",
+        "pair_101_same_physics",
+        "pair_103_same_physics",
+        "pair_104_same_physics",
+        "pair_105_same_physics",
+        "pair_106_same_physics",
+        "pair_109_same_physics",
+        "pair_110_same_physics"
+      ],
+      "video": "videos/clip_008_cam_static_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_008_cam_static_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_009_cam_static_phys_two_cross_collision",
+      "camera_id": "cam_static",
+      "physics_id": "phys_two_cross_collision",
+      "background": "pillars",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_011_same_camera",
+        "pair_013_same_camera",
+        "pair_114_same_physics",
+        "pair_115_same_physics",
+        "pair_116_same_physics",
+        "pair_119_same_physics"
+      ],
+      "video": "videos/clip_009_cam_static_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_009_cam_static_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_010_cam_static_phys_two_same_direction",
+      "camera_id": "cam_static",
+      "physics_id": "phys_two_same_direction",
+      "background": "pillars",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_013_same_camera",
+        "pair_014_same_camera"
+      ],
+      "video": "videos/clip_010_cam_static_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_010_cam_static_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_011_cam_static_phys_multi_swirl",
+      "camera_id": "cam_static",
+      "physics_id": "phys_multi_swirl",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_019_same_camera",
+        "pair_020_same_camera"
+      ],
+      "video": "videos/clip_011_cam_static_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_011_cam_static_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_012_cam_static_phys_hit_static_block",
+      "camera_id": "cam_static",
+      "physics_id": "phys_hit_static_block",
+      "background": "pillars",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_020_same_camera"
+      ],
+      "video": "videos/clip_012_cam_static_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_012_cam_static_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_013_cam_static_phys_out_of_frame",
+      "camera_id": "cam_static",
+      "physics_id": "phys_out_of_frame",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_052_same_physics",
+        "pair_054_same_physics",
+        "pair_058_same_physics",
+        "pair_059_same_physics"
+      ],
+      "video": "videos/clip_013_cam_static_phys_out_of_frame.mp4",
+      "metadata": "metadata/clip_013_cam_static_phys_out_of_frame.json"
+    },
+    {
+      "clip_id": "clip_014_cam_static_phys_vertical_drop",
+      "camera_id": "cam_static",
+      "physics_id": "phys_vertical_drop",
+      "background": "pillars",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_012_same_camera"
+      ],
+      "video": "videos/clip_014_cam_static_phys_vertical_drop.mp4",
+      "metadata": "metadata/clip_014_cam_static_phys_vertical_drop.json"
+    },
+    {
+      "clip_id": "clip_015_cam_static_phys_confusing_move_back",
+      "camera_id": "cam_static",
+      "physics_id": "phys_confusing_move_back",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_015_same_camera",
+        "pair_042_same_physics",
+        "pair_043_same_physics",
+        "pair_044_same_physics",
+        "pair_045_same_physics",
+        "pair_046_same_physics",
+        "pair_048_same_physics",
+        "pair_050_same_physics"
+      ],
+      "video": "videos/clip_015_cam_static_phys_confusing_move_back.mp4",
+      "metadata": "metadata/clip_015_cam_static_phys_confusing_move_back.json"
+    },
+    {
+      "clip_id": "clip_016_cam_static_phys_static_with_dynamic_bg",
+      "camera_id": "cam_static",
+      "physics_id": "phys_static_with_dynamic_bg",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Static"
+      ],
+      "pair_groups": [
+        "pair_011_same_camera"
+      ],
+      "video": "videos/clip_016_cam_static_phys_static_with_dynamic_bg.mp4",
+      "metadata": "metadata/clip_016_cam_static_phys_static_with_dynamic_bg.json"
+    },
+    {
+      "clip_id": "clip_017_cam_dolly_in_phys_static_center",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_static_center",
+      "background": "pillars",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_005_same_camera",
+        "pair_033_same_physics",
+        "pair_034_same_physics",
+        "pair_036_same_physics"
+      ],
+      "video": "videos/clip_017_cam_dolly_in_phys_static_center.mp4",
+      "metadata": "metadata/clip_017_cam_dolly_in_phys_static_center.json"
+    },
+    {
+      "clip_id": "clip_018_cam_dolly_in_phys_move_away",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_move_away",
+      "background": "pillars",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_061_same_physics",
+        "pair_063_same_physics",
+        "pair_064_same_physics",
+        "pair_065_same_physics",
+        "pair_066_same_physics",
+        "pair_067_same_physics",
+        "pair_068_same_physics",
+        "pair_069_same_physics",
+        "pair_070_same_physics"
+      ],
+      "video": "videos/clip_018_cam_dolly_in_phys_move_away.mp4",
+      "metadata": "metadata/clip_018_cam_dolly_in_phys_move_away.json"
+    },
+    {
+      "clip_id": "clip_019_cam_dolly_in_phys_move_toward",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_move_toward",
+      "background": "blocks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_001_same_camera",
+        "pair_005_same_camera",
+        "pair_006_same_camera",
+        "pair_071_same_physics",
+        "pair_072_same_physics",
+        "pair_074_same_physics",
+        "pair_076_same_physics",
+        "pair_077_same_physics",
+        "pair_079_same_physics"
+      ],
+      "video": "videos/clip_019_cam_dolly_in_phys_move_toward.mp4",
+      "metadata": "metadata/clip_019_cam_dolly_in_phys_move_toward.json"
+    },
+    {
+      "clip_id": "clip_020_cam_dolly_in_phys_fast_diag_bounce",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_fast_diag_bounce",
+      "background": "corridor",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_001_same_camera",
+        "pair_081_same_physics",
+        "pair_082_same_physics",
+        "pair_083_same_physics",
+        "pair_085_same_physics",
+        "pair_086_same_physics",
+        "pair_088_same_physics",
+        "pair_090_same_physics"
+      ],
+      "video": "videos/clip_020_cam_dolly_in_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_020_cam_dolly_in_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_021_cam_dolly_in_phys_slow_roll_left",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_slow_roll_left",
+      "background": "corridor",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_093_same_physics",
+        "pair_094_same_physics",
+        "pair_097_same_physics",
+        "pair_098_same_physics"
+      ],
+      "video": "videos/clip_021_cam_dolly_in_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_021_cam_dolly_in_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_022_cam_dolly_in_phys_roll_right_fast",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_roll_right_fast",
+      "background": "corridor",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_007_same_camera",
+        "pair_101_same_physics",
+        "pair_102_same_physics",
+        "pair_103_same_physics",
+        "pair_106_same_physics",
+        "pair_107_same_physics",
+        "pair_108_same_physics",
+        "pair_109_same_physics",
+        "pair_110_same_physics"
+      ],
+      "video": "videos/clip_022_cam_dolly_in_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_022_cam_dolly_in_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_023_cam_dolly_in_phys_two_cross_collision",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_two_cross_collision",
+      "background": "blocks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_004_same_camera",
+        "pair_006_same_camera",
+        "pair_008_same_camera",
+        "pair_009_same_camera",
+        "pair_111_same_physics",
+        "pair_112_same_physics",
+        "pair_113_same_physics",
+        "pair_116_same_physics",
+        "pair_117_same_physics",
+        "pair_118_same_physics",
+        "pair_119_same_physics"
+      ],
+      "video": "videos/clip_023_cam_dolly_in_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_023_cam_dolly_in_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_024_cam_dolly_in_phys_two_same_direction",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_two_same_direction",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_003_same_camera"
+      ],
+      "video": "videos/clip_024_cam_dolly_in_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_024_cam_dolly_in_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_025_cam_dolly_in_phys_multi_swirl",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_multi_swirl",
+      "background": "pillars",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_010_same_camera"
+      ],
+      "video": "videos/clip_025_cam_dolly_in_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_025_cam_dolly_in_phys_multi_swirl.json"
+    },
+    {
+      "clip_id": "clip_026_cam_dolly_in_phys_hit_static_block",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_hit_static_block",
+      "background": "pillars",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_003_same_camera",
+        "pair_008_same_camera"
+      ],
+      "video": "videos/clip_026_cam_dolly_in_phys_hit_static_block.mp4",
+      "metadata": "metadata/clip_026_cam_dolly_in_phys_hit_static_block.json"
+    },
+    {
+      "clip_id": "clip_027_cam_dolly_in_phys_out_of_frame",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_out_of_frame",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_051_same_physics",
+        "pair_053_same_physics",
+        "pair_055_same_physics",
+        "pair_056_same_physics",
+        "pair_057_same_physics",
+        "pair_058_same_physics",
+        "pair_060_same_physics"
+      ],
+      "video": "videos/clip_027_cam_dolly_in_phys_out_of_frame.mp4",
+      "metadata": "metadata/clip_027_cam_dolly_in_phys_out_of_frame.json"
+    },
+    {
+      "clip_id": "clip_028_cam_dolly_in_phys_vertical_drop",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_vertical_drop",
+      "background": "blocks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_002_same_camera",
+        "pair_004_same_camera",
+        "pair_010_same_camera"
+      ],
+      "video": "videos/clip_028_cam_dolly_in_phys_vertical_drop.mp4",
+      "metadata": "metadata/clip_028_cam_dolly_in_phys_vertical_drop.json"
+    },
+    {
+      "clip_id": "clip_029_cam_dolly_in_phys_confusing_move_back",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_confusing_move_back",
+      "background": "blocks",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_009_same_camera",
+        "pair_041_same_physics",
+        "pair_043_same_physics",
+        "pair_044_same_physics",
+        "pair_045_same_physics",
+        "pair_047_same_physics",
+        "pair_049_same_physics",
+        "pair_050_same_physics"
+      ],
+      "video": "videos/clip_029_cam_dolly_in_phys_confusing_move_back.mp4",
+      "metadata": "metadata/clip_029_cam_dolly_in_phys_confusing_move_back.json"
+    },
+    {
+      "clip_id": "clip_030_cam_dolly_in_phys_static_with_dynamic_bg",
+      "camera_id": "cam_dolly_in",
+      "physics_id": "phys_static_with_dynamic_bg",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Dolly_In"
+      ],
+      "pair_groups": [
+        "pair_007_same_camera"
+      ],
+      "video": "videos/clip_030_cam_dolly_in_phys_static_with_dynamic_bg.mp4",
+      "metadata": "metadata/clip_030_cam_dolly_in_phys_static_with_dynamic_bg.json"
+    },
+    {
+      "clip_id": "clip_031_cam_dolly_out_fast_phys_static_center",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_static_center",
+      "background": "pillars",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_024_same_camera",
+        "pair_030_same_camera",
+        "pair_032_same_physics",
+        "pair_034_same_physics",
+        "pair_040_same_physics"
+      ],
+      "video": "videos/clip_031_cam_dolly_out_fast_phys_static_center.mp4",
+      "metadata": "metadata/clip_031_cam_dolly_out_fast_phys_static_center.json"
+    },
+    {
+      "clip_id": "clip_032_cam_dolly_out_fast_phys_move_away",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_move_away",
+      "background": "mixed_shapes",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_022_same_camera",
+        "pair_024_same_camera",
+        "pair_027_same_camera",
+        "pair_029_same_camera",
+        "pair_061_same_physics",
+        "pair_062_same_physics",
+        "pair_066_same_physics",
+        "pair_069_same_physics",
+        "pair_070_same_physics"
+      ],
+      "video": "videos/clip_032_cam_dolly_out_fast_phys_move_away.mp4",
+      "metadata": "metadata/clip_032_cam_dolly_out_fast_phys_move_away.json"
+    },
+    {
+      "clip_id": "clip_033_cam_dolly_out_fast_phys_move_toward",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_move_toward",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_023_same_camera",
+        "pair_025_same_camera",
+        "pair_073_same_physics",
+        "pair_074_same_physics",
+        "pair_075_same_physics",
+        "pair_076_same_physics",
+        "pair_078_same_physics",
+        "pair_080_same_physics"
+      ],
+      "video": "videos/clip_033_cam_dolly_out_fast_phys_move_toward.mp4",
+      "metadata": "metadata/clip_033_cam_dolly_out_fast_phys_move_toward.json"
+    },
+    {
+      "clip_id": "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_fast_diag_bounce",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_026_same_camera",
+        "pair_029_same_camera",
+        "pair_030_same_camera",
+        "pair_083_same_physics",
+        "pair_084_same_physics",
+        "pair_086_same_physics",
+        "pair_087_same_physics",
+        "pair_088_same_physics",
+        "pair_089_same_physics",
+        "pair_090_same_physics"
+      ],
+      "video": "videos/clip_034_cam_dolly_out_fast_phys_fast_diag_bounce.mp4",
+      "metadata": "metadata/clip_034_cam_dolly_out_fast_phys_fast_diag_bounce.json"
+    },
+    {
+      "clip_id": "clip_035_cam_dolly_out_fast_phys_slow_roll_left",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_slow_roll_left",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_091_same_physics",
+        "pair_092_same_physics",
+        "pair_093_same_physics",
+        "pair_094_same_physics",
+        "pair_095_same_physics",
+        "pair_096_same_physics",
+        "pair_097_same_physics",
+        "pair_099_same_physics",
+        "pair_100_same_physics"
+      ],
+      "video": "videos/clip_035_cam_dolly_out_fast_phys_slow_roll_left.mp4",
+      "metadata": "metadata/clip_035_cam_dolly_out_fast_phys_slow_roll_left.json"
+    },
+    {
+      "clip_id": "clip_036_cam_dolly_out_fast_phys_roll_right_fast",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_roll_right_fast",
+      "background": "plain_wall",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_026_same_camera",
+        "pair_028_same_camera",
+        "pair_102_same_physics",
+        "pair_104_same_physics",
+        "pair_105_same_physics",
+        "pair_107_same_physics",
+        "pair_108_same_physics"
+      ],
+      "video": "videos/clip_036_cam_dolly_out_fast_phys_roll_right_fast.mp4",
+      "metadata": "metadata/clip_036_cam_dolly_out_fast_phys_roll_right_fast.json"
+    },
+    {
+      "clip_id": "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_two_cross_collision",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_028_same_camera",
+        "pair_111_same_physics",
+        "pair_112_same_physics",
+        "pair_113_same_physics",
+        "pair_114_same_physics",
+        "pair_115_same_physics",
+        "pair_117_same_physics",
+        "pair_118_same_physics"
+      ],
+      "video": "videos/clip_037_cam_dolly_out_fast_phys_two_cross_collision.mp4",
+      "metadata": "metadata/clip_037_cam_dolly_out_fast_phys_two_cross_collision.json"
+    },
+    {
+      "clip_id": "clip_038_cam_dolly_out_fast_phys_two_same_direction",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_two_same_direction",
+      "background": "blocks",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_021_same_camera",
+        "pair_022_same_camera"
+      ],
+      "video": "videos/clip_038_cam_dolly_out_fast_phys_two_same_direction.mp4",
+      "metadata": "metadata/clip_038_cam_dolly_out_fast_phys_two_same_direction.json"
+    },
+    {
+      "clip_id": "clip_039_cam_dolly_out_fast_phys_multi_swirl",
+      "camera_id": "cam_dolly_out_fast",
+      "physics_id": "phys_multi_swirl",
+      "background": "cluttered_studio",
+      "camera_primitives": [
+        "Dolly_Out"
+      ],
+      "pair_groups": [
+        "pair_021_same_camera",
+        "pair_023_same_camera",
+        "pair_025_same_camera",
+        "pair_027_same_camera"
+      ],
+      "video": "videos/clip_039_cam_dolly_out_fast_phys_multi_swirl.mp4",
+      "metadata": "metadata/clip_039_cam_dolly_out_fast_phys_multi_swirl.json"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "pair_000_confusing",
+      "title": "Confusing: camera pushes in vs object moves away",
+      "controlled_factor": "apparent_scale_change",
+      "varied_factor": "camera_vs_object_source",
+      "clip_ids": [
+        "confusing_cam_push_static",
+        "confusing_static_obj_back"
+      ],
+      "tags": [
+        "confusing",
+        "dolly_vs_object_motion"
+      ]
+    },
+    {
+      "group_id": "pair_001_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_019_cam_dolly_in_phys_move_toward"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_002_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_028_cam_dolly_in_phys_vertical_drop",
+        "confusing_cam_push_static"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_003_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_026_cam_dolly_in_phys_hit_static_block",
+        "clip_024_cam_dolly_in_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_004_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_028_cam_dolly_in_phys_vertical_drop",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_005_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_017_cam_dolly_in_phys_static_center",
+        "clip_019_cam_dolly_in_phys_move_toward"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_006_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_023_cam_dolly_in_phys_two_cross_collision",
+        "clip_019_cam_dolly_in_phys_move_toward"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_007_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_022_cam_dolly_in_phys_roll_right_fast",
+        "clip_030_cam_dolly_in_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_008_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_023_cam_dolly_in_phys_two_cross_collision",
+        "clip_026_cam_dolly_in_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_009_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_029_cam_dolly_in_phys_confusing_move_back",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_010_same_camera",
+      "title": "Same camera cam_dolly_in, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_025_cam_dolly_in_phys_multi_swirl",
+        "clip_028_cam_dolly_in_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_011_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_009_cam_static_phys_two_cross_collision",
+        "clip_016_cam_static_phys_static_with_dynamic_bg"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_012_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_007_cam_static_phys_slow_roll_left",
+        "clip_014_cam_static_phys_vertical_drop"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_013_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_009_cam_static_phys_two_cross_collision",
+        "clip_010_cam_static_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_014_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_006_cam_static_phys_fast_diag_bounce",
+        "clip_010_cam_static_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_015_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_015_cam_static_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_016_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_017_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "confusing_static_obj_back",
+        "clip_008_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_018_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_007_cam_static_phys_slow_roll_left",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_019_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_011_cam_static_phys_multi_swirl",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_020_same_camera",
+      "title": "Same camera cam_static, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_011_cam_static_phys_multi_swirl",
+        "clip_012_cam_static_phys_hit_static_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_021_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_038_cam_dolly_out_fast_phys_two_same_direction",
+        "clip_039_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_022_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_032_cam_dolly_out_fast_phys_move_away",
+        "clip_038_cam_dolly_out_fast_phys_two_same_direction"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_023_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_033_cam_dolly_out_fast_phys_move_toward",
+        "clip_039_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_024_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_032_cam_dolly_out_fast_phys_move_away",
+        "clip_031_cam_dolly_out_fast_phys_static_center"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_025_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_033_cam_dolly_out_fast_phys_move_toward",
+        "clip_039_cam_dolly_out_fast_phys_multi_swirl"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_026_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_027_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_039_cam_dolly_out_fast_phys_multi_swirl",
+        "clip_032_cam_dolly_out_fast_phys_move_away"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_028_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_029_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_032_cam_dolly_out_fast_phys_move_away",
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_030_same_camera",
+      "title": "Same camera cam_dolly_out_fast, different physics/background",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_031_cam_dolly_out_fast_phys_static_center"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics"
+      ]
+    },
+    {
+      "group_id": "pair_031_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "confusing_cam_push_static"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_032_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_031_cam_dolly_out_fast_phys_static_center",
+        "clip_003_cam_static_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_033_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_017_cam_dolly_in_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_034_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_031_cam_dolly_out_fast_phys_static_center",
+        "clip_017_cam_dolly_in_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_035_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "confusing_cam_push_static",
+        "clip_003_cam_static_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_036_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_017_cam_dolly_in_phys_static_center",
+        "clip_003_cam_static_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_037_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "confusing_cam_push_static",
+        "clip_003_cam_static_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_038_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "confusing_cam_push_static"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_039_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "confusing_cam_push_static"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_040_same_physics",
+      "title": "Same physics phys_static_center, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_003_cam_static_phys_static_center",
+        "clip_031_cam_dolly_out_fast_phys_static_center"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_041_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "confusing_static_obj_back",
+        "clip_029_cam_dolly_in_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_042_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_015_cam_static_phys_confusing_move_back",
+        "confusing_static_obj_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_043_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_015_cam_static_phys_confusing_move_back",
+        "clip_029_cam_dolly_in_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_044_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_015_cam_static_phys_confusing_move_back",
+        "clip_029_cam_dolly_in_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_045_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_029_cam_dolly_in_phys_confusing_move_back",
+        "clip_015_cam_static_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_046_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "confusing_static_obj_back",
+        "clip_015_cam_static_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_047_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "confusing_static_obj_back",
+        "clip_029_cam_dolly_in_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_048_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_015_cam_static_phys_confusing_move_back",
+        "confusing_static_obj_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_049_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "confusing_static_obj_back",
+        "clip_029_cam_dolly_in_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_050_same_physics",
+      "title": "Same physics phys_confusing_move_back, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_029_cam_dolly_in_phys_confusing_move_back",
+        "clip_015_cam_static_phys_confusing_move_back"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_051_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_027_cam_dolly_in_phys_out_of_frame",
+        "outframe_cam_push_obj_cross"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_052_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_013_cam_static_phys_out_of_frame",
+        "outframe_cam_push_obj_cross"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_053_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_027_cam_dolly_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_054_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_013_cam_static_phys_out_of_frame",
+        "outframe_cam_push_obj_cross"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_055_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_027_cam_dolly_in_phys_out_of_frame",
+        "outframe_cam_push_obj_cross"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_056_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_027_cam_dolly_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_057_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "outframe_cam_push_obj_cross",
+        "clip_027_cam_dolly_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_058_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_013_cam_static_phys_out_of_frame",
+        "clip_027_cam_dolly_in_phys_out_of_frame"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_059_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_013_cam_static_phys_out_of_frame",
+        "outframe_cam_push_obj_cross"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_060_same_physics",
+      "title": "Same physics phys_out_of_frame, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_027_cam_dolly_in_phys_out_of_frame",
+        "outframe_cam_push_obj_cross"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_061_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_032_cam_dolly_out_fast_phys_move_away",
+        "clip_018_cam_dolly_in_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_062_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_004_cam_static_phys_move_away",
+        "clip_032_cam_dolly_out_fast_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_063_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_018_cam_dolly_in_phys_move_away",
+        "clip_004_cam_static_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_064_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_018_cam_dolly_in_phys_move_away",
+        "clip_004_cam_static_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_065_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_018_cam_dolly_in_phys_move_away",
+        "clip_004_cam_static_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_066_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_032_cam_dolly_out_fast_phys_move_away",
+        "clip_018_cam_dolly_in_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_067_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_004_cam_static_phys_move_away",
+        "clip_018_cam_dolly_in_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_068_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_004_cam_static_phys_move_away",
+        "clip_018_cam_dolly_in_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_069_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_018_cam_dolly_in_phys_move_away",
+        "clip_032_cam_dolly_out_fast_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_070_same_physics",
+      "title": "Same physics phys_move_away, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_018_cam_dolly_in_phys_move_away",
+        "clip_032_cam_dolly_out_fast_phys_move_away"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_071_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_005_cam_static_phys_move_toward",
+        "clip_019_cam_dolly_in_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_072_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_005_cam_static_phys_move_toward",
+        "clip_019_cam_dolly_in_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_073_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_033_cam_dolly_out_fast_phys_move_toward",
+        "clip_005_cam_static_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_074_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_019_cam_dolly_in_phys_move_toward",
+        "clip_033_cam_dolly_out_fast_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_075_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_005_cam_static_phys_move_toward",
+        "clip_033_cam_dolly_out_fast_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_076_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_019_cam_dolly_in_phys_move_toward",
+        "clip_033_cam_dolly_out_fast_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_077_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_019_cam_dolly_in_phys_move_toward",
+        "clip_005_cam_static_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_078_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_033_cam_dolly_out_fast_phys_move_toward",
+        "clip_005_cam_static_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_079_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_005_cam_static_phys_move_toward",
+        "clip_019_cam_dolly_in_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_080_same_physics",
+      "title": "Same physics phys_move_toward, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_033_cam_dolly_out_fast_phys_move_toward",
+        "clip_005_cam_static_phys_move_toward"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_081_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_082_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_083_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_084_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_085_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce",
+        "clip_006_cam_static_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_086_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_087_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_006_cam_static_phys_fast_diag_bounce",
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_088_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_089_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_006_cam_static_phys_fast_diag_bounce",
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_090_same_physics",
+      "title": "Same physics phys_fast_diag_bounce, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_034_cam_dolly_out_fast_phys_fast_diag_bounce",
+        "clip_020_cam_dolly_in_phys_fast_diag_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_091_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_007_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_092_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_007_cam_static_phys_slow_roll_left",
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_093_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_021_cam_dolly_in_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_094_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_021_cam_dolly_in_phys_slow_roll_left",
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_095_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_007_cam_static_phys_slow_roll_left",
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_096_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_007_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_097_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_021_cam_dolly_in_phys_slow_roll_left",
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_098_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_007_cam_static_phys_slow_roll_left",
+        "clip_021_cam_dolly_in_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_099_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_007_cam_static_phys_slow_roll_left",
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_100_same_physics",
+      "title": "Same physics phys_slow_roll_left, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_035_cam_dolly_out_fast_phys_slow_roll_left",
+        "clip_007_cam_static_phys_slow_roll_left"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_101_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_008_cam_static_phys_roll_right_fast",
+        "clip_022_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_102_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_022_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_103_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_022_cam_dolly_in_phys_roll_right_fast",
+        "clip_008_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_104_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_008_cam_static_phys_roll_right_fast",
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_105_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_008_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_106_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_022_cam_dolly_in_phys_roll_right_fast",
+        "clip_008_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_107_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast",
+        "clip_022_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_108_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_022_cam_dolly_in_phys_roll_right_fast",
+        "clip_036_cam_dolly_out_fast_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_109_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_008_cam_static_phys_roll_right_fast",
+        "clip_022_cam_dolly_in_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_110_same_physics",
+      "title": "Same physics phys_roll_right_fast, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_022_cam_dolly_in_phys_roll_right_fast",
+        "clip_008_cam_static_phys_roll_right_fast"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_111_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_112_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_113_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_114_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_009_cam_static_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_115_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_009_cam_static_phys_two_cross_collision",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_116_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_009_cam_static_phys_two_cross_collision",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_117_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_023_cam_dolly_in_phys_two_cross_collision",
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_118_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_037_cam_dolly_out_fast_phys_two_cross_collision",
+        "clip_023_cam_dolly_in_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_119_same_physics",
+      "title": "Same physics phys_two_cross_collision, different camera/background",
+      "controlled_factor": "physics_id",
+      "varied_factor": "camera_id/background",
+      "clip_ids": [
+        "clip_023_cam_dolly_in_phys_two_cross_collision",
+        "clip_009_cam_static_phys_two_cross_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "different_camera"
+      ]
+    }
+  ]
+}
