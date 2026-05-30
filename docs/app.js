@@ -1,5 +1,6 @@
 const runSelect = document.querySelector("#runSelect");
 const summary = document.querySelector("#summary");
+const ambiguities = document.querySelector("#ambiguities");
 const pairs = document.querySelector("#pairs");
 const clipGrid = document.querySelector("#clipGrid");
 const REFRESH_MS = 15000;
@@ -43,6 +44,32 @@ function renderVideo(runBase, clip) {
   `;
 }
 
+function renderAmbiguities(manifest, runBase) {
+  const groups = manifest.ambiguous_equivalence_groups || [];
+  const clips = clipById(manifest);
+  if (!groups.length) {
+    ambiguities.innerHTML = "";
+    return;
+  }
+  ambiguities.innerHTML = `
+    <h2>Ambiguity Groups</h2>
+    <div class="pairs">
+      ${groups
+        .map((group) => {
+          const videos = group.clip_ids.map((clipId) => renderVideo(runBase, clips[clipId])).join("");
+          return `
+            <article class="pair ambiguity">
+              <h3>${group.title}</h3>
+              <p class="meta">not a training pair · ${group.reason}</p>
+              <div class="pairVideos">${videos}</div>
+            </article>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
 function renderPairs(manifest, runBase) {
   const clips = clipById(manifest);
   pairs.innerHTML = manifest.pair_groups
@@ -82,6 +109,7 @@ async function loadRun(run) {
   activeManifest = run.manifest;
   const runBase = manifestPath.replace(/\/manifest\.json$/, "");
   renderSummary(manifest);
+  renderAmbiguities(manifest, runBase);
   renderPairs(manifest, runBase);
   renderClips(manifest, runBase);
 }

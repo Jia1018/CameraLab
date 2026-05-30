@@ -189,3 +189,11 @@ video {
     flex-direction: column;
   }
 }
+
+.ambiguities {
+  margin-bottom: 28px;
+}
+
+.pair.ambiguity {
+  border-color: #c8a64f;
+}

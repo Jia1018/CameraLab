@@ -384,8 +384,6 @@ def make_pairs(clips: list[dict[str, object]], target_pairs: int, seed: int) -> 
         b["pair_groups"].append(group_id)
 
     clip_by_id = {clip["clip_id"]: clip for clip in clips}
-    if "confusing_cam_push_static" in clip_by_id and "confusing_static_obj_back" in clip_by_id:
-        add_pair("confusing", "Confusing: camera pushes in vs object moves away", clip_by_id["confusing_cam_push_static"], clip_by_id["confusing_static_obj_back"], "apparent_scale_change", "camera_vs_object_source", ["confusing", "dolly_vs_object_motion"])
     for cam, group in by_cam.items():
         for _ in range(10):
             if len(group) >= 2 and len(pairs) < target_pairs:
@@ -430,7 +428,8 @@ def main() -> None:
     specs = build_clip_specs(args.clips, SEED)
     clips = [render_clip(spec, run_dir) for spec in specs]
     pair_groups = make_pairs(clips, args.pairs, SEED)
-    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Broad Blender-only preview bank with many camera primitives, object motions, backgrounds, confusing cases, out-of-frame cases, variable speeds, and 100-200 pair relationships.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "clips": clips, "pair_groups": pair_groups}
+    ambiguous_equivalence_groups = [{"group_id": "ambiguous_000_dolly_vs_object_depth", "title": "Ambiguous appearance: dolly-in static object vs static camera object moving away", "clip_ids": ["confusing_cam_push_static", "confusing_static_obj_back"], "reason": "These clips can look similar in a single view, but they are not supervised pair samples because both camera_id and physics_id differ.", "hidden_factor_difference": ["camera_motion", "physical_motion"], "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics pairs."}]
+    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Broad Blender-only preview bank with many camera primitives, object motions, backgrounds, confusing cases, out-of-frame cases, variable speeds, and 100-200 pair relationships.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     update_index(args.run_id)
     print(f"Wrote {len(clips)} clips and {len(pair_groups)} pairs to {run_dir}")

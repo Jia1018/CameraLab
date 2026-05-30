@@ -37,7 +37,6 @@
         "Dolly_In"
       ],
       "pair_groups": [
-        "pair_000_confusing",
         "pair_002_same_camera",
         "pair_031_same_physics",
         "pair_035_same_physics",
@@ -57,7 +56,6 @@
         "Static"
       ],
       "pair_groups": [
-        "pair_000_confusing",
         "pair_017_same_camera",
         "pair_041_same_physics",
         "pair_042_same_physics",
@@ -791,20 +789,6 @@
     }
   ],
   "pair_groups": [
-    {
-      "group_id": "pair_000_confusing",
-      "title": "Confusing: camera pushes in vs object moves away",
-      "controlled_factor": "apparent_scale_change",
-      "varied_factor": "camera_vs_object_source",
-      "clip_ids": [
-        "confusing_cam_push_static",
-        "confusing_static_obj_back"
-      ],
-      "tags": [
-        "confusing",
-        "dolly_vs_object_motion"
-      ]
-    },
     {
       "group_id": "pair_001_same_camera",
       "title": "Same camera cam_dolly_in, different physics/background",
@@ -2470,6 +2454,22 @@
         "same_physics",
         "different_camera"
       ]
+    }
+  ],
+  "ambiguous_equivalence_groups": [
+    {
+      "group_id": "ambiguous_000_dolly_vs_object_depth",
+      "title": "Ambiguous appearance: dolly-in static object vs static camera object moving away",
+      "clip_ids": [
+        "confusing_cam_push_static",
+        "confusing_static_obj_back"
+      ],
+      "reason": "These clips can look similar in a single view, but they are not supervised pair samples because both camera_id and physics_id differ.",
+      "hidden_factor_difference": [
+        "camera_motion",
+        "physical_motion"
+      ],
+      "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics pairs."
     }
   ]
 }
