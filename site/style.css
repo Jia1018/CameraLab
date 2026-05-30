@@ -117,13 +117,41 @@ main {
   margin-top: 14px;
 }
 
-video {
+video,
+.videoPreview {
   width: 100%;
   aspect-ratio: 4 / 3;
   display: block;
   background: #dfe4e6;
   border: 1px solid var(--line);
   border-radius: 6px;
+}
+
+.videoPreview {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+  font: inherit;
+}
+
+.videoPreview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.videoPreview span {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: rgba(31, 37, 40, 0.82);
+  font-size: 12px;
+  font-weight: 620;
 }
 
 .label {

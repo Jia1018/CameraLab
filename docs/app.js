@@ -32,10 +32,17 @@ function renderSummary(manifest) {
     .join("");
 }
 
+function previewPath(clip) {
+  return clip.video.replace(/^videos\//, "previews/").replace(/\.[^.]+$/, "_sheet.png");
+}
+
 function renderVideo(runBase, clip) {
   return `
-    <div>
-      <video controls muted loop preload="metadata" src="${runBase}/${clip.video}"></video>
+    <div class="mediaItem">
+      <button class="videoPreview" type="button" data-video="${runBase}/${clip.video}" aria-label="Load video ${clip.clip_id}">
+        <img loading="lazy" decoding="async" src="${runBase}/${previewPath(clip)}" alt="${clip.clip_id} preview" />
+        <span>Load video</span>
+      </button>
       <div class="label">
         <span>${clip.clip_id}</span>
         <span>${clip.camera_id} / ${clip.physics_id}</span>
@@ -103,6 +110,21 @@ function renderClips(manifest, runBase) {
     .join("");
 }
 
+function bindVideoPreviews(root) {
+  root.querySelectorAll(".videoPreview").forEach((button) => {
+    button.addEventListener("click", () => {
+      const video = document.createElement("video");
+      video.controls = true;
+      video.muted = true;
+      video.loop = true;
+      video.preload = "metadata";
+      video.src = button.dataset.video;
+      button.replaceWith(video);
+      video.play().catch(() => {});
+    }, { once: true });
+  });
+}
+
 async function loadRun(run) {
   const manifestPath = `assets/runs/${run.manifest}`;
   const manifest = await loadJson(manifestPath);
@@ -112,6 +134,7 @@ async function loadRun(run) {
   renderAmbiguities(manifest, runBase);
   renderPairs(manifest, runBase);
   renderClips(manifest, runBase);
+  bindVideoPreviews(document);
 }
 
 function sameIndex(a, b) {
@@ -135,8 +158,6 @@ async function refreshIndex() {
     await loadRun(selectedRun);
     return;
   }
-  const activeRun = runIndex.runs.find((run) => run.manifest === activeManifest);
-  if (activeRun) await loadRun(activeRun);
 }
 
 async function main() {
