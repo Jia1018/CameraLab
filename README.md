@@ -60,9 +60,9 @@ cd /workspace/writeable/code/camera_motion_disentangle
 /workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender \
   --background \
   --python scripts/generate_blender_bank_pairs.py \
-  -- --run-id blender_bank_v2 --clips 60 --pairs 160
+  -- --run-id blender_bank_v3 --clips 72 --pairs 180
 
-python3 scripts/make_run_previews.py --run-dir site/assets/runs/blender_bank_v2
+python3 scripts/make_run_previews.py --run-dir site/assets/runs/blender_bank_v3
 bash scripts/sync_site_to_docs.sh
 ```
 
@@ -96,4 +96,6 @@ The current bank generator avoids the earlier failure modes:
 - same-physics pairs keep both `physics_id` and `scene_id` fixed;
 - background diversity comes mainly from wall/floor colors, wall height, panels/stripes, floor marks, and occasional edge/side objects;
 - camera specs include lateral/height/target offsets, nonzero roll, and top-down starts, so views are not always centered and level.
+- camera trajectories are sampled from per-axis Gaussian motion profiles; same-camera pairs still share the exact sampled `camera_id` trajectory.
+- dynamic roll and angle changes are mostly slow, small-amplitude camera motions for human review comfort; abrupt large rotations are rare hard cases, not the default.
 - the preview bank uses kinematic trajectories; contact examples enforce non-penetrating visual contact by construction.

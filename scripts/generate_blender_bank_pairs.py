@@ -35,19 +35,57 @@ CAMERA_PRIMITIVES = [
     "Zoom_In", "Zoom_Out", "Static",
 ]
 
-CAMERA_SPECS = [
-    {"id": "cam_static", "primitives": ["Static"], "speed": "none", "view": {"x": -1.1, "z": 0.45, "target_x": -0.25, "target_z": 0.08, "roll": -4.0}},
-    {"id": "cam_top_down_drift", "primitives": ["Pedestal_Down", "Tilt_Down", "Truck_Right"], "speed": "ease_in_out", "view": {"x": -0.4, "z": 0.0, "target_x": 0.0, "target_z": 0.0, "roll": 8.0}},
-    {"id": "cam_dolly_in", "primitives": ["Dolly_In"], "speed": "slow", "view": {"x": 1.0, "z": -0.25, "target_x": 0.20, "target_z": -0.08, "roll": 2.5}},
-    {"id": "cam_dolly_out_fast", "primitives": ["Dolly_Out"], "speed": "fast", "view": {"x": -0.8, "z": 0.35, "target_x": -0.15, "target_z": 0.04, "roll": -2.0}},
-    {"id": "cam_truck_left_pan_right", "primitives": ["Truck_Left", "Pan_Right"], "speed": "medium", "view": {"x": 0.0, "z": 0.15, "target_x": 0.0, "target_z": 0.06, "roll": 1.0}},
-    {"id": "cam_truck_right_roll", "primitives": ["Truck_Right", "Roll_Clockwise"], "speed": "medium", "view": {"x": 0.0, "z": -0.20, "target_x": 0.0, "target_z": -0.04, "roll": -3.0}},
-    {"id": "cam_crane_up_tilt_down", "primitives": ["Pedestal_Up", "Tilt_Down"], "speed": "slow", "view": {"x": 1.3, "z": 0.0, "target_x": 0.30, "target_z": 0.0, "roll": 0.0}},
-    {"id": "cam_pedestal_down_zoom_in", "primitives": ["Pedestal_Down", "Zoom_In"], "speed": "ease_in", "view": {"x": -1.3, "z": 0.0, "target_x": -0.25, "target_z": 0.0, "roll": 3.5}},
-    {"id": "cam_orbit_combo", "primitives": ["Truck_Right", "Pan_Left", "Dolly_In"], "speed": "ease_in_out", "view": {"x": 0.4, "z": 0.20, "target_x": 0.0, "target_z": 0.05, "roll": -1.5}},
-    {"id": "cam_wobble_roll_zoom", "primitives": ["Pan_Left", "Pan_Right", "Roll_Counterclockwise", "Zoom_Out"], "speed": "variable", "view": {"x": -0.5, "z": -0.15, "target_x": 0.0, "target_z": 0.0, "roll": 4.0}},
-    {"id": "cam_out_of_frame_push", "primitives": ["Dolly_In", "Tilt_Up"], "speed": "fast", "view": {"x": 0.8, "z": 0.25, "target_x": 0.2, "target_z": 0.05, "roll": -2.5}},
+CAMERA_PROFILES = [
+    {"id": "cam_static", "primitives": ["Static"], "speed": "none", "base_pos": (0.0, -5.6, 2.1), "base_target": (0.0, 0.0, 0.55), "start_roll_deg": -3.0, "lens": 34.0, "motion": {}},
+    {"id": "cam_dolly_in", "primitives": ["Dolly_In"], "speed": "ease_in_out", "base_pos": (0.7, -6.1, 2.0), "base_target": (0.15, 0.0, 0.50), "start_roll_deg": 1.5, "lens": 34.0, "motion": {"dy": (1.35, 0.30, 0.65, 2.00), "dtx": (0.02, 0.08, -0.16, 0.16), "droll": (0.0, 1.4, -3.0, 3.0), "dlens": (0.0, 1.2, -2.0, 3.0)}},
+    {"id": "cam_dolly_out", "primitives": ["Dolly_Out"], "speed": "ease_in_out", "base_pos": (-0.7, -4.1, 2.05), "base_target": (-0.10, 0.0, 0.55), "start_roll_deg": -1.0, "lens": 35.0, "motion": {"dy": (-1.45, 0.35, -2.15, -0.70), "dtx": (0.0, 0.08, -0.16, 0.16), "droll": (0.0, 1.3, -3.0, 3.0), "dlens": (0.0, 1.0, -2.0, 2.0)}},
+    {"id": "cam_truck_left_pan", "primitives": ["Truck_Left", "Pan_Right"], "speed": "ease_in_out", "base_pos": (1.9, -5.4, 2.1), "base_target": (-0.25, 0.0, 0.58), "start_roll_deg": 0.5, "lens": 34.0, "motion": {"dx": (-1.55, 0.35, -2.20, -0.70), "dtx": (0.70, 0.18, 0.25, 1.10), "droll": (0.0, 1.2, -2.5, 2.5)}},
+    {"id": "cam_truck_right_pan", "primitives": ["Truck_Right", "Pan_Left"], "speed": "ease_in_out", "base_pos": (-1.9, -5.4, 2.1), "base_target": (0.25, 0.0, 0.58), "start_roll_deg": -0.5, "lens": 34.0, "motion": {"dx": (1.55, 0.35, 0.70, 2.20), "dtx": (-0.70, 0.18, -1.10, -0.25), "droll": (0.0, 1.2, -2.5, 2.5)}},
+    {"id": "cam_crane_up_tilt", "primitives": ["Pedestal_Up", "Tilt_Down"], "speed": "slow", "base_pos": (0.8, -5.4, 1.55), "base_target": (0.15, 0.0, 0.78), "start_roll_deg": 0.0, "lens": 34.0, "motion": {"dz": (0.95, 0.25, 0.45, 1.45), "dtz": (-0.28, 0.10, -0.52, -0.08), "droll": (0.0, 1.0, -2.0, 2.0)}},
+    {"id": "cam_pedestal_down_zoom", "primitives": ["Pedestal_Down", "Zoom_In"], "speed": "ease_in", "base_pos": (-0.9, -5.5, 3.0), "base_target": (-0.18, 0.0, 0.50), "start_roll_deg": 2.0, "lens": 31.0, "motion": {"dz": (-0.85, 0.22, -1.35, -0.35), "dtz": (0.18, 0.08, 0.02, 0.36), "dlens": (9.0, 2.5, 3.0, 14.0), "droll": (0.0, 1.0, -2.0, 2.0)}},
+    {"id": "cam_orbit_soft", "primitives": ["Truck_Right", "Pan_Left", "Dolly_In"], "speed": "ease_in_out", "base_pos": (-1.3, -5.3, 2.15), "base_target": (0.0, 0.0, 0.58), "start_roll_deg": -1.0, "lens": 35.0, "motion": {"dx": (1.15, 0.30, 0.45, 1.80), "dy": (0.45, 0.18, 0.05, 0.85), "dtx": (-0.35, 0.16, -0.75, 0.05), "droll": (0.0, 1.4, -3.0, 3.0)}},
+    {"id": "cam_top_down_drift", "primitives": ["Pedestal_Down", "Tilt_Down", "Truck_Right"], "speed": "ease_in_out", "base_pos": (-1.2, -0.65, 6.4), "base_target": (0.0, -0.05, 0.12), "start_roll_deg": 4.0, "lens": 42.0, "motion": {"dx": (1.45, 0.35, 0.65, 2.10), "dy": (0.22, 0.12, -0.05, 0.45), "dz": (-0.45, 0.16, -0.85, -0.10), "dtx": (0.0, 0.16, -0.35, 0.35), "dty": (0.18, 0.10, -0.05, 0.40), "droll": (0.0, 1.5, -3.0, 3.0)}},
+    {"id": "cam_gentle_roll_cw", "primitives": ["Roll_Clockwise", "Pan_Left"], "speed": "ease_in_out", "base_pos": (0.7, -5.5, 2.05), "base_target": (0.12, 0.0, 0.56), "start_roll_deg": -4.0, "lens": 34.0, "motion": {"dx": (-0.45, 0.18, -0.85, -0.10), "dtx": (-0.18, 0.10, -0.40, 0.05), "droll": (5.0, 1.8, 1.5, 8.5), "roll_wobble": (0.6, 0.35, 0.0, 1.4)}},
+    {"id": "cam_gentle_roll_ccw", "primitives": ["Roll_Counterclockwise", "Truck_Left"], "speed": "slow", "base_pos": (-0.7, -5.5, 2.25), "base_target": (-0.12, 0.0, 0.58), "start_roll_deg": 4.0, "lens": 34.0, "motion": {"dx": (0.45, 0.18, 0.10, 0.85), "dtx": (0.16, 0.10, -0.05, 0.38), "droll": (-5.0, 1.8, -8.5, -1.5), "roll_wobble": (0.6, 0.35, 0.0, 1.4)}},
+    {"id": "cam_wobble_small", "primitives": ["Pan_Left", "Pan_Right", "Roll_Counterclockwise", "Zoom_Out"], "speed": "variable", "base_pos": (-0.4, -5.4, 2.05), "base_target": (0.0, 0.0, 0.55), "start_roll_deg": 2.0, "lens": 39.0, "motion": {"dtx": (0.0, 0.18, -0.35, 0.35), "dtz": (0.0, 0.10, -0.20, 0.20), "droll": (0.0, 1.6, -3.5, 3.5), "roll_wobble": (1.2, 0.45, 0.2, 2.2), "dlens": (-4.0, 1.4, -7.0, -1.0)}},
+    {"id": "cam_out_of_frame_push", "primitives": ["Dolly_In", "Tilt_Up"], "speed": "fast", "base_pos": (1.0, -5.4, 1.95), "base_target": (0.25, 0.20, 0.66), "start_roll_deg": -2.0, "lens": 34.0, "motion": {"dy": (1.65, 0.35, 0.85, 2.35), "dz": (0.30, 0.12, 0.05, 0.60), "dty": (0.85, 0.24, 0.35, 1.35), "dtz": (0.24, 0.10, 0.05, 0.45), "droll": (0.0, 1.2, -2.5, 2.5)}},
+    {"id": "cam_rare_fast_roll", "primitives": ["Roll_Clockwise", "Pan_Right"], "speed": "ease_in_out", "base_pos": (0.2, -5.3, 2.1), "base_target": (0.0, 0.0, 0.56), "start_roll_deg": -6.0, "lens": 34.0, "motion": {"dx": (0.35, 0.16, 0.05, 0.70), "dtx": (0.25, 0.12, 0.02, 0.52), "droll": (13.0, 2.5, 9.0, 18.0)}},
 ]
+
+
+def clamp(value: float, low: float, high: float) -> float:
+    return max(low, min(high, value))
+
+
+def sample_gaussian(rng: random.Random, spec: tuple[float, float, float, float] | None) -> float:
+    if spec is None:
+        return 0.0
+    mean, std, low, high = spec
+    return round(clamp(rng.gauss(mean, std), low, high), 5)
+
+
+def sample_camera_specs(seed: int) -> list[dict[str, object]]:
+    rng = random.Random(seed + 17)
+    cameras = []
+    for profile in CAMERA_PROFILES:
+        motion_dist = profile.get("motion", {})
+        motion = {key: sample_gaussian(rng, motion_dist.get(key)) for key in ["dx", "dy", "dz", "dtx", "dty", "dtz", "droll", "roll_wobble", "dlens"]}
+        camera = {
+            "id": profile["id"],
+            "primitives": profile["primitives"],
+            "speed": profile["speed"],
+            "start_position": [round(v, 5) for v in profile["base_pos"]],
+            "start_target": [round(v, 5) for v in profile["base_target"]],
+            "start_roll_deg": profile["start_roll_deg"],
+            "start_lens": profile["lens"],
+            "motion_sample": motion,
+            "motion_distribution": motion_dist,
+        }
+        cameras.append(camera)
+    return cameras
+
+
+CAMERA_SPECS = sample_camera_specs(SEED)
 
 PHYSICS_SPECS = [
     {"id": "phys_static_center", "kind": "static", "objects": 1, "speed": "none"},
@@ -276,58 +314,17 @@ def object_pose(kind: str, idx: int, t: float) -> tuple[Vector, tuple[float, flo
 
 
 def camera_state(camera: dict, t: float) -> tuple[Vector, Vector, float, float]:
-    cid = camera["id"]
     u = ease(t, camera["speed"])
-    pos = Vector((0, -5.6, 2.1))
-    target = Vector((0, 0, 0.55))
-    roll = 0.0
-    lens = 34.0
-    if cid == "cam_static":
-        pass
-    elif cid == "cam_dolly_in":
-        pos.y = -6.2 + 2.2 * u
-    elif cid == "cam_dolly_out_fast":
-        pos.y = -3.6 - 3.0 * u
-    elif cid == "cam_top_down_drift":
-        pos = Vector((-1.4 + 2.8 * u, -0.55 + 0.35 * math.sin(math.pi * u), 6.8 - 0.7 * u))
-        target = Vector((0.0 + 0.4 * math.sin(2 * math.pi * u), -0.1 + 0.35 * u, 0.12))
-        lens = 42.0
-    elif cid == "cam_truck_left_pan_right":
-        pos.x = 2.2 - 4.4 * u
-        target.x = -0.8 + 1.6 * u
-    elif cid == "cam_truck_right_roll":
-        pos.x = -2.2 + 4.4 * u
-        roll = math.radians(16 * math.sin(math.pi * u))
-    elif cid == "cam_crane_up_tilt_down":
-        pos.z = 1.5 + 1.7 * u
-        target.z = 0.9 - 0.55 * u
-    elif cid == "cam_pedestal_down_zoom_in":
-        pos.z = 3.1 - 1.4 * u
-        lens = 30 + 22 * u
-    elif cid == "cam_orbit_combo":
-        angle = math.radians(-45 + 95 * u)
-        radius = 5.4 - 1.2 * u
-        pos = Vector((radius * math.sin(angle), -radius * math.cos(angle), 2.0 + 0.5 * math.sin(math.pi * u)))
-        target.x = 0.35 * math.sin(2 * math.pi * u)
-    elif cid == "cam_wobble_roll_zoom":
-        target.x = 0.8 * math.sin(2 * math.pi * u)
-        target.z = 0.55 + 0.25 * math.sin(3 * math.pi * u)
-        roll = math.radians(-12 * math.sin(2 * math.pi * u))
-        lens = 42 - 12 * u
-    elif cid == "cam_out_of_frame_push":
-        pos = Vector((0.4, -5.2 + 3.0 * u, 1.8 + 0.8 * u))
-        target = Vector((0.3 + 1.2 * u, 0.2 + 1.4 * u, 0.7 + 0.4 * u))
-    else:
-        raise ValueError(cid)
-
-    view = camera.get("view", {})
-    pos.x += view.get("x", 0.0)
-    pos.z += view.get("z", 0.0)
-    target.x += view.get("target_x", 0.0)
-    target.z += view.get("target_z", 0.0)
-    roll += math.radians(view.get("roll", 0.0))
-    return pos, target, roll, lens
-
+    motion = camera["motion_sample"]
+    pos = Vector(camera["start_position"])
+    target = Vector(camera["start_target"])
+    pos += Vector((motion["dx"], motion["dy"], motion["dz"])) * u
+    target += Vector((motion["dtx"], motion["dty"], motion["dtz"])) * u
+    roll_deg = camera["start_roll_deg"] + motion["droll"] * u
+    if motion["roll_wobble"]:
+        roll_deg += motion["roll_wobble"] * math.sin(2.0 * math.pi * u)
+    lens = camera["start_lens"] + motion["dlens"] * u
+    return pos, target, math.radians(roll_deg), lens
 
 def scene_for_physics(physics: dict) -> dict:
     # Same-physics pairs must keep object motion and scene identical. Binding scene
@@ -336,7 +333,7 @@ def scene_for_physics(physics: dict) -> dict:
     return SCENE_SPECS[idx]
 
 def default_frames_for_physics(physics: dict) -> int:
-    return [20, 24, 28, 32][PHYSICS_SPECS.index(physics) % 4]
+    return [48, 60, 72, 84][PHYSICS_SPECS.index(physics) % 4]
 
 def build_clip_specs(max_clips: int, seed: int) -> list[ClipSpec]:
     specs = []
@@ -413,7 +410,7 @@ def render_clip(spec: ClipSpec, run_dir: Path) -> dict[str, object]:
     metadata_rel = Path("metadata") / f"{spec.clip_id}.json"
     metadata_path = run_dir / metadata_rel
     metadata_path.parent.mkdir(parents=True, exist_ok=True)
-    metadata = {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "scene_id": spec.scene["id"], "scene_style": spec.scene["style"], "fps": FPS, "frames_count": spec.frames, "resolution": [WIDTH, HEIGHT], "camera_primitives": spec.camera["primitives"], "camera_speed": spec.camera["speed"], "camera_view_offset": spec.camera.get("view", {}), "physics_kind": spec.physics["kind"], "physics_objects": spec.physics["objects"], "physics_speed": spec.physics["speed"], "video": str(video_rel), "frames": records}
+    metadata = {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "scene_id": spec.scene["id"], "scene_style": spec.scene["style"], "fps": FPS, "frames_count": spec.frames, "resolution": [WIDTH, HEIGHT], "camera_primitives": spec.camera["primitives"], "camera_speed": spec.camera["speed"], "camera_start_position": spec.camera.get("start_position"), "camera_start_target": spec.camera.get("start_target"), "camera_start_roll_deg": spec.camera.get("start_roll_deg"), "camera_start_lens": spec.camera.get("start_lens"), "camera_motion_sample": spec.camera.get("motion_sample"), "camera_motion_distribution": spec.camera.get("motion_distribution"), "physics_kind": spec.physics["kind"], "physics_objects": spec.physics["objects"], "physics_speed": spec.physics["speed"], "video": str(video_rel), "frames": records}
     metadata_path.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     return {"clip_id": spec.clip_id, "camera_id": spec.camera["id"], "physics_id": spec.physics["id"], "scene_id": spec.scene["id"], "scene_style": spec.scene["style"], "camera_primitives": spec.camera["primitives"], "pair_groups": [], "video": str(video_rel), "metadata": str(metadata_rel)}
 
@@ -486,8 +483,8 @@ def update_index(run_id: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-id", default="blender_bank_v0")
-    parser.add_argument("--clips", type=int, default=60)
-    parser.add_argument("--pairs", type=int, default=160)
+    parser.add_argument("--clips", type=int, default=72)
+    parser.add_argument("--pairs", type=int, default=180)
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     args = parser.parse_args(argv)
     run_dir = RUN_ROOT / args.run_id
@@ -496,7 +493,7 @@ def main() -> None:
     clips = [render_clip(spec, run_dir) for spec in specs]
     pair_groups = make_pairs(clips, args.pairs, SEED)
     ambiguous_equivalence_groups = [{"group_id": "ambiguous_000_dolly_vs_object_toward_camera", "title": "Ambiguous appearance: camera dolly-in vs object moving toward camera", "clip_ids": ["ambiguous_cam_dolly_static", "ambiguous_static_obj_toward_camera"], "reason": "These clips can look similar in a single view: one changes apparent scale through camera motion, the other through physical object motion. They are diagnostic examples, not supervised pair samples, because both camera_id and physics_id differ.", "hidden_factor_difference": ["camera_motion", "physical_motion"], "intended_use": "diagnostic/evaluation example; disambiguate with additional same-camera or same-physics/scene pairs."}]
-    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Balanced Blender-only preview bank with explicit scene_id. Same-physics pairs keep physics_id and scene_id fixed, while camera-only pairs keep camera_id fixed and vary physics/scene.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "scene_reference": SCENE_SPECS, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
+    manifest = {"project": "camera_motion_disentangle", "run_id": args.run_id, "generator": "blender_combinatorial_bank", "description": "Balanced longer-duration Blender-only preview bank with explicit scene_id. Same-physics pairs keep physics_id and scene_id fixed, while camera-only pairs keep camera_id fixed and vary physics/scene.", "blender_version": BLENDER_VERSION, "resolution": [WIDTH, HEIGHT], "fps": FPS, "cycles_samples": SAMPLES, "camera_primitives_reference": CAMERA_PRIMITIVES, "camera_motion_model": "per-axis Gaussian displacement/target/roll/lens samples with clipped tails", "camera_motion_profiles": CAMERA_PROFILES, "scene_reference": SCENE_SPECS, "clips": clips, "pair_groups": pair_groups, "ambiguous_equivalence_groups": ambiguous_equivalence_groups}
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     update_index(args.run_id)
     print(f"Wrote {len(clips)} clips and {len(pair_groups)} pairs to {run_dir}")
