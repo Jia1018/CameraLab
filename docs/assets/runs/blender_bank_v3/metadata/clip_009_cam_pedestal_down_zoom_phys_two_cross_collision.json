@@ -1,0 +1,3673 @@
+{
+  "clip_id": "clip_009_cam_pedestal_down_zoom_phys_two_cross_collision",
+  "camera_id": "cam_pedestal_down_zoom",
+  "physics_id": "phys_two_cross_collision",
+  "scene_id": "scene_gray_low_wall",
+  "scene_style": "plain",
+  "fps": 24,
+  "frames_count": 72,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Pedestal_Down",
+    "Zoom_In"
+  ],
+  "camera_speed": "ease_in",
+  "camera_start_position": [
+    -0.9,
+    -5.5,
+    3.0
+  ],
+  "camera_start_target": [
+    -0.18,
+    0.0,
+    0.5
+  ],
+  "camera_start_roll_deg": 2.0,
+  "camera_start_lens": 31.0,
+  "camera_motion_sample": {
+    "dx": 0.0,
+    "dy": 0.0,
+    "dz": -0.79097,
+    "dtx": 0.0,
+    "dty": 0.0,
+    "dtz": 0.02,
+    "droll": -1.69731,
+    "roll_wobble": 0.0,
+    "dlens": 8.36688
+  },
+  "camera_motion_distribution": {
+    "dz": [
+      -0.85,
+      0.22,
+      -1.35,
+      -0.35
+    ],
+    "dtz": [
+      0.18,
+      0.08,
+      0.02,
+      0.36
+    ],
+    "dlens": [
+      9.0,
+      2.5,
+      3.0,
+      14.0
+    ],
+    "droll": [
+      0.0,
+      1.0,
+      -2.0,
+      2.0
+    ]
+  },
+  "physics_kind": "two_cross",
+  "physics_objects": 2,
+  "physics_speed": "medium",
+  "video": "videos/clip_009_cam_pedestal_down_zoom_phys_two_cross_collision.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          3.0
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.5
+        ],
+        "roll": 0.03491,
+        "lens": 31.0,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.5,
+            -0.9,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.5,
+            0.9,
+            0.48776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.01408,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99984
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.5
+        ],
+        "roll": 0.0349,
+        "lens": 31.0017,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.42958,
+            -0.8779,
+            0.28093
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.42958,
+            0.8779,
+            0.49366
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.02817,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99937
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50002
+        ],
+        "roll": 0.03488,
+        "lens": 31.0066,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.35915,
+            -0.85598,
+            0.31162
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.35915,
+            0.85598,
+            0.49765
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.04225,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99859
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50004
+        ],
+        "roll": 0.03485,
+        "lens": 31.0149,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.28873,
+            -0.83441,
+            0.34183
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.28873,
+            0.83441,
+            0.4997
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.05634,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99749
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50006
+        ],
+        "roll": 0.03481,
+        "lens": 31.0266,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.21831,
+            -0.81334,
+            0.37132
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.21831,
+            0.81334,
+            0.4998
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.07042,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99608
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.5001
+        ],
+        "roll": 0.03476,
+        "lens": 31.0415,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.14789,
+            -0.79295,
+            0.39986
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.14789,
+            0.79295,
+            0.49794
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.08451,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99435
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50014
+        ],
+        "roll": 0.0347,
+        "lens": 31.0598,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.07746,
+            -0.77341,
+            0.42723
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.07746,
+            0.77341,
+            0.49415
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.09859,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.99231
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50019
+        ],
+        "roll": 0.03462,
+        "lens": 31.0813,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.00704,
+            -0.75485,
+            0.45321
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.00704,
+            0.75485,
+            0.48844
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.11268,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.98996
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50025
+        ],
+        "roll": 0.03453,
+        "lens": 31.1062,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.93662,
+            -0.73743,
+            0.4776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.93662,
+            0.73743,
+            0.48086
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.12676,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.98729
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50032
+        ],
+        "roll": 0.03443,
+        "lens": 31.1344,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.8662,
+            -0.72128,
+            0.50021
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.8662,
+            0.72128,
+            0.47148
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.14085,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.98431
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.5004
+        ],
+        "roll": 0.03432,
+        "lens": 31.166,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.79577,
+            -0.70653,
+            0.52086
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.79577,
+            0.70653,
+            0.46037
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.15493,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.98101
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50048
+        ],
+        "roll": 0.0342,
+        "lens": 31.2008,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.72535,
+            -0.69329,
+            0.53939
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.72535,
+            0.69329,
+            0.44761
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.16901,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.97741
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50057
+        ],
+        "roll": 0.03406,
+        "lens": 31.239,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.65493,
+            -0.68167,
+            0.55566
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.65493,
+            0.68167,
+            0.4333
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.1831,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.97348
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50067
+        ],
+        "roll": 0.03391,
+        "lens": 31.2805,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.58451,
+            -0.67176,
+            0.56953
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.58451,
+            0.67176,
+            0.41756
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.19718,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.96925
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50078
+        ],
+        "roll": 0.03375,
+        "lens": 31.3253,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.51408,
+            -0.66364,
+            0.5809
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.51408,
+            0.66364,
+            0.4005
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.21127,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.9647
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50089
+        ],
+        "roll": 0.03358,
+        "lens": 31.3734,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.44366,
+            -0.65737,
+            0.58969
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.44366,
+            0.65737,
+            0.38227
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.22535,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.95983
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50102
+        ],
+        "roll": 0.0334,
+        "lens": 31.4249,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.37324,
+            -0.65299,
+            0.59581
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.37324,
+            0.65299,
+            0.363
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.23944,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.95465
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50115
+        ],
+        "roll": 0.03321,
+        "lens": 31.4797,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.30282,
+            -0.65055,
+            0.59923
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.30282,
+            0.65055,
+            0.34285
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.25352,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.94916
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50129
+        ],
+        "roll": 0.033,
+        "lens": 31.5378,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.23239,
+            -0.65006,
+            0.59991
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.23239,
+            0.65006,
+            0.32198
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.26761,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.94336
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50143
+        ],
+        "roll": 0.03279,
+        "lens": 31.5992,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.16197,
+            -0.65153,
+            0.59786
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.16197,
+            0.65153,
+            0.30053
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.28169,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.93724
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50159
+        ],
+        "roll": 0.03256,
+        "lens": 31.6639,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.09155,
+            -0.65494,
+            0.59308
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.09155,
+            0.65494,
+            0.2787
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.29577,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.9308
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50175
+        ],
+        "roll": 0.03232,
+        "lens": 31.732,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.02113,
+            -0.66027,
+            0.58562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.02113,
+            0.66027,
+            0.25664
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.30986,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.92406
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50192
+        ],
+        "roll": 0.03206,
+        "lens": 31.8033,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.9507,
+            -0.66747,
+            0.57554
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.9507,
+            0.66747,
+            0.26548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 0.32394,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.917
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.5021
+        ],
+        "roll": 0.0318,
+        "lens": 31.878,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.88028,
+            -0.6765,
+            0.5629
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.88028,
+            0.6765,
+            0.28747
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "t": 0.33803,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.90962
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50229
+        ],
+        "roll": 0.03152,
+        "lens": 31.956,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.80986,
+            -0.68727,
+            0.54782
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.80986,
+            0.68727,
+            0.30917
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "t": 0.35211,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.90193
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50248
+        ],
+        "roll": 0.03123,
+        "lens": 32.0374,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.73944,
+            -0.69971,
+            0.5304
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.73944,
+            0.69971,
+            0.3304
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "t": 0.3662,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.89393
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50268
+        ],
+        "roll": 0.03093,
+        "lens": 32.122,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.66901,
+            -0.71372,
+            0.51079
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.66901,
+            0.71372,
+            0.35101
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "t": 0.38028,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.88561
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50289
+        ],
+        "roll": 0.03062,
+        "lens": 32.21,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.59859,
+            -0.72919,
+            0.48914
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.59859,
+            0.72919,
+            0.37083
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "t": 0.39437,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.87698
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50311
+        ],
+        "roll": 0.0303,
+        "lens": 32.3013,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.52817,
+            -0.74599,
+            0.46562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.52817,
+            0.74599,
+            0.3897
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "t": 0.40845,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.86804
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50334
+        ],
+        "roll": 0.02996,
+        "lens": 32.3959,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.45775,
+            -0.76399,
+            0.44041
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.45775,
+            0.76399,
+            0.40747
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "t": 0.42254,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.85878
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50357
+        ],
+        "roll": 0.02962,
+        "lens": 32.4938,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.38732,
+            -0.78307,
+            0.41371
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.38732,
+            0.78307,
+            0.42402
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "t": 0.43662,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.84921
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50381
+        ],
+        "roll": 0.02926,
+        "lens": 32.595,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.3169,
+            -0.80305,
+            0.38573
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.3169,
+            0.80305,
+            0.4392
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "t": 0.4507,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.83933
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50406
+        ],
+        "roll": 0.02889,
+        "lens": 32.6996,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.24648,
+            -0.8238,
+            0.35668
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.24648,
+            0.8238,
+            0.4529
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "t": 0.46479,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.82913
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50432
+        ],
+        "roll": 0.02851,
+        "lens": 32.8075,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.17606,
+            -0.84514,
+            0.3268
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.17606,
+            0.84514,
+            0.46502
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "t": 0.47887,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.81862
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50459
+        ],
+        "roll": 0.02811,
+        "lens": 32.9187,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.10563,
+            -0.86691,
+            0.29632
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.10563,
+            0.86691,
+            0.47545
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "t": 0.49296,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.80779
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50486
+        ],
+        "roll": 0.02771,
+        "lens": 33.0332,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.03521,
+            -0.88894,
+            0.26548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.03521,
+            0.88894,
+            0.48411
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "t": 0.50704,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.79665
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50514
+        ],
+        "roll": 0.02729,
+        "lens": 33.1511,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.03521,
+            -0.91106,
+            0.26548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.03521,
+            0.91106,
+            0.49095
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "t": 0.52113,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.78519
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50543
+        ],
+        "roll": 0.02686,
+        "lens": 33.2722,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.10563,
+            -0.93309,
+            0.29632
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.10563,
+            0.93309,
+            0.4959
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "t": 0.53521,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.77343
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50573
+        ],
+        "roll": 0.02642,
+        "lens": 33.3967,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.17606,
+            -0.95486,
+            0.3268
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.17606,
+            0.95486,
+            0.49892
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "t": 0.5493,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.76134
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50603
+        ],
+        "roll": 0.02597,
+        "lens": 33.5245,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.24648,
+            -0.9762,
+            0.35668
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.24648,
+            0.9762,
+            0.5
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "t": 0.56338,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.74895
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50635
+        ],
+        "roll": 0.0255,
+        "lens": 33.6556,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.3169,
+            -0.99695,
+            0.38573
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.3169,
+            0.99695,
+            0.49912
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "t": 0.57746,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.73624
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50667
+        ],
+        "roll": 0.02503,
+        "lens": 33.7901,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.38732,
+            -1.01693,
+            0.41371
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.38732,
+            1.01693,
+            0.49629
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "t": 0.59155,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.72322
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.507
+        ],
+        "roll": 0.02454,
+        "lens": 33.9278,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.45775,
+            -1.03601,
+            0.44041
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.45775,
+            1.03601,
+            0.49153
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "t": 0.60563,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.70988
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50734
+        ],
+        "roll": 0.02404,
+        "lens": 34.0689,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.52817,
+            -1.05401,
+            0.46562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.52817,
+            1.05401,
+            0.48488
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "t": 0.61972,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.69623
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50768
+        ],
+        "roll": 0.02353,
+        "lens": 34.2133,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.59859,
+            -1.07081,
+            0.48914
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.59859,
+            1.07081,
+            0.47639
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "t": 0.6338,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.68226
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50803
+        ],
+        "roll": 0.02301,
+        "lens": 34.361,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.66901,
+            -1.08628,
+            0.51079
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.66901,
+            1.08628,
+            0.46614
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "t": 0.64789,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.66798
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.5084
+        ],
+        "roll": 0.02247,
+        "lens": 34.5121,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.73944,
+            -1.10029,
+            0.5304
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.73944,
+            1.10029,
+            0.45419
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "t": 0.66197,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.65339
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50876
+        ],
+        "roll": 0.02193,
+        "lens": 34.6664,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.80986,
+            -1.11273,
+            0.54782
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.80986,
+            1.11273,
+            0.44064
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "t": 0.67606,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.63849
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50914
+        ],
+        "roll": 0.02137,
+        "lens": 34.8241,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.88028,
+            -1.1235,
+            0.5629
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.88028,
+            1.1235,
+            0.4256
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "t": 0.69014,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.62327
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50953
+        ],
+        "roll": 0.0208,
+        "lens": 34.9851,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.9507,
+            -1.13253,
+            0.57554
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.9507,
+            1.13253,
+            0.40919
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "t": 0.70423,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.60773
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.50992
+        ],
+        "roll": 0.02022,
+        "lens": 35.1494,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.02113,
+            -1.13973,
+            0.58562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.02113,
+            1.13973,
+            0.39153
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "t": 0.71831,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.59188
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51032
+        ],
+        "roll": 0.01962,
+        "lens": 35.3171,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.09155,
+            -1.14506,
+            0.59308
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.09155,
+            1.14506,
+            0.37276
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "t": 0.73239,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.57572
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51073
+        ],
+        "roll": 0.01902,
+        "lens": 35.488,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.16197,
+            -1.14847,
+            0.59786
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.16197,
+            1.14847,
+            0.35303
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "t": 0.74648,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.55925
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51114
+        ],
+        "roll": 0.0184,
+        "lens": 35.6623,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.23239,
+            -1.14994,
+            0.59991
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.23239,
+            1.14994,
+            0.3325
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "t": 0.76056,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.54246
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51157
+        ],
+        "roll": 0.01777,
+        "lens": 35.8399,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.30282,
+            -1.14945,
+            0.59923
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.30282,
+            1.14945,
+            0.31131
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "t": 0.77465,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.52536
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.512
+        ],
+        "roll": 0.01713,
+        "lens": 36.0208,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.37324,
+            -1.14701,
+            0.59581
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.37324,
+            1.14701,
+            0.28965
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "t": 0.78873,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.50794
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51244
+        ],
+        "roll": 0.01648,
+        "lens": 36.205,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.44366,
+            -1.14263,
+            0.58969
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.44366,
+            1.14263,
+            0.26768
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "t": 0.80282,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.49021
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51289
+        ],
+        "roll": 0.01581,
+        "lens": 36.3926,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.51408,
+            -1.13636,
+            0.5809
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.51408,
+            1.13636,
+            0.25442
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "t": 0.8169,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.47216
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51335
+        ],
+        "roll": 0.01514,
+        "lens": 36.5835,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.58451,
+            -1.12824,
+            0.56953
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.58451,
+            1.12824,
+            0.2765
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "t": 0.83099,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.45381
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51381
+        ],
+        "roll": 0.01445,
+        "lens": 36.7776,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.65493,
+            -1.11833,
+            0.55566
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.65493,
+            1.11833,
+            0.29837
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "t": 0.84507,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.43513
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51428
+        ],
+        "roll": 0.01375,
+        "lens": 36.9752,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.72535,
+            -1.10671,
+            0.53939
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.72535,
+            1.10671,
+            0.31985
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "t": 0.85915,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.41615
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51476
+        ],
+        "roll": 0.01304,
+        "lens": 37.176,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.79577,
+            -1.09347,
+            0.52086
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.79577,
+            1.09347,
+            0.3408
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "t": 0.87324,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.39685
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51525
+        ],
+        "roll": 0.01232,
+        "lens": 37.3801,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.8662,
+            -1.07872,
+            0.50021
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.8662,
+            1.07872,
+            0.36103
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "t": 0.88732,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.37723
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51575
+        ],
+        "roll": 0.01158,
+        "lens": 37.5876,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.93662,
+            -1.06257,
+            0.4776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.93662,
+            1.06257,
+            0.38039
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "t": 0.90141,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.35731
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51625
+        ],
+        "roll": 0.01084,
+        "lens": 37.7984,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.00704,
+            -1.04515,
+            0.45321
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.00704,
+            1.04515,
+            0.39873
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "t": 0.91549,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.33707
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51676
+        ],
+        "roll": 0.01008,
+        "lens": 38.0125,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.07746,
+            -1.02659,
+            0.42723
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.07746,
+            1.02659,
+            0.41591
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "t": 0.92958,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.31651
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51728
+        ],
+        "roll": 0.00931,
+        "lens": 38.2299,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.14789,
+            -1.00705,
+            0.39986
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.14789,
+            1.00705,
+            0.43179
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "t": 0.94366,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.29564
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51781
+        ],
+        "roll": 0.00853,
+        "lens": 38.4507,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.21831,
+            -0.98666,
+            0.37132
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.21831,
+            0.98666,
+            0.44624
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "t": 0.95775,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.27446
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51835
+        ],
+        "roll": 0.00773,
+        "lens": 38.6748,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.28873,
+            -0.96559,
+            0.34183
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.28873,
+            0.96559,
+            0.45916
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "t": 0.97183,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.25296
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51889
+        ],
+        "roll": 0.00693,
+        "lens": 38.9021,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.35915,
+            -0.94402,
+            0.31162
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.35915,
+            0.94402,
+            0.47045
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "t": 0.98592,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.23115
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.51944
+        ],
+        "roll": 0.00611,
+        "lens": 39.1329,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.42958,
+            -0.9221,
+            0.28093
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.42958,
+            0.9221,
+            0.48001
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          -0.9,
+          -5.5,
+          2.20903
+        ],
+        "look_at": [
+          -0.18,
+          0.0,
+          0.52
+        ],
+        "roll": 0.00528,
+        "lens": 39.3669,
+        "primitives": [
+          "Pedestal_Down",
+          "Zoom_In"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.5,
+            -0.9,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.5,
+            0.9,
+            0.48776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3600 @@
+{
+  "clip_id": "clip_060_cam_dolly_out_phys_two_cross_collision",
+  "camera_id": "cam_dolly_out",
+  "physics_id": "phys_two_cross_collision",
+  "scene_id": "scene_gray_low_wall",
+  "scene_style": "plain",
+  "fps": 24,
+  "frames_count": 72,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Dolly_Out"
+  ],
+  "camera_speed": "ease_in_out",
+  "camera_start_position": [
+    -0.7,
+    -4.1,
+    2.05
+  ],
+  "camera_start_target": [
+    -0.1,
+    0.0,
+    0.55
+  ],
+  "camera_start_roll_deg": -1.0,
+  "camera_start_lens": 35.0,
+  "camera_motion_sample": {
+    "dx": 0.0,
+    "dy": -1.7439,
+    "dz": 0.0,
+    "dtx": -0.0529,
+    "dty": 0.0,
+    "dtz": 0.0,
+    "droll": 0.71828,
+    "roll_wobble": 0.0,
+    "dlens": 0.59654
+  },
+  "camera_motion_distribution": {
+    "dy": [
+      -1.45,
+      0.35,
+      -2.15,
+      -0.7
+    ],
+    "dtx": [
+      0.0,
+      0.08,
+      -0.16,
+      0.16
+    ],
+    "droll": [
+      0.0,
+      1.3,
+      -3.0,
+      3.0
+    ],
+    "dlens": [
+      0.0,
+      1.0,
+      -2.0,
+      2.0
+    ]
+  },
+  "physics_kind": "two_cross",
+  "physics_objects": 2,
+  "physics_speed": "medium",
+  "video": "videos/clip_060_cam_dolly_out_phys_two_cross_collision.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.1,
+          2.05
+        ],
+        "look_at": [
+          -0.1,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01745,
+        "lens": 35.0,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.5,
+            -0.9,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.5,
+            0.9,
+            0.48776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.01408,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.10085,
+          2.05
+        ],
+        "look_at": [
+          -0.10003,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01745,
+        "lens": 35.0003,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.42958,
+            -0.8779,
+            0.28093
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.42958,
+            0.8779,
+            0.49366
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.02817,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.10341,
+          2.05
+        ],
+        "look_at": [
+          -0.1001,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01743,
+        "lens": 35.0012,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.35915,
+            -0.85598,
+            0.31162
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.35915,
+            0.85598,
+            0.49765
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.04225,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.10767,
+          2.05
+        ],
+        "look_at": [
+          -0.10023,
+          0.0,
+          0.55
+        ],
+        "roll": -0.0174,
+        "lens": 35.0026,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.28873,
+            -0.83441,
+            0.34183
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.28873,
+            0.83441,
+            0.4997
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.05634,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.11362,
+          2.05
+        ],
+        "look_at": [
+          -0.10041,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01736,
+        "lens": 35.0047,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.21831,
+            -0.81334,
+            0.37132
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.21831,
+            0.81334,
+            0.4998
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.07042,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.12125,
+          2.05
+        ],
+        "look_at": [
+          -0.10064,
+          0.0,
+          0.55
+        ],
+        "roll": -0.0173,
+        "lens": 35.0073,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.14789,
+            -0.79295,
+            0.39986
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.14789,
+            0.79295,
+            0.49794
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.08451,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.13055,
+          2.05
+        ],
+        "look_at": [
+          -0.10093,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01723,
+        "lens": 35.0104,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.07746,
+            -0.77341,
+            0.42723
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.07746,
+            0.77341,
+            0.49415
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.09859,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.14149,
+          2.05
+        ],
+        "look_at": [
+          -0.10126,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01716,
+        "lens": 35.0142,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -2.00704,
+            -0.75485,
+            0.45321
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            2.00704,
+            0.75485,
+            0.48844
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.11268,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.15406,
+          2.05
+        ],
+        "look_at": [
+          -0.10164,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01706,
+        "lens": 35.0185,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.93662,
+            -0.73743,
+            0.4776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.93662,
+            0.73743,
+            0.48086
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.12676,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.16823,
+          2.05
+        ],
+        "look_at": [
+          -0.10207,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01696,
+        "lens": 35.0233,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.8662,
+            -0.72128,
+            0.50021
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.8662,
+            0.72128,
+            0.47148
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.14085,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.18397,
+          2.05
+        ],
+        "look_at": [
+          -0.10255,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01685,
+        "lens": 35.0287,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.79577,
+            -0.70653,
+            0.52086
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.79577,
+            0.70653,
+            0.46037
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.15493,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.20126,
+          2.05
+        ],
+        "look_at": [
+          -0.10307,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01673,
+        "lens": 35.0346,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.72535,
+            -0.69329,
+            0.53939
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.72535,
+            0.69329,
+            0.44761
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.16901,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.22005,
+          2.05
+        ],
+        "look_at": [
+          -0.10364,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01659,
+        "lens": 35.0411,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.65493,
+            -0.68167,
+            0.55566
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.65493,
+            0.68167,
+            0.4333
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.1831,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.24032,
+          2.05
+        ],
+        "look_at": [
+          -0.10426,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01644,
+        "lens": 35.048,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.58451,
+            -0.67176,
+            0.56953
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.58451,
+            0.67176,
+            0.41756
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.19718,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.26202,
+          2.05
+        ],
+        "look_at": [
+          -0.10491,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01629,
+        "lens": 35.0554,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.51408,
+            -0.66364,
+            0.5809
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.51408,
+            0.66364,
+            0.4005
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.21127,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.28511,
+          2.05
+        ],
+        "look_at": [
+          -0.10562,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01612,
+        "lens": 35.0633,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.44366,
+            -0.65737,
+            0.58969
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.44366,
+            0.65737,
+            0.38227
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.22535,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.30954,
+          2.05
+        ],
+        "look_at": [
+          -0.10636,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01595,
+        "lens": 35.0717,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.37324,
+            -0.65299,
+            0.59581
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.37324,
+            0.65299,
+            0.363
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.23944,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.33527,
+          2.05
+        ],
+        "look_at": [
+          -0.10714,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01576,
+        "lens": 35.0805,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.30282,
+            -0.65055,
+            0.59923
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.30282,
+            0.65055,
+            0.34285
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.25352,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.36225,
+          2.05
+        ],
+        "look_at": [
+          -0.10796,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01557,
+        "lens": 35.0897,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.23239,
+            -0.65006,
+            0.59991
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.23239,
+            0.65006,
+            0.32198
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.26761,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.39042,
+          2.05
+        ],
+        "look_at": [
+          -0.10881,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01537,
+        "lens": 35.0993,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.16197,
+            -0.65153,
+            0.59786
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.16197,
+            0.65153,
+            0.30053
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.28169,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.41972,
+          2.05
+        ],
+        "look_at": [
+          -0.1097,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01515,
+        "lens": 35.1094,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.09155,
+            -0.65494,
+            0.59308
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.09155,
+            0.65494,
+            0.2787
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.29577,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.45011,
+          2.05
+        ],
+        "look_at": [
+          -0.11062,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01494,
+        "lens": 35.1198,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -1.02113,
+            -0.66027,
+            0.58562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            1.02113,
+            0.66027,
+            0.25664
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.30986,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.48152,
+          2.05
+        ],
+        "look_at": [
+          -0.11157,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01471,
+        "lens": 35.1305,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.9507,
+            -0.66747,
+            0.57554
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.9507,
+            0.66747,
+            0.26548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 0.32394,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.51389,
+          2.05
+        ],
+        "look_at": [
+          -0.11256,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01448,
+        "lens": 35.1416,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.88028,
+            -0.6765,
+            0.5629
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.88028,
+            0.6765,
+            0.28747
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "t": 0.33803,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.54716,
+          2.05
+        ],
+        "look_at": [
+          -0.11356,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01424,
+        "lens": 35.153,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.80986,
+            -0.68727,
+            0.54782
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.80986,
+            0.68727,
+            0.30917
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "t": 0.35211,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.58126,
+          2.05
+        ],
+        "look_at": [
+          -0.1146,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01399,
+        "lens": 35.1646,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.73944,
+            -0.69971,
+            0.5304
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.73944,
+            0.69971,
+            0.3304
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "t": 0.3662,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.61612,
+          2.05
+        ],
+        "look_at": [
+          -0.11566,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01374,
+        "lens": 35.1766,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.66901,
+            -0.71372,
+            0.51079
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.66901,
+            0.71372,
+            0.35101
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "t": 0.38028,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.65168,
+          2.05
+        ],
+        "look_at": [
+          -0.11673,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01349,
+        "lens": 35.1887,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.59859,
+            -0.72919,
+            0.48914
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.59859,
+            0.72919,
+            0.37083
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "t": 0.39437,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.68787,
+          2.05
+        ],
+        "look_at": [
+          -0.11783,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01323,
+        "lens": 35.2011,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.52817,
+            -0.74599,
+            0.46562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.52817,
+            0.74599,
+            0.3897
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "t": 0.40845,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.72461,
+          2.05
+        ],
+        "look_at": [
+          -0.11895,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01296,
+        "lens": 35.2137,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.45775,
+            -0.76399,
+            0.44041
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.45775,
+            0.76399,
+            0.40747
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "t": 0.42254,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.76184,
+          2.05
+        ],
+        "look_at": [
+          -0.12008,
+          0.0,
+          0.55
+        ],
+        "roll": -0.0127,
+        "lens": 35.2264,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.38732,
+            -0.78307,
+            0.41371
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.38732,
+            0.78307,
+            0.42402
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "t": 0.43662,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.79948,
+          2.05
+        ],
+        "look_at": [
+          -0.12122,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01242,
+        "lens": 35.2393,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.3169,
+            -0.80305,
+            0.38573
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.3169,
+            0.80305,
+            0.4392
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "t": 0.4507,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.83745,
+          2.05
+        ],
+        "look_at": [
+          -0.12237,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01215,
+        "lens": 35.2523,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.24648,
+            -0.8238,
+            0.35668
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.24648,
+            0.8238,
+            0.4529
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "t": 0.46479,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.87569,
+          2.05
+        ],
+        "look_at": [
+          -0.12353,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01188,
+        "lens": 35.2653,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.17606,
+            -0.84514,
+            0.3268
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.17606,
+            0.84514,
+            0.46502
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "t": 0.47887,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.91412,
+          2.05
+        ],
+        "look_at": [
+          -0.1247,
+          0.0,
+          0.55
+        ],
+        "roll": -0.0116,
+        "lens": 35.2785,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.10563,
+            -0.86691,
+            0.29632
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.10563,
+            0.86691,
+            0.47545
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "t": 0.49296,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.95266,
+          2.05
+        ],
+        "look_at": [
+          -0.12586,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01132,
+        "lens": 35.2917,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            -0.03521,
+            -0.88894,
+            0.26548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            0.03521,
+            0.88894,
+            0.48411
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "t": 0.50704,
+      "camera": {
+        "position": [
+          -0.7,
+          -4.99124,
+          2.05
+        ],
+        "look_at": [
+          -0.12704,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01105,
+        "lens": 35.3049,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.03521,
+            -0.91106,
+            0.26548
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.03521,
+            0.91106,
+            0.49095
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "t": 0.52113,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.02978,
+          2.05
+        ],
+        "look_at": [
+          -0.1282,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01077,
+        "lens": 35.3181,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.10563,
+            -0.93309,
+            0.29632
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.10563,
+            0.93309,
+            0.4959
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "t": 0.53521,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.06821,
+          2.05
+        ],
+        "look_at": [
+          -0.12937,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01049,
+        "lens": 35.3312,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.17606,
+            -0.95486,
+            0.3268
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.17606,
+            0.95486,
+            0.49892
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "t": 0.5493,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.10645,
+          2.05
+        ],
+        "look_at": [
+          -0.13053,
+          0.0,
+          0.55
+        ],
+        "roll": -0.01022,
+        "lens": 35.3443,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.24648,
+            -0.9762,
+            0.35668
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.24648,
+            0.9762,
+            0.5
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "t": 0.56338,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.14442,
+          2.05
+        ],
+        "look_at": [
+          -0.13168,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00995,
+        "lens": 35.3573,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.3169,
+            -0.99695,
+            0.38573
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.3169,
+            0.99695,
+            0.49912
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "t": 0.57746,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.18206,
+          2.05
+        ],
+        "look_at": [
+          -0.13282,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00967,
+        "lens": 35.3701,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.38732,
+            -1.01693,
+            0.41371
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.38732,
+            1.01693,
+            0.49629
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "t": 0.59155,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.21929,
+          2.05
+        ],
+        "look_at": [
+          -0.13395,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00941,
+        "lens": 35.3829,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.45775,
+            -1.03601,
+            0.44041
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.45775,
+            1.03601,
+            0.49153
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "t": 0.60563,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.25603,
+          2.05
+        ],
+        "look_at": [
+          -0.13507,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00914,
+        "lens": 35.3954,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.52817,
+            -1.05401,
+            0.46562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.52817,
+            1.05401,
+            0.48488
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "t": 0.61972,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.29222,
+          2.05
+        ],
+        "look_at": [
+          -0.13617,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00888,
+        "lens": 35.4078,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.59859,
+            -1.07081,
+            0.48914
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.59859,
+            1.07081,
+            0.47639
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "t": 0.6338,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.32778,
+          2.05
+        ],
+        "look_at": [
+          -0.13724,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00863,
+        "lens": 35.42,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.66901,
+            -1.08628,
+            0.51079
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.66901,
+            1.08628,
+            0.46614
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "t": 0.64789,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.36264,
+          2.05
+        ],
+        "look_at": [
+          -0.1383,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00838,
+        "lens": 35.4319,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.73944,
+            -1.10029,
+            0.5304
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.73944,
+            1.10029,
+            0.45419
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "t": 0.66197,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.39674,
+          2.05
+        ],
+        "look_at": [
+          -0.13934,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00813,
+        "lens": 35.4436,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.80986,
+            -1.11273,
+            0.54782
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.80986,
+            1.11273,
+            0.44064
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "t": 0.67606,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.43001,
+          2.05
+        ],
+        "look_at": [
+          -0.14034,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00789,
+        "lens": 35.455,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.88028,
+            -1.1235,
+            0.5629
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.88028,
+            1.1235,
+            0.4256
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "t": 0.69014,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.46238,
+          2.05
+        ],
+        "look_at": [
+          -0.14133,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00766,
+        "lens": 35.466,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            0.9507,
+            -1.13253,
+            0.57554
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -0.9507,
+            1.13253,
+            0.40919
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "t": 0.70423,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.49379,
+          2.05
+        ],
+        "look_at": [
+          -0.14228,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00743,
+        "lens": 35.4768,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.02113,
+            -1.13973,
+            0.58562
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.02113,
+            1.13973,
+            0.39153
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "t": 0.71831,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.52418,
+          2.05
+        ],
+        "look_at": [
+          -0.1432,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00722,
+        "lens": 35.4872,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.09155,
+            -1.14506,
+            0.59308
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.09155,
+            1.14506,
+            0.37276
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "t": 0.73239,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.55348,
+          2.05
+        ],
+        "look_at": [
+          -0.14409,
+          0.0,
+          0.55
+        ],
+        "roll": -0.007,
+        "lens": 35.4972,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.16197,
+            -1.14847,
+            0.59786
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.16197,
+            1.14847,
+            0.35303
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "t": 0.74648,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.58165,
+          2.05
+        ],
+        "look_at": [
+          -0.14494,
+          0.0,
+          0.55
+        ],
+        "roll": -0.0068,
+        "lens": 35.5068,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.23239,
+            -1.14994,
+            0.59991
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.23239,
+            1.14994,
+            0.3325
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "t": 0.76056,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.60863,
+          2.05
+        ],
+        "look_at": [
+          -0.14576,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00661,
+        "lens": 35.5161,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.30282,
+            -1.14945,
+            0.59923
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.30282,
+            1.14945,
+            0.31131
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "t": 0.77465,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.63436,
+          2.05
+        ],
+        "look_at": [
+          -0.14654,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00642,
+        "lens": 35.5249,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.37324,
+            -1.14701,
+            0.59581
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.37324,
+            1.14701,
+            0.28965
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "t": 0.78873,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.65879,
+          2.05
+        ],
+        "look_at": [
+          -0.14728,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00625,
+        "lens": 35.5332,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.44366,
+            -1.14263,
+            0.58969
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.44366,
+            1.14263,
+            0.26768
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "t": 0.80282,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.68188,
+          2.05
+        ],
+        "look_at": [
+          -0.14799,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00608,
+        "lens": 35.5411,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.51408,
+            -1.13636,
+            0.5809
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.51408,
+            1.13636,
+            0.25442
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "t": 0.8169,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.70358,
+          2.05
+        ],
+        "look_at": [
+          -0.14864,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00593,
+        "lens": 35.5485,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.58451,
+            -1.12824,
+            0.56953
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.58451,
+            1.12824,
+            0.2765
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "t": 0.83099,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.72385,
+          2.05
+        ],
+        "look_at": [
+          -0.14926,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00578,
+        "lens": 35.5555,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.65493,
+            -1.11833,
+            0.55566
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.65493,
+            1.11833,
+            0.29837
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "t": 0.84507,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.74264,
+          2.05
+        ],
+        "look_at": [
+          -0.14983,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00564,
+        "lens": 35.5619,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.72535,
+            -1.10671,
+            0.53939
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.72535,
+            1.10671,
+            0.31985
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "t": 0.85915,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.75993,
+          2.05
+        ],
+        "look_at": [
+          -0.15035,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00552,
+        "lens": 35.5678,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.79577,
+            -1.09347,
+            0.52086
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.79577,
+            1.09347,
+            0.3408
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "t": 0.87324,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.77567,
+          2.05
+        ],
+        "look_at": [
+          -0.15083,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00541,
+        "lens": 35.5732,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.8662,
+            -1.07872,
+            0.50021
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.8662,
+            1.07872,
+            0.36103
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "t": 0.88732,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.78984,
+          2.05
+        ],
+        "look_at": [
+          -0.15126,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00531,
+        "lens": 35.578,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            1.93662,
+            -1.06257,
+            0.4776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -1.93662,
+            1.06257,
+            0.38039
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "t": 0.90141,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.80241,
+          2.05
+        ],
+        "look_at": [
+          -0.15164,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00522,
+        "lens": 35.5823,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.00704,
+            -1.04515,
+            0.45321
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.00704,
+            1.04515,
+            0.39873
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "t": 0.91549,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.81335,
+          2.05
+        ],
+        "look_at": [
+          -0.15197,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00514,
+        "lens": 35.5861,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.07746,
+            -1.02659,
+            0.42723
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.07746,
+            1.02659,
+            0.41591
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "t": 0.92958,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.82265,
+          2.05
+        ],
+        "look_at": [
+          -0.15226,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00507,
+        "lens": 35.5893,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.14789,
+            -1.00705,
+            0.39986
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.14789,
+            1.00705,
+            0.43179
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "t": 0.94366,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.83028,
+          2.05
+        ],
+        "look_at": [
+          -0.15249,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00501,
+        "lens": 35.5919,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.21831,
+            -0.98666,
+            0.37132
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.21831,
+            0.98666,
+            0.44624
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "t": 0.95775,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.83623,
+          2.05
+        ],
+        "look_at": [
+          -0.15267,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00497,
+        "lens": 35.5939,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.28873,
+            -0.96559,
+            0.34183
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.28873,
+            0.96559,
+            0.45916
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "t": 0.97183,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.84049,
+          2.05
+        ],
+        "look_at": [
+          -0.1528,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00494,
+        "lens": 35.5954,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.35915,
+            -0.94402,
+            0.31162
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.35915,
+            0.94402,
+            0.47045
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "t": 0.98592,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.84305,
+          2.05
+        ],
+        "look_at": [
+          -0.15287,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00492,
+        "lens": 35.5962,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.42958,
+            -0.9221,
+            0.28093
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.42958,
+            0.9221,
+            0.48001
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.8439,
+          2.05
+        ],
+        "look_at": [
+          -0.1529,
+          0.0,
+          0.55
+        ],
+        "roll": -0.00492,
+        "lens": 35.5965,
+        "primitives": [
+          "Dolly_Out"
+        ]
+      },
+      "objects": [
+        {
+          "name": "red_cross",
+          "position": [
+            2.5,
+            -0.9,
+            0.25
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "blue_cross",
+          "position": [
+            -2.5,
+            0.9,
+            0.48776
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2737 @@
+{
+  "clip_id": "clip_013_cam_gentle_roll_ccw_phys_out_of_frame",
+  "camera_id": "cam_gentle_roll_ccw",
+  "physics_id": "phys_out_of_frame",
+  "scene_id": "scene_dark_side_blocks",
+  "scene_style": "side_blocks",
+  "fps": 24,
+  "frames_count": 72,
+  "resolution": [
+    320,
+    240
+  ],
+  "camera_primitives": [
+    "Roll_Counterclockwise",
+    "Truck_Left"
+  ],
+  "camera_speed": "slow",
+  "camera_start_position": [
+    -0.7,
+    -5.5,
+    2.25
+  ],
+  "camera_start_target": [
+    -0.12,
+    0.0,
+    0.58
+  ],
+  "camera_start_roll_deg": 4.0,
+  "camera_start_lens": 34.0,
+  "camera_motion_sample": {
+    "dx": 0.46446,
+    "dy": 0.0,
+    "dz": 0.0,
+    "dtx": 0.15805,
+    "dty": 0.0,
+    "dtz": 0.0,
+    "droll": -5.78039,
+    "roll_wobble": 0.43627,
+    "dlens": 0.0
+  },
+  "camera_motion_distribution": {
+    "dx": [
+      0.45,
+      0.18,
+      0.1,
+      0.85
+    ],
+    "dtx": [
+      0.16,
+      0.1,
+      -0.05,
+      0.38
+    ],
+    "droll": [
+      -5.0,
+      1.8,
+      -8.5,
+      -1.5
+    ],
+    "roll_wobble": [
+      0.6,
+      0.35,
+      0.0,
+      1.4
+    ]
+  },
+  "physics_kind": "out_of_frame",
+  "physics_objects": 1,
+  "physics_speed": "fast",
+  "video": "videos/clip_013_cam_gentle_roll_ccw_phys_out_of_frame.mp4",
+  "frames": [
+    {
+      "frame": 0,
+      "t": 0.0,
+      "camera": {
+        "position": [
+          -0.7,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.12,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06981,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -1.0,
+            -0.5,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "t": 0.01408,
+      "camera": {
+        "position": [
+          -0.69346,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.11777,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06907,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.91549,
+            -0.48592,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "t": 0.02817,
+      "camera": {
+        "position": [
+          -0.68692,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.11555,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06831,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.83099,
+            -0.47183,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "t": 0.04225,
+      "camera": {
+        "position": [
+          -0.68037,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.11332,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06755,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.74648,
+            -0.45775,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "t": 0.05634,
+      "camera": {
+        "position": [
+          -0.67383,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.1111,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06677,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.66197,
+            -0.44366,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "t": 0.07042,
+      "camera": {
+        "position": [
+          -0.66729,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.10887,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06597,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.57746,
+            -0.42958,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "t": 0.08451,
+      "camera": {
+        "position": [
+          -0.66075,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.10664,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06514,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.49296,
+            -0.41549,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "t": 0.09859,
+      "camera": {
+        "position": [
+          -0.65421,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.10442,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06429,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.40845,
+            -0.40141,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "t": 0.11268,
+      "camera": {
+        "position": [
+          -0.64767,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.10219,
+          0.0,
+          0.58
+        ],
+        "roll": 0.0634,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.32394,
+            -0.38732,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "t": 0.12676,
+      "camera": {
+        "position": [
+          -0.64112,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.09997,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06247,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.23944,
+            -0.37324,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "t": 0.14085,
+      "camera": {
+        "position": [
+          -0.63458,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.09774,
+          0.0,
+          0.58
+        ],
+        "roll": 0.0615,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.15493,
+            -0.35915,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "t": 0.15493,
+      "camera": {
+        "position": [
+          -0.62804,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.09551,
+          0.0,
+          0.58
+        ],
+        "roll": 0.06048,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            -0.07042,
+            -0.34507,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "t": 0.16901,
+      "camera": {
+        "position": [
+          -0.6215,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.09329,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05941,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.01408,
+            -0.33099,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "t": 0.1831,
+      "camera": {
+        "position": [
+          -0.61496,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.09106,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05829,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.09859,
+            -0.3169,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "t": 0.19718,
+      "camera": {
+        "position": [
+          -0.60842,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.08884,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05712,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.1831,
+            -0.30282,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "t": 0.21127,
+      "camera": {
+        "position": [
+          -0.60187,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.08661,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05589,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.26761,
+            -0.28873,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "t": 0.22535,
+      "camera": {
+        "position": [
+          -0.59533,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.08438,
+          0.0,
+          0.58
+        ],
+        "roll": 0.0546,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.35211,
+            -0.27465,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "t": 0.23944,
+      "camera": {
+        "position": [
+          -0.58879,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.08216,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05325,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.43662,
+            -0.26056,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "t": 0.25352,
+      "camera": {
+        "position": [
+          -0.58225,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.07993,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05185,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.52113,
+            -0.24648,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "t": 0.26761,
+      "camera": {
+        "position": [
+          -0.57571,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.0777,
+          0.0,
+          0.58
+        ],
+        "roll": 0.05038,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.60563,
+            -0.23239,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "t": 0.28169,
+      "camera": {
+        "position": [
+          -0.56917,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.07548,
+          0.0,
+          0.58
+        ],
+        "roll": 0.04886,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.69014,
+            -0.21831,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "t": 0.29577,
+      "camera": {
+        "position": [
+          -0.56262,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.07325,
+          0.0,
+          0.58
+        ],
+        "roll": 0.04727,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.77465,
+            -0.20423,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "t": 0.30986,
+      "camera": {
+        "position": [
+          -0.55608,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.07103,
+          0.0,
+          0.58
+        ],
+        "roll": 0.04563,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.85915,
+            -0.19014,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "t": 0.32394,
+      "camera": {
+        "position": [
+          -0.54954,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.0688,
+          0.0,
+          0.58
+        ],
+        "roll": 0.04394,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            0.94366,
+            -0.17606,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "t": 0.33803,
+      "camera": {
+        "position": [
+          -0.543,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.06657,
+          0.0,
+          0.58
+        ],
+        "roll": 0.04219,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.02817,
+            -0.16197,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "t": 0.35211,
+      "camera": {
+        "position": [
+          -0.53646,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.06435,
+          0.0,
+          0.58
+        ],
+        "roll": 0.04039,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.11268,
+            -0.14789,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "t": 0.3662,
+      "camera": {
+        "position": [
+          -0.52992,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.06212,
+          0.0,
+          0.58
+        ],
+        "roll": 0.03854,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.19718,
+            -0.1338,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "t": 0.38028,
+      "camera": {
+        "position": [
+          -0.52337,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.0599,
+          0.0,
+          0.58
+        ],
+        "roll": 0.03665,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.28169,
+            -0.11972,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "t": 0.39437,
+      "camera": {
+        "position": [
+          -0.51683,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.05767,
+          0.0,
+          0.58
+        ],
+        "roll": 0.03472,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.3662,
+            -0.10563,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "t": 0.40845,
+      "camera": {
+        "position": [
+          -0.51029,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.05544,
+          0.0,
+          0.58
+        ],
+        "roll": 0.03275,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.4507,
+            -0.09155,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "t": 0.42254,
+      "camera": {
+        "position": [
+          -0.50375,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.05322,
+          0.0,
+          0.58
+        ],
+        "roll": 0.03075,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.53521,
+            -0.07746,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "t": 0.43662,
+      "camera": {
+        "position": [
+          -0.49721,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.05099,
+          0.0,
+          0.58
+        ],
+        "roll": 0.02872,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.61972,
+            -0.06338,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "t": 0.4507,
+      "camera": {
+        "position": [
+          -0.49067,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.04877,
+          0.0,
+          0.58
+        ],
+        "roll": 0.02666,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.70423,
+            -0.0493,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "t": 0.46479,
+      "camera": {
+        "position": [
+          -0.48412,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.04654,
+          0.0,
+          0.58
+        ],
+        "roll": 0.02459,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.78873,
+            -0.03521,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "t": 0.47887,
+      "camera": {
+        "position": [
+          -0.47758,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.04431,
+          0.0,
+          0.58
+        ],
+        "roll": 0.02251,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.87324,
+            -0.02113,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "t": 0.49296,
+      "camera": {
+        "position": [
+          -0.47104,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.04209,
+          0.0,
+          0.58
+        ],
+        "roll": 0.02042,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            1.95775,
+            -0.00704,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "t": 0.50704,
+      "camera": {
+        "position": [
+          -0.4645,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.03986,
+          0.0,
+          0.58
+        ],
+        "roll": 0.01832,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.04225,
+            0.00704,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "t": 0.52113,
+      "camera": {
+        "position": [
+          -0.45796,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.03764,
+          0.0,
+          0.58
+        ],
+        "roll": 0.01623,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.12676,
+            0.02113,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "t": 0.53521,
+      "camera": {
+        "position": [
+          -0.45142,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.03541,
+          0.0,
+          0.58
+        ],
+        "roll": 0.01415,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.21127,
+            0.03521,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "t": 0.5493,
+      "camera": {
+        "position": [
+          -0.44487,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.03318,
+          0.0,
+          0.58
+        ],
+        "roll": 0.01208,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.29577,
+            0.0493,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "t": 0.56338,
+      "camera": {
+        "position": [
+          -0.43833,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.03096,
+          0.0,
+          0.58
+        ],
+        "roll": 0.01002,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.38028,
+            0.06338,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "t": 0.57746,
+      "camera": {
+        "position": [
+          -0.43179,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.02873,
+          0.0,
+          0.58
+        ],
+        "roll": 0.00799,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.46479,
+            0.07746,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "t": 0.59155,
+      "camera": {
+        "position": [
+          -0.42525,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.02651,
+          0.0,
+          0.58
+        ],
+        "roll": 0.00599,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.5493,
+            0.09155,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "t": 0.60563,
+      "camera": {
+        "position": [
+          -0.41871,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.02428,
+          0.0,
+          0.58
+        ],
+        "roll": 0.00402,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.6338,
+            0.10563,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "t": 0.61972,
+      "camera": {
+        "position": [
+          -0.41217,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.02205,
+          0.0,
+          0.58
+        ],
+        "roll": 0.00209,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.71831,
+            0.11972,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "t": 0.6338,
+      "camera": {
+        "position": [
+          -0.40562,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.01983,
+          0.0,
+          0.58
+        ],
+        "roll": 0.0002,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.80282,
+            0.1338,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "t": 0.64789,
+      "camera": {
+        "position": [
+          -0.39908,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.0176,
+          0.0,
+          0.58
+        ],
+        "roll": -0.00165,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.88732,
+            0.14789,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "t": 0.66197,
+      "camera": {
+        "position": [
+          -0.39254,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.01538,
+          0.0,
+          0.58
+        ],
+        "roll": -0.00345,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            2.97183,
+            0.16197,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "t": 0.67606,
+      "camera": {
+        "position": [
+          -0.386,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.01315,
+          0.0,
+          0.58
+        ],
+        "roll": -0.0052,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.05634,
+            0.17606,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "t": 0.69014,
+      "camera": {
+        "position": [
+          -0.37946,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.01092,
+          0.0,
+          0.58
+        ],
+        "roll": -0.0069,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.14085,
+            0.19014,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "t": 0.70423,
+      "camera": {
+        "position": [
+          -0.37292,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.0087,
+          0.0,
+          0.58
+        ],
+        "roll": -0.00854,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.22535,
+            0.20423,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "t": 0.71831,
+      "camera": {
+        "position": [
+          -0.36637,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.00647,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01012,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.30986,
+            0.21831,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "t": 0.73239,
+      "camera": {
+        "position": [
+          -0.35983,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.00425,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01164,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.39437,
+            0.23239,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "t": 0.74648,
+      "camera": {
+        "position": [
+          -0.35329,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          -0.00202,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01311,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.47887,
+            0.24648,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "t": 0.76056,
+      "camera": {
+        "position": [
+          -0.34675,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.00021,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01452,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.56338,
+            0.26056,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "t": 0.77465,
+      "camera": {
+        "position": [
+          -0.34021,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.00243,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01586,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.64789,
+            0.27465,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "t": 0.78873,
+      "camera": {
+        "position": [
+          -0.33367,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.00466,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01715,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.73239,
+            0.28873,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "t": 0.80282,
+      "camera": {
+        "position": [
+          -0.32712,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.00689,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01838,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.8169,
+            0.30282,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "t": 0.8169,
+      "camera": {
+        "position": [
+          -0.32058,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.00911,
+          0.0,
+          0.58
+        ],
+        "roll": -0.01955,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.90141,
+            0.3169,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "t": 0.83099,
+      "camera": {
+        "position": [
+          -0.31404,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.01134,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02067,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            3.98592,
+            0.33099,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "t": 0.84507,
+      "camera": {
+        "position": [
+          -0.3075,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.01356,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02174,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.07042,
+            0.34507,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "t": 0.85915,
+      "camera": {
+        "position": [
+          -0.30096,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.01579,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02276,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.15493,
+            0.35915,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "t": 0.87324,
+      "camera": {
+        "position": [
+          -0.29442,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.01802,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02373,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.23944,
+            0.37324,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "t": 0.88732,
+      "camera": {
+        "position": [
+          -0.28787,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.02024,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02466,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.32394,
+            0.38732,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "t": 0.90141,
+      "camera": {
+        "position": [
+          -0.28133,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.02247,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02555,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.40845,
+            0.40141,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "t": 0.91549,
+      "camera": {
+        "position": [
+          -0.27479,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.02469,
+          0.0,
+          0.58
+        ],
+        "roll": -0.0264,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.49296,
+            0.41549,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "t": 0.92958,
+      "camera": {
+        "position": [
+          -0.26825,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.02692,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02723,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.57746,
+            0.42958,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "t": 0.94366,
+      "camera": {
+        "position": [
+          -0.26171,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.02915,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02803,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.66197,
+            0.44366,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "t": 0.95775,
+      "camera": {
+        "position": [
+          -0.25517,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.03137,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02881,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.74648,
+            0.45775,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "t": 0.97183,
+      "camera": {
+        "position": [
+          -0.24862,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.0336,
+          0.0,
+          0.58
+        ],
+        "roll": -0.02957,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.83099,
+            0.47183,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "t": 0.98592,
+      "camera": {
+        "position": [
+          -0.24208,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.03582,
+          0.0,
+          0.58
+        ],
+        "roll": -0.03033,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            4.91549,
+            0.48592,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "t": 1.0,
+      "camera": {
+        "position": [
+          -0.23554,
+          -5.5,
+          2.25
+        ],
+        "look_at": [
+          0.03805,
+          0.0,
+          0.58
+        ],
+        "roll": -0.03107,
+        "lens": 34.0,
+        "primitives": [
+          "Roll_Counterclockwise",
+          "Truck_Left"
+        ]
+      },
+      "objects": [
+        {
+          "name": "main_sphere",
+          "position": [
+            5.0,
+            0.5,
+            0.28
+          ],
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}
