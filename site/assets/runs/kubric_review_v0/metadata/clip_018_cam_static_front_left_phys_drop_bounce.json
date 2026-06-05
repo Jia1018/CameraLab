@@ -1,0 +1,3612 @@
+{
+  "clip_id": "clip_018_cam_static_front_left_phys_drop_bounce",
+  "camera_id": "cam_static_front_left",
+  "physics_id": "phys_drop_bounce",
+  "scene_id": "scene_green_floor_marks",
+  "fps": 24,
+  "frames_count": 60,
+  "duration_s": 2.45833,
+  "resolution": [
+    320,
+    240
+  ],
+  "generator": "kubric_style_pybullet_blender_review",
+  "simulator": "PyBullet",
+  "renderer": "Blender EEVEE",
+  "camera_spec": {
+    "id": "cam_static_front_left",
+    "mode": "linear",
+    "primitives": [
+      "Static"
+    ],
+    "speed_class": "none",
+    "description": "Fixed oblique front-left camera.",
+    "start_position": [
+      -1.05,
+      -5.45,
+      2.05
+    ],
+    "start_target": [
+      0.0,
+      -0.05,
+      0.55
+    ],
+    "linear_velocity_mps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_velocity_mps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "roll_start_deg": -2.0,
+    "roll_velocity_deg_s": 0.0,
+    "lens_mm": 35.0,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "component velocities sampled from clipped Gaussian templates; velocity is in real units per second"
+  },
+  "physics_spec": {
+    "id": "phys_drop_bounce",
+    "kind": "gravity_bounce",
+    "speed_class": "mixed",
+    "description": "Sphere falls and bounces under gravity with slight lateral velocity.",
+    "motion_distribution": {
+      "x_velocity_mps": [
+        0.38,
+        0.16,
+        -0.05,
+        0.75
+      ]
+    },
+    "bodies": [
+      {
+        "name": "gold_drop_bounce",
+        "shape": "sphere",
+        "radius": 0.25,
+        "position": [
+          -0.45,
+          0.15,
+          1.95
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          0.18553,
+          0.18,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 1.0,
+        "restitution": 0.78,
+        "friction": 0.22,
+        "color": [
+          0.95,
+          0.62,
+          0.16,
+          1.0
+        ],
+        "role": "dynamic"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_green_floor_marks",
+    "ground_color": [
+      0.58,
+      0.67,
+      0.61,
+      1.0
+    ],
+    "back_wall_color": [
+      0.73,
+      0.8,
+      0.73,
+      1.0
+    ],
+    "side_wall_color": [
+      0.66,
+      0.73,
+      0.67,
+      1.0
+    ],
+    "wall_height": 2.2,
+    "wall_style": "plain",
+    "floor_style": "corner_marks",
+    "static_props": []
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05,
+        -5.45,
+        2.05
+      ],
+      "look_at": [
+        0.0,
+        -0.05,
+        0.55
+      ],
+      "roll_deg": -2.0,
+      "lens_mm": 35.0
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.45,
+            0.15,
+            1.95
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18553,
+            0.18,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.44228,
+            0.15749,
+            1.94064
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18512,
+            0.1796,
+            -0.40833
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.43458,
+            0.16496,
+            1.91429
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18461,
+            0.17911,
+            -0.81543
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.4269,
+            0.17241,
+            1.87102
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18399,
+            0.1785,
+            -1.22078
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.41925,
+            0.17983,
+            1.81091
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18324,
+            0.17778,
+            -1.62384
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.41163,
+            0.18722,
+            1.73406
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18238,
+            0.17695,
+            -2.02409
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.40406,
+            0.19457,
+            1.64062
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18141,
+            0.176,
+            -2.421
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.39652,
+            0.20188,
+            1.53072
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.18032,
+            0.17495,
+            -2.81409
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.38904,
+            0.20915,
+            1.40454
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.17912,
+            0.17378,
+            -3.20289
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3816,
+            0.21636,
+            1.26227
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.17782,
+            0.17252,
+            -3.58695
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.37422,
+            0.22352,
+            1.10411
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.17641,
+            0.17115,
+            -3.96583
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.36691,
+            0.23062,
+            0.93029
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.1749,
+            0.16969,
+            -4.33913
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.35966,
+            0.23765,
+            0.74106
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.1733,
+            0.16814,
+            -4.70648
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.35247,
+            0.24462,
+            0.53666
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.17161,
+            0.1665,
+            -5.06753
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34536,
+            0.25152,
+            0.31737
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.16984,
+            0.16478,
+            -5.42196
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34324,
+            0.25358,
+            0.31533
+          ],
+          "orientation": [
+            -1e-05,
+            1e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            2.15761
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34324,
+            0.25358,
+            0.39563
+          ],
+          "orientation": [
+            -1e-05,
+            1e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            1.73909
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34323,
+            0.25358,
+            0.45856
+          ],
+          "orientation": [
+            -2e-05,
+            2e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            1.32372
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34323,
+            0.25359,
+            0.50425
+          ],
+          "orientation": [
+            -3e-05,
+            3e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            0.91089
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34323,
+            0.25359,
+            0.53278
+          ],
+          "orientation": [
+            -4e-05,
+            4e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            0.50003
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34322,
+            0.2536,
+            0.54423
+          ],
+          "orientation": [
+            -5e-05,
+            5e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            0.09057
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34322,
+            0.2536,
+            0.53864
+          ],
+          "orientation": [
+            -6e-05,
+            6e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            -0.31799
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34321,
+            0.2536,
+            0.51604
+          ],
+          "orientation": [
+            -6e-05,
+            7e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            -0.72547
+          ],
+          "angular_velocity": [
+            -0.0004,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.34321,
+            0.25361,
+            0.47651
+          ],
+          "orientation": [
+            -7e-05,
+            7e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            -1.13131
+          ],
+          "angular_velocity": [
+            -0.00039,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25361,
+            0.42011
+          ],
+          "orientation": [
+            -8e-05,
+            8e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            -1.53497
+          ],
+          "angular_velocity": [
+            -0.00039,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.34696
+          ],
+          "orientation": [
+            -9e-05,
+            9e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            -1.93593
+          ],
+          "angular_velocity": [
+            -0.00039,
+            0.00041,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.25717
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.0001,
+            -2.33368
+          ],
+          "angular_velocity": [
+            -0.00039,
+            0.0004,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.25,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -0.3432,
+            0.25362,
+            0.24999
+          ],
+          "orientation": [
+            -0.0001,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "video": "videos/clip_018_cam_static_front_left_phys_drop_bounce.mp4"
+}

@@ -1,0 +1,6021 @@
+{
+  "clip_id": "clip_040_cam_crane_up_tilt_down_phys_ball_hits_visible_block",
+  "camera_id": "cam_crane_up_tilt_down",
+  "physics_id": "phys_ball_hits_visible_block",
+  "scene_id": "scene_warm_panel_wall",
+  "fps": 24,
+  "frames_count": 60,
+  "duration_s": 2.45833,
+  "resolution": [
+    320,
+    240
+  ],
+  "generator": "kubric_style_pybullet_blender_review",
+  "simulator": "PyBullet",
+  "renderer": "Blender EEVEE",
+  "camera_spec": {
+    "id": "cam_crane_up_tilt_down",
+    "mode": "linear",
+    "primitives": [
+      "Pedestal_Up",
+      "Tilt_Down"
+    ],
+    "speed_class": "slow_medium",
+    "description": "Camera rises while tilting down toward the moving objects.",
+    "start_position": [
+      0.85,
+      -5.25,
+      1.42
+    ],
+    "start_target": [
+      0.12,
+      0.0,
+      0.82
+    ],
+    "linear_velocity_mps": [
+      -0.03,
+      0.02,
+      0.3355
+    ],
+    "target_velocity_mps": [
+      0.0,
+      0.0,
+      -0.11
+    ],
+    "roll_start_deg": 0.0,
+    "roll_velocity_deg_s": 0.09286,
+    "lens_mm": 35.0,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "component velocities sampled from clipped Gaussian templates; velocity is in real units per second"
+  },
+  "physics_spec": {
+    "id": "phys_ball_hits_visible_block",
+    "kind": "visible_static_obstacle",
+    "speed_class": "medium_fast",
+    "description": "Ball hits a visible static block; there are no hidden colliders.",
+    "motion_distribution": {
+      "impact_speed_mps": [
+        1.12,
+        0.2,
+        0.72,
+        1.55
+      ]
+    },
+    "bodies": [
+      {
+        "name": "red_incoming_ball",
+        "shape": "sphere",
+        "radius": 0.24,
+        "position": [
+          -1.85,
+          -0.2,
+          0.24
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          1.23213,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 1.0,
+        "restitution": 0.68,
+        "friction": 0.22,
+        "color": [
+          0.88,
+          0.2,
+          0.16,
+          1.0
+        ],
+        "role": "dynamic"
+      },
+      {
+        "name": "dark_visible_block",
+        "shape": "box",
+        "size": [
+          0.58,
+          0.58,
+          0.56
+        ],
+        "position": [
+          0.35,
+          -0.2,
+          0.28
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 0.0,
+        "restitution": 0.55,
+        "friction": 0.62,
+        "color": [
+          0.23,
+          0.25,
+          0.28,
+          1.0
+        ],
+        "role": "visible_static_obstacle"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_warm_panel_wall",
+    "ground_color": [
+      0.68,
+      0.65,
+      0.59,
+      1.0
+    ],
+    "back_wall_color": [
+      0.8,
+      0.74,
+      0.66,
+      1.0
+    ],
+    "side_wall_color": [
+      0.72,
+      0.68,
+      0.63,
+      1.0
+    ],
+    "wall_height": 2.35,
+    "wall_style": "wall_panels",
+    "floor_style": "plain",
+    "static_props": [
+      {
+        "name": "side_reference_block",
+        "shape": "box",
+        "size": [
+          0.52,
+          0.52,
+          0.3
+        ],
+        "position": [
+          -3.25,
+          1.95,
+          0.15
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "color": [
+          0.42,
+          0.39,
+          0.35,
+          1.0
+        ],
+        "collider": true
+      }
+    ]
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "duration_s": 2.45833,
+      "position": [
+        0.85,
+        -5.25,
+        1.42
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.82
+      ],
+      "roll_deg": 0.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "duration_s": 2.45833,
+      "position": [
+        0.84875,
+        -5.24917,
+        1.43398
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.81542
+      ],
+      "roll_deg": 0.00387,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8475,
+        -5.24833,
+        1.44796
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.81083
+      ],
+      "roll_deg": 0.00774,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "duration_s": 2.45833,
+      "position": [
+        0.84625,
+        -5.2475,
+        1.46194
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.80625
+      ],
+      "roll_deg": 0.01161,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "duration_s": 2.45833,
+      "position": [
+        0.845,
+        -5.24667,
+        1.47592
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.80167
+      ],
+      "roll_deg": 0.01548,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "duration_s": 2.45833,
+      "position": [
+        0.84375,
+        -5.24583,
+        1.4899
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.79708
+      ],
+      "roll_deg": 0.01935,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "duration_s": 2.45833,
+      "position": [
+        0.8425,
+        -5.245,
+        1.50387
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.7925
+      ],
+      "roll_deg": 0.02321,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "duration_s": 2.45833,
+      "position": [
+        0.84125,
+        -5.24417,
+        1.51785
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.78792
+      ],
+      "roll_deg": 0.02708,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "duration_s": 2.45833,
+      "position": [
+        0.84,
+        -5.24333,
+        1.53183
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.78333
+      ],
+      "roll_deg": 0.03095,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "duration_s": 2.45833,
+      "position": [
+        0.83875,
+        -5.2425,
+        1.54581
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.77875
+      ],
+      "roll_deg": 0.03482,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8375,
+        -5.24167,
+        1.55979
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.77417
+      ],
+      "roll_deg": 0.03869,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "duration_s": 2.45833,
+      "position": [
+        0.83625,
+        -5.24083,
+        1.57377
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.76958
+      ],
+      "roll_deg": 0.04256,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "duration_s": 2.45833,
+      "position": [
+        0.835,
+        -5.24,
+        1.58775
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.765
+      ],
+      "roll_deg": 0.04643,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "duration_s": 2.45833,
+      "position": [
+        0.83375,
+        -5.23917,
+        1.60173
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.76042
+      ],
+      "roll_deg": 0.0503,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8325,
+        -5.23833,
+        1.61571
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.75583
+      ],
+      "roll_deg": 0.05417,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "duration_s": 2.45833,
+      "position": [
+        0.83125,
+        -5.2375,
+        1.62969
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.75125
+      ],
+      "roll_deg": 0.05804,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "duration_s": 2.45833,
+      "position": [
+        0.83,
+        -5.23667,
+        1.64367
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.74667
+      ],
+      "roll_deg": 0.06191,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "duration_s": 2.45833,
+      "position": [
+        0.82875,
+        -5.23583,
+        1.65765
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.74208
+      ],
+      "roll_deg": 0.06578,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "duration_s": 2.45833,
+      "position": [
+        0.8275,
+        -5.235,
+        1.67162
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.7375
+      ],
+      "roll_deg": 0.06964,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "duration_s": 2.45833,
+      "position": [
+        0.82625,
+        -5.23417,
+        1.6856
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.73292
+      ],
+      "roll_deg": 0.07351,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "duration_s": 2.45833,
+      "position": [
+        0.825,
+        -5.23333,
+        1.69958
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.72833
+      ],
+      "roll_deg": 0.07738,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "duration_s": 2.45833,
+      "position": [
+        0.82375,
+        -5.2325,
+        1.71356
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.72375
+      ],
+      "roll_deg": 0.08125,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8225,
+        -5.23167,
+        1.72754
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.71917
+      ],
+      "roll_deg": 0.08512,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "duration_s": 2.45833,
+      "position": [
+        0.82125,
+        -5.23083,
+        1.74152
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.71458
+      ],
+      "roll_deg": 0.08899,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "duration_s": 2.45833,
+      "position": [
+        0.82,
+        -5.23,
+        1.7555
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.71
+      ],
+      "roll_deg": 0.09286,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "duration_s": 2.45833,
+      "position": [
+        0.81875,
+        -5.22917,
+        1.76948
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.70542
+      ],
+      "roll_deg": 0.09673,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8175,
+        -5.22833,
+        1.78346
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.70083
+      ],
+      "roll_deg": 0.1006,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "duration_s": 2.45833,
+      "position": [
+        0.81625,
+        -5.2275,
+        1.79744
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.69625
+      ],
+      "roll_deg": 0.10447,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "duration_s": 2.45833,
+      "position": [
+        0.815,
+        -5.22667,
+        1.81142
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.69167
+      ],
+      "roll_deg": 0.10834,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "duration_s": 2.45833,
+      "position": [
+        0.81375,
+        -5.22583,
+        1.8254
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.68708
+      ],
+      "roll_deg": 0.11221,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "duration_s": 2.45833,
+      "position": [
+        0.8125,
+        -5.225,
+        1.83937
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.6825
+      ],
+      "roll_deg": 0.11607,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "duration_s": 2.45833,
+      "position": [
+        0.81125,
+        -5.22417,
+        1.85335
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.67792
+      ],
+      "roll_deg": 0.11994,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "duration_s": 2.45833,
+      "position": [
+        0.81,
+        -5.22333,
+        1.86733
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.67333
+      ],
+      "roll_deg": 0.12381,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "duration_s": 2.45833,
+      "position": [
+        0.80875,
+        -5.2225,
+        1.88131
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.66875
+      ],
+      "roll_deg": 0.12768,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8075,
+        -5.22167,
+        1.89529
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.66417
+      ],
+      "roll_deg": 0.13155,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "duration_s": 2.45833,
+      "position": [
+        0.80625,
+        -5.22083,
+        1.90927
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.65958
+      ],
+      "roll_deg": 0.13542,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "duration_s": 2.45833,
+      "position": [
+        0.805,
+        -5.22,
+        1.92325
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.655
+      ],
+      "roll_deg": 0.13929,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "duration_s": 2.45833,
+      "position": [
+        0.80375,
+        -5.21917,
+        1.93723
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.65042
+      ],
+      "roll_deg": 0.14316,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8025,
+        -5.21833,
+        1.95121
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.64583
+      ],
+      "roll_deg": 0.14703,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "duration_s": 2.45833,
+      "position": [
+        0.80125,
+        -5.2175,
+        1.96519
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.64125
+      ],
+      "roll_deg": 0.1509,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8,
+        -5.21667,
+        1.97917
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.63667
+      ],
+      "roll_deg": 0.15477,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "duration_s": 2.45833,
+      "position": [
+        0.79875,
+        -5.21583,
+        1.99315
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.63208
+      ],
+      "roll_deg": 0.15864,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "duration_s": 2.45833,
+      "position": [
+        0.7975,
+        -5.215,
+        2.00712
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.6275
+      ],
+      "roll_deg": 0.16251,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "duration_s": 2.45833,
+      "position": [
+        0.79625,
+        -5.21417,
+        2.0211
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.62292
+      ],
+      "roll_deg": 0.16637,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "duration_s": 2.45833,
+      "position": [
+        0.795,
+        -5.21333,
+        2.03508
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.61833
+      ],
+      "roll_deg": 0.17024,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "duration_s": 2.45833,
+      "position": [
+        0.79375,
+        -5.2125,
+        2.04906
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.61375
+      ],
+      "roll_deg": 0.17411,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "duration_s": 2.45833,
+      "position": [
+        0.7925,
+        -5.21167,
+        2.06304
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.60917
+      ],
+      "roll_deg": 0.17798,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "duration_s": 2.45833,
+      "position": [
+        0.79125,
+        -5.21083,
+        2.07702
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.60458
+      ],
+      "roll_deg": 0.18185,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "duration_s": 2.45833,
+      "position": [
+        0.79,
+        -5.21,
+        2.091
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.6
+      ],
+      "roll_deg": 0.18572,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "duration_s": 2.45833,
+      "position": [
+        0.78875,
+        -5.20917,
+        2.10498
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.59542
+      ],
+      "roll_deg": 0.18959,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "duration_s": 2.45833,
+      "position": [
+        0.7875,
+        -5.20833,
+        2.11896
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.59083
+      ],
+      "roll_deg": 0.19346,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "duration_s": 2.45833,
+      "position": [
+        0.78625,
+        -5.2075,
+        2.13294
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.58625
+      ],
+      "roll_deg": 0.19733,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "duration_s": 2.45833,
+      "position": [
+        0.785,
+        -5.20667,
+        2.14692
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.58167
+      ],
+      "roll_deg": 0.2012,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "duration_s": 2.45833,
+      "position": [
+        0.78375,
+        -5.20583,
+        2.1609
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.57708
+      ],
+      "roll_deg": 0.20507,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "duration_s": 2.45833,
+      "position": [
+        0.7825,
+        -5.205,
+        2.17488
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.5725
+      ],
+      "roll_deg": 0.20893,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "duration_s": 2.45833,
+      "position": [
+        0.78125,
+        -5.20417,
+        2.18885
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.56792
+      ],
+      "roll_deg": 0.2128,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "duration_s": 2.45833,
+      "position": [
+        0.78,
+        -5.20333,
+        2.20283
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.56333
+      ],
+      "roll_deg": 0.21667,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "duration_s": 2.45833,
+      "position": [
+        0.77875,
+        -5.2025,
+        2.21681
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.55875
+      ],
+      "roll_deg": 0.22054,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "duration_s": 2.45833,
+      "position": [
+        0.7775,
+        -5.20167,
+        2.23079
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.55417
+      ],
+      "roll_deg": 0.22441,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "duration_s": 2.45833,
+      "position": [
+        0.77625,
+        -5.20083,
+        2.24477
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.54958
+      ],
+      "roll_deg": 0.22828,
+      "lens_mm": 35.0
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.85,
+            -0.2,
+            0.24
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            1.23213,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.80037,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.0043,
+            0.0,
+            0.99999
+          ],
+          "linear_velocity": [
+            1.1576,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.37547,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.75384,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.01641,
+            0.0,
+            0.99987
+          ],
+          "linear_velocity": [
+            1.08347,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.74988,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.71038,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.0363,
+            0.0,
+            0.99934
+          ],
+          "linear_velocity": [
+            1.00974,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.12275,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.66999,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.06391,
+            0.0,
+            0.99796
+          ],
+          "linear_velocity": [
+            0.93638,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.49363,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.63265,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.09914,
+            0.0,
+            0.99507
+          ],
+          "linear_velocity": [
+            0.86337,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.86208,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.59834,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.14181,
+            0.0,
+            0.98989
+          ],
+          "linear_velocity": [
+            0.7907,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            2.22766,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.56706,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.19166,
+            0.0,
+            0.98146
+          ],
+          "linear_velocity": [
+            0.71833,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            2.58995,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.5386,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.2474,
+            -0.0,
+            0.96891
+          ],
+          "linear_velocity": [
+            0.66382,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            2.7659,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.51155,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.30157,
+            -0.0,
+            0.95345
+          ],
+          "linear_velocity": [
+            0.63705,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            2.65438,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.48562,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.35261,
+            -0.0,
+            0.93577
+          ],
+          "linear_velocity": [
+            0.61044,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            2.54349,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.46079,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.40052,
+            -0.0,
+            0.91629
+          ],
+          "linear_velocity": [
+            0.58397,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            2.43322,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.43706,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.44531,
+            -0.0,
+            0.89538
+          ],
+          "linear_velocity": [
+            0.55765,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            2.32354,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.41443,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.48702,
+            -0.0,
+            0.87339
+          ],
+          "linear_velocity": [
+            0.53146,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            2.21443,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.39288,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.52573,
+            -0.0,
+            0.85065
+          ],
+          "linear_velocity": [
+            0.50541,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            2.10587,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.37242,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.5615,
+            -0.0,
+            0.82747
+          ],
+          "linear_velocity": [
+            0.47948,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            1.99784,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.35303,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.59446,
+            -0.0,
+            0.80413
+          ],
+          "linear_velocity": [
+            0.45368,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.89032,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.33472,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.6247,
+            -0.0,
+            0.78087
+          ],
+          "linear_velocity": [
+            0.42799,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.78329,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.31747,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.65234,
+            -0.0,
+            0.75792
+          ],
+          "linear_velocity": [
+            0.40241,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.67673,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.30129,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.67752,
+            -0.0,
+            0.7355
+          ],
+          "linear_velocity": [
+            0.37695,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.57061,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.28616,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.70036,
+            -0.0,
+            0.71379
+          ],
+          "linear_velocity": [
+            0.35158,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.46493,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.27209,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.72098,
+            -0.0,
+            0.69296
+          ],
+          "linear_velocity": [
+            0.32632,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.35966,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.25907,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.73951,
+            -0.0,
+            0.67315
+          ],
+          "linear_velocity": [
+            0.30115,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.25478,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.2471,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.75606,
+            0.0,
+            0.6545
+          ],
+          "linear_velocity": [
+            0.27607,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.15028,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.23617,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.77077,
+            0.0,
+            0.63711
+          ],
+          "linear_velocity": [
+            0.25107,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            1.04614,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.22628,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.78373,
+            0.0,
+            0.6211
+          ],
+          "linear_velocity": [
+            0.22616,
+            -0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.94233,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.21743,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.79506,
+            0.0,
+            0.60654
+          ],
+          "linear_velocity": [
+            0.20132,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.83885,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.20961,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.80483,
+            0.0,
+            0.5935
+          ],
+          "linear_velocity": [
+            0.17656,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.73567,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.20282,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.81315,
+            0.0,
+            0.58206
+          ],
+          "linear_velocity": [
+            0.15187,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.63279,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.19705,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            0.82008,
+            -0.0,
+            0.57225
+          ],
+          "linear_velocity": [
+            0.12724,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.53017,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.19231,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.82569,
+            -0.0,
+            0.56413
+          ],
+          "linear_velocity": [
+            0.10267,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.42781,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.1886,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83003,
+            -0.0,
+            0.55772
+          ],
+          "linear_velocity": [
+            0.07816,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.32568,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.1859,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83315,
+            -0.0,
+            0.55305
+          ],
+          "linear_velocity": [
+            0.05371,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.22378,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18422,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83508,
+            -0.0,
+            0.55013
+          ],
+          "linear_velocity": [
+            0.0293,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.12208,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18356,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83584,
+            -0.0,
+            0.54898
+          ],
+          "linear_velocity": [
+            0.00494,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.02057,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "red_incoming_ball",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            -1.18355,
+            -0.2,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            0.83585,
+            -0.0,
+            0.54896
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "dark_visible_block",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.58,
+            0.58,
+            0.56
+          ],
+          "role": "visible_static_obstacle",
+          "mass": 0.0,
+          "color": [
+            0.23,
+            0.25,
+            0.28,
+            1.0
+          ],
+          "position": [
+            0.35,
+            -0.2,
+            0.28
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "video": "videos/clip_040_cam_crane_up_tilt_down_phys_ball_hits_visible_block.mp4"
+}

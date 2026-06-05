@@ -6,7 +6,6 @@ cd "$project_root"
 
 rm -rf docs
 mkdir -p docs
-cp -a site/. docs/
-find docs/assets/runs -type d -name frames -prune -exec rm -rf {} +
+tar -C site --exclude='*/frames' -cf - . | tar -C docs -xf -
 
 echo "Synced site/ to docs/ for GitHub Pages."

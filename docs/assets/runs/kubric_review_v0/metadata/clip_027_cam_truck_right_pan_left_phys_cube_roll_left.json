@@ -1,0 +1,3857 @@
+{
+  "clip_id": "clip_027_cam_truck_right_pan_left_phys_cube_roll_left",
+  "camera_id": "cam_truck_right_pan_left",
+  "physics_id": "phys_cube_roll_left",
+  "scene_id": "scene_gray_low_wall",
+  "fps": 24,
+  "frames_count": 60,
+  "duration_s": 2.45833,
+  "resolution": [
+    320,
+    240
+  ],
+  "generator": "kubric_style_pybullet_blender_review",
+  "simulator": "PyBullet",
+  "renderer": "Blender EEVEE",
+  "camera_spec": {
+    "id": "cam_truck_right_pan_left",
+    "mode": "linear",
+    "primitives": [
+      "Truck_Right",
+      "Pan_Left"
+    ],
+    "speed_class": "medium",
+    "description": "Horizontal truck with compensating pan.",
+    "start_position": [
+      -2.15,
+      -5.2,
+      2.15
+    ],
+    "start_target": [
+      0.25,
+      -0.08,
+      0.58
+    ],
+    "linear_velocity_mps": [
+      0.50322,
+      0.04,
+      0.0
+    ],
+    "target_velocity_mps": [
+      -0.16,
+      0.02,
+      0.0
+    ],
+    "roll_start_deg": 0.8,
+    "roll_velocity_deg_s": 0.43462,
+    "lens_mm": 34.0,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "component velocities sampled from clipped Gaussian templates; velocity is in real units per second"
+  },
+  "physics_spec": {
+    "id": "phys_cube_roll_left",
+    "kind": "single_roll",
+    "speed_class": "medium",
+    "description": "Cube slides and tumbles left with angular velocity.",
+    "motion_distribution": {
+      "linear_speed_mps": [
+        0.86,
+        0.2,
+        0.45,
+        1.28
+      ]
+    },
+    "bodies": [
+      {
+        "name": "teal_rolling_cube",
+        "shape": "box",
+        "size": [
+          0.48,
+          0.48,
+          0.48
+        ],
+        "position": [
+          2.05,
+          -0.65,
+          0.24
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          -0.76983,
+          0.04,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          -3.2,
+          0.25
+        ],
+        "mass": 1.0,
+        "restitution": 0.35,
+        "friction": 0.48,
+        "color": [
+          0.1,
+          0.56,
+          0.5,
+          1.0
+        ],
+        "role": "dynamic"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_gray_low_wall",
+    "ground_color": [
+      0.64,
+      0.66,
+      0.62,
+      1.0
+    ],
+    "back_wall_color": [
+      0.77,
+      0.78,
+      0.75,
+      1.0
+    ],
+    "side_wall_color": [
+      0.69,
+      0.71,
+      0.7,
+      1.0
+    ],
+    "wall_height": 2.1,
+    "wall_style": "plain",
+    "floor_style": "subtle_marks",
+    "static_props": []
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "duration_s": 2.45833,
+      "position": [
+        -2.15,
+        -5.2,
+        2.15
+      ],
+      "look_at": [
+        0.25,
+        -0.08,
+        0.58
+      ],
+      "roll_deg": 0.8,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -2.12903,
+        -5.19833,
+        2.15
+      ],
+      "look_at": [
+        0.24333,
+        -0.07917,
+        0.58
+      ],
+      "roll_deg": 0.81811,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -2.10806,
+        -5.19667,
+        2.15
+      ],
+      "look_at": [
+        0.23667,
+        -0.07833,
+        0.58
+      ],
+      "roll_deg": 0.83622,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "duration_s": 2.45833,
+      "position": [
+        -2.0871,
+        -5.195,
+        2.15
+      ],
+      "look_at": [
+        0.23,
+        -0.0775,
+        0.58
+      ],
+      "roll_deg": 0.85433,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -2.06613,
+        -5.19333,
+        2.15
+      ],
+      "look_at": [
+        0.22333,
+        -0.07667,
+        0.58
+      ],
+      "roll_deg": 0.87244,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -2.04516,
+        -5.19167,
+        2.15
+      ],
+      "look_at": [
+        0.21667,
+        -0.07583,
+        0.58
+      ],
+      "roll_deg": 0.89055,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "duration_s": 2.45833,
+      "position": [
+        -2.02419,
+        -5.19,
+        2.15
+      ],
+      "look_at": [
+        0.21,
+        -0.075,
+        0.58
+      ],
+      "roll_deg": 0.90865,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -2.00323,
+        -5.18833,
+        2.15
+      ],
+      "look_at": [
+        0.20333,
+        -0.07417,
+        0.58
+      ],
+      "roll_deg": 0.92676,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.98226,
+        -5.18667,
+        2.15
+      ],
+      "look_at": [
+        0.19667,
+        -0.07333,
+        0.58
+      ],
+      "roll_deg": 0.94487,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "duration_s": 2.45833,
+      "position": [
+        -1.96129,
+        -5.185,
+        2.15
+      ],
+      "look_at": [
+        0.19,
+        -0.0725,
+        0.58
+      ],
+      "roll_deg": 0.96298,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.94032,
+        -5.18333,
+        2.15
+      ],
+      "look_at": [
+        0.18333,
+        -0.07167,
+        0.58
+      ],
+      "roll_deg": 0.98109,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.91936,
+        -5.18167,
+        2.15
+      ],
+      "look_at": [
+        0.17667,
+        -0.07083,
+        0.58
+      ],
+      "roll_deg": 0.9992,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "duration_s": 2.45833,
+      "position": [
+        -1.89839,
+        -5.18,
+        2.15
+      ],
+      "look_at": [
+        0.17,
+        -0.07,
+        0.58
+      ],
+      "roll_deg": 1.01731,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.87742,
+        -5.17833,
+        2.15
+      ],
+      "look_at": [
+        0.16333,
+        -0.06917,
+        0.58
+      ],
+      "roll_deg": 1.03542,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.85645,
+        -5.17667,
+        2.15
+      ],
+      "look_at": [
+        0.15667,
+        -0.06833,
+        0.58
+      ],
+      "roll_deg": 1.05353,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "duration_s": 2.45833,
+      "position": [
+        -1.83549,
+        -5.175,
+        2.15
+      ],
+      "look_at": [
+        0.15,
+        -0.0675,
+        0.58
+      ],
+      "roll_deg": 1.07164,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.81452,
+        -5.17333,
+        2.15
+      ],
+      "look_at": [
+        0.14333,
+        -0.06667,
+        0.58
+      ],
+      "roll_deg": 1.08975,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.79355,
+        -5.17167,
+        2.15
+      ],
+      "look_at": [
+        0.13667,
+        -0.06583,
+        0.58
+      ],
+      "roll_deg": 1.10786,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "duration_s": 2.45833,
+      "position": [
+        -1.77258,
+        -5.17,
+        2.15
+      ],
+      "look_at": [
+        0.13,
+        -0.065,
+        0.58
+      ],
+      "roll_deg": 1.12597,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.75162,
+        -5.16833,
+        2.15
+      ],
+      "look_at": [
+        0.12333,
+        -0.06417,
+        0.58
+      ],
+      "roll_deg": 1.14407,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.73065,
+        -5.16667,
+        2.15
+      ],
+      "look_at": [
+        0.11667,
+        -0.06333,
+        0.58
+      ],
+      "roll_deg": 1.16218,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "duration_s": 2.45833,
+      "position": [
+        -1.70968,
+        -5.165,
+        2.15
+      ],
+      "look_at": [
+        0.11,
+        -0.0625,
+        0.58
+      ],
+      "roll_deg": 1.18029,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.68871,
+        -5.16333,
+        2.15
+      ],
+      "look_at": [
+        0.10333,
+        -0.06167,
+        0.58
+      ],
+      "roll_deg": 1.1984,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.66775,
+        -5.16167,
+        2.15
+      ],
+      "look_at": [
+        0.09667,
+        -0.06083,
+        0.58
+      ],
+      "roll_deg": 1.21651,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "duration_s": 2.45833,
+      "position": [
+        -1.64678,
+        -5.16,
+        2.15
+      ],
+      "look_at": [
+        0.09,
+        -0.06,
+        0.58
+      ],
+      "roll_deg": 1.23462,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.62581,
+        -5.15833,
+        2.15
+      ],
+      "look_at": [
+        0.08333,
+        -0.05917,
+        0.58
+      ],
+      "roll_deg": 1.25273,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.60485,
+        -5.15667,
+        2.15
+      ],
+      "look_at": [
+        0.07667,
+        -0.05833,
+        0.58
+      ],
+      "roll_deg": 1.27084,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "duration_s": 2.45833,
+      "position": [
+        -1.58388,
+        -5.155,
+        2.15
+      ],
+      "look_at": [
+        0.07,
+        -0.0575,
+        0.58
+      ],
+      "roll_deg": 1.28895,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.56291,
+        -5.15333,
+        2.15
+      ],
+      "look_at": [
+        0.06333,
+        -0.05667,
+        0.58
+      ],
+      "roll_deg": 1.30706,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.54194,
+        -5.15167,
+        2.15
+      ],
+      "look_at": [
+        0.05667,
+        -0.05583,
+        0.58
+      ],
+      "roll_deg": 1.32517,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "duration_s": 2.45833,
+      "position": [
+        -1.52097,
+        -5.15,
+        2.15
+      ],
+      "look_at": [
+        0.05,
+        -0.055,
+        0.58
+      ],
+      "roll_deg": 1.34327,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.50001,
+        -5.14833,
+        2.15
+      ],
+      "look_at": [
+        0.04333,
+        -0.05417,
+        0.58
+      ],
+      "roll_deg": 1.36138,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.47904,
+        -5.14667,
+        2.15
+      ],
+      "look_at": [
+        0.03667,
+        -0.05333,
+        0.58
+      ],
+      "roll_deg": 1.37949,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "duration_s": 2.45833,
+      "position": [
+        -1.45807,
+        -5.145,
+        2.15
+      ],
+      "look_at": [
+        0.03,
+        -0.0525,
+        0.58
+      ],
+      "roll_deg": 1.3976,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.4371,
+        -5.14333,
+        2.15
+      ],
+      "look_at": [
+        0.02333,
+        -0.05167,
+        0.58
+      ],
+      "roll_deg": 1.41571,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.41614,
+        -5.14167,
+        2.15
+      ],
+      "look_at": [
+        0.01667,
+        -0.05083,
+        0.58
+      ],
+      "roll_deg": 1.43382,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "duration_s": 2.45833,
+      "position": [
+        -1.39517,
+        -5.14,
+        2.15
+      ],
+      "look_at": [
+        0.01,
+        -0.05,
+        0.58
+      ],
+      "roll_deg": 1.45193,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.3742,
+        -5.13833,
+        2.15
+      ],
+      "look_at": [
+        0.00333,
+        -0.04917,
+        0.58
+      ],
+      "roll_deg": 1.47004,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.35323,
+        -5.13667,
+        2.15
+      ],
+      "look_at": [
+        -0.00333,
+        -0.04833,
+        0.58
+      ],
+      "roll_deg": 1.48815,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "duration_s": 2.45833,
+      "position": [
+        -1.33227,
+        -5.135,
+        2.15
+      ],
+      "look_at": [
+        -0.01,
+        -0.0475,
+        0.58
+      ],
+      "roll_deg": 1.50626,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.3113,
+        -5.13333,
+        2.15
+      ],
+      "look_at": [
+        -0.01667,
+        -0.04667,
+        0.58
+      ],
+      "roll_deg": 1.52437,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.29033,
+        -5.13167,
+        2.15
+      ],
+      "look_at": [
+        -0.02333,
+        -0.04583,
+        0.58
+      ],
+      "roll_deg": 1.54248,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "duration_s": 2.45833,
+      "position": [
+        -1.26936,
+        -5.13,
+        2.15
+      ],
+      "look_at": [
+        -0.03,
+        -0.045,
+        0.58
+      ],
+      "roll_deg": 1.56059,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.2484,
+        -5.12833,
+        2.15
+      ],
+      "look_at": [
+        -0.03667,
+        -0.04417,
+        0.58
+      ],
+      "roll_deg": 1.57869,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.22743,
+        -5.12667,
+        2.15
+      ],
+      "look_at": [
+        -0.04333,
+        -0.04333,
+        0.58
+      ],
+      "roll_deg": 1.5968,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "duration_s": 2.45833,
+      "position": [
+        -1.20646,
+        -5.125,
+        2.15
+      ],
+      "look_at": [
+        -0.05,
+        -0.0425,
+        0.58
+      ],
+      "roll_deg": 1.61491,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.18549,
+        -5.12333,
+        2.15
+      ],
+      "look_at": [
+        -0.05667,
+        -0.04167,
+        0.58
+      ],
+      "roll_deg": 1.63302,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.16453,
+        -5.12167,
+        2.15
+      ],
+      "look_at": [
+        -0.06333,
+        -0.04083,
+        0.58
+      ],
+      "roll_deg": 1.65113,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "duration_s": 2.45833,
+      "position": [
+        -1.14356,
+        -5.12,
+        2.15
+      ],
+      "look_at": [
+        -0.07,
+        -0.04,
+        0.58
+      ],
+      "roll_deg": 1.66924,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -1.12259,
+        -5.11833,
+        2.15
+      ],
+      "look_at": [
+        -0.07667,
+        -0.03917,
+        0.58
+      ],
+      "roll_deg": 1.68735,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -1.10162,
+        -5.11667,
+        2.15
+      ],
+      "look_at": [
+        -0.08333,
+        -0.03833,
+        0.58
+      ],
+      "roll_deg": 1.70546,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "duration_s": 2.45833,
+      "position": [
+        -1.08066,
+        -5.115,
+        2.15
+      ],
+      "look_at": [
+        -0.09,
+        -0.0375,
+        0.58
+      ],
+      "roll_deg": 1.72357,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -1.05969,
+        -5.11333,
+        2.15
+      ],
+      "look_at": [
+        -0.09667,
+        -0.03667,
+        0.58
+      ],
+      "roll_deg": 1.74168,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -1.03872,
+        -5.11167,
+        2.15
+      ],
+      "look_at": [
+        -0.10333,
+        -0.03583,
+        0.58
+      ],
+      "roll_deg": 1.75979,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "duration_s": 2.45833,
+      "position": [
+        -1.01775,
+        -5.11,
+        2.15
+      ],
+      "look_at": [
+        -0.11,
+        -0.035,
+        0.58
+      ],
+      "roll_deg": 1.7779,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.99679,
+        -5.10833,
+        2.15
+      ],
+      "look_at": [
+        -0.11667,
+        -0.03417,
+        0.58
+      ],
+      "roll_deg": 1.796,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.97582,
+        -5.10667,
+        2.15
+      ],
+      "look_at": [
+        -0.12333,
+        -0.03333,
+        0.58
+      ],
+      "roll_deg": 1.81411,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "duration_s": 2.45833,
+      "position": [
+        -0.95485,
+        -5.105,
+        2.15
+      ],
+      "look_at": [
+        -0.13,
+        -0.0325,
+        0.58
+      ],
+      "roll_deg": 1.83222,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.93389,
+        -5.10333,
+        2.15
+      ],
+      "look_at": [
+        -0.13667,
+        -0.03167,
+        0.58
+      ],
+      "roll_deg": 1.85033,
+      "lens_mm": 34.0
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.91292,
+        -5.10167,
+        2.15
+      ],
+      "look_at": [
+        -0.14333,
+        -0.03083,
+        0.58
+      ],
+      "roll_deg": 1.86844,
+      "lens_mm": 34.0
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            2.05,
+            -0.65,
+            0.24
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.76983,
+            0.04,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -3.2,
+            0.25
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            2.02529,
+            -0.64891,
+            0.25024
+          ],
+          "orientation": [
+            -0.0,
+            -0.02181,
+            3e-05,
+            0.99976
+          ],
+          "linear_velocity": [
+            -0.55036,
+            0.02371,
+            0.17386
+          ],
+          "angular_velocity": [
+            0.00019,
+            -0.57185,
+            -6e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            2.00388,
+            -0.64799,
+            0.25209
+          ],
+          "orientation": [
+            0.0,
+            -0.02589,
+            3e-05,
+            0.99966
+          ],
+          "linear_velocity": [
+            -0.47429,
+            0.02009,
+            -0.0352
+          ],
+          "angular_velocity": [
+            2e-05,
+            0.155,
+            -5e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.98625,
+            -0.64723,
+            0.24691
+          ],
+          "orientation": [
+            0.0,
+            -0.01463,
+            3e-05,
+            0.99989
+          ],
+          "linear_velocity": [
+            -0.38169,
+            0.01693,
+            -0.19902
+          ],
+          "angular_velocity": [
+            -5e-05,
+            0.85651,
+            -3e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97432,
+            -0.64672,
+            0.23983
+          ],
+          "orientation": [
+            -0.0,
+            0.00033,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.13832,
+            0.00377,
+            0.04181
+          ],
+          "angular_velocity": [
+            1e-05,
+            -0.17411,
+            -2e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97146,
+            -0.64664,
+            0.23995
+          ],
+          "orientation": [
+            0.0,
+            7e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.00088,
+            -0.00012,
+            0.0007
+          ],
+          "angular_velocity": [
+            0.00038,
+            -0.00326,
+            3e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97144,
+            -0.64664,
+            0.23997
+          ],
+          "orientation": [
+            1e-05,
+            3e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.00035,
+            -6e-05,
+            0.00029
+          ],
+          "angular_velocity": [
+            0.00026,
+            -0.00144,
+            1e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97143,
+            -0.64665,
+            0.23998
+          ],
+          "orientation": [
+            1e-05,
+            1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.00017,
+            -3e-05,
+            0.00013
+          ],
+          "angular_velocity": [
+            0.00013,
+            -0.00069,
+            1e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23998
+          ],
+          "orientation": [
+            1e-05,
+            -0.0,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -9e-05,
+            0.0002,
+            9e-05
+          ],
+          "angular_velocity": [
+            -0.00081,
+            -0.00036,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            1e-05,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -6e-05,
+            -0.0,
+            3e-05
+          ],
+          "angular_velocity": [
+            5e-05,
+            -0.00026,
+            -2e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -1e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -1e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -4e-05,
+            -2e-05,
+            4e-05
+          ],
+          "angular_velocity": [
+            0.00011,
+            -0.00016,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -1e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -1e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -4e-05,
+            -2e-05,
+            1e-05
+          ],
+          "angular_velocity": [
+            0.00011,
+            -0.00015,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -1e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            -0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            0.0001,
+            0.00021,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.00085,
+            0.00042,
+            -1e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -1e-05,
+            -1e-05,
+            -2e-05
+          ],
+          "angular_velocity": [
+            3e-05,
+            -5e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -1e-05,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "teal_rolling_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.48,
+            0.48,
+            0.48
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "position": [
+            1.97142,
+            -0.64664,
+            0.23999
+          ],
+          "orientation": [
+            0.0,
+            -1e-05,
+            3e-05,
+            1.0
+          ],
+          "linear_velocity": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "video": "videos/clip_027_cam_truck_right_pan_left_phys_cube_roll_left.mp4"
+}
