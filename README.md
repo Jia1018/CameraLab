@@ -78,22 +78,22 @@ cd /workspace/writeable/code/camera_motion_disentangle
 
 /workspace/writeable/environments/kubric_review/bin/python \
   scripts/generate_kubric_review_bank.py \
-  --run-id kubric_review_v0 \
+  --run-id kubric_review_v1 \
   --camera-limit 6 \
-  --physics-limit 7 \
-  --pairs 72 \
+  --physics-limit 9 \
+  --pairs 90 \
   --overwrite
 
 /workspace/writeable/environments/kubric_review/bin/python \
   scripts/make_run_previews.py \
-  --run-dir site/assets/runs/kubric_review_v0 \
+  --run-dir site/assets/runs/kubric_review_v1 \
   --samples 8 \
   --thumb-width 180
 
 bash scripts/sync_site_to_docs.sh
 ```
 
-The generated run is small for review: `site/assets/runs/kubric_review_v0` and `docs/assets/runs/kubric_review_v0` are about 7.5M each after previews. The `docs` sync excludes raw `frames/` directories.
+The generated run is small for review: `site/assets/runs/kubric_review_v1` and `docs/assets/runs/kubric_review_v1` are about 12M each after previews. The `docs` sync excludes raw `frames/` directories.
 
 ## Generate A Corrected Blender Bank
 
@@ -143,4 +143,4 @@ The current review-bank generator addresses the earlier failure modes:
 - camera specs include lateral/height/target offsets, nonzero roll, and top-down starts, so views are not always centered and level.
 - camera trajectories are sampled from per-axis Gaussian motion profiles; same-camera pairs still share the exact sampled `camera_id` trajectory.
 - dynamic roll and angle changes are mostly slow, small-amplitude camera motions for human review comfort; abrupt large rotations are rare hard cases, not the default.
-- `kubric_review_v0` uses PyBullet rigid-body trajectories for contacts and collisions; the older Blender banks remain useful only as visual/contract previews.
+- `kubric_review_v1` uses PyBullet rigid-body trajectories for contacts and collisions; the older Blender banks remain useful only as visual/contract previews.

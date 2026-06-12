@@ -165,14 +165,14 @@ def cube(
 
 def physics_specs(seed: int) -> list[dict[str, Any]]:
     rng = random.Random(seed + 101)
-    toward_speed = trunc_gauss(rng, 0.92, 0.20, 0.48, 1.35)
-    away_speed = trunc_gauss(rng, 0.78, 0.18, 0.40, 1.15)
-    drop_x = trunc_gauss(rng, 0.38, 0.16, -0.05, 0.75)
-    roll_speed = trunc_gauss(rng, 0.86, 0.20, 0.45, 1.28)
-    cross_speed = trunc_gauss(rng, 1.02, 0.20, 0.68, 1.45)
-    block_speed = trunc_gauss(rng, 1.12, 0.20, 0.72, 1.55)
-    scatter_speed = trunc_gauss(rng, 0.88, 0.25, 0.45, 1.45)
-    cube_sphere_speed = trunc_gauss(rng, 0.95, 0.18, 0.60, 1.35)
+    toward_speed = trunc_gauss(rng, 1.85, 0.28, 1.25, 2.45)
+    away_speed = trunc_gauss(rng, 1.65, 0.25, 1.05, 2.25)
+    drop_x = trunc_gauss(rng, 0.65, 0.18, 0.25, 1.05)
+    roll_speed = trunc_gauss(rng, 1.75, 0.30, 1.10, 2.45)
+    cross_speed = trunc_gauss(rng, 2.05, 0.28, 1.45, 2.75)
+    block_speed = trunc_gauss(rng, 2.25, 0.25, 1.65, 2.85)
+    scatter_speed = trunc_gauss(rng, 1.75, 0.30, 1.10, 2.45)
+    cube_sphere_speed = trunc_gauss(rng, 1.90, 0.25, 1.30, 2.55)
 
     return [
         {
@@ -188,7 +188,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "single_translation",
             "speed_class": "medium",
             "description": "Sphere moves toward the usual front camera position.",
-            "motion_distribution": {"linear_speed_mps": [0.92, 0.20, 0.48, 1.35]},
+            "motion_distribution": {"linear_speed_mps": [1.85, 0.28, 1.25, 2.45]},
             "bodies": [
                 sphere(
                     "red_toward_camera",
@@ -196,7 +196,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     (0.05, 1.45, 0.27),
                     "red",
                     velocity=(0.0, -toward_speed, 0.0),
-                    friction=0.25,
+                    friction=0.04,
                 )
             ],
         },
@@ -205,7 +205,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "single_translation",
             "speed_class": "medium",
             "description": "Sphere moves away from the usual front camera position.",
-            "motion_distribution": {"linear_speed_mps": [0.78, 0.18, 0.40, 1.15]},
+            "motion_distribution": {"linear_speed_mps": [1.65, 0.25, 1.05, 2.25]},
             "bodies": [
                 sphere(
                     "blue_away_camera",
@@ -213,7 +213,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     (-0.15, -1.35, 0.27),
                     "blue",
                     velocity=(0.05, away_speed, 0.0),
-                    friction=0.28,
+                    friction=0.04,
                 )
             ],
         },
@@ -222,16 +222,16 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "gravity_bounce",
             "speed_class": "mixed",
             "description": "Sphere falls and bounces under gravity with slight lateral velocity.",
-            "motion_distribution": {"x_velocity_mps": [0.38, 0.16, -0.05, 0.75]},
+            "motion_distribution": {"x_velocity_mps": [0.65, 0.18, 0.25, 1.05], "initial_downward_velocity_mps": -0.75},
             "bodies": [
                 sphere(
                     "gold_drop_bounce",
                     0.25,
                     (-0.45, 0.15, 1.95),
                     "gold",
-                    velocity=(drop_x, 0.18, 0.0),
-                    restitution=0.78,
-                    friction=0.22,
+                    velocity=(drop_x, 0.18, -0.75),
+                    restitution=0.92,
+                    friction=0.03,
                 )
             ],
         },
@@ -240,7 +240,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "single_roll",
             "speed_class": "medium",
             "description": "Cube slides and tumbles left with angular velocity.",
-            "motion_distribution": {"linear_speed_mps": [0.86, 0.20, 0.45, 1.28]},
+            "motion_distribution": {"linear_speed_mps": [1.75, 0.30, 1.10, 2.45]},
             "bodies": [
                 cube(
                     "teal_rolling_cube",
@@ -249,8 +249,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     "teal",
                     velocity=(-roll_speed, 0.04, 0.0),
                     angular_velocity=(0.0, -3.2, 0.25),
-                    restitution=0.35,
-                    friction=0.48,
+                    restitution=0.42,
+                    friction=0.06,
                 )
             ],
         },
@@ -259,25 +259,25 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "two_body_collision",
             "speed_class": "medium",
             "description": "Two spheres collide near the center and scatter visibly.",
-            "motion_distribution": {"linear_speed_mps": [1.02, 0.20, 0.68, 1.45]},
+            "motion_distribution": {"linear_speed_mps": [2.05, 0.28, 1.45, 2.75]},
             "bodies": [
                 sphere(
                     "red_cross_left",
                     0.25,
-                    (-1.55, -0.46, 0.25),
+                    (-1.35, -0.34, 0.25),
                     "red",
-                    velocity=(cross_speed, 0.26, 0.0),
-                    restitution=0.72,
-                    friction=0.20,
+                    velocity=(cross_speed, 0.52, 0.0),
+                    restitution=0.86,
+                    friction=0.03,
                 ),
                 sphere(
                     "blue_cross_right",
                     0.25,
-                    (1.55, 0.38, 0.25),
+                    (1.35, 0.34, 0.25),
                     "blue",
-                    velocity=(-cross_speed, -0.23, 0.0),
-                    restitution=0.72,
-                    friction=0.20,
+                    velocity=(-cross_speed, -0.52, 0.0),
+                    restitution=0.86,
+                    friction=0.03,
                 ),
             ],
         },
@@ -286,16 +286,16 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "visible_static_obstacle",
             "speed_class": "medium_fast",
             "description": "Ball hits a visible static block; there are no hidden colliders.",
-            "motion_distribution": {"impact_speed_mps": [1.12, 0.20, 0.72, 1.55]},
+            "motion_distribution": {"impact_speed_mps": [2.25, 0.25, 1.65, 2.85]},
             "bodies": [
                 sphere(
                     "red_incoming_ball",
                     0.24,
-                    (-1.85, -0.2, 0.24),
+                    (-1.65, -0.2, 0.24),
                     "red",
                     velocity=(block_speed, 0.0, 0.0),
-                    restitution=0.68,
-                    friction=0.22,
+                    restitution=0.82,
+                    friction=0.03,
                 ),
                 cube(
                     "dark_visible_block",
@@ -303,8 +303,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     (0.35, -0.2, 0.28),
                     "dark",
                     mass=0.0,
-                    restitution=0.55,
-                    friction=0.62,
+                    restitution=0.72,
+                    friction=0.35,
                 ),
             ],
         },
@@ -313,35 +313,35 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "multi_body_collision",
             "speed_class": "mixed",
             "description": "Three visible bodies interact with different masses and shapes.",
-            "motion_distribution": {"linear_speed_mps": [0.88, 0.25, 0.45, 1.45]},
+            "motion_distribution": {"linear_speed_mps": [1.75, 0.30, 1.10, 2.45]},
             "bodies": [
                 sphere(
                     "gold_left_sphere",
                     0.22,
-                    (-1.35, -0.95, 0.22),
+                    (-1.18, -0.62, 0.22),
                     "gold",
-                    velocity=(scatter_speed, 0.48, 0.0),
-                    restitution=0.66,
-                    friction=0.24,
+                    velocity=(scatter_speed, 0.72, 0.0),
+                    restitution=0.78,
+                    friction=0.04,
                 ),
                 cube(
                     "teal_middle_cube",
                     (0.42, 0.42, 0.42),
-                    (0.05, -0.05, 0.21),
+                    (0.06, -0.02, 0.21),
                     "teal",
-                    velocity=(0.06, 0.0, 0.0),
+                    velocity=(0.18, 0.02, 0.0),
                     angular_velocity=(0.0, 1.4, 0.6),
-                    restitution=0.44,
-                    friction=0.55,
+                    restitution=0.56,
+                    friction=0.08,
                 ),
                 sphere(
                     "violet_right_sphere",
                     0.22,
-                    (1.35, 0.70, 0.22),
+                    (1.18, 0.56, 0.22),
                     "violet",
-                    velocity=(-0.72 * scatter_speed, -0.32, 0.0),
-                    restitution=0.62,
-                    friction=0.22,
+                    velocity=(-0.90 * scatter_speed, -0.54, 0.0),
+                    restitution=0.76,
+                    friction=0.04,
                 ),
             ],
         },
@@ -350,26 +350,26 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "kind": "mixed_shape_collision",
             "speed_class": "medium",
             "description": "A moving cube and a moving sphere collide without overlap starts.",
-            "motion_distribution": {"linear_speed_mps": [0.95, 0.18, 0.60, 1.35]},
+            "motion_distribution": {"linear_speed_mps": [1.90, 0.25, 1.30, 2.55]},
             "bodies": [
                 cube(
                     "blue_left_cube",
                     (0.42, 0.42, 0.42),
-                    (-1.40, 0.55, 0.21),
+                    (-1.22, 0.36, 0.21),
                     "blue",
-                    velocity=(cube_sphere_speed, -0.22, 0.0),
+                    velocity=(cube_sphere_speed, -0.42, 0.0),
                     angular_velocity=(0.0, -2.4, 0.4),
-                    restitution=0.48,
-                    friction=0.46,
+                    restitution=0.62,
+                    friction=0.07,
                 ),
                 sphere(
                     "red_right_sphere",
                     0.24,
-                    (1.35, -0.18, 0.24),
+                    (1.22, -0.30, 0.24),
                     "red",
-                    velocity=(-0.88 * cube_sphere_speed, 0.25, 0.0),
-                    restitution=0.64,
-                    friction=0.24,
+                    velocity=(-0.95 * cube_sphere_speed, 0.42, 0.0),
+                    restitution=0.78,
+                    friction=0.04,
                 ),
             ],
         },
@@ -594,9 +594,11 @@ def add_collision_body(p: Any, body: dict[str, Any], client: int) -> int:
         body_id,
         -1,
         lateralFriction=body.get("friction", 0.5),
-        spinningFriction=0.02,
-        rollingFriction=0.02,
+        spinningFriction=0.0,
+        rollingFriction=0.0,
         restitution=body.get("restitution", 0.45),
+        linearDamping=0.0,
+        angularDamping=0.0,
         physicsClientId=client,
     )
     if body.get("mass", 0.0) > 0:
@@ -633,17 +635,17 @@ def static_box(
 def world_collision_bodies(world: dict[str, Any]) -> list[dict[str, Any]]:
     height = world["wall_height"]
     bodies = [
-        static_box("ground_collider", (9.0, 9.0, 0.08), (0.0, 0.0, -0.04), restitution=0.55, friction=0.78),
-        static_box("back_wall_collider", (9.0, 0.10, height), (0.0, 3.35, height / 2.0), restitution=0.58, friction=0.72),
-        static_box("left_wall_collider", (0.10, 6.9, height), (-4.35, 0.0, height / 2.0), restitution=0.58, friction=0.72),
-        static_box("right_wall_collider", (0.10, 6.9, height), (4.35, 0.0, height / 2.0), restitution=0.58, friction=0.72),
+        static_box("ground_collider", (9.0, 9.0, 0.08), (0.0, 0.0, -0.04), restitution=0.68, friction=0.12),
+        static_box("back_wall_collider", (9.0, 0.10, height), (0.0, 3.35, height / 2.0), restitution=0.62, friction=0.25),
+        static_box("left_wall_collider", (0.10, 6.9, height), (-4.35, 0.0, height / 2.0), restitution=0.62, friction=0.25),
+        static_box("right_wall_collider", (0.10, 6.9, height), (4.35, 0.0, height / 2.0), restitution=0.62, friction=0.25),
     ]
     for prop in world.get("static_props", []):
         if prop.get("collider"):
             item = dict(prop)
             item["mass"] = 0.0
             item["restitution"] = 0.45
-            item["friction"] = 0.70
+            item["friction"] = 0.25
             bodies.append(item)
     return bodies
 
@@ -653,6 +655,7 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
 
     client = p.connect(p.DIRECT)
     body_ids: list[tuple[int, dict[str, Any]]] = []
+    named_body_ids: dict[int, dict[str, Any]] = {}
     try:
         p.resetSimulation(physicsClientId=client)
         p.setGravity(0.0, 0.0, -9.81, physicsClientId=client)
@@ -660,16 +663,45 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
         p.setPhysicsEngineParameter(numSolverIterations=80, physicsClientId=client)
 
         for body in world_collision_bodies(world):
-            add_collision_body(p, body, client)
+            body_id = add_collision_body(p, body, client)
+            named_body_ids[body_id] = body
         for body in physics["bodies"]:
-            body_ids.append((add_collision_body(p, body, client), body))
+            body_id = add_collision_body(p, body, client)
+            named_body_ids[body_id] = body
+            body_ids.append((body_id, body))
 
         records = []
         steps_per_frame = PHYSICS_HZ // FPS
+
+        def add_contact_samples(contact_map: dict[tuple[str, str], dict[str, Any]]) -> None:
+            for point in p.getContactPoints(physicsClientId=client):
+                body_a = named_body_ids.get(point[1])
+                body_b = named_body_ids.get(point[2])
+                if body_a is None or body_b is None:
+                    continue
+                key = tuple(sorted((body_a["name"], body_b["name"])))
+                item = contact_map.setdefault(
+                    key,
+                    {
+                        "body_a": key[0],
+                        "body_b": key[1],
+                        "samples": 0,
+                        "min_contact_distance": 0.0,
+                        "max_normal_force": 0.0,
+                    },
+                )
+                item["samples"] += 1
+                item["min_contact_distance"] = round(min(item["min_contact_distance"], float(point[8])), 5)
+                item["max_normal_force"] = round(max(item["max_normal_force"], float(point[9])), 5)
+
         for frame in range(frames):
+            contacts_since_last_frame: dict[tuple[str, str], dict[str, Any]] = {}
             if frame > 0:
                 for _ in range(steps_per_frame):
                     p.stepSimulation(physicsClientId=client)
+                    add_contact_samples(contacts_since_last_frame)
+            else:
+                add_contact_samples(contacts_since_last_frame)
             object_records = []
             for body_id, body in body_ids:
                 position, orientation = p.getBasePositionAndOrientation(body_id, physicsClientId=client)
@@ -689,7 +721,16 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
                         "angular_velocity": vec(angular_velocity),
                     }
                 )
-            records.append({"frame": frame, "time_s": round(frame / FPS, 5), "objects": object_records})
+            records.append(
+                {
+                    "frame": frame,
+                    "time_s": round(frame / FPS, 5),
+                    "objects": object_records,
+                    "contacts_since_previous_frame": sorted(
+                        contacts_since_last_frame.values(), key=lambda item: (item["body_a"], item["body_b"])
+                    ),
+                }
+            )
         return records
     finally:
         p.disconnect(client)
@@ -700,6 +741,8 @@ def clip_id_for(index: int, camera_id: str, physics_id: str) -> str:
 
 
 def make_pairs(clips: list[dict[str, Any]], target_pairs: int, seed: int) -> list[dict[str, Any]]:
+    if len(clips) < 2 or target_pairs <= 0:
+        return []
     rng = random.Random(seed + 307)
     by_camera: dict[str, list[dict[str, Any]]] = {}
     by_physics_scene: dict[tuple[str, str], list[dict[str, Any]]] = {}
@@ -960,7 +1003,7 @@ def blender_add_cube(bpy: Any, name: str, position: list[float], size: list[floa
 
 
 def blender_add_sphere(bpy: Any, name: str, position: list[float], radius: float, color: list[float]) -> Any:
-    bpy.ops.mesh.primitive_uv_sphere_add(segments=32, ring_count=16, radius=radius, location=position)
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=24, ring_count=12, radius=radius, location=position)
     obj = bpy.context.object
     obj.name = name
     obj.data.materials.append(make_blender_material(bpy, f"mat_{name}", color))
@@ -993,8 +1036,8 @@ def blender_reset_scene(bpy: Any, frames: int) -> None:
     scene.render.resolution_x = WIDTH
     scene.render.resolution_y = HEIGHT
     scene.render.engine = "BLENDER_EEVEE"
-    scene.eevee.taa_render_samples = 4
-    scene.eevee.use_gtao = True
+    scene.eevee.taa_render_samples = 1
+    scene.eevee.use_gtao = False
     scene.eevee.gtao_distance = 3
     scene.eevee.gtao_factor = 1.4
     scene.world.color = (0.76, 0.80, 0.84)
@@ -1118,8 +1161,8 @@ def generate_main() -> None:
     parser.add_argument("--run-root", type=Path, default=RUN_ROOT)
     parser.add_argument("--blender-bin", type=Path, default=DEFAULT_BLENDER)
     parser.add_argument("--camera-limit", type=int, default=6)
-    parser.add_argument("--physics-limit", type=int, default=7)
-    parser.add_argument("--pairs", type=int, default=72)
+    parser.add_argument("--physics-limit", type=int, default=9)
+    parser.add_argument("--pairs", type=int, default=90)
     parser.add_argument("--seed", type=int, default=SEED)
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--no-render", action="store_true")

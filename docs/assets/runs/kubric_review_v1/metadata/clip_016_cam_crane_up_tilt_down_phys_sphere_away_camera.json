@@ -1,0 +1,4173 @@
+{
+  "clip_id": "clip_016_cam_crane_up_tilt_down_phys_sphere_away_camera",
+  "camera_id": "cam_crane_up_tilt_down",
+  "physics_id": "phys_sphere_away_camera",
+  "scene_id": "scene_warm_panel_wall",
+  "fps": 24,
+  "frames_count": 60,
+  "duration_s": 2.45833,
+  "resolution": [
+    320,
+    240
+  ],
+  "generator": "kubric_style_pybullet_blender_review",
+  "simulator": "PyBullet",
+  "renderer": "Blender EEVEE",
+  "camera_spec": {
+    "id": "cam_crane_up_tilt_down",
+    "mode": "linear",
+    "primitives": [
+      "Pedestal_Up",
+      "Tilt_Down"
+    ],
+    "speed_class": "slow_medium",
+    "description": "Camera rises while tilting down toward the moving objects.",
+    "start_position": [
+      0.85,
+      -5.25,
+      1.42
+    ],
+    "start_target": [
+      0.12,
+      0.0,
+      0.82
+    ],
+    "linear_velocity_mps": [
+      -0.03,
+      0.02,
+      0.3355
+    ],
+    "target_velocity_mps": [
+      0.0,
+      0.0,
+      -0.11
+    ],
+    "roll_start_deg": 0.0,
+    "roll_velocity_deg_s": 0.09286,
+    "lens_mm": 35.0,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "component velocities sampled from clipped Gaussian templates; velocity is in real units per second"
+  },
+  "physics_spec": {
+    "id": "phys_sphere_away_camera",
+    "kind": "single_translation",
+    "speed_class": "medium",
+    "description": "Sphere moves away from the usual front camera position.",
+    "motion_distribution": {
+      "linear_speed_mps": [
+        1.65,
+        0.25,
+        1.05,
+        2.25
+      ]
+    },
+    "bodies": [
+      {
+        "name": "blue_away_camera",
+        "shape": "sphere",
+        "radius": 0.27,
+        "position": [
+          -0.15,
+          -1.35,
+          0.27
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          0.05,
+          1.53902,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 1.0,
+        "restitution": 0.55,
+        "friction": 0.04,
+        "color": [
+          0.16,
+          0.34,
+          0.78,
+          1.0
+        ],
+        "role": "dynamic"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_warm_panel_wall",
+    "ground_color": [
+      0.68,
+      0.65,
+      0.59,
+      1.0
+    ],
+    "back_wall_color": [
+      0.8,
+      0.74,
+      0.66,
+      1.0
+    ],
+    "side_wall_color": [
+      0.72,
+      0.68,
+      0.63,
+      1.0
+    ],
+    "wall_height": 2.35,
+    "wall_style": "wall_panels",
+    "floor_style": "plain",
+    "static_props": [
+      {
+        "name": "side_reference_block",
+        "shape": "box",
+        "size": [
+          0.52,
+          0.52,
+          0.3
+        ],
+        "position": [
+          -3.25,
+          1.95,
+          0.15
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "color": [
+          0.42,
+          0.39,
+          0.35,
+          1.0
+        ],
+        "collider": true
+      }
+    ]
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "duration_s": 2.45833,
+      "position": [
+        0.85,
+        -5.25,
+        1.42
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.82
+      ],
+      "roll_deg": 0.0,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "duration_s": 2.45833,
+      "position": [
+        0.84875,
+        -5.24917,
+        1.43398
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.81542
+      ],
+      "roll_deg": 0.00387,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8475,
+        -5.24833,
+        1.44796
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.81083
+      ],
+      "roll_deg": 0.00774,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "duration_s": 2.45833,
+      "position": [
+        0.84625,
+        -5.2475,
+        1.46194
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.80625
+      ],
+      "roll_deg": 0.01161,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "duration_s": 2.45833,
+      "position": [
+        0.845,
+        -5.24667,
+        1.47592
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.80167
+      ],
+      "roll_deg": 0.01548,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "duration_s": 2.45833,
+      "position": [
+        0.84375,
+        -5.24583,
+        1.4899
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.79708
+      ],
+      "roll_deg": 0.01935,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "duration_s": 2.45833,
+      "position": [
+        0.8425,
+        -5.245,
+        1.50387
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.7925
+      ],
+      "roll_deg": 0.02321,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "duration_s": 2.45833,
+      "position": [
+        0.84125,
+        -5.24417,
+        1.51785
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.78792
+      ],
+      "roll_deg": 0.02708,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "duration_s": 2.45833,
+      "position": [
+        0.84,
+        -5.24333,
+        1.53183
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.78333
+      ],
+      "roll_deg": 0.03095,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "duration_s": 2.45833,
+      "position": [
+        0.83875,
+        -5.2425,
+        1.54581
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.77875
+      ],
+      "roll_deg": 0.03482,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8375,
+        -5.24167,
+        1.55979
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.77417
+      ],
+      "roll_deg": 0.03869,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "duration_s": 2.45833,
+      "position": [
+        0.83625,
+        -5.24083,
+        1.57377
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.76958
+      ],
+      "roll_deg": 0.04256,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "duration_s": 2.45833,
+      "position": [
+        0.835,
+        -5.24,
+        1.58775
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.765
+      ],
+      "roll_deg": 0.04643,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "duration_s": 2.45833,
+      "position": [
+        0.83375,
+        -5.23917,
+        1.60173
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.76042
+      ],
+      "roll_deg": 0.0503,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8325,
+        -5.23833,
+        1.61571
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.75583
+      ],
+      "roll_deg": 0.05417,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "duration_s": 2.45833,
+      "position": [
+        0.83125,
+        -5.2375,
+        1.62969
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.75125
+      ],
+      "roll_deg": 0.05804,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "duration_s": 2.45833,
+      "position": [
+        0.83,
+        -5.23667,
+        1.64367
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.74667
+      ],
+      "roll_deg": 0.06191,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "duration_s": 2.45833,
+      "position": [
+        0.82875,
+        -5.23583,
+        1.65765
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.74208
+      ],
+      "roll_deg": 0.06578,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "duration_s": 2.45833,
+      "position": [
+        0.8275,
+        -5.235,
+        1.67162
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.7375
+      ],
+      "roll_deg": 0.06964,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "duration_s": 2.45833,
+      "position": [
+        0.82625,
+        -5.23417,
+        1.6856
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.73292
+      ],
+      "roll_deg": 0.07351,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "duration_s": 2.45833,
+      "position": [
+        0.825,
+        -5.23333,
+        1.69958
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.72833
+      ],
+      "roll_deg": 0.07738,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "duration_s": 2.45833,
+      "position": [
+        0.82375,
+        -5.2325,
+        1.71356
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.72375
+      ],
+      "roll_deg": 0.08125,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8225,
+        -5.23167,
+        1.72754
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.71917
+      ],
+      "roll_deg": 0.08512,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "duration_s": 2.45833,
+      "position": [
+        0.82125,
+        -5.23083,
+        1.74152
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.71458
+      ],
+      "roll_deg": 0.08899,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "duration_s": 2.45833,
+      "position": [
+        0.82,
+        -5.23,
+        1.7555
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.71
+      ],
+      "roll_deg": 0.09286,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "duration_s": 2.45833,
+      "position": [
+        0.81875,
+        -5.22917,
+        1.76948
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.70542
+      ],
+      "roll_deg": 0.09673,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8175,
+        -5.22833,
+        1.78346
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.70083
+      ],
+      "roll_deg": 0.1006,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "duration_s": 2.45833,
+      "position": [
+        0.81625,
+        -5.2275,
+        1.79744
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.69625
+      ],
+      "roll_deg": 0.10447,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "duration_s": 2.45833,
+      "position": [
+        0.815,
+        -5.22667,
+        1.81142
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.69167
+      ],
+      "roll_deg": 0.10834,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "duration_s": 2.45833,
+      "position": [
+        0.81375,
+        -5.22583,
+        1.8254
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.68708
+      ],
+      "roll_deg": 0.11221,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "duration_s": 2.45833,
+      "position": [
+        0.8125,
+        -5.225,
+        1.83937
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.6825
+      ],
+      "roll_deg": 0.11607,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "duration_s": 2.45833,
+      "position": [
+        0.81125,
+        -5.22417,
+        1.85335
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.67792
+      ],
+      "roll_deg": 0.11994,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "duration_s": 2.45833,
+      "position": [
+        0.81,
+        -5.22333,
+        1.86733
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.67333
+      ],
+      "roll_deg": 0.12381,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "duration_s": 2.45833,
+      "position": [
+        0.80875,
+        -5.2225,
+        1.88131
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.66875
+      ],
+      "roll_deg": 0.12768,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8075,
+        -5.22167,
+        1.89529
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.66417
+      ],
+      "roll_deg": 0.13155,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "duration_s": 2.45833,
+      "position": [
+        0.80625,
+        -5.22083,
+        1.90927
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.65958
+      ],
+      "roll_deg": 0.13542,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "duration_s": 2.45833,
+      "position": [
+        0.805,
+        -5.22,
+        1.92325
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.655
+      ],
+      "roll_deg": 0.13929,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "duration_s": 2.45833,
+      "position": [
+        0.80375,
+        -5.21917,
+        1.93723
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.65042
+      ],
+      "roll_deg": 0.14316,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "duration_s": 2.45833,
+      "position": [
+        0.8025,
+        -5.21833,
+        1.95121
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.64583
+      ],
+      "roll_deg": 0.14703,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "duration_s": 2.45833,
+      "position": [
+        0.80125,
+        -5.2175,
+        1.96519
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.64125
+      ],
+      "roll_deg": 0.1509,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "duration_s": 2.45833,
+      "position": [
+        0.8,
+        -5.21667,
+        1.97917
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.63667
+      ],
+      "roll_deg": 0.15477,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "duration_s": 2.45833,
+      "position": [
+        0.79875,
+        -5.21583,
+        1.99315
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.63208
+      ],
+      "roll_deg": 0.15864,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "duration_s": 2.45833,
+      "position": [
+        0.7975,
+        -5.215,
+        2.00712
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.6275
+      ],
+      "roll_deg": 0.16251,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "duration_s": 2.45833,
+      "position": [
+        0.79625,
+        -5.21417,
+        2.0211
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.62292
+      ],
+      "roll_deg": 0.16637,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "duration_s": 2.45833,
+      "position": [
+        0.795,
+        -5.21333,
+        2.03508
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.61833
+      ],
+      "roll_deg": 0.17024,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "duration_s": 2.45833,
+      "position": [
+        0.79375,
+        -5.2125,
+        2.04906
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.61375
+      ],
+      "roll_deg": 0.17411,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "duration_s": 2.45833,
+      "position": [
+        0.7925,
+        -5.21167,
+        2.06304
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.60917
+      ],
+      "roll_deg": 0.17798,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "duration_s": 2.45833,
+      "position": [
+        0.79125,
+        -5.21083,
+        2.07702
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.60458
+      ],
+      "roll_deg": 0.18185,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "duration_s": 2.45833,
+      "position": [
+        0.79,
+        -5.21,
+        2.091
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.6
+      ],
+      "roll_deg": 0.18572,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "duration_s": 2.45833,
+      "position": [
+        0.78875,
+        -5.20917,
+        2.10498
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.59542
+      ],
+      "roll_deg": 0.18959,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "duration_s": 2.45833,
+      "position": [
+        0.7875,
+        -5.20833,
+        2.11896
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.59083
+      ],
+      "roll_deg": 0.19346,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "duration_s": 2.45833,
+      "position": [
+        0.78625,
+        -5.2075,
+        2.13294
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.58625
+      ],
+      "roll_deg": 0.19733,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "duration_s": 2.45833,
+      "position": [
+        0.785,
+        -5.20667,
+        2.14692
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.58167
+      ],
+      "roll_deg": 0.2012,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "duration_s": 2.45833,
+      "position": [
+        0.78375,
+        -5.20583,
+        2.1609
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.57708
+      ],
+      "roll_deg": 0.20507,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "duration_s": 2.45833,
+      "position": [
+        0.7825,
+        -5.205,
+        2.17488
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.5725
+      ],
+      "roll_deg": 0.20893,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "duration_s": 2.45833,
+      "position": [
+        0.78125,
+        -5.20417,
+        2.18885
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.56792
+      ],
+      "roll_deg": 0.2128,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "duration_s": 2.45833,
+      "position": [
+        0.78,
+        -5.20333,
+        2.20283
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.56333
+      ],
+      "roll_deg": 0.21667,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "duration_s": 2.45833,
+      "position": [
+        0.77875,
+        -5.2025,
+        2.21681
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.55875
+      ],
+      "roll_deg": 0.22054,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "duration_s": 2.45833,
+      "position": [
+        0.7775,
+        -5.20167,
+        2.23079
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.55417
+      ],
+      "roll_deg": 0.22441,
+      "lens_mm": 35.0
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "duration_s": 2.45833,
+      "position": [
+        0.77625,
+        -5.20083,
+        2.24477
+      ],
+      "look_at": [
+        0.12,
+        0.0,
+        0.54958
+      ],
+      "roll_deg": 0.22828,
+      "lens_mm": 35.0
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.15,
+            -1.35,
+            0.27
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.05,
+            1.53902,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": []
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.14792,
+            -1.28592,
+            0.26999
+          ],
+          "orientation": [
+            -0.00021,
+            1e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.04994,
+            1.53706,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.01816,
+            0.00059,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 10.386
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.14584,
+            -1.22192,
+            0.26999
+          ],
+          "orientation": [
+            -0.00079,
+            3e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.04987,
+            1.5351,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.03631,
+            0.00118,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.14376,
+            -1.158,
+            0.26999
+          ],
+          "orientation": [
+            -0.00176,
+            6e-05,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.04981,
+            1.53314,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.05447,
+            0.00177,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.14169,
+            -1.09417,
+            0.26999
+          ],
+          "orientation": [
+            -0.0031,
+            0.0001,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            0.04975,
+            1.53118,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.07263,
+            0.00236,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.13962,
+            -1.03041,
+            0.26999
+          ],
+          "orientation": [
+            -0.00482,
+            0.00016,
+            -0.0,
+            0.99999
+          ],
+          "linear_velocity": [
+            0.04968,
+            1.52922,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.09079,
+            0.00295,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.13755,
+            -0.96674,
+            0.26999
+          ],
+          "orientation": [
+            -0.00692,
+            0.00022,
+            -0.0,
+            0.99998
+          ],
+          "linear_velocity": [
+            0.04962,
+            1.52725,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.10894,
+            0.00354,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.13548,
+            -0.90315,
+            0.26999
+          ],
+          "orientation": [
+            -0.0094,
+            0.00031,
+            -0.0,
+            0.99996
+          ],
+          "linear_velocity": [
+            0.04955,
+            1.52529,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.1271,
+            0.00413,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.13342,
+            -0.83964,
+            0.26999
+          ],
+          "orientation": [
+            -0.01226,
+            0.0004,
+            -0.0,
+            0.99992
+          ],
+          "linear_velocity": [
+            0.04949,
+            1.52333,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.14526,
+            0.00472,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.13136,
+            -0.77621,
+            0.26999
+          ],
+          "orientation": [
+            -0.01549,
+            0.0005,
+            -0.0,
+            0.99988
+          ],
+          "linear_velocity": [
+            0.04943,
+            1.52137,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.16341,
+            0.00531,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.1293,
+            -0.71287,
+            0.26999
+          ],
+          "orientation": [
+            -0.0191,
+            0.00062,
+            -0.0,
+            0.99982
+          ],
+          "linear_velocity": [
+            0.04936,
+            1.51941,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.18157,
+            0.0059,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.12725,
+            -0.6496,
+            0.26999
+          ],
+          "orientation": [
+            -0.02309,
+            0.00075,
+            -0.0,
+            0.99973
+          ],
+          "linear_velocity": [
+            0.0493,
+            1.51745,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.19973,
+            0.00649,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.12519,
+            -0.58642,
+            0.26999
+          ],
+          "orientation": [
+            -0.02746,
+            0.00089,
+            -0.0,
+            0.99962
+          ],
+          "linear_velocity": [
+            0.04924,
+            1.51549,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.21789,
+            0.00708,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.12314,
+            -0.52332,
+            0.26999
+          ],
+          "orientation": [
+            -0.0322,
+            0.00105,
+            -0.0,
+            0.99948
+          ],
+          "linear_velocity": [
+            0.04917,
+            1.51353,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.23604,
+            0.00767,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.1211,
+            -0.4603,
+            0.26999
+          ],
+          "orientation": [
+            -0.03733,
+            0.00121,
+            -0.0,
+            0.9993
+          ],
+          "linear_velocity": [
+            0.04911,
+            1.51157,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.2542,
+            0.00826,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.11905,
+            -0.39737,
+            0.26999
+          ],
+          "orientation": [
+            -0.04283,
+            0.00139,
+            -0.0,
+            0.99908
+          ],
+          "linear_velocity": [
+            0.04904,
+            1.50961,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.27236,
+            0.00885,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.11701,
+            -0.33451,
+            0.26999
+          ],
+          "orientation": [
+            -0.0487,
+            0.00158,
+            -0.0,
+            0.99881
+          ],
+          "linear_velocity": [
+            0.04898,
+            1.50764,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.29051,
+            0.00944,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.11497,
+            -0.27174,
+            0.26999
+          ],
+          "orientation": [
+            -0.05495,
+            0.00179,
+            -0.0,
+            0.99849
+          ],
+          "linear_velocity": [
+            0.04892,
+            1.50568,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.30867,
+            0.01003,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.11293,
+            -0.20905,
+            0.26999
+          ],
+          "orientation": [
+            -0.06158,
+            0.002,
+            -0.0,
+            0.9981
+          ],
+          "linear_velocity": [
+            0.04885,
+            1.50372,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.32683,
+            0.01062,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.1109,
+            -0.14643,
+            0.26999
+          ],
+          "orientation": [
+            -0.06858,
+            0.00223,
+            -0.0,
+            0.99764
+          ],
+          "linear_velocity": [
+            0.04879,
+            1.50176,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.34498,
+            0.01121,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.10887,
+            -0.08391,
+            0.26999
+          ],
+          "orientation": [
+            -0.07596,
+            0.00247,
+            -0.0,
+            0.99711
+          ],
+          "linear_velocity": [
+            0.04873,
+            1.4998,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.36314,
+            0.0118,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.10684,
+            -0.02146,
+            0.26999
+          ],
+          "orientation": [
+            -0.08371,
+            0.00272,
+            -0.0,
+            0.99649
+          ],
+          "linear_velocity": [
+            0.04866,
+            1.49784,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.3813,
+            0.01239,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.10481,
+            0.04091,
+            0.26999
+          ],
+          "orientation": [
+            -0.09183,
+            0.00298,
+            -0.0,
+            0.99577
+          ],
+          "linear_velocity": [
+            0.0486,
+            1.49588,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.39946,
+            0.01298,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.10279,
+            0.10319,
+            0.26999
+          ],
+          "orientation": [
+            -0.10032,
+            0.00326,
+            -0.0,
+            0.99495
+          ],
+          "linear_velocity": [
+            0.04853,
+            1.49392,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.41761,
+            0.01357,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.10077,
+            0.16539,
+            0.26999
+          ],
+          "orientation": [
+            -0.10918,
+            0.00355,
+            -0.0,
+            0.99402
+          ],
+          "linear_velocity": [
+            0.04847,
+            1.49196,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.43577,
+            0.01416,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.09875,
+            0.22751,
+            0.26999
+          ],
+          "orientation": [
+            -0.1184,
+            0.00385,
+            -0.0,
+            0.99296
+          ],
+          "linear_velocity": [
+            0.04841,
+            1.49,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.45393,
+            0.01475,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.09673,
+            0.28955,
+            0.26999
+          ],
+          "orientation": [
+            -0.128,
+            0.00416,
+            -0.0,
+            0.99177
+          ],
+          "linear_velocity": [
+            0.04834,
+            1.48803,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.47208,
+            0.01534,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.09472,
+            0.35151,
+            0.26999
+          ],
+          "orientation": [
+            -0.13795,
+            0.00448,
+            -0.0,
+            0.99043
+          ],
+          "linear_velocity": [
+            0.04828,
+            1.48607,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.49024,
+            0.01593,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.09271,
+            0.41338,
+            0.26999
+          ],
+          "orientation": [
+            -0.14826,
+            0.00482,
+            -0.0,
+            0.98894
+          ],
+          "linear_velocity": [
+            0.04822,
+            1.48411,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.5084,
+            0.01652,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0907,
+            0.47517,
+            0.26999
+          ],
+          "orientation": [
+            -0.15893,
+            0.00516,
+            -0.0,
+            0.98728
+          ],
+          "linear_velocity": [
+            0.04815,
+            1.48215,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.52656,
+            0.01711,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0887,
+            0.53688,
+            0.26999
+          ],
+          "orientation": [
+            -0.16996,
+            0.00552,
+            -0.0,
+            0.98544
+          ],
+          "linear_velocity": [
+            0.04809,
+            1.48019,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.54471,
+            0.0177,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0867,
+            0.59851,
+            0.26999
+          ],
+          "orientation": [
+            -0.18134,
+            0.00589,
+            -0.0,
+            0.9834
+          ],
+          "linear_velocity": [
+            0.04803,
+            1.47823,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.56287,
+            0.01829,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0847,
+            0.66006,
+            0.26999
+          ],
+          "orientation": [
+            -0.19306,
+            0.00627,
+            -0.0,
+            0.98117
+          ],
+          "linear_velocity": [
+            0.04796,
+            1.47627,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.58103,
+            0.01888,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0827,
+            0.72153,
+            0.26999
+          ],
+          "orientation": [
+            -0.20513,
+            0.00666,
+            -0.0,
+            0.97871
+          ],
+          "linear_velocity": [
+            0.0479,
+            1.47431,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.59918,
+            0.01947,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.08071,
+            0.78291,
+            0.26999
+          ],
+          "orientation": [
+            -0.21753,
+            0.00707,
+            -0.0,
+            0.97603
+          ],
+          "linear_velocity": [
+            0.04783,
+            1.47235,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.61734,
+            0.02006,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.07871,
+            0.84422,
+            0.26999
+          ],
+          "orientation": [
+            -0.23027,
+            0.00748,
+            -0.0,
+            0.9731
+          ],
+          "linear_velocity": [
+            0.04777,
+            1.47039,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.6355,
+            0.02065,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.07672,
+            0.90544,
+            0.26999
+          ],
+          "orientation": [
+            -0.24333,
+            0.00791,
+            -0.0,
+            0.96991
+          ],
+          "linear_velocity": [
+            0.04771,
+            1.46843,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.65366,
+            0.02124,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.07474,
+            0.96658,
+            0.26999
+          ],
+          "orientation": [
+            -0.25672,
+            0.00834,
+            -0.0,
+            0.96645
+          ],
+          "linear_velocity": [
+            0.04764,
+            1.46646,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.67181,
+            0.02183,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.07275,
+            1.02763,
+            0.26999
+          ],
+          "orientation": [
+            -0.27042,
+            0.00879,
+            -0.0,
+            0.9627
+          ],
+          "linear_velocity": [
+            0.04758,
+            1.4645,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.68997,
+            0.02242,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.07077,
+            1.08861,
+            0.26999
+          ],
+          "orientation": [
+            -0.28443,
+            0.00924,
+            -0.0,
+            0.95865
+          ],
+          "linear_velocity": [
+            0.04752,
+            1.46254,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.70813,
+            0.02301,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0688,
+            1.1495,
+            0.26999
+          ],
+          "orientation": [
+            -0.29874,
+            0.00971,
+            -0.0,
+            0.95429
+          ],
+          "linear_velocity": [
+            0.04745,
+            1.46058,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.72628,
+            0.0236,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.06682,
+            1.21032,
+            0.26999
+          ],
+          "orientation": [
+            -0.31334,
+            0.01018,
+            -0.0,
+            0.94959
+          ],
+          "linear_velocity": [
+            0.04739,
+            1.45862,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.74444,
+            0.02419,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.06485,
+            1.27105,
+            0.26999
+          ],
+          "orientation": [
+            -0.32822,
+            0.01066,
+            -0.0,
+            0.94454
+          ],
+          "linear_velocity": [
+            0.04732,
+            1.45666,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.7626,
+            0.02478,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.06288,
+            1.3317,
+            0.26999
+          ],
+          "orientation": [
+            -0.34338,
+            0.01116,
+            -0.0,
+            0.93913
+          ],
+          "linear_velocity": [
+            0.04726,
+            1.4547,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.78075,
+            0.02537,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.06091,
+            1.39226,
+            0.26999
+          ],
+          "orientation": [
+            -0.35881,
+            0.01166,
+            -0.0,
+            0.93334
+          ],
+          "linear_velocity": [
+            0.0472,
+            1.45274,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.79891,
+            0.02596,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.05894,
+            1.45275,
+            0.26999
+          ],
+          "orientation": [
+            -0.37449,
+            0.01217,
+            -0.0,
+            0.92715
+          ],
+          "linear_velocity": [
+            0.04713,
+            1.45078,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.81707,
+            0.02655,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.05698,
+            1.51315,
+            0.26999
+          ],
+          "orientation": [
+            -0.3904,
+            0.01268,
+            -0.0,
+            0.92056
+          ],
+          "linear_velocity": [
+            0.04707,
+            1.44882,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.83523,
+            0.02713,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.05502,
+            1.57348,
+            0.26999
+          ],
+          "orientation": [
+            -0.40655,
+            0.01321,
+            -0.0,
+            0.91353
+          ],
+          "linear_velocity": [
+            0.04701,
+            1.44685,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.85338,
+            0.02772,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.05306,
+            1.63372,
+            0.26999
+          ],
+          "orientation": [
+            -0.42292,
+            0.01374,
+            -0.0,
+            0.90606
+          ],
+          "linear_velocity": [
+            0.04694,
+            1.44489,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.87154,
+            0.02831,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.05111,
+            1.69388,
+            0.26999
+          ],
+          "orientation": [
+            -0.43948,
+            0.01428,
+            -0.0,
+            0.89814
+          ],
+          "linear_velocity": [
+            0.04688,
+            1.44293,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.8897,
+            0.0289,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.04916,
+            1.75395,
+            0.26999
+          ],
+          "orientation": [
+            -0.45624,
+            0.01482,
+            -0.0,
+            0.88973
+          ],
+          "linear_velocity": [
+            0.04681,
+            1.44097,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.90785,
+            0.02949,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.04721,
+            1.81395,
+            0.26999
+          ],
+          "orientation": [
+            -0.47317,
+            0.01537,
+            -0.0,
+            0.88084
+          ],
+          "linear_velocity": [
+            0.04675,
+            1.43901,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.92601,
+            0.03008,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.04526,
+            1.87386,
+            0.26999
+          ],
+          "orientation": [
+            -0.49025,
+            0.01593,
+            -0.0,
+            0.87143
+          ],
+          "linear_velocity": [
+            0.04669,
+            1.43705,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.94417,
+            0.03067,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.04332,
+            1.9337,
+            0.26999
+          ],
+          "orientation": [
+            -0.50748,
+            0.01649,
+            -0.0,
+            0.86151
+          ],
+          "linear_velocity": [
+            0.04662,
+            1.43509,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.96233,
+            0.03126,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.04138,
+            1.99345,
+            0.26999
+          ],
+          "orientation": [
+            -0.52482,
+            0.01705,
+            -0.0,
+            0.85104
+          ],
+          "linear_velocity": [
+            0.04656,
+            1.43313,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.98048,
+            0.03185,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.03944,
+            2.05311,
+            0.26999
+          ],
+          "orientation": [
+            -0.54227,
+            0.01762,
+            -0.0,
+            0.84002
+          ],
+          "linear_velocity": [
+            0.0465,
+            1.43117,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.99864,
+            0.03244,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.0375,
+            2.1127,
+            0.26999
+          ],
+          "orientation": [
+            -0.5598,
+            0.01819,
+            -0.0,
+            0.82843
+          ],
+          "linear_velocity": [
+            0.04643,
+            1.42921,
+            0.0
+          ],
+          "angular_velocity": [
+            -1.0168,
+            0.03303,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.03557,
+            2.17221,
+            0.26999
+          ],
+          "orientation": [
+            -0.57739,
+            0.01876,
+            -0.0,
+            0.81625
+          ],
+          "linear_velocity": [
+            0.04637,
+            1.42724,
+            0.0
+          ],
+          "angular_velocity": [
+            -1.03495,
+            0.03362,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.03364,
+            2.23163,
+            0.26999
+          ],
+          "orientation": [
+            -0.59503,
+            0.01933,
+            -0.0,
+            0.80347
+          ],
+          "linear_velocity": [
+            0.0463,
+            1.42528,
+            0.0
+          ],
+          "angular_velocity": [
+            -1.05311,
+            0.03421,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "blue_away_camera",
+          "shape": "sphere",
+          "radius": 0.27,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.03171,
+            2.29097,
+            0.26999
+          ],
+          "orientation": [
+            -0.61267,
+            0.0199,
+            -0.0,
+            0.79009
+          ],
+          "linear_velocity": [
+            0.04624,
+            1.42332,
+            -0.0
+          ],
+          "angular_velocity": [
+            -1.07127,
+            0.0348,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_away_camera",
+          "body_b": "ground_collider",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    }
+  ],
+  "video": "videos/clip_016_cam_crane_up_tilt_down_phys_sphere_away_camera.mp4"
+}

@@ -1,0 +1,6946 @@
+{
+  "clip_id": "clip_053_cam_top_down_drift_phys_cube_sphere_collision",
+  "camera_id": "cam_top_down_drift",
+  "physics_id": "phys_cube_sphere_collision",
+  "scene_id": "scene_gray_low_wall",
+  "fps": 24,
+  "frames_count": 60,
+  "duration_s": 2.45833,
+  "resolution": [
+    320,
+    240
+  ],
+  "generator": "kubric_style_pybullet_blender_review",
+  "simulator": "PyBullet",
+  "renderer": "Blender EEVEE",
+  "camera_spec": {
+    "id": "cam_top_down_drift",
+    "mode": "linear",
+    "primitives": [
+      "Top_Down",
+      "Truck_Right",
+      "Small_Tilt"
+    ],
+    "speed_class": "slow_medium",
+    "description": "High ceiling-like view drifting across the scene.",
+    "start_position": [
+      -0.95,
+      -0.55,
+      5.85
+    ],
+    "start_target": [
+      0.02,
+      -0.04,
+      0.12
+    ],
+    "linear_velocity_mps": [
+      0.37861,
+      0.1,
+      -0.08
+    ],
+    "target_velocity_mps": [
+      0.05,
+      0.05,
+      0.0
+    ],
+    "roll_start_deg": 4.0,
+    "roll_velocity_deg_s": -0.20198,
+    "lens_mm": 43.0,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "component velocities sampled from clipped Gaussian templates; velocity is in real units per second"
+  },
+  "physics_spec": {
+    "id": "phys_cube_sphere_collision",
+    "kind": "mixed_shape_collision",
+    "speed_class": "medium",
+    "description": "A moving cube and a moving sphere collide without overlap starts.",
+    "motion_distribution": {
+      "linear_speed_mps": [
+        1.9,
+        0.25,
+        1.3,
+        2.55
+      ]
+    },
+    "bodies": [
+      {
+        "name": "blue_left_cube",
+        "shape": "box",
+        "size": [
+          0.42,
+          0.42,
+          0.42
+        ],
+        "position": [
+          -1.22,
+          0.36,
+          0.21
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          1.95579,
+          -0.42,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          -2.4,
+          0.4
+        ],
+        "mass": 1.0,
+        "restitution": 0.62,
+        "friction": 0.07,
+        "color": [
+          0.16,
+          0.34,
+          0.78,
+          1.0
+        ],
+        "role": "dynamic"
+      },
+      {
+        "name": "red_right_sphere",
+        "shape": "sphere",
+        "radius": 0.24,
+        "position": [
+          1.22,
+          -0.3,
+          0.24
+        ],
+        "orientation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "velocity": [
+          -1.858,
+          0.42,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 1.0,
+        "restitution": 0.78,
+        "friction": 0.04,
+        "color": [
+          0.88,
+          0.2,
+          0.16,
+          1.0
+        ],
+        "role": "dynamic"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_gray_low_wall",
+    "ground_color": [
+      0.64,
+      0.66,
+      0.62,
+      1.0
+    ],
+    "back_wall_color": [
+      0.77,
+      0.78,
+      0.75,
+      1.0
+    ],
+    "side_wall_color": [
+      0.69,
+      0.71,
+      0.7,
+      1.0
+    ],
+    "wall_height": 2.1,
+    "wall_style": "plain",
+    "floor_style": "subtle_marks",
+    "static_props": []
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "duration_s": 2.45833,
+      "position": [
+        -0.95,
+        -0.55,
+        5.85
+      ],
+      "look_at": [
+        0.02,
+        -0.04,
+        0.12
+      ],
+      "roll_deg": 4.0,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.93422,
+        -0.54583,
+        5.84667
+      ],
+      "look_at": [
+        0.02208,
+        -0.03792,
+        0.12
+      ],
+      "roll_deg": 3.99158,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.91845,
+        -0.54167,
+        5.84333
+      ],
+      "look_at": [
+        0.02417,
+        -0.03583,
+        0.12
+      ],
+      "roll_deg": 3.98317,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "duration_s": 2.45833,
+      "position": [
+        -0.90267,
+        -0.5375,
+        5.84
+      ],
+      "look_at": [
+        0.02625,
+        -0.03375,
+        0.12
+      ],
+      "roll_deg": 3.97475,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.8869,
+        -0.53333,
+        5.83667
+      ],
+      "look_at": [
+        0.02833,
+        -0.03167,
+        0.12
+      ],
+      "roll_deg": 3.96634,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.87112,
+        -0.52917,
+        5.83333
+      ],
+      "look_at": [
+        0.03042,
+        -0.02958,
+        0.12
+      ],
+      "roll_deg": 3.95792,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "duration_s": 2.45833,
+      "position": [
+        -0.85535,
+        -0.525,
+        5.83
+      ],
+      "look_at": [
+        0.0325,
+        -0.0275,
+        0.12
+      ],
+      "roll_deg": 3.9495,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.83957,
+        -0.52083,
+        5.82667
+      ],
+      "look_at": [
+        0.03458,
+        -0.02542,
+        0.12
+      ],
+      "roll_deg": 3.94109,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.8238,
+        -0.51667,
+        5.82333
+      ],
+      "look_at": [
+        0.03667,
+        -0.02333,
+        0.12
+      ],
+      "roll_deg": 3.93267,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "duration_s": 2.45833,
+      "position": [
+        -0.80802,
+        -0.5125,
+        5.82
+      ],
+      "look_at": [
+        0.03875,
+        -0.02125,
+        0.12
+      ],
+      "roll_deg": 3.92426,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.79225,
+        -0.50833,
+        5.81667
+      ],
+      "look_at": [
+        0.04083,
+        -0.01917,
+        0.12
+      ],
+      "roll_deg": 3.91584,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.77647,
+        -0.50417,
+        5.81333
+      ],
+      "look_at": [
+        0.04292,
+        -0.01708,
+        0.12
+      ],
+      "roll_deg": 3.90743,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "duration_s": 2.45833,
+      "position": [
+        -0.76069,
+        -0.5,
+        5.81
+      ],
+      "look_at": [
+        0.045,
+        -0.015,
+        0.12
+      ],
+      "roll_deg": 3.89901,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.74492,
+        -0.49583,
+        5.80667
+      ],
+      "look_at": [
+        0.04708,
+        -0.01292,
+        0.12
+      ],
+      "roll_deg": 3.89059,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.72914,
+        -0.49167,
+        5.80333
+      ],
+      "look_at": [
+        0.04917,
+        -0.01083,
+        0.12
+      ],
+      "roll_deg": 3.88218,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "duration_s": 2.45833,
+      "position": [
+        -0.71337,
+        -0.4875,
+        5.8
+      ],
+      "look_at": [
+        0.05125,
+        -0.00875,
+        0.12
+      ],
+      "roll_deg": 3.87376,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.69759,
+        -0.48333,
+        5.79667
+      ],
+      "look_at": [
+        0.05333,
+        -0.00667,
+        0.12
+      ],
+      "roll_deg": 3.86535,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.68182,
+        -0.47917,
+        5.79333
+      ],
+      "look_at": [
+        0.05542,
+        -0.00458,
+        0.12
+      ],
+      "roll_deg": 3.85693,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "duration_s": 2.45833,
+      "position": [
+        -0.66604,
+        -0.475,
+        5.79
+      ],
+      "look_at": [
+        0.0575,
+        -0.0025,
+        0.12
+      ],
+      "roll_deg": 3.84851,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.65027,
+        -0.47083,
+        5.78667
+      ],
+      "look_at": [
+        0.05958,
+        -0.00042,
+        0.12
+      ],
+      "roll_deg": 3.8401,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.63449,
+        -0.46667,
+        5.78333
+      ],
+      "look_at": [
+        0.06167,
+        0.00167,
+        0.12
+      ],
+      "roll_deg": 3.83168,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "duration_s": 2.45833,
+      "position": [
+        -0.61872,
+        -0.4625,
+        5.78
+      ],
+      "look_at": [
+        0.06375,
+        0.00375,
+        0.12
+      ],
+      "roll_deg": 3.82327,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.60294,
+        -0.45833,
+        5.77667
+      ],
+      "look_at": [
+        0.06583,
+        0.00583,
+        0.12
+      ],
+      "roll_deg": 3.81485,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.58717,
+        -0.45417,
+        5.77333
+      ],
+      "look_at": [
+        0.06792,
+        0.00792,
+        0.12
+      ],
+      "roll_deg": 3.80644,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "duration_s": 2.45833,
+      "position": [
+        -0.57139,
+        -0.45,
+        5.77
+      ],
+      "look_at": [
+        0.07,
+        0.01,
+        0.12
+      ],
+      "roll_deg": 3.79802,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.55561,
+        -0.44583,
+        5.76667
+      ],
+      "look_at": [
+        0.07208,
+        0.01208,
+        0.12
+      ],
+      "roll_deg": 3.7896,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.53984,
+        -0.44167,
+        5.76333
+      ],
+      "look_at": [
+        0.07417,
+        0.01417,
+        0.12
+      ],
+      "roll_deg": 3.78119,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "duration_s": 2.45833,
+      "position": [
+        -0.52406,
+        -0.4375,
+        5.76
+      ],
+      "look_at": [
+        0.07625,
+        0.01625,
+        0.12
+      ],
+      "roll_deg": 3.77277,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.50829,
+        -0.43333,
+        5.75667
+      ],
+      "look_at": [
+        0.07833,
+        0.01833,
+        0.12
+      ],
+      "roll_deg": 3.76436,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.49251,
+        -0.42917,
+        5.75333
+      ],
+      "look_at": [
+        0.08042,
+        0.02042,
+        0.12
+      ],
+      "roll_deg": 3.75594,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "duration_s": 2.45833,
+      "position": [
+        -0.47674,
+        -0.425,
+        5.75
+      ],
+      "look_at": [
+        0.0825,
+        0.0225,
+        0.12
+      ],
+      "roll_deg": 3.74752,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.46096,
+        -0.42083,
+        5.74667
+      ],
+      "look_at": [
+        0.08458,
+        0.02458,
+        0.12
+      ],
+      "roll_deg": 3.73911,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.44519,
+        -0.41667,
+        5.74333
+      ],
+      "look_at": [
+        0.08667,
+        0.02667,
+        0.12
+      ],
+      "roll_deg": 3.73069,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "duration_s": 2.45833,
+      "position": [
+        -0.42941,
+        -0.4125,
+        5.74
+      ],
+      "look_at": [
+        0.08875,
+        0.02875,
+        0.12
+      ],
+      "roll_deg": 3.72228,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.41364,
+        -0.40833,
+        5.73667
+      ],
+      "look_at": [
+        0.09083,
+        0.03083,
+        0.12
+      ],
+      "roll_deg": 3.71386,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.39786,
+        -0.40417,
+        5.73333
+      ],
+      "look_at": [
+        0.09292,
+        0.03292,
+        0.12
+      ],
+      "roll_deg": 3.70545,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "duration_s": 2.45833,
+      "position": [
+        -0.38209,
+        -0.4,
+        5.73
+      ],
+      "look_at": [
+        0.095,
+        0.035,
+        0.12
+      ],
+      "roll_deg": 3.69703,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.36631,
+        -0.39583,
+        5.72667
+      ],
+      "look_at": [
+        0.09708,
+        0.03708,
+        0.12
+      ],
+      "roll_deg": 3.68861,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.35053,
+        -0.39167,
+        5.72333
+      ],
+      "look_at": [
+        0.09917,
+        0.03917,
+        0.12
+      ],
+      "roll_deg": 3.6802,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "duration_s": 2.45833,
+      "position": [
+        -0.33476,
+        -0.3875,
+        5.72
+      ],
+      "look_at": [
+        0.10125,
+        0.04125,
+        0.12
+      ],
+      "roll_deg": 3.67178,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.31898,
+        -0.38333,
+        5.71667
+      ],
+      "look_at": [
+        0.10333,
+        0.04333,
+        0.12
+      ],
+      "roll_deg": 3.66337,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.30321,
+        -0.37917,
+        5.71333
+      ],
+      "look_at": [
+        0.10542,
+        0.04542,
+        0.12
+      ],
+      "roll_deg": 3.65495,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "duration_s": 2.45833,
+      "position": [
+        -0.28743,
+        -0.375,
+        5.71
+      ],
+      "look_at": [
+        0.1075,
+        0.0475,
+        0.12
+      ],
+      "roll_deg": 3.64654,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.27166,
+        -0.37083,
+        5.70667
+      ],
+      "look_at": [
+        0.10958,
+        0.04958,
+        0.12
+      ],
+      "roll_deg": 3.63812,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.25588,
+        -0.36667,
+        5.70333
+      ],
+      "look_at": [
+        0.11167,
+        0.05167,
+        0.12
+      ],
+      "roll_deg": 3.6297,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "duration_s": 2.45833,
+      "position": [
+        -0.24011,
+        -0.3625,
+        5.7
+      ],
+      "look_at": [
+        0.11375,
+        0.05375,
+        0.12
+      ],
+      "roll_deg": 3.62129,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.22433,
+        -0.35833,
+        5.69667
+      ],
+      "look_at": [
+        0.11583,
+        0.05583,
+        0.12
+      ],
+      "roll_deg": 3.61287,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.20856,
+        -0.35417,
+        5.69333
+      ],
+      "look_at": [
+        0.11792,
+        0.05792,
+        0.12
+      ],
+      "roll_deg": 3.60446,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "duration_s": 2.45833,
+      "position": [
+        -0.19278,
+        -0.35,
+        5.69
+      ],
+      "look_at": [
+        0.12,
+        0.06,
+        0.12
+      ],
+      "roll_deg": 3.59604,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.177,
+        -0.34583,
+        5.68667
+      ],
+      "look_at": [
+        0.12208,
+        0.06208,
+        0.12
+      ],
+      "roll_deg": 3.58762,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.16123,
+        -0.34167,
+        5.68333
+      ],
+      "look_at": [
+        0.12417,
+        0.06417,
+        0.12
+      ],
+      "roll_deg": 3.57921,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "duration_s": 2.45833,
+      "position": [
+        -0.14545,
+        -0.3375,
+        5.68
+      ],
+      "look_at": [
+        0.12625,
+        0.06625,
+        0.12
+      ],
+      "roll_deg": 3.57079,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.12968,
+        -0.33333,
+        5.67667
+      ],
+      "look_at": [
+        0.12833,
+        0.06833,
+        0.12
+      ],
+      "roll_deg": 3.56238,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.1139,
+        -0.32917,
+        5.67333
+      ],
+      "look_at": [
+        0.13042,
+        0.07042,
+        0.12
+      ],
+      "roll_deg": 3.55396,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "duration_s": 2.45833,
+      "position": [
+        -0.09813,
+        -0.325,
+        5.67
+      ],
+      "look_at": [
+        0.1325,
+        0.0725,
+        0.12
+      ],
+      "roll_deg": 3.54555,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "duration_s": 2.45833,
+      "position": [
+        -0.08235,
+        -0.32083,
+        5.66667
+      ],
+      "look_at": [
+        0.13458,
+        0.07458,
+        0.12
+      ],
+      "roll_deg": 3.53713,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "duration_s": 2.45833,
+      "position": [
+        -0.06658,
+        -0.31667,
+        5.66333
+      ],
+      "look_at": [
+        0.13667,
+        0.07667,
+        0.12
+      ],
+      "roll_deg": 3.52871,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "duration_s": 2.45833,
+      "position": [
+        -0.0508,
+        -0.3125,
+        5.66
+      ],
+      "look_at": [
+        0.13875,
+        0.07875,
+        0.12
+      ],
+      "roll_deg": 3.5203,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "duration_s": 2.45833,
+      "position": [
+        -0.03503,
+        -0.30833,
+        5.65667
+      ],
+      "look_at": [
+        0.14083,
+        0.08083,
+        0.12
+      ],
+      "roll_deg": 3.51188,
+      "lens_mm": 43.0
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "duration_s": 2.45833,
+      "position": [
+        -0.01925,
+        -0.30417,
+        5.65333
+      ],
+      "look_at": [
+        0.14292,
+        0.08292,
+        0.12
+      ],
+      "roll_deg": 3.50347,
+      "lens_mm": 43.0
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.22,
+            0.36,
+            0.21
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            1.95579,
+            -0.42,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -2.4,
+            0.4
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.22,
+            -0.3,
+            0.24
+          ],
+          "orientation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            -1.858,
+            0.42,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": []
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.13862,
+            0.34253,
+            0.21376
+          ],
+          "orientation": [
+            7e-05,
+            -0.00321,
+            0.00823,
+            0.99996
+          ],
+          "linear_velocity": [
+            1.95295,
+            -0.41926,
+            -0.05878
+          ],
+          "angular_velocity": [
+            0.00168,
+            0.0952,
+            0.39466
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.14263,
+            -0.28251,
+            0.23999
+          ],
+          "orientation": [
+            -5e-05,
+            -0.00023,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            -1.85609,
+            0.41957,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.00451,
+            -0.01993,
+            -0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 6,
+          "min_contact_distance": -0.00226,
+          "max_normal_force": 42.00451
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 10.386
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.05731,
+            0.32507,
+            0.21056
+          ],
+          "orientation": [
+            9e-05,
+            -0.00198,
+            0.01644,
+            0.99986
+          ],
+          "linear_velocity": [
+            1.94886,
+            -0.41835,
+            0.03158
+          ],
+          "angular_velocity": [
+            0.00167,
+            -0.12488,
+            0.39332
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.06533,
+            -0.26504,
+            0.23999
+          ],
+          "orientation": [
+            -0.0002,
+            -0.00087,
+            -0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            -1.85417,
+            0.41913,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.00901,
+            -0.03987,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 11,
+          "min_contact_distance": -0.00099,
+          "max_normal_force": 33.818
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.97617,
+            0.30766,
+            0.20972
+          ],
+          "orientation": [
+            2e-05,
+            5e-05,
+            0.02461,
+            0.9997
+          ],
+          "linear_velocity": [
+            1.94613,
+            -0.41774,
+            -0.04342
+          ],
+          "angular_velocity": [
+            -0.01197,
+            0.23095,
+            0.3918
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.98812,
+            -0.24758,
+            0.23999
+          ],
+          "orientation": [
+            -0.00044,
+            -0.00193,
+            0.0,
+            1.0
+          ],
+          "linear_velocity": [
+            -1.85226,
+            0.4187,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.01352,
+            -0.0598,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 20,
+          "min_contact_distance": -0.00048,
+          "max_normal_force": 22.38991
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.89517,
+            0.29027,
+            0.20981
+          ],
+          "orientation": [
+            -0.0001,
+            -2e-05,
+            0.03277,
+            0.99946
+          ],
+          "linear_velocity": [
+            1.94238,
+            -0.41699,
+            0.00376
+          ],
+          "angular_velocity": [
+            -0.00208,
+            0.00667,
+            0.39087
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.91099,
+            -0.23015,
+            0.23999
+          ],
+          "orientation": [
+            -0.00077,
+            -0.00341,
+            0.0,
+            0.99999
+          ],
+          "linear_velocity": [
+            -1.85035,
+            0.41827,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.01802,
+            -0.07974,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00046,
+          "max_normal_force": 10.68939
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.81432,
+            0.27291,
+            0.20991
+          ],
+          "orientation": [
+            -7e-05,
+            1e-05,
+            0.04089,
+            0.99916
+          ],
+          "linear_velocity": [
+            1.93903,
+            -0.41633,
+            0.00161
+          ],
+          "angular_velocity": [
+            0.00318,
+            -0.00048,
+            0.38963
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.83393,
+            -0.21273,
+            0.23999
+          ],
+          "orientation": [
+            -0.0012,
+            -0.00529,
+            0.0,
+            0.99999
+          ],
+          "linear_velocity": [
+            -1.84843,
+            0.41784,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.02253,
+            -0.09967,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 29,
+          "min_contact_distance": -0.00024,
+          "max_normal_force": 4.90298
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.7336,
+            0.25558,
+            0.20995
+          ],
+          "orientation": [
+            -2e-05,
+            0.0,
+            0.04898,
+            0.9988
+          ],
+          "linear_velocity": [
+            1.93567,
+            -0.41569,
+            0.0007
+          ],
+          "angular_velocity": [
+            0.00138,
+            -0.00019,
+            0.38825
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.75696,
+            -0.19533,
+            0.23999
+          ],
+          "orientation": [
+            -0.00172,
+            -0.0076,
+            0.0,
+            0.99997
+          ],
+          "linear_velocity": [
+            -1.84652,
+            0.4174,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.02704,
+            -0.11961,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00012,
+          "max_normal_force": 4.91085
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.65303,
+            0.23827,
+            0.20997
+          ],
+          "orientation": [
+            -0.0,
+            0.0,
+            0.05704,
+            0.99837
+          ],
+          "linear_velocity": [
+            1.9323,
+            -0.41507,
+            0.0003
+          ],
+          "angular_velocity": [
+            0.0006,
+            -7e-05,
+            0.38688
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.68006,
+            -0.17795,
+            0.23999
+          ],
+          "orientation": [
+            -0.00233,
+            -0.01032,
+            0.0,
+            0.99994
+          ],
+          "linear_velocity": [
+            -1.8446,
+            0.41697,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.03154,
+            -0.13954,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -6e-05,
+          "max_normal_force": 4.91453
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.57259,
+            0.22099,
+            0.20984
+          ],
+          "orientation": [
+            8e-05,
+            -0.00026,
+            0.06508,
+            0.99788
+          ],
+          "linear_velocity": [
+            1.92891,
+            -0.4144,
+            0.00309
+          ],
+          "angular_velocity": [
+            -0.00565,
+            0.01227,
+            0.38565
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.60325,
+            -0.16058,
+            0.23999
+          ],
+          "orientation": [
+            -0.00304,
+            -0.01346,
+            0.0,
+            0.9999
+          ],
+          "linear_velocity": [
+            -1.84269,
+            0.41654,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.03605,
+            -0.15948,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00035,
+          "max_normal_force": 9.11278
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.4923,
+            0.20374,
+            0.20992
+          ],
+          "orientation": [
+            -0.0001,
+            0.0,
+            0.07308,
+            0.99733
+          ],
+          "linear_velocity": [
+            1.92555,
+            -0.4138,
+            0.00131
+          ],
+          "angular_velocity": [
+            0.00486,
+            -0.00011,
+            0.38443
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.52652,
+            -0.14324,
+            0.23999
+          ],
+          "orientation": [
+            -0.00384,
+            -0.01701,
+            0.0,
+            0.99985
+          ],
+          "linear_velocity": [
+            -1.84078,
+            0.41611,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.04056,
+            -0.17941,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.0003,
+          "max_normal_force": 4.91947
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.41214,
+            0.18651,
+            0.20996
+          ],
+          "orientation": [
+            -4e-05,
+            0.0,
+            0.08105,
+            0.99671
+          ],
+          "linear_velocity": [
+            1.92218,
+            -0.41319,
+            0.00056
+          ],
+          "angular_velocity": [
+            0.00206,
+            7e-05,
+            0.38317
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.44986,
+            -0.12591,
+            0.23999
+          ],
+          "orientation": [
+            -0.00474,
+            -0.02097,
+            0.0,
+            0.99977
+          ],
+          "linear_velocity": [
+            -1.83886,
+            0.41567,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.04506,
+            -0.19935,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00012,
+          "max_normal_force": 4.91498
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.33213,
+            0.16931,
+            0.20998
+          ],
+          "orientation": [
+            -1e-05,
+            -0.0,
+            0.08899,
+            0.99603
+          ],
+          "linear_velocity": [
+            1.9188,
+            -0.41263,
+            0.00024
+          ],
+          "angular_velocity": [
+            0.00089,
+            4e-05,
+            0.38185
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.37328,
+            -0.1086,
+            0.23999
+          ],
+          "orientation": [
+            -0.00573,
+            -0.02535,
+            0.0,
+            0.99966
+          ],
+          "linear_velocity": [
+            -1.83695,
+            0.41524,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.04957,
+            -0.21928,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -6e-05,
+          "max_normal_force": 4.9174
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.25226,
+            0.15213,
+            0.20992
+          ],
+          "orientation": [
+            7e-05,
+            -0.0002,
+            0.09689,
+            0.99529
+          ],
+          "linear_velocity": [
+            1.91541,
+            -0.41205,
+            0.00143
+          ],
+          "angular_velocity": [
+            -0.01122,
+            0.01295,
+            0.38047
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.29679,
+            -0.09131,
+            0.23999
+          ],
+          "orientation": [
+            -0.00681,
+            -0.03015,
+            0.0,
+            0.99952
+          ],
+          "linear_velocity": [
+            -1.83504,
+            0.41481,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.05407,
+            -0.23921,
+            0.0
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00031,
+          "max_normal_force": 9.09067
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.22428,
+            0.14972,
+            0.21241
+          ],
+          "orientation": [
+            0.00032,
+            -0.00602,
+            0.02388,
+            0.9997
+          ],
+          "linear_velocity": [
+            -0.57158,
+            0.29614,
+            0.07097
+          ],
+          "angular_velocity": [
+            0.01915,
+            -0.33147,
+            -7.40115
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.27212,
+            -0.08882,
+            0.23999
+          ],
+          "orientation": [
+            -0.00788,
+            -0.03509,
+            0.00077,
+            0.99935
+          ],
+          "linear_velocity": [
+            0.64987,
+            -0.2949,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.04816,
+            -0.22527,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 22,
+          "min_contact_distance": -0.00021,
+          "max_normal_force": 45.97858
+        },
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "red_right_sphere",
+          "samples": 2,
+          "min_contact_distance": -0.00795,
+          "max_normal_force": 620.21733
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81003
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.24809,
+            0.16204,
+            0.20979
+          ],
+          "orientation": [
+            4e-05,
+            0.00038,
+            -0.12979,
+            0.99154
+          ],
+          "linear_velocity": [
+            -0.57144,
+            0.29507,
+            -0.17289
+          ],
+          "angular_velocity": [
+            0.18809,
+            0.8079,
+            -7.38793
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.29915,
+            -0.10109,
+            0.23999
+          ],
+          "orientation": [
+            -0.00874,
+            -0.03958,
+            0.0023,
+            0.99918
+          ],
+          "linear_velocity": [
+            0.64807,
+            -0.29412,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.04,
+            -0.20653,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 20,
+          "min_contact_distance": -0.00018,
+          "max_normal_force": 2.34718
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.27188,
+            0.17435,
+            0.21007
+          ],
+          "orientation": [
+            1e-05,
+            -0.00034,
+            -0.27961,
+            0.96011
+          ],
+          "linear_velocity": [
+            -0.57039,
+            0.29551,
+            0.02548
+          ],
+          "angular_velocity": [
+            -0.06269,
+            -0.09713,
+            -7.3388
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.32612,
+            -0.11332,
+            0.23999
+          ],
+          "orientation": [
+            -0.00943,
+            -0.04367,
+            0.00383,
+            0.99899
+          ],
+          "linear_velocity": [
+            0.64627,
+            -0.29334,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.03184,
+            -0.18779,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 24,
+          "min_contact_distance": -0.00046,
+          "max_normal_force": 35.25385
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.29564,
+            0.18664,
+            0.20997
+          ],
+          "orientation": [
+            0.0,
+            6e-05,
+            -0.42228,
+            0.90647
+          ],
+          "linear_velocity": [
+            -0.57014,
+            0.29453,
+            0.00043
+          ],
+          "angular_velocity": [
+            -0.00118,
+            -0.0047,
+            -7.30845
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.353,
+            -0.12553,
+            0.23999
+          ],
+          "orientation": [
+            -0.00995,
+            -0.04738,
+            0.00536,
+            0.99881
+          ],
+          "linear_velocity": [
+            0.64447,
+            -0.29255,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.02368,
+            -0.16905,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 23,
+          "min_contact_distance": -0.00023,
+          "max_normal_force": 8.69957
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.3194,
+            0.1989,
+            0.20998
+          ],
+          "orientation": [
+            0.0,
+            2e-05,
+            -0.55455,
+            0.83215
+          ],
+          "linear_velocity": [
+            -0.57029,
+            0.29405,
+            0.00016
+          ],
+          "angular_velocity": [
+            -0.00057,
+            -0.00024,
+            -7.27467
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.37981,
+            -0.1377,
+            0.23999
+          ],
+          "orientation": [
+            -0.01029,
+            -0.05069,
+            0.00688,
+            0.99864
+          ],
+          "linear_velocity": [
+            0.64267,
+            -0.29177,
+            -0.0
+          ],
+          "angular_velocity": [
+            -0.01553,
+            -0.15031,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -6e-05,
+          "max_normal_force": 4.90776
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.34316,
+            0.21115,
+            0.20998
+          ],
+          "orientation": [
+            0.0,
+            1e-05,
+            -0.67354,
+            0.73915
+          ],
+          "linear_velocity": [
+            -0.57025,
+            0.29408,
+            7e-05
+          ],
+          "angular_velocity": [
+            -0.00021,
+            6e-05,
+            -7.24056
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.40655,
+            -0.14984,
+            0.23999
+          ],
+          "orientation": [
+            -0.01046,
+            -0.05362,
+            0.0084,
+            0.99847
+          ],
+          "linear_velocity": [
+            0.64087,
+            -0.29099,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.00737,
+            -0.13157,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -3e-05,
+          "max_normal_force": 4.902
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.36691,
+            0.22341,
+            0.20999
+          ],
+          "orientation": [
+            -0.0,
+            0.0,
+            -0.77672,
+            0.62984
+          ],
+          "linear_velocity": [
+            -0.56996,
+            0.29434,
+            3e-05
+          ],
+          "angular_velocity": [
+            1e-05,
+            0.00012,
+            -7.20617
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.43321,
+            -0.16194,
+            0.23999
+          ],
+          "orientation": [
+            -0.01046,
+            -0.05616,
+            0.00991,
+            0.99832
+          ],
+          "linear_velocity": [
+            0.63907,
+            -0.2902,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.00079,
+            -0.11284,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -2e-05,
+          "max_normal_force": 4.90479
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.39065,
+            0.23568,
+            0.20999
+          ],
+          "orientation": [
+            -0.0,
+            0.0,
+            -0.86199,
+            0.50692
+          ],
+          "linear_velocity": [
+            -0.56923,
+            0.29479,
+            1e-05
+          ],
+          "angular_velocity": [
+            0.00012,
+            8e-05,
+            -7.17291
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.4598,
+            -0.17402,
+            0.23999
+          ],
+          "orientation": [
+            -0.01029,
+            -0.05831,
+            0.01142,
+            0.99818
+          ],
+          "linear_velocity": [
+            0.63727,
+            -0.28942,
+            0.0
+          ],
+          "angular_velocity": [
+            0.00895,
+            -0.0941,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -2e-05,
+          "max_normal_force": 4.91096
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.41433,
+            0.24797,
+            0.20973
+          ],
+          "orientation": [
+            0.00043,
+            -9e-05,
+            0.92773,
+            -0.37326
+          ],
+          "linear_velocity": [
+            -0.56768,
+            0.29499,
+            0.00537
+          ],
+          "angular_velocity": [
+            -0.00656,
+            -0.018,
+            -7.14174
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.48631,
+            -0.18606,
+            0.23999
+          ],
+          "orientation": [
+            -0.00994,
+            -0.06007,
+            0.01292,
+            0.99806
+          ],
+          "linear_velocity": [
+            0.63547,
+            -0.28864,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.01711,
+            -0.07536,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00062,
+          "max_normal_force": 10.18038
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.43795,
+            0.26025,
+            0.20952
+          ],
+          "orientation": [
+            0.00083,
+            -0.00016,
+            0.97273,
+            -0.23193
+          ],
+          "linear_velocity": [
+            -0.56624,
+            0.2945,
+            -0.02284
+          ],
+          "angular_velocity": [
+            0.01042,
+            0.07719,
+            -7.11369
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.51275,
+            -0.19807,
+            0.23999
+          ],
+          "orientation": [
+            -0.00941,
+            -0.06144,
+            0.01441,
+            0.99796
+          ],
+          "linear_velocity": [
+            0.63367,
+            -0.28785,
+            0.0
+          ],
+          "angular_velocity": [
+            0.02526,
+            -0.05662,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 22,
+          "min_contact_distance": -0.00089,
+          "max_normal_force": 10.03938
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.46152,
+            0.27251,
+            0.20953
+          ],
+          "orientation": [
+            0.00113,
+            0.00014,
+            0.99628,
+            -0.08615
+          ],
+          "linear_velocity": [
+            -0.56508,
+            0.2938,
+            0.00964
+          ],
+          "angular_velocity": [
+            -0.07524,
+            0.01105,
+            -7.07921
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.53911,
+            -0.21004,
+            0.23999
+          ],
+          "orientation": [
+            -0.00871,
+            -0.06243,
+            0.0159,
+            0.99788
+          ],
+          "linear_velocity": [
+            0.63188,
+            -0.28707,
+            0.0
+          ],
+          "angular_velocity": [
+            0.03342,
+            -0.03788,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00102,
+          "max_normal_force": 9.98431
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.48505,
+            0.28474,
+            0.20959
+          ],
+          "orientation": [
+            0.00087,
+            1e-05,
+            0.99815,
+            0.06082
+          ],
+          "linear_velocity": [
+            -0.56454,
+            0.2934,
+            0.00829
+          ],
+          "angular_velocity": [
+            0.00126,
+            -0.03915,
+            -7.04582
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.5654,
+            -0.22199,
+            0.23999
+          ],
+          "orientation": [
+            -0.00784,
+            -0.06303,
+            0.01738,
+            0.99783
+          ],
+          "linear_velocity": [
+            0.63008,
+            -0.28629,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.04158,
+            -0.01914,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00114,
+          "max_normal_force": 8.87777
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.50856,
+            0.29695,
+            0.20982
+          ],
+          "orientation": [
+            0.00011,
+            -0.00023,
+            0.9786,
+            0.20579
+          ],
+          "linear_velocity": [
+            -0.56392,
+            0.29268,
+            0.0036
+          ],
+          "angular_velocity": [
+            0.00377,
+            -0.03642,
+            -7.01351
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.59161,
+            -0.2339,
+            0.23999
+          ],
+          "orientation": [
+            -0.00679,
+            -0.06324,
+            0.01885,
+            0.9978
+          ],
+          "linear_velocity": [
+            0.62828,
+            -0.2855,
+            0.0
+          ],
+          "angular_velocity": [
+            0.04974,
+            -0.0004,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.0008,
+          "max_normal_force": 4.87238
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.53204,
+            0.30912,
+            0.20974
+          ],
+          "orientation": [
+            0.00064,
+            -0.00015,
+            0.93833,
+            0.34574
+          ],
+          "linear_velocity": [
+            -0.56329,
+            0.29187,
+            0.00526
+          ],
+          "angular_velocity": [
+            -0.01414,
+            -0.02553,
+            -6.98157
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.61775,
+            -0.24578,
+            0.23999
+          ],
+          "orientation": [
+            -0.00556,
+            -0.06307,
+            0.02032,
+            0.99779
+          ],
+          "linear_velocity": [
+            0.62648,
+            -0.28472,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0579,
+            0.01834,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00067,
+          "max_normal_force": 9.99821
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.55551,
+            0.32126,
+            0.20988
+          ],
+          "orientation": [
+            4e-05,
+            -0.00017,
+            0.87849,
+            0.47776
+          ],
+          "linear_velocity": [
+            -0.5633,
+            0.29094,
+            0.00228
+          ],
+          "angular_velocity": [
+            -0.01205,
+            -0.02404,
+            -6.94865
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.64381,
+            -0.25762,
+            0.23999
+          ],
+          "orientation": [
+            -0.00415,
+            -0.06251,
+            0.02177,
+            0.9978
+          ],
+          "linear_velocity": [
+            0.62468,
+            -0.28394,
+            0.0
+          ],
+          "angular_velocity": [
+            0.06605,
+            0.03707,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00057,
+          "max_normal_force": 4.88516
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.57898,
+            0.33338,
+            0.20988
+          ],
+          "orientation": [
+            0.00025,
+            -0.00014,
+            0.80061,
+            0.59919
+          ],
+          "linear_velocity": [
+            -0.56334,
+            0.29069,
+            0.00218
+          ],
+          "angular_velocity": [
+            -0.01278,
+            -0.00928,
+            -6.9149
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.66979,
+            -0.26943,
+            0.23999
+          ],
+          "orientation": [
+            -0.00257,
+            -0.06156,
+            0.02322,
+            0.99783
+          ],
+          "linear_velocity": [
+            0.62288,
+            -0.28315,
+            0.0
+          ],
+          "angular_velocity": [
+            0.07421,
+            0.05581,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00036,
+          "max_normal_force": 8.73268
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.60245,
+            0.34549,
+            0.20994
+          ],
+          "orientation": [
+            -7e-05,
+            -8e-05,
+            0.70657,
+            0.70764
+          ],
+          "linear_velocity": [
+            -0.56321,
+            0.29082,
+            0.00095
+          ],
+          "angular_velocity": [
+            -0.01271,
+            -0.00872,
+            -6.88069
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.69571,
+            -0.28121,
+            0.23999
+          ],
+          "orientation": [
+            -0.00081,
+            -0.06023,
+            0.02466,
+            0.99788
+          ],
+          "linear_velocity": [
+            0.62108,
+            -0.28237,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.08237,
+            0.07455,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00025,
+          "max_normal_force": 4.90174
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.62591,
+            0.35761,
+            0.20992
+          ],
+          "orientation": [
+            8e-05,
+            -0.00013,
+            0.59854,
+            0.80109
+          ],
+          "linear_velocity": [
+            -0.56279,
+            0.29111,
+            0.00146
+          ],
+          "angular_velocity": [
+            -0.01127,
+            -0.0009,
+            -6.84651
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.72154,
+            -0.29296,
+            0.23999
+          ],
+          "orientation": [
+            0.00114,
+            -0.05851,
+            0.02608,
+            0.99795
+          ],
+          "linear_velocity": [
+            0.61928,
+            -0.28159,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.09053,
+            0.09329,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00028,
+          "max_normal_force": 8.9025
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.64934,
+            0.36975,
+            0.20987
+          ],
+          "orientation": [
+            3e-05,
+            -0.00022,
+            0.47892,
+            0.87786
+          ],
+          "linear_velocity": [
+            -0.56193,
+            0.29139,
+            0.00255
+          ],
+          "angular_velocity": [
+            -0.00575,
+            0.00726,
+            -6.81378
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.74731,
+            -0.30468,
+            0.23999
+          ],
+          "orientation": [
+            0.00326,
+            -0.0564,
+            0.0275,
+            0.99802
+          ],
+          "linear_velocity": [
+            0.61748,
+            -0.2808,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.09869,
+            0.11203,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00027,
+          "max_normal_force": 6.01217
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.67272,
+            0.3819,
+            0.20994
+          ],
+          "orientation": [
+            0.0,
+            -0.0001,
+            0.35023,
+            0.93667
+          ],
+          "linear_velocity": [
+            -0.56026,
+            0.29149,
+            0.00107
+          ],
+          "angular_velocity": [
+            -0.00127,
+            0.00387,
+            -6.78383
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.77299,
+            -0.31636,
+            0.23999
+          ],
+          "orientation": [
+            0.00556,
+            -0.05391,
+            0.02891,
+            0.99811
+          ],
+          "linear_velocity": [
+            0.61569,
+            -0.28002,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.10684,
+            0.13077,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00025,
+          "max_normal_force": 4.9023
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.69603,
+            0.39403,
+            0.20996
+          ],
+          "orientation": [
+            0.0,
+            -4e-05,
+            0.21513,
+            0.97659
+          ],
+          "linear_velocity": [
+            -0.55872,
+            0.29094,
+            0.00047
+          ],
+          "angular_velocity": [
+            -4e-05,
+            0.00177,
+            -6.75385
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.79861,
+            -0.32801,
+            0.23999
+          ],
+          "orientation": [
+            0.00804,
+            -0.05104,
+            0.0303,
+            0.9982
+          ],
+          "linear_velocity": [
+            0.61389,
+            -0.27924,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.115,
+            0.14951,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00012,
+          "max_normal_force": 4.90767
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.71928,
+            0.40614,
+            0.20974
+          ],
+          "orientation": [
+            5e-05,
+            -0.00059,
+            0.0764,
+            0.99708
+          ],
+          "linear_velocity": [
+            -0.55782,
+            0.29028,
+            0.00518
+          ],
+          "angular_velocity": [
+            -0.00491,
+            0.02416,
+            -6.72125
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.82414,
+            -0.33963,
+            0.23999
+          ],
+          "orientation": [
+            0.01071,
+            -0.04778,
+            0.03168,
+            0.9983
+          ],
+          "linear_velocity": [
+            0.61209,
+            -0.27846,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.12316,
+            0.16824,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00055,
+          "max_normal_force": 8.0429
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.74251,
+            0.41823,
+            0.20954
+          ],
+          "orientation": [
+            -6e-05,
+            -0.00106,
+            -0.06315,
+            0.998
+          ],
+          "linear_velocity": [
+            -0.55718,
+            0.28974,
+            0.00931
+          ],
+          "angular_velocity": [
+            0.00386,
+            0.0442,
+            -6.68759
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.84961,
+            -0.35121,
+            0.23999
+          ],
+          "orientation": [
+            0.01355,
+            -0.04413,
+            0.03305,
+            0.99839
+          ],
+          "linear_velocity": [
+            0.61029,
+            -0.27767,
+            0.0
+          ],
+          "angular_velocity": [
+            0.13132,
+            0.18698,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00098,
+          "max_normal_force": 7.95956
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.76571,
+            0.43029,
+            0.20969
+          ],
+          "orientation": [
+            -0.00015,
+            -0.00069,
+            -0.20077,
+            0.97964
+          ],
+          "linear_velocity": [
+            -0.55654,
+            0.28918,
+            0.00622
+          ],
+          "angular_velocity": [
+            0.01087,
+            0.02732,
+            -6.65515
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.87499,
+            -0.36276,
+            0.23999
+          ],
+          "orientation": [
+            0.01658,
+            -0.0401,
+            0.0344,
+            0.99847
+          ],
+          "linear_velocity": [
+            0.60849,
+            -0.27689,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.13948,
+            0.20572,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 31,
+          "min_contact_distance": -0.00107,
+          "max_normal_force": 7.88741
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.78889,
+            0.44232,
+            0.20986
+          ],
+          "orientation": [
+            -0.00011,
+            -0.00029,
+            -0.3339,
+            0.94261
+          ],
+          "linear_velocity": [
+            -0.5559,
+            0.28836,
+            0.00272
+          ],
+          "angular_velocity": [
+            0.0079,
+            0.01013,
+            -6.62378
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.90031,
+            -0.37428,
+            0.23999
+          ],
+          "orientation": [
+            0.01979,
+            -0.03568,
+            0.03574,
+            0.99853
+          ],
+          "linear_velocity": [
+            0.60669,
+            -0.27611,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.14763,
+            0.22446,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 35,
+          "min_contact_distance": -0.00061,
+          "max_normal_force": 4.85812
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.81205,
+            0.45431,
+            0.20993
+          ],
+          "orientation": [
+            -7e-05,
+            -0.00012,
+            -0.46006,
+            0.88789
+          ],
+          "linear_velocity": [
+            -0.55575,
+            0.28739,
+            0.00116
+          ],
+          "angular_velocity": [
+            0.00451,
+            0.0035,
+            -6.59126
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.92554,
+            -0.38577,
+            0.23999
+          ],
+          "orientation": [
+            0.02319,
+            -0.03088,
+            0.03707,
+            0.99857
+          ],
+          "linear_velocity": [
+            0.60489,
+            -0.27532,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.15579,
+            0.2432,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 32,
+          "min_contact_distance": -0.00027,
+          "max_normal_force": 4.89816
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.83521,
+            0.46628,
+            0.20996
+          ],
+          "orientation": [
+            -4e-05,
+            -5e-05,
+            -0.57695,
+            0.81678
+          ],
+          "linear_velocity": [
+            -0.5559,
+            0.28705,
+            0.0005
+          ],
+          "angular_velocity": [
+            0.00234,
+            0.00097,
+            -6.55748
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.95071,
+            -0.39722,
+            0.23999
+          ],
+          "orientation": [
+            0.02676,
+            -0.0257,
+            0.03838,
+            0.99857
+          ],
+          "linear_velocity": [
+            0.60309,
+            -0.27454,
+            0.0
+          ],
+          "angular_velocity": [
+            0.16395,
+            0.26194,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00013,
+          "max_normal_force": 4.89814
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.85837,
+            0.47824,
+            0.20998
+          ],
+          "orientation": [
+            -2e-05,
+            -2e-05,
+            -0.68253,
+            0.73086
+          ],
+          "linear_velocity": [
+            -0.55582,
+            0.28713,
+            0.00022
+          ],
+          "angular_velocity": [
+            0.00116,
+            0.0002,
+            -6.52331
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            0.97579,
+            -0.40864,
+            0.23999
+          ],
+          "orientation": [
+            0.03052,
+            -0.02012,
+            0.03967,
+            0.99854
+          ],
+          "linear_velocity": [
+            0.60129,
+            -0.27376,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.17211,
+            0.28068,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -6e-05,
+          "max_normal_force": 4.90126
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.88152,
+            0.49021,
+            0.20998
+          ],
+          "orientation": [
+            -1e-05,
+            -1e-05,
+            -0.77501,
+            0.63195
+          ],
+          "linear_velocity": [
+            -0.55549,
+            0.28742,
+            9e-05
+          ],
+          "angular_velocity": [
+            0.00059,
+            1e-05,
+            -6.48898
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.00081,
+            -0.42003,
+            0.23999
+          ],
+          "orientation": [
+            0.03447,
+            -0.01417,
+            0.04095,
+            0.99847
+          ],
+          "linear_velocity": [
+            0.5995,
+            -0.27297,
+            0.0
+          ],
+          "angular_velocity": [
+            0.18027,
+            0.29942,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -4e-05,
+          "max_normal_force": 4.90523
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.90465,
+            0.50219,
+            0.20999
+          ],
+          "orientation": [
+            -1e-05,
+            -0.0,
+            -0.85291,
+            0.52206
+          ],
+          "linear_velocity": [
+            -0.55473,
+            0.28773,
+            3e-05
+          ],
+          "angular_velocity": [
+            0.00031,
+            -4e-05,
+            -6.45589
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.02574,
+            -0.43139,
+            0.23999
+          ],
+          "orientation": [
+            0.0386,
+            -0.00783,
+            0.0422,
+            0.99833
+          ],
+          "linear_velocity": [
+            0.5977,
+            -0.27219,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.18842,
+            0.31815,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 35,
+          "min_contact_distance": -2e-05,
+          "max_normal_force": 4.9078
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.92773,
+            0.51418,
+            0.20999
+          ],
+          "orientation": [
+            0.0,
+            -0.0,
+            0.91507,
+            -0.4033
+          ],
+          "linear_velocity": [
+            -0.55334,
+            0.28788,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.0002,
+            -4e-05,
+            -6.42507
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.05061,
+            -0.44271,
+            0.23999
+          ],
+          "orientation": [
+            0.04291,
+            -0.00111,
+            0.04344,
+            0.99813
+          ],
+          "linear_velocity": [
+            0.5959,
+            -0.27141,
+            0.0
+          ],
+          "angular_velocity": [
+            0.19658,
+            0.33689,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 35,
+          "min_contact_distance": -2e-05,
+          "max_normal_force": 4.91177
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.95075,
+            0.52617,
+            0.20978
+          ],
+          "orientation": [
+            0.00033,
+            -0.00014,
+            0.96061,
+            -0.27789
+          ],
+          "linear_velocity": [
+            -0.55167,
+            0.28748,
+            0.00436
+          ],
+          "angular_velocity": [
+            -0.00859,
+            -0.01342,
+            -6.39529
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.07539,
+            -0.454,
+            0.23999
+          ],
+          "orientation": [
+            0.0474,
+            0.00599,
+            0.04466,
+            0.99786
+          ],
+          "linear_velocity": [
+            0.5941,
+            -0.27062,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.20474,
+            0.35563,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 29,
+          "min_contact_distance": -0.00047,
+          "max_normal_force": 10.17335
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.97371,
+            0.53813,
+            0.20964
+          ],
+          "orientation": [
+            0.0006,
+            -0.00016,
+            0.98896,
+            -0.14816
+          ],
+          "linear_velocity": [
+            -0.55038,
+            0.28676,
+            0.00721
+          ],
+          "angular_velocity": [
+            -0.02093,
+            -0.01656,
+            -6.36419
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.10011,
+            -0.46526,
+            0.23999
+          ],
+          "orientation": [
+            0.05208,
+            0.01348,
+            0.04586,
+            0.9975
+          ],
+          "linear_velocity": [
+            0.5923,
+            -0.26984,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.2129,
+            0.37437,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 24,
+          "min_contact_distance": -0.00083,
+          "max_normal_force": 10.0771
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -0.99662,
+            0.55006,
+            0.20963
+          ],
+          "orientation": [
+            0.00093,
+            9e-05,
+            0.99986,
+            -0.01648
+          ],
+          "linear_velocity": [
+            -0.54956,
+            0.28609,
+            0.00758
+          ],
+          "angular_velocity": [
+            0.01069,
+            -0.04328,
+            -6.33148
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.12475,
+            -0.47648,
+            0.23999
+          ],
+          "orientation": [
+            0.05695,
+            0.02134,
+            0.04703,
+            0.99704
+          ],
+          "linear_velocity": [
+            0.5905,
+            -0.26906,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.22106,
+            0.39311,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00103,
+          "max_normal_force": 9.99829
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.0195,
+            0.56197,
+            0.20983
+          ],
+          "orientation": [
+            9e-05,
+            -0.00027,
+            0.99339,
+            0.1148
+          ],
+          "linear_velocity": [
+            -0.54885,
+            0.28537,
+            0.00324
+          ],
+          "angular_velocity": [
+            0.01238,
+            -0.03962,
+            -6.29888
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.14931,
+            -0.48768,
+            0.23999
+          ],
+          "orientation": [
+            0.06199,
+            0.02959,
+            0.04819,
+            0.99647
+          ],
+          "linear_velocity": [
+            0.5887,
+            -0.26827,
+            0.0
+          ],
+          "angular_velocity": [
+            0.22921,
+            0.41185,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00079,
+          "max_normal_force": 4.87632
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.04236,
+            0.57384,
+            0.20962
+          ],
+          "orientation": [
+            0.00086,
+            -0.00022,
+            0.96991,
+            0.24346
+          ],
+          "linear_velocity": [
+            -0.54804,
+            0.28484,
+            -0.00727
+          ],
+          "angular_velocity": [
+            -0.08054,
+            -0.00188,
+            -6.2675
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.1738,
+            -0.49884,
+            0.23999
+          ],
+          "orientation": [
+            0.06722,
+            0.03821,
+            0.04932,
+            0.99579
+          ],
+          "linear_velocity": [
+            0.5869,
+            -0.26749,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.23737,
+            0.43059,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00082,
+          "max_normal_force": 10.21784
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.06517,
+            0.58571,
+            0.20928
+          ],
+          "orientation": [
+            0.00157,
+            -0.00062,
+            0.93009,
+            0.36734
+          ],
+          "linear_velocity": [
+            -0.54698,
+            0.28463,
+            -0.02203
+          ],
+          "angular_velocity": [
+            0.06946,
+            0.07832,
+            -6.23786
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.19821,
+            -0.50996,
+            0.23999
+          ],
+          "orientation": [
+            0.07262,
+            0.04721,
+            0.05042,
+            0.99496
+          ],
+          "linear_velocity": [
+            0.5851,
+            -0.26671,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.24553,
+            0.44932,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00136,
+          "max_normal_force": 10.64035
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.08792,
+            0.59756,
+            0.20924
+          ],
+          "orientation": [
+            0.00164,
+            -0.0011,
+            0.87482,
+            0.48444
+          ],
+          "linear_velocity": [
+            -0.54549,
+            0.2842,
+            0.01569
+          ],
+          "angular_velocity": [
+            0.05359,
+            -0.06484,
+            -6.20498
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.22255,
+            -0.52106,
+            0.23999
+          ],
+          "orientation": [
+            0.07821,
+            0.05658,
+            0.0515,
+            0.994
+          ],
+          "linear_velocity": [
+            0.58331,
+            -0.26592,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.25369,
+            0.46806,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00165,
+          "max_normal_force": 10.61734
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.11063,
+            0.60939,
+            0.20919
+          ],
+          "orientation": [
+            0.00153,
+            -0.00113,
+            0.80527,
+            0.5929
+          ],
+          "linear_velocity": [
+            -0.54458,
+            0.28353,
+            -0.00068
+          ],
+          "angular_velocity": [
+            -0.10219,
+            0.05296,
+            -6.1744
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.24681,
+            -0.53212,
+            0.23999
+          ],
+          "orientation": [
+            0.08398,
+            0.06633,
+            0.05255,
+            0.99287
+          ],
+          "linear_velocity": [
+            0.58151,
+            -0.26514,
+            0.0
+          ],
+          "angular_velocity": [
+            0.26185,
+            0.4868,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.00175,
+          "max_normal_force": 10.53573
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.13331,
+            0.62119,
+            0.2091
+          ],
+          "orientation": [
+            0.00154,
+            -0.00147,
+            0.72282,
+            0.69103
+          ],
+          "linear_velocity": [
+            -0.54409,
+            0.28314,
+            -0.0178
+          ],
+          "angular_velocity": [
+            0.08416,
+            0.00617,
+            -6.14275
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.271,
+            -0.54315,
+            0.23999
+          ],
+          "orientation": [
+            0.08993,
+            0.07645,
+            0.05357,
+            0.99156
+          ],
+          "linear_velocity": [
+            0.57971,
+            -0.26436,
+            0.0
+          ],
+          "angular_velocity": [
+            0.27,
+            0.50554,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 26,
+          "min_contact_distance": -0.00179,
+          "max_normal_force": 10.51838
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.15596,
+            0.63299,
+            0.20957
+          ],
+          "orientation": [
+            0.00073,
+            -0.0008,
+            0.62906,
+            0.77736
+          ],
+          "linear_velocity": [
+            -0.54347,
+            0.28328,
+            0.00876
+          ],
+          "angular_velocity": [
+            -0.06156,
+            -0.00562,
+            -6.10654
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.29511,
+            -0.55415,
+            0.23999
+          ],
+          "orientation": [
+            0.09605,
+            0.08693,
+            0.05456,
+            0.99007
+          ],
+          "linear_velocity": [
+            0.57791,
+            -0.26358,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.27816,
+            0.52428,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 27,
+          "min_contact_distance": -0.0018,
+          "max_normal_force": 10.51377
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.17859,
+            0.6448,
+            0.2098
+          ],
+          "orientation": [
+            -0.00041,
+            -0.00023,
+            0.52567,
+            0.85069
+          ],
+          "linear_velocity": [
+            -0.54269,
+            0.28376,
+            0.00379
+          ],
+          "angular_velocity": [
+            -0.05813,
+            -0.00667,
+            -6.07381
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.31915,
+            -0.56511,
+            0.23999
+          ],
+          "orientation": [
+            0.10234,
+            0.09777,
+            0.05552,
+            0.98837
+          ],
+          "linear_velocity": [
+            0.57611,
+            -0.26279,
+            0.0
+          ],
+          "angular_velocity": [
+            0.28632,
+            0.54302,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 25,
+          "min_contact_distance": -0.00086,
+          "max_normal_force": 4.88139
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.20117,
+            0.65663,
+            0.20991
+          ],
+          "orientation": [
+            -0.00019,
+            -7e-05,
+            0.41443,
+            0.91008
+          ],
+          "linear_velocity": [
+            -0.54121,
+            0.28406,
+            0.0017
+          ],
+          "angular_velocity": [
+            0.01506,
+            0.0071,
+            -6.04343
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.34311,
+            -0.57604,
+            0.23999
+          ],
+          "orientation": [
+            0.10881,
+            0.10898,
+            0.05645,
+            0.98646
+          ],
+          "linear_velocity": [
+            0.57431,
+            -0.26201,
+            -0.0
+          ],
+          "angular_velocity": [
+            0.29448,
+            0.56176,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 29,
+          "min_contact_distance": -0.00046,
+          "max_normal_force": 4.89482
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.22369,
+            0.66846,
+            0.20988
+          ],
+          "orientation": [
+            -2e-05,
+            -0.00019,
+            0.29719,
+            0.95482
+          ],
+          "linear_velocity": [
+            -0.53982,
+            0.28356,
+            0.00222
+          ],
+          "angular_velocity": [
+            -0.0021,
+            0.00812,
+            -6.01359
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.367,
+            -0.58694,
+            0.23999
+          ],
+          "orientation": [
+            0.11545,
+            0.12054,
+            0.05734,
+            0.9843
+          ],
+          "linear_velocity": [
+            0.57251,
+            -0.26123,
+            0.0
+          ],
+          "angular_velocity": [
+            0.30264,
+            0.5805,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 32,
+          "min_contact_distance": -0.00031,
+          "max_normal_force": 6.09816
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.24615,
+            0.68026,
+            0.20994
+          ],
+          "orientation": [
+            -1e-05,
+            -8e-05,
+            0.17589,
+            0.98441
+          ],
+          "linear_velocity": [
+            -0.53839,
+            0.28285,
+            0.00096
+          ],
+          "angular_velocity": [
+            0.00034,
+            0.00351,
+            -5.98351
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.39082,
+            -0.59781,
+            0.23999
+          ],
+          "orientation": [
+            0.12226,
+            0.13245,
+            0.0582,
+            0.9819
+          ],
+          "linear_velocity": [
+            0.57071,
+            -0.26044,
+            0.0
+          ],
+          "angular_velocity": [
+            0.31079,
+            0.59923,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 30,
+          "min_contact_distance": -0.00023,
+          "max_normal_force": 4.90026
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.26856,
+            0.69203,
+            0.20991
+          ],
+          "orientation": [
+            -1e-05,
+            -0.00017,
+            0.05249,
+            0.99862
+          ],
+          "linear_velocity": [
+            -0.53744,
+            0.28211,
+            0.00165
+          ],
+          "angular_velocity": [
+            -0.00168,
+            0.00809,
+            -5.95131
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.41455,
+            -0.60864,
+            0.23999
+          ],
+          "orientation": [
+            0.12923,
+            0.14472,
+            0.05902,
+            0.97922
+          ],
+          "linear_velocity": [
+            0.56891,
+            -0.25966,
+            0.0
+          ],
+          "angular_velocity": [
+            0.31895,
+            0.61797,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 29,
+          "min_contact_distance": -0.00029,
+          "max_normal_force": 8.04157
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "blue_left_cube",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.42,
+            0.42,
+            0.42
+          ],
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "position": [
+            -1.29094,
+            0.70377,
+            0.20995
+          ],
+          "orientation": [
+            -2e-05,
+            -7e-05,
+            -0.07103,
+            0.99747
+          ],
+          "linear_velocity": [
+            -0.53675,
+            0.28154,
+            0.00069
+          ],
+          "angular_velocity": [
+            0.00079,
+            0.00267,
+            -5.91827
+          ]
+        },
+        {
+          "name": "red_right_sphere",
+          "shape": "sphere",
+          "radius": 0.24,
+          "size": null,
+          "role": "dynamic",
+          "mass": 1.0,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "position": [
+            1.43822,
+            -0.61945,
+            0.23999
+          ],
+          "orientation": [
+            0.13636,
+            0.15732,
+            0.05981,
+            0.97626
+          ],
+          "linear_velocity": [
+            0.56712,
+            -0.25888,
+            0.0
+          ],
+          "angular_velocity": [
+            0.32711,
+            0.63671,
+            0.07383
+          ]
+        }
+      ],
+      "contacts_since_previous_frame": [
+        {
+          "body_a": "blue_left_cube",
+          "body_b": "ground_collider",
+          "samples": 32,
+          "min_contact_distance": -0.00017,
+          "max_normal_force": 4.90782
+        },
+        {
+          "body_a": "ground_collider",
+          "body_b": "red_right_sphere",
+          "samples": 10,
+          "min_contact_distance": -1e-05,
+          "max_normal_force": 9.81
+        }
+      ]
+    }
+  ],
+  "video": "videos/clip_053_cam_top_down_drift_phys_cube_sphere_collision.mp4"
+}

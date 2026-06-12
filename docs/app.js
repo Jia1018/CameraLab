@@ -142,7 +142,7 @@ function sameIndex(a, b) {
 }
 
 function renderRunSelect(index) {
-  const selected = runSelect.value || index.runs[0]?.manifest;
+  const selected = runSelect.value || index.runs[index.runs.length - 1]?.manifest;
   runSelect.innerHTML = index.runs.map((run) => `<option value="${run.manifest}">${run.run_id}</option>`).join("");
   if (index.runs.some((run) => run.manifest === selected)) {
     runSelect.value = selected;
