@@ -13,7 +13,9 @@ In the current bank generator, `scene_id` is explicit. A "same physics" pair mea
 
 - `scripts/generate_mock_pairs.py`: 2D dependency-light preview generator.
 - `scripts/generate_kubric_pairs.py`: older Kubric-oriented contract scaffold.
-- `scripts/generate_kubric_review_bank.py`: current review-bank generator; uses PyBullet for rigid-body simulation and Blender for rendering, with Kubric-style camera/physics/scene factor contracts.
+- `scripts/generate_kubric_review_bank.py`: previous review-bank generator; uses direct PyBullet for rigid-body simulation and Blender for rendering, with Kubric-style camera/physics/scene factor contracts.
+- `scripts/generate_official_kubric_review_bank.py`: current official-Kubric review-bank generator; uses PyPI `kubric` scene objects, Kubric PyBullet, and Kubric Blender renderer.
+- `scripts/kubric_official_smoke.py`: smoke tests for the official PyPI `kubric` package, covering Kubric PyBullet and Blender renderer.
 - `scripts/generate_blender_pairs.py`: small 3-clip Blender preview.
 - `scripts/generate_blender_rich_pairs.py`: hand-authored richer 6-clip Blender preview.
 - `scripts/generate_blender_bank_pairs.py`: balanced combinatorial Blender preview bank used before the PyBullet review bank.
@@ -34,7 +36,7 @@ On a fresh container, install the small system libraries Blender needs:
 
 ```bash
 apt-get update
-apt-get install -y libsm6 libice6 libxext6 libegl1 libgl1 libxi6 libxrender1 libxkbcommon0
+apt-get install -y libsm6 libice6 libxext6 libegl1 libegl-mesa0 libgl1 libxi6 libxrender1 libxkbcommon0
 ```
 
 Verify Blender can start:
@@ -49,18 +51,102 @@ Expected version is Blender `3.6.5`. If `ldd` reports missing libraries, check w
 ldd /workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender | grep 'not found'
 ```
 
-The Python environments live under `/workspace/writeable/environments/`. The review-bank environment used here is `/workspace/writeable/environments/kubric_review`; it contains `pybullet`, `opencv-python-headless`, `pillow`, `imageio`, and `numpy`. The WHAC environment is `/workspace/writeable/environments/whac/.venv`. Blender-only scripts are run by Blender's bundled Python.
+The Python environments live under `/workspace/writeable/environments/`. The review-bank environment used here is `/workspace/writeable/environments/kubric_review`; it contains `pybullet`, `opencv-python-headless`, `pillow`, `imageio`, and `numpy`. The official Kubric test environment is `/workspace/writeable/environments/kubric_official`. The WHAC environment is `/workspace/writeable/environments/whac/.venv`. Blender-only scripts are run by Blender's bundled Python.
 
-## Generate The Kubric Review Bank
+## Official Kubric Smoke Tests
 
-`kubric_review_v0` is the current human-review bank. It is intentionally small enough for GitHub Pages and manual inspection:
+The current review-bank generator is still Kubric-style PyBullet plus Blender, but the official PyPI `kubric` package now runs in this container with a few compatibility constraints:
 
-- 42 clips from 6 camera trajectories x 7 physics programs;
-- 72 balanced pair groups: 36 same-camera/different-physics and 36 same-physics/same-scene/different-camera;
+- use `PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python`, because Kubric `0.1.1` needs older TFDS/protobuf behavior;
+- expose the official venv packages to Blender with `PYTHONPATH=/workspace/writeable/environments/kubric_official/lib/python3.10/site-packages`;
+- Kubric `0.1.1` expects Blender's old `NLM` denoiser enum, so `scripts/kubric_official_smoke.py` applies a small Blender 3.6 compatibility patch for `OPENIMAGEDENOISE`.
+
+Create or repair the official Kubric environment:
+
+```bash
+python3 -m venv /workspace/writeable/environments/kubric_official
+/workspace/writeable/environments/kubric_official/bin/python -m pip install --upgrade pip setuptools wheel
+/workspace/writeable/environments/kubric_official/bin/python -m pip install --no-deps kubric
+/workspace/writeable/environments/kubric_official/bin/python -m pip install \
+  traitlets numpy pyquaternion trimesh imageio pypng pandas munch bidict \
+  singledispatchmethod pybullet scipy scikit-learn tensorflow==2.20.0 \
+  tensorflow-datasets==4.4.0 OpenEXR Imath
+```
+
+Run the official Kubric physics smoke test:
+
+```bash
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
+/workspace/writeable/environments/kubric_official/bin/python \
+  scripts/kubric_official_smoke.py \
+  --mode physics \
+  --out-dir /tmp/kubric_official_smoke
+```
+
+Run the official Kubric Blender renderer smoke test:
+
+```bash
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
+PYTHONPATH=/workspace/writeable/environments/kubric_official/lib/python3.10/site-packages \
+/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender \
+  --background \
+  --python scripts/kubric_official_smoke.py \
+  -- \
+  --mode render \
+  --out-dir /tmp/kubric_official_smoke
+```
+
+The render smoke test should write `/tmp/kubric_official_smoke/frame_0001.png`.
+
+## Generate The Official Kubric Review Bank
+
+`kubric_review_v2_official` is the current official-Kubric human-review bank:
+
+- 15 clips from 3 camera trajectories x 5 physics programs;
+- 20 pair groups across same-camera/different-physics and same-physics/same-scene/different-camera comparisons;
+- 30 frames at 24 fps, 160x120 review resolution;
+- official `kubric.simulator.PyBullet` runs the rigid-body simulation;
+- official `kubric.renderer.Blender` renders PNG frames, then system `ffmpeg` encodes MP4 for GitHub Pages;
+- each physics program audits expected contacts before rendering, using Kubric collision logs plus visible geometry contact checks.
+
+Generate the official bank, previews, and deployable docs copy:
+
+```bash
+cd /workspace/writeable/code/camera_motion_disentangle
+
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
+/workspace/writeable/environments/kubric_official/bin/python \
+  scripts/generate_official_kubric_review_bank.py \
+  --run-id kubric_review_v2_official \
+  --camera-limit 3 \
+  --physics-limit 5 \
+  --pairs 20 \
+  --frames 30 \
+  --width 160 \
+  --height 120 \
+  --overwrite
+
+/workspace/writeable/environments/kubric_review/bin/python \
+  scripts/make_run_previews.py \
+  --run-dir site/assets/runs/kubric_review_v2_official \
+  --samples 8 \
+  --thumb-width 160
+
+bash scripts/sync_site_to_docs.sh
+```
+
+The `site/` run keeps temporary `frames/` for debugging; `scripts/sync_site_to_docs.sh` excludes those frames from `docs/`.
+
+## Generate The Kubric-Style Review Bank
+
+`kubric_review_v1` is the previous Kubric-style human-review bank. It is intentionally small enough for GitHub Pages and manual inspection:
+
+- 54 clips from 6 camera trajectories x 9 physics programs;
+- 90 balanced pair groups across same-camera/different-physics and same-physics/same-scene/different-camera comparisons;
 - one diagnostic ambiguity group for dolly-in vs object-moving-toward-camera;
 - PyBullet simulates rigid bodies at 240 Hz, then Blender renders the cached trajectories.
 
-The official PyPI `kubric` package was not used in this container because its dependency resolver failed on the current Python stack. This review bank still uses the Kubric-style split we need for data design: explicit `camera_id`, `physics_id`, and `scene_id`, real PyBullet contacts, and Blender-rendered videos.
+The official PyPI `kubric` package was not used for `kubric_review_v1`; that run uses a local Kubric-style split with explicit `camera_id`, `physics_id`, and `scene_id`, real PyBullet contacts, and Blender-rendered videos. Official Kubric is now available through `scripts/generate_official_kubric_review_bank.py`; use `kubric_review_v2_official` for the current review pass.
 
 Create or repair the lightweight Python environment:
 
@@ -144,3 +230,4 @@ The current review-bank generator addresses the earlier failure modes:
 - camera trajectories are sampled from per-axis Gaussian motion profiles; same-camera pairs still share the exact sampled `camera_id` trajectory.
 - dynamic roll and angle changes are mostly slow, small-amplitude camera motions for human review comfort; abrupt large rotations are rare hard cases, not the default.
 - `kubric_review_v1` uses PyBullet rigid-body trajectories for contacts and collisions; the older Blender banks remain useful only as visual/contract previews.
+- only part of the current PyBullet review-bank parameter space is Gaussian-sampled. Camera velocities and several object speed scalars use clipped Gaussians, but object size, mass, friction, restitution, many start positions, and some velocity components are still fixed hand-tuned constants. The next official-Kubric iteration should move those physical/material parameters to clipped Gaussian or mixture distributions with collision-quality filters.

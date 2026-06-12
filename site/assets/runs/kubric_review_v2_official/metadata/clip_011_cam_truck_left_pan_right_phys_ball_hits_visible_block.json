@@ -1,0 +1,3391 @@
+{
+  "clip_id": "clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block",
+  "camera_id": "cam_truck_left_pan_right",
+  "physics_id": "phys_ball_hits_visible_block",
+  "scene_id": "scene_gray_low_wall",
+  "fps": 24,
+  "frames_count": 30,
+  "duration_s": 1.20833,
+  "resolution": [
+    160,
+    120
+  ],
+  "generator": "official_kubric_review",
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "camera_spec": {
+    "id": "cam_truck_left_pan_right",
+    "primitives": [
+      "truck_left",
+      "pan_right",
+      "off_center_start"
+    ],
+    "speed_class": "medium",
+    "start_position": [
+      2.85,
+      -4.1,
+      1.35
+    ],
+    "start_target": [
+      0.35,
+      0.0,
+      0.38
+    ],
+    "linear_velocity_mps": [
+      -0.33118,
+      0.03,
+      0.0
+    ],
+    "target_velocity_mps": [
+      -0.08,
+      0.02,
+      0.0
+    ],
+    "roll_start_deg": -0.09788,
+    "roll_velocity_deg_s": -0.05522,
+    "lens_mm": 37.56406,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "camera position, target, roll, and lens velocities are clipped Gaussian samples"
+  },
+  "physics_spec": {
+    "id": "phys_ball_hits_visible_block",
+    "kind": "dynamic_static_collision",
+    "speed_class": "medium",
+    "description": "Sphere collides with a visible static cube obstacle.",
+    "sample_model": "sphere radius, block size, velocity, mass, friction, and restitution are clipped Gaussian samples.",
+    "expected_contacts": [
+      [
+        "teal_block_target",
+        "violet_hit_sphere"
+      ]
+    ],
+    "bodies": [
+      {
+        "name": "violet_hit_sphere",
+        "shape": "sphere",
+        "radius": 0.23197,
+        "scale": [
+          0.23197,
+          0.23197,
+          0.23197
+        ],
+        "position": [
+          -0.85,
+          0.0,
+          0.23197
+        ],
+        "velocity": [
+          2.01939,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 0.84577,
+        "restitution": 0.68242,
+        "friction": 0.01744,
+        "static": false,
+        "color": [
+          0.48,
+          0.3,
+          0.78,
+          1.0
+        ],
+        "role": "dynamic"
+      },
+      {
+        "name": "teal_block_target",
+        "shape": "box",
+        "half_extents": [
+          0.20475,
+          0.30264,
+          0.25338
+        ],
+        "size": [
+          0.4095,
+          0.60528,
+          0.50676
+        ],
+        "scale": [
+          0.20475,
+          0.30264,
+          0.25338
+        ],
+        "position": [
+          -0.05,
+          0.0,
+          0.28
+        ],
+        "velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 0.0,
+        "restitution": 0.80898,
+        "friction": 0.28252,
+        "static": true,
+        "color": [
+          0.1,
+          0.56,
+          0.5,
+          1.0
+        ],
+        "role": "visible_static_obstacle"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_gray_low_wall",
+    "ground_color": [
+      0.64,
+      0.66,
+      0.62,
+      1.0
+    ],
+    "back_wall_color": [
+      0.77,
+      0.78,
+      0.75,
+      1.0
+    ],
+    "side_wall_color": [
+      0.69,
+      0.71,
+      0.7,
+      1.0
+    ],
+    "wall_height": 2.1,
+    "wall_style": "plain",
+    "floor_style": "subtle_marks",
+    "static_props": []
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "position": [
+        2.85,
+        -4.1,
+        1.35
+      ],
+      "look_at": [
+        0.35,
+        0.0,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74495,
+        0.60981,
+        0.17069,
+        0.20989
+      ],
+      "roll_deg": -0.09788,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "position": [
+        2.8362,
+        -4.09875,
+        1.35
+      ],
+      "look_at": [
+        0.34667,
+        0.00083,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.7452,
+        0.60988,
+        0.1701,
+        0.20925
+      ],
+      "roll_deg": -0.10018,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "position": [
+        2.8224,
+        -4.0975,
+        1.35
+      ],
+      "look_at": [
+        0.34333,
+        0.00167,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74546,
+        0.60995,
+        0.16951,
+        0.20861
+      ],
+      "roll_deg": -0.10248,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "position": [
+        2.8086,
+        -4.09625,
+        1.35
+      ],
+      "look_at": [
+        0.34,
+        0.0025,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74572,
+        0.61002,
+        0.16892,
+        0.20796
+      ],
+      "roll_deg": -0.10478,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "position": [
+        2.7948,
+        -4.095,
+        1.35
+      ],
+      "look_at": [
+        0.33667,
+        0.00333,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74598,
+        0.61009,
+        0.16832,
+        0.20731
+      ],
+      "roll_deg": -0.10708,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "position": [
+        2.781,
+        -4.09375,
+        1.35
+      ],
+      "look_at": [
+        0.33333,
+        0.00417,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74623,
+        0.61016,
+        0.16772,
+        0.20666
+      ],
+      "roll_deg": -0.10938,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "position": [
+        2.76721,
+        -4.0925,
+        1.35
+      ],
+      "look_at": [
+        0.33,
+        0.005,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74649,
+        0.61023,
+        0.16713,
+        0.20601
+      ],
+      "roll_deg": -0.11168,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "position": [
+        2.75341,
+        -4.09125,
+        1.35
+      ],
+      "look_at": [
+        0.32667,
+        0.00583,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74675,
+        0.6103,
+        0.16653,
+        0.20536
+      ],
+      "roll_deg": -0.11399,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "position": [
+        2.73961,
+        -4.09,
+        1.35
+      ],
+      "look_at": [
+        0.32333,
+        0.00667,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.747,
+        0.61037,
+        0.16593,
+        0.2047
+      ],
+      "roll_deg": -0.11629,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "position": [
+        2.72581,
+        -4.08875,
+        1.35
+      ],
+      "look_at": [
+        0.32,
+        0.0075,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74726,
+        0.61044,
+        0.16533,
+        0.20404
+      ],
+      "roll_deg": -0.11859,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "position": [
+        2.71201,
+        -4.0875,
+        1.35
+      ],
+      "look_at": [
+        0.31667,
+        0.00833,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74752,
+        0.61051,
+        0.16472,
+        0.20338
+      ],
+      "roll_deg": -0.12089,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "position": [
+        2.69821,
+        -4.08625,
+        1.35
+      ],
+      "look_at": [
+        0.31333,
+        0.00917,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74777,
+        0.61058,
+        0.16412,
+        0.20272
+      ],
+      "roll_deg": -0.12319,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "position": [
+        2.68441,
+        -4.085,
+        1.35
+      ],
+      "look_at": [
+        0.31,
+        0.01,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74803,
+        0.61065,
+        0.16351,
+        0.20206
+      ],
+      "roll_deg": -0.12549,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "position": [
+        2.67061,
+        -4.08375,
+        1.35
+      ],
+      "look_at": [
+        0.30667,
+        0.01083,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74828,
+        0.61072,
+        0.16291,
+        0.20139
+      ],
+      "roll_deg": -0.12779,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "position": [
+        2.65681,
+        -4.0825,
+        1.35
+      ],
+      "look_at": [
+        0.30333,
+        0.01167,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74854,
+        0.61078,
+        0.1623,
+        0.20072
+      ],
+      "roll_deg": -0.13009,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "position": [
+        2.64301,
+        -4.08125,
+        1.35
+      ],
+      "look_at": [
+        0.3,
+        0.0125,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74879,
+        0.61085,
+        0.16169,
+        0.20005
+      ],
+      "roll_deg": -0.13239,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "position": [
+        2.62921,
+        -4.08,
+        1.35
+      ],
+      "look_at": [
+        0.29667,
+        0.01333,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74905,
+        0.61092,
+        0.16108,
+        0.19938
+      ],
+      "roll_deg": -0.13469,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "position": [
+        2.61541,
+        -4.07875,
+        1.35
+      ],
+      "look_at": [
+        0.29333,
+        0.01417,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.7493,
+        0.61099,
+        0.16047,
+        0.19871
+      ],
+      "roll_deg": -0.13699,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "position": [
+        2.60162,
+        -4.0775,
+        1.35
+      ],
+      "look_at": [
+        0.29,
+        0.015,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74956,
+        0.61106,
+        0.15985,
+        0.19803
+      ],
+      "roll_deg": -0.1393,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "position": [
+        2.58782,
+        -4.07625,
+        1.35
+      ],
+      "look_at": [
+        0.28667,
+        0.01583,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74981,
+        0.61112,
+        0.15924,
+        0.19736
+      ],
+      "roll_deg": -0.1416,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "position": [
+        2.57402,
+        -4.075,
+        1.35
+      ],
+      "look_at": [
+        0.28333,
+        0.01667,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75007,
+        0.61119,
+        0.15862,
+        0.19668
+      ],
+      "roll_deg": -0.1439,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "position": [
+        2.56022,
+        -4.07375,
+        1.35
+      ],
+      "look_at": [
+        0.28,
+        0.0175,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75032,
+        0.61126,
+        0.15801,
+        0.196
+      ],
+      "roll_deg": -0.1462,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "position": [
+        2.54642,
+        -4.0725,
+        1.35
+      ],
+      "look_at": [
+        0.27667,
+        0.01833,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75058,
+        0.61133,
+        0.15739,
+        0.19531
+      ],
+      "roll_deg": -0.1485,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "position": [
+        2.53262,
+        -4.07125,
+        1.35
+      ],
+      "look_at": [
+        0.27333,
+        0.01917,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75083,
+        0.61139,
+        0.15677,
+        0.19463
+      ],
+      "roll_deg": -0.1508,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "position": [
+        2.51882,
+        -4.07,
+        1.35
+      ],
+      "look_at": [
+        0.27,
+        0.02,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75108,
+        0.61146,
+        0.15615,
+        0.19394
+      ],
+      "roll_deg": -0.1531,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "position": [
+        2.50502,
+        -4.06875,
+        1.35
+      ],
+      "look_at": [
+        0.26667,
+        0.02083,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75134,
+        0.61153,
+        0.15552,
+        0.19325
+      ],
+      "roll_deg": -0.1554,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "position": [
+        2.49122,
+        -4.0675,
+        1.35
+      ],
+      "look_at": [
+        0.26333,
+        0.02167,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75159,
+        0.61159,
+        0.1549,
+        0.19256
+      ],
+      "roll_deg": -0.1577,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "position": [
+        2.47742,
+        -4.06625,
+        1.35
+      ],
+      "look_at": [
+        0.26,
+        0.0225,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75184,
+        0.61166,
+        0.15427,
+        0.19186
+      ],
+      "roll_deg": -0.16,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "position": [
+        2.46362,
+        -4.065,
+        1.35
+      ],
+      "look_at": [
+        0.25667,
+        0.02333,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75209,
+        0.61172,
+        0.15365,
+        0.19117
+      ],
+      "roll_deg": -0.1623,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "position": [
+        2.44982,
+        -4.06375,
+        1.35
+      ],
+      "look_at": [
+        0.25333,
+        0.02417,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75234,
+        0.61179,
+        0.15302,
+        0.19047
+      ],
+      "roll_deg": -0.1646,
+      "lens_mm": 37.56406
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.85,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            2.01939,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.76589,
+            0.0,
+            0.23191
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00016,
+            -0.0
+          ],
+          "linear_velocity": [
+            2.01808,
+            0.0,
+            0.00119
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.01414,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.68183,
+            0.0,
+            0.23195
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00062,
+            -0.0
+          ],
+          "linear_velocity": [
+            2.01677,
+            0.0,
+            0.00052
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.02821,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.59783,
+            0.0,
+            0.23196
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00137,
+            -0.0
+          ],
+          "linear_velocity": [
+            2.01547,
+            0.0,
+            0.00022
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.0423,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.51388,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00241,
+            -0.0
+          ],
+          "linear_velocity": [
+            2.01416,
+            0.0,
+            0.0001
+          ],
+          "angular_velocity": [
+            -0.0,
+            0.05639,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.51117,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00287,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.23392,
+            0.0,
+            4e-05
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.00665,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.56256,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00257,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.23261,
+            0.0,
+            2e-05
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.02075,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.61389,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00197,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.2313,
+            0.0,
+            1e-05
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.03484,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.66516,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            0.00109,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.23,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.04894,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.71638,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            -9e-05,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22869,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.06304,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.76755,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            1.0,
+            -0.0,
+            -0.00157,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22738,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.07713,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.81866,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99999,
+            -0.0,
+            -0.00334,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22607,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.09123,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.86971,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99999,
+            -0.0,
+            -0.0054,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22476,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.10533,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.92071,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99997,
+            -0.0,
+            -0.00776,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22346,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.11942,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.97166,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99995,
+            -0.0,
+            -0.0104,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22215,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.13352,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.02256,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99991,
+            -0.0,
+            -0.01335,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.22084,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.14762,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.07339,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99986,
+            -0.0,
+            -0.01658,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21953,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.16171,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.12418,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.9998,
+            -0.0,
+            -0.02011,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21822,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.17581,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.17491,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99971,
+            -0.0,
+            -0.02394,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21692,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.18991,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.22558,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99961,
+            -0.0,
+            -0.02805,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21561,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.204,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.2762,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99947,
+            -0.0,
+            -0.03246,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.2143,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.2181,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.32677,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99931,
+            -0.0,
+            -0.03717,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21299,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.2322,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.37728,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99911,
+            -0.0,
+            -0.04216,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21168,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.24629,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.42774,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99887,
+            -0.0,
+            -0.04745,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.21038,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.26039,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.47814,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99859,
+            -0.0,
+            -0.05303,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.20907,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.27449,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.52849,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99826,
+            -0.0,
+            -0.0589,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.20776,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.28858,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.57878,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99788,
+            -0.0,
+            -0.06506,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.20645,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.30268,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.62902,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99744,
+            -0.0,
+            -0.07151,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.20514,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.31678,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.6792,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99693,
+            -0.0,
+            -0.07825,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.20384,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.33087,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -1.72933,
+            0.0,
+            0.23197
+          ],
+          "orientation_wxyz": [
+            0.99636,
+            -0.0,
+            -0.08529,
+            -0.0
+          ],
+          "linear_velocity": [
+            -1.20253,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.0,
+            -0.34497,
+            -0.0
+          ]
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "radius": null,
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle",
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_audit": {
+    "expected_contacts": [
+      [
+        "teal_block_target",
+        "violet_hit_sphere"
+      ]
+    ],
+    "expected_contacts_passed": true,
+    "collision_log_contacts_passed": true,
+    "visual_contacts_passed": true,
+    "collision_summary": {
+      "pairs": [
+        {
+          "pair": [
+            "ground",
+            "violet_hit_sphere"
+          ],
+          "samples": 298,
+          "first_frame": 0.1,
+          "max_force": 21.17047
+        },
+        {
+          "pair": [
+            "teal_block_target",
+            "violet_hit_sphere"
+          ],
+          "samples": 1,
+          "first_frame": 4.5,
+          "max_force": 659.35985
+        }
+      ]
+    }
+  },
+  "orientation_format": "wxyz",
+  "video": "videos/clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block.mp4",
+  "frames_dir": "frames/clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block"
+}

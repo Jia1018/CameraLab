@@ -1,0 +1,2047 @@
+{
+  "clip_id": "clip_005_cam_truck_left_pan_right_phys_drop_bounce",
+  "camera_id": "cam_truck_left_pan_right",
+  "physics_id": "phys_drop_bounce",
+  "scene_id": "scene_blue_tall_wall",
+  "fps": 24,
+  "frames_count": 30,
+  "duration_s": 1.20833,
+  "resolution": [
+    160,
+    120
+  ],
+  "generator": "official_kubric_review",
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "camera_spec": {
+    "id": "cam_truck_left_pan_right",
+    "primitives": [
+      "truck_left",
+      "pan_right",
+      "off_center_start"
+    ],
+    "speed_class": "medium",
+    "start_position": [
+      2.85,
+      -4.1,
+      1.35
+    ],
+    "start_target": [
+      0.35,
+      0.0,
+      0.38
+    ],
+    "linear_velocity_mps": [
+      -0.33118,
+      0.03,
+      0.0
+    ],
+    "target_velocity_mps": [
+      -0.08,
+      0.02,
+      0.0
+    ],
+    "roll_start_deg": -0.09788,
+    "roll_velocity_deg_s": -0.05522,
+    "lens_mm": 37.56406,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "camera position, target, roll, and lens velocities are clipped Gaussian samples"
+  },
+  "physics_spec": {
+    "id": "phys_drop_bounce",
+    "kind": "gravity_bounce",
+    "speed_class": "mixed",
+    "description": "Sphere falls and bounces under gravity with lateral drift.",
+    "sample_model": "radius, mass, lateral velocity, friction, and restitution are clipped Gaussian samples.",
+    "expected_contacts": [
+      [
+        "gold_drop_bounce",
+        "ground"
+      ]
+    ],
+    "bodies": [
+      {
+        "name": "gold_drop_bounce",
+        "shape": "sphere",
+        "radius": 0.3,
+        "scale": [
+          0.3,
+          0.3,
+          0.3
+        ],
+        "position": [
+          -0.54615,
+          0.05623,
+          1.62998
+        ],
+        "velocity": [
+          0.43727,
+          0.08,
+          -0.35
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 0.66189,
+        "restitution": 0.82677,
+        "friction": 0.0474,
+        "static": false,
+        "color": [
+          0.95,
+          0.62,
+          0.16,
+          1.0
+        ],
+        "role": "dynamic"
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_blue_tall_wall",
+    "ground_color": [
+      0.6,
+      0.66,
+      0.68,
+      1.0
+    ],
+    "back_wall_color": [
+      0.69,
+      0.77,
+      0.82,
+      1.0
+    ],
+    "side_wall_color": [
+      0.63,
+      0.69,
+      0.74,
+      1.0
+    ],
+    "wall_height": 2.8,
+    "wall_style": "horizontal_bands",
+    "floor_style": "plain",
+    "static_props": []
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "position": [
+        2.85,
+        -4.1,
+        1.35
+      ],
+      "look_at": [
+        0.35,
+        0.0,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74495,
+        0.60981,
+        0.17069,
+        0.20989
+      ],
+      "roll_deg": -0.09788,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "position": [
+        2.8362,
+        -4.09875,
+        1.35
+      ],
+      "look_at": [
+        0.34667,
+        0.00083,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.7452,
+        0.60988,
+        0.1701,
+        0.20925
+      ],
+      "roll_deg": -0.10018,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "position": [
+        2.8224,
+        -4.0975,
+        1.35
+      ],
+      "look_at": [
+        0.34333,
+        0.00167,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74546,
+        0.60995,
+        0.16951,
+        0.20861
+      ],
+      "roll_deg": -0.10248,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "position": [
+        2.8086,
+        -4.09625,
+        1.35
+      ],
+      "look_at": [
+        0.34,
+        0.0025,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74572,
+        0.61002,
+        0.16892,
+        0.20796
+      ],
+      "roll_deg": -0.10478,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "position": [
+        2.7948,
+        -4.095,
+        1.35
+      ],
+      "look_at": [
+        0.33667,
+        0.00333,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74598,
+        0.61009,
+        0.16832,
+        0.20731
+      ],
+      "roll_deg": -0.10708,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "position": [
+        2.781,
+        -4.09375,
+        1.35
+      ],
+      "look_at": [
+        0.33333,
+        0.00417,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74623,
+        0.61016,
+        0.16772,
+        0.20666
+      ],
+      "roll_deg": -0.10938,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "position": [
+        2.76721,
+        -4.0925,
+        1.35
+      ],
+      "look_at": [
+        0.33,
+        0.005,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74649,
+        0.61023,
+        0.16713,
+        0.20601
+      ],
+      "roll_deg": -0.11168,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "position": [
+        2.75341,
+        -4.09125,
+        1.35
+      ],
+      "look_at": [
+        0.32667,
+        0.00583,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74675,
+        0.6103,
+        0.16653,
+        0.20536
+      ],
+      "roll_deg": -0.11399,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "position": [
+        2.73961,
+        -4.09,
+        1.35
+      ],
+      "look_at": [
+        0.32333,
+        0.00667,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.747,
+        0.61037,
+        0.16593,
+        0.2047
+      ],
+      "roll_deg": -0.11629,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "position": [
+        2.72581,
+        -4.08875,
+        1.35
+      ],
+      "look_at": [
+        0.32,
+        0.0075,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74726,
+        0.61044,
+        0.16533,
+        0.20404
+      ],
+      "roll_deg": -0.11859,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "position": [
+        2.71201,
+        -4.0875,
+        1.35
+      ],
+      "look_at": [
+        0.31667,
+        0.00833,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74752,
+        0.61051,
+        0.16472,
+        0.20338
+      ],
+      "roll_deg": -0.12089,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "position": [
+        2.69821,
+        -4.08625,
+        1.35
+      ],
+      "look_at": [
+        0.31333,
+        0.00917,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74777,
+        0.61058,
+        0.16412,
+        0.20272
+      ],
+      "roll_deg": -0.12319,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "position": [
+        2.68441,
+        -4.085,
+        1.35
+      ],
+      "look_at": [
+        0.31,
+        0.01,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74803,
+        0.61065,
+        0.16351,
+        0.20206
+      ],
+      "roll_deg": -0.12549,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "position": [
+        2.67061,
+        -4.08375,
+        1.35
+      ],
+      "look_at": [
+        0.30667,
+        0.01083,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74828,
+        0.61072,
+        0.16291,
+        0.20139
+      ],
+      "roll_deg": -0.12779,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "position": [
+        2.65681,
+        -4.0825,
+        1.35
+      ],
+      "look_at": [
+        0.30333,
+        0.01167,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74854,
+        0.61078,
+        0.1623,
+        0.20072
+      ],
+      "roll_deg": -0.13009,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "position": [
+        2.64301,
+        -4.08125,
+        1.35
+      ],
+      "look_at": [
+        0.3,
+        0.0125,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74879,
+        0.61085,
+        0.16169,
+        0.20005
+      ],
+      "roll_deg": -0.13239,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "position": [
+        2.62921,
+        -4.08,
+        1.35
+      ],
+      "look_at": [
+        0.29667,
+        0.01333,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74905,
+        0.61092,
+        0.16108,
+        0.19938
+      ],
+      "roll_deg": -0.13469,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "position": [
+        2.61541,
+        -4.07875,
+        1.35
+      ],
+      "look_at": [
+        0.29333,
+        0.01417,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.7493,
+        0.61099,
+        0.16047,
+        0.19871
+      ],
+      "roll_deg": -0.13699,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "position": [
+        2.60162,
+        -4.0775,
+        1.35
+      ],
+      "look_at": [
+        0.29,
+        0.015,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74956,
+        0.61106,
+        0.15985,
+        0.19803
+      ],
+      "roll_deg": -0.1393,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "position": [
+        2.58782,
+        -4.07625,
+        1.35
+      ],
+      "look_at": [
+        0.28667,
+        0.01583,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.74981,
+        0.61112,
+        0.15924,
+        0.19736
+      ],
+      "roll_deg": -0.1416,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "position": [
+        2.57402,
+        -4.075,
+        1.35
+      ],
+      "look_at": [
+        0.28333,
+        0.01667,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75007,
+        0.61119,
+        0.15862,
+        0.19668
+      ],
+      "roll_deg": -0.1439,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "position": [
+        2.56022,
+        -4.07375,
+        1.35
+      ],
+      "look_at": [
+        0.28,
+        0.0175,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75032,
+        0.61126,
+        0.15801,
+        0.196
+      ],
+      "roll_deg": -0.1462,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "position": [
+        2.54642,
+        -4.0725,
+        1.35
+      ],
+      "look_at": [
+        0.27667,
+        0.01833,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75058,
+        0.61133,
+        0.15739,
+        0.19531
+      ],
+      "roll_deg": -0.1485,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "position": [
+        2.53262,
+        -4.07125,
+        1.35
+      ],
+      "look_at": [
+        0.27333,
+        0.01917,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75083,
+        0.61139,
+        0.15677,
+        0.19463
+      ],
+      "roll_deg": -0.1508,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "position": [
+        2.51882,
+        -4.07,
+        1.35
+      ],
+      "look_at": [
+        0.27,
+        0.02,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75108,
+        0.61146,
+        0.15615,
+        0.19394
+      ],
+      "roll_deg": -0.1531,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "position": [
+        2.50502,
+        -4.06875,
+        1.35
+      ],
+      "look_at": [
+        0.26667,
+        0.02083,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75134,
+        0.61153,
+        0.15552,
+        0.19325
+      ],
+      "roll_deg": -0.1554,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "position": [
+        2.49122,
+        -4.0675,
+        1.35
+      ],
+      "look_at": [
+        0.26333,
+        0.02167,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75159,
+        0.61159,
+        0.1549,
+        0.19256
+      ],
+      "roll_deg": -0.1577,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "position": [
+        2.47742,
+        -4.06625,
+        1.35
+      ],
+      "look_at": [
+        0.26,
+        0.0225,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75184,
+        0.61166,
+        0.15427,
+        0.19186
+      ],
+      "roll_deg": -0.16,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "position": [
+        2.46362,
+        -4.065,
+        1.35
+      ],
+      "look_at": [
+        0.25667,
+        0.02333,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75209,
+        0.61172,
+        0.15365,
+        0.19117
+      ],
+      "roll_deg": -0.1623,
+      "lens_mm": 37.56406
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "position": [
+        2.44982,
+        -4.06375,
+        1.35
+      ],
+      "look_at": [
+        0.25333,
+        0.02417,
+        0.38
+      ],
+      "quaternion_wxyz": [
+        0.75234,
+        0.61179,
+        0.15302,
+        0.19047
+      ],
+      "roll_deg": -0.1646,
+      "lens_mm": 37.56406
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.54615,
+            0.05623,
+            1.62998
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -0.35
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.52793,
+            0.05956,
+            1.60585
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -0.76667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.50971,
+            0.0629,
+            1.56435
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -1.18333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.49149,
+            0.06623,
+            1.5055
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -1.6
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.47327,
+            0.06956,
+            1.42929
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -2.01667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.45505,
+            0.0729,
+            1.33571
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -2.43333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.43683,
+            0.07623,
+            1.22477
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -2.85
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.41861,
+            0.07956,
+            1.09647
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -3.26667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.40039,
+            0.0829,
+            0.95081
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -3.68333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.38217,
+            0.08623,
+            0.78779
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -4.1
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.36395,
+            0.08956,
+            0.60741
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -4.51667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.34573,
+            0.0929,
+            0.40967
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.43727,
+            0.08,
+            -4.93333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.32866,
+            0.09602,
+            0.33147
+          ],
+          "orientation_wxyz": [
+            0.99999,
+            -0.00088,
+            0.00479,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            2.86435
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.31332,
+            0.09883,
+            0.44127
+          ],
+          "orientation_wxyz": [
+            0.99985,
+            -0.00307,
+            0.01676,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            2.44768
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.29797,
+            0.10164,
+            0.53371
+          ],
+          "orientation_wxyz": [
+            0.99957,
+            -0.00525,
+            0.02872,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            2.03101
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.28262,
+            0.10444,
+            0.60878
+          ],
+          "orientation_wxyz": [
+            0.99914,
+            -0.00744,
+            0.04068,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            1.61435
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.26728,
+            0.10725,
+            0.6665
+          ],
+          "orientation_wxyz": [
+            0.99857,
+            -0.00963,
+            0.05264,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            1.19768
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.25193,
+            0.11006,
+            0.70685
+          ],
+          "orientation_wxyz": [
+            0.99784,
+            -0.01182,
+            0.06459,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            0.78101
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.23658,
+            0.11287,
+            0.72985
+          ],
+          "orientation_wxyz": [
+            0.99697,
+            -0.014,
+            0.07652,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            0.36435
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.22123,
+            0.11567,
+            0.73548
+          ],
+          "orientation_wxyz": [
+            0.99595,
+            -0.01618,
+            0.08845,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -0.05232
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.20589,
+            0.11848,
+            0.72375
+          ],
+          "orientation_wxyz": [
+            0.99478,
+            -0.01836,
+            0.10036,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -0.46899
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.19054,
+            0.12129,
+            0.69466
+          ],
+          "orientation_wxyz": [
+            0.99347,
+            -0.02054,
+            0.11226,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -0.88565
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.17519,
+            0.1241,
+            0.64821
+          ],
+          "orientation_wxyz": [
+            0.992,
+            -0.02271,
+            0.12414,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -1.30232
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.15985,
+            0.12691,
+            0.5844
+          ],
+          "orientation_wxyz": [
+            0.9904,
+            -0.02488,
+            0.13601,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -1.71899
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.1445,
+            0.12971,
+            0.50323
+          ],
+          "orientation_wxyz": [
+            0.98864,
+            -0.02705,
+            0.14785,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -2.13565
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.12915,
+            0.13252,
+            0.40469
+          ],
+          "orientation_wxyz": [
+            0.98674,
+            -0.02921,
+            0.15967,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -2.55232
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.11381,
+            0.13533,
+            0.2888
+          ],
+          "orientation_wxyz": [
+            0.98469,
+            -0.03137,
+            0.17147,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36833,
+            0.06739,
+            -2.96899
+          ],
+          "angular_velocity": [
+            -0.10511,
+            0.5745,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.10012,
+            0.13783,
+            0.35336
+          ],
+          "orientation_wxyz": [
+            0.98116,
+            -0.03477,
+            0.19004,
+            0.0
+          ],
+          "linear_velocity": [
+            0.32848,
+            0.0601,
+            1.36199
+          ],
+          "angular_velocity": [
+            -0.16586,
+            0.90655,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.08643,
+            0.14034,
+            0.40056
+          ],
+          "orientation_wxyz": [
+            0.97727,
+            -0.03815,
+            0.20853,
+            0.0
+          ],
+          "linear_velocity": [
+            0.32848,
+            0.0601,
+            0.94532
+          ],
+          "angular_velocity": [
+            -0.16586,
+            0.90655,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "size": null,
+          "half_extents": null,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic",
+          "position": [
+            -0.07274,
+            0.14284,
+            0.4304
+          ],
+          "orientation_wxyz": [
+            0.97302,
+            -0.04152,
+            0.22695,
+            0.0
+          ],
+          "linear_velocity": [
+            0.32848,
+            0.0601,
+            0.52866
+          ],
+          "angular_velocity": [
+            -0.16586,
+            0.90655,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_audit": {
+    "expected_contacts": [
+      [
+        "gold_drop_bounce",
+        "ground"
+      ]
+    ],
+    "expected_contacts_passed": true,
+    "collision_log_contacts_passed": true,
+    "visual_contacts_passed": true,
+    "collision_summary": {
+      "pairs": [
+        {
+          "pair": [
+            "gold_drop_bounce",
+            "ground"
+          ],
+          "samples": 2,
+          "first_frame": 11.7,
+          "max_force": 1304.87875
+        }
+      ]
+    }
+  },
+  "orientation_format": "wxyz",
+  "video": "videos/clip_005_cam_truck_left_pan_right_phys_drop_bounce.mp4",
+  "frames_dir": "frames/clip_005_cam_truck_left_pan_right_phys_drop_bounce"
+}
