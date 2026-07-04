@@ -100,11 +100,11 @@ The render smoke test should write `/tmp/kubric_official_smoke/frame_0001.png`.
 
 ## Generate The Official Kubric Review Bank
 
-`kubric_review_v2_official` is the current official-Kubric human-review bank:
+`kubric_review_v3_official` is the current official-Kubric human-review bank:
 
 - 15 clips from 3 camera trajectories x 5 physics programs;
 - 20 pair groups across same-camera/different-physics and same-physics/same-scene/different-camera comparisons;
-- 30 frames at 24 fps, 160x120 review resolution;
+- 96 frames at 24 fps, 320x240 review resolution;
 - official `kubric.simulator.PyBullet` runs the rigid-body simulation;
 - official `kubric.renderer.Blender` renders PNG frames, then system `ffmpeg` encodes MP4 for GitHub Pages;
 - each physics program audits expected contacts before rendering, using Kubric collision logs plus visible geometry contact checks.
@@ -117,25 +117,27 @@ cd /workspace/writeable/code/camera_motion_disentangle
 PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
 /workspace/writeable/environments/kubric_official/bin/python \
   scripts/generate_official_kubric_review_bank.py \
-  --run-id kubric_review_v2_official \
+  --run-id kubric_review_v3_official \
   --camera-limit 3 \
   --physics-limit 5 \
   --pairs 20 \
-  --frames 30 \
-  --width 160 \
-  --height 120 \
+  --frames 96 \
+  --width 320 \
+  --height 240 \
   --overwrite
 
 /workspace/writeable/environments/kubric_review/bin/python \
   scripts/make_run_previews.py \
-  --run-dir site/assets/runs/kubric_review_v2_official \
+  --run-dir site/assets/runs/kubric_review_v3_official \
   --samples 8 \
-  --thumb-width 160
+  --thumb-width 180
 
 bash scripts/sync_site_to_docs.sh
 ```
 
-The `site/` run keeps temporary `frames/` for debugging; `scripts/sync_site_to_docs.sh` excludes those frames from `docs/`.
+Rendering may create temporary `site/.../frames/` directories; `scripts/sync_site_to_docs.sh` excludes them from `docs/`, and they can be deleted after previews/MP4s are generated to save disk space.
+
+`kubric_review_v2_official` was the first official-Kubric smoke-sized web run. It used 30 frames at 160x120 and looked blocky when upscaled, so it is kept only as a historical debug run; use v3 for visual review.
 
 ## Generate The Kubric-Style Review Bank
 
@@ -146,7 +148,7 @@ The `site/` run keeps temporary `frames/` for debugging; `scripts/sync_site_to_d
 - one diagnostic ambiguity group for dolly-in vs object-moving-toward-camera;
 - PyBullet simulates rigid bodies at 240 Hz, then Blender renders the cached trajectories.
 
-The official PyPI `kubric` package was not used for `kubric_review_v1`; that run uses a local Kubric-style split with explicit `camera_id`, `physics_id`, and `scene_id`, real PyBullet contacts, and Blender-rendered videos. Official Kubric is now available through `scripts/generate_official_kubric_review_bank.py`; use `kubric_review_v2_official` for the current review pass.
+The official PyPI `kubric` package was not used for `kubric_review_v1`; that run uses a local Kubric-style split with explicit `camera_id`, `physics_id`, and `scene_id`, real PyBullet contacts, and Blender-rendered videos. Official Kubric is now available through `scripts/generate_official_kubric_review_bank.py`; use `kubric_review_v3_official` for the current review pass.
 
 Create or repair the lightweight Python environment:
 

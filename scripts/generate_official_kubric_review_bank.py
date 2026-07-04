@@ -28,9 +28,9 @@ DEFAULT_KUBRIC_SITE_PACKAGES = Path(
 
 FPS = 24
 PHYSICS_HZ = 240
-FRAMES = 36
-WIDTH = 256
-HEIGHT = 192
+FRAMES = 96
+WIDTH = 320
+HEIGHT = 240
 SEED = 20260612
 
 BODY_COLORS = {
@@ -1209,7 +1209,7 @@ def encode_videos(jobs_path: Path) -> None:
                 "-preset",
                 "veryfast",
                 "-crf",
-                "23",
+                "20",
                 "-movflags",
                 "+faststart",
                 str(video_path),
