@@ -139,6 +139,8 @@ Rendering may create temporary `site/.../frames/` directories; `scripts/sync_sit
 
 `kubric_review_v2_official` was the first official-Kubric smoke-sized web run. It used 30 frames at 160x120 and looked blocky when upscaled. `kubric_review_v3_official` improved length/resolution but still used very low Cycles sampling, which produced visible speckle/noise. Use v4 for visual review.
 
+After v4, `scripts/generate_official_kubric_review_bank.py` is prepared for the next diversity pass: visible object colors are sampled in HSV space, visual material profiles are sampled from matte/satin/glossy/rubber/brushed-metal templates, and the sampled appearance plus physical parameters are written into per-clip metadata. Use a new run id such as `kubric_review_v5_official` when generating that diversity pass; `--physics-limit 6` includes the three-body scatter program.
+
 ## Generate The Kubric-Style Review Bank
 
 `kubric_review_v1` is the previous Kubric-style human-review bank. It is intentionally small enough for GitHub Pages and manual inspection:

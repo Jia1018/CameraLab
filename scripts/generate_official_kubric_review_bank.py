@@ -8,6 +8,7 @@ Kubric objects, Kubric's PyBullet wrapper, and Kubric's Blender renderer.
 from __future__ import annotations
 
 import argparse
+import colorsys
 import json
 import math
 import os
@@ -59,6 +60,104 @@ def color_tuple(values: list[float]) -> tuple[float, float, float, float]:
     return tuple(float(v) for v in values)  # type: ignore[return-value]
 
 
+MATERIAL_PROFILES = {
+    "matte": {
+        "roughness": (0.82, 0.08, 0.62, 0.96),
+        "specular": (0.24, 0.07, 0.08, 0.42),
+        "metallic": (0.0, 0.0, 0.0, 0.0),
+    },
+    "satin": {
+        "roughness": (0.48, 0.10, 0.28, 0.68),
+        "specular": (0.42, 0.08, 0.22, 0.62),
+        "metallic": (0.0, 0.0, 0.0, 0.0),
+    },
+    "glossy": {
+        "roughness": (0.18, 0.06, 0.06, 0.34),
+        "specular": (0.70, 0.10, 0.48, 0.92),
+        "metallic": (0.0, 0.0, 0.0, 0.0),
+    },
+    "rubber": {
+        "roughness": (0.72, 0.09, 0.52, 0.92),
+        "specular": (0.16, 0.05, 0.04, 0.30),
+        "metallic": (0.0, 0.0, 0.0, 0.0),
+    },
+    "brushed_metal": {
+        "roughness": (0.34, 0.08, 0.16, 0.56),
+        "specular": (0.68, 0.10, 0.45, 0.90),
+        "metallic": (0.92, 0.06, 0.75, 1.0),
+    },
+}
+MATERIAL_PROFILE_WEIGHTS = [0.34, 0.26, 0.20, 0.14, 0.06]
+OBJECT_HUE_CENTERS = [0.00, 0.08, 0.14, 0.30, 0.48, 0.58, 0.70, 0.82, 0.92]
+
+
+def sample_rgba(rng: random.Random, object_index: int) -> list[float]:
+    hue_center = OBJECT_HUE_CENTERS[(object_index * 4) % len(OBJECT_HUE_CENTERS)]
+    hue = (hue_center + rng.gauss(0.0, 0.025)) % 1.0
+    saturation = trunc_gauss(rng, 0.68, 0.11, 0.42, 0.88)
+    value = trunc_gauss(rng, 0.78, 0.10, 0.52, 0.96)
+    red, green, blue = colorsys.hsv_to_rgb(hue, saturation, value)
+    return [round(red, 5), round(green, 5), round(blue, 5), 1.0]
+
+
+def sample_material_spec(rng: random.Random, profile: str | None = None) -> dict[str, Any]:
+    if profile is None:
+        profile = rng.choices(list(MATERIAL_PROFILES), weights=MATERIAL_PROFILE_WEIGHTS, k=1)[0]
+    params = MATERIAL_PROFILES[profile]
+    return {
+        "profile": profile,
+        "roughness": trunc_gauss(rng, *params["roughness"]),
+        "specular": trunc_gauss(rng, *params["specular"]),
+        "metallic": trunc_gauss(rng, *params["metallic"]),
+        "specular_tint": trunc_gauss(rng, 0.0, 0.03, 0.0, 0.12),
+        "ior": trunc_gauss(rng, 1.45, 0.08, 1.25, 1.68),
+        "transmission": 0.0,
+        "transmission_roughness": 0.0,
+    }
+
+
+def legacy_appearance(color: str) -> dict[str, Any]:
+    return {
+        "color_source": "fixed_palette",
+        "palette_name": color,
+        "color": BODY_COLORS[color],
+        "material": {
+            "profile": "matte_default",
+            "roughness": 0.72,
+            "specular": 0.35,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0,
+        },
+    }
+
+
+def sample_appearance(
+    rng: random.Random, role: str, object_index: int, *, profile: str | None = None
+) -> dict[str, Any]:
+    return {
+        "color_source": "sampled_hsv",
+        "role": role,
+        "color": sample_rgba(rng, object_index),
+        "material": sample_material_spec(rng, profile),
+    }
+
+
+def resolve_appearance(appearance: str | dict[str, Any]) -> dict[str, Any]:
+    if isinstance(appearance, str):
+        return legacy_appearance(appearance)
+    material = dict(legacy_appearance("dark")["material"] | appearance.get("material", {}))
+    return {
+        "color_source": appearance.get("color_source", "provided"),
+        "role": appearance.get("role"),
+        "palette_name": appearance.get("palette_name"),
+        "color": [round(float(v), 5) for v in appearance["color"]],
+        "material": material,
+    }
+
+
 def world_specs() -> list[dict[str, Any]]:
     return [
         {
@@ -107,7 +206,7 @@ def sphere(
     name: str,
     radius: float,
     position: tuple[float, float, float],
-    color: str,
+    appearance: str | dict[str, Any],
     *,
     velocity: tuple[float, float, float] = (0.0, 0.0, 0.0),
     angular_velocity: tuple[float, float, float] = (0.0, 0.0, 0.0),
@@ -116,6 +215,7 @@ def sphere(
     friction: float = 0.35,
     static: bool = False,
 ) -> dict[str, Any]:
+    appearance_spec = resolve_appearance(appearance)
     return {
         "name": name,
         "shape": "sphere",
@@ -128,7 +228,9 @@ def sphere(
         "restitution": round(restitution, 5),
         "friction": round(friction, 5),
         "static": static,
-        "color": BODY_COLORS[color],
+        "color": appearance_spec["color"],
+        "material": appearance_spec["material"],
+        "appearance": appearance_spec,
         "role": "visible_static_obstacle" if static else "dynamic",
     }
 
@@ -137,7 +239,7 @@ def cube(
     name: str,
     half_extents: tuple[float, float, float],
     position: tuple[float, float, float],
-    color: str,
+    appearance: str | dict[str, Any],
     *,
     velocity: tuple[float, float, float] = (0.0, 0.0, 0.0),
     angular_velocity: tuple[float, float, float] = (0.0, 0.0, 0.0),
@@ -146,6 +248,7 @@ def cube(
     friction: float = 0.55,
     static: bool = False,
 ) -> dict[str, Any]:
+    appearance_spec = resolve_appearance(appearance)
     return {
         "name": name,
         "shape": "box",
@@ -159,7 +262,9 @@ def cube(
         "restitution": round(restitution, 5),
         "friction": round(friction, 5),
         "static": static,
-        "color": BODY_COLORS[color],
+        "color": appearance_spec["color"],
+        "material": appearance_spec["material"],
+        "appearance": appearance_spec,
         "role": "visible_static_obstacle" if static else "dynamic",
     }
 
@@ -190,6 +295,14 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
     block_speed = trunc_gauss(rng, 1.95, 0.25, 1.45, 2.50)
     cube_sphere_speed = trunc_gauss(rng, 1.70, 0.24, 1.20, 2.25)
 
+    appearance_index = 0
+
+    def appearance(role: str, *, profile: str | None = None) -> dict[str, Any]:
+        nonlocal appearance_index
+        sampled = sample_appearance(rng, role, appearance_index, profile=profile)
+        appearance_index += 1
+        return sampled
+
     return [
         {
             "id": "phys_static_sphere",
@@ -200,10 +313,10 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "expected_contacts": [],
             "bodies": [
                 sphere(
-                    "red_resting_sphere",
+                    "resting_sphere",
                     r_static,
                     (0.0, -0.30, r_static),
-                    "red",
+                    appearance("resting_sphere"),
                     mass=mass(),
                     restitution=trunc_gauss(rng, 0.45, 0.08, 0.25, 0.65),
                     friction=medium_friction(),
@@ -216,17 +329,17 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "speed_class": "mixed",
             "description": "Sphere falls and bounces under gravity with lateral drift.",
             "sample_model": "radius, mass, lateral velocity, friction, and restitution are clipped Gaussian samples.",
-            "expected_contacts": [["gold_drop_bounce", "ground"]],
+            "expected_contacts": [["drop_bounce_sphere", "ground"]],
             "bodies": [
                 sphere(
-                    "gold_drop_bounce",
+                    "drop_bounce_sphere",
                     r_drop,
                     (
                         trunc_gauss(rng, -0.35, 0.16, -0.65, -0.05),
                         trunc_gauss(rng, 0.08, 0.10, -0.12, 0.28),
                         trunc_gauss(rng, 1.50, 0.16, 1.20, 1.85),
                     ),
-                    "gold",
+                    appearance("drop_bounce_sphere", profile="rubber"),
                     velocity=(trunc_gauss(rng, 0.50, 0.14, 0.22, 0.85), 0.08, -0.35),
                     mass=mass(),
                     restitution=trunc_gauss(rng, 0.86, 0.06, 0.72, 0.96),
@@ -240,23 +353,23 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "speed_class": "medium",
             "description": "Two spheres cross the center and collide.",
             "sample_model": "radii, masses, velocities, friction, and restitution are clipped Gaussian samples.",
-            "expected_contacts": [["red_cross_sphere", "blue_cross_sphere"]],
+            "expected_contacts": [["cross_sphere_a", "cross_sphere_b"]],
             "bodies": [
                 sphere(
-                    "red_cross_sphere",
+                    "cross_sphere_a",
                     r_a,
                     (-1.05, -0.18, r_a),
-                    "red",
+                    appearance("cross_sphere_a"),
                     velocity=(two_speed, 0.20, 0.0),
                     mass=mass(),
                     restitution=bounce(),
                     friction=low_friction(),
                 ),
                 sphere(
-                    "blue_cross_sphere",
+                    "cross_sphere_b",
                     r_b,
                     (1.05, 0.18, r_b),
-                    "blue",
+                    appearance("cross_sphere_b"),
                     velocity=(-two_speed, -0.20, 0.0),
                     mass=mass(),
                     restitution=bounce(),
@@ -270,27 +383,27 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "speed_class": "medium",
             "description": "Sphere collides with a visible static cube obstacle.",
             "sample_model": "sphere radius, block size, velocity, mass, friction, and restitution are clipped Gaussian samples.",
-            "expected_contacts": [["teal_block_target", "violet_hit_sphere"]],
+            "expected_contacts": [["block_target", "hit_sphere"]],
             "bodies": [
                 sphere(
-                    "violet_hit_sphere",
+                    "hit_sphere",
                     r_hit,
                     (-0.85, 0.0, r_hit),
-                    "violet",
+                    appearance("hit_sphere"),
                     velocity=(block_speed, 0.0, 0.0),
                     mass=mass(),
                     restitution=bounce(),
                     friction=low_friction(),
                 ),
                 cube(
-                    "teal_block_target",
+                    "block_target",
                     (
                         trunc_gauss(rng, 0.24, 0.03, 0.18, 0.31),
                         trunc_gauss(rng, 0.30, 0.03, 0.23, 0.38),
                         trunc_gauss(rng, 0.28, 0.03, 0.22, 0.35),
                     ),
                     (-0.05, 0.0, 0.28),
-                    "teal",
+                    appearance("visible_block_target", profile="matte"),
                     mass=0.0,
                     restitution=trunc_gauss(rng, 0.68, 0.08, 0.45, 0.82),
                     friction=medium_friction(),
@@ -304,17 +417,17 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "speed_class": "medium",
             "description": "A cube and a sphere meet near the center and rebound.",
             "sample_model": "cube size, sphere radius, masses, velocities, friction, and restitution are clipped Gaussian samples.",
-            "expected_contacts": [["teal_moving_cube", "gold_moving_sphere"]],
+            "expected_contacts": [["moving_cube", "moving_sphere"]],
             "bodies": [
                 cube(
-                    "teal_moving_cube",
+                    "moving_cube",
                     (
                         trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
                         trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
                         trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
                     ),
                     (-1.05, -0.16, 0.31),
-                    "teal",
+                    appearance("moving_cube"),
                     velocity=(cube_sphere_speed, 0.18, 0.0),
                     angular_velocity=(0.0, -2.0, 0.25),
                     mass=mass(),
@@ -322,10 +435,10 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     friction=low_friction(),
                 ),
                 sphere(
-                    "gold_moving_sphere",
+                    "moving_sphere",
                     r_cube_sphere,
                     (1.05, 0.16, r_cube_sphere),
-                    "gold",
+                    appearance("moving_sphere"),
                     velocity=(-cube_sphere_speed, -0.18, 0.0),
                     mass=mass(),
                     restitution=bounce(),
@@ -339,23 +452,23 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "speed_class": "mixed",
             "description": "Three objects interact near the center for multi-body review.",
             "sample_model": "sizes, masses, velocities, friction, and restitution are clipped Gaussian samples.",
-            "expected_contacts": [["red_scatter_sphere", "teal_scatter_cube"]],
+            "expected_contacts": [["scatter_sphere_a", "scatter_cube"]],
             "bodies": [
                 sphere(
-                    "red_scatter_sphere",
+                    "scatter_sphere_a",
                     0.24,
                     (-1.25, -0.28, 0.24),
-                    "red",
+                    appearance("scatter_sphere_a"),
                     velocity=(trunc_gauss(rng, 1.75, 0.22, 1.25, 2.25), 0.38, 0.0),
                     mass=mass(),
                     restitution=bounce(),
                     friction=low_friction(),
                 ),
                 cube(
-                    "teal_scatter_cube",
+                    "scatter_cube",
                     (0.24, 0.24, 0.24),
                     (0.05, 0.05, 0.24),
-                    "teal",
+                    appearance("scatter_cube"),
                     velocity=(0.05, 0.00, 0.0),
                     angular_velocity=(0.0, 1.4, 0.4),
                     mass=mass(),
@@ -363,10 +476,10 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     friction=low_friction(),
                 ),
                 sphere(
-                    "blue_scatter_sphere",
+                    "scatter_sphere_b",
                     0.23,
                     (1.20, 0.30, 0.23),
-                    "blue",
+                    appearance("scatter_sphere_b"),
                     velocity=(trunc_gauss(rng, -1.55, 0.20, -2.05, -1.05), -0.35, 0.0),
                     mass=mass(),
                     restitution=bounce(),
@@ -520,8 +633,19 @@ def camera_records(camera: dict[str, Any], frames: int) -> list[dict[str, Any]]:
     return records
 
 
-def make_material(kb: Any, name: str, rgba: list[float], roughness: float = 0.72) -> Any:
-    return kb.PrincipledBSDFMaterial(name=f"mat_{name}", color=kb.Color(*color_tuple(rgba)), roughness=roughness)
+def make_material(kb: Any, name: str, rgba: list[float], material: dict[str, Any] | None = None) -> Any:
+    material = material or {}
+    return kb.PrincipledBSDFMaterial(
+        name=f"mat_{name}",
+        color=kb.Color(*color_tuple(rgba)),
+        roughness=float(material.get("roughness", 0.72)),
+        metallic=float(material.get("metallic", 0.0)),
+        specular=float(material.get("specular", 0.35)),
+        specular_tint=float(material.get("specular_tint", 0.0)),
+        ior=float(material.get("ior", 1.45)),
+        transmission=float(material.get("transmission", 0.0)),
+        transmission_roughness=float(material.get("transmission_roughness", 0.0)),
+    )
 
 
 def make_kb_body(kb: Any, body: dict[str, Any], material: Any | None = None, background: bool = False) -> Any:
@@ -629,7 +753,7 @@ def world_bodies(world: dict[str, Any]) -> list[dict[str, Any]]:
 
 def add_world_assets(kb: Any, scene: Any, world: dict[str, Any]) -> None:
     for body in world_bodies(world):
-        mat = make_material(kb, body["name"], body["color"])
+        mat = make_material(kb, body["name"], body["color"], body.get("material"))
         scene.add(make_kb_body(kb, body, mat, background=True))
 
     def add_deco(name: str, half_extents: tuple[float, float, float], position: tuple[float, float, float], color: list[float]) -> None:
@@ -792,6 +916,8 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
                     "size": body.get("size"),
                     "half_extents": body.get("half_extents"),
                     "color": body["color"],
+                    "material": body.get("material", {}),
+                    "appearance": body.get("appearance", {}),
                     "role": body["role"],
                     "position": vec(anim["position"][frame]),
                     "orientation_wxyz": vec(anim["quaternion"][frame]),
@@ -1089,7 +1215,7 @@ def render_one_job(job: dict[str, Any]) -> None:
     body_specs = {body["name"]: body for body in metadata["physics_spec"]["bodies"]}
     for object_record in first_frame["objects"]:
         spec = body_specs[object_record["name"]]
-        material = make_material(kb, spec["name"], spec["color"])
+        material = make_material(kb, spec["name"], spec["color"], spec.get("material"))
         asset = make_kb_body(kb, spec, material, background=False)
         scene.add(asset)
         body_assets[spec["name"]] = asset
@@ -1226,7 +1352,7 @@ def generate_main() -> None:
     parser.add_argument("--blender-bin", type=Path, default=DEFAULT_BLENDER)
     parser.add_argument("--kubric-site-packages", type=Path, default=DEFAULT_KUBRIC_SITE_PACKAGES)
     parser.add_argument("--camera-limit", type=int, default=4)
-    parser.add_argument("--physics-limit", type=int, default=5)
+    parser.add_argument("--physics-limit", type=int, default=6)
     parser.add_argument("--pairs", type=int, default=32)
     parser.add_argument("--frames", type=int, default=FRAMES)
     parser.add_argument("--width", type=int, default=WIDTH)
