@@ -1,0 +1,1222 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "kubric_review_v4_official",
+  "generator": "official_kubric_review",
+  "description": "Small official-Kubric review bank. Same-physics pairs reuse identical physics_frames and scene_id; same-camera pairs reuse identical camera_frames.",
+  "fps": 24,
+  "frames_count": 96,
+  "duration_s": 3.95833,
+  "resolution": [
+    640,
+    480
+  ],
+  "seed": 20260612,
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "render_note": "Kubric renderer outputs denoised Cycles PNG frames at 16 samples per pixel, then system ffmpeg encodes review MP4s for GitHub Pages.",
+  "sampling_model": "object radii/sizes, masses, initial speeds, friction, restitution, and camera velocities are sampled from clipped Gaussian templates; each sampled value is written into per-clip metadata.",
+  "quality_filters": "Expected non-ground contacts are audited before rendering; runs fail if required contact pairs are absent.",
+  "camera_reference": [
+    {
+      "id": "cam_static_left_high",
+      "primitives": [
+        "static",
+        "left_start",
+        "slight_roll"
+      ],
+      "speed_class": "none",
+      "start_position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "start_target": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "linear_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "roll_start_deg": -1.89247,
+      "roll_velocity_deg_s": 0.0,
+      "lens_mm": 34.3211,
+      "lens_velocity_mm_s": 0.0,
+      "motion_distribution": "camera position, target, roll, and lens velocities are clipped Gaussian samples"
+    },
+    {
+      "id": "cam_dolly_in_right_start",
+      "primitives": [
+        "dolly_in",
+        "right_start",
+        "target_drift"
+      ],
+      "speed_class": "medium",
+      "start_position": [
+        2.35,
+        -5.05,
+        1.55
+      ],
+      "start_target": [
+        0.05,
+        0.0,
+        0.38
+      ],
+      "linear_velocity_mps": [
+        -0.1,
+        0.42307,
+        0.02
+      ],
+      "target_velocity_mps": [
+        0.00936,
+        0.0,
+        0.0
+      ],
+      "roll_start_deg": 1.67253,
+      "roll_velocity_deg_s": -0.23783,
+      "lens_mm": 31.84554,
+      "lens_velocity_mm_s": 0.87742,
+      "motion_distribution": "camera position, target, roll, and lens velocities are clipped Gaussian samples"
+    },
+    {
+      "id": "cam_truck_left_pan_right",
+      "primitives": [
+        "truck_left",
+        "pan_right",
+        "off_center_start"
+      ],
+      "speed_class": "medium",
+      "start_position": [
+        2.85,
+        -4.1,
+        1.35
+      ],
+      "start_target": [
+        0.35,
+        0.0,
+        0.38
+      ],
+      "linear_velocity_mps": [
+        -0.33118,
+        0.03,
+        0.0
+      ],
+      "target_velocity_mps": [
+        -0.08,
+        0.02,
+        0.0
+      ],
+      "roll_start_deg": -0.09788,
+      "roll_velocity_deg_s": -0.05522,
+      "lens_mm": 37.56406,
+      "lens_velocity_mm_s": 0.0,
+      "motion_distribution": "camera position, target, roll, and lens velocities are clipped Gaussian samples"
+    }
+  ],
+  "physics_reference": [
+    {
+      "id": "phys_static_sphere",
+      "kind": "single_static",
+      "speed_class": "none",
+      "description": "One visible object at rest; useful camera-only control.",
+      "sample_model": "radius, mass, friction, and restitution are clipped Gaussian samples.",
+      "expected_contacts": [],
+      "bodies": [
+        {
+          "name": "red_resting_sphere",
+          "shape": "sphere",
+          "radius": 0.26183,
+          "scale": [
+            0.26183,
+            0.26183,
+            0.26183
+          ],
+          "position": [
+            0.0,
+            -0.3,
+            0.26183
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 0.66552,
+          "restitution": 0.49804,
+          "friction": 0.30663,
+          "static": false,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic"
+        }
+      ]
+    },
+    {
+      "id": "phys_drop_bounce",
+      "kind": "gravity_bounce",
+      "speed_class": "mixed",
+      "description": "Sphere falls and bounces under gravity with lateral drift.",
+      "sample_model": "radius, mass, lateral velocity, friction, and restitution are clipped Gaussian samples.",
+      "expected_contacts": [
+        [
+          "gold_drop_bounce",
+          "ground"
+        ]
+      ],
+      "bodies": [
+        {
+          "name": "gold_drop_bounce",
+          "shape": "sphere",
+          "radius": 0.3,
+          "scale": [
+            0.3,
+            0.3,
+            0.3
+          ],
+          "position": [
+            -0.54615,
+            0.05623,
+            1.62998
+          ],
+          "velocity": [
+            0.43727,
+            0.08,
+            -0.35
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 0.66189,
+          "restitution": 0.82677,
+          "friction": 0.0474,
+          "static": false,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic"
+        }
+      ]
+    },
+    {
+      "id": "phys_two_sphere_collision",
+      "kind": "two_body_collision",
+      "speed_class": "medium",
+      "description": "Two spheres cross the center and collide.",
+      "sample_model": "radii, masses, velocities, friction, and restitution are clipped Gaussian samples.",
+      "expected_contacts": [
+        [
+          "red_cross_sphere",
+          "blue_cross_sphere"
+        ]
+      ],
+      "bodies": [
+        {
+          "name": "red_cross_sphere",
+          "shape": "sphere",
+          "radius": 0.25375,
+          "scale": [
+            0.25375,
+            0.25375,
+            0.25375
+          ],
+          "position": [
+            -1.05,
+            -0.18,
+            0.25375
+          ],
+          "velocity": [
+            1.39637,
+            0.2,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 1.02043,
+          "restitution": 0.65208,
+          "friction": 0.08855,
+          "static": false,
+          "color": [
+            0.88,
+            0.2,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic"
+        },
+        {
+          "name": "blue_cross_sphere",
+          "shape": "sphere",
+          "radius": 0.26308,
+          "scale": [
+            0.26308,
+            0.26308,
+            0.26308
+          ],
+          "position": [
+            1.05,
+            0.18,
+            0.26308
+          ],
+          "velocity": [
+            -1.39637,
+            -0.2,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 1.0126,
+          "restitution": 0.5557,
+          "friction": 0.05524,
+          "static": false,
+          "color": [
+            0.16,
+            0.34,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic"
+        }
+      ]
+    },
+    {
+      "id": "phys_ball_hits_visible_block",
+      "kind": "dynamic_static_collision",
+      "speed_class": "medium",
+      "description": "Sphere collides with a visible static cube obstacle.",
+      "sample_model": "sphere radius, block size, velocity, mass, friction, and restitution are clipped Gaussian samples.",
+      "expected_contacts": [
+        [
+          "teal_block_target",
+          "violet_hit_sphere"
+        ]
+      ],
+      "bodies": [
+        {
+          "name": "violet_hit_sphere",
+          "shape": "sphere",
+          "radius": 0.23197,
+          "scale": [
+            0.23197,
+            0.23197,
+            0.23197
+          ],
+          "position": [
+            -0.85,
+            0.0,
+            0.23197
+          ],
+          "velocity": [
+            2.01939,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 0.84577,
+          "restitution": 0.68242,
+          "friction": 0.01744,
+          "static": false,
+          "color": [
+            0.48,
+            0.3,
+            0.78,
+            1.0
+          ],
+          "role": "dynamic"
+        },
+        {
+          "name": "teal_block_target",
+          "shape": "box",
+          "half_extents": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "size": [
+            0.4095,
+            0.60528,
+            0.50676
+          ],
+          "scale": [
+            0.20475,
+            0.30264,
+            0.25338
+          ],
+          "position": [
+            -0.05,
+            0.0,
+            0.28
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 0.0,
+          "restitution": 0.80898,
+          "friction": 0.28252,
+          "static": true,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "visible_static_obstacle"
+        }
+      ]
+    },
+    {
+      "id": "phys_cube_sphere_collision",
+      "kind": "cube_sphere_collision",
+      "speed_class": "medium",
+      "description": "A cube and a sphere meet near the center and rebound.",
+      "sample_model": "cube size, sphere radius, masses, velocities, friction, and restitution are clipped Gaussian samples.",
+      "expected_contacts": [
+        [
+          "teal_moving_cube",
+          "gold_moving_sphere"
+        ]
+      ],
+      "bodies": [
+        {
+          "name": "teal_moving_cube",
+          "shape": "box",
+          "half_extents": [
+            0.20828,
+            0.19622,
+            0.20616
+          ],
+          "size": [
+            0.41656,
+            0.39244,
+            0.41232
+          ],
+          "scale": [
+            0.20828,
+            0.19622,
+            0.20616
+          ],
+          "position": [
+            -1.05,
+            -0.16,
+            0.31
+          ],
+          "velocity": [
+            1.5495,
+            0.18,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -2.0,
+            0.25
+          ],
+          "mass": 1.03511,
+          "restitution": 0.56866,
+          "friction": 0.039,
+          "static": false,
+          "color": [
+            0.1,
+            0.56,
+            0.5,
+            1.0
+          ],
+          "role": "dynamic"
+        },
+        {
+          "name": "gold_moving_sphere",
+          "shape": "sphere",
+          "radius": 0.24284,
+          "scale": [
+            0.24284,
+            0.24284,
+            0.24284
+          ],
+          "position": [
+            1.05,
+            0.16,
+            0.24284
+          ],
+          "velocity": [
+            -1.5495,
+            -0.18,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mass": 1.29485,
+          "restitution": 0.75373,
+          "friction": 0.03124,
+          "static": false,
+          "color": [
+            0.95,
+            0.62,
+            0.16,
+            1.0
+          ],
+          "role": "dynamic"
+        }
+      ]
+    }
+  ],
+  "scene_reference": [
+    {
+      "id": "scene_gray_low_wall",
+      "ground_color": [
+        0.64,
+        0.66,
+        0.62,
+        1.0
+      ],
+      "back_wall_color": [
+        0.77,
+        0.78,
+        0.75,
+        1.0
+      ],
+      "side_wall_color": [
+        0.69,
+        0.71,
+        0.7,
+        1.0
+      ],
+      "wall_height": 2.1,
+      "wall_style": "plain",
+      "floor_style": "subtle_marks",
+      "static_props": []
+    },
+    {
+      "id": "scene_blue_tall_wall",
+      "ground_color": [
+        0.6,
+        0.66,
+        0.68,
+        1.0
+      ],
+      "back_wall_color": [
+        0.69,
+        0.77,
+        0.82,
+        1.0
+      ],
+      "side_wall_color": [
+        0.63,
+        0.69,
+        0.74,
+        1.0
+      ],
+      "wall_height": 2.8,
+      "wall_style": "horizontal_bands",
+      "floor_style": "plain",
+      "static_props": []
+    },
+    {
+      "id": "scene_warm_panel_wall",
+      "ground_color": [
+        0.68,
+        0.65,
+        0.59,
+        1.0
+      ],
+      "back_wall_color": [
+        0.8,
+        0.74,
+        0.66,
+        1.0
+      ],
+      "side_wall_color": [
+        0.72,
+        0.68,
+        0.63,
+        1.0
+      ],
+      "wall_height": 2.35,
+      "wall_style": "wall_panels",
+      "floor_style": "plain",
+      "static_props": [
+        {
+          "name": "side_reference_block",
+          "shape": "box",
+          "half_extents": [
+            0.26,
+            0.26,
+            0.15
+          ],
+          "position": [
+            -3.25,
+            1.95,
+            0.15
+          ],
+          "color": [
+            0.42,
+            0.39,
+            0.35,
+            1.0
+          ],
+          "collider": true
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "clip_id": "clip_000_cam_static_left_high_phys_static_sphere",
+      "camera_id": "cam_static_left_high",
+      "physics_id": "phys_static_sphere",
+      "scene_id": "scene_gray_low_wall",
+      "camera_primitives": [
+        "static",
+        "left_start",
+        "slight_roll"
+      ],
+      "physics_kind": "single_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "none",
+      "pair_groups": [
+        "pair_006_same_camera",
+        "pair_010_same_physics_scene",
+        "pair_018_same_physics_scene"
+      ],
+      "video": "videos/clip_000_cam_static_left_high_phys_static_sphere.mp4",
+      "metadata": "metadata/clip_000_cam_static_left_high_phys_static_sphere.json"
+    },
+    {
+      "clip_id": "clip_001_cam_dolly_in_right_start_phys_static_sphere",
+      "camera_id": "cam_dolly_in_right_start",
+      "physics_id": "phys_static_sphere",
+      "scene_id": "scene_gray_low_wall",
+      "camera_primitives": [
+        "dolly_in",
+        "right_start",
+        "target_drift"
+      ],
+      "physics_kind": "single_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_008_same_camera",
+        "pair_010_same_physics_scene",
+        "pair_014_same_physics_scene"
+      ],
+      "video": "videos/clip_001_cam_dolly_in_right_start_phys_static_sphere.mp4",
+      "metadata": "metadata/clip_001_cam_dolly_in_right_start_phys_static_sphere.json"
+    },
+    {
+      "clip_id": "clip_002_cam_truck_left_pan_right_phys_static_sphere",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_static_sphere",
+      "scene_id": "scene_gray_low_wall",
+      "camera_primitives": [
+        "truck_left",
+        "pan_right",
+        "off_center_start"
+      ],
+      "physics_kind": "single_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_004_same_camera",
+        "pair_007_same_camera",
+        "pair_014_same_physics_scene",
+        "pair_018_same_physics_scene"
+      ],
+      "video": "videos/clip_002_cam_truck_left_pan_right_phys_static_sphere.mp4",
+      "metadata": "metadata/clip_002_cam_truck_left_pan_right_phys_static_sphere.json"
+    },
+    {
+      "clip_id": "clip_003_cam_static_left_high_phys_drop_bounce",
+      "camera_id": "cam_static_left_high",
+      "physics_id": "phys_drop_bounce",
+      "scene_id": "scene_blue_tall_wall",
+      "camera_primitives": [
+        "static",
+        "left_start",
+        "slight_roll"
+      ],
+      "physics_kind": "gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "pair_groups": [
+        "pair_002_same_camera",
+        "pair_003_same_camera"
+      ],
+      "video": "videos/clip_003_cam_static_left_high_phys_drop_bounce.mp4",
+      "metadata": "metadata/clip_003_cam_static_left_high_phys_drop_bounce.json"
+    },
+    {
+      "clip_id": "clip_004_cam_dolly_in_right_start_phys_drop_bounce",
+      "camera_id": "cam_dolly_in_right_start",
+      "physics_id": "phys_drop_bounce",
+      "scene_id": "scene_blue_tall_wall",
+      "camera_primitives": [
+        "dolly_in",
+        "right_start",
+        "target_drift"
+      ],
+      "physics_kind": "gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_001_same_camera",
+        "pair_019_same_physics_scene"
+      ],
+      "video": "videos/clip_004_cam_dolly_in_right_start_phys_drop_bounce.mp4",
+      "metadata": "metadata/clip_004_cam_dolly_in_right_start_phys_drop_bounce.json"
+    },
+    {
+      "clip_id": "clip_005_cam_truck_left_pan_right_phys_drop_bounce",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_drop_bounce",
+      "scene_id": "scene_blue_tall_wall",
+      "camera_primitives": [
+        "truck_left",
+        "pan_right",
+        "off_center_start"
+      ],
+      "physics_kind": "gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_005_same_camera",
+        "pair_019_same_physics_scene"
+      ],
+      "video": "videos/clip_005_cam_truck_left_pan_right_phys_drop_bounce.mp4",
+      "metadata": "metadata/clip_005_cam_truck_left_pan_right_phys_drop_bounce.json"
+    },
+    {
+      "clip_id": "clip_006_cam_static_left_high_phys_two_sphere_collision",
+      "camera_id": "cam_static_left_high",
+      "physics_id": "phys_two_sphere_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "camera_primitives": [
+        "static",
+        "left_start",
+        "slight_roll"
+      ],
+      "physics_kind": "two_body_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "none",
+      "pair_groups": [
+        "pair_003_same_camera",
+        "pair_006_same_camera",
+        "pair_012_same_physics_scene"
+      ],
+      "video": "videos/clip_006_cam_static_left_high_phys_two_sphere_collision.mp4",
+      "metadata": "metadata/clip_006_cam_static_left_high_phys_two_sphere_collision.json"
+    },
+    {
+      "clip_id": "clip_007_cam_dolly_in_right_start_phys_two_sphere_collision",
+      "camera_id": "cam_dolly_in_right_start",
+      "physics_id": "phys_two_sphere_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "camera_primitives": [
+        "dolly_in",
+        "right_start",
+        "target_drift"
+      ],
+      "physics_kind": "two_body_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_000_same_camera",
+        "pair_008_same_camera",
+        "pair_015_same_physics_scene"
+      ],
+      "video": "videos/clip_007_cam_dolly_in_right_start_phys_two_sphere_collision.mp4",
+      "metadata": "metadata/clip_007_cam_dolly_in_right_start_phys_two_sphere_collision.json"
+    },
+    {
+      "clip_id": "clip_008_cam_truck_left_pan_right_phys_two_sphere_collision",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_two_sphere_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "camera_primitives": [
+        "truck_left",
+        "pan_right",
+        "off_center_start"
+      ],
+      "physics_kind": "two_body_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_005_same_camera",
+        "pair_012_same_physics_scene",
+        "pair_015_same_physics_scene"
+      ],
+      "video": "videos/clip_008_cam_truck_left_pan_right_phys_two_sphere_collision.mp4",
+      "metadata": "metadata/clip_008_cam_truck_left_pan_right_phys_two_sphere_collision.json"
+    },
+    {
+      "clip_id": "clip_009_cam_static_left_high_phys_ball_hits_visible_block",
+      "camera_id": "cam_static_left_high",
+      "physics_id": "phys_ball_hits_visible_block",
+      "scene_id": "scene_gray_low_wall",
+      "camera_primitives": [
+        "static",
+        "left_start",
+        "slight_roll"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "none",
+      "pair_groups": [
+        "pair_002_same_camera"
+      ],
+      "video": "videos/clip_009_cam_static_left_high_phys_ball_hits_visible_block.mp4",
+      "metadata": "metadata/clip_009_cam_static_left_high_phys_ball_hits_visible_block.json"
+    },
+    {
+      "clip_id": "clip_010_cam_dolly_in_right_start_phys_ball_hits_visible_block",
+      "camera_id": "cam_dolly_in_right_start",
+      "physics_id": "phys_ball_hits_visible_block",
+      "scene_id": "scene_gray_low_wall",
+      "camera_primitives": [
+        "dolly_in",
+        "right_start",
+        "target_drift"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_011_same_physics_scene"
+      ],
+      "video": "videos/clip_010_cam_dolly_in_right_start_phys_ball_hits_visible_block.mp4",
+      "metadata": "metadata/clip_010_cam_dolly_in_right_start_phys_ball_hits_visible_block.json"
+    },
+    {
+      "clip_id": "clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_ball_hits_visible_block",
+      "scene_id": "scene_gray_low_wall",
+      "camera_primitives": [
+        "truck_left",
+        "pan_right",
+        "off_center_start"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_007_same_camera",
+        "pair_009_same_camera",
+        "pair_011_same_physics_scene"
+      ],
+      "video": "videos/clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block.mp4",
+      "metadata": "metadata/clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block.json"
+    },
+    {
+      "clip_id": "clip_012_cam_static_left_high_phys_cube_sphere_collision",
+      "camera_id": "cam_static_left_high",
+      "physics_id": "phys_cube_sphere_collision",
+      "scene_id": "scene_blue_tall_wall",
+      "camera_primitives": [
+        "static",
+        "left_start",
+        "slight_roll"
+      ],
+      "physics_kind": "cube_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "none",
+      "pair_groups": [
+        "pair_016_same_physics_scene",
+        "pair_017_same_physics_scene"
+      ],
+      "video": "videos/clip_012_cam_static_left_high_phys_cube_sphere_collision.mp4",
+      "metadata": "metadata/clip_012_cam_static_left_high_phys_cube_sphere_collision.json"
+    },
+    {
+      "clip_id": "clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision",
+      "camera_id": "cam_dolly_in_right_start",
+      "physics_id": "phys_cube_sphere_collision",
+      "scene_id": "scene_blue_tall_wall",
+      "camera_primitives": [
+        "dolly_in",
+        "right_start",
+        "target_drift"
+      ],
+      "physics_kind": "cube_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_000_same_camera",
+        "pair_001_same_camera",
+        "pair_013_same_physics_scene",
+        "pair_017_same_physics_scene"
+      ],
+      "video": "videos/clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision.mp4",
+      "metadata": "metadata/clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision.json"
+    },
+    {
+      "clip_id": "clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision",
+      "camera_id": "cam_truck_left_pan_right",
+      "physics_id": "phys_cube_sphere_collision",
+      "scene_id": "scene_blue_tall_wall",
+      "camera_primitives": [
+        "truck_left",
+        "pan_right",
+        "off_center_start"
+      ],
+      "physics_kind": "cube_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "pair_groups": [
+        "pair_004_same_camera",
+        "pair_009_same_camera",
+        "pair_013_same_physics_scene",
+        "pair_016_same_physics_scene"
+      ],
+      "video": "videos/clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision.mp4",
+      "metadata": "metadata/clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision.json"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "pair_000_same_camera",
+      "title": "Same camera trajectory cam_dolly_in_right_start, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_007_cam_dolly_in_right_start_phys_two_sphere_collision",
+        "clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_001_same_camera",
+      "title": "Same camera trajectory cam_dolly_in_right_start, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_004_cam_dolly_in_right_start_phys_drop_bounce",
+        "clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_002_same_camera",
+      "title": "Same camera trajectory cam_static_left_high, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_003_cam_static_left_high_phys_drop_bounce",
+        "clip_009_cam_static_left_high_phys_ball_hits_visible_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_003_same_camera",
+      "title": "Same camera trajectory cam_static_left_high, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_003_cam_static_left_high_phys_drop_bounce",
+        "clip_006_cam_static_left_high_phys_two_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_004_same_camera",
+      "title": "Same camera trajectory cam_truck_left_pan_right, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_002_cam_truck_left_pan_right_phys_static_sphere",
+        "clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_005_same_camera",
+      "title": "Same camera trajectory cam_truck_left_pan_right, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_005_cam_truck_left_pan_right_phys_drop_bounce",
+        "clip_008_cam_truck_left_pan_right_phys_two_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_006_same_camera",
+      "title": "Same camera trajectory cam_static_left_high, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_000_cam_static_left_high_phys_static_sphere",
+        "clip_006_cam_static_left_high_phys_two_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_007_same_camera",
+      "title": "Same camera trajectory cam_truck_left_pan_right, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_002_cam_truck_left_pan_right_phys_static_sphere",
+        "clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_008_same_camera",
+      "title": "Same camera trajectory cam_dolly_in_right_start, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_001_cam_dolly_in_right_start_phys_static_sphere",
+        "clip_007_cam_dolly_in_right_start_phys_two_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_009_same_camera",
+      "title": "Same camera trajectory cam_truck_left_pan_right, different physical program",
+      "controlled_factor": "camera_id",
+      "varied_factor": "physics_id/scene_id",
+      "clip_ids": [
+        "clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block",
+        "clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_camera",
+        "different_physics",
+        "possibly_different_scene"
+      ]
+    },
+    {
+      "group_id": "pair_010_same_physics_scene",
+      "title": "Same physics and scene phys_static_sphere / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_000_cam_static_left_high_phys_static_sphere",
+        "clip_001_cam_dolly_in_right_start_phys_static_sphere"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_011_same_physics_scene",
+      "title": "Same physics and scene phys_ball_hits_visible_block / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_010_cam_dolly_in_right_start_phys_ball_hits_visible_block",
+        "clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_012_same_physics_scene",
+      "title": "Same physics and scene phys_two_sphere_collision / scene_warm_panel_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_006_cam_static_left_high_phys_two_sphere_collision",
+        "clip_008_cam_truck_left_pan_right_phys_two_sphere_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_013_same_physics_scene",
+      "title": "Same physics and scene phys_cube_sphere_collision / scene_blue_tall_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision",
+        "clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_014_same_physics_scene",
+      "title": "Same physics and scene phys_static_sphere / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_001_cam_dolly_in_right_start_phys_static_sphere",
+        "clip_002_cam_truck_left_pan_right_phys_static_sphere"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_015_same_physics_scene",
+      "title": "Same physics and scene phys_two_sphere_collision / scene_warm_panel_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_007_cam_dolly_in_right_start_phys_two_sphere_collision",
+        "clip_008_cam_truck_left_pan_right_phys_two_sphere_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_016_same_physics_scene",
+      "title": "Same physics and scene phys_cube_sphere_collision / scene_blue_tall_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_012_cam_static_left_high_phys_cube_sphere_collision",
+        "clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_017_same_physics_scene",
+      "title": "Same physics and scene phys_cube_sphere_collision / scene_blue_tall_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_012_cam_static_left_high_phys_cube_sphere_collision",
+        "clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_018_same_physics_scene",
+      "title": "Same physics and scene phys_static_sphere / scene_gray_low_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_000_cam_static_left_high_phys_static_sphere",
+        "clip_002_cam_truck_left_pan_right_phys_static_sphere"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    },
+    {
+      "group_id": "pair_019_same_physics_scene",
+      "title": "Same physics and scene phys_drop_bounce / scene_blue_tall_wall, different camera",
+      "controlled_factor": "physics_id/scene_id",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_004_cam_dolly_in_right_start_phys_drop_bounce",
+        "clip_005_cam_truck_left_pan_right_phys_drop_bounce"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera"
+      ]
+    }
+  ],
+  "ambiguous_equivalence_groups": [],
+  "render_settings": {
+    "engine": "Blender Cycles",
+    "samples_per_pixel": 16,
+    "denoising": true,
+    "adaptive_sampling": true,
+    "ffmpeg_crf": 18
+  }
+}

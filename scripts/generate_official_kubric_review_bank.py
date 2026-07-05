@@ -29,8 +29,8 @@ DEFAULT_KUBRIC_SITE_PACKAGES = Path(
 FPS = 24
 PHYSICS_HZ = 240
 FRAMES = 96
-WIDTH = 320
-HEIGHT = 240
+WIDTH = 640
+HEIGHT = 480
 SEED = 20260612
 
 BODY_COLORS = {
@@ -1113,13 +1113,14 @@ def render_one_job(job: dict[str, Any]) -> None:
     renderer = Blender(
         scene,
         scratch_dir=Path(job["frames_dir"]),
-        samples_per_pixel=1,
-        use_denoising=False,
-        adaptive_sampling=False,
+        samples_per_pixel=16,
+        use_denoising=True,
+        adaptive_sampling=True,
         verbose=False,
     )
     renderer.blender_scene.render.engine = "CYCLES"
-    renderer.blender_scene.cycles.samples = 1
+    renderer.blender_scene.cycles.samples = 16
+    renderer.blender_scene.cycles.use_denoising = True
     renderer.blender_scene.render.image_settings.file_format = "PNG"
     renderer.blender_scene.render.image_settings.color_mode = "RGB"
     renderer.blender_scene.view_settings.view_transform = "Standard"
@@ -1209,7 +1210,7 @@ def encode_videos(jobs_path: Path) -> None:
                 "-preset",
                 "veryfast",
                 "-crf",
-                "20",
+                "18",
                 "-movflags",
                 "+faststart",
                 str(video_path),
