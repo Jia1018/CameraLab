@@ -1,0 +1,30 @@
+could not get a list of mounted file-systems
+[1/24] rendering clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000
+2026-07-06 21:19:59.952616: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2/24] rendering clip_0001_cam_static_view_0000_phys_sphere_hits_tall_block_0001
+[3/24] rendering clip_0002_cam_dolly_in_0020_phys_drop_bounce_0010
+[4/24] rendering clip_0003_cam_top_down_drift_0021_phys_drop_bounce_0010
+[5/24] rendering clip_0004_cam_dolly_out_0020_phys_two_sphere_collision_0040
+[6/24] rendering clip_0005_cam_dolly_out_0020_phys_four_body_scatter_0041
+[7/24] rendering clip_0006_cam_truck_pan_0060_phys_sphere_hits_tall_block_0030
+[8/24] rendering clip_0007_cam_low_truck_roll_0061_phys_sphere_hits_tall_block_0030
+[9/24] rendering clip_0008_cam_crane_tilt_0040_phys_box_sphere_collision_0080
+[10/24] rendering clip_0009_cam_crane_tilt_0040_phys_drop_bounce_0081
+[11/24] rendering clip_0010_cam_top_down_drift_0100_phys_four_body_scatter_0050
+[12/24] rendering clip_0011_cam_static_view_0101_phys_four_body_scatter_0050
+[13/24] rendering clip_0012_cam_orbit_arc_0060_phys_static_mixed_pair_0120
+[14/24] rendering clip_0013_cam_orbit_arc_0060_phys_sphere_hits_tall_block_0121
+[15/24] rendering clip_0014_cam_low_truck_roll_0140_phys_drop_bounce_0070
+[16/24] rendering clip_0015_cam_dolly_out_0141_phys_drop_bounce_0070
+[17/24] rendering clip_0016_cam_diagonal_combo_0080_phys_two_sphere_collision_0160
+[18/24] rendering clip_0017_cam_diagonal_combo_0080_phys_four_body_scatter_0161
+[19/24] rendering clip_0018_cam_static_view_0180_phys_sphere_hits_tall_block_0090
+[20/24] rendering clip_0019_cam_crane_tilt_0181_phys_sphere_hits_tall_block_0090
+[21/24] rendering clip_0020_cam_dolly_in_0100_phys_box_sphere_collision_0200
+[22/24] rendering clip_0021_cam_dolly_in_0100_phys_drop_bounce_0201
+[23/24] rendering clip_0022_cam_dolly_out_0220_phys_four_body_scatter_0110
+[24/24] rendering clip_0023_cam_orbit_arc_0221_phys_four_body_scatter_0110
+
+Blender quit
+Error: Not freed memory blocks: 24, total unfreed memory 0.031860 MB

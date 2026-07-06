@@ -1,0 +1,241 @@
+{
+  "run_id": "kubric_batch_v2_review_0000",
+  "run_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000",
+  "run_dir_relative_to_repo": "site/assets/runs/kubric_batch_v2_review_0000",
+  "phase": "complete",
+  "updated_at_utc": "2026-07-06T23:16:19.002350+00:00",
+  "active_job": "clip_0023_cam_orbit_arc_0221_phys_four_body_scatter_0110",
+  "last_render_log_event": {
+    "index": 24,
+    "total": 24,
+    "action": "rendering",
+    "clip_id": "clip_0023_cam_orbit_arc_0221_phys_four_body_scatter_0110"
+  },
+  "jobs_total": 24,
+  "frames_expected_total": 2136,
+  "frames_rendered_total": 2136,
+  "frames_progress": 1.0,
+  "rendered_jobs_complete": 24,
+  "videos_complete": 24,
+  "complete": true,
+  "resume_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/resume_kubric_run.py --run-dir /workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000",
+  "note": "Use resume_command after an interrupted run; it skips completed frame directories and completed videos.",
+  "jobs": [
+    {
+      "clip_id": "clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000",
+      "expected_frames": 132,
+      "rendered_frames": 132,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000.mp4"
+    },
+    {
+      "clip_id": "clip_0001_cam_static_view_0000_phys_sphere_hits_tall_block_0001",
+      "expected_frames": 132,
+      "rendered_frames": 132,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0001_cam_static_view_0000_phys_sphere_hits_tall_block_0001",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0001_cam_static_view_0000_phys_sphere_hits_tall_block_0001.mp4"
+    },
+    {
+      "clip_id": "clip_0002_cam_dolly_in_0020_phys_drop_bounce_0010",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0002_cam_dolly_in_0020_phys_drop_bounce_0010",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0002_cam_dolly_in_0020_phys_drop_bounce_0010.mp4"
+    },
+    {
+      "clip_id": "clip_0003_cam_top_down_drift_0021_phys_drop_bounce_0010",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0003_cam_top_down_drift_0021_phys_drop_bounce_0010",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0003_cam_top_down_drift_0021_phys_drop_bounce_0010.mp4"
+    },
+    {
+      "clip_id": "clip_0004_cam_dolly_out_0020_phys_two_sphere_collision_0040",
+      "expected_frames": 84,
+      "rendered_frames": 84,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0004_cam_dolly_out_0020_phys_two_sphere_collision_0040",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0004_cam_dolly_out_0020_phys_two_sphere_collision_0040.mp4"
+    },
+    {
+      "clip_id": "clip_0005_cam_dolly_out_0020_phys_four_body_scatter_0041",
+      "expected_frames": 84,
+      "rendered_frames": 84,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0005_cam_dolly_out_0020_phys_four_body_scatter_0041",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0005_cam_dolly_out_0020_phys_four_body_scatter_0041.mp4"
+    },
+    {
+      "clip_id": "clip_0006_cam_truck_pan_0060_phys_sphere_hits_tall_block_0030",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0006_cam_truck_pan_0060_phys_sphere_hits_tall_block_0030",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0006_cam_truck_pan_0060_phys_sphere_hits_tall_block_0030.mp4"
+    },
+    {
+      "clip_id": "clip_0007_cam_low_truck_roll_0061_phys_sphere_hits_tall_block_0030",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0007_cam_low_truck_roll_0061_phys_sphere_hits_tall_block_0030",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0007_cam_low_truck_roll_0061_phys_sphere_hits_tall_block_0030.mp4"
+    },
+    {
+      "clip_id": "clip_0008_cam_crane_tilt_0040_phys_box_sphere_collision_0080",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0008_cam_crane_tilt_0040_phys_box_sphere_collision_0080",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0008_cam_crane_tilt_0040_phys_box_sphere_collision_0080.mp4"
+    },
+    {
+      "clip_id": "clip_0009_cam_crane_tilt_0040_phys_drop_bounce_0081",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0009_cam_crane_tilt_0040_phys_drop_bounce_0081",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0009_cam_crane_tilt_0040_phys_drop_bounce_0081.mp4"
+    },
+    {
+      "clip_id": "clip_0010_cam_top_down_drift_0100_phys_four_body_scatter_0050",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0010_cam_top_down_drift_0100_phys_four_body_scatter_0050",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0010_cam_top_down_drift_0100_phys_four_body_scatter_0050.mp4"
+    },
+    {
+      "clip_id": "clip_0011_cam_static_view_0101_phys_four_body_scatter_0050",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0011_cam_static_view_0101_phys_four_body_scatter_0050",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0011_cam_static_view_0101_phys_four_body_scatter_0050.mp4"
+    },
+    {
+      "clip_id": "clip_0012_cam_orbit_arc_0060_phys_static_mixed_pair_0120",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0012_cam_orbit_arc_0060_phys_static_mixed_pair_0120",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0012_cam_orbit_arc_0060_phys_static_mixed_pair_0120.mp4"
+    },
+    {
+      "clip_id": "clip_0013_cam_orbit_arc_0060_phys_sphere_hits_tall_block_0121",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0013_cam_orbit_arc_0060_phys_sphere_hits_tall_block_0121",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0013_cam_orbit_arc_0060_phys_sphere_hits_tall_block_0121.mp4"
+    },
+    {
+      "clip_id": "clip_0014_cam_low_truck_roll_0140_phys_drop_bounce_0070",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0014_cam_low_truck_roll_0140_phys_drop_bounce_0070",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0014_cam_low_truck_roll_0140_phys_drop_bounce_0070.mp4"
+    },
+    {
+      "clip_id": "clip_0015_cam_dolly_out_0141_phys_drop_bounce_0070",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0015_cam_dolly_out_0141_phys_drop_bounce_0070",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0015_cam_dolly_out_0141_phys_drop_bounce_0070.mp4"
+    },
+    {
+      "clip_id": "clip_0016_cam_diagonal_combo_0080_phys_two_sphere_collision_0160",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0016_cam_diagonal_combo_0080_phys_two_sphere_collision_0160",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0016_cam_diagonal_combo_0080_phys_two_sphere_collision_0160.mp4"
+    },
+    {
+      "clip_id": "clip_0017_cam_diagonal_combo_0080_phys_four_body_scatter_0161",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0017_cam_diagonal_combo_0080_phys_four_body_scatter_0161",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0017_cam_diagonal_combo_0080_phys_four_body_scatter_0161.mp4"
+    },
+    {
+      "clip_id": "clip_0018_cam_static_view_0180_phys_sphere_hits_tall_block_0090",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0018_cam_static_view_0180_phys_sphere_hits_tall_block_0090",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0018_cam_static_view_0180_phys_sphere_hits_tall_block_0090.mp4"
+    },
+    {
+      "clip_id": "clip_0019_cam_crane_tilt_0181_phys_sphere_hits_tall_block_0090",
+      "expected_frames": 72,
+      "rendered_frames": 72,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0019_cam_crane_tilt_0181_phys_sphere_hits_tall_block_0090",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0019_cam_crane_tilt_0181_phys_sphere_hits_tall_block_0090.mp4"
+    },
+    {
+      "clip_id": "clip_0020_cam_dolly_in_0100_phys_box_sphere_collision_0200",
+      "expected_frames": 84,
+      "rendered_frames": 84,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0020_cam_dolly_in_0100_phys_box_sphere_collision_0200",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0020_cam_dolly_in_0100_phys_box_sphere_collision_0200.mp4"
+    },
+    {
+      "clip_id": "clip_0021_cam_dolly_in_0100_phys_drop_bounce_0201",
+      "expected_frames": 84,
+      "rendered_frames": 84,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0021_cam_dolly_in_0100_phys_drop_bounce_0201",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0021_cam_dolly_in_0100_phys_drop_bounce_0201.mp4"
+    },
+    {
+      "clip_id": "clip_0022_cam_dolly_out_0220_phys_four_body_scatter_0110",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0022_cam_dolly_out_0220_phys_four_body_scatter_0110",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0022_cam_dolly_out_0220_phys_four_body_scatter_0110.mp4"
+    },
+    {
+      "clip_id": "clip_0023_cam_orbit_arc_0221_phys_four_body_scatter_0110",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/frames/clip_0023_cam_orbit_arc_0221_phys_four_body_scatter_0110",
+      "video": "/workspace/writeable/code/camera_motion_disentangle/site/assets/runs/kubric_batch_v2_review_0000/videos/clip_0023_cam_orbit_arc_0221_phys_four_body_scatter_0110.mp4"
+    }
+  ]
+}
