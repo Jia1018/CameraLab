@@ -15,6 +15,7 @@ In the current bank generator, `scene_id` is explicit. A "same physics" pair mea
 - `scripts/generate_kubric_pairs.py`: older Kubric-oriented contract scaffold.
 - `scripts/generate_kubric_review_bank.py`: previous review-bank generator; uses direct PyBullet for rigid-body simulation and Blender for rendering, with Kubric-style camera/physics/scene factor contracts.
 - `scripts/generate_official_kubric_review_bank.py`: current official-Kubric review-bank generator; uses PyPI `kubric` scene objects, Kubric PyBullet, and Kubric Blender renderer.
+- `scripts/plan_official_kubric_batch.py`: creates reproducible shard plans and shell scripts for no-render physics audits and later batch rendering.
 - `scripts/kubric_official_smoke.py`: smoke tests for the official PyPI `kubric` package, covering Kubric PyBullet and Blender renderer.
 - `scripts/generate_blender_pairs.py`: small 3-clip Blender preview.
 - `scripts/generate_blender_rich_pairs.py`: hand-authored richer 6-clip Blender preview.
@@ -100,15 +101,16 @@ The render smoke test should write `/tmp/kubric_official_smoke/frame_0001.png`.
 
 ## Generate The Official Kubric Review Bank
 
-`kubric_review_v5_official` is the current official-Kubric human-review bank:
+`kubric_review_v5_official` is the current published official-Kubric human-review bank. The generator now has stricter v6-ready physics checks:
 
-- 18 clips from 3 camera trajectories x 6 physics programs;
+- 18 clips from 3 camera trajectories x 6 physics programs in the small review setting;
 - 24 pair groups across same-camera/different-physics and same-physics/same-scene/different-camera comparisons;
-- 96 frames at 24 fps, 640x480 review resolution;
-- official `kubric.simulator.PyBullet` runs the rigid-body simulation;
+- 96 frames at 24 fps, 640x480 review resolution by default;
+- official `kubric.simulator.PyBullet` runs the rigid-body simulation with an explicit 240 Hz timestep and 160 solver iterations;
 - official `kubric.renderer.Blender` renders denoised Cycles PNG frames with 16 samples, then system `ffmpeg` encodes MP4 for GitHub Pages;
-- object colors and visual material profiles are sampled and written into metadata;
-- each physics program audits expected contacts before rendering, using Kubric collision logs plus visible geometry contact checks.
+- sphere radii, box extents, mass, speed, friction, restitution, object colors, and visual material profiles are sampled and written into metadata;
+- each physics program audits expected contacts before rendering with Kubric collision logs plus visible geometry contact checks;
+- the current generator also fails before rendering on finite-motion, ground/object penetration, floating-rebound, sudden-stop, and gravity-bounce plausibility checks.
 
 Generate the official bank, previews, and deployable docs copy:
 
@@ -118,7 +120,7 @@ cd /workspace/writeable/code/camera_motion_disentangle
 PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
 /workspace/writeable/environments/kubric_official/bin/python \
   scripts/generate_official_kubric_review_bank.py \
-  --run-id kubric_review_v5_official \
+  --run-id kubric_review_v6_official \
   --camera-limit 3 \
   --physics-limit 6 \
   --pairs 24 \
@@ -129,7 +131,7 @@ PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
 
 /workspace/writeable/environments/kubric_review/bin/python \
   scripts/make_run_previews.py \
-  --run-dir site/assets/runs/kubric_review_v5_official \
+  --run-dir site/assets/runs/kubric_review_v6_official \
   --samples 8 \
   --thumb-width 220
 
@@ -138,7 +140,39 @@ bash scripts/sync_site_to_docs.sh
 
 Rendering may create temporary `site/.../frames/` directories; `scripts/sync_site_to_docs.sh` excludes them from `docs/`, and they can be deleted after previews/MP4s are generated to save disk space.
 
-`kubric_review_v2_official` was the first official-Kubric smoke-sized web run. It used 30 frames at 160x120 and looked blocky when upscaled. `kubric_review_v3_official` improved length/resolution but still used very low Cycles sampling, which produced visible speckle/noise. `kubric_review_v4_official` fixed the render noise with denoised 16-sample Cycles. Use v5 for visual review of sampled object colors, surface materials, and the three-body scatter physics program.
+`kubric_review_v2_official` was the first official-Kubric smoke-sized web run. It used 30 frames at 160x120 and looked blocky when upscaled. `kubric_review_v3_official` improved length/resolution but still used very low Cycles sampling, which produced visible speckle/noise. `kubric_review_v4_official` fixed the render noise with denoised 16-sample Cycles. `kubric_review_v5_official` added sampled object colors, surface materials, and the three-body scatter physics program. The next small review run should use `kubric_review_v6_official` to exercise the stricter solver/audit path before batch generation.
+
+## Plan Batch Generation
+
+Large batch outputs should stay outside the git repository. The default planner writes to `/workspace/writeable/datasets/camera_motion_disentangle/<batch-id>` and creates shell scripts under `batch_plans/<batch-id>/`.
+
+Create a first 16-shard plan:
+
+```bash
+cd /workspace/writeable/code/camera_motion_disentangle
+
+python3 scripts/plan_official_kubric_batch.py \
+  --batch-id kubric_batch_v1 \
+  --shards 16 \
+  --camera-limit 5 \
+  --physics-limit 6 \
+  --pairs 40 \
+  --overwrite
+```
+
+Run the no-render audit pass first. This simulates physics, writes metadata, and fails fast on missing contacts or plausibility problems without spending Blender render time:
+
+```bash
+bash batch_plans/kubric_batch_v1/audit_shards.sh
+```
+
+Only after the audit pass is clean, run rendering:
+
+```bash
+bash batch_plans/kubric_batch_v1/render_shards.sh
+```
+
+The planner samples shard frame counts from a clipped Gaussian, so different shards can have different durations while all paired clips within one shard still have the same length. This preserves paired-video alignment without forcing the whole dataset to have one global duration.
 
 ## Generate The Kubric-Style Review Bank
 
@@ -233,4 +267,5 @@ The current review-bank generator addresses the earlier failure modes:
 - camera trajectories are sampled from per-axis Gaussian motion profiles; same-camera pairs still share the exact sampled `camera_id` trajectory.
 - dynamic roll and angle changes are mostly slow, small-amplitude camera motions for human review comfort; abrupt large rotations are rare hard cases, not the default.
 - `kubric_review_v1` uses PyBullet rigid-body trajectories for contacts and collisions; the older Blender banks remain useful only as visual/contract previews.
-- only part of the current PyBullet review-bank parameter space is Gaussian-sampled. Camera velocities and several object speed scalars use clipped Gaussians, but object size, mass, friction, restitution, many start positions, and some velocity components are still fixed hand-tuned constants. The next official-Kubric iteration should move those physical/material parameters to clipped Gaussian or mixture distributions with collision-quality filters.
+- the official generator now samples sphere radii, box extents, mass, speed, friction, restitution, colors, material profile parameters, camera starts, camera target offsets, roll, lens, and camera velocities from clipped Gaussian templates.
+- current shape diversity is still limited to Kubric `Sphere` and `Cube`; broader object categories should be added next through validated `FileBasedObject` / URDF assets with the same plausibility-audit path.

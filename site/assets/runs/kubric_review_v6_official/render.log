@@ -1,0 +1,24 @@
+could not get a list of mounted file-systems
+[1/18] rendering clip_000_cam_static_left_high_phys_static_sphere
+2026-07-06 10:11:45.662128: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2/18] rendering clip_001_cam_dolly_in_right_start_phys_static_sphere
+[3/18] rendering clip_002_cam_truck_left_pan_right_phys_static_sphere
+[4/18] rendering clip_003_cam_static_left_high_phys_drop_bounce
+[5/18] rendering clip_004_cam_dolly_in_right_start_phys_drop_bounce
+[6/18] rendering clip_005_cam_truck_left_pan_right_phys_drop_bounce
+[7/18] rendering clip_006_cam_static_left_high_phys_two_sphere_collision
+[8/18] rendering clip_007_cam_dolly_in_right_start_phys_two_sphere_collision
+[9/18] rendering clip_008_cam_truck_left_pan_right_phys_two_sphere_collision
+[10/18] rendering clip_009_cam_static_left_high_phys_ball_hits_visible_block
+[11/18] rendering clip_010_cam_dolly_in_right_start_phys_ball_hits_visible_block
+[12/18] rendering clip_011_cam_truck_left_pan_right_phys_ball_hits_visible_block
+[13/18] rendering clip_012_cam_static_left_high_phys_cube_sphere_collision
+[14/18] rendering clip_013_cam_dolly_in_right_start_phys_cube_sphere_collision
+[15/18] rendering clip_014_cam_truck_left_pan_right_phys_cube_sphere_collision
+[16/18] rendering clip_015_cam_static_left_high_phys_three_body_scatter
+[17/18] rendering clip_016_cam_dolly_in_right_start_phys_three_body_scatter
+[18/18] rendering clip_017_cam_truck_left_pan_right_phys_three_body_scatter
+
+Blender quit
+Error: Not freed memory blocks: 18, total unfreed memory 0.023895 MB

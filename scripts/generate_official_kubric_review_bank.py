@@ -29,6 +29,9 @@ DEFAULT_KUBRIC_SITE_PACKAGES = Path(
 
 FPS = 24
 PHYSICS_HZ = 240
+PHYSICS_SOLVER_ITERATIONS = 160
+MAX_GROUND_PENETRATION_M = 0.045
+MAX_PAIR_PENETRATION_M = 0.085
 FRAMES = 96
 WIDTH = 640
 HEIGHT = 480
@@ -294,6 +297,23 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
     two_speed = trunc_gauss(rng, 1.65, 0.22, 1.20, 2.15)
     block_speed = trunc_gauss(rng, 1.95, 0.25, 1.45, 2.50)
     cube_sphere_speed = trunc_gauss(rng, 1.70, 0.24, 1.20, 2.25)
+    target_block_half = (
+        trunc_gauss(rng, 0.24, 0.03, 0.18, 0.31),
+        trunc_gauss(rng, 0.30, 0.03, 0.23, 0.38),
+        trunc_gauss(rng, 0.28, 0.03, 0.22, 0.35),
+    )
+    moving_cube_half = (
+        trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
+        trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
+        trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
+    )
+    scatter_r_a = trunc_gauss(rng, 0.24, 0.025, 0.20, 0.31)
+    scatter_r_b = trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30)
+    scatter_cube_half = (
+        trunc_gauss(rng, 0.24, 0.025, 0.20, 0.31),
+        trunc_gauss(rng, 0.24, 0.025, 0.20, 0.31),
+        trunc_gauss(rng, 0.24, 0.025, 0.20, 0.31),
+    )
 
     appearance_index = 0
 
@@ -397,12 +417,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                 ),
                 cube(
                     "block_target",
-                    (
-                        trunc_gauss(rng, 0.24, 0.03, 0.18, 0.31),
-                        trunc_gauss(rng, 0.30, 0.03, 0.23, 0.38),
-                        trunc_gauss(rng, 0.28, 0.03, 0.22, 0.35),
-                    ),
-                    (-0.05, 0.0, 0.28),
+                    target_block_half,
+                    (-0.05, 0.0, target_block_half[2]),
                     appearance("visible_block_target", profile="matte"),
                     mass=0.0,
                     restitution=trunc_gauss(rng, 0.68, 0.08, 0.45, 0.82),
@@ -421,12 +437,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "bodies": [
                 cube(
                     "moving_cube",
-                    (
-                        trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
-                        trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
-                        trunc_gauss(rng, 0.23, 0.025, 0.19, 0.30),
-                    ),
-                    (-1.05, -0.16, 0.31),
+                    moving_cube_half,
+                    (-1.05, -0.16, moving_cube_half[2]),
                     appearance("moving_cube"),
                     velocity=(cube_sphere_speed, 0.18, 0.0),
                     angular_velocity=(0.0, -2.0, 0.25),
@@ -456,8 +468,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "bodies": [
                 sphere(
                     "scatter_sphere_a",
-                    0.24,
-                    (-1.25, -0.28, 0.24),
+                    scatter_r_a,
+                    (-1.25, -0.28, scatter_r_a),
                     appearance("scatter_sphere_a"),
                     velocity=(trunc_gauss(rng, 1.75, 0.22, 1.25, 2.25), 0.38, 0.0),
                     mass=mass(),
@@ -466,8 +478,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                 ),
                 cube(
                     "scatter_cube",
-                    (0.24, 0.24, 0.24),
-                    (0.05, 0.05, 0.24),
+                    scatter_cube_half,
+                    (0.05, 0.05, scatter_cube_half[2]),
                     appearance("scatter_cube"),
                     velocity=(0.05, 0.00, 0.0),
                     angular_velocity=(0.0, 1.4, 0.4),
@@ -477,8 +489,8 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                 ),
                 sphere(
                     "scatter_sphere_b",
-                    0.23,
-                    (1.20, 0.30, 0.23),
+                    scatter_r_b,
+                    (1.20, 0.30, scatter_r_b),
                     appearance("scatter_sphere_b"),
                     velocity=(trunc_gauss(rng, -1.55, 0.20, -2.05, -1.05), -0.35, 0.0),
                     mass=mass(),
@@ -886,6 +898,230 @@ def expected_visual_contacts_passed(records: list[dict[str, Any]], expected_cont
     return all(visual_contact_exists(records, a, b) for a, b in expected_contacts)
 
 
+def object_bottom_z(obj: dict[str, Any]) -> float:
+    if obj["shape"] == "sphere":
+        return float(obj["position"][2]) - float(obj["radius"])
+    half = obj.get("half_extents") or [v / 2.0 for v in obj["size"]]
+    return float(obj["position"][2]) - float(half[2])
+
+
+def signed_pair_gap(a: dict[str, Any], b: dict[str, Any]) -> float | None:
+    if a["shape"] == "sphere" and b["shape"] == "sphere":
+        return math.dist(a["position"], b["position"]) - float(a["radius"] + b["radius"])
+    if a["shape"] == "sphere" and b["shape"] == "box":
+        center = a["position"]
+        box_center = b["position"]
+        half = b.get("half_extents") or [v / 2.0 for v in b["size"]]
+        closest = [clamp(center[i], box_center[i] - half[i], box_center[i] + half[i]) for i in range(3)]
+        return math.dist(center, closest) - float(a["radius"])
+    if a["shape"] == "box" and b["shape"] == "sphere":
+        return signed_pair_gap(b, a)
+    if a["shape"] == "box" and b["shape"] == "box":
+        half_a = a.get("half_extents") or [v / 2.0 for v in a["size"]]
+        half_b = b.get("half_extents") or [v / 2.0 for v in b["size"]]
+        axis_gaps = [
+            abs(float(a["position"][i]) - float(b["position"][i])) - float(half_a[i] + half_b[i])
+            for i in range(3)
+        ]
+        if any(gap > 0.0 for gap in axis_gaps):
+            return math.sqrt(sum(max(0.0, gap) ** 2 for gap in axis_gaps))
+        return max(axis_gaps)
+    return None
+
+
+def expected_contact_frames(records: list[dict[str, Any]], expected_contacts: list[list[str]], margin: float = 0.04) -> set[int]:
+    frames: set[int] = set()
+    for frame_record in records:
+        objects = {obj["name"]: obj for obj in frame_record["objects"]}
+        for name_a, name_b in expected_contacts:
+            if name_a == "ground" and name_b in objects and ground_touch(objects[name_b], margin):
+                frames.add(int(frame_record["frame"]))
+            elif name_b == "ground" and name_a in objects and ground_touch(objects[name_a], margin):
+                frames.add(int(frame_record["frame"]))
+            elif name_a in objects and name_b in objects:
+                gap = signed_pair_gap(objects[name_a], objects[name_b])
+                if gap is not None and gap <= margin:
+                    frames.add(int(frame_record["frame"]))
+    return frames
+
+
+def penetration_audit(records: list[dict[str, Any]]) -> dict[str, Any]:
+    min_ground_gap = float("inf")
+    min_pair_gap = float("inf")
+    worst_ground: dict[str, Any] | None = None
+    worst_pair: dict[str, Any] | None = None
+    for frame_record in records:
+        objects = frame_record["objects"]
+        for obj in objects:
+            gap = object_bottom_z(obj)
+            if gap < min_ground_gap:
+                min_ground_gap = gap
+                worst_ground = {"frame": frame_record["frame"], "object": obj["name"], "gap_m": round(gap, 5)}
+        for idx, a in enumerate(objects):
+            for b in objects[idx + 1 :]:
+                gap = signed_pair_gap(a, b)
+                if gap is not None and gap < min_pair_gap:
+                    min_pair_gap = gap
+                    worst_pair = {
+                        "frame": frame_record["frame"],
+                        "pair": [a["name"], b["name"]],
+                        "gap_m": round(gap, 5),
+                    }
+    if math.isinf(min_pair_gap):
+        min_pair_gap = 999.0
+    passed = min_ground_gap >= -MAX_GROUND_PENETRATION_M and min_pair_gap >= -MAX_PAIR_PENETRATION_M
+    return {
+        "passed": passed,
+        "min_ground_gap_m": round(min_ground_gap, 5),
+        "min_pair_gap_m": round(min_pair_gap, 5),
+        "max_allowed_ground_penetration_m": MAX_GROUND_PENETRATION_M,
+        "max_allowed_pair_penetration_m": MAX_PAIR_PENETRATION_M,
+        "worst_ground": worst_ground,
+        "worst_pair": worst_pair,
+    }
+
+
+def finite_motion_audit(records: list[dict[str, Any]]) -> dict[str, Any]:
+    max_speed = 0.0
+    max_abs_position = 0.0
+    bad_values: list[dict[str, Any]] = []
+    for frame_record in records:
+        for obj in frame_record["objects"]:
+            values = list(obj["position"]) + list(obj["linear_velocity"]) + list(obj["angular_velocity"])
+            if not all(math.isfinite(float(value)) for value in values):
+                bad_values.append({"frame": frame_record["frame"], "object": obj["name"]})
+            max_speed = max(max_speed, math.sqrt(sum(float(v) ** 2 for v in obj["linear_velocity"])))
+            max_abs_position = max(max_abs_position, max(abs(float(v)) for v in obj["position"]))
+    return {
+        "passed": not bad_values and max_speed <= 18.0 and max_abs_position <= 8.5,
+        "bad_values": bad_values[:8],
+        "max_speed_mps": round(max_speed, 5),
+        "max_abs_position_m": round(max_abs_position, 5),
+    }
+
+
+def floating_rebound_audit(records: list[dict[str, Any]], expected_contacts: list[list[str]]) -> dict[str, Any]:
+    contact_frames = expected_contact_frames(records, expected_contacts, margin=0.055)
+    events: list[dict[str, Any]] = []
+    by_name: dict[str, list[dict[str, Any]]] = {}
+    for frame_record in records:
+        for obj in frame_record["objects"]:
+            by_name.setdefault(obj["name"], []).append({"frame": frame_record["frame"], "object": obj})
+    for name, samples in by_name.items():
+        for prev, cur in zip(samples, samples[1:]):
+            prev_obj = prev["object"]
+            cur_obj = cur["object"]
+            vz0 = float(prev_obj["linear_velocity"][2])
+            vz1 = float(cur_obj["linear_velocity"][2])
+            bottom = min(object_bottom_z(prev_obj), object_bottom_z(cur_obj))
+            near_expected = any(abs(int(cur["frame"]) - frame) <= 1 for frame in contact_frames)
+            if vz0 < -0.35 and vz1 > 0.35 and bottom > 0.12 and not near_expected:
+                events.append(
+                    {
+                        "frame": cur["frame"],
+                        "object": name,
+                        "bottom_gap_m": round(bottom, 5),
+                        "previous_vz": round(vz0, 5),
+                        "current_vz": round(vz1, 5),
+                    }
+                )
+    return {"passed": not events, "events": events[:8]}
+
+
+def sudden_stop_audit(records: list[dict[str, Any]], expected_contacts: list[list[str]]) -> dict[str, Any]:
+    contact_frames = expected_contact_frames(records, expected_contacts, margin=0.065)
+    events: list[dict[str, Any]] = []
+    by_name: dict[str, list[dict[str, Any]]] = {}
+    for frame_record in records:
+        for obj in frame_record["objects"]:
+            by_name.setdefault(obj["name"], []).append({"frame": frame_record["frame"], "object": obj})
+    for name, samples in by_name.items():
+        for prev, cur in zip(samples, samples[1:]):
+            prev_obj = prev["object"]
+            cur_obj = cur["object"]
+            speed0 = math.sqrt(sum(float(v) ** 2 for v in prev_obj["linear_velocity"]))
+            speed1 = math.sqrt(sum(float(v) ** 2 for v in cur_obj["linear_velocity"]))
+            bottom = min(object_bottom_z(prev_obj), object_bottom_z(cur_obj))
+            near_contact = any(abs(int(cur["frame"]) - frame) <= 2 for frame in contact_frames) or bottom <= 0.055
+            if speed0 > 0.85 and speed1 < 0.08 and bottom > 0.10 and not near_contact:
+                events.append(
+                    {
+                        "frame": cur["frame"],
+                        "object": name,
+                        "bottom_gap_m": round(bottom, 5),
+                        "previous_speed_mps": round(speed0, 5),
+                        "current_speed_mps": round(speed1, 5),
+                    }
+                )
+    return {"passed": not events, "events": events[:8]}
+
+
+def bounce_completion_audit(records: list[dict[str, Any]], physics: dict[str, Any]) -> dict[str, Any]:
+    if physics.get("kind") != "gravity_bounce":
+        return {"passed": True, "not_applicable": True}
+    dynamic_names = [body["name"] for body in physics["bodies"] if not body.get("static")]
+    name = dynamic_names[0] if dynamic_names else None
+    if not name:
+        return {"passed": False, "reason": "no dynamic object"}
+    samples = []
+    for frame_record in records:
+        for obj in frame_record["objects"]:
+            if obj["name"] == name:
+                samples.append((int(frame_record["frame"]), obj))
+                break
+    contact_indices = [idx for idx, (_, obj) in enumerate(samples) if object_bottom_z(obj) <= 0.055]
+    if not contact_indices:
+        return {"passed": False, "reason": "no visible ground contact"}
+    first_idx = contact_indices[0]
+    upward_after = any(float(obj["linear_velocity"][2]) > 0.20 for _, obj in samples[first_idx + 1 :])
+    radius = float(samples[0][1].get("radius") or 0.0)
+    rebound_height = max(float(obj["position"][2]) for _, obj in samples[first_idx:]) - radius
+    still_active_end = math.sqrt(sum(float(v) ** 2 for v in samples[-1][1]["linear_velocity"])) > 0.22
+    passed = upward_after and rebound_height >= 0.06
+    return {
+        "passed": passed,
+        "first_contact_frame": samples[first_idx][0],
+        "upward_velocity_after_contact": upward_after,
+        "max_rebound_above_radius_m": round(rebound_height, 5),
+        "still_active_at_last_frame": still_active_end,
+    }
+
+
+def physics_plausibility_audit(
+    records: list[dict[str, Any]], physics: dict[str, Any], expected_contacts: list[list[str]]
+) -> dict[str, Any]:
+    checks = {
+        "finite_motion": finite_motion_audit(records),
+        "penetration": penetration_audit(records),
+        "floating_rebound": floating_rebound_audit(records, expected_contacts),
+        "sudden_stop": sudden_stop_audit(records, expected_contacts),
+        "bounce_completion": bounce_completion_audit(records, physics),
+    }
+    passed = all(check.get("passed", False) for check in checks.values())
+    return {"passed": passed, "checks": checks}
+
+
+def configure_pybullet_solver(pb: Any, physics_client: int) -> dict[str, Any]:
+    config = {
+        "fixedTimeStep": 1.0 / PHYSICS_HZ,
+        "numSolverIterations": PHYSICS_SOLVER_ITERATIONS,
+        "numSubSteps": 1,
+    }
+    pb.setTimeStep(config["fixedTimeStep"], physicsClientId=physics_client)
+    pb.setPhysicsEngineParameter(
+        fixedTimeStep=config["fixedTimeStep"],
+        numSolverIterations=config["numSolverIterations"],
+        numSubSteps=config["numSubSteps"],
+        physicsClientId=physics_client,
+    )
+    return {
+        "physics_hz": PHYSICS_HZ,
+        "fixed_timestep_s": round(config["fixedTimeStep"], 8),
+        "solver_iterations": PHYSICS_SOLVER_ITERATIONS,
+        "num_substeps": config["numSubSteps"],
+    }
+
+
 def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int, width: int, height: int) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     import pybullet as pb
     import kubric as kb
@@ -897,6 +1133,7 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
 
     scene, body_assets = build_sim_scene(kb, physics, world, frames, width, height)
     simulator = PyBullet(scene)
+    solver_config = configure_pybullet_solver(pb, simulator.physics_client)
     animation, collisions = simulator.run()
     if pb.isConnected(simulator.physics_client):
         pb.disconnect(simulator.physics_client)
@@ -928,12 +1165,17 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
         records.append({"frame": frame, "time_s": round(frame / FPS, 5), "objects": objects})
 
     expected = physics.get("expected_contacts", [])
+    collision_log_passed = expected_contacts_passed(summary, expected)
+    visual_contacts_passed = expected_visual_contacts_passed(records, expected)
+    plausibility = physics_plausibility_audit(records, physics, expected)
     quality = {
         "expected_contacts": expected,
-        "expected_contacts_passed": expected_contacts_passed(summary, expected)
-        or expected_visual_contacts_passed(records, expected),
-        "collision_log_contacts_passed": expected_contacts_passed(summary, expected),
-        "visual_contacts_passed": expected_visual_contacts_passed(records, expected),
+        "expected_contacts_passed": collision_log_passed or visual_contacts_passed,
+        "collision_log_contacts_passed": collision_log_passed,
+        "visual_contacts_passed": visual_contacts_passed,
+        "physics_plausibility_passed": plausibility["passed"],
+        "physics_plausibility": plausibility,
+        "pybullet_solver": solver_config,
         "collision_summary": summary,
     }
     return records, quality
@@ -1055,10 +1297,15 @@ def write_run(
         world = worlds[physics_index % len(worlds)]
         sim_key = f"{physics['id']}__{world['id']}"
         sim_cache[sim_key] = simulate_physics(physics, world, frames, width, height)
-        if not sim_cache[sim_key][1]["expected_contacts_passed"]:
-            expected = sim_cache[sim_key][1]["expected_contacts"]
-            seen = sim_cache[sim_key][1]["collision_summary"]["pairs"]
+        quality = sim_cache[sim_key][1]
+        if not quality["expected_contacts_passed"]:
+            expected = quality["expected_contacts"]
+            seen = quality["collision_summary"]["pairs"]
             raise RuntimeError(f"{physics['id']} failed expected contact audit: expected={expected}, seen={seen}")
+        if not quality["physics_plausibility_passed"]:
+            checks = quality["physics_plausibility"]["checks"]
+            failed = {name: check for name, check in checks.items() if not check.get("passed", False)}
+            raise RuntimeError(f"{physics['id']} failed physics plausibility audit: {json.dumps(failed, indent=2)}")
 
     clip_index = 0
     for physics_index, physics in enumerate(physics_programs):
@@ -1150,8 +1397,8 @@ def write_run(
         "simulator": "official kubric.simulator.PyBullet",
         "renderer": "official kubric.renderer.Blender",
         "render_note": "Kubric renderer outputs PNG frames, then system ffmpeg encodes review MP4s for GitHub Pages.",
-        "sampling_model": "object radii/sizes, masses, initial speeds, friction, restitution, and camera velocities are sampled from clipped Gaussian templates; each sampled value is written into per-clip metadata.",
-        "quality_filters": "Expected non-ground contacts are audited before rendering; runs fail if required contact pairs are absent.",
+        "sampling_model": "object radii/sizes, masses, initial speeds, friction, restitution, object colors/material profiles, and camera velocities are sampled from clipped Gaussian templates; each sampled value is written into per-clip metadata.",
+        "quality_filters": "Expected contacts are audited with Kubric/PyBullet collision logs plus geometry-based visual contact checks; runs also fail on finite-motion, ground/object penetration, floating-rebound, sudden-stop, and gravity-bounce plausibility audits.",
         "camera_reference": cameras,
         "physics_reference": physics_programs,
         "scene_reference": worlds,

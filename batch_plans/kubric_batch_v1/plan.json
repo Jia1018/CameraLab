@@ -1,0 +1,325 @@
+{
+  "batch_id": "kubric_batch_v1",
+  "generated_at_utc": "2026-07-06T09:36:20.471113+00:00",
+  "generator": "/workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py",
+  "python_bin": "/workspace/writeable/environments/kubric_official/bin/python",
+  "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+  "contract": {
+    "same_camera_pairs": "same sampled camera trajectory, varied physics program and scene",
+    "same_physics_pairs": "same physics frames and same scene, varied sampled camera trajectory",
+    "paired_lengths": "all clips in a shard share frames; different shards sample different frame counts"
+  },
+  "sampling": {
+    "frames": {
+      "distribution": "clipped Gaussian rounded to frame_multiple",
+      "mean": 96.0,
+      "std": 18.0,
+      "min": 72,
+      "max": 144,
+      "frame_multiple": 12
+    },
+    "per_shard_seed": "seed_base + shard_index"
+  },
+  "totals": {
+    "shards": 16,
+    "clips": 480,
+    "target_pairs": 640,
+    "video_seconds": 2064.9984,
+    "render_frames": 50040
+  },
+  "recommended_workflow": [
+    "Run audit_shards.sh first; it simulates physics and writes metadata without Blender rendering.",
+    "Inspect audit failures and adjust sampling/audit thresholds before running render_shards.sh.",
+    "Keep full batch outputs outside the git repo; publish only a small review subset to GitHub Pages docs."
+  ],
+  "shards": [
+    {
+      "shard_index": 0,
+      "run_id": "kubric_batch_v1_shard_0000",
+      "seed": 20260706,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 96,
+      "duration_s": 3.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0000 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260706 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0000 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260706 --overwrite"
+    },
+    {
+      "shard_index": 1,
+      "run_id": "kubric_batch_v1_shard_0001",
+      "seed": 20260707,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 132,
+      "duration_s": 5.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0001 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 132 --width 640 --height 480 --seed 20260707 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0001 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 132 --width 640 --height 480 --seed 20260707 --overwrite"
+    },
+    {
+      "shard_index": 2,
+      "run_id": "kubric_batch_v1_shard_0002",
+      "seed": 20260708,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 120,
+      "duration_s": 4.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0002 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260708 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0002 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260708 --overwrite"
+    },
+    {
+      "shard_index": 3,
+      "run_id": "kubric_batch_v1_shard_0003",
+      "seed": 20260709,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 108,
+      "duration_s": 4.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0003 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 108 --width 640 --height 480 --seed 20260709 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0003 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 108 --width 640 --height 480 --seed 20260709 --overwrite"
+    },
+    {
+      "shard_index": 4,
+      "run_id": "kubric_batch_v1_shard_0004",
+      "seed": 20260710,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 96,
+      "duration_s": 3.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0004 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260710 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0004 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260710 --overwrite"
+    },
+    {
+      "shard_index": 5,
+      "run_id": "kubric_batch_v1_shard_0005",
+      "seed": 20260711,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 108,
+      "duration_s": 4.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0005 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 108 --width 640 --height 480 --seed 20260711 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0005 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 108 --width 640 --height 480 --seed 20260711 --overwrite"
+    },
+    {
+      "shard_index": 6,
+      "run_id": "kubric_batch_v1_shard_0006",
+      "seed": 20260712,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 96,
+      "duration_s": 3.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0006 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260712 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0006 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260712 --overwrite"
+    },
+    {
+      "shard_index": 7,
+      "run_id": "kubric_batch_v1_shard_0007",
+      "seed": 20260713,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 96,
+      "duration_s": 3.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0007 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260713 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0007 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260713 --overwrite"
+    },
+    {
+      "shard_index": 8,
+      "run_id": "kubric_batch_v1_shard_0008",
+      "seed": 20260714,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 120,
+      "duration_s": 4.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0008 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260714 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0008 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260714 --overwrite"
+    },
+    {
+      "shard_index": 9,
+      "run_id": "kubric_batch_v1_shard_0009",
+      "seed": 20260715,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 84,
+      "duration_s": 3.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0009 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 84 --width 640 --height 480 --seed 20260715 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0009 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 84 --width 640 --height 480 --seed 20260715 --overwrite"
+    },
+    {
+      "shard_index": 10,
+      "run_id": "kubric_batch_v1_shard_0010",
+      "seed": 20260716,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 84,
+      "duration_s": 3.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0010 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 84 --width 640 --height 480 --seed 20260716 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0010 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 84 --width 640 --height 480 --seed 20260716 --overwrite"
+    },
+    {
+      "shard_index": 11,
+      "run_id": "kubric_batch_v1_shard_0011",
+      "seed": 20260717,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 120,
+      "duration_s": 4.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0011 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260717 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0011 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260717 --overwrite"
+    },
+    {
+      "shard_index": 12,
+      "run_id": "kubric_batch_v1_shard_0012",
+      "seed": 20260718,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 108,
+      "duration_s": 4.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0012 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 108 --width 640 --height 480 --seed 20260718 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0012 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 108 --width 640 --height 480 --seed 20260718 --overwrite"
+    },
+    {
+      "shard_index": 13,
+      "run_id": "kubric_batch_v1_shard_0013",
+      "seed": 20260719,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 96,
+      "duration_s": 3.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0013 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260719 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0013 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 96 --width 640 --height 480 --seed 20260719 --overwrite"
+    },
+    {
+      "shard_index": 14,
+      "run_id": "kubric_batch_v1_shard_0014",
+      "seed": 20260720,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 120,
+      "duration_s": 4.95833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0014 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260720 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0014 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 120 --width 640 --height 480 --seed 20260720 --overwrite"
+    },
+    {
+      "shard_index": 15,
+      "run_id": "kubric_batch_v1_shard_0015",
+      "seed": 20260721,
+      "run_root": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1",
+      "camera_limit": 5,
+      "physics_limit": 6,
+      "clips": 30,
+      "target_pairs": 40,
+      "frames": 84,
+      "duration_s": 3.45833,
+      "resolution": [
+        640,
+        480
+      ],
+      "audit_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0015 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 84 --width 640 --height 480 --seed 20260721 --overwrite --no-render",
+      "render_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/generate_official_kubric_review_bank.py --run-id kubric_batch_v1_shard_0015 --run-root /workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v1 --camera-limit 5 --physics-limit 6 --pairs 40 --frames 84 --width 640 --height 480 --seed 20260721 --overwrite"
+    }
+  ]
+}
