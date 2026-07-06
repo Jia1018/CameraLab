@@ -1,0 +1,26 @@
+could not get a list of mounted file-systems
+[1/20] rendering clip_000_cam_static_left_high_phys_static_mixed_pair
+2026-07-06 16:41:19.066299: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2/20] rendering clip_001_cam_dolly_in_right_start_phys_static_mixed_pair
+[3/20] rendering clip_002_cam_truck_left_pan_right_phys_static_mixed_pair
+[4/20] rendering clip_003_cam_crane_up_tilt_down_phys_static_mixed_pair
+[5/20] rendering clip_004_cam_static_left_high_phys_drop_bounce
+[6/20] rendering clip_005_cam_dolly_in_right_start_phys_drop_bounce
+[7/20] rendering clip_006_cam_truck_left_pan_right_phys_drop_bounce
+[8/20] rendering clip_007_cam_crane_up_tilt_down_phys_drop_bounce
+[9/20] rendering clip_008_cam_static_left_high_phys_two_sphere_collision
+[10/20] rendering clip_009_cam_dolly_in_right_start_phys_two_sphere_collision
+[11/20] rendering clip_010_cam_truck_left_pan_right_phys_two_sphere_collision
+[12/20] rendering clip_011_cam_crane_up_tilt_down_phys_two_sphere_collision
+[13/20] rendering clip_012_cam_static_left_high_phys_sphere_hits_tall_block
+[14/20] rendering clip_013_cam_dolly_in_right_start_phys_sphere_hits_tall_block
+[15/20] rendering clip_014_cam_truck_left_pan_right_phys_sphere_hits_tall_block
+[16/20] rendering clip_015_cam_crane_up_tilt_down_phys_sphere_hits_tall_block
+[17/20] rendering clip_016_cam_static_left_high_phys_box_sphere_collision
+[18/20] rendering clip_017_cam_dolly_in_right_start_phys_box_sphere_collision
+[19/20] rendering clip_018_cam_truck_left_pan_right_phys_box_sphere_collision
+[20/20] rendering clip_019_cam_crane_up_tilt_down_phys_box_sphere_collision
+
+Blender quit
+Error: Not freed memory blocks: 20, total unfreed memory 0.026550 MB
