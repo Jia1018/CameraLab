@@ -1,0 +1,12 @@
+could not get a list of mounted file-systems
+[1/6] rendering clip_000_cam_static_left_high_phys_static_sphere
+2026-07-06 13:39:02.466044: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2/6] rendering clip_001_cam_dolly_in_right_start_phys_static_sphere
+[3/6] rendering clip_002_cam_static_left_high_phys_drop_bounce
+[4/6] rendering clip_003_cam_dolly_in_right_start_phys_drop_bounce
+[5/6] rendering clip_004_cam_static_left_high_phys_two_sphere_collision
+[6/6] rendering clip_005_cam_dolly_in_right_start_phys_two_sphere_collision
+
+Blender quit
+Error: Not freed memory blocks: 6, total unfreed memory 0.007965 MB
