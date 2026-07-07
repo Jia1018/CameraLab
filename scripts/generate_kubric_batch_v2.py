@@ -53,6 +53,8 @@ PHYSICS_FAMILIES = [
     "phys_sphere_hits_tall_block",
     "phys_box_sphere_collision",
     "phys_four_body_scatter",
+    "phys_three_body_chain",
+    "phys_four_body_crossfire",
 ]
 
 
@@ -205,11 +207,54 @@ def side_sign(rng: random.Random) -> int:
     return -1 if rng.random() < 0.5 else 1
 
 
+def sample_camera_speed_variant(rng: random.Random, family: str) -> dict[str, Any]:
+    if family == "static_view":
+        return {
+            "band": "static",
+            "multiplier": 1.0,
+            "note": "static camera has no translational speed multiplier",
+        }
+    band = rng.choices(["baseline", "brisk"], weights=[0.78, 0.22], k=1)[0]
+    if band == "brisk":
+        multiplier = gen.trunc_gauss(rng, 1.28, 0.12, 1.08, 1.50)
+    else:
+        multiplier = gen.trunc_gauss(rng, 1.00, 0.06, 0.88, 1.12)
+    return {
+        "band": band,
+        "multiplier": round(multiplier, 5),
+        "note": "brisk samples are capped around 1.5x the baseline camera-motion scale",
+    }
+
+
+def scale_tuple(values: tuple[float, float, float], scale: float) -> tuple[float, float, float]:
+    return tuple(float(value) * scale for value in values)
+
+
 def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int) -> dict[str, Any]:
     duration_s = max((frames - 1) / gen.FPS, 1e-6)
     sign = side_sign(rng)
     curve = sample_curve(rng, static=family == "static_view")
     camera_id = f"cam_{family}_{instance_id:04d}"
+    speed_variant = sample_camera_speed_variant(rng, family)
+    speed_gain = float(speed_variant["multiplier"])
+
+    def build_camera(**kwargs: Any) -> dict[str, Any]:
+        extra = dict(kwargs.pop("extra", {}) or {})
+        if family != "static_view":
+            if kwargs.get("path_model") == "orbit":
+                if "orbit_delta_deg" in extra:
+                    original_delta = float(extra["orbit_delta_deg"])
+                    delta_sign = 1.0 if original_delta >= 0.0 else -1.0
+                    scaled_delta = delta_sign * min(abs(original_delta * speed_gain), 78.0)
+                    extra["orbit_delta_deg"] = round(scaled_delta, 5)
+                    radius = float(extra.get("orbit_radius_m", 0.0))
+                    extra["speed_class"] = speed_class(abs(math.radians(scaled_delta) * radius), duration_s)
+            else:
+                kwargs["position_delta"] = scale_tuple(kwargs["position_delta"], speed_gain)
+        extra["speed_sampling_band"] = speed_variant["band"]
+        extra["speed_multiplier"] = speed_variant["multiplier"]
+        extra["speed_sampling_note"] = speed_variant["note"]
+        return make_camera(**kwargs, extra=extra)
 
     if family == "static_view":
         start = (
@@ -222,7 +267,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
             gen.trunc_gauss(rng, 0.0, 0.15, -0.30, 0.30),
             gen.trunc_gauss(rng, 0.38, 0.09, 0.20, 0.58),
         )
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["static", "off_center_start"],
@@ -241,7 +286,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
     if family == "dolly_in":
         speed = gen.trunc_gauss(rng, 0.54, 0.18, 0.18, 0.95)
         dist = min(gen.trunc_gauss(rng, speed * duration_s, 0.20, 0.65, 2.25), 2.35)
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["dolly_in", "off_axis_start", "mild_zoom"],
@@ -260,7 +305,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
     if family == "dolly_out":
         speed = gen.trunc_gauss(rng, 0.45, 0.16, 0.16, 0.82)
         dist = min(gen.trunc_gauss(rng, speed * duration_s, 0.18, 0.55, 2.05), 2.15)
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["dolly_out", "low_or_mid_start", "mild_zoom_out"],
@@ -279,7 +324,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
     if family == "truck_pan":
         speed = gen.trunc_gauss(rng, 0.50, 0.17, 0.18, 0.92)
         dist = min(gen.trunc_gauss(rng, speed * duration_s, 0.20, 0.70, 2.35), 2.45)
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["truck", "counter_pan", "off_center_start"],
@@ -298,7 +343,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
     if family == "crane_tilt":
         up = 1 if rng.random() < 0.68 else -1
         dist = up * gen.trunc_gauss(rng, 0.78, 0.25, 0.28, 1.35)
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["crane", "tilt", "height_change"],
@@ -315,7 +360,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
         )
 
     if family == "top_down_drift":
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["top_down", "ceiling_start", "drift"],
@@ -338,7 +383,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
         height = gen.trunc_gauss(rng, 1.45, 0.24, 0.98, 2.05)
         angle = math.radians(angle_start)
         start = (radius * math.sin(angle), -radius * math.cos(angle), height)
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["orbit", "arc", "look_at_center"],
@@ -366,7 +411,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
         )
 
     if family == "low_truck_roll":
-        return make_camera(
+        return build_camera(
             camera_id=camera_id,
             family=family,
             primitives=["low_start", "truck", "roll"],
@@ -385,7 +430,7 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
     if family != "diagonal_combo":
         raise ValueError(f"unknown camera family {family}")
 
-    return make_camera(
+    return build_camera(
         camera_id=camera_id,
         family=family,
         primitives=["diagonal_move", "pan_tilt_combo", "off_axis_start"],

@@ -4,6 +4,19 @@ This document records the current full-dataset plan for paired Kubric videos.
 It is meant to preserve the design decisions across container restarts and
 future review sessions.
 
+## Current Status
+
+As of 2026-07-07, full large-scale data production has not started yet.  The
+completed work is still review/pilot work: `kubric_batch_v2_review_0000` is a
+small GitHub Pages review run, not the training-scale batch.
+
+The next step before production is a distribution-fix pilot: add broader
+multi-object templates, raise the upper tail of camera speed to a comfortable
+1.5x cap, run no-render physics audits, then render a small review subset.  If
+that review passes, start the first real pilot batch at 100-500 pair groups.
+Only after the pilot batch passes coverage and quality checks should we launch
+the first training batch at 1k-5k pair groups.
+
 ## Goal
 
 Generate paired synthetic videos for learning to disentangle camera motion from
@@ -78,6 +91,9 @@ Sampled camera axes:
 - look-at target: object-centered, slightly off-center, and drifting targets;
 - translation magnitude and direction;
 - average linear speed class: none, slow, medium, fast;
+- speed multiplier band: most moving cameras use the baseline distribution,
+  while a minority of samples use a `brisk` band capped at about 1.5x the
+  baseline motion scale;
 - speed curve inside a single clip: linear, ease-in, ease-out, ease-in-out, and
   two-stage curves, so a trajectory can accelerate or decelerate within the
   video;
@@ -86,7 +102,10 @@ Sampled camera axes:
 - path model: linear path or orbit path.
 
 The goal is not to make every camera move dramatic. Most samples should be
-human-viewable and moderate, with a smaller tail of fast or unusual motion.
+human-viewable and moderate, with a smaller tail of faster or unusual motion.
+The current generator records `speed_sampling_band` and `speed_multiplier` in
+each camera spec so the faster tail can be audited instead of guessed from the
+rendered video.
 
 ## Physics And Object Diversity
 
@@ -99,6 +118,7 @@ Physics families to cover:
 - sphere hitting a visible block or obstacle;
 - box-sphere collision;
 - three/four body scatter;
+- chained multi-body collisions and crossfire-style multi-direction collisions;
 - rolling, sliding, angular motion, and mixed translational/angular cases;
 - out-of-frame or re-entering motion as a minority case.
 
@@ -123,6 +143,13 @@ Object and physics diversity should not come from invisible obstacles. If an
 object changes motion due to a collision, the colliding object or surface should
 be visible unless the scenario is explicitly labeled as an occlusion or
 out-of-frame case.
+
+Multi-object cases should not rely on one repeated role template. The current
+plan uses multiple templates such as four-body scatter, three-body chain
+collision, and four-body crossfire.  Within `same_physics` pairs, object colors,
+materials, positions, and motion are intentionally identical because only the
+camera is allowed to change. Across different physics samples, those values
+should vary and be recorded in metadata.
 
 ## Scene And Background Diversity
 
@@ -218,6 +245,13 @@ Stage 1: review bank.
 - 640x480;
 - published to GitHub Pages for manual review.
 
+Stage 1b: distribution-fix pilot.
+
+- no-render audit for the updated camera-speed and multi-object templates;
+- small rendered review subset after audits pass;
+- check camera-speed histogram, multi-object color/material variety, and
+  collision plausibility before production.
+
 Stage 2: pilot batch.
 
 - 100-500 pair groups;
@@ -253,6 +287,8 @@ Rules of thumb:
 - record exact clip counts, durations, and average MP4 size after each pilot
   before scaling.
 
-The v2 review run `kubric_batch_v2_review_0000` is the current small example of
-this plan: 12 pair groups, 24 clips, 640x480, variable pair lengths, official
-Kubric/PyBullet/Blender, progress tracking, and pair-centric coverage.
+The v2 review run `kubric_batch_v2_review_0000` is the current small published
+example of this plan: 12 pair groups, 24 clips, 640x480, variable pair lengths,
+official Kubric/PyBullet/Blender, progress tracking, and pair-centric coverage.
+It was generated before the 2026-07-07 distribution updates that add more
+multi-object templates and the explicit camera `brisk` speed band.
