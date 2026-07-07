@@ -53,6 +53,31 @@ h2 {
   color: var(--muted);
 }
 
+.topbarControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planLink {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 620;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.planLink:hover {
+  border-color: #9abfba;
+}
+
 select {
   min-width: 210px;
   height: 36px;
@@ -215,6 +240,15 @@ video,
   .topbar {
     align-items: stretch;
     flex-direction: column;
+  }
+  .topbarControls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .planLink,
+  select {
+    width: 100%;
   }
 }
 

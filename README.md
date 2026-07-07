@@ -146,6 +146,12 @@ Rendering may create temporary `site/.../frames/` directories; `scripts/sync_sit
 
 Large batch outputs should stay outside the git repository. The default planner writes to `/workspace/writeable/datasets/camera_motion_disentangle/<batch-id>` and creates shell scripts under `batch_plans/<batch-id>/`.
 
+The current full diversity and batch-generation design is recorded in
+[`batch_plans/kubric_batch_v2/README.md`](batch_plans/kubric_batch_v2/README.md).
+It documents the pair contracts, camera/object/scene sampling axes, quality
+audits, progress/resume policy, review publishing policy, and proposed scaling
+stages.
+
 Create a first 16-shard plan:
 
 ```bash
