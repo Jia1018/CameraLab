@@ -139,6 +139,14 @@ Sampled physical axes:
 - collision scenario: direct hit, glancing hit, miss/near miss only when
   intentionally labeled, bounce, roll, scatter, and settle.
 
+Current implementation status: the official Kubric generator currently supports
+sphere and cube/box bodies, with 1-4 object motion templates. The added
+phys_three_body_chain and phys_four_body_crossfire families are targeted at
+multi-object motion-structure diversity only; they are not the full object-shape
+diversity implementation. Before formal batch_v2 production, add and audit
+cylinder, cone, capsule, and imported asset support in the body constructors,
+contact checks, framing checks, metadata, and review pages.
+
 Object and physics diversity should not come from invisible obstacles. If an
 object changes motion due to a collision, the colliding object or surface should
 be visible unless the scenario is explicitly labeled as an occlusion or
