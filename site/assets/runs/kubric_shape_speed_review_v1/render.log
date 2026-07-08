@@ -1,0 +1,84 @@
+could not get a list of mounted file-systems
+[1/6] rendering clip_000_cam_static_left_high_phys_shape_mixed_primitives
+2026-07-08 09:55:15.316015: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_b79d5bf8281f/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0006 sec |   0.0005 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0016 sec |   0.0014 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0035 sec |   0.0034 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0035 sec |   0.0035 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_b79d5bf8281f/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cone_314eca2d1bde/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0004 sec |   0.0003 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0006 sec |   0.0005 sec) Done, building geometries (verts:33 faces:33 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0026 sec |   0.0025 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0027 sec |   0.0026 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cone_314eca2d1bde/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/capsule_c82694e5d9ba/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0027 sec |   0.0026 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0029 sec |   0.0028 sec) Done, building geometries (verts:386 faces:416 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0062 sec |   0.0061 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0062 sec |   0.0062 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/capsule_c82694e5d9ba/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[2/6] rendering clip_001_cam_dolly_in_right_start_phys_shape_mixed_primitives
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_b79d5bf8281f/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0005 sec |   0.0004 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0008 sec |   0.0007 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0071 sec |   0.0069 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0071 sec |   0.0070 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_b79d5bf8281f/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cone_314eca2d1bde/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0004 sec |   0.0003 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0006 sec |   0.0005 sec) Done, building geometries (verts:33 faces:33 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0028 sec |   0.0027 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0028 sec |   0.0028 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cone_314eca2d1bde/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/capsule_c82694e5d9ba/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0034 sec |   0.0032 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0035 sec |   0.0034 sec) Done, building geometries (verts:386 faces:416 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0260 sec |   0.0259 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0260 sec |   0.0260 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/capsule_c82694e5d9ba/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[3/6] rendering clip_002_cam_brisk_dolly_in_right_start_phys_shape_mixed_primitives
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_b79d5bf8281f/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0006 sec |   0.0004 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0008 sec |   0.0007 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0559 sec |   0.0558 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0560 sec |   0.0559 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_b79d5bf8281f/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cone_314eca2d1bde/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0004 sec |   0.0003 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0006 sec |   0.0005 sec) Done, building geometries (verts:33 faces:33 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0023 sec |   0.0023 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0024 sec |   0.0023 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cone_314eca2d1bde/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/capsule_c82694e5d9ba/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0000 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0030 sec |   0.0030 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0032 sec |   0.0031 sec) Done, building geometries (verts:386 faces:416 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0066 sec |   0.0066 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0067 sec |   0.0066 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/capsule_c82694e5d9ba/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[4/6] rendering clip_003_cam_static_left_high_phys_drop_bounce
+[5/6] rendering clip_004_cam_dolly_in_right_start_phys_drop_bounce
+[6/6] rendering clip_005_cam_brisk_dolly_in_right_start_phys_drop_bounce
+
+Blender quit
+Error: Not freed memory blocks: 6, total unfreed memory 0.007965 MB

@@ -98,8 +98,12 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
         return spec
 
     dolly_in = gen.trunc_gauss(rng, 0.58, 0.15, 0.28, 0.92)
+    brisk_dolly_multiplier = gen.trunc_gauss(rng, 1.34, 0.10, 1.20, 1.50)
+    brisk_dolly_in = dolly_in * brisk_dolly_multiplier
     dolly_out = gen.trunc_gauss(rng, 0.40, 0.12, 0.18, 0.68)
     truck = gen.trunc_gauss(rng, 0.48, 0.13, 0.20, 0.80)
+    brisk_truck_multiplier = gen.trunc_gauss(rng, 1.32, 0.10, 1.20, 1.50)
+    brisk_truck = truck * brisk_truck_multiplier
     crane = gen.trunc_gauss(rng, 0.30, 0.10, 0.10, 0.55)
     top_drift = gen.trunc_gauss(rng, 0.24, 0.08, 0.08, 0.42)
     orbit_radius = gen.trunc_gauss(rng, 4.10, 0.28, 3.55, 4.70)
@@ -123,6 +127,7 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
             (0.0, 0.0, 0.0),
             roll_start_deg=gen.trunc_gauss(rng, -1.2, 0.9, -3.2, 1.2),
             lens_mm=gen.trunc_gauss(rng, 34.0, 2.0, 30.0, 40.0),
+            extra={"speed_sampling_band": "static", "speed_multiplier": 1.0},
         ),
         camera(
             "cam_dolly_in_right_start",
@@ -136,6 +141,7 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
             roll_velocity_deg_s=gen.trunc_gauss(rng, 0.25, 0.35, -0.35, 1.05),
             lens_mm=gen.trunc_gauss(rng, 33.0, 2.0, 29.0, 39.0),
             lens_velocity_mm_s=gen.trunc_gauss(rng, 0.55, 0.30, 0.0, 1.20),
+            extra={"speed_sampling_band": "baseline", "speed_multiplier": 1.0},
         ),
         camera(
             "cam_truck_left_pan_right",
@@ -148,6 +154,7 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
             roll_start_deg=gen.trunc_gauss(rng, -0.4, 0.9, -2.6, 1.8),
             roll_velocity_deg_s=gen.trunc_gauss(rng, -0.16, 0.30, -0.85, 0.45),
             lens_mm=gen.trunc_gauss(rng, 36.0, 2.5, 31.0, 42.0),
+            extra={"speed_sampling_band": "baseline", "speed_multiplier": 1.0},
         ),
         camera(
             "cam_crane_up_tilt_down",
@@ -160,6 +167,7 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
             roll_start_deg=gen.trunc_gauss(rng, 0.0, 0.9, -2.0, 2.0),
             roll_velocity_deg_s=gen.trunc_gauss(rng, 0.10, 0.25, -0.45, 0.65),
             lens_mm=gen.trunc_gauss(rng, 37.0, 2.0, 32.0, 43.0),
+            extra={"speed_sampling_band": "baseline", "speed_multiplier": 1.0},
         ),
         camera(
             "cam_top_down_drift",
@@ -172,6 +180,7 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
             roll_start_deg=gen.trunc_gauss(rng, 5.5, 1.8, 2.0, 10.0),
             roll_velocity_deg_s=gen.trunc_gauss(rng, 0.55, 0.40, -0.15, 1.45),
             lens_mm=gen.trunc_gauss(rng, 38.0, 2.5, 33.0, 45.0),
+            extra={"speed_sampling_band": "baseline", "speed_multiplier": 1.0},
         ),
         camera(
             "cam_orbit_left_arc",
@@ -192,6 +201,8 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
                 "orbit_velocity_deg_s": orbit_velocity,
                 "orbit_height_m": 1.48,
                 "orbit_height_velocity_mps": gen.trunc_gauss(rng, 0.015, 0.015, -0.01, 0.045),
+                "speed_sampling_band": "baseline",
+                "speed_multiplier": 1.0,
             },
         ),
         camera(
@@ -205,6 +216,34 @@ def camera_specs(seed: int) -> list[dict[str, Any]]:
             roll_start_deg=gen.trunc_gauss(rng, -0.5, 0.9, -2.4, 1.6),
             roll_velocity_deg_s=gen.trunc_gauss(rng, 0.08, 0.28, -0.45, 0.65),
             lens_mm=gen.trunc_gauss(rng, 34.0, 2.2, 29.0, 41.0),
+            extra={"speed_sampling_band": "baseline", "speed_multiplier": 1.0},
+        ),
+        camera(
+            "cam_brisk_dolly_in_right_start",
+            ["dolly_in", "right_start", "target_drift", "brisk_speed"],
+            "brisk",
+            (2.15, -5.10, 1.48),
+            (0.02, 0.00, 0.36),
+            (-0.08, brisk_dolly_in, 0.02),
+            (gen.trunc_gauss(rng, 0.04, 0.03, -0.02, 0.11), 0.0, 0.0),
+            roll_start_deg=gen.trunc_gauss(rng, 0.6, 0.8, -0.8, 2.6),
+            roll_velocity_deg_s=gen.trunc_gauss(rng, 0.35, 0.28, -0.15, 0.95),
+            lens_mm=gen.trunc_gauss(rng, 33.0, 2.0, 29.0, 39.0),
+            lens_velocity_mm_s=gen.trunc_gauss(rng, 0.70, 0.26, 0.10, 1.20),
+            extra={"speed_sampling_band": "brisk", "speed_multiplier": round(brisk_dolly_multiplier, 5)},
+        ),
+        camera(
+            "cam_brisk_truck_left_pan_right",
+            ["truck_left", "pan_right", "off_center_start", "brisk_speed"],
+            "brisk",
+            (2.95, -4.00, 1.30),
+            (0.32, 0.02, 0.36),
+            (-brisk_truck, 0.04, 0.0),
+            (-0.10, 0.02, 0.0),
+            roll_start_deg=gen.trunc_gauss(rng, -0.3, 0.8, -2.0, 1.6),
+            roll_velocity_deg_s=gen.trunc_gauss(rng, -0.22, 0.26, -0.78, 0.30),
+            lens_mm=gen.trunc_gauss(rng, 35.0, 2.2, 30.0, 41.0),
+            extra={"speed_sampling_band": "brisk", "speed_multiplier": round(brisk_truck_multiplier, 5)},
         ),
         camera(
             "cam_low_truck_right_pan_left",
@@ -280,6 +319,12 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
     )
     scatter_r_a = gen.trunc_gauss(rng, 0.23, 0.03, 0.18, 0.31)
     scatter_r_b = gen.trunc_gauss(rng, 0.20, 0.025, 0.16, 0.27)
+    cyl_r = gen.trunc_gauss(rng, 0.18, 0.025, 0.13, 0.24)
+    cyl_depth = gen.trunc_gauss(rng, 0.46, 0.06, 0.34, 0.62)
+    cone_r = gen.trunc_gauss(rng, 0.22, 0.03, 0.16, 0.30)
+    cone_depth = gen.trunc_gauss(rng, 0.48, 0.06, 0.36, 0.64)
+    cap_r = gen.trunc_gauss(rng, 0.14, 0.02, 0.10, 0.19)
+    cap_mid = gen.trunc_gauss(rng, 0.34, 0.05, 0.22, 0.48)
 
     return [
         {
@@ -422,6 +467,66 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     mass=mass(0.95),
                     restitution=bounce(),
                     friction=low_friction(),
+                ),
+            ],
+        },
+        {
+            "id": "phys_shape_mixed_primitives",
+            "kind": "shape_diversity_collision",
+            "speed_class": "medium",
+            "description": "Sphere hits a visible cylinder while cone and capsule provide audited shape diversity.",
+            "sample_model": "procedural cylinder/cone/capsule dimensions, masses, velocities, friction, restitution, colors, and material profiles are clipped Gaussian samples.",
+            "expected_contacts": [["shape_driver_sphere", "shape_center_cylinder"]],
+            "bodies": [
+                gen.sphere(
+                    "shape_driver_sphere",
+                    cap_r,
+                    (-0.92, -0.18, cap_r),
+                    appearance("shape_driver_sphere", profile="rubber"),
+                    velocity=(gen.trunc_gauss(rng, 1.48, 0.18, 1.10, 1.92), 0.18, 0.0),
+                    angular_velocity=(0.0, gen.trunc_gauss(rng, 1.2, 0.4, 0.4, 2.0), 0.2),
+                    mass=mass(0.85),
+                    restitution=bounce(),
+                    friction=low_friction(),
+                ),
+                gen.cylinder(
+                    "shape_center_cylinder",
+                    cyl_r,
+                    cyl_depth,
+                    (0.02, 0.00, cyl_depth / 2.0),
+                    appearance("shape_center_cylinder", profile="satin"),
+                    velocity=(0.0, 0.0, 0.0),
+                    angular_velocity=(0.0, 0.0, 0.0),
+                    mass=0.0,
+                    restitution=gen.trunc_gauss(rng, 0.54, 0.10, 0.34, 0.78),
+                    friction=medium_friction(),
+                    static=True,
+                ),
+                gen.cone(
+                    "shape_side_cone",
+                    cone_r,
+                    cone_depth,
+                    (0.88, 0.48, cone_depth / 2.0),
+                    appearance("shape_side_cone", profile="matte"),
+                    velocity=(0.0, 0.0, 0.0),
+                    angular_velocity=(0.0, 0.0, 0.0),
+                    mass=0.0,
+                    restitution=gen.trunc_gauss(rng, 0.42, 0.08, 0.22, 0.64),
+                    friction=high_friction(),
+                    static=True,
+                ),
+                gen.capsule(
+                    "shape_back_capsule",
+                    cap_r,
+                    cap_mid,
+                    (-0.25, 0.78, cap_mid / 2.0 + cap_r),
+                    appearance("shape_back_capsule", profile="glossy"),
+                    velocity=(0.0, 0.0, 0.0),
+                    angular_velocity=(0.0, 0.0, 0.0),
+                    mass=0.0,
+                    restitution=gen.trunc_gauss(rng, 0.46, 0.10, 0.24, 0.70),
+                    friction=medium_friction(),
+                    static=True,
                 ),
             ],
         },
@@ -617,14 +722,16 @@ def update_manifest_for_diversity(run_dir: Path) -> None:
     manifest["generator"] = "official_kubric_diversity_review"
     manifest["description"] = (
         "Diversity review bank for jointly inspecting camera trajectory variety, object appearance, "
-        "object shape proxies, material sampling, and physical event variety before batch_v2."
+        "object shape diversity, camera speed bands, material sampling, and physical event variety before batch_v2."
     )
     manifest["diversity_axes"] = [
         "camera path family",
         "camera speed class",
+        "camera speed sampling band",
         "camera start viewpoint",
         "object count",
         "object size/aspect ratio",
+        "object primitive shape: sphere, box, cylinder, cone, capsule",
         "object color/material",
         "collision type",
         "scene color/wall style",
@@ -638,8 +745,10 @@ def generate_main() -> None:
     parser.add_argument("--run-root", type=Path, default=RUN_ROOT)
     parser.add_argument("--blender-bin", type=Path, default=gen.DEFAULT_BLENDER)
     parser.add_argument("--kubric-site-packages", type=Path, default=gen.DEFAULT_KUBRIC_SITE_PACKAGES)
-    parser.add_argument("--camera-limit", type=int, default=6)
-    parser.add_argument("--physics-limit", type=int, default=6)
+    parser.add_argument("--camera-limit", type=int, default=9)
+    parser.add_argument("--physics-limit", type=int, default=9)
+    parser.add_argument("--camera-ids", default="", help="Comma-separated camera ids to include after camera_specs sampling.")
+    parser.add_argument("--physics-ids", default="", help="Comma-separated physics ids to include after physics_specs sampling.")
     parser.add_argument("--pairs", type=int, default=48)
     parser.add_argument("--frames", type=int, default=gen.FRAMES)
     parser.add_argument("--width", type=int, default=gen.WIDTH)
@@ -657,8 +766,26 @@ def generate_main() -> None:
     run_dir.mkdir(parents=True, exist_ok=True)
 
     gen.camera_records = camera_records
-    cameras = camera_specs(args.seed)[: args.camera_limit]
-    programs = physics_specs(args.seed)[: args.physics_limit]
+    cameras_all = camera_specs(args.seed)
+    programs_all = physics_specs(args.seed)
+    if args.camera_ids:
+        wanted = [item.strip() for item in args.camera_ids.split(",") if item.strip()]
+        by_id = {camera["id"]: camera for camera in cameras_all}
+        missing = [item for item in wanted if item not in by_id]
+        if missing:
+            raise SystemExit(f"unknown camera ids: {missing}")
+        cameras = [by_id[item] for item in wanted]
+    else:
+        cameras = cameras_all[: args.camera_limit]
+    if args.physics_ids:
+        wanted = [item.strip() for item in args.physics_ids.split(",") if item.strip()]
+        by_id = {program["id"]: program for program in programs_all}
+        missing = [item for item in wanted if item not in by_id]
+        if missing:
+            raise SystemExit(f"unknown physics ids: {missing}")
+        programs = [by_id[item] for item in wanted]
+    else:
+        programs = programs_all[: args.physics_limit]
     worlds = world_specs()
     jobs_path = gen.write_run(
         args.run_id,

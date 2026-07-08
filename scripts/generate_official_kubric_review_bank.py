@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import colorsys
+import hashlib
 import json
 import math
 import os
@@ -36,6 +37,8 @@ FRAMES = 96
 WIDTH = 640
 HEIGHT = 480
 SEED = 20260612
+PROCEDURAL_ASSET_ROOT = Path(os.environ.get("KUBRIC_PROCEDURAL_ASSET_ROOT", "/tmp/camera_motion_disentangle_kubric_assets"))
+CUSTOM_MESH_SHAPES = {"cylinder", "cone", "capsule"}
 
 BODY_COLORS = {
     "red": [0.88, 0.20, 0.16, 1.0],
@@ -234,6 +237,8 @@ def sphere(
         "color": appearance_spec["color"],
         "material": appearance_spec["material"],
         "appearance": appearance_spec,
+        "bottom_offset": round(radius, 5),
+        "bounding_radius": round(radius, 5),
         "role": "visible_static_obstacle" if static else "dynamic",
     }
 
@@ -252,12 +257,13 @@ def cube(
     static: bool = False,
 ) -> dict[str, Any]:
     appearance_spec = resolve_appearance(appearance)
+    half_extents_v = vec(half_extents)
     return {
         "name": name,
         "shape": "box",
-        "half_extents": vec(half_extents),
+        "half_extents": half_extents_v,
         "size": vec((2.0 * half_extents[0], 2.0 * half_extents[1], 2.0 * half_extents[2])),
-        "scale": vec(half_extents),
+        "scale": half_extents_v,
         "position": vec(position),
         "velocity": vec(velocity),
         "angular_velocity": vec(angular_velocity),
@@ -268,8 +274,102 @@ def cube(
         "color": appearance_spec["color"],
         "material": appearance_spec["material"],
         "appearance": appearance_spec,
+        "bottom_offset": half_extents_v[2],
+        "bounding_radius": round(math.sqrt(sum(float(v) ** 2 for v in half_extents_v)), 5),
         "role": "visible_static_obstacle" if static else "dynamic",
     }
+
+
+def procedural_body(
+    name: str,
+    shape: str,
+    radius: float,
+    height: float,
+    position: tuple[float, float, float],
+    appearance: str | dict[str, Any],
+    *,
+    velocity: tuple[float, float, float] = (0.0, 0.0, 0.0),
+    angular_velocity: tuple[float, float, float] = (0.0, 0.0, 0.0),
+    mass: float = 1.0,
+    restitution: float = 0.45,
+    friction: float = 0.45,
+    static: bool = False,
+    cylinder_depth: float | None = None,
+) -> dict[str, Any]:
+    if shape not in CUSTOM_MESH_SHAPES:
+        raise ValueError(shape)
+    appearance_spec = resolve_appearance(appearance)
+    half_extents = vec((radius, radius, height / 2.0))
+    body = {
+        "name": name,
+        "shape": shape,
+        "asset_kind": "procedural_mesh",
+        "radius": round(radius, 5),
+        "height": round(height, 5),
+        "depth": round(height, 5),
+        "half_extents": half_extents,
+        "size": vec((2.0 * radius, 2.0 * radius, height)),
+        "scale": [1.0, 1.0, 1.0],
+        "position": vec(position),
+        "velocity": vec(velocity),
+        "angular_velocity": vec(angular_velocity),
+        "mass": round(mass, 5),
+        "restitution": round(restitution, 5),
+        "friction": round(friction, 5),
+        "static": static,
+        "color": appearance_spec["color"],
+        "material": appearance_spec["material"],
+        "appearance": appearance_spec,
+        "bottom_offset": round(height / 2.0, 5),
+        "bounding_radius": round(math.sqrt(radius * radius + (height / 2.0) ** 2), 5),
+        "role": "visible_static_obstacle" if static else "dynamic",
+    }
+    if cylinder_depth is not None:
+        body["cylinder_depth"] = round(cylinder_depth, 5)
+    return body
+
+
+def cylinder(
+    name: str,
+    radius: float,
+    depth: float,
+    position: tuple[float, float, float],
+    appearance: str | dict[str, Any],
+    **kwargs: Any,
+) -> dict[str, Any]:
+    return procedural_body(name, "cylinder", radius, depth, position, appearance, **kwargs)
+
+
+def cone(
+    name: str,
+    radius: float,
+    depth: float,
+    position: tuple[float, float, float],
+    appearance: str | dict[str, Any],
+    **kwargs: Any,
+) -> dict[str, Any]:
+    return procedural_body(name, "cone", radius, depth, position, appearance, **kwargs)
+
+
+def capsule(
+    name: str,
+    radius: float,
+    cylinder_depth: float,
+    position: tuple[float, float, float],
+    appearance: str | dict[str, Any],
+    **kwargs: Any,
+) -> dict[str, Any]:
+    height = cylinder_depth + 2.0 * radius
+    return procedural_body(
+        name,
+        "capsule",
+        radius,
+        height,
+        position,
+        appearance,
+        cylinder_depth=cylinder_depth,
+        **kwargs,
+    )
 
 
 def physics_specs(seed: int) -> list[dict[str, Any]]:
@@ -660,6 +760,130 @@ def make_material(kb: Any, name: str, rgba: list[float], material: dict[str, Any
     )
 
 
+def body_asset_key(body: dict[str, Any]) -> str:
+    payload = {
+        "shape": body["shape"],
+        "radius": body.get("radius"),
+        "height": body.get("height"),
+        "cylinder_depth": body.get("cylinder_depth"),
+    }
+    digest = hashlib.sha1(json.dumps(payload, sort_keys=True).encode("utf-8")).hexdigest()[:12]
+    return f"{body['shape']}_{digest}"
+
+
+def mesh_vertices_faces(body: dict[str, Any], segments: int = 32) -> tuple[list[tuple[float, float, float]], list[tuple[int, ...]]]:
+    shape = body["shape"]
+    radius = float(body["radius"])
+    height = float(body["height"])
+    vertices: list[tuple[float, float, float]] = []
+    faces: list[tuple[int, ...]] = []
+
+    def ring(z: float, r: float) -> list[int]:
+        start = len(vertices)
+        for idx in range(segments):
+            angle = 2.0 * math.pi * idx / segments
+            vertices.append((r * math.cos(angle), r * math.sin(angle), z))
+        return list(range(start, start + segments))
+
+    if shape == "cylinder":
+        bottom = ring(-height / 2.0, radius)
+        top = ring(height / 2.0, radius)
+        faces.append(tuple(reversed(bottom)))
+        faces.append(tuple(top))
+        for idx in range(segments):
+            faces.append((bottom[idx], bottom[(idx + 1) % segments], top[(idx + 1) % segments], top[idx]))
+    elif shape == "cone":
+        bottom = ring(-height / 2.0, radius)
+        apex = len(vertices)
+        vertices.append((0.0, 0.0, height / 2.0))
+        faces.append(tuple(reversed(bottom)))
+        for idx in range(segments):
+            faces.append((bottom[idx], bottom[(idx + 1) % segments], apex))
+    elif shape == "capsule":
+        cylinder_depth = float(body.get("cylinder_depth", max(0.0, height - 2.0 * radius)))
+        lower = ring(-cylinder_depth / 2.0, radius)
+        upper = ring(cylinder_depth / 2.0, radius)
+        for idx in range(segments):
+            faces.append((lower[idx], lower[(idx + 1) % segments], upper[(idx + 1) % segments], upper[idx]))
+        lat_steps = 6
+        previous = lower
+        for step in range(1, lat_steps):
+            theta = (math.pi / 2.0) * step / lat_steps
+            current = ring(-cylinder_depth / 2.0 - radius * math.sin(theta), radius * math.cos(theta))
+            for idx in range(segments):
+                faces.append((current[idx], current[(idx + 1) % segments], previous[(idx + 1) % segments], previous[idx]))
+            previous = current
+        bottom_pole = len(vertices)
+        vertices.append((0.0, 0.0, -cylinder_depth / 2.0 - radius))
+        for idx in range(segments):
+            faces.append((bottom_pole, previous[(idx + 1) % segments], previous[idx]))
+        previous = upper
+        for step in range(1, lat_steps):
+            theta = (math.pi / 2.0) * step / lat_steps
+            current = ring(cylinder_depth / 2.0 + radius * math.sin(theta), radius * math.cos(theta))
+            for idx in range(segments):
+                faces.append((previous[idx], previous[(idx + 1) % segments], current[(idx + 1) % segments], current[idx]))
+            previous = current
+        top_pole = len(vertices)
+        vertices.append((0.0, 0.0, cylinder_depth / 2.0 + radius))
+        for idx in range(segments):
+            faces.append((previous[idx], previous[(idx + 1) % segments], top_pole))
+    else:
+        raise ValueError(shape)
+    return vertices, faces
+
+
+def write_obj(path: Path, vertices: list[tuple[float, float, float]], faces: list[tuple[int, ...]]) -> None:
+    lines = ["# procedural Kubric review mesh"]
+    for x, y, z in vertices:
+        lines.append(f"v {x:.6f} {y:.6f} {z:.6f}")
+    for face in faces:
+        indices = " ".join(str(index + 1) for index in face)
+        lines.append(f"f {indices}")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def write_urdf(path: Path, obj_path: Path, body: dict[str, Any]) -> None:
+    mass = max(float(body.get("mass", 1.0)), 0.001)
+    radius = float(body.get("radius", 0.25))
+    height = float(body.get("height", 0.5))
+    ixx = mass * (3.0 * radius * radius + height * height) / 12.0
+    izz = mass * radius * radius / 2.0
+    lines = [
+        '<?xml version="1.0" ?>',
+        f'<robot name="{body["shape"]}">',
+        '  <link name="base">',
+        '    <inertial>',
+        '      <origin xyz="0 0 0" rpy="0 0 0"/>',
+        f'      <mass value="{mass:.6f}"/>',
+        f'      <inertia ixx="{ixx:.6f}" ixy="0" ixz="0" iyy="{ixx:.6f}" iyz="0" izz="{izz:.6f}"/>',
+        '    </inertial>',
+        '    <visual>',
+        '      <origin xyz="0 0 0" rpy="0 0 0"/>',
+        f'      <geometry><mesh filename="{obj_path.name}" scale="1 1 1"/></geometry>',
+        '    </visual>',
+        '    <collision>',
+        '      <origin xyz="0 0 0" rpy="0 0 0"/>',
+        f'      <geometry><mesh filename="{obj_path.name}" scale="1 1 1"/></geometry>',
+        '    </collision>',
+        '  </link>',
+        '</robot>',
+    ]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def ensure_procedural_asset(body: dict[str, Any]) -> tuple[Path, Path]:
+    asset_dir = PROCEDURAL_ASSET_ROOT / body_asset_key(body)
+    obj_path = asset_dir / "mesh.obj"
+    urdf_path = asset_dir / "body.urdf"
+    if not obj_path.exists() or not urdf_path.exists():
+        asset_dir.mkdir(parents=True, exist_ok=True)
+        vertices, faces = mesh_vertices_faces(body)
+        write_obj(obj_path, vertices, faces)
+        write_urdf(urdf_path, obj_path, body)
+    return obj_path, urdf_path
+
+
 def make_kb_body(kb: Any, body: dict[str, Any], material: Any | None = None, background: bool = False) -> Any:
     kwargs = {
         "name": body["name"],
@@ -679,6 +903,15 @@ def make_kb_body(kb: Any, body: dict[str, Any], material: Any | None = None, bac
         return kb.Sphere(**kwargs)
     if body["shape"] == "box":
         return kb.Cube(**kwargs)
+    if body["shape"] in CUSTOM_MESH_SHAPES:
+        obj_path, urdf_path = ensure_procedural_asset(body)
+        kwargs.pop("scale", None)
+        return kb.FileBasedObject(
+            render_filename=str(obj_path),
+            simulation_filename=str(urdf_path),
+            scale=(1.0, 1.0, 1.0),
+            **kwargs,
+        )
     raise ValueError(body["shape"])
 
 
@@ -867,11 +1100,49 @@ def sphere_box_touch(sphere_obj: dict[str, Any], box_obj: dict[str, Any], margin
     return math.dist(center, closest) <= float(sphere_obj["radius"] + margin)
 
 
-def ground_touch(obj: dict[str, Any], margin: float) -> bool:
+def sphere_upright_round_body_gap(sphere_obj: dict[str, Any], body: dict[str, Any]) -> float:
+    sphere_center = sphere_obj["position"]
+    body_center = body["position"]
+    sphere_radius = float(sphere_obj["radius"])
+    body_radius = float(body.get("radius") or (body.get("half_extents") or [0.0])[0])
+    shape = body["shape"]
+    if shape == "capsule":
+        cylinder_depth = float(body.get("cylinder_depth", max(0.0, float(body.get("height", 0.0)) - 2.0 * body_radius)))
+        dz = abs(float(sphere_center[2]) - float(body_center[2])) - cylinder_depth / 2.0
+        dx = float(sphere_center[0]) - float(body_center[0])
+        dy = float(sphere_center[1]) - float(body_center[1])
+        distance_to_axis_segment = math.sqrt(dx * dx + dy * dy + max(0.0, dz) ** 2)
+        return distance_to_axis_segment - body_radius - sphere_radius
+    half_height = float(body.get("height") or body.get("depth") or (body.get("half_extents") or [0.0, 0.0, 0.0])[2] * 2.0) / 2.0
+    dx = float(sphere_center[0]) - float(body_center[0])
+    dy = float(sphere_center[1]) - float(body_center[1])
+    radial_gap = math.sqrt(dx * dx + dy * dy) - body_radius
+    z_gap = abs(float(sphere_center[2]) - float(body_center[2])) - half_height
+    if radial_gap > 0.0 or z_gap > 0.0:
+        return math.sqrt(max(0.0, radial_gap) ** 2 + max(0.0, z_gap) ** 2) - sphere_radius
+    return max(radial_gap, z_gap) - sphere_radius
+
+
+def object_bottom_offset(obj: dict[str, Any]) -> float:
+    if obj.get("bottom_offset") is not None:
+        return float(obj["bottom_offset"])
     if obj["shape"] == "sphere":
-        return obj["position"][2] <= float(obj["radius"] + margin)
+        return float(obj["radius"])
     half = obj.get("half_extents") or [v / 2.0 for v in obj["size"]]
-    return obj["position"][2] - float(half[2]) <= margin
+    return float(half[2])
+
+
+def object_bounding_radius(obj: dict[str, Any]) -> float:
+    if obj.get("bounding_radius") is not None:
+        return float(obj["bounding_radius"])
+    if obj["shape"] == "sphere":
+        return float(obj["radius"])
+    half = obj.get("half_extents") or [v / 2.0 for v in obj["size"]]
+    return math.sqrt(sum(float(value) ** 2 for value in half))
+
+
+def ground_touch(obj: dict[str, Any], margin: float) -> bool:
+    return obj["position"][2] - object_bottom_offset(obj) <= margin
 
 
 def visual_contact_exists(records: list[dict[str, Any]], name_a: str, name_b: str, margin: float = 0.035) -> bool:
@@ -885,11 +1156,8 @@ def visual_contact_exists(records: list[dict[str, Any]], name_a: str, name_b: st
             continue
         a = objects[name_a]
         b = objects[name_b]
-        if a["shape"] == "sphere" and b["shape"] == "sphere" and sphere_sphere_touch(a, b, margin):
-            return True
-        if a["shape"] == "sphere" and b["shape"] == "box" and sphere_box_touch(a, b, margin):
-            return True
-        if a["shape"] == "box" and b["shape"] == "sphere" and sphere_box_touch(b, a, margin):
+        gap = signed_pair_gap(a, b)
+        if gap is not None and gap <= margin:
             return True
     return False
 
@@ -899,10 +1167,7 @@ def expected_visual_contacts_passed(records: list[dict[str, Any]], expected_cont
 
 
 def object_bottom_z(obj: dict[str, Any]) -> float:
-    if obj["shape"] == "sphere":
-        return float(obj["position"][2]) - float(obj["radius"])
-    half = obj.get("half_extents") or [v / 2.0 for v in obj["size"]]
-    return float(obj["position"][2]) - float(half[2])
+    return float(obj["position"][2]) - object_bottom_offset(obj)
 
 
 def signed_pair_gap(a: dict[str, Any], b: dict[str, Any]) -> float | None:
@@ -916,6 +1181,10 @@ def signed_pair_gap(a: dict[str, Any], b: dict[str, Any]) -> float | None:
         return math.dist(center, closest) - float(a["radius"])
     if a["shape"] == "box" and b["shape"] == "sphere":
         return signed_pair_gap(b, a)
+    if a["shape"] == "sphere" and b["shape"] in CUSTOM_MESH_SHAPES:
+        return sphere_upright_round_body_gap(a, b)
+    if a["shape"] in CUSTOM_MESH_SHAPES and b["shape"] == "sphere":
+        return sphere_upright_round_body_gap(b, a)
     if a["shape"] == "box" and b["shape"] == "box":
         half_a = a.get("half_extents") or [v / 2.0 for v in a["size"]]
         half_b = b.get("half_extents") or [v / 2.0 for v in b["size"]]
@@ -926,7 +1195,7 @@ def signed_pair_gap(a: dict[str, Any], b: dict[str, Any]) -> float | None:
         if any(gap > 0.0 for gap in axis_gaps):
             return math.sqrt(sum(max(0.0, gap) ** 2 for gap in axis_gaps))
         return max(axis_gaps)
-    return None
+    return math.dist(a["position"], b["position"]) - object_bounding_radius(a) - object_bounding_radius(b)
 
 
 def expected_contact_frames(records: list[dict[str, Any]], expected_contacts: list[list[str]], margin: float = 0.04) -> set[int]:
@@ -1152,6 +1421,11 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
                     "radius": body.get("radius"),
                     "size": body.get("size"),
                     "half_extents": body.get("half_extents"),
+                    "height": body.get("height"),
+                    "depth": body.get("depth"),
+                    "cylinder_depth": body.get("cylinder_depth"),
+                    "bottom_offset": body.get("bottom_offset"),
+                    "bounding_radius": body.get("bounding_radius"),
                     "color": body["color"],
                     "material": body.get("material", {}),
                     "appearance": body.get("appearance", {}),
@@ -1483,16 +1757,17 @@ def render_one_job(job: dict[str, Any]) -> None:
     key.look_at((0.0, 0.0, 0.0))
     scene.add([sun, key])
 
+    review_samples = int(os.environ.get("KUBRIC_REVIEW_SAMPLES", "16"))
     renderer = Blender(
         scene,
         scratch_dir=Path(job["frames_dir"]),
-        samples_per_pixel=16,
+        samples_per_pixel=review_samples,
         use_denoising=True,
         adaptive_sampling=True,
         verbose=False,
     )
     renderer.blender_scene.render.engine = "CYCLES"
-    renderer.blender_scene.cycles.samples = 16
+    renderer.blender_scene.cycles.samples = review_samples
     renderer.blender_scene.cycles.use_denoising = True
     renderer.blender_scene.render.image_settings.file_format = "PNG"
     renderer.blender_scene.render.image_settings.color_mode = "RGB"

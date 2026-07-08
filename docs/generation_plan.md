@@ -6,14 +6,15 @@ future review sessions.
 
 ## Current Status
 
-As of 2026-07-07, full large-scale data production has not started yet.  The
-completed work is still review/pilot work: `kubric_batch_v2_review_0000` is a
-small GitHub Pages review run, not the training-scale batch.
+As of 2026-07-08, full large-scale data production has not started yet. The
+completed work is still review/pilot work: `kubric_batch_v2_review_0000` is the
+small pair-centric review run, and `kubric_shape_speed_review_v1` is the focused
+shape/speed review run. Neither run is the training-scale batch.
 
-The next step before production is a distribution-fix pilot: add broader
-multi-object templates, raise the upper tail of camera speed to a comfortable
-1.5x cap, run no-render physics audits, then render a small review subset.  If
-that review passes, start the first real pilot batch at 100-500 pair groups.
+The latest pre-production review adds procedural cylinder, cone, and capsule
+assets, plus explicit static, baseline, and brisk camera speed bands. The next
+step before production is human inspection of `kubric_shape_speed_review_v1`.
+If that review passes, start the first real pilot batch at 100-500 pair groups.
 Only after the pilot batch passes coverage and quality checks should we launch
 the first training batch at 1k-5k pair groups.
 
@@ -139,13 +140,14 @@ Sampled physical axes:
 - collision scenario: direct hit, glancing hit, miss/near miss only when
   intentionally labeled, bounce, roll, scatter, and settle.
 
-Current implementation status: the official Kubric generator currently supports
-sphere and cube/box bodies, with 1-4 object motion templates. The added
-phys_three_body_chain and phys_four_body_crossfire families are targeted at
-multi-object motion-structure diversity only; they are not the full object-shape
-diversity implementation. Before formal batch_v2 production, add and audit
-cylinder, cone, capsule, and imported asset support in the body constructors,
-contact checks, framing checks, metadata, and review pages.
+Current implementation status: the official Kubric generator supports sphere,
+cube/box, and procedural cylinder/cone/capsule bodies. The procedural shapes are
+generated on demand as OBJ/URDF assets and rendered through Kubric/Blender rather
+than committed as large mesh files. The current stable shape-diversity review is
+conservative: a dynamic sphere hits a visible static cylinder, while cone and
+capsule provide visible audited shape coverage. Fully dynamic mesh-shape
+collisions showed penetration in audit and should be tuned before being used at
+large scale.
 
 Object and physics diversity should not come from invisible obstacles. If an
 object changes motion due to a collision, the colliding object or surface should
@@ -295,8 +297,9 @@ Rules of thumb:
 - record exact clip counts, durations, and average MP4 size after each pilot
   before scaling.
 
-The v2 review run `kubric_batch_v2_review_0000` is the current small published
+The v2 review run `kubric_batch_v2_review_0000` is the broad small published
 example of this plan: 12 pair groups, 24 clips, 640x480, variable pair lengths,
 official Kubric/PyBullet/Blender, progress tracking, and pair-centric coverage.
-It was generated before the 2026-07-07 distribution updates that add more
-multi-object templates and the explicit camera `brisk` speed band.
+The follow-up run `kubric_shape_speed_review_v1` is a focused lightweight review:
+6 clips, 320x240, 48 frames, procedural cylinder/cone/capsule coverage, and
+static/baseline/brisk camera speed comparison.
