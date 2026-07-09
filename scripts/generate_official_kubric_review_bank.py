@@ -39,6 +39,26 @@ HEIGHT = 480
 SEED = 20260612
 PROCEDURAL_ASSET_ROOT = Path(os.environ.get("KUBRIC_PROCEDURAL_ASSET_ROOT", "/tmp/camera_motion_disentangle_kubric_assets"))
 CUSTOM_MESH_SHAPES = {"cylinder", "cone", "capsule"}
+AXIS_INDEX = {"x": 0, "y": 1, "z": 2}
+
+
+def axis_half_extents(radius: float, height: float, long_axis: str) -> list[float]:
+    if long_axis not in AXIS_INDEX:
+        raise ValueError(f"unsupported long_axis={long_axis!r}")
+    half = [radius, radius, radius]
+    half[AXIS_INDEX[long_axis]] = height / 2.0
+    return vec(half)
+
+
+def axis_oriented_vertex(vertex: tuple[float, float, float], long_axis: str) -> tuple[float, float, float]:
+    x, y, z = vertex
+    if long_axis == "z":
+        return (x, y, z)
+    if long_axis == "x":
+        return (z, y, x)
+    if long_axis == "y":
+        return (x, z, y)
+    raise ValueError(long_axis)
 
 BODY_COLORS = {
     "red": [0.88, 0.20, 0.16, 1.0],
@@ -295,11 +315,12 @@ def procedural_body(
     friction: float = 0.45,
     static: bool = False,
     cylinder_depth: float | None = None,
+    long_axis: str = "z",
 ) -> dict[str, Any]:
     if shape not in CUSTOM_MESH_SHAPES:
         raise ValueError(shape)
     appearance_spec = resolve_appearance(appearance)
-    half_extents = vec((radius, radius, height / 2.0))
+    half_extents = axis_half_extents(radius, height, long_axis)
     body = {
         "name": name,
         "shape": shape,
@@ -307,8 +328,9 @@ def procedural_body(
         "radius": round(radius, 5),
         "height": round(height, 5),
         "depth": round(height, 5),
+        "long_axis": long_axis,
         "half_extents": half_extents,
-        "size": vec((2.0 * radius, 2.0 * radius, height)),
+        "size": vec((2.0 * half_extents[0], 2.0 * half_extents[1], 2.0 * half_extents[2])),
         "scale": [1.0, 1.0, 1.0],
         "position": vec(position),
         "velocity": vec(velocity),
@@ -320,7 +342,7 @@ def procedural_body(
         "color": appearance_spec["color"],
         "material": appearance_spec["material"],
         "appearance": appearance_spec,
-        "bottom_offset": round(height / 2.0, 5),
+        "bottom_offset": round(height / 2.0 if long_axis == "z" else radius, 5),
         "bounding_radius": round(math.sqrt(radius * radius + (height / 2.0) ** 2), 5),
         "role": "visible_static_obstacle" if static else "dynamic",
     }
@@ -766,6 +788,7 @@ def body_asset_key(body: dict[str, Any]) -> str:
         "radius": body.get("radius"),
         "height": body.get("height"),
         "cylinder_depth": body.get("cylinder_depth"),
+        "long_axis": body.get("long_axis", "z"),
     }
     digest = hashlib.sha1(json.dumps(payload, sort_keys=True).encode("utf-8")).hexdigest()[:12]
     return f"{body['shape']}_{digest}"
@@ -830,6 +853,9 @@ def mesh_vertices_faces(body: dict[str, Any], segments: int = 32) -> tuple[list[
             faces.append((previous[idx], previous[(idx + 1) % segments], top_pole))
     else:
         raise ValueError(shape)
+    long_axis = body.get("long_axis", "z")
+    if long_axis != "z":
+        vertices = [axis_oriented_vertex(vertex, long_axis) for vertex in vertices]
     return vertices, faces
 
 
@@ -1100,27 +1126,28 @@ def sphere_box_touch(sphere_obj: dict[str, Any], box_obj: dict[str, Any], margin
     return math.dist(center, closest) <= float(sphere_obj["radius"] + margin)
 
 
-def sphere_upright_round_body_gap(sphere_obj: dict[str, Any], body: dict[str, Any]) -> float:
-    sphere_center = sphere_obj["position"]
-    body_center = body["position"]
+def sphere_round_body_gap(sphere_obj: dict[str, Any], body: dict[str, Any]) -> float:
+    sphere_center = [float(value) for value in sphere_obj["position"]]
+    body_center = [float(value) for value in body["position"]]
     sphere_radius = float(sphere_obj["radius"])
     body_radius = float(body.get("radius") or (body.get("half_extents") or [0.0])[0])
+    axis = body.get("long_axis", "z")
+    axis_idx = AXIS_INDEX.get(axis, 2)
+    radial_indices = [idx for idx in range(3) if idx != axis_idx]
+    axis_delta = abs(sphere_center[axis_idx] - body_center[axis_idx])
+    radial_delta = math.sqrt(sum((sphere_center[idx] - body_center[idx]) ** 2 for idx in radial_indices))
     shape = body["shape"]
     if shape == "capsule":
         cylinder_depth = float(body.get("cylinder_depth", max(0.0, float(body.get("height", 0.0)) - 2.0 * body_radius)))
-        dz = abs(float(sphere_center[2]) - float(body_center[2])) - cylinder_depth / 2.0
-        dx = float(sphere_center[0]) - float(body_center[0])
-        dy = float(sphere_center[1]) - float(body_center[1])
-        distance_to_axis_segment = math.sqrt(dx * dx + dy * dy + max(0.0, dz) ** 2)
+        axis_gap = axis_delta - cylinder_depth / 2.0
+        distance_to_axis_segment = math.sqrt(radial_delta * radial_delta + max(0.0, axis_gap) ** 2)
         return distance_to_axis_segment - body_radius - sphere_radius
-    half_height = float(body.get("height") or body.get("depth") or (body.get("half_extents") or [0.0, 0.0, 0.0])[2] * 2.0) / 2.0
-    dx = float(sphere_center[0]) - float(body_center[0])
-    dy = float(sphere_center[1]) - float(body_center[1])
-    radial_gap = math.sqrt(dx * dx + dy * dy) - body_radius
-    z_gap = abs(float(sphere_center[2]) - float(body_center[2])) - half_height
-    if radial_gap > 0.0 or z_gap > 0.0:
-        return math.sqrt(max(0.0, radial_gap) ** 2 + max(0.0, z_gap) ** 2) - sphere_radius
-    return max(radial_gap, z_gap) - sphere_radius
+    half_length = float(body.get("height") or body.get("depth") or (body.get("half_extents") or [0.0, 0.0, 0.0])[axis_idx] * 2.0) / 2.0
+    radial_gap = radial_delta - body_radius
+    axis_gap = axis_delta - half_length
+    if radial_gap > 0.0 or axis_gap > 0.0:
+        return math.sqrt(max(0.0, radial_gap) ** 2 + max(0.0, axis_gap) ** 2) - sphere_radius
+    return max(radial_gap, axis_gap) - sphere_radius
 
 
 def object_bottom_offset(obj: dict[str, Any]) -> float:
@@ -1182,9 +1209,9 @@ def signed_pair_gap(a: dict[str, Any], b: dict[str, Any]) -> float | None:
     if a["shape"] == "box" and b["shape"] == "sphere":
         return signed_pair_gap(b, a)
     if a["shape"] == "sphere" and b["shape"] in CUSTOM_MESH_SHAPES:
-        return sphere_upright_round_body_gap(a, b)
+        return sphere_round_body_gap(a, b)
     if a["shape"] in CUSTOM_MESH_SHAPES and b["shape"] == "sphere":
-        return sphere_upright_round_body_gap(b, a)
+        return sphere_round_body_gap(b, a)
     if a["shape"] == "box" and b["shape"] == "box":
         half_a = a.get("half_extents") or [v / 2.0 for v in a["size"]]
         half_b = b.get("half_extents") or [v / 2.0 for v in b["size"]]
@@ -1424,6 +1451,7 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
                     "height": body.get("height"),
                     "depth": body.get("depth"),
                     "cylinder_depth": body.get("cylinder_depth"),
+                    "long_axis": body.get("long_axis"),
                     "bottom_offset": body.get("bottom_offset"),
                     "bounding_radius": body.get("bounding_radius"),
                     "color": body["color"],
