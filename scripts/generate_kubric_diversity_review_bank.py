@@ -325,6 +325,13 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
     cone_depth = gen.trunc_gauss(rng, 0.48, 0.06, 0.36, 0.64)
     cap_r = gen.trunc_gauss(rng, 0.14, 0.02, 0.10, 0.19)
     cap_mid = gen.trunc_gauss(rng, 0.34, 0.05, 0.22, 0.48)
+    dyn_cyl_r = gen.trunc_gauss(rng, 0.18, 0.025, 0.13, 0.23)
+    dyn_cyl_depth = gen.trunc_gauss(rng, 0.52, 0.06, 0.38, 0.68)
+    dyn_cap_r = gen.trunc_gauss(rng, 0.13, 0.02, 0.10, 0.18)
+    dyn_cap_mid = gen.trunc_gauss(rng, 0.44, 0.06, 0.30, 0.60)
+    dyn_cone_r = gen.trunc_gauss(rng, 0.20, 0.025, 0.15, 0.26)
+    dyn_cone_depth = gen.trunc_gauss(rng, 0.42, 0.05, 0.30, 0.56)
+    shape_hit_sphere_r = gen.trunc_gauss(rng, 0.20, 0.025, 0.15, 0.26)
 
     return [
         {
@@ -527,6 +534,109 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     restitution=gen.trunc_gauss(rng, 0.46, 0.10, 0.24, 0.70),
                     friction=medium_friction(),
                     static=True,
+                    long_axis="x",
+                ),
+            ],
+        },
+        {
+            "id": "phys_dynamic_cylinder_roll",
+            "kind": "dynamic_cylinder_ground_motion",
+            "speed_class": "medium",
+            "description": "A horizontal procedural cylinder rolls and slides across the floor under PyBullet dynamics.",
+            "sample_model": "cylinder radius/depth, mass, velocity, angular velocity, friction, restitution, color, and material profile are clipped Gaussian samples.",
+            "expected_contacts": [["rolling_cylinder", "ground"]],
+            "bodies": [
+                gen.cylinder(
+                    "rolling_cylinder",
+                    dyn_cyl_r,
+                    dyn_cyl_depth,
+                    (-0.95, -0.26, dyn_cyl_r),
+                    appearance("rolling_cylinder", profile="satin"),
+                    velocity=(gen.trunc_gauss(rng, 1.05, 0.16, 0.70, 1.45), 0.18, 0.0),
+                    angular_velocity=(0.0, gen.trunc_gauss(rng, -4.2, 0.8, -6.2, -2.5), 0.12),
+                    mass=mass(1.05),
+                    restitution=gen.trunc_gauss(rng, 0.42, 0.08, 0.24, 0.62),
+                    friction=medium_friction(),
+                    long_axis="y",
+                ),
+            ],
+        },
+        {
+            "id": "phys_dynamic_capsule_roll",
+            "kind": "dynamic_capsule_ground_motion",
+            "speed_class": "medium",
+            "description": "A horizontal procedural capsule rolls and slides across the floor instead of standing upright.",
+            "sample_model": "capsule radius/depth, mass, velocity, angular velocity, friction, restitution, color, and material profile are clipped Gaussian samples.",
+            "expected_contacts": [["rolling_capsule", "ground"]],
+            "bodies": [
+                gen.capsule(
+                    "rolling_capsule",
+                    dyn_cap_r,
+                    dyn_cap_mid,
+                    (-0.75, 0.36, dyn_cap_r),
+                    appearance("rolling_capsule", profile="glossy"),
+                    velocity=(0.12, gen.trunc_gauss(rng, -0.92, 0.14, -1.25, -0.58), 0.0),
+                    angular_velocity=(gen.trunc_gauss(rng, 3.8, 0.7, 2.2, 5.6), 0.0, 0.20),
+                    mass=mass(0.95),
+                    restitution=gen.trunc_gauss(rng, 0.45, 0.08, 0.25, 0.66),
+                    friction=medium_friction(),
+                    long_axis="x",
+                ),
+            ],
+        },
+        {
+            "id": "phys_sphere_hits_dynamic_cylinder",
+            "kind": "sphere_dynamic_cylinder_collision",
+            "speed_class": "medium",
+            "description": "A moving sphere contacts a horizontal dynamic cylinder, testing non-box dynamic collision behavior.",
+            "sample_model": "sphere and cylinder sizes, masses, velocities, angular velocities, friction, restitution, colors, and material profiles are clipped Gaussian samples.",
+            "expected_contacts": [["shape_hit_sphere", "dynamic_hit_cylinder"]],
+            "bodies": [
+                gen.sphere(
+                    "shape_hit_sphere",
+                    shape_hit_sphere_r,
+                    (-0.95, -0.08, shape_hit_sphere_r),
+                    appearance("shape_hit_sphere", profile="rubber"),
+                    velocity=(gen.trunc_gauss(rng, 1.36, 0.16, 1.02, 1.75), 0.08, 0.0),
+                    angular_velocity=(0.0, gen.trunc_gauss(rng, 1.4, 0.35, 0.7, 2.2), 0.0),
+                    mass=mass(0.80),
+                    restitution=bounce(),
+                    friction=low_friction(),
+                ),
+                gen.cylinder(
+                    "dynamic_hit_cylinder",
+                    dyn_cyl_r,
+                    dyn_cyl_depth,
+                    (0.08, 0.02, dyn_cyl_r),
+                    appearance("dynamic_hit_cylinder", profile="matte"),
+                    velocity=(gen.trunc_gauss(rng, -0.12, 0.06, -0.24, 0.0), 0.0, 0.0),
+                    angular_velocity=(0.0, gen.trunc_gauss(rng, -0.5, 0.25, -1.1, 0.0), 0.0),
+                    mass=mass(1.15),
+                    restitution=gen.trunc_gauss(rng, 0.56, 0.08, 0.36, 0.76),
+                    friction=medium_friction(),
+                    long_axis="y",
+                ),
+            ],
+        },
+        {
+            "id": "phys_dynamic_cone_slide",
+            "kind": "dynamic_cone_ground_motion",
+            "speed_class": "slow",
+            "description": "A horizontal procedural cone slides and gently tumbles on the floor as a stress test for cone dynamics.",
+            "sample_model": "cone radius/depth, mass, velocity, angular velocity, friction, restitution, color, and material profile are clipped Gaussian samples.",
+            "expected_contacts": [["sliding_cone", "ground"]],
+            "bodies": [
+                gen.cone(
+                    "sliding_cone",
+                    dyn_cone_r,
+                    dyn_cone_depth,
+                    (-0.55, -0.42, dyn_cone_r),
+                    appearance("sliding_cone", profile="matte"),
+                    velocity=(gen.trunc_gauss(rng, 0.56, 0.12, 0.28, 0.86), 0.22, 0.0),
+                    angular_velocity=(gen.trunc_gauss(rng, 1.2, 0.35, 0.4, 2.0), 0.2, 0.35),
+                    mass=mass(0.90),
+                    restitution=gen.trunc_gauss(rng, 0.34, 0.08, 0.16, 0.52),
+                    friction=high_friction(),
                     long_axis="x",
                 ),
             ],

@@ -9,17 +9,19 @@ future review sessions.
 As of 2026-07-09, full large-scale data production has not started yet. The
 completed work is still review/pilot work: `kubric_batch_v2_review_0000` is the
 small pair-centric review run, `kubric_shape_speed_review_v1` is the focused
-shape/speed review run, and `kubric_object_motion_review_v1` is the broader
-multi-object motion review. None of these runs is the training-scale batch.
+shape/speed review run, `kubric_object_motion_review_v1` is the broader
+multi-object motion review, and `kubric_dynamic_shape_review_v1` is the targeted
+non-box/non-sphere dynamic-shape review. None of these runs is the
+training-scale batch.
 
-The latest pre-production review expands object motion coverage to 2/3/4 dynamic
-object templates, keeps explicit static/baseline/brisk camera speed bands, and
-changes the capsule shape check from an upright prop to a horizontal floor
-capsule. The next step before production is human inspection of
-`kubric_object_motion_review_v1`. If that review passes, start the first real
-pilot batch at 100-500 pair groups. Only after the pilot batch passes coverage
-and quality checks should we launch the first training batch at 1k-5k pair
-groups.
+The latest pre-production reviews expand object motion coverage to 2/3/4 dynamic
+object templates, keep explicit static/baseline/brisk camera speed bands, change
+the capsule shape check from an upright prop to a horizontal floor capsule, and
+separately audit dynamic cylinder/capsule behavior. The next step before
+production is human inspection of these review runs. If they pass, start the
+first real pilot batch at 100-500 pair groups. Only after the pilot batch passes
+coverage and quality checks should we launch the first training batch at 1k-5k
+pair groups.
 
 ## Goal
 
@@ -123,6 +125,8 @@ Physics families to cover:
 - box-sphere collision;
 - three/four body scatter;
 - chained multi-body collisions and crossfire-style multi-direction collisions;
+- single-object and multi-object falling/bouncing, including staggered drops,
+  simultaneous drops, and drop-then-collide cases;
 - rolling, sliding, angular motion, and mixed translational/angular cases;
 - out-of-frame or re-entering motion as a minority case.
 
@@ -141,17 +145,19 @@ Sampled physical axes:
 - color and surface appearance: matte, rough, smooth, glossy, metallic-like, or
   mixed;
 - collision scenario: direct hit, glancing hit, miss/near miss only when
-  intentionally labeled, bounce, roll, scatter, and settle.
+  intentionally labeled, bounce, roll, scatter, drop, rebound, and settle;
+- gravity timing: single drops, multiple simultaneous drops, staggered drops,
+  and falling objects that either collide with other objects or remain isolated.
 
 Current implementation status: the official Kubric generator supports sphere,
 cube/box, and procedural cylinder/cone/capsule bodies. The procedural shapes are
 generated on demand as OBJ/URDF assets and rendered through Kubric/Blender rather
 than committed as large mesh files. Procedural shapes can be generated along a
 chosen principal axis, so capsule examples can be horizontal and floor-contacting
-instead of upright props. The stable shape-diversity template is still
-conservative: a dynamic sphere hits a visible static cylinder, while cone and
-capsule provide visible audited shape coverage. Fully dynamic mesh-shape
-collisions should be tuned separately before being used at large scale.
+instead of upright props. Dynamic cylinder rolling, dynamic horizontal capsule
+rolling, and sphere-to-dynamic-cylinder contact pass the current no-render audit.
+The candidate dynamic cone slide failed ground-penetration audit and is excluded
+until tuned separately.
 
 Object and physics diversity should not come from invisible obstacles. If an
 object changes motion due to a collision, the colliding object or surface should
@@ -306,7 +312,11 @@ example of this plan: 12 pair groups, 24 clips, 640x480, variable pair lengths,
 official Kubric/PyBullet/Blender, progress tracking, and pair-centric coverage.
 The follow-up run `kubric_shape_speed_review_v1` is a focused lightweight review:
 6 clips, 320x240, 48 frames, procedural cylinder/cone/capsule coverage, and
-static/baseline/brisk camera speed comparison. The current review run
+static/baseline/brisk camera speed comparison. The review run
 `kubric_object_motion_review_v1` has 18 clips, 12 pair groups, 640x480, 72
 frames, static/baseline/brisk camera coverage, and six physics templates covering
-shape checks plus 2/3/4 dynamic-object collisions.
+shape checks plus 2/3/4 dynamic-object collisions. The targeted run
+`kubric_dynamic_shape_review_v1` has 6 clips, 640x480, 72 frames, and covers
+rolling dynamic cylinders, rolling horizontal capsules, and sphere contact with a
+dynamic cylinder; dynamic cone was audited but excluded after penetration
+failure.

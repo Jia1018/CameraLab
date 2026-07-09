@@ -1,0 +1,8028 @@
+{
+  "clip_id": "clip_002_cam_static_left_high_phys_dynamic_capsule_roll",
+  "camera_id": "cam_static_left_high",
+  "physics_id": "phys_dynamic_capsule_roll",
+  "scene_id": "scene_blue_tall_wall",
+  "fps": 24,
+  "frames_count": 72,
+  "duration_s": 2.95833,
+  "resolution": [
+    640,
+    480
+  ],
+  "generator": "official_kubric_review",
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "camera_spec": {
+    "id": "cam_static_left_high",
+    "primitives": [
+      "static",
+      "left_start",
+      "high_angle",
+      "slight_roll"
+    ],
+    "speed_class": "none",
+    "path_model": "linear",
+    "start_position": [
+      -2.45,
+      -4.6,
+      1.8
+    ],
+    "start_target": [
+      -0.1,
+      -0.05,
+      0.42
+    ],
+    "linear_velocity_mps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_velocity_mps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "roll_start_deg": -0.92692,
+    "roll_velocity_deg_s": 0.0,
+    "lens_mm": 33.41764,
+    "lens_velocity_mm_s": 0.0,
+    "motion_distribution": "camera position, target, roll, lens, and orbit velocities are clipped Gaussian samples",
+    "speed_sampling_band": "static",
+    "speed_multiplier": 1.0
+  },
+  "physics_spec": {
+    "id": "phys_dynamic_capsule_roll",
+    "kind": "dynamic_capsule_ground_motion",
+    "speed_class": "medium",
+    "description": "A horizontal procedural capsule rolls and slides across the floor instead of standing upright.",
+    "sample_model": "capsule radius/depth, mass, velocity, angular velocity, friction, restitution, color, and material profile are clipped Gaussian samples.",
+    "expected_contacts": [
+      [
+        "rolling_capsule",
+        "ground"
+      ]
+    ],
+    "bodies": [
+      {
+        "name": "rolling_capsule",
+        "shape": "capsule",
+        "asset_kind": "procedural_mesh",
+        "radius": 0.13211,
+        "height": 0.71913,
+        "depth": 0.71913,
+        "long_axis": "x",
+        "half_extents": [
+          0.35957,
+          0.13211,
+          0.13211
+        ],
+        "size": [
+          0.71914,
+          0.26422,
+          0.26422
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position": [
+          -0.75,
+          0.36,
+          0.13211
+        ],
+        "velocity": [
+          0.12,
+          -0.87009,
+          0.0
+        ],
+        "angular_velocity": [
+          4.23747,
+          0.0,
+          0.2
+        ],
+        "mass": 1.15216,
+        "restitution": 0.36327,
+        "friction": 0.28121,
+        "static": false,
+        "color": [
+          0.78159,
+          0.68126,
+          0.2714,
+          1.0
+        ],
+        "material": {
+          "profile": "glossy",
+          "roughness": 0.20005,
+          "specular": 0.57339,
+          "metallic": 0.0,
+          "specular_tint": 0.0,
+          "ior": 1.45784,
+          "transmission": 0.0,
+          "transmission_roughness": 0.0
+        },
+        "appearance": {
+          "color_source": "sampled_hsv",
+          "role": "rolling_capsule",
+          "palette_name": null,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          }
+        },
+        "bottom_offset": 0.13211,
+        "bounding_radius": 0.38307,
+        "role": "dynamic",
+        "cylinder_depth": 0.45491
+      }
+    ]
+  },
+  "scene_spec": {
+    "id": "scene_blue_tall_wall",
+    "ground_color": [
+      0.6,
+      0.66,
+      0.68,
+      1.0
+    ],
+    "back_wall_color": [
+      0.69,
+      0.77,
+      0.82,
+      1.0
+    ],
+    "side_wall_color": [
+      0.63,
+      0.69,
+      0.74,
+      1.0
+    ],
+    "wall_height": 2.8,
+    "wall_style": "horizontal_bands",
+    "floor_style": "plain",
+    "static_props": []
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 60,
+      "time_s": 2.5,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 61,
+      "time_s": 2.54167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 62,
+      "time_s": 2.58333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 63,
+      "time_s": 2.625,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 64,
+      "time_s": 2.66667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 65,
+      "time_s": 2.70833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 66,
+      "time_s": 2.75,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 67,
+      "time_s": 2.79167,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 68,
+      "time_s": 2.83333,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 69,
+      "time_s": 2.875,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 70,
+      "time_s": 2.91667,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    },
+    {
+      "frame": 71,
+      "time_s": 2.95833,
+      "position": [
+        -2.45,
+        -4.6,
+        1.8
+      ],
+      "look_at": [
+        -0.1,
+        -0.05,
+        0.42
+      ],
+      "quaternion_wxyz": [
+        0.77283,
+        0.58982,
+        -0.14838,
+        -0.18119
+      ],
+      "roll_deg": -0.92692,
+      "lens_mm": 33.41764
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.75,
+            0.36,
+            0.13211
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.12,
+            -0.87009,
+            0.0
+          ],
+          "angular_velocity": [
+            4.23747,
+            0.0,
+            0.2
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.74535,
+            0.32418,
+            0.13246
+          ],
+          "orientation_wxyz": [
+            0.9959,
+            0.09041,
+            0.0008,
+            0.00399
+          ],
+          "linear_velocity": [
+            0.1065,
+            -0.84893,
+            0.03236
+          ],
+          "angular_velocity": [
+            4.37106,
+            0.01275,
+            0.18347
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.7411,
+            0.28919,
+            0.13236
+          ],
+          "orientation_wxyz": [
+            0.98308,
+            0.183,
+            0.00182,
+            0.00754
+          ],
+          "linear_velocity": [
+            0.09831,
+            -0.8272,
+            0.04125
+          ],
+          "angular_velocity": [
+            4.57437,
+            0.05017,
+            0.16203
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.73725,
+            0.25506,
+            0.13243
+          ],
+          "orientation_wxyz": [
+            0.96079,
+            0.27707,
+            0.00347,
+            0.01049
+          ],
+          "linear_velocity": [
+            0.08758,
+            -0.80713,
+            0.04206
+          ],
+          "angular_velocity": [
+            4.66765,
+            0.08181,
+            0.14625
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.73392,
+            0.22173,
+            0.13247
+          ],
+          "orientation_wxyz": [
+            0.92884,
+            0.37022,
+            0.00466,
+            0.0132
+          ],
+          "linear_velocity": [
+            0.07331,
+            -0.78888,
+            0.04859
+          ],
+          "angular_velocity": [
+            4.73186,
+            0.1858,
+            0.12272
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.73112,
+            0.1892,
+            0.13254
+          ],
+          "orientation_wxyz": [
+            0.88697,
+            0.46153,
+            0.00778,
+            0.01437
+          ],
+          "linear_velocity": [
+            0.06346,
+            -0.76863,
+            0.0394
+          ],
+          "angular_velocity": [
+            4.88732,
+            0.14338,
+            0.10744
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.72879,
+            0.15752,
+            0.13287
+          ],
+          "orientation_wxyz": [
+            0.83468,
+            0.55043,
+            0.00983,
+            0.01557
+          ],
+          "linear_velocity": [
+            0.04907,
+            -0.75025,
+            0.02663
+          ],
+          "angular_velocity": [
+            4.96629,
+            0.19719,
+            0.0851
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.72701,
+            0.12669,
+            0.13273
+          ],
+          "orientation_wxyz": [
+            0.77203,
+            0.63527,
+            0.01229,
+            0.01576
+          ],
+          "linear_velocity": [
+            0.03569,
+            -0.72766,
+            0.02048
+          ],
+          "angular_velocity": [
+            5.11327,
+            0.2261,
+            0.06939
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.7256,
+            0.09681,
+            0.13276
+          ],
+          "orientation_wxyz": [
+            0.69861,
+            0.71519,
+            0.01537,
+            0.01461
+          ],
+          "linear_velocity": [
+            0.03205,
+            -0.70818,
+            0.00582
+          ],
+          "angular_velocity": [
+            5.2393,
+            0.20802,
+            0.04719
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.72439,
+            0.06741,
+            0.13273
+          ],
+          "orientation_wxyz": [
+            0.61656,
+            0.78701,
+            0.01685,
+            0.01358
+          ],
+          "linear_velocity": [
+            0.03004,
+            -0.70145,
+            -0.01137
+          ],
+          "angular_velocity": [
+            5.22598,
+            0.24066,
+            0.01122
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.7231,
+            0.03844,
+            0.1326
+          ],
+          "orientation_wxyz": [
+            0.52726,
+            0.84943,
+            0.01851,
+            0.01115
+          ],
+          "linear_velocity": [
+            0.02811,
+            -0.69314,
+            -0.02703
+          ],
+          "angular_velocity": [
+            5.21322,
+            0.21155,
+            -0.00317
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.72195,
+            0.00973,
+            0.13224
+          ],
+          "orientation_wxyz": [
+            0.43263,
+            0.90131,
+            0.01952,
+            0.00913
+          ],
+          "linear_velocity": [
+            0.02787,
+            -0.68821,
+            -0.03671
+          ],
+          "angular_velocity": [
+            5.18128,
+            0.21373,
+            -0.00347
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.72077,
+            -0.01879,
+            0.13221
+          ],
+          "orientation_wxyz": [
+            0.33409,
+            0.9423,
+            0.01999,
+            0.0073
+          ],
+          "linear_velocity": [
+            0.03063,
+            -0.68335,
+            -0.05286
+          ],
+          "angular_velocity": [
+            5.15263,
+            0.2307,
+            0.00228
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71958,
+            -0.04698,
+            0.13242
+          ],
+          "orientation_wxyz": [
+            0.23269,
+            0.97232,
+            0.02062,
+            0.00558
+          ],
+          "linear_velocity": [
+            0.02241,
+            -0.67734,
+            0.01408
+          ],
+          "angular_velocity": [
+            5.03645,
+            -0.13448,
+            -0.00635
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71837,
+            -0.07491,
+            0.13231
+          ],
+          "orientation_wxyz": [
+            0.12994,
+            0.9913,
+            0.02108,
+            0.00202
+          ],
+          "linear_velocity": [
+            0.03456,
+            -0.66743,
+            0.0078
+          ],
+          "angular_velocity": [
+            5.0112,
+            0.57079,
+            -0.00823
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71726,
+            -0.10257,
+            0.13259
+          ],
+          "orientation_wxyz": [
+            0.02636,
+            0.99943,
+            0.02115,
+            0.00102
+          ],
+          "linear_velocity": [
+            0.02809,
+            -0.65866,
+            0.07307
+          ],
+          "angular_velocity": [
+            4.91503,
+            0.30467,
+            -0.00573
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71606,
+            -0.12992,
+            0.13248
+          ],
+          "orientation_wxyz": [
+            -0.07626,
+            0.99686,
+            0.02112,
+            -0.00092
+          ],
+          "linear_velocity": [
+            0.03062,
+            -0.65133,
+            0.07313
+          ],
+          "angular_velocity": [
+            4.85634,
+            0.29224,
+            -0.00555
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71491,
+            -0.15698,
+            0.13269
+          ],
+          "orientation_wxyz": [
+            -0.17695,
+            0.984,
+            0.02079,
+            -0.00328
+          ],
+          "linear_velocity": [
+            0.02654,
+            -0.6435,
+            0.0435
+          ],
+          "angular_velocity": [
+            4.83777,
+            0.22311,
+            0.00034
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71372,
+            -0.18374,
+            0.13275
+          ],
+          "orientation_wxyz": [
+            -0.27485,
+            0.96126,
+            0.02014,
+            -0.00621
+          ],
+          "linear_velocity": [
+            0.02619,
+            -0.63734,
+            0.04242
+          ],
+          "angular_velocity": [
+            4.77421,
+            0.16706,
+            0.00294
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71267,
+            -0.21028,
+            0.1327
+          ],
+          "orientation_wxyz": [
+            -0.36884,
+            0.92926,
+            0.01965,
+            -0.00733
+          ],
+          "linear_velocity": [
+            0.02661,
+            -0.6342,
+            0.04094
+          ],
+          "angular_velocity": [
+            4.68951,
+            0.23045,
+            -0.01467
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71151,
+            -0.23654,
+            0.13261
+          ],
+          "orientation_wxyz": [
+            -0.45851,
+            0.88844,
+            0.01843,
+            -0.00978
+          ],
+          "linear_velocity": [
+            0.0273,
+            -0.62664,
+            0.02285
+          ],
+          "angular_velocity": [
+            4.70399,
+            0.11254,
+            0.00564
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71042,
+            -0.26261,
+            0.13263
+          ],
+          "orientation_wxyz": [
+            0.54332,
+            -0.83926,
+            -0.01778,
+            0.01094
+          ],
+          "linear_velocity": [
+            0.02575,
+            -0.62165,
+            0.03898
+          ],
+          "angular_velocity": [
+            4.6706,
+            0.21587,
+            0.00097
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70921,
+            -0.28848,
+            0.13266
+          ],
+          "orientation_wxyz": [
+            0.62234,
+            -0.78247,
+            -0.01612,
+            0.0133
+          ],
+          "linear_velocity": [
+            0.0292,
+            -0.61733,
+            0.03864
+          ],
+          "angular_velocity": [
+            4.63938,
+            0.1778,
+            0.00103
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70822,
+            -0.31418,
+            0.13272
+          ],
+          "orientation_wxyz": [
+            0.69497,
+            -0.71873,
+            -0.0153,
+            0.01421
+          ],
+          "linear_velocity": [
+            0.02271,
+            -0.61301,
+            0.03921
+          ],
+          "angular_velocity": [
+            4.60156,
+            0.21026,
+            -0.00166
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70708,
+            -0.33971,
+            0.13281
+          ],
+          "orientation_wxyz": [
+            0.76038,
+            -0.64914,
+            -0.01329,
+            0.01614
+          ],
+          "linear_velocity": [
+            0.02798,
+            -0.61135,
+            0.03836
+          ],
+          "angular_velocity": [
+            4.51411,
+            0.17287,
+            0.00495
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70604,
+            -0.36504,
+            0.1325
+          ],
+          "orientation_wxyz": [
+            0.81856,
+            -0.57404,
+            -0.01244,
+            0.01684
+          ],
+          "linear_velocity": [
+            0.02417,
+            -0.60475,
+            0.06151
+          ],
+          "angular_velocity": [
+            4.53072,
+            0.26909,
+            -0.00137
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70488,
+            -0.39019,
+            0.1325
+          ],
+          "orientation_wxyz": [
+            0.86915,
+            -0.4941,
+            -0.01,
+            0.01841
+          ],
+          "linear_velocity": [
+            0.02986,
+            -0.6007,
+            0.06358
+          ],
+          "angular_velocity": [
+            4.5069,
+            0.11726,
+            0.00403
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70385,
+            -0.41521,
+            0.13211
+          ],
+          "orientation_wxyz": [
+            0.91177,
+            -0.41017,
+            -0.00919,
+            0.01889
+          ],
+          "linear_velocity": [
+            0.01854,
+            -0.60139,
+            0.00607
+          ],
+          "angular_velocity": [
+            4.53576,
+            -0.14461,
+            0.01388
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70287,
+            -0.44014,
+            0.13207
+          ],
+          "orientation_wxyz": [
+            0.94621,
+            -0.32287,
+            -0.00741,
+            0.01965
+          ],
+          "linear_velocity": [
+            0.01927,
+            -0.59844,
+            0.0131
+          ],
+          "angular_velocity": [
+            4.51388,
+            -0.12952,
+            0.00601
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70174,
+            -0.46491,
+            0.13234
+          ],
+          "orientation_wxyz": [
+            0.97214,
+            -0.23347,
+            -0.00449,
+            0.02048
+          ],
+          "linear_velocity": [
+            0.03228,
+            -0.59326,
+            0.01362
+          ],
+          "angular_velocity": [
+            4.44087,
+            0.50234,
+            -0.00344
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.70073,
+            -0.48942,
+            0.13234
+          ],
+          "orientation_wxyz": [
+            0.98951,
+            -0.14292,
+            -0.00299,
+            0.0208
+          ],
+          "linear_velocity": [
+            0.02438,
+            -0.5909,
+            -0.05093
+          ],
+          "angular_velocity": [
+            4.4566,
+            0.18391,
+            -0.00031
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69966,
+            -0.5137,
+            0.1324
+          ],
+          "orientation_wxyz": [
+            0.99842,
+            -0.05214,
+            -0.00115,
+            0.02097
+          ],
+          "linear_velocity": [
+            0.02674,
+            -0.58296,
+            -0.05671
+          ],
+          "angular_velocity": [
+            4.39189,
+            0.26231,
+            0.00294
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69862,
+            -0.53787,
+            0.13257
+          ],
+          "orientation_wxyz": [
+            0.99903,
+            0.03857,
+            0.00105,
+            0.02101
+          ],
+          "linear_velocity": [
+            0.02283,
+            -0.5798,
+            -0.031
+          ],
+          "angular_velocity": [
+            4.36341,
+            0.17195,
+            -0.00222
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69762,
+            -0.56187,
+            0.13261
+          ],
+          "orientation_wxyz": [
+            0.99148,
+            0.12857,
+            0.00246,
+            0.02092
+          ],
+          "linear_velocity": [
+            0.02583,
+            -0.57468,
+            -0.0202
+          ],
+          "angular_velocity": [
+            4.32225,
+            0.19418,
+            0.00229
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69652,
+            -0.58564,
+            0.13279
+          ],
+          "orientation_wxyz": [
+            0.97603,
+            0.2166,
+            0.00444,
+            0.02067
+          ],
+          "linear_velocity": [
+            0.02501,
+            -0.56817,
+            -0.0109
+          ],
+          "angular_velocity": [
+            4.27042,
+            0.18794,
+            0.00138
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69548,
+            -0.60932,
+            0.13274
+          ],
+          "orientation_wxyz": [
+            0.95288,
+            0.30262,
+            0.00668,
+            0.02008
+          ],
+          "linear_velocity": [
+            0.02217,
+            -0.56599,
+            0.00199
+          ],
+          "angular_velocity": [
+            4.25282,
+            0.1666,
+            -0.00263
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69454,
+            -0.63292,
+            0.13269
+          ],
+          "orientation_wxyz": [
+            0.92224,
+            0.38603,
+            0.00792,
+            0.01961
+          ],
+          "linear_velocity": [
+            0.02543,
+            -0.56366,
+            0.01401
+          ],
+          "angular_velocity": [
+            4.23588,
+            0.19114,
+            0.00231
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69347,
+            -0.65645,
+            0.13263
+          ],
+          "orientation_wxyz": [
+            0.88448,
+            0.4661,
+            0.01014,
+            0.01857
+          ],
+          "linear_velocity": [
+            0.0238,
+            -0.56159,
+            0.02617
+          ],
+          "angular_velocity": [
+            4.22132,
+            0.16507,
+            -0.00184
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69256,
+            -0.67988,
+            0.13257
+          ],
+          "orientation_wxyz": [
+            0.83996,
+            0.54224,
+            0.01121,
+            0.01796
+          ],
+          "linear_velocity": [
+            0.02208,
+            -0.55949,
+            0.03739
+          ],
+          "angular_velocity": [
+            4.20358,
+            0.19196,
+            0.00241
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69149,
+            -0.70319,
+            0.13248
+          ],
+          "orientation_wxyz": [
+            0.78916,
+            0.61382,
+            0.01325,
+            0.01647
+          ],
+          "linear_velocity": [
+            0.02676,
+            -0.55624,
+            0.06003
+          ],
+          "angular_velocity": [
+            4.18868,
+            0.10852,
+            -0.0075
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.69056,
+            -0.72638,
+            0.13226
+          ],
+          "orientation_wxyz": [
+            0.73273,
+            0.68019,
+            0.0139,
+            0.0159
+          ],
+          "linear_velocity": [
+            0.01807,
+            -0.55969,
+            -0.00646
+          ],
+          "angular_velocity": [
+            4.14744,
+            -0.19672,
+            -0.00398
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68958,
+            -0.7494,
+            0.13232
+          ],
+          "orientation_wxyz": [
+            0.67169,
+            0.74054,
+            0.01556,
+            0.01404
+          ],
+          "linear_velocity": [
+            0.0227,
+            -0.55285,
+            -0.04053
+          ],
+          "angular_velocity": [
+            4.16665,
+            0.17112,
+            -0.00046
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68861,
+            -0.77228,
+            0.13252
+          ],
+          "orientation_wxyz": [
+            0.60549,
+            0.79558,
+            0.01652,
+            0.01287
+          ],
+          "linear_velocity": [
+            0.0246,
+            -0.54936,
+            -0.0263
+          ],
+          "angular_velocity": [
+            4.13443,
+            0.185,
+            0.00205
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68762,
+            -0.79503,
+            0.13276
+          ],
+          "orientation_wxyz": [
+            0.53515,
+            0.8445,
+            0.01775,
+            0.01104
+          ],
+          "linear_velocity": [
+            0.02159,
+            -0.54479,
+            -0.01326
+          ],
+          "angular_velocity": [
+            4.09523,
+            0.16236,
+            -0.00152
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68671,
+            -0.81762,
+            0.13296
+          ],
+          "orientation_wxyz": [
+            0.46154,
+            0.88687,
+            0.01846,
+            0.00972
+          ],
+          "linear_velocity": [
+            0.02219,
+            -0.53872,
+            0.00234
+          ],
+          "angular_velocity": [
+            4.04796,
+            0.16195,
+            -0.00027
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68581,
+            -0.84013,
+            0.13289
+          ],
+          "orientation_wxyz": [
+            0.38526,
+            0.92258,
+            0.01905,
+            0.00829
+          ],
+          "linear_velocity": [
+            0.02225,
+            -0.53681,
+            0.01608
+          ],
+          "angular_velocity": [
+            4.00984,
+            0.18035,
+            -0.00312
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68481,
+            -0.8625,
+            0.13261
+          ],
+          "orientation_wxyz": [
+            0.30629,
+            0.95171,
+            0.0199,
+            0.006
+          ],
+          "linear_velocity": [
+            0.02324,
+            -0.53422,
+            0.03565
+          ],
+          "angular_velocity": [
+            4.01661,
+            0.15063,
+            -0.00093
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68397,
+            -0.88476,
+            0.13262
+          ],
+          "orientation_wxyz": [
+            0.2256,
+            0.974,
+            0.02017,
+            0.00496
+          ],
+          "linear_velocity": [
+            0.02006,
+            -0.53097,
+            0.0584
+          ],
+          "angular_velocity": [
+            3.97834,
+            0.22913,
+            -0.009
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68303,
+            -0.90682,
+            0.13238
+          ],
+          "orientation_wxyz": [
+            0.14406,
+            0.98935,
+            0.02052,
+            0.003
+          ],
+          "linear_velocity": [
+            0.02253,
+            -0.53257,
+            -0.04577
+          ],
+          "angular_velocity": [
+            4.0165,
+            0.1699,
+            0.00026
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68215,
+            -0.92865,
+            0.13264
+          ],
+          "orientation_wxyz": [
+            0.06254,
+            0.99783,
+            0.0207,
+            0.00122
+          ],
+          "linear_velocity": [
+            0.02217,
+            -0.52436,
+            -0.02323
+          ],
+          "angular_velocity": [
+            3.94576,
+            0.17184,
+            0.00049
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68127,
+            -0.95036,
+            0.13292
+          ],
+          "orientation_wxyz": [
+            -0.01901,
+            0.99961,
+            0.02067,
+            -0.00016
+          ],
+          "linear_velocity": [
+            0.0229,
+            -0.51852,
+            -0.00915
+          ],
+          "angular_velocity": [
+            3.89639,
+            0.17206,
+            0.00191
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.68035,
+            -0.97194,
+            0.13291
+          ],
+          "orientation_wxyz": [
+            -0.10002,
+            0.99477,
+            0.02058,
+            -0.00219
+          ],
+          "linear_velocity": [
+            0.01875,
+            -0.51417,
+            -0.00811
+          ],
+          "angular_velocity": [
+            3.86577,
+            0.07511,
+            -0.00218
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67951,
+            -0.99335,
+            0.13262
+          ],
+          "orientation_wxyz": [
+            -0.17946,
+            0.98355,
+            0.02036,
+            -0.00365
+          ],
+          "linear_velocity": [
+            0.0172,
+            -0.5107,
+            -0.00598
+          ],
+          "angular_velocity": [
+            3.78815,
+            -0.01085,
+            -0.00052
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67868,
+            -1.01453,
+            0.13221
+          ],
+          "orientation_wxyz": [
+            -0.2571,
+            0.96616,
+            0.02012,
+            -0.00481
+          ],
+          "linear_velocity": [
+            0.01479,
+            -0.50912,
+            0.00818
+          ],
+          "angular_velocity": [
+            3.84735,
+            -0.12193,
+            0.00378
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67776,
+            -1.03558,
+            0.13244
+          ],
+          "orientation_wxyz": [
+            -0.33273,
+            0.9428,
+            0.01954,
+            -0.00672
+          ],
+          "linear_velocity": [
+            0.02221,
+            -0.50754,
+            -0.0348
+          ],
+          "angular_velocity": [
+            3.82381,
+            0.1672,
+            0.00138
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67685,
+            -1.05655,
+            0.13282
+          ],
+          "orientation_wxyz": [
+            -0.40573,
+            0.91376,
+            0.01896,
+            -0.00859
+          ],
+          "linear_velocity": [
+            0.01983,
+            -0.50151,
+            -0.01539
+          ],
+          "angular_velocity": [
+            3.7709,
+            0.14916,
+            -0.00122
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67592,
+            -1.07742,
+            0.13299
+          ],
+          "orientation_wxyz": [
+            -0.4756,
+            0.87941,
+            0.01832,
+            -0.01004
+          ],
+          "linear_velocity": [
+            0.02002,
+            -0.49542,
+            0.00504
+          ],
+          "angular_velocity": [
+            3.72215,
+            0.15006,
+            -0.00066
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67503,
+            -1.09811,
+            0.13287
+          ],
+          "orientation_wxyz": [
+            0.54248,
+            -0.83981,
+            -0.01744,
+            0.01164
+          ],
+          "linear_velocity": [
+            0.02043,
+            -0.49276,
+            0.02633
+          ],
+          "angular_velocity": [
+            3.69724,
+            0.14145,
+            0.00493
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67417,
+            -1.11868,
+            0.1323
+          ],
+          "orientation_wxyz": [
+            0.60579,
+            -0.79535,
+            -0.0164,
+            0.01312
+          ],
+          "linear_velocity": [
+            0.0274,
+            -0.49551,
+            0.00772
+          ],
+          "angular_velocity": [
+            3.71187,
+            0.42082,
+            0.00302
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67333,
+            -1.13913,
+            0.13251
+          ],
+          "orientation_wxyz": [
+            0.6651,
+            -0.74646,
+            -0.01571,
+            0.01401
+          ],
+          "linear_velocity": [
+            0.01867,
+            -0.49194,
+            -0.04772
+          ],
+          "angular_velocity": [
+            3.70994,
+            0.0734,
+            -0.00267
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "time_s": 2.5,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67248,
+            -1.15959,
+            0.13279
+          ],
+          "orientation_wxyz": [
+            0.72048,
+            -0.69316,
+            -0.01471,
+            0.01494
+          ],
+          "linear_velocity": [
+            0.02203,
+            -0.48895,
+            -0.00661
+          ],
+          "angular_velocity": [
+            3.67429,
+            0.16553,
+            0.0019
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "time_s": 2.54167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67154,
+            -1.17995,
+            0.13269
+          ],
+          "orientation_wxyz": [
+            0.77135,
+            -0.63606,
+            -0.01359,
+            0.01607
+          ],
+          "linear_velocity": [
+            0.02185,
+            -0.48557,
+            -0.01476
+          ],
+          "angular_velocity": [
+            3.63231,
+            0.01982,
+            0.00446
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "time_s": 2.58333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.67061,
+            -1.20017,
+            0.13269
+          ],
+          "orientation_wxyz": [
+            0.81747,
+            -0.57558,
+            -0.01191,
+            0.01741
+          ],
+          "linear_velocity": [
+            0.0204,
+            -0.48214,
+            0.03591
+          ],
+          "angular_velocity": [
+            3.61988,
+            0.14059,
+            0.00494
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "time_s": 2.625,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66979,
+            -1.22024,
+            0.13236
+          ],
+          "orientation_wxyz": [
+            0.85856,
+            -0.51227,
+            -0.0108,
+            0.01813
+          ],
+          "linear_velocity": [
+            0.02036,
+            -0.48525,
+            -0.04077
+          ],
+          "angular_velocity": [
+            3.65954,
+            0.15355,
+            -0.0001
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "time_s": 2.66667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66894,
+            -1.24013,
+            0.13283
+          ],
+          "orientation_wxyz": [
+            0.89447,
+            -0.44664,
+            -0.00951,
+            0.01881
+          ],
+          "linear_velocity": [
+            0.02093,
+            -0.47739,
+            -0.0181
+          ],
+          "angular_velocity": [
+            3.5899,
+            0.15738,
+            0.00081
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "time_s": 2.70833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66816,
+            -1.26,
+            0.13297
+          ],
+          "orientation_wxyz": [
+            0.92519,
+            -0.37894,
+            -0.00803,
+            0.01929
+          ],
+          "linear_velocity": [
+            0.02058,
+            -0.47204,
+            0.00539
+          ],
+          "angular_velocity": [
+            3.54727,
+            0.15456,
+            0.00095
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "time_s": 2.75,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66736,
+            -1.27978,
+            0.13261
+          ],
+          "orientation_wxyz": [
+            0.95082,
+            -0.30905,
+            -0.00679,
+            0.01975
+          ],
+          "linear_velocity": [
+            0.01919,
+            -0.47257,
+            0.03374
+          ],
+          "angular_velocity": [
+            3.55185,
+            0.16355,
+            0.00044
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "time_s": 2.79167,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66648,
+            -1.29949,
+            0.13224
+          ],
+          "orientation_wxyz": [
+            0.97111,
+            -0.23772,
+            -0.00509,
+            0.02025
+          ],
+          "linear_velocity": [
+            0.02101,
+            -0.47724,
+            -0.0433
+          ],
+          "angular_velocity": [
+            3.60161,
+            0.15841,
+            0.00111
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "time_s": 2.83333,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66569,
+            -1.31901,
+            0.13273
+          ],
+          "orientation_wxyz": [
+            0.98594,
+            -0.16579,
+            -0.00326,
+            0.0206
+          ],
+          "linear_velocity": [
+            0.01828,
+            -0.46898,
+            -0.01796
+          ],
+          "angular_velocity": [
+            3.52711,
+            0.13751,
+            -0.00151
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "time_s": 2.875,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66489,
+            -1.33847,
+            0.13294
+          ],
+          "orientation_wxyz": [
+            0.9954,
+            -0.09351,
+            -0.00219,
+            0.02068
+          ],
+          "linear_velocity": [
+            0.02071,
+            -0.46172,
+            0.00565
+          ],
+          "angular_velocity": [
+            3.46949,
+            0.15562,
+            0.00177
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "time_s": 2.91667,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66403,
+            -1.35782,
+            0.13261
+          ],
+          "orientation_wxyz": [
+            0.99957,
+            -0.0208,
+            -8e-05,
+            0.02082
+          ],
+          "linear_velocity": [
+            0.01913,
+            -0.46229,
+            0.03408
+          ],
+          "angular_velocity": [
+            3.47572,
+            0.12965,
+            -0.00034
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "time_s": 2.95833,
+      "objects": [
+        {
+          "name": "rolling_capsule",
+          "shape": "capsule",
+          "radius": 0.13211,
+          "size": [
+            0.71914,
+            0.26422,
+            0.26422
+          ],
+          "half_extents": [
+            0.35957,
+            0.13211,
+            0.13211
+          ],
+          "height": 0.71913,
+          "depth": 0.71913,
+          "cylinder_depth": 0.45491,
+          "long_axis": "x",
+          "bottom_offset": 0.13211,
+          "bounding_radius": 0.38307,
+          "color": [
+            0.78159,
+            0.68126,
+            0.2714,
+            1.0
+          ],
+          "material": {
+            "profile": "glossy",
+            "roughness": 0.20005,
+            "specular": 0.57339,
+            "metallic": 0.0,
+            "specular_tint": 0.0,
+            "ior": 1.45784,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_capsule",
+            "palette_name": null,
+            "color": [
+              0.78159,
+              0.68126,
+              0.2714,
+              1.0
+            ],
+            "material": {
+              "profile": "glossy",
+              "roughness": 0.20005,
+              "specular": 0.57339,
+              "metallic": 0.0,
+              "specular_tint": 0.0,
+              "ior": 1.45784,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66329,
+            -1.37709,
+            0.13233
+          ],
+          "orientation_wxyz": [
+            0.99845,
+            0.05168,
+            0.00121,
+            0.02078
+          ],
+          "linear_velocity": [
+            0.01838,
+            -0.46652,
+            -0.0398
+          ],
+          "angular_velocity": [
+            3.51872,
+            0.13873,
+            -0.00108
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_audit": {
+    "expected_contacts": [
+      [
+        "rolling_capsule",
+        "ground"
+      ]
+    ],
+    "expected_contacts_passed": true,
+    "collision_log_contacts_passed": true,
+    "visual_contacts_passed": true,
+    "physics_plausibility_passed": true,
+    "physics_plausibility": {
+      "passed": true,
+      "checks": {
+        "finite_motion": {
+          "passed": true,
+          "bad_values": [],
+          "max_speed_mps": 0.87833,
+          "max_abs_position_m": 1.37709
+        },
+        "penetration": {
+          "passed": true,
+          "min_ground_gap_m": -4e-05,
+          "min_pair_gap_m": 999.0,
+          "max_allowed_ground_penetration_m": 0.045,
+          "max_allowed_pair_penetration_m": 0.085,
+          "worst_ground": {
+            "frame": 28,
+            "object": "rolling_capsule",
+            "gap_m": -4e-05
+          },
+          "worst_pair": null
+        },
+        "floating_rebound": {
+          "passed": true,
+          "events": []
+        },
+        "sudden_stop": {
+          "passed": true,
+          "events": []
+        },
+        "bounce_completion": {
+          "passed": true,
+          "not_applicable": true
+        }
+      }
+    },
+    "pybullet_solver": {
+      "physics_hz": 240,
+      "fixed_timestep_s": 0.00416667,
+      "solver_iterations": 160,
+      "num_substeps": 1
+    },
+    "collision_summary": {
+      "pairs": [
+        {
+          "pair": [
+            "ground",
+            "rolling_capsule"
+          ],
+          "samples": 1479,
+          "first_frame": 0.1,
+          "max_force": 36.83951
+        }
+      ]
+    }
+  },
+  "orientation_format": "wxyz",
+  "video": "videos/clip_002_cam_static_left_high_phys_dynamic_capsule_roll.mp4",
+  "frames_dir": "frames/clip_002_cam_static_left_high_phys_dynamic_capsule_roll"
+}
