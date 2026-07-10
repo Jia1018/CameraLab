@@ -49,12 +49,17 @@ CAMERA_FAMILIES = [
 PHYSICS_FAMILIES = [
     "phys_static_mixed_pair",
     "phys_drop_bounce",
+    "phys_multi_drop_bounce",
+    "phys_drop_hits_dynamic_box",
     "phys_two_sphere_collision",
     "phys_sphere_hits_tall_block",
     "phys_box_sphere_collision",
     "phys_four_body_scatter",
     "phys_three_body_chain",
     "phys_four_body_crossfire",
+    "phys_dynamic_cylinder_roll",
+    "phys_dynamic_capsule_roll",
+    "phys_sphere_hits_dynamic_cylinder",
 ]
 
 

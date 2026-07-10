@@ -332,6 +332,19 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
     dyn_cone_r = gen.trunc_gauss(rng, 0.20, 0.025, 0.15, 0.26)
     dyn_cone_depth = gen.trunc_gauss(rng, 0.42, 0.05, 0.30, 0.56)
     shape_hit_sphere_r = gen.trunc_gauss(rng, 0.20, 0.025, 0.15, 0.26)
+    multi_drop_r_a = gen.trunc_gauss(rng, 0.21, 0.025, 0.16, 0.28)
+    multi_drop_r_b = gen.trunc_gauss(rng, 0.18, 0.025, 0.14, 0.24)
+    multi_drop_box = (
+        gen.trunc_gauss(rng, 0.18, 0.025, 0.13, 0.25),
+        gen.trunc_gauss(rng, 0.20, 0.030, 0.14, 0.28),
+        gen.trunc_gauss(rng, 0.16, 0.025, 0.11, 0.22),
+    )
+    drop_hit_sphere_r = gen.trunc_gauss(rng, 0.20, 0.025, 0.16, 0.27)
+    drop_hit_box = (
+        gen.trunc_gauss(rng, 0.26, 0.035, 0.18, 0.35),
+        gen.trunc_gauss(rng, 0.22, 0.030, 0.15, 0.30),
+        gen.trunc_gauss(rng, 0.17, 0.025, 0.12, 0.23),
+    )
 
     return [
         {
@@ -384,6 +397,81 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     restitution=gen.trunc_gauss(rng, 0.86, 0.06, 0.72, 0.96),
                     friction=low_friction(),
                 )
+            ],
+        },
+        {
+            "id": "phys_multi_drop_bounce",
+            "kind": "multi_object_gravity_bounce",
+            "speed_class": "mixed",
+            "description": "Two spheres and one box fall with staggered heights and bounce or tumble on the floor.",
+            "sample_model": "multiple object sizes, masses, drop heights, lateral velocities, angular velocities, friction, restitution, colors, and material profiles are clipped Gaussian samples.",
+            "expected_contacts": [["drop_sphere_a", "ground"], ["drop_sphere_b", "ground"], ["drop_box", "ground"]],
+            "bodies": [
+                gen.sphere(
+                    "drop_sphere_a",
+                    multi_drop_r_a,
+                    (-0.78, -0.42, gen.trunc_gauss(rng, 1.06, 0.10, 0.88, 1.28)),
+                    appearance("drop_sphere_a", profile="rubber"),
+                    velocity=(gen.trunc_gauss(rng, 0.18, 0.07, 0.02, 0.36), 0.04, gen.trunc_gauss(rng, -0.18, 0.06, -0.34, -0.04)),
+                    angular_velocity=(0.0, gen.trunc_gauss(rng, 1.3, 0.45, 0.2, 2.4), 0.2),
+                    mass=mass(0.75),
+                    restitution=gen.trunc_gauss(rng, 0.64, 0.07, 0.44, 0.80),
+                    friction=low_friction(),
+                ),
+                gen.sphere(
+                    "drop_sphere_b",
+                    multi_drop_r_b,
+                    (0.78, -0.34, gen.trunc_gauss(rng, 0.94, 0.09, 0.78, 1.16)),
+                    appearance("drop_sphere_b", profile="glossy"),
+                    velocity=(gen.trunc_gauss(rng, -0.14, 0.06, -0.30, -0.02), 0.03, gen.trunc_gauss(rng, -0.14, 0.05, -0.28, 0.0)),
+                    angular_velocity=(0.1, gen.trunc_gauss(rng, -1.0, 0.45, -2.2, -0.1), -0.2),
+                    mass=mass(0.65),
+                    restitution=gen.trunc_gauss(rng, 0.60, 0.07, 0.42, 0.76),
+                    friction=low_friction(),
+                ),
+                gen.cube(
+                    "drop_box",
+                    multi_drop_box,
+                    (0.00, 0.78, gen.trunc_gauss(rng, 0.98, 0.10, 0.80, 1.22)),
+                    appearance("drop_box", profile="satin"),
+                    velocity=(gen.trunc_gauss(rng, 0.06, 0.06, -0.08, 0.20), gen.trunc_gauss(rng, -0.12, 0.06, -0.28, 0.0), -0.14),
+                    angular_velocity=(gen.trunc_gauss(rng, 0.35, 0.25, -0.15, 0.95), gen.trunc_gauss(rng, -0.45, 0.25, -1.05, 0.10), 0.18),
+                    mass=mass(1.05),
+                    restitution=gen.trunc_gauss(rng, 0.42, 0.08, 0.24, 0.62),
+                    friction=medium_friction(),
+                ),
+            ],
+        },
+        {
+            "id": "phys_drop_hits_dynamic_box",
+            "kind": "drop_then_object_collision",
+            "speed_class": "mixed",
+            "description": "A falling sphere strikes a visible dynamic box, combining gravity bounce with object-object contact.",
+            "sample_model": "falling sphere and target box sizes, masses, velocities, angular velocities, friction, restitution, colors, and material profiles are clipped Gaussian samples.",
+            "expected_contacts": [["falling_hit_sphere", "drop_target_box"], ["drop_target_box", "ground"]],
+            "bodies": [
+                gen.sphere(
+                    "falling_hit_sphere",
+                    drop_hit_sphere_r,
+                    (-0.12, -0.04, gen.trunc_gauss(rng, 1.22, 0.13, 0.98, 1.52)),
+                    appearance("falling_hit_sphere", profile="rubber"),
+                    velocity=(gen.trunc_gauss(rng, 0.16, 0.08, -0.02, 0.34), 0.04, gen.trunc_gauss(rng, -0.44, 0.10, -0.70, -0.20)),
+                    angular_velocity=(0.0, gen.trunc_gauss(rng, 1.0, 0.35, 0.2, 1.8), 0.0),
+                    mass=mass(0.75),
+                    restitution=gen.trunc_gauss(rng, 0.74, 0.08, 0.52, 0.92),
+                    friction=low_friction(),
+                ),
+                gen.cube(
+                    "drop_target_box",
+                    drop_hit_box,
+                    (0.02, 0.00, drop_hit_box[2]),
+                    appearance("drop_target_box", profile="matte"),
+                    velocity=(0.0, 0.0, 0.0),
+                    angular_velocity=(0.0, 0.0, 0.0),
+                    mass=mass(1.25),
+                    restitution=gen.trunc_gauss(rng, 0.48, 0.09, 0.28, 0.70),
+                    friction=medium_friction(),
+                ),
             ],
         },
         {

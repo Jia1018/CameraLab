@@ -238,6 +238,13 @@ material/color profiles.
 Large batch outputs should stay outside git, for example under
 `/workspace/writeable/datasets/camera_motion_disentangle/<batch-id>`.
 
+Use `scripts/export_kubric_review_sample.py` to publish sampled review subsets
+from a large batch. The exporter keeps pair groups intact, only uses clips whose
+videos and metadata are complete, greedily covers camera families, physics
+families, pair kinds, speed classes, and duration bins, and copies only MP4s plus
+metadata into `site/assets/runs/<review-id>`. Then run
+`scripts/make_run_previews.py` and `scripts/sync_site_to_docs.sh` before pushing.
+
 The site sync script copies `site/` to `docs/` and excludes raw `frames/`
 directories. GitHub Pages should receive only MP4s, previews, manifests,
 metadata, and summaries needed for review.
@@ -279,6 +286,9 @@ Stage 2: pilot batch.
 - run no-render audits first;
 - render only after audits pass;
 - inspect coverage histograms and a sampled web review subset.
+- store the main pilot outside git and publish only a sampled review run, for
+  example:
+  `scripts/export_kubric_review_sample.py --source-run-dir /workspace/writeable/datasets/camera_motion_disentangle/<batch-id> --dest-run-id <batch-id>_review_sample --pairs 24 --overwrite`.
 
 Stage 3: first training batch.
 
@@ -320,3 +330,8 @@ shape checks plus 2/3/4 dynamic-object collisions. The targeted run
 rolling dynamic cylinders, rolling horizontal capsules, and sphere contact with a
 dynamic cylinder; dynamic cone was audited but excluded after penetration
 failure.
+
+The current pilot sampling pool has also been no-render audited across 26 pair
+groups / 52 clips, covering all 9 camera families and all 13 physics families.
+The pool now includes multi-object drop/bounce and drop-into-dynamic-box
+templates so gravity-bounce events are not limited to a single moving sphere.
