@@ -171,6 +171,82 @@ materials, positions, and motion are intentionally identical because only the
 camera is allowed to change. Across different physics samples, those values
 should vary and be recorded in metadata.
 
+
+## Complete Diversity Strategy
+
+The dataset should be expanded through stratified families rather than a single
+large undifferentiated random sampler. Each family has explicit metadata labels,
+expected contacts when applicable, and a no-render audit before it is allowed
+into rendered batches.
+
+Camera diversity is already treated as a stratified family set: static,
+dolly-in/out, truck/pan, crane/tilt, top-down drift, orbit, low truck with mild
+roll, and diagonal compound motion. Within each camera family, start position,
+look-at target, roll, lens, endpoint displacement, average speed band, and
+within-clip speed curve are sampled from clipped Gaussian templates. Most camera
+motion should remain human-viewable, with a smaller brisk tail capped around the
+current 1.5x baseline scale.
+
+Object and physics diversity should be covered by event families:
+
+- static or near-static object arrangements for camera-only control cases;
+- single-object gravity, bounce, roll, slide, and angular-motion cases;
+- two-object collisions on or near the ground, including direct and glancing
+  contacts;
+- three/four-object scatter, chain, and crossfire interactions;
+- multi-object gravity cases with simultaneous drops, staggered drops, and
+  falling objects that either remain independent or collide;
+- airborne collision cases where at least one pair contacts before ground
+  contact;
+- mixed-shape dynamic collisions involving sphere, box, cylinder, capsule, cone
+  after each shape-specific audit passes;
+- rare labeled near-miss or out-of-frame cases, kept separate from true-contact
+  training pairs.
+
+The airborne collision family should not stay as only one sphere-sphere example.
+The intended variants are:
+
+- sphere-sphere airborne contact, currently implemented as
+  `phys_airborne_drop_collision`;
+- sphere-box airborne contact;
+- box-box or box-rect airborne glancing contact;
+- sphere-cylinder airborne contact with visible post-impact spin; capsule
+  airborne contact remains a future variant after its shape-specific audit;
+- sequential airborne/ground chains where A hits B in air, then B or A hits C
+  before or after first ground contact;
+- multi-object mixed drops where 1-2 contact pairs are guaranteed by audit and
+  other objects may fall independently.
+
+Continuous physical parameters should continue to use clipped Gaussian sampling:
+object dimensions, masses, initial positions, linear velocities, angular
+velocities, friction, restitution, damping, material profiles, and color. The
+sampler should record these values in metadata so later analysis can audit the
+actual generated distribution.
+
+Quality gates before rendering:
+
+- expected contact checks for labeled contact pairs;
+- `expected_airborne_contacts` for pairs that must collide before ground contact;
+- finite-motion, penetration, floating-rebound, sudden-stop, and bounce-complete
+  plausibility audits;
+- exact same-camera and same-physics pair-contract checks from metadata;
+- review subsets rendered and inspected before scaling any new family.
+
+Execution order:
+
+1. Expand airborne collision templates from the current sphere-sphere case to
+   sphere-box, box-box, sphere-cylinder/capsule, and sequential multi-object
+   variants.
+2. Run focused no-render audits for each new template, then a full-pool
+   no-render audit covering every camera and physics family.
+3. Render a compact review run, roughly 24-40 pair groups, selected for coverage
+   rather than all camera-by-object combinations.
+4. If the review looks physically plausible, start the next pilot batch at
+   100-250 pair groups outside git and export a 24-40 pair GitHub Pages review
+   sample.
+5. After that pilot passes, scale to the planned 100-500 pair pilot range, then
+   to the first 1k-5k pair training batch.
+
 ## Scene And Background Diversity
 
 Scene variation should support motion understanding without adding confusing
@@ -331,7 +407,12 @@ rolling dynamic cylinders, rolling horizontal capsules, and sphere contact with 
 dynamic cylinder; dynamic cone was audited but excluded after penetration
 failure.
 
-The current pilot sampling pool has also been no-render audited across 26 pair
-groups / 52 clips, covering all 9 camera families and all 13 physics families.
-The pool now includes multi-object drop/bounce and drop-into-dynamic-box
-templates so gravity-bounce events are not limited to a single moving sphere.
+The pilot sampling pool was first no-render audited across 26 pair groups / 52
+clips, covering all 9 camera families and the earlier 13 physics families. The
+current full-pool audit covers 18 physics families after adding
+`phys_airborne_drop_collision`, `phys_airborne_sphere_box_collision`,
+`phys_airborne_box_box_collision`, `phys_airborne_sphere_cylinder_collision`,
+and `phys_airborne_chain_collision`. These templates require specified falling
+objects to contact before ground contact through the
+`expected_airborne_contacts` audit, so multi-object gravity events are not
+limited to parallel falling or ground-only collisions.

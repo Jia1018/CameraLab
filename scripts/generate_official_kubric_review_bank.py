@@ -1241,6 +1241,54 @@ def expected_contact_frames(records: list[dict[str, Any]], expected_contacts: li
     return frames
 
 
+def airborne_contact_audit(
+    records: list[dict[str, Any]],
+    expected_airborne_contacts: list[list[str]],
+    *,
+    margin: float = 0.055,
+    min_ground_gap: float = 0.10,
+) -> dict[str, Any]:
+    if not expected_airborne_contacts:
+        return {"passed": True, "not_applicable": True}
+
+    contacts: list[dict[str, Any]] = []
+    missing: list[list[str]] = []
+    for name_a, name_b in expected_airborne_contacts:
+        first_contact: dict[str, Any] | None = None
+        for frame_record in records:
+            objects = {obj["name"]: obj for obj in frame_record["objects"]}
+            if name_a not in objects or name_b not in objects:
+                continue
+            obj_a = objects[name_a]
+            obj_b = objects[name_b]
+            gap = signed_pair_gap(obj_a, obj_b)
+            if gap is None or gap > margin:
+                continue
+            bottom_a = object_bottom_z(obj_a)
+            bottom_b = object_bottom_z(obj_b)
+            if min(bottom_a, bottom_b) <= min_ground_gap:
+                continue
+            first_contact = {
+                "pair": [name_a, name_b],
+                "frame": int(frame_record["frame"]),
+                "time_s": frame_record["time_s"],
+                "gap_m": round(gap, 5),
+                "bottom_gaps_m": [round(bottom_a, 5), round(bottom_b, 5)],
+            }
+            break
+        if first_contact is None:
+            missing.append([name_a, name_b])
+        else:
+            contacts.append(first_contact)
+    return {
+        "passed": not missing,
+        "expected_airborne_contacts": expected_airborne_contacts,
+        "contacts": contacts,
+        "missing": missing,
+        "min_ground_gap_m": min_ground_gap,
+    }
+
+
 def penetration_audit(records: list[dict[str, Any]]) -> dict[str, Any]:
     min_ground_gap = float("inf")
     min_pair_gap = float("inf")
@@ -1392,6 +1440,7 @@ def physics_plausibility_audit(
         "floating_rebound": floating_rebound_audit(records, expected_contacts),
         "sudden_stop": sudden_stop_audit(records, expected_contacts),
         "bounce_completion": bounce_completion_audit(records, physics),
+        "airborne_contacts": airborne_contact_audit(records, physics.get("expected_airborne_contacts", [])),
     }
     passed = all(check.get("passed", False) for check in checks.values())
     return {"passed": passed, "checks": checks}
@@ -1467,11 +1516,13 @@ def simulate_physics(physics: dict[str, Any], world: dict[str, Any], frames: int
         records.append({"frame": frame, "time_s": round(frame / FPS, 5), "objects": objects})
 
     expected = physics.get("expected_contacts", [])
+    expected_airborne = physics.get("expected_airborne_contacts", [])
     collision_log_passed = expected_contacts_passed(summary, expected)
     visual_contacts_passed = expected_visual_contacts_passed(records, expected)
     plausibility = physics_plausibility_audit(records, physics, expected)
     quality = {
         "expected_contacts": expected,
+        "expected_airborne_contacts": expected_airborne,
         "expected_contacts_passed": collision_log_passed or visual_contacts_passed,
         "collision_log_contacts_passed": collision_log_passed,
         "visual_contacts_passed": visual_contacts_passed,

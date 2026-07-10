@@ -1,0 +1,32 @@
+could not get a list of mounted file-systems
+[1/10] rendering clip_000_cam_static_left_high_phys_airborne_drop_collision
+2026-07-10 15:27:07.916695: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2/10] rendering clip_001_cam_dolly_in_right_start_phys_airborne_drop_collision
+[3/10] rendering clip_002_cam_static_left_high_phys_airborne_sphere_box_collision
+[4/10] rendering clip_003_cam_dolly_in_right_start_phys_airborne_sphere_box_collision
+[5/10] rendering clip_004_cam_static_left_high_phys_airborne_box_box_collision
+[6/10] rendering clip_005_cam_dolly_in_right_start_phys_airborne_box_box_collision
+[7/10] rendering clip_006_cam_static_left_high_phys_airborne_sphere_cylinder_collision
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_727c6429a9f2/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0006 sec |   0.0005 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0221 sec |   0.0219 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0243 sec |   0.0242 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0243 sec |   0.0243 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_727c6429a9f2/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[8/10] rendering clip_007_cam_dolly_in_right_start_phys_airborne_sphere_cylinder_collision
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_727c6429a9f2/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0005 sec |   0.0004 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0007 sec |   0.0006 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0366 sec |   0.0365 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0367 sec |   0.0366 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_727c6429a9f2/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[9/10] rendering clip_008_cam_static_left_high_phys_airborne_chain_collision
+[10/10] rendering clip_009_cam_dolly_in_right_start_phys_airborne_chain_collision
+
+Blender quit
+Error: Not freed memory blocks: 10, total unfreed memory 0.013275 MB
