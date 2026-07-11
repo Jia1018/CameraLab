@@ -1,0 +1,49 @@
+# kubric_random_mixed_drop_review_v3
+
+Generator: `official_kubric_batch_v2_pair_sampler`
+
+## Pair Groups
+
+- `pair_0000_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000, clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001
+- `pair_0001_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010, clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010
+- `pair_0002_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094, clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095
+- `pair_0003_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032, clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032
+
+## Clips
+
+- `clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000`: camera `cam_static_view_0000`, physics `phys_randomized_mixed_drop_scene_0000`
+  preview: `previews/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000_sheet.png`
+  video: `videos/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000.mp4`
+  metadata: `metadata/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000.json`
+- `clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001`: camera `cam_static_view_0000`, physics `phys_randomized_mixed_drop_scene_0001`
+  preview: `previews/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001_sheet.png`
+  video: `videos/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001.mp4`
+  metadata: `metadata/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001.json`
+- `clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010`: camera `cam_dolly_in_0020`, physics `phys_randomized_mixed_drop_scene_0010`
+  preview: `previews/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010_sheet.png`
+  video: `videos/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010.mp4`
+  metadata: `metadata/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010.json`
+- `clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010`: camera `cam_top_down_drift_0021`, physics `phys_randomized_mixed_drop_scene_0010`
+  preview: `previews/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010_sheet.png`
+  video: `videos/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010.mp4`
+  metadata: `metadata/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010.json`
+- `clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094`: camera `cam_dolly_out_0047`, physics `phys_randomized_mixed_drop_scene_0094`
+  preview: `previews/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094_sheet.png`
+  video: `videos/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094.mp4`
+  metadata: `metadata/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094.json`
+- `clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095`: camera `cam_dolly_out_0047`, physics `phys_randomized_mixed_drop_scene_0095`
+  preview: `previews/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095_sheet.png`
+  video: `videos/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095.mp4`
+  metadata: `metadata/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095.json`
+- `clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032`: camera `cam_truck_pan_0064`, physics `phys_randomized_mixed_drop_scene_0032`
+  preview: `previews/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032_sheet.png`
+  video: `videos/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032.mp4`
+  metadata: `metadata/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032.json`
+- `clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032`: camera `cam_low_truck_roll_0065`, physics `phys_randomized_mixed_drop_scene_0032`
+  preview: `previews/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032_sheet.png`
+  video: `videos/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032.mp4`
+  metadata: `metadata/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032.json`

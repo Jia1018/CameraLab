@@ -1,0 +1,478 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "kubric_random_mixed_drop_review_v3",
+  "generator": "official_kubric_batch_v2_pair_sampler",
+  "description": "Pair-centric official-Kubric batch/review run. It samples random camera/physics combinations for coverage instead of rendering a full camera x physics grid.",
+  "fps": 24,
+  "resolution": [
+    640,
+    480
+  ],
+  "seed": 20260724,
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "review_strategy": "coverage-oriented random pair sampling; not a full camera-by-object grid",
+  "pair_contract": {
+    "same_camera": "both clips reuse identical camera_frames, scene_id, fps, and frames_count; physics differs",
+    "same_physics_scene": "both clips reuse identical physics_frames, scene_id, fps, and frames_count; camera differs",
+    "length_policy": "clips inside a pair have identical length; different pairs sample different lengths"
+  },
+  "duration_sampling": {
+    "distribution": "clipped Gaussian rounded to frame_multiple",
+    "frames_mean": 108.0,
+    "frames_std": 18.0,
+    "frames_min": 84,
+    "frames_max": 132,
+    "frame_multiple": 12
+  },
+  "camera_motion_model": "camera endpoints, roll, lens, target drift, and orbit parameters are sampled from clipped Gaussian templates; speed_curve controls within-clip acceleration/deceleration",
+  "physics_sampling_model": "object sizes, aspect ratios, masses, initial velocities, angular velocities, friction, restitution, colors, and material profiles are sampled from clipped Gaussian templates",
+  "quality_filters": "Every accepted clip must pass expected-contact checks, physics plausibility audits, and camera framing audits before metadata or render jobs are accepted.",
+  "camera_framing_filter": {
+    "gate": "establishing_full_scene_window",
+    "requirement": "at least one continuous segment where all dynamic object centers plus a small radius margin are inside the approximate camera frustum",
+    "min_contiguous_frames": "max(8, min(18, round(frame_count * 0.08)))",
+    "diagnostics": "metadata also records strict_extent_visible with a larger body-radius margin"
+  },
+  "camera_family_reference": [
+    "static_view",
+    "dolly_in",
+    "dolly_out",
+    "truck_pan",
+    "crane_tilt",
+    "top_down_drift",
+    "orbit_arc",
+    "low_truck_roll",
+    "diagonal_combo"
+  ],
+  "physics_family_reference": [
+    "phys_randomized_mixed_drop_scene"
+  ],
+  "coverage_summary": {
+    "camera_families": {
+      "static_view": 2,
+      "dolly_in": 1,
+      "top_down_drift": 1,
+      "dolly_out": 2,
+      "truck_pan": 1,
+      "low_truck_roll": 1
+    },
+    "physics_families": {
+      "phys_randomized_mixed_drop_scene": 8
+    },
+    "pair_kinds": {
+      "same_camera": 2,
+      "same_physics": 2
+    },
+    "duration_s_min": 3.45833,
+    "duration_s_max": 5.45833,
+    "frames_min": 84,
+    "frames_max": 132
+  },
+  "sample_failure_count": 29,
+  "sample_failures": [
+    {
+      "pair_index": 2,
+      "attempt": 0,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0040 / scene_warm_panel_wall: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 1,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0042 / scene_green_low_wall_tint_0003: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 2,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0045 / scene_neutral_tall_panel: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 3,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0047 / scene_gray_low_wall_tint_0005: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 4,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0048 / scene_blue_tall_wall: physics plausibility audit failed: ['finite_motion', 'penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 5,
+      "kind": "same_camera",
+      "error": "clip_0005_cam_dolly_out_0025_phys_randomized_mixed_drop_scene_0051: camera framing audit failed: max_visible=2/3, longest_all_visible_run=0 < 8"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 6,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0052 / scene_green_low_wall: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 7,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0055 / scene_neutral_tall_panel_tint_0009: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 8,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0056 / scene_gray_low_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 9,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0058 / scene_blue_tall_wall_tint_0011: physics plausibility audit failed: ['finite_motion', 'penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 10,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0060 / scene_warm_panel_wall_tint_0012: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 11,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0062 / scene_green_low_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 12,
+      "kind": "same_camera",
+      "error": "clip_0005_cam_dolly_out_0032_phys_randomized_mixed_drop_scene_0065: camera framing audit failed: max_visible=4/5, longest_all_visible_run=0 < 11"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 13,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0066 / scene_gray_low_wall: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 14,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0069 / scene_blue_tall_wall: physics plausibility audit failed: ['penetration', 'staggered_drop_timing']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 15,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0070 / scene_warm_panel_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 16,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0073 / scene_green_low_wall: physics plausibility audit failed: ['finite_motion', 'penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 17,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0074 / scene_neutral_tall_panel: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 18,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0076 / scene_gray_low_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "pair_index": 2,
+      "attempt": 19,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_0079 / scene_blue_tall_wall_tint_0021: physics plausibility audit failed: ['staggered_drop_timing']"
+    }
+  ],
+  "clips": [
+    {
+      "clip_id": "clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000",
+      "camera_id": "cam_static_view_0000",
+      "camera_family": "static_view",
+      "physics_id": "phys_randomized_mixed_drop_scene_0000",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "pair_0000_same_camera"
+      ],
+      "video": "videos/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000.mp4",
+      "metadata": "metadata/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000.json"
+    },
+    {
+      "clip_id": "clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001",
+      "camera_id": "cam_static_view_0000",
+      "camera_family": "static_view",
+      "physics_id": "phys_randomized_mixed_drop_scene_0001",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "pair_0000_same_camera"
+      ],
+      "video": "videos/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001.mp4",
+      "metadata": "metadata/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001.json"
+    },
+    {
+      "clip_id": "clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010",
+      "camera_id": "cam_dolly_in_0020",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_randomized_mixed_drop_scene_0010",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "pair_0001_same_physics_scene"
+      ],
+      "video": "videos/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010.mp4",
+      "metadata": "metadata/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010.json"
+    },
+    {
+      "clip_id": "clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010",
+      "camera_id": "cam_top_down_drift_0021",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_randomized_mixed_drop_scene_0010",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "pair_0001_same_physics_scene"
+      ],
+      "video": "videos/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010.mp4",
+      "metadata": "metadata/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010.json"
+    },
+    {
+      "clip_id": "clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094",
+      "camera_id": "cam_dolly_out_0047",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_randomized_mixed_drop_scene_0094",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_neutral_tall_panel_tint_0029",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "pair_0002_same_camera"
+      ],
+      "video": "videos/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094.mp4",
+      "metadata": "metadata/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094.json"
+    },
+    {
+      "clip_id": "clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095",
+      "camera_id": "cam_dolly_out_0047",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_randomized_mixed_drop_scene_0095",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_neutral_tall_panel_tint_0029",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "pair_0002_same_camera"
+      ],
+      "video": "videos/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095.mp4",
+      "metadata": "metadata/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095.json"
+    },
+    {
+      "clip_id": "clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032",
+      "camera_id": "cam_truck_pan_0064",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_randomized_mixed_drop_scene_0032",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "pair_0003_same_physics_scene"
+      ],
+      "video": "videos/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032.mp4",
+      "metadata": "metadata/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032.json"
+    },
+    {
+      "clip_id": "clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032",
+      "camera_id": "cam_low_truck_roll_0065",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_randomized_mixed_drop_scene_0032",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "pair_0003_same_physics_scene"
+      ],
+      "video": "videos/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032.mp4",
+      "metadata": "metadata/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032.json"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "pair_0000_same_camera",
+      "title": "Same camera trajectory static_view, different physics",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000",
+        "clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "paircentric_review"
+      ],
+      "frames_count": 132,
+      "duration_s": 5.45833
+    },
+    {
+      "group_id": "pair_0001_same_physics_scene",
+      "title": "Same physics and scene phys_randomized_mixed_drop_scene, different cameras",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010",
+        "clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "paircentric_review"
+      ],
+      "frames_count": 84,
+      "duration_s": 3.45833
+    },
+    {
+      "group_id": "pair_0002_same_camera",
+      "title": "Same camera trajectory dolly_out, different physics",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094",
+        "clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "paircentric_review"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "pair_0003_same_physics_scene",
+      "title": "Same physics and scene phys_randomized_mixed_drop_scene, different cameras",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032",
+        "clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "paircentric_review"
+      ],
+      "frames_count": 120,
+      "duration_s": 4.95833
+    }
+  ],
+  "ambiguous_equivalence_groups": []
+}

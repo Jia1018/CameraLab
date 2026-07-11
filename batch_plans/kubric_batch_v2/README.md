@@ -6,7 +6,7 @@ future review sessions.
 
 ## Current Status
 
-As of 2026-07-09, full large-scale data production has not started yet. The
+As of 2026-07-11, full large-scale data production has not started yet. The
 completed work is still review/pilot work: `kubric_batch_v2_review_0000` is the
 small pair-centric review run, `kubric_shape_speed_review_v1` is the focused
 shape/speed review run, `kubric_object_motion_review_v1` is the broader
@@ -17,11 +17,13 @@ training-scale batch.
 The latest pre-production reviews expand object motion coverage to 2/3/4 dynamic
 object templates, keep explicit static/baseline/brisk camera speed bands, change
 the capsule shape check from an upright prop to a horizontal floor capsule, and
-separately audit dynamic cylinder/capsule behavior. The next step before
-production is human inspection of these review runs. If they pass, start the
-first real pilot batch at 100-500 pair groups. Only after the pilot batch passes
-coverage and quality checks should we launch the first training batch at 1k-5k
-pair groups.
+separately audit dynamic cylinder/capsule behavior. After the mixed-drop review,
+the batch sampler also rejects clips unless the camera has a continuous
+establishing window where all dynamic objects are visible together. The next step
+before production is human inspection of these review runs. If they pass, start
+the first real pilot batch at 100-500 pair groups. Only after the pilot batch
+passes coverage and quality checks should we launch the first training batch at
+1k-5k pair groups.
 
 ## Goal
 
@@ -307,6 +309,12 @@ audits:
   geometry;
 - bounce and settle behavior is physically plausible;
 - no sudden stop without contact or clear damping explanation;
+- mixed-drop airborne objects keep a minimum landing-time spread audit, currently
+  8 frames, to avoid near-synchronous drops without over-filtering otherwise
+  useful randomized scenes;
+- camera framing contains at least one continuous establishing window, currently
+  0.33-0.75 seconds depending on clip length, where every dynamic object is inside
+  the approximate camera frustum;
 - finite object motion and finite camera transforms for all frames;
 - same-camera and same-physics pair contracts compare exactly against metadata.
 
@@ -432,4 +440,7 @@ physics families after adding `phys_randomized_mixed_drop_scene`: 38 pair groups
 same-physics pairs balanced 19/19, and variable durations from 2.96s to 6.96s.
 The focused review `kubric_random_mixed_drop_review_v2` has 4 pair groups / 8
 clips and is intended specifically to inspect independent per-object
-initialization in mixed drop scenes with explicit ground-object context.
+initialization in mixed drop scenes with explicit ground-object context. Future
+mixed-drop reviews and pilot batches should be regenerated with
+`camera_framing_audit`, which requires a continuous full-scene visibility window
+and records stricter body-extent visibility diagnostics in each clip metadata.

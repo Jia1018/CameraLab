@@ -1,0 +1,97 @@
+{
+  "run_id": "kubric_random_mixed_drop_review_v3",
+  "run_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3",
+  "run_dir_relative_to_repo": "site/assets/runs/kubric_random_mixed_drop_review_v3",
+  "phase": "complete",
+  "updated_at_utc": "2026-07-11T12:59:43.488451+00:00",
+  "active_job": "clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032",
+  "last_render_log_event": {
+    "index": 8,
+    "total": 8,
+    "action": "rendering",
+    "clip_id": "clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032"
+  },
+  "jobs_total": 8,
+  "frames_expected_total": 864,
+  "frames_rendered_total": 864,
+  "frames_progress": 1.0,
+  "rendered_jobs_complete": 8,
+  "videos_complete": 8,
+  "complete": true,
+  "resume_command": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python /workspace/writeable/environments/kubric_official/bin/python /workspace/writeable/code/camera_motion_disentangle/scripts/resume_kubric_run.py --run-dir site/assets/runs/kubric_random_mixed_drop_review_v3",
+  "note": "Use resume_command after an interrupted run; it skips completed frame directories and completed videos.",
+  "jobs": [
+    {
+      "clip_id": "clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000",
+      "expected_frames": 132,
+      "rendered_frames": 132,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000.mp4"
+    },
+    {
+      "clip_id": "clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001",
+      "expected_frames": 132,
+      "rendered_frames": 132,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001.mp4"
+    },
+    {
+      "clip_id": "clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010",
+      "expected_frames": 84,
+      "rendered_frames": 84,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010.mp4"
+    },
+    {
+      "clip_id": "clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010",
+      "expected_frames": 84,
+      "rendered_frames": 84,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010.mp4"
+    },
+    {
+      "clip_id": "clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094.mp4"
+    },
+    {
+      "clip_id": "clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095",
+      "expected_frames": 96,
+      "rendered_frames": 96,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095.mp4"
+    },
+    {
+      "clip_id": "clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032",
+      "expected_frames": 120,
+      "rendered_frames": 120,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032.mp4"
+    },
+    {
+      "clip_id": "clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032",
+      "expected_frames": 120,
+      "rendered_frames": 120,
+      "frames_complete": true,
+      "video_complete": true,
+      "frames_dir": "site/assets/runs/kubric_random_mixed_drop_review_v3/frames/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032",
+      "video": "site/assets/runs/kubric_random_mixed_drop_review_v3/videos/clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032.mp4"
+    }
+  ]
+}

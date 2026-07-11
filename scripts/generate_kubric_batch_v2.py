@@ -552,6 +552,192 @@ def quality_or_error(physics: dict[str, Any], quality: dict[str, Any]) -> str | 
     return None
 
 
+def sub_vec(a: list[float], b: list[float]) -> list[float]:
+    return [float(a[i]) - float(b[i]) for i in range(3)]
+
+
+def dot(a: list[float], b: list[float]) -> float:
+    return sum(float(a[i]) * float(b[i]) for i in range(3))
+
+
+def cross(a: list[float], b: list[float]) -> list[float]:
+    return [
+        float(a[1]) * float(b[2]) - float(a[2]) * float(b[1]),
+        float(a[2]) * float(b[0]) - float(a[0]) * float(b[2]),
+        float(a[0]) * float(b[1]) - float(a[1]) * float(b[0]),
+    ]
+
+
+def norm(a: list[float]) -> float:
+    return math.sqrt(sum(float(v) ** 2 for v in a))
+
+
+def normalize(a: list[float], fallback: tuple[float, float, float]) -> list[float]:
+    length = norm(a)
+    if length < 1e-8:
+        return [float(v) for v in fallback]
+    return [float(v) / length for v in a]
+
+
+def object_radius_for_framing(obj: dict[str, Any]) -> float:
+    radius = obj.get("bounding_radius")
+    if radius is not None:
+        return float(radius)
+    if obj.get("radius") is not None:
+        return float(obj["radius"])
+    half = obj.get("half_extents") or [v / 2.0 for v in obj.get("size", [0.4, 0.4, 0.4])]
+    return math.sqrt(sum(float(v) ** 2 for v in half))
+
+
+def camera_basis(camera_frame: dict[str, Any]) -> tuple[list[float], list[float], list[float]]:
+    position = [float(v) for v in camera_frame["position"]]
+    target = [float(v) for v in camera_frame["look_at"]]
+    forward = normalize(sub_vec(target, position), (0.0, 1.0, 0.0))
+    world_up = [0.0, 0.0, 1.0]
+    right_raw = cross(forward, world_up)
+    right = normalize(right_raw, (1.0, 0.0, 0.0))
+    if norm(right_raw) < 1e-5:
+        right = normalize(cross(forward, [0.0, 1.0, 0.0]), (1.0, 0.0, 0.0))
+    up = normalize(cross(right, forward), (0.0, 0.0, 1.0))
+    return forward, right, up
+
+
+def object_in_camera_frame(
+    obj: dict[str, Any],
+    camera_frame: dict[str, Any],
+    width: int,
+    height: int,
+    *,
+    safe_margin: float = 0.92,
+    radius_scale: float = 0.80,
+) -> bool:
+    camera_position = [float(v) for v in camera_frame["position"]]
+    obj_position = [float(v) for v in obj["position"]]
+    rel = sub_vec(obj_position, camera_position)
+    forward, right, up = camera_basis(camera_frame)
+    depth = dot(rel, forward)
+    radius = object_radius_for_framing(obj) * radius_scale
+    if depth <= max(0.05, radius * 0.4):
+        return False
+    lens = float(camera_frame["lens_mm"])
+    sensor_width = 32.0
+    sensor_height = sensor_width * float(height) / float(width)
+    half_width = math.tan(math.atan(sensor_width / (2.0 * lens))) * safe_margin
+    half_height = math.tan(math.atan(sensor_height / (2.0 * lens))) * safe_margin
+    x_ndc = dot(rel, right) / depth
+    y_ndc = dot(rel, up) / depth
+    r_ndc = radius / depth
+    return abs(x_ndc) + r_ndc <= half_width and abs(y_ndc) + r_ndc <= half_height
+
+
+def longest_consecutive_run(frames: list[int]) -> int:
+    longest = 0
+    current = 0
+    previous: int | None = None
+    for frame in frames:
+        if previous is None or frame == previous + 1:
+            current += 1
+        else:
+            longest = max(longest, current)
+            current = 1
+        previous = frame
+    return max(longest, current)
+
+
+def camera_framing_audit(
+    camera_frames: list[dict[str, Any]],
+    physics_frames: list[dict[str, Any]],
+    width: int,
+    height: int,
+    *,
+    min_fraction: float = 0.08,
+) -> dict[str, Any]:
+    frame_count = min(len(camera_frames), len(physics_frames))
+    if frame_count == 0:
+        return {"passed": False, "reason": "empty camera or physics frames"}
+    min_contiguous = max(8, min(18, int(round(frame_count * min_fraction))))
+    all_visible_frames: list[int] = []
+    all_extent_visible_frames: list[int] = []
+    visible_counts: list[int] = []
+    extent_visible_counts: list[int] = []
+    object_count = 0
+    worst_frame: dict[str, Any] | None = None
+    strict_worst_frame: dict[str, Any] | None = None
+    for idx in range(frame_count):
+        camera_frame = camera_frames[idx]
+        objects = physics_frames[idx]["objects"]
+        object_count = max(object_count, len(objects))
+        visible = [
+            obj["name"]
+            for obj in objects
+            if object_in_camera_frame(obj, camera_frame, width, height, safe_margin=0.96, radius_scale=0.20)
+        ]
+        extent_visible = [
+            obj["name"]
+            for obj in objects
+            if object_in_camera_frame(obj, camera_frame, width, height, safe_margin=0.92, radius_scale=0.80)
+        ]
+        visible_names = set(visible)
+        extent_visible_names = set(extent_visible)
+        missing = [obj["name"] for obj in objects if obj["name"] not in visible_names]
+        extent_missing = [obj["name"] for obj in objects if obj["name"] not in extent_visible_names]
+        visible_counts.append(len(visible))
+        extent_visible_counts.append(len(extent_visible))
+        if not missing and objects:
+            all_visible_frames.append(int(physics_frames[idx]["frame"]))
+        if not extent_missing and objects:
+            all_extent_visible_frames.append(int(physics_frames[idx]["frame"]))
+        if worst_frame is None or len(visible) < int(worst_frame["visible_count"]):
+            worst_frame = {
+                "frame": int(physics_frames[idx]["frame"]),
+                "visible_count": len(visible),
+                "missing": missing[:8],
+            }
+        if strict_worst_frame is None or len(extent_visible) < int(strict_worst_frame["visible_count"]):
+            strict_worst_frame = {
+                "frame": int(physics_frames[idx]["frame"]),
+                "visible_count": len(extent_visible),
+                "missing": extent_missing[:8],
+            }
+
+    longest = longest_consecutive_run(all_visible_frames)
+    strict_longest = longest_consecutive_run(all_extent_visible_frames)
+    max_visible = max(visible_counts) if visible_counts else 0
+    max_extent_visible = max(extent_visible_counts) if extent_visible_counts else 0
+    passed = object_count > 0 and longest >= min_contiguous
+    return {
+        "passed": passed,
+        "gate": "establishing_full_scene_window",
+        "object_count": object_count,
+        "max_visible_objects": max_visible,
+        "all_visible_frame_count": len(all_visible_frames),
+        "longest_all_visible_run_frames": longest,
+        "min_required_contiguous_frames": min_contiguous,
+        "all_visible_frame_examples": all_visible_frames[:12],
+        "worst_frame": worst_frame,
+        "strict_extent_visible": {
+            "max_visible_objects": max_extent_visible,
+            "all_visible_frame_count": len(all_extent_visible_frames),
+            "longest_all_visible_run_frames": strict_longest,
+            "all_visible_frame_examples": all_extent_visible_frames[:12],
+            "worst_frame": strict_worst_frame,
+            "safe_margin": 0.92,
+            "radius_scale": 0.80,
+        },
+        "visibility_gate_params": {
+            "safe_margin": 0.96,
+            "radius_scale": 0.20,
+            "min_fraction": min_fraction,
+        },
+        "projection_model": (
+            "approximate pinhole frustum using camera position/look_at/lens; "
+            "the hard gate requires a continuous full-scene window where every "
+            "dynamic object center plus a small radius margin is visible, while "
+            "strict_extent_visible records a more conservative body-extent check"
+        ),
+    }
+
+
 def write_clip_metadata(
     *,
     run_dir: Path,
@@ -569,6 +755,15 @@ def write_clip_metadata(
     world = spec["world"]
     frames = int(spec["frames"])
     clip_id = f"clip_{clip_index:04d}_{camera['id']}_{physics['id']}"
+    camera_frames = camera_records(camera, frames)
+    framing = camera_framing_audit(camera_frames, physics_frames, width, height)
+    if not framing["passed"]:
+        raise RuntimeError(
+            f"{clip_id}: camera framing audit failed: "
+            f"max_visible={framing['max_visible_objects']}/{framing['object_count']}, "
+            f"longest_all_visible_run={framing['longest_all_visible_run_frames']} "
+            f"< {framing['min_required_contiguous_frames']}"
+        )
     metadata_rel = Path("metadata") / f"{clip_id}.json"
     video_rel = Path("videos") / f"{clip_id}.mp4"
     frames_rel = Path("frames") / clip_id
@@ -591,9 +786,10 @@ def write_clip_metadata(
         "camera_spec": camera,
         "physics_spec": physics,
         "scene_spec": world,
-        "camera_frames": camera_records(camera, frames),
+        "camera_frames": camera_frames,
         "physics_frames": physics_frames,
         "quality_audit": quality,
+        "camera_framing_audit": framing,
         "orientation_format": "wxyz",
         "video": str(video_rel),
         "frames_dir": str(frames_rel),
@@ -652,22 +848,27 @@ def materialize_pair(
 
     clips: list[dict[str, Any]] = []
     jobs: list[dict[str, Any]] = []
-    for offset, spec in enumerate(pair_specs):
-        key = (spec["physics"]["id"], spec["world"]["id"], int(spec["frames"]))
-        physics_frames, quality = sim_cache[key]
-        clip, job = write_clip_metadata(
-            run_dir=run_dir,
-            clip_index=clip_index + offset,
-            pair_group_id=pair_group_id,
-            pair_kind=group_spec["kind"],
-            spec=spec,
-            physics_frames=physics_frames,
-            quality=quality,
-            width=width,
-            height=height,
-        )
-        clips.append(clip)
-        jobs.append(job)
+    try:
+        for offset, spec in enumerate(pair_specs):
+            key = (spec["physics"]["id"], spec["world"]["id"], int(spec["frames"]))
+            physics_frames, quality = sim_cache[key]
+            clip, job = write_clip_metadata(
+                run_dir=run_dir,
+                clip_index=clip_index + offset,
+                pair_group_id=pair_group_id,
+                pair_kind=group_spec["kind"],
+                spec=spec,
+                physics_frames=physics_frames,
+                quality=quality,
+                width=width,
+                height=height,
+            )
+            clips.append(clip)
+            jobs.append(job)
+    except Exception:
+        for job in jobs:
+            Path(job["metadata"]).unlink(missing_ok=True)
+        raise
 
     pair_group = {
         "group_id": pair_group_id,
@@ -738,6 +939,15 @@ def write_run(args: argparse.Namespace) -> Path:
             pair_done = True
             break
         if not pair_done:
+            failure_report = {
+                "run_id": args.run_id,
+                "failed_pair_index": pair_index,
+                "failed_pair_kind": pair_kind,
+                "max_pair_attempts": args.max_pair_attempts,
+                "failure_count": len(failures),
+                "recent_failures": failures[-20:],
+            }
+            (run_dir / "failure_report.json").write_text(json.dumps(failure_report, indent=2), encoding="utf-8")
             raise RuntimeError(f"failed to create pair {pair_index} after {args.max_pair_attempts} attempts")
 
     coverage = summarize_counts(clips, pair_groups)
@@ -780,12 +990,23 @@ def write_run(args: argparse.Namespace) -> Path:
             "sampled from clipped Gaussian templates"
         ),
         "quality_filters": (
-            "Every physics sample must pass expected-contact checks and plausibility "
-            "audits before metadata or render jobs are accepted."
+            "Every accepted clip must pass expected-contact checks, physics "
+            "plausibility audits, and camera framing audits before metadata or "
+            "render jobs are accepted."
         ),
+        "camera_framing_filter": {
+            "gate": "establishing_full_scene_window",
+            "requirement": (
+                "at least one continuous segment where all dynamic object centers "
+                "plus a small radius margin are inside the approximate camera frustum"
+            ),
+            "min_contiguous_frames": "max(8, min(18, round(frame_count * 0.08)))",
+            "diagnostics": "metadata also records strict_extent_visible with a larger body-radius margin",
+        },
         "camera_family_reference": CAMERA_FAMILIES,
         "physics_family_reference": PHYSICS_FAMILIES,
         "coverage_summary": coverage,
+        "sample_failure_count": len(failures),
         "sample_failures": failures[:20],
         "clips": clips,
         "pair_groups": pair_groups,
@@ -817,7 +1038,7 @@ def main() -> None:
     parser.add_argument("--camera-families", default="", help="Comma-separated camera family ids to sample; defaults to the full pool.")
     parser.add_argument("--physics-families", default="", help="Comma-separated physics family ids to sample; defaults to the full pool.")
     parser.add_argument("--same-camera-fraction", type=float, default=-1.0)
-    parser.add_argument("--max-pair-attempts", type=int, default=16)
+    parser.add_argument("--max-pair-attempts", type=int, default=64)
     parser.add_argument("--progress-watch-interval", type=float, default=60.0)
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--no-render", action="store_true")

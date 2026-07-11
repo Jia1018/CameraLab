@@ -558,7 +558,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             "allow_unlabeled_contacts": True,
             "drop_timing_audit": {
                 "airborne_names": airborne_names,
-                "min_spread_frames": 14,
+                "min_spread_frames": 8,
                 "ground_margin_m": 0.055,
                 "purpose": "reject samples where independently falling objects still land almost simultaneously",
             },

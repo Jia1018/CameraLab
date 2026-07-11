@@ -1,0 +1,38 @@
+could not get a list of mounted file-systems
+[1/8] rendering clip_0000_cam_static_view_0000_phys_randomized_mixed_drop_scene_0000
+2026-07-11 12:20:49.232299: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/capsule_fcac059b86ee/mesh.obj'...
+Progress:   0.00%  (  0.0002 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0027 sec |   0.0026 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0152 sec |   0.0150 sec) Done, building geometries (verts:386 faces:416 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0188 sec |   0.0186 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0188 sec |   0.0187 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/capsule_fcac059b86ee/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[2/8] rendering clip_0001_cam_static_view_0000_phys_randomized_mixed_drop_scene_0001
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_17589bcfc874/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0005 sec |   0.0004 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0008 sec |   0.0007 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0065 sec |   0.0063 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0065 sec |   0.0064 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_17589bcfc874/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[3/8] rendering clip_0002_cam_dolly_in_0020_phys_randomized_mixed_drop_scene_0010
+[4/8] rendering clip_0003_cam_top_down_drift_0021_phys_randomized_mixed_drop_scene_0010
+[5/8] rendering clip_0004_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0094
+[6/8] rendering clip_0005_cam_dolly_out_0047_phys_randomized_mixed_drop_scene_0095
+Progress:   0.00%(  0.0000 sec |   0.0000 sec) Importing OBJ '/tmp/camera_motion_disentangle_kubric_assets/cylinder_40a5475a0b5f/mesh.obj'...
+Progress:   0.00%  (  0.0001 sec |   0.0001 sec) Parsing OBJ file...
+Progress:   0.00%    (  0.0005 sec |   0.0004 sec) Done, loading materials and images...
+Progress:  33.33%    (  0.0008 sec |   0.0007 sec) Done, building geometries (verts:64 faces:34 materials: 1 smoothgroups:0) ...
+Progress:  66.67%    (  0.0028 sec |   0.0027 sec) Done.
+Progress:  66.67%Progress: 100.00%  (  0.0028 sec |   0.0028 sec) Finished importing: '/tmp/camera_motion_disentangle_kubric_assets/cylinder_40a5475a0b5f/mesh.obj'
+Progress: 100.00%Progress: 100.00%
+
+[7/8] rendering clip_0006_cam_truck_pan_0064_phys_randomized_mixed_drop_scene_0032
+[8/8] rendering clip_0007_cam_low_truck_roll_0065_phys_randomized_mixed_drop_scene_0032
+
+Blender quit
+Error: Not freed memory blocks: 8, total unfreed memory 0.010620 MB
