@@ -66,6 +66,8 @@ PHYSICS_FAMILIES = [
     "phys_dynamic_capsule_roll",
     "phys_sphere_hits_dynamic_cylinder",
     "phys_randomized_mixed_drop_scene",
+    "phys_randomized_mixed_drop_collision",
+    "phys_randomized_mixed_drop_no_collision",
 ]
 
 

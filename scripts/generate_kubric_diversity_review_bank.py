@@ -375,11 +375,16 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
     air_chain_r_b = gen.trunc_gauss(rng, 0.18, 0.020, 0.14, 0.23)
     air_chain_r_c = gen.trunc_gauss(rng, 0.17, 0.020, 0.13, 0.22)
 
-    def randomized_mixed_drop_scene() -> dict[str, Any]:
+    def randomized_mixed_drop_scene(contact_mode: str = "optional") -> dict[str, Any]:
+        if contact_mode not in {"optional", "required", "forbidden"}:
+            raise ValueError(f"unknown mixed-drop contact_mode={contact_mode!r}")
         object_count = rng.choices([3, 4, 5], weights=[0.20, 0.55, 0.25], k=1)[0]
         max_ground = max(0, object_count - 2)
         ground_count = min(max_ground, rng.choices([1, 2], weights=[0.60, 0.40], k=1)[0])
         airborne_count = object_count - ground_count
+        if contact_mode == "required" and airborne_count < 2:
+            airborne_count = 2
+            ground_count = object_count - airborne_count
         ground_states = rng.choices(
             ["ground_moving", "ground_rest_dynamic", "ground_static"],
             weights=[0.45, 0.35, 0.20],
@@ -393,6 +398,11 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
             return rng.choices(["sphere", "box", "cylinder", "capsule"], weights=[0.30, 0.35, 0.22, 0.13], k=1)[0]
 
         shapes = [sample_shape_for_state(state) for state in states]
+        forced_contact_slots: list[int] = []
+        forced_contact_y = gen.trunc_gauss(rng, 0.02, 0.10, -0.18, 0.22)
+        forced_contact_height = gen.trunc_gauss(rng, 1.18, 0.20, 0.82, 1.62)
+        if contact_mode == "required":
+            forced_contact_slots = [idx for idx, state in enumerate(states) if state == "airborne"][:2]
         bodies: list[dict[str, Any]] = []
         airborne_names: list[str] = []
 
@@ -412,7 +422,7 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     return False
             return True
 
-        def sample_velocity(state: str, x: float, y: float) -> tuple[tuple[float, float, float], tuple[float, float, float]]:
+        def sample_velocity(state: str, x: float, y: float, index: int) -> tuple[tuple[float, float, float], tuple[float, float, float]]:
             if state == "ground_static":
                 return (0.0, 0.0, 0.0), (0.0, 0.0, 0.0)
             if state == "ground_rest_dynamic":
@@ -424,6 +434,36 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                 return (
                     (gen.trunc_gauss(rng, 0.0, 0.40, -0.90, 0.90), gen.trunc_gauss(rng, 0.0, 0.36, -0.82, 0.82), 0.0),
                     (gen.trunc_gauss(rng, 0.0, 1.10, -2.6, 2.6), gen.trunc_gauss(rng, 0.0, 1.10, -2.6, 2.6), gen.trunc_gauss(rng, 0.0, 0.65, -1.5, 1.5)),
+                )
+            if contact_mode == "required" and index in forced_contact_slots:
+                vx_mean = -1.18 * x
+                vy_mean = -0.22 * (y - forced_contact_y)
+                return (
+                    (
+                        gen.trunc_gauss(rng, vx_mean, 0.12, -1.10, 1.10),
+                        gen.trunc_gauss(rng, vy_mean, 0.08, -0.28, 0.28),
+                        gen.trunc_gauss(rng, -0.10, 0.14, -0.38, 0.10),
+                    ),
+                    (
+                        gen.trunc_gauss(rng, 0.0, 1.25, -3.0, 3.0),
+                        gen.trunc_gauss(rng, 0.0, 1.25, -3.0, 3.0),
+                        gen.trunc_gauss(rng, 0.0, 0.80, -2.0, 2.0),
+                    ),
+                )
+            if contact_mode == "forbidden":
+                vx_mean = 0.10 * x
+                vy_mean = 0.10 * y
+                return (
+                    (
+                        gen.trunc_gauss(rng, vx_mean, 0.14, -0.36, 0.36),
+                        gen.trunc_gauss(rng, vy_mean, 0.12, -0.32, 0.32),
+                        gen.trunc_gauss(rng, -0.16, 0.24, -0.75, 0.18),
+                    ),
+                    (
+                        gen.trunc_gauss(rng, 0.0, 0.70, -1.6, 1.6),
+                        gen.trunc_gauss(rng, 0.0, 0.70, -1.6, 1.6),
+                        gen.trunc_gauss(rng, 0.0, 0.45, -1.0, 1.0),
+                    ),
                 )
             center_bias = rng.random() < 0.25
             vx_mean = -0.18 * x if center_bias else 0.0
@@ -464,9 +504,12 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                 bottom = radius
             height_above_ground = 0.0
             if state == "airborne":
-                height_above_ground = gen.trunc_gauss(rng, 1.15, 0.65, 0.40, 2.45)
+                if contact_mode == "required" and index in forced_contact_slots:
+                    height_above_ground = gen.trunc_gauss(rng, forced_contact_height, 0.07, 0.55, 2.05)
+                else:
+                    height_above_ground = gen.trunc_gauss(rng, 1.15, 0.65, 0.40, 2.45)
             z = bottom + height_above_ground
-            velocity, angular_velocity = sample_velocity(state, x, y)
+            velocity, angular_velocity = sample_velocity(state, x, y, index)
             if shape == "sphere":
                 body = gen.sphere(
                     name,
@@ -530,9 +573,14 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
 
         for index, (state, shape) in enumerate(zip(states, shapes)):
             for attempt in range(180):
-                if attempt < 120:
-                    x = gen.trunc_gauss(rng, 0.0, 0.82, -1.75, 1.75)
-                    y = gen.trunc_gauss(rng, 0.04, 0.76, -1.35, 1.75)
+                if contact_mode == "required" and index in forced_contact_slots:
+                    side = -1.0 if forced_contact_slots.index(index) == 0 else 1.0
+                    x = side * gen.trunc_gauss(rng, 0.50, 0.08, 0.34, 0.68)
+                    y = gen.trunc_gauss(rng, forced_contact_y, 0.06, -0.28, 0.32)
+                elif attempt < 120:
+                    spread = 1.04 if contact_mode == "forbidden" else 0.82
+                    x = gen.trunc_gauss(rng, 0.0, spread, -1.90, 1.90)
+                    y = gen.trunc_gauss(rng, 0.04, spread * 0.90, -1.55, 1.90)
                 else:
                     x = round(rng.uniform(-2.0, 2.0), 5)
                     y = round(rng.uniform(-1.65, 2.0), 5)
@@ -548,14 +596,33 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                     airborne_names.append(candidate["name"])
 
         state_counts = {state: states.count(state) for state in sorted(set(states))}
+        family_by_mode = {
+            "optional": "phys_randomized_mixed_drop_scene",
+            "required": "phys_randomized_mixed_drop_collision",
+            "forbidden": "phys_randomized_mixed_drop_no_collision",
+        }
+        description_by_mode = {
+            "optional": "Independently initialized multi-object scene mixing staggered falling objects with optional ground moving, dynamic resting, or static objects; contacts may or may not occur.",
+            "required": "Randomized mixed-drop scene with a collision-prone airborne pair; accepted samples must contain visible dynamic object-object contact.",
+            "forbidden": "Randomized mixed-drop scene with separated trajectories; accepted samples must avoid dynamic object-object contact.",
+        }
+        contact_audit = {
+            "mode": "optional" if contact_mode == "optional" else ("required" if contact_mode == "required" else "forbidden"),
+            "margin_m": 0.075 if contact_mode == "required" else (0.045 if contact_mode == "forbidden" else 0.065),
+            "min_contact_frames": 2 if contact_mode == "required" else 1,
+            "dynamic_only": True,
+            "purpose": "stratify mixed-drop samples into object-contact and no-object-contact subsets",
+        }
         return {
-            "id": "phys_randomized_mixed_drop_scene",
-            "kind": "randomized_mixed_drop_scene",
+            "id": family_by_mode[contact_mode],
+            "kind": family_by_mode[contact_mode].replace("phys_", ""),
             "speed_class": "mixed",
-            "description": "Independently initialized multi-object scene mixing staggered falling objects with optional ground moving, dynamic resting, or static objects; contacts may or may not occur.",
-            "sample_model": "object count, per-object state, shape, size, position, height, velocity, angular velocity, friction, restitution, color, and material are sampled independently from clipped Gaussian distributions, with only loose in-frame and initial non-overlap constraints.",
+            "description": description_by_mode[contact_mode],
+            "sample_model": "object count, per-object state, shape, size, position, height, velocity, angular velocity, friction, restitution, color, and material are sampled from clipped Gaussian distributions; contact-stratified variants use audit-verified contact requirements.",
             "expected_contacts": [],
             "allow_unlabeled_contacts": True,
+            "mixed_drop_contact_mode": contact_mode,
+            "object_contact_audit": contact_audit,
             "drop_timing_audit": {
                 "airborne_names": airborne_names,
                 "min_spread_frames": 8,
@@ -1283,7 +1350,9 @@ def physics_specs(seed: int) -> list[dict[str, Any]]:
                 ),
             ],
         },
-        randomized_mixed_drop_scene(),
+        randomized_mixed_drop_scene("optional"),
+        randomized_mixed_drop_scene("required"),
+        randomized_mixed_drop_scene("forbidden"),
     ]
 
 

@@ -312,6 +312,10 @@ audits:
 - mixed-drop airborne objects keep a minimum landing-time spread audit, currently
   8 frames, to avoid near-synchronous drops without over-filtering otherwise
   useful randomized scenes;
+- mixed-drop contact coverage is stratified, not left to chance: the batch pool
+  includes optional-contact, required dynamic object-object contact, and
+  required no dynamic object-object contact variants, all checked by
+  `object_contact_audit`;
 - camera framing contains at least one continuous establishing window, currently
   0.33-0.75 seconds depending on clip length, where every dynamic object is inside
   the approximate camera frustum;
@@ -434,9 +438,9 @@ clips, covering all 9 camera families and the earlier 13 physics families. A
 focused airborne-collision pool audit then covered 18 physics families after
 adding `phys_airborne_drop_collision`, `phys_airborne_sphere_box_collision`,
 `phys_airborne_box_box_collision`, `phys_airborne_sphere_cylinder_collision`,
-and `phys_airborne_chain_collision`. The current full-pool audit covers 19
-physics families after adding `phys_randomized_mixed_drop_scene`: 38 pair groups
-/ 76 clips, all 9 camera families, all 19 physics families, same-camera and
+and `phys_airborne_chain_collision`. The current full-pool audit covers 21
+physics families after adding contact-stratified mixed-drop variants: 42 pair groups
+/ 76 clips, all 9 camera families, all 21 physics families, same-camera and
 same-physics pairs balanced 19/19, and variable durations from 2.96s to 6.96s.
 The focused review `kubric_random_mixed_drop_review_v2` has 4 pair groups / 8
 clips and is intended specifically to inspect independent per-object

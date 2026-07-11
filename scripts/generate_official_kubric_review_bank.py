@@ -1258,6 +1258,74 @@ def all_visual_contact_frames(records: list[dict[str, Any]], margin: float = 0.0
     return frames
 
 
+def object_object_contact_audit(records: list[dict[str, Any]], physics: dict[str, Any]) -> dict[str, Any]:
+    config = physics.get("object_contact_audit")
+    if not config:
+        return {"passed": True, "not_applicable": True}
+    mode = str(config.get("mode", "optional"))
+    margin = float(config.get("margin_m", 0.065))
+    min_frames = int(config.get("min_contact_frames", 1))
+    dynamic_only = bool(config.get("dynamic_only", True))
+    static_names = {body["name"] for body in physics.get("bodies", []) if body.get("static")}
+
+    contact_frames: set[int] = set()
+    contact_pairs: dict[tuple[str, str], dict[str, Any]] = {}
+    closest: dict[str, Any] | None = None
+    closest_gap = float("inf")
+    for frame_record in records:
+        frame = int(frame_record["frame"])
+        objects = frame_record["objects"]
+        for idx, a in enumerate(objects):
+            if dynamic_only and a["name"] in static_names:
+                continue
+            for b in objects[idx + 1 :]:
+                if dynamic_only and b["name"] in static_names:
+                    continue
+                gap = signed_pair_gap(a, b)
+                if gap is None:
+                    continue
+                if gap < closest_gap:
+                    closest_gap = gap
+                    closest = {
+                        "frame": frame,
+                        "pair": [a["name"], b["name"]],
+                        "gap_m": round(gap, 5),
+                    }
+                if gap <= margin:
+                    contact_frames.add(frame)
+                    pair = tuple(sorted([a["name"], b["name"]]))
+                    contact_pairs.setdefault(
+                        pair,
+                        {
+                            "pair": list(pair),
+                            "first_frame": frame,
+                            "frame_count": 0,
+                            "min_gap_m": round(gap, 5),
+                        },
+                    )
+                    contact_pairs[pair]["frame_count"] += 1
+                    contact_pairs[pair]["min_gap_m"] = min(float(contact_pairs[pair]["min_gap_m"]), round(gap, 5))
+
+    frame_count = len(contact_frames)
+    if mode == "required":
+        passed = frame_count >= min_frames
+    elif mode == "forbidden":
+        passed = frame_count == 0
+    else:
+        passed = True
+    return {
+        "passed": passed,
+        "mode": mode,
+        "margin_m": margin,
+        "min_required_contact_frames": min_frames,
+        "dynamic_only": dynamic_only,
+        "contact_frame_count": frame_count,
+        "contact_frame_examples": sorted(contact_frames)[:12],
+        "contact_pairs": sorted(contact_pairs.values(), key=lambda item: item["first_frame"])[:8],
+        "closest_pair": closest,
+    }
+
+
 def airborne_contact_audit(
     records: list[dict[str, Any]],
     expected_airborne_contacts: list[list[str]],
@@ -1510,6 +1578,7 @@ def physics_plausibility_audit(
         "bounce_completion": bounce_completion_audit(records, physics),
         "airborne_contacts": airborne_contact_audit(records, physics.get("expected_airborne_contacts", [])),
         "staggered_drop_timing": staggered_drop_timing_audit(records, physics),
+        "object_object_contact": object_object_contact_audit(records, physics),
     }
     passed = all(check.get("passed", False) for check in checks.values())
     return {"passed": passed, "checks": checks}
