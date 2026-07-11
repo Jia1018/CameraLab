@@ -1241,6 +1241,23 @@ def expected_contact_frames(records: list[dict[str, Any]], expected_contacts: li
     return frames
 
 
+
+def all_visual_contact_frames(records: list[dict[str, Any]], margin: float = 0.065) -> set[int]:
+    frames: set[int] = set()
+    for frame_record in records:
+        frame = int(frame_record["frame"])
+        objects = frame_record["objects"]
+        for obj in objects:
+            if ground_touch(obj, margin):
+                frames.add(frame)
+        for idx, a in enumerate(objects):
+            for b in objects[idx + 1 :]:
+                gap = signed_pair_gap(a, b)
+                if gap is not None and gap <= margin:
+                    frames.add(frame)
+    return frames
+
+
 def airborne_contact_audit(
     records: list[dict[str, Any]],
     expected_airborne_contacts: list[list[str]],
@@ -1344,8 +1361,12 @@ def finite_motion_audit(records: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def floating_rebound_audit(records: list[dict[str, Any]], expected_contacts: list[list[str]]) -> dict[str, Any]:
+def floating_rebound_audit(
+    records: list[dict[str, Any]], expected_contacts: list[list[str]], *, allow_unlabeled_contacts: bool = False
+) -> dict[str, Any]:
     contact_frames = expected_contact_frames(records, expected_contacts, margin=0.055)
+    if allow_unlabeled_contacts:
+        contact_frames |= all_visual_contact_frames(records, margin=0.065)
     events: list[dict[str, Any]] = []
     by_name: dict[str, list[dict[str, Any]]] = {}
     for frame_record in records:
@@ -1372,8 +1393,12 @@ def floating_rebound_audit(records: list[dict[str, Any]], expected_contacts: lis
     return {"passed": not events, "events": events[:8]}
 
 
-def sudden_stop_audit(records: list[dict[str, Any]], expected_contacts: list[list[str]]) -> dict[str, Any]:
+def sudden_stop_audit(
+    records: list[dict[str, Any]], expected_contacts: list[list[str]], *, allow_unlabeled_contacts: bool = False
+) -> dict[str, Any]:
     contact_frames = expected_contact_frames(records, expected_contacts, margin=0.065)
+    if allow_unlabeled_contacts:
+        contact_frames |= all_visual_contact_frames(records, margin=0.075)
     events: list[dict[str, Any]] = []
     by_name: dict[str, list[dict[str, Any]]] = {}
     for frame_record in records:
@@ -1431,16 +1456,60 @@ def bounce_completion_audit(records: list[dict[str, Any]], physics: dict[str, An
     }
 
 
+
+def staggered_drop_timing_audit(records: list[dict[str, Any]], physics: dict[str, Any]) -> dict[str, Any]:
+    config = physics.get("drop_timing_audit")
+    if not config:
+        return {"passed": True, "not_applicable": True}
+    names = list(config.get("airborne_names", []))
+    if len(names) < 2:
+        return {"passed": True, "not_applicable": True}
+    margin = float(config.get("ground_margin_m", 0.055))
+    min_spread = int(config.get("min_spread_frames", 8))
+    first_ground: dict[str, int] = {}
+    by_name: dict[str, list[dict[str, Any]]] = {}
+    for frame_record in records:
+        for obj in frame_record["objects"]:
+            by_name.setdefault(obj["name"], []).append({"frame": int(frame_record["frame"]), "object": obj})
+    for name in names:
+        for sample in by_name.get(name, []):
+            if object_bottom_z(sample["object"]) <= margin:
+                first_ground[name] = sample["frame"]
+                break
+    landed = list(first_ground.values())
+    unlanded = [name for name in names if name not in first_ground]
+    if len(landed) >= 2:
+        spread = max(landed) - min(landed)
+    elif landed and unlanded:
+        spread = int(records[-1]["frame"]) - min(landed)
+    else:
+        spread = 0
+    passed = spread >= min_spread
+    return {
+        "passed": passed,
+        "airborne_names": names,
+        "first_ground_contact_frames": first_ground,
+        "unlanded_names": unlanded,
+        "ground_contact_spread_frames": spread,
+        "min_required_spread_frames": min_spread,
+    }
+
+
 def physics_plausibility_audit(
     records: list[dict[str, Any]], physics: dict[str, Any], expected_contacts: list[list[str]]
 ) -> dict[str, Any]:
     checks = {
         "finite_motion": finite_motion_audit(records),
         "penetration": penetration_audit(records),
-        "floating_rebound": floating_rebound_audit(records, expected_contacts),
-        "sudden_stop": sudden_stop_audit(records, expected_contacts),
+        "floating_rebound": floating_rebound_audit(
+            records, expected_contacts, allow_unlabeled_contacts=bool(physics.get("allow_unlabeled_contacts", False))
+        ),
+        "sudden_stop": sudden_stop_audit(
+            records, expected_contacts, allow_unlabeled_contacts=bool(physics.get("allow_unlabeled_contacts", False))
+        ),
         "bounce_completion": bounce_completion_audit(records, physics),
         "airborne_contacts": airborne_contact_audit(records, physics.get("expected_airborne_contacts", [])),
+        "staggered_drop_timing": staggered_drop_timing_audit(records, physics),
     }
     passed = all(check.get("passed", False) for check in checks.values())
     return {"passed": passed, "checks": checks}

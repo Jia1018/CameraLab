@@ -217,6 +217,18 @@ The intended variants are:
 - multi-object mixed drops where 1-2 contact pairs are guaranteed by audit and
   other objects may fall independently.
 
+The airborne collision review runs are intentionally focused stress tests; they
+should not be read as the full dataset distribution. The broader pool also
+contains ground collisions, rolling/sliding cases, static or near-static controls,
+and a randomized mixed-drop family. `phys_randomized_mixed_drop_scene` samples
+each object state independently from airborne, ground-moving, dynamic resting,
+and static-ground modes. Object count, shape, size, XY position, height above
+ground, linear velocity, angular velocity, material, friction, and restitution
+are sampled per object, with only loose in-frame and initial non-overlap
+constraints. Contacts are allowed but not forced. A `drop_timing_audit` rejects
+samples where falling objects land too synchronously, currently requiring at
+least a 14-frame spread among observed ground-contact times.
+
 Continuous physical parameters should continue to use clipped Gaussian sampling:
 object dimensions, masses, initial positions, linear velocities, angular
 velocities, friction, restitution, damping, material profiles, and color. The
@@ -227,6 +239,8 @@ Quality gates before rendering:
 
 - expected contact checks for labeled contact pairs;
 - `expected_airborne_contacts` for pairs that must collide before ground contact;
+- `drop_timing_audit` for randomized multi-object drops so independently falling
+  objects do not collapse back into near-synchronous parallel drops;
 - finite-motion, penetration, floating-rebound, sudden-stop, and bounce-complete
   plausibility audits;
 - exact same-camera and same-physics pair-contract checks from metadata;
@@ -408,11 +422,14 @@ dynamic cylinder; dynamic cone was audited but excluded after penetration
 failure.
 
 The pilot sampling pool was first no-render audited across 26 pair groups / 52
-clips, covering all 9 camera families and the earlier 13 physics families. The
-current full-pool audit covers 18 physics families after adding
-`phys_airborne_drop_collision`, `phys_airborne_sphere_box_collision`,
+clips, covering all 9 camera families and the earlier 13 physics families. A
+focused airborne-collision pool audit then covered 18 physics families after
+adding `phys_airborne_drop_collision`, `phys_airborne_sphere_box_collision`,
 `phys_airborne_box_box_collision`, `phys_airborne_sphere_cylinder_collision`,
-and `phys_airborne_chain_collision`. These templates require specified falling
-objects to contact before ground contact through the
-`expected_airborne_contacts` audit, so multi-object gravity events are not
-limited to parallel falling or ground-only collisions.
+and `phys_airborne_chain_collision`. The current full-pool audit covers 19
+physics families after adding `phys_randomized_mixed_drop_scene`: 38 pair groups
+/ 76 clips, all 9 camera families, all 19 physics families, same-camera and
+same-physics pairs balanced 19/19, and variable durations from 2.96s to 6.96s.
+The focused review `kubric_random_mixed_drop_review_v2` has 4 pair groups / 8
+clips and is intended specifically to inspect independent per-object
+initialization in mixed drop scenes with explicit ground-object context.

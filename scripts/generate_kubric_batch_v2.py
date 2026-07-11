@@ -65,6 +65,7 @@ PHYSICS_FAMILIES = [
     "phys_dynamic_cylinder_roll",
     "phys_dynamic_capsule_roll",
     "phys_sphere_hits_dynamic_cylinder",
+    "phys_randomized_mixed_drop_scene",
 ]
 
 
@@ -813,6 +814,8 @@ def main() -> None:
     parser.add_argument("--frames-min", type=int, default=72)
     parser.add_argument("--frames-max", type=int, default=168)
     parser.add_argument("--frame-multiple", type=int, default=12)
+    parser.add_argument("--camera-families", default="", help="Comma-separated camera family ids to sample; defaults to the full pool.")
+    parser.add_argument("--physics-families", default="", help="Comma-separated physics family ids to sample; defaults to the full pool.")
     parser.add_argument("--same-camera-fraction", type=float, default=-1.0)
     parser.add_argument("--max-pair-attempts", type=int, default=16)
     parser.add_argument("--progress-watch-interval", type=float, default=60.0)
@@ -826,6 +829,20 @@ def main() -> None:
         raise SystemExit("invalid frame bounds")
     if args.frame_multiple <= 0:
         raise SystemExit("--frame-multiple must be positive")
+
+    global CAMERA_FAMILIES, PHYSICS_FAMILIES
+    if args.camera_families:
+        requested = [item.strip() for item in args.camera_families.split(",") if item.strip()]
+        missing = [item for item in requested if item not in CAMERA_FAMILIES]
+        if missing:
+            raise SystemExit(f"unknown camera families: {missing}")
+        CAMERA_FAMILIES = requested
+    if args.physics_families:
+        requested = [item.strip() for item in args.physics_families.split(",") if item.strip()]
+        missing = [item for item in requested if item not in PHYSICS_FAMILIES]
+        if missing:
+            raise SystemExit(f"unknown physics families: {missing}")
+        PHYSICS_FAMILIES = requested
 
     jobs_path = write_run(args)
     run_dir = args.run_root / args.run_id
