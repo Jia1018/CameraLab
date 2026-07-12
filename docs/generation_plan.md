@@ -1,6 +1,6 @@
 # Kubric Batch v2 Generation Plan
 
-This document records the current full-dataset plan for paired Kubric videos.
+This document records the current full-dataset plan for paired/grouped Kubric videos.
 It is meant to preserve the design decisions across container restarts and
 future review sessions.
 
@@ -12,12 +12,17 @@ variable pair lengths, official Kubric/PyBullet/Blender rendering, and resumable
 progress tracking under `/workspace/writeable/datasets/camera_motion_disentangle`.
 A compact website review subset, `kubric_batch_v2_pilot_0001_review_sample`,
 exports 24 pair groups / 48 clips and covers all 9 camera families and all 21
-physics families. The earlier runs remain review work: `kubric_batch_v2_review_0000`
-is the small pair-centric review run, `kubric_shape_speed_review_v1` is the focused
-shape/speed review run, `kubric_object_motion_review_v1` is the broader
-multi-object motion review, and `kubric_dynamic_shape_review_v1` is the targeted
-non-box/non-sphere dynamic-shape review. The 1k-5k pair training-scale batch has
-not started yet.
+physics families. Human review found the diversity acceptable.
+
+The next implementation phase upgrades the sampler from only two-clip pairs to
+small shared-factor blocks. In block mode, a same-camera group can contain one
+camera trajectory with multiple different physics programs, and a same-physics
+group can contain one physical simulation with multiple different camera
+trajectories. The no-render block audit `kubric_shared_block_fullpool_audit_v0`
+passed with 24 blocks / 96 clips, all 9 camera families, all 21 physics
+families, 12 same-camera blocks, 12 same-physics blocks, block size 4, variable
+durations from 2.96s to 6.96s, and zero framing/physics/contact failures. The
+1k-5k group training-scale batch has not started yet.
 
 The latest pre-production reviews expand object motion coverage to 2/3/4 dynamic
 object templates, keep explicit static/baseline/brisk camera speed bands, change
@@ -26,10 +31,9 @@ separately audit dynamic cylinder/capsule behavior. After the mixed-drop review,
 the batch sampler rejects clips unless the camera has a continuous establishing
 window where all dynamic objects are visible together. Mixed-drop cases are also
 stratified into optional-contact, required-contact, and forbidden-contact
-families, so the pilot contains both collision and non-collision falling-object
-examples by construction. Only after this 100-pair pilot batch passes coverage
-and quality checks should we launch the first training batch at 1k-5k pair
-groups.
+families, so the dataset contains both collision and non-collision falling-object
+examples by construction. The next rendered pilot should use shared-factor block
+sampling before scaling to the first 1k-5k group training batch.
 
 ## Goal
 
@@ -43,37 +47,43 @@ The implementation target is the official Kubric pipeline:
 - `kubric.simulator.PyBullet` for rigid-body physics;
 - `kubric.renderer.Blender` for rendering;
 - per-clip metadata containing camera frames, physics frames, sampled
-  parameters, quality audit results, and pair membership.
+  parameters, quality audit results, and group membership.
 
-## Pair Contracts
+## Shared-Factor Contracts
 
-Every pair has two clips. The two clips inside one pair must have the same FPS,
-resolution, and frame count. Different pairs may have different frame counts.
+Every shared-factor group contains two or more clips. All clips inside one group
+must have the same FPS, resolution, and frame count. Different groups may have
+different frame counts.
 
-Same-camera / different-physics pair:
+Same-camera / different-physics group:
 
 - identical camera trajectory, including start position, start rotation/look-at,
   roll, lens, per-frame speed curve, FPS, and frame count;
 - identical scene/background and lighting seed;
-- different physics program and object parameters.
+- multiple different physics programs and object parameters.
 
-Same-physics / different-camera pair:
+Same-physics / different-camera group:
 
 - identical physics simulation, object identities, object start states, object
   motion, collisions, scene/background, lighting, FPS, and frame count;
-- different camera trajectory, including possible different start viewpoint,
-  speed curve, roll, lens, and path family.
+- multiple different camera trajectories, including possible different start
+  viewpoints, speed curves, roll, lens, and path families.
 
-The relative initial composition is controlled only when required by a pair
-contract. It is not globally fixed across the dataset, because object motion and
-camera motion naturally change composition.
+The old two-clip pair contract is a special case of this group contract with
+group size 2. The relative initial composition is controlled only when required
+by a shared factor. It is not globally fixed across the dataset, because object
+motion and camera motion naturally change composition.
 
 ## Sampling Strategy
 
-Use pair-centric sampling instead of rendering a full camera-family by
-physics-family Cartesian grid. Each pair first chooses its controlled factor and
-then samples one or two complementary variants. This keeps the review page small
-while allowing the full batch to cover more kinds of camera and object motion.
+Use shared-factor block sampling instead of rendering a full global
+camera-family by physics-family Cartesian grid. Each group first chooses its
+controlled factor and then samples multiple complementary variants. The default
+next-stage block size is 4 clips: one same-camera block gives one exact camera
+trajectory with four physics programs, and one same-physics block gives one exact
+physics simulation with four camera trajectories. This yields many reusable
+same-camera and same-physics training relations without rendering every possible
+global camera x object combination.
 
 Most continuous parameters should be sampled from clipped Gaussian
 distributions, not from a few fixed values. The mean represents ordinary cases,
@@ -453,4 +463,7 @@ clips and is intended specifically to inspect independent per-object
 initialization in mixed drop scenes with explicit ground-object context. Future
 mixed-drop reviews and pilot batches should be regenerated with
 `camera_framing_audit`, which requires a continuous full-scene visibility window
-and records stricter body-extent visibility diagnostics in each clip metadata.
+and records stricter body-extent visibility diagnostics in each clip metadata. The first shared-factor block no-render
+audit, `kubric_shared_block_fullpool_audit_v0`, covered 24 blocks / 96 clips with all 9
+camera families and all 21 physics families, 12 same-camera blocks, 12
+same-physics blocks, block size 4, and zero framing/physics/contact failures.

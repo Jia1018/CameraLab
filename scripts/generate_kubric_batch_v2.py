@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Generate pair-centric official-Kubric batch/review runs.
+"""Generate pair/block-centric official-Kubric batch/review runs.
 
 The older review scripts render a full camera x physics grid.  This script
-samples pair groups first, so the review set can cover many camera and object
-families without showing every possible combination.  It still preserves the
-pair contracts:
+samples shared-factor groups first, so the review set can cover many camera and
+object families without showing every possible global combination.  It preserves
+the same shared-factor contracts:
 
-* same-camera pairs reuse one exact camera trajectory and vary physics.
-* same-physics pairs reuse one exact physics simulation and scene, then vary
+* same-camera groups reuse one exact camera trajectory and vary physics.
+* same-physics groups reuse one exact physics simulation and scene, then vary
   the camera trajectory.
 """
 
@@ -489,60 +489,93 @@ def sample_world(rng: random.Random, pair_index: int) -> dict[str, Any]:
     return world
 
 
-def make_pair_specs(
+def family_sequence(families: list[str], start: int, count: int, stride: int) -> list[str]:
+    if count <= 0:
+        return []
+    if not families:
+        raise ValueError("empty family pool")
+    result: list[str] = []
+    index = start
+    attempts = 0
+    max_attempts = max(len(families) * 4, count * 4)
+    while len(result) < count and attempts < max_attempts:
+        family = families[index % len(families)]
+        if family not in result or count > len(families):
+            result.append(family)
+        index += stride
+        attempts += 1
+    if len(result) < count:
+        for family in families:
+            if len(result) >= count:
+                break
+            if family not in result or count > len(families):
+                result.append(family)
+    return result
+
+
+def make_group_specs(
     rng: random.Random,
-    pair_index: int,
+    group_index: int,
     attempt: int,
     frames: int,
-    pair_kind: str,
+    group_kind: str,
+    group_size: int,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    world = sample_world(rng, pair_index + attempt)
-    instance_base = pair_index * 10 + attempt
+    world = sample_world(rng, group_index + attempt)
+    instance_base = group_index * 100 + attempt * 10
+    structure_tag = "paircentric_review" if group_size == 2 else "shared_factor_block"
 
-    if pair_kind == "same_camera":
-        camera_family = CAMERA_FAMILIES[pair_index % len(CAMERA_FAMILIES)]
+    if group_kind == "same_camera":
+        camera_family = CAMERA_FAMILIES[group_index % len(CAMERA_FAMILIES)]
         camera = sample_camera(rng, camera_family, instance_base, frames)
-        physics_family_a = PHYSICS_FAMILIES[pair_index % len(PHYSICS_FAMILIES)]
-        physics_family_b = PHYSICS_FAMILIES[(pair_index + 3) % len(PHYSICS_FAMILIES)]
-        physics_a = sample_physics(physics_family_a, instance_base * 2, rng.randint(1, 2_000_000_000))
-        physics_b = sample_physics(physics_family_b, instance_base * 2 + 1, rng.randint(1, 2_000_000_000))
+        physics_families = family_sequence(PHYSICS_FAMILIES, group_index, group_size, stride=3)
+        physics_specs = [
+            sample_physics(physics_family, instance_base * 10 + offset, rng.randint(1, 2_000_000_000))
+            for offset, physics_family in enumerate(physics_families)
+        ]
         specs = [
-            {"camera": camera, "physics": physics_a, "world": world, "frames": frames},
-            {"camera": camera, "physics": physics_b, "world": world, "frames": frames},
+            {"camera": camera, "physics": physics, "world": world, "frames": frames}
+            for physics in physics_specs
         ]
         group = {
             "kind": "same_camera",
-            "title": f"Same camera trajectory {camera['family_id']}, different physics",
+            "group_structure": "same_camera_pair" if group_size == 2 else "same_camera_block",
+            "title": (
+                f"Same camera trajectory {camera['family_id']}, "
+                f"{group_size} different physics programs"
+            ),
             "controlled_factor": "camera_id/scene_id/frames",
             "varied_factor": "physics_id",
-            "tags": ["same_camera", "same_scene", "different_physics", "paircentric_review"],
+            "tags": ["same_camera", "same_scene", "different_physics", structure_tag],
         }
         return specs, group
 
-    if pair_kind != "same_physics_scene":
-        raise ValueError(pair_kind)
+    if group_kind != "same_physics_scene":
+        raise ValueError(group_kind)
 
-    physics_family = PHYSICS_FAMILIES[pair_index % len(PHYSICS_FAMILIES)]
+    physics_family = PHYSICS_FAMILIES[group_index % len(PHYSICS_FAMILIES)]
     physics = sample_physics(physics_family, instance_base, rng.randint(1, 2_000_000_000))
-    camera_family_a = CAMERA_FAMILIES[pair_index % len(CAMERA_FAMILIES)]
-    camera_family_b = CAMERA_FAMILIES[(pair_index + 4) % len(CAMERA_FAMILIES)]
-    if camera_family_a == camera_family_b:
-        camera_family_b = CAMERA_FAMILIES[(pair_index + 1) % len(CAMERA_FAMILIES)]
-    camera_a = sample_camera(rng, camera_family_a, instance_base * 2, frames)
-    camera_b = sample_camera(rng, camera_family_b, instance_base * 2 + 1, frames)
+    camera_families = family_sequence(CAMERA_FAMILIES, group_index, group_size, stride=4)
+    cameras = [
+        sample_camera(rng, camera_family, instance_base * 10 + offset, frames)
+        for offset, camera_family in enumerate(camera_families)
+    ]
     specs = [
-        {"camera": camera_a, "physics": physics, "world": world, "frames": frames},
-        {"camera": camera_b, "physics": physics, "world": world, "frames": frames},
+        {"camera": camera, "physics": physics, "world": world, "frames": frames}
+        for camera in cameras
     ]
     group = {
         "kind": "same_physics_scene",
-        "title": f"Same physics and scene {physics['family_id']}, different cameras",
+        "group_structure": "same_physics_pair" if group_size == 2 else "same_physics_block",
+        "title": (
+            f"Same physics and scene {physics['family_id']}, "
+            f"{group_size} different camera trajectories"
+        ),
         "controlled_factor": "physics_id/scene_id/frames",
         "varied_factor": "camera_id",
-        "tags": ["same_physics", "same_scene", "different_camera", "paircentric_review"],
+        "tags": ["same_physics", "same_scene", "different_camera", structure_tag],
     }
     return specs, group
-
 
 def quality_or_error(physics: dict[str, Any], quality: dict[str, Any]) -> str | None:
     if not quality.get("expected_contacts_passed", False):
@@ -834,7 +867,8 @@ def materialize_pair(
     width: int,
     height: int,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
-    pair_group_id = f"pair_{pair_index:04d}_{group_spec['kind']}"
+    group_prefix = "pair" if len(pair_specs) == 2 else "block"
+    pair_group_id = f"{group_prefix}_{pair_index:04d}_{group_spec['kind']}"
     sim_cache: dict[tuple[str, str, int], tuple[list[dict[str, Any]], dict[str, Any]]] = {}
     for spec in pair_specs:
         physics = spec["physics"]
@@ -874,6 +908,9 @@ def materialize_pair(
 
     pair_group = {
         "group_id": pair_group_id,
+        "kind": group_spec["kind"],
+        "group_structure": group_spec.get("group_structure", group_spec["kind"]),
+        "group_size": len(clips),
         "title": group_spec["title"],
         "controlled_factor": group_spec["controlled_factor"],
         "varied_factor": group_spec["varied_factor"],
@@ -892,6 +929,8 @@ def summarize_counts(clips: list[dict[str, Any]], pair_groups: list[dict[str, An
         "camera_families": dict(Counter(clip["camera_family"] for clip in clips)),
         "physics_families": dict(Counter(clip["physics_family"] for clip in clips)),
         "pair_kinds": dict(Counter(group["tags"][0] for group in pair_groups)),
+        "group_structures": dict(Counter(group.get("group_structure", group["tags"][0]) for group in pair_groups)),
+        "group_sizes": dict(Counter(str(group.get("group_size", len(group.get("clip_ids", [])))) for group in pair_groups)),
         "duration_s_min": min(durations) if durations else None,
         "duration_s_max": max(durations) if durations else None,
         "frames_min": min(frames) if frames else None,
@@ -914,64 +953,85 @@ def write_run(args: argparse.Namespace) -> Path:
     pair_groups: list[dict[str, Any]] = []
     failures: list[dict[str, Any]] = []
 
-    for pair_index in range(args.pairs):
-        pair_kind = "same_camera" if pair_index % 2 == 0 else "same_physics_scene"
+    group_size = 2 if args.group_mode == "pairs" else args.block_size
+    for group_index in range(args.pairs):
+        group_kind = "same_camera" if group_index % 2 == 0 else "same_physics_scene"
         if args.same_camera_fraction >= 0.0:
-            pair_kind = "same_camera" if rng.random() < args.same_camera_fraction else "same_physics_scene"
-        pair_done = False
+            group_kind = "same_camera" if rng.random() < args.same_camera_fraction else "same_physics_scene"
+        group_done = False
         for attempt in range(args.max_pair_attempts):
             frames = frame_count(rng, args.frames_mean, args.frames_std, args.frames_min, args.frames_max, args.frame_multiple)
             try:
-                pair_specs, group_spec = make_pair_specs(rng, pair_index, attempt, frames, pair_kind)
+                group_specs, group_spec = make_group_specs(rng, group_index, attempt, frames, group_kind, group_size)
                 new_clips, new_jobs, pair_group = materialize_pair(
                     run_dir=run_dir,
                     clip_index=len(clips),
-                    pair_index=pair_index,
-                    pair_specs=pair_specs,
+                    pair_index=group_index,
+                    pair_specs=group_specs,
                     group_spec=group_spec,
                     width=args.width,
                     height=args.height,
                 )
             except Exception as exc:  # noqa: BLE001 - record failed samples for audit.
-                failures.append({"pair_index": pair_index, "attempt": attempt, "kind": pair_kind, "error": str(exc)})
+                failures.append({"group_index": group_index, "attempt": attempt, "kind": group_kind, "error": str(exc)})
                 continue
             clips.extend(new_clips)
             render_jobs.extend(new_jobs)
             pair_groups.append(pair_group)
-            pair_done = True
+            group_done = True
             break
-        if not pair_done:
+        if not group_done:
             failure_report = {
                 "run_id": args.run_id,
-                "failed_pair_index": pair_index,
-                "failed_pair_kind": pair_kind,
-                "max_pair_attempts": args.max_pair_attempts,
+                "failed_group_index": group_index,
+                "failed_group_kind": group_kind,
+                "group_mode": args.group_mode,
+                "group_size": group_size,
+                "max_group_attempts": args.max_pair_attempts,
                 "failure_count": len(failures),
                 "recent_failures": failures[-20:],
             }
             (run_dir / "failure_report.json").write_text(json.dumps(failure_report, indent=2), encoding="utf-8")
-            raise RuntimeError(f"failed to create pair {pair_index} after {args.max_pair_attempts} attempts")
+            raise RuntimeError(f"failed to create group {group_index} after {args.max_pair_attempts} attempts")
 
     coverage = summarize_counts(clips, pair_groups)
+    is_block_run = args.group_mode == "shared_factor_blocks"
     manifest = {
         "project": "camera_motion_disentangle",
         "run_id": args.run_id,
-        "generator": "official_kubric_batch_v2_pair_sampler",
+        "generator": "official_kubric_batch_v2_shared_factor_sampler" if is_block_run else "official_kubric_batch_v2_pair_sampler",
         "description": (
-            "Pair-centric official-Kubric batch/review run. It samples random "
-            "camera/physics combinations for coverage instead of rendering a "
-            "full camera x physics grid."
+            "Shared-factor block official-Kubric batch/review run. It samples small "
+            "same-camera and same-physics blocks instead of a global camera x physics grid."
+            if is_block_run
+            else (
+                "Pair-centric official-Kubric batch/review run. It samples random "
+                "camera/physics combinations for coverage instead of rendering a "
+                "full camera x physics grid."
+            )
         ),
         "fps": gen.FPS,
         "resolution": [args.width, args.height],
         "seed": args.seed,
         "simulator": "official kubric.simulator.PyBullet",
         "renderer": "official kubric.renderer.Blender",
-        "review_strategy": "coverage-oriented random pair sampling; not a full camera-by-object grid",
+        "review_strategy": (
+            "coverage-oriented shared-factor block sampling; each group contains multiple clips sharing camera or physics"
+            if is_block_run
+            else "coverage-oriented random pair sampling; not a full camera-by-object grid"
+        ),
+        "shared_factor_group_policy": {
+            "group_mode": args.group_mode,
+            "groups_requested": args.pairs,
+            "clips_per_group": group_size,
+            "same_camera_groups": "one exact camera trajectory and scene paired with multiple physics programs",
+            "same_physics_scene_groups": "one exact physics simulation and scene paired with multiple camera trajectories",
+            "global_grid_policy": "small local blocks are sampled for reusable supervision; the full global camera x physics cartesian product is not rendered",
+        },
         "pair_contract": {
-            "same_camera": "both clips reuse identical camera_frames, scene_id, fps, and frames_count; physics differs",
-            "same_physics_scene": "both clips reuse identical physics_frames, scene_id, fps, and frames_count; camera differs",
-            "length_policy": "clips inside a pair have identical length; different pairs sample different lengths",
+            "same_camera": "all clips in a same-camera group reuse identical camera_frames, scene_id, fps, and frames_count; physics differs",
+            "same_physics_scene": "all clips in a same-physics group reuse identical physics_frames, scene_id, fps, and frames_count; camera differs",
+            "length_policy": "clips inside a group have identical length; different groups sample different lengths",
         },
         "duration_sampling": {
             "distribution": "clipped Gaussian rounded to frame_multiple",
@@ -1028,7 +1088,10 @@ def main() -> None:
     parser.add_argument("--run-root", type=Path, default=RUN_ROOT)
     parser.add_argument("--blender-bin", type=Path, default=gen.DEFAULT_BLENDER)
     parser.add_argument("--kubric-site-packages", type=Path, default=gen.DEFAULT_KUBRIC_SITE_PACKAGES)
-    parser.add_argument("--pairs", type=int, default=24)
+    parser.add_argument("--pairs", type=int, default=24, help="Number of shared-factor groups to sample; legacy name kept for existing scripts.")
+    parser.add_argument("--groups", type=int, default=None, help="Alias for --pairs when thinking in shared-factor groups.")
+    parser.add_argument("--group-mode", choices=["pairs", "shared_factor_blocks"], default="pairs")
+    parser.add_argument("--block-size", type=int, default=4, help="Clips per group when --group-mode shared_factor_blocks.")
     parser.add_argument("--width", type=int, default=gen.WIDTH)
     parser.add_argument("--height", type=int, default=gen.HEIGHT)
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
@@ -1046,8 +1109,12 @@ def main() -> None:
     parser.add_argument("--no-render", action="store_true")
     args = parser.parse_args()
 
+    if args.groups is not None:
+        args.pairs = args.groups
     if args.pairs <= 0:
-        raise SystemExit("--pairs must be positive")
+        raise SystemExit("--pairs/--groups must be positive")
+    if args.block_size < 2:
+        raise SystemExit("--block-size must be at least 2")
     if args.frames_min <= 1 or args.frames_max < args.frames_min:
         raise SystemExit("invalid frame bounds")
     if args.frame_multiple <= 0:
@@ -1104,7 +1171,7 @@ def main() -> None:
         write_progress(run_dir, Path(sys.executable))
     manifest = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
     print(
-        f"Wrote {len(manifest['clips'])} clips and {len(manifest['pair_groups'])} pairs "
+        f"Wrote {len(manifest['clips'])} clips and {len(manifest['pair_groups'])} groups "
         f"to {run_dir}"
     )
 
