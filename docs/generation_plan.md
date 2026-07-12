@@ -6,24 +6,30 @@ future review sessions.
 
 ## Current Status
 
-As of 2026-07-11, full large-scale data production has not started yet. The
-completed work is still review/pilot work: `kubric_batch_v2_review_0000` is the
-small pair-centric review run, `kubric_shape_speed_review_v1` is the focused
+As of 2026-07-12, the first real production pilot batch is complete:
+`kubric_batch_v2_pilot_0001` contains 100 pair groups / 200 clips, 640x480,
+variable pair lengths, official Kubric/PyBullet/Blender rendering, and resumable
+progress tracking under `/workspace/writeable/datasets/camera_motion_disentangle`.
+A compact website review subset, `kubric_batch_v2_pilot_0001_review_sample`,
+exports 24 pair groups / 48 clips and covers all 9 camera families and all 21
+physics families. The earlier runs remain review work: `kubric_batch_v2_review_0000`
+is the small pair-centric review run, `kubric_shape_speed_review_v1` is the focused
 shape/speed review run, `kubric_object_motion_review_v1` is the broader
 multi-object motion review, and `kubric_dynamic_shape_review_v1` is the targeted
-non-box/non-sphere dynamic-shape review. None of these runs is the
-training-scale batch.
+non-box/non-sphere dynamic-shape review. The 1k-5k pair training-scale batch has
+not started yet.
 
 The latest pre-production reviews expand object motion coverage to 2/3/4 dynamic
 object templates, keep explicit static/baseline/brisk camera speed bands, change
 the capsule shape check from an upright prop to a horizontal floor capsule, and
 separately audit dynamic cylinder/capsule behavior. After the mixed-drop review,
-the batch sampler also rejects clips unless the camera has a continuous
-establishing window where all dynamic objects are visible together. The next step
-before production is human inspection of these review runs. If they pass, start
-the first real pilot batch at 100-500 pair groups. Only after the pilot batch
-passes coverage and quality checks should we launch the first training batch at
-1k-5k pair groups.
+the batch sampler rejects clips unless the camera has a continuous establishing
+window where all dynamic objects are visible together. Mixed-drop cases are also
+stratified into optional-contact, required-contact, and forbidden-contact
+families, so the pilot contains both collision and non-collision falling-object
+examples by construction. Only after this 100-pair pilot batch passes coverage
+and quality checks should we launch the first training batch at 1k-5k pair
+groups.
 
 ## Goal
 
