@@ -381,6 +381,12 @@ Use `scripts/update_kubric_progress.py` to refresh progress and
 machine shutdown. This is required because the current machines can disappear
 mid-run.
 
+Runtime environment notes after the Blender reset:
+
+- use Blender 3.6.5 from `/workspace/writeable/blender-3.6.5-linux-x64/blender` for the current Kubric Python 3.10 environment;
+- do not use Blender 5.1.2 for this pipeline unless the Kubric environment is rebuilt for Blender's Python 3.13, because current NumPy/Kubric extensions are Python 3.10 builds;
+- keep `KUBRIC_BLENDER_THREADS=4` for rendered batches unless intentionally tuning memory/performance. The current container can expose many CPU IDs but has a much smaller cgroup quota, a 128GiB memory limit, and no swap, so Blender auto-threading can cause OOM kills.
+
 ## Proposed Scale
 
 Stage 1: review bank.

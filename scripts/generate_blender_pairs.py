@@ -2,7 +2,7 @@
 """Generate paired 3D preview videos with Blender only.
 
 Run with:
-  /workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender --background --python scripts/generate_blender_pairs.py
+  /workspace/writeable/blender-3.6.5-linux-x64/blender --background --python scripts/generate_blender_pairs.py
 
 This is not Kubric/PyBullet yet. It uses Blender rendering plus deterministic
 procedural object trajectories to validate the paired data contract in 3D.

@@ -2,7 +2,7 @@
 """Generate a richer Blender-only paired dataset preview.
 
 Run with:
-  /workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender --background --python scripts/generate_blender_rich_pairs.py
+  /workspace/writeable/blender-3.6.5-linux-x64/blender --background --python scripts/generate_blender_rich_pairs.py
 
 This remains Blender-only procedural motion, not Kubric/PyBullet. It is meant to
 exercise the paired-data contract with richer camera and object motion before the

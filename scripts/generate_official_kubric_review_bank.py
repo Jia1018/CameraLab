@@ -23,10 +23,11 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RUN_ROOT = PROJECT_ROOT / "site" / "assets" / "runs"
-DEFAULT_BLENDER = Path("/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender")
+DEFAULT_BLENDER = Path(os.environ.get("KUBRIC_BLENDER_BIN", "/workspace/writeable/blender-3.6.5-linux-x64/blender"))
 DEFAULT_KUBRIC_SITE_PACKAGES = Path(
     "/workspace/writeable/environments/kubric_official/lib/python3.10/site-packages"
 )
+DEFAULT_BLENDER_THREADS = 4
 
 FPS = 24
 PHYSICS_HZ = 240
@@ -1908,6 +1909,33 @@ def blender_argv() -> list[str]:
     return sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else sys.argv[1:]
 
 
+def blender_thread_count() -> int:
+    raw = os.environ.get("KUBRIC_BLENDER_THREADS", str(DEFAULT_BLENDER_THREADS)).strip()
+    if not raw:
+        return DEFAULT_BLENDER_THREADS
+    try:
+        threads = int(raw)
+    except ValueError as exc:
+        raise ValueError(f"KUBRIC_BLENDER_THREADS must be an integer, got {raw!r}") from exc
+    return threads
+
+
+def blender_thread_args() -> list[str]:
+    threads = blender_thread_count()
+    if threads <= 0:
+        return []
+    return ["-t", str(threads)]
+
+
+def configure_blender_runtime_env(env: dict[str, str]) -> None:
+    threads = blender_thread_count()
+    if threads <= 0:
+        return
+    thread_text = str(threads)
+    for key in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+        env.setdefault(key, thread_text)
+
+
 def patch_blender_denoiser(blender_cls: Any) -> None:
     def set_denoising(self: Any, value: bool) -> None:
         self.blender_scene.cycles.use_denoising = bool(value)
@@ -2031,12 +2059,14 @@ def render_with_blender(blender_bin: Path, jobs_path: Path, kubric_site_packages
     env["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
     existing = env.get("PYTHONPATH")
     env["PYTHONPATH"] = str(kubric_site_packages) if not existing else f"{kubric_site_packages}:{existing}"
+    configure_blender_runtime_env(env)
     log_path = jobs_path.with_name("render.log")
     with log_path.open("w", encoding="utf-8") as log_file:
         subprocess.run(
             [
                 str(blender_bin),
                 "--background",
+                *blender_thread_args(),
                 "--python",
                 str(Path(__file__).resolve()),
                 "--",

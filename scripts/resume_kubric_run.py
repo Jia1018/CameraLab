@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -23,6 +24,12 @@ def read_jobs(run_dir: Path) -> dict[str, Any]:
 
 def write_jobs(path: Path, run_id: str, fps: int, jobs: list[dict[str, Any]]) -> None:
     path.write_text(json.dumps({"run_id": run_id, "fps": fps, "jobs": jobs}, indent=2), encoding="utf-8")
+
+
+def log_event(run_dir: Path, message: str) -> None:
+    timestamp = datetime.now(timezone.utc).isoformat()
+    with (run_dir / "resume_parent.log").open("a", encoding="utf-8") as log_file:
+        print(f"{timestamp} {message}", file=log_file, flush=True)
 
 
 def frame_job_complete(job: dict[str, Any], row_by_clip: dict[str, dict[str, Any]]) -> bool:
@@ -43,19 +50,23 @@ def render_missing(
 ) -> None:
     missing = [job for job in jobs_payload["jobs"] if not frame_job_complete(job, rows)]
     if not missing:
+        log_event(run_dir, "render: no missing frame jobs")
         return
     resume_jobs_path = run_dir / "render_jobs.resume_frames.json"
     write_jobs(resume_jobs_path, jobs_payload["run_id"], int(jobs_payload["fps"]), missing)
+    log_event(run_dir, f"render: starting {len(missing)} missing frame jobs via {blender_bin}")
     env = os.environ.copy()
     env["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
     existing = env.get("PYTHONPATH")
     env["PYTHONPATH"] = str(kubric_site_packages) if not existing else f"{kubric_site_packages}:{existing}"
+    gen.configure_blender_runtime_env(env)
     log_path = run_dir / "resume_render.log"
     with log_path.open("w", encoding="utf-8") as log_file:
         subprocess.run(
             [
                 str(blender_bin),
                 "--background",
+                *gen.blender_thread_args(),
                 "--python",
                 str(Path(gen.__file__).resolve()),
                 "--",
@@ -67,15 +78,55 @@ def render_missing(
             stderr=subprocess.STDOUT,
             env=env,
         )
+    log_event(run_dir, f"render: finished {len(missing)} missing frame jobs")
 
 
 def encode_missing(run_dir: Path, jobs_payload: dict[str, Any], rows: dict[str, dict[str, Any]]) -> None:
     missing = [job for job in jobs_payload["jobs"] if not video_job_complete(job, rows)]
     if not missing:
+        log_event(run_dir, "encode: no missing video jobs")
         return
     encode_jobs_path = run_dir / "render_jobs.resume_videos.json"
     write_jobs(encode_jobs_path, jobs_payload["run_id"], int(jobs_payload["fps"]), missing)
-    gen.encode_videos(encode_jobs_path)
+    log_event(run_dir, f"encode: starting {len(missing)} video jobs")
+    fps = int(jobs_payload["fps"])
+    for index, job in enumerate(missing, start=1):
+        frames_dir = Path(job["frames_dir"])
+        video_path = Path(job["video"])
+        tmp_video_path = video_path.with_name(f"{video_path.name}.tmp.mp4")
+        video_path.parent.mkdir(parents=True, exist_ok=True)
+        if tmp_video_path.exists():
+            tmp_video_path.unlink()
+        log_event(run_dir, f"encode: [{index}/{len(missing)}] starting {job['clip_id']}")
+        subprocess.run(
+            [
+                "ffmpeg",
+                "-y",
+                "-loglevel",
+                "error",
+                "-framerate",
+                str(fps),
+                "-start_number",
+                "1",
+                "-i",
+                str(frames_dir / "frame_%04d.png"),
+                "-vf",
+                "format=yuv420p",
+                "-c:v",
+                "libx264",
+                "-preset",
+                "veryfast",
+                "-crf",
+                "18",
+                "-movflags",
+                "+faststart",
+                str(tmp_video_path),
+            ],
+            check=True,
+        )
+        tmp_video_path.replace(video_path)
+        log_event(run_dir, f"encode: [{index}/{len(missing)}] finished {job['clip_id']} bytes={video_path.stat().st_size}")
+    log_event(run_dir, f"encode: finished {len(missing)} video jobs")
 
 
 def main() -> None:
@@ -88,8 +139,14 @@ def main() -> None:
     parser.add_argument("--skip-encode", action="store_true")
     args = parser.parse_args()
 
+    log_event(args.run_dir, "resume: started")
     jobs_payload = read_jobs(args.run_dir)
     progress = write_progress(args.run_dir, args.python_bin)
+    log_event(
+        args.run_dir,
+        f"resume: initial phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+        f"videos={progress['videos_complete']}/{progress['jobs_total']}",
+    )
     rows = {row["clip_id"]: row for row in progress["jobs"]}
     if not args.skip_render:
         render_missing(
@@ -100,10 +157,21 @@ def main() -> None:
             rows=rows,
         )
         progress = write_progress(args.run_dir, args.python_bin)
+        log_event(
+            args.run_dir,
+            f"resume: after render phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+            f"videos={progress['videos_complete']}/{progress['jobs_total']}",
+        )
         rows = {row["clip_id"]: row for row in progress["jobs"]}
     if not args.skip_encode:
         encode_missing(args.run_dir, jobs_payload, rows)
         progress = write_progress(args.run_dir, args.python_bin)
+        log_event(
+            args.run_dir,
+            f"resume: after encode phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+            f"videos={progress['videos_complete']}/{progress['jobs_total']}",
+        )
+    log_event(args.run_dir, "resume: finished")
     print(
         f"resume status: {progress['phase']} "
         f"frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "

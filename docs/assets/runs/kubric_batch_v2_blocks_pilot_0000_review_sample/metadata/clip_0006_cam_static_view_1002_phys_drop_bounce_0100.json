@@ -1,0 +1,7610 @@
+{
+  "clip_id": "clip_0006_cam_static_view_1002_phys_drop_bounce_0100",
+  "pair_group_id": "block_0001_same_physics_scene",
+  "pair_kind": "same_physics_scene",
+  "camera_id": "cam_static_view_1002",
+  "camera_family": "static_view",
+  "physics_id": "phys_drop_bounce_0100",
+  "physics_family": "phys_drop_bounce",
+  "scene_id": "scene_blue_tall_wall",
+  "fps": 24,
+  "frames_count": 72,
+  "duration_s": 2.95833,
+  "resolution": [
+    640,
+    480
+  ],
+  "generator": "official_kubric_batch_v2_pair_sampler",
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "camera_spec": {
+    "id": "cam_static_view_1002",
+    "family_id": "static_view",
+    "primitives": [
+      "static",
+      "off_center_start"
+    ],
+    "speed_class": "none",
+    "path_model": "linear",
+    "start_position": [
+      -1.6606,
+      -4.53173,
+      1.68684
+    ],
+    "start_target": [
+      0.14799,
+      0.29338,
+      0.28137
+    ],
+    "position_delta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_delta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "average_linear_velocity_mps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "roll_start_deg": 0.59285,
+    "roll_delta_deg": 0.0,
+    "roll_velocity_deg_s_avg": 0.0,
+    "lens_mm": 43.6667,
+    "lens_delta_mm": 0.0,
+    "lens_velocity_mm_s_avg": 0.0,
+    "speed_curve": {
+      "type": "linear"
+    },
+    "motion_distribution": "camera endpoints and average speeds are clipped Gaussian samples; per-frame motion follows the stored speed_curve, so most moving trajectories have within-clip speed variation",
+    "speed_sampling_band": "static",
+    "speed_multiplier": 1.0,
+    "speed_sampling_note": "static camera has no translational speed multiplier"
+  },
+  "physics_spec": {
+    "id": "phys_drop_bounce_0100",
+    "kind": "gravity_bounce",
+    "speed_class": "mixed",
+    "description": "Sphere falls and bounces under gravity with lateral drift.",
+    "sample_model": "radius, mass, lateral velocity, friction, and restitution are clipped Gaussian samples.",
+    "expected_contacts": [
+      [
+        "drop_bounce_sphere",
+        "ground"
+      ]
+    ],
+    "bodies": [
+      {
+        "name": "drop_bounce_sphere",
+        "shape": "sphere",
+        "radius": 0.29409,
+        "scale": [
+          0.29409,
+          0.29409,
+          0.29409
+        ],
+        "position": [
+          -0.49581,
+          0.04419,
+          1.7466
+        ],
+        "velocity": [
+          0.50658,
+          0.08,
+          -0.35
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mass": 0.98521,
+        "restitution": 0.96,
+        "friction": 0.06426,
+        "static": false,
+        "color": [
+          0.62607,
+          0.26347,
+          0.4521,
+          1.0
+        ],
+        "material": {
+          "profile": "rubber",
+          "roughness": 0.69702,
+          "specular": 0.14041,
+          "metallic": 0.0,
+          "specular_tint": 0.00268,
+          "ior": 1.5736,
+          "transmission": 0.0,
+          "transmission_roughness": 0.0
+        },
+        "appearance": {
+          "color_source": "sampled_hsv",
+          "role": "drop_bounce_sphere",
+          "palette_name": null,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          }
+        },
+        "bottom_offset": 0.29409,
+        "bounding_radius": 0.29409,
+        "role": "dynamic"
+      }
+    ],
+    "family_id": "phys_drop_bounce",
+    "base_id": "phys_drop_bounce",
+    "sample_seed": 1356000326
+  },
+  "scene_spec": {
+    "id": "scene_blue_tall_wall",
+    "ground_color": [
+      0.6,
+      0.66,
+      0.68,
+      1.0
+    ],
+    "back_wall_color": [
+      0.69,
+      0.77,
+      0.82,
+      1.0
+    ],
+    "side_wall_color": [
+      0.63,
+      0.69,
+      0.74,
+      1.0
+    ],
+    "wall_height": 2.8,
+    "wall_style": "horizontal_bands",
+    "floor_style": "plain",
+    "static_props": [],
+    "selection_note": "shared by both clips in a pair; varied across pairs"
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "progress": 0.0,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "progress": 0.01408,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "progress": 0.02817,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "progress": 0.04225,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "progress": 0.05634,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "progress": 0.07042,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "progress": 0.08451,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "progress": 0.09859,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "progress": 0.11268,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "progress": 0.12676,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "progress": 0.14085,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "progress": 0.15493,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "progress": 0.16901,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "progress": 0.1831,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "progress": 0.19718,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "progress": 0.21127,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "progress": 0.22535,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "progress": 0.23944,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "progress": 0.25352,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "progress": 0.26761,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "progress": 0.28169,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "progress": 0.29577,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "progress": 0.30986,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "progress": 0.32394,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "progress": 0.33803,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "progress": 0.35211,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "progress": 0.3662,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "progress": 0.38028,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "progress": 0.39437,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "progress": 0.40845,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "progress": 0.42254,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "progress": 0.43662,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "progress": 0.4507,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "progress": 0.46479,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "progress": 0.47887,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "progress": 0.49296,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "progress": 0.50704,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "progress": 0.52113,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "progress": 0.53521,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "progress": 0.5493,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "progress": 0.56338,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "progress": 0.57746,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "progress": 0.59155,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "progress": 0.60563,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "progress": 0.61972,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "progress": 0.6338,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "progress": 0.64789,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "progress": 0.66197,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "progress": 0.67606,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "progress": 0.69014,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "progress": 0.70423,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "progress": 0.71831,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "progress": 0.73239,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "progress": 0.74648,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "progress": 0.76056,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "progress": 0.77465,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "progress": 0.78873,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "progress": 0.80282,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "progress": 0.8169,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "progress": 0.83099,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 60,
+      "time_s": 2.5,
+      "progress": 0.84507,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 61,
+      "time_s": 2.54167,
+      "progress": 0.85915,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 62,
+      "time_s": 2.58333,
+      "progress": 0.87324,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 63,
+      "time_s": 2.625,
+      "progress": 0.88732,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 64,
+      "time_s": 2.66667,
+      "progress": 0.90141,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 65,
+      "time_s": 2.70833,
+      "progress": 0.91549,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 66,
+      "time_s": 2.75,
+      "progress": 0.92958,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 67,
+      "time_s": 2.79167,
+      "progress": 0.94366,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 68,
+      "time_s": 2.83333,
+      "progress": 0.95775,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 69,
+      "time_s": 2.875,
+      "progress": 0.97183,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 70,
+      "time_s": 2.91667,
+      "progress": 0.98592,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    },
+    {
+      "frame": 71,
+      "time_s": 2.95833,
+      "progress": 1.0,
+      "position": [
+        -1.6606,
+        -4.53173,
+        1.68684
+      ],
+      "look_at": [
+        0.14799,
+        0.29338,
+        0.28137
+      ],
+      "quaternion_wxyz": [
+        0.78123,
+        0.5978,
+        -0.10516,
+        -0.14578
+      ],
+      "roll_deg": 0.59285,
+      "lens_mm": 43.6667
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.49581,
+            0.04419,
+            1.7466
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -0.35
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.4747,
+            0.04752,
+            1.72247
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -0.76667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.4536,
+            0.05086,
+            1.68098
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -1.18333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.43249,
+            0.05419,
+            1.62212
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -1.6
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.41138,
+            0.05752,
+            1.54591
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -2.01667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.39027,
+            0.06086,
+            1.45233
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -2.43333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.36917,
+            0.06419,
+            1.34139
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -2.85
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.34806,
+            0.06752,
+            1.21309
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -3.26667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.32695,
+            0.07086,
+            1.06743
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -3.68333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.30584,
+            0.07419,
+            0.90441
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -4.1
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.28474,
+            0.07752,
+            0.72403
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -4.51667
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.26363,
+            0.08086,
+            0.52629
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -4.93333
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.24252,
+            0.08419,
+            0.31118
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            0.50658,
+            0.08,
+            -5.35
+          ],
+          "angular_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.22516,
+            0.08693,
+            0.40668
+          ],
+          "orientation_wxyz": [
+            0.99987,
+            -0.00251,
+            0.01593,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            2.97893
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.20822,
+            0.08961,
+            0.52125
+          ],
+          "orientation_wxyz": [
+            0.99942,
+            -0.00531,
+            0.03362,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            2.56226
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.19127,
+            0.09228,
+            0.61846
+          ],
+          "orientation_wxyz": [
+            0.99865,
+            -0.0081,
+            0.05129,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            2.14559
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.17433,
+            0.09496,
+            0.69831
+          ],
+          "orientation_wxyz": [
+            0.99756,
+            -0.01089,
+            0.06896,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            1.72893
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.15738,
+            0.09764,
+            0.7608
+          ],
+          "orientation_wxyz": [
+            0.99615,
+            -0.01368,
+            0.0866,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            1.31226
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.14044,
+            0.10031,
+            0.80593
+          ],
+          "orientation_wxyz": [
+            0.99442,
+            -0.01646,
+            0.10421,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            0.89559
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.12349,
+            0.10299,
+            0.8337
+          ],
+          "orientation_wxyz": [
+            0.99237,
+            -0.01923,
+            0.12179,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            0.47893
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.10655,
+            0.10566,
+            0.84411
+          ],
+          "orientation_wxyz": [
+            0.99,
+            -0.022,
+            0.13933,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            0.06226
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.08961,
+            0.10834,
+            0.83715
+          ],
+          "orientation_wxyz": [
+            0.98732,
+            -0.02477,
+            0.15683,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -0.35441
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.07266,
+            0.11101,
+            0.81284
+          ],
+          "orientation_wxyz": [
+            0.98431,
+            -0.02752,
+            0.17427,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -0.77107
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.05572,
+            0.11369,
+            0.77116
+          ],
+          "orientation_wxyz": [
+            0.98099,
+            -0.03027,
+            0.19166,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -1.18774
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.03877,
+            0.11637,
+            0.71212
+          ],
+          "orientation_wxyz": [
+            0.97736,
+            -0.033,
+            0.20899,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -1.60441
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.02183,
+            0.11904,
+            0.63572
+          ],
+          "orientation_wxyz": [
+            0.97341,
+            -0.03573,
+            0.22625,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -2.02107
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.00489,
+            0.12172,
+            0.54196
+          ],
+          "orientation_wxyz": [
+            0.96915,
+            -0.03844,
+            0.24344,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -2.43774
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.01206,
+            0.12439,
+            0.43084
+          ],
+          "orientation_wxyz": [
+            0.96458,
+            -0.04115,
+            0.26055,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -2.85441
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.029,
+            0.12707,
+            0.30236
+          ],
+          "orientation_wxyz": [
+            0.9597,
+            -0.04384,
+            0.27757,
+            0.0
+          ],
+          "linear_velocity": [
+            0.40666,
+            0.06422,
+            -3.27107
+          ],
+          "angular_velocity": [
+            -0.13414,
+            0.8494,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.04427,
+            0.12948,
+            0.36023
+          ],
+          "orientation_wxyz": [
+            0.95233,
+            -0.04759,
+            0.30132,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            1.74461
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.05934,
+            0.13186,
+            0.42338
+          ],
+          "orientation_wxyz": [
+            0.9441,
+            -0.05142,
+            0.32563,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            1.32795
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.07442,
+            0.13424,
+            0.46916
+          ],
+          "orientation_wxyz": [
+            0.93523,
+            -0.05523,
+            0.34972,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.91128
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.0895,
+            0.13662,
+            0.49758
+          ],
+          "orientation_wxyz": [
+            0.92572,
+            -0.05899,
+            0.37357,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.49461
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.10457,
+            0.139,
+            0.50864
+          ],
+          "orientation_wxyz": [
+            0.9156,
+            -0.06272,
+            0.39717,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.07795
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.11965,
+            0.14138,
+            0.50234
+          ],
+          "orientation_wxyz": [
+            0.90486,
+            -0.06641,
+            0.4205,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.33872
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.13473,
+            0.14377,
+            0.47868
+          ],
+          "orientation_wxyz": [
+            0.89351,
+            -0.07005,
+            0.44355,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.75539
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.1498,
+            0.14615,
+            0.43765
+          ],
+          "orientation_wxyz": [
+            0.88155,
+            -0.07364,
+            0.4663,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -1.17205
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.16488,
+            0.14853,
+            0.37927
+          ],
+          "orientation_wxyz": [
+            0.86901,
+            -0.07718,
+            0.48874,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -1.58872
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.17996,
+            0.15091,
+            0.30352
+          ],
+          "orientation_wxyz": [
+            0.85588,
+            -0.08067,
+            0.51085,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -2.00539
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.19503,
+            0.15329,
+            0.32786
+          ],
+          "orientation_wxyz": [
+            0.84217,
+            -0.08411,
+            0.53261,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            1.10127
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.21011,
+            0.15567,
+            0.3642
+          ],
+          "orientation_wxyz": [
+            0.82789,
+            -0.08749,
+            0.55402,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.68461
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.22519,
+            0.15805,
+            0.38318
+          ],
+          "orientation_wxyz": [
+            0.81306,
+            -0.09081,
+            0.57505,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.26794
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.24026,
+            0.16043,
+            0.38479
+          ],
+          "orientation_wxyz": [
+            0.79768,
+            -0.09407,
+            0.5957,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.14873
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.25534,
+            0.16281,
+            0.36905
+          ],
+          "orientation_wxyz": [
+            0.78176,
+            -0.09727,
+            0.61594,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.56539
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.27042,
+            0.16519,
+            0.33594
+          ],
+          "orientation_wxyz": [
+            0.76532,
+            -0.1004,
+            0.63577,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.98206
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.28549,
+            0.16758,
+            0.29489
+          ],
+          "orientation_wxyz": [
+            0.74836,
+            -0.10347,
+            0.65517,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.8613
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.30057,
+            0.16996,
+            0.32123
+          ],
+          "orientation_wxyz": [
+            0.7309,
+            -0.10646,
+            0.67413,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.44463
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.31565,
+            0.17234,
+            0.3302
+          ],
+          "orientation_wxyz": [
+            0.71294,
+            -0.10938,
+            0.69264,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.02797
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.33073,
+            0.17472,
+            0.32182
+          ],
+          "orientation_wxyz": [
+            0.69451,
+            -0.11223,
+            0.71068,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.3887
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.3458,
+            0.1771,
+            0.29608
+          ],
+          "orientation_wxyz": [
+            0.67561,
+            -0.115,
+            0.72824,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.80537
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.36088,
+            0.17948,
+            0.30631
+          ],
+          "orientation_wxyz": [
+            0.65625,
+            -0.1177,
+            0.74531,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.20044
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.37596,
+            0.18186,
+            0.30512
+          ],
+          "orientation_wxyz": [
+            0.63645,
+            -0.12032,
+            0.76188,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.21623
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.39103,
+            0.18424,
+            0.29724
+          ],
+          "orientation_wxyz": [
+            0.61622,
+            -0.12285,
+            0.77793,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.22168
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.40611,
+            0.18662,
+            0.29693
+          ],
+          "orientation_wxyz": [
+            0.59558,
+            -0.12531,
+            0.79347,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.19499
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.42119,
+            0.189,
+            0.29572
+          ],
+          "orientation_wxyz": [
+            0.57453,
+            -0.12767,
+            0.80846,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.04724
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.43626,
+            0.19138,
+            0.29431
+          ],
+          "orientation_wxyz": [
+            0.5531,
+            -0.12996,
+            0.82292,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.06376
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.45134,
+            0.19377,
+            0.29397
+          ],
+          "orientation_wxyz": [
+            0.5313,
+            -0.13215,
+            0.83681,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            -0.03403
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.46642,
+            0.19615,
+            0.29408
+          ],
+          "orientation_wxyz": [
+            0.50914,
+            -0.13426,
+            0.85015,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.00028
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.48149,
+            0.19853,
+            0.29408
+          ],
+          "orientation_wxyz": [
+            0.48663,
+            -0.13627,
+            0.86291,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.00012
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.49657,
+            0.20091,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.4638,
+            -0.1382,
+            0.87509,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            5e-05
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "time_s": 2.5,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.51165,
+            0.20329,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.44066,
+            -0.14003,
+            0.88669,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            2e-05
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "time_s": 2.54167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.52672,
+            0.20567,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.41721,
+            -0.14176,
+            0.89768,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            1e-05
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "time_s": 2.58333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.5418,
+            0.20805,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.39349,
+            -0.1434,
+            0.90807,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "time_s": 2.625,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.55688,
+            0.21043,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.36951,
+            -0.14495,
+            0.91785,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "time_s": 2.66667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.57195,
+            0.21281,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.34527,
+            -0.1464,
+            0.92701,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "time_s": 2.70833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.58703,
+            0.21519,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.3208,
+            -0.14774,
+            0.93555,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "time_s": 2.75,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.60211,
+            0.21758,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.29612,
+            -0.14899,
+            0.94346,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "time_s": 2.79167,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.61718,
+            0.21996,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.27123,
+            -0.15014,
+            0.95073,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "time_s": 2.83333,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.63226,
+            0.22234,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.24617,
+            -0.15119,
+            0.95736,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "time_s": 2.875,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.64734,
+            0.22472,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.22094,
+            -0.15213,
+            0.96335,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "time_s": 2.91667,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.66241,
+            0.2271,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.19555,
+            -0.15298,
+            0.96869,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "time_s": 2.95833,
+      "objects": [
+        {
+          "name": "drop_bounce_sphere",
+          "shape": "sphere",
+          "radius": 0.29409,
+          "size": null,
+          "half_extents": null,
+          "height": null,
+          "depth": null,
+          "cylinder_depth": null,
+          "long_axis": null,
+          "bottom_offset": 0.29409,
+          "bounding_radius": 0.29409,
+          "color": [
+            0.62607,
+            0.26347,
+            0.4521,
+            1.0
+          ],
+          "material": {
+            "profile": "rubber",
+            "roughness": 0.69702,
+            "specular": 0.14041,
+            "metallic": 0.0,
+            "specular_tint": 0.00268,
+            "ior": 1.5736,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "drop_bounce_sphere",
+            "palette_name": null,
+            "color": [
+              0.62607,
+              0.26347,
+              0.4521,
+              1.0
+            ],
+            "material": {
+              "profile": "rubber",
+              "roughness": 0.69702,
+              "specular": 0.14041,
+              "metallic": 0.0,
+              "specular_tint": 0.00268,
+              "ior": 1.5736,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.67749,
+            0.22948,
+            0.29409
+          ],
+          "orientation_wxyz": [
+            0.17004,
+            -0.15372,
+            0.97337,
+            0.0
+          ],
+          "linear_velocity": [
+            0.36184,
+            0.05714,
+            0.0
+          ],
+          "angular_velocity": [
+            -0.1943,
+            1.23038,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_audit": {
+    "expected_contacts": [
+      [
+        "drop_bounce_sphere",
+        "ground"
+      ]
+    ],
+    "expected_airborne_contacts": [],
+    "expected_contacts_passed": true,
+    "collision_log_contacts_passed": true,
+    "visual_contacts_passed": true,
+    "physics_plausibility_passed": true,
+    "physics_plausibility": {
+      "passed": true,
+      "checks": {
+        "finite_motion": {
+          "passed": true,
+          "bad_values": [],
+          "max_speed_mps": 5.37453,
+          "max_abs_position_m": 1.7466
+        },
+        "penetration": {
+          "passed": true,
+          "min_ground_gap_m": -0.00012,
+          "min_pair_gap_m": 999.0,
+          "max_allowed_ground_penetration_m": 0.045,
+          "max_allowed_pair_penetration_m": 0.085,
+          "worst_ground": {
+            "frame": 56,
+            "object": "drop_bounce_sphere",
+            "gap_m": -0.00012
+          },
+          "worst_pair": null
+        },
+        "floating_rebound": {
+          "passed": true,
+          "events": []
+        },
+        "sudden_stop": {
+          "passed": true,
+          "events": []
+        },
+        "bounce_completion": {
+          "passed": true,
+          "first_contact_frame": 12,
+          "upward_velocity_after_contact": true,
+          "max_rebound_above_radius_m": 0.55002,
+          "still_active_at_last_frame": true
+        },
+        "airborne_contacts": {
+          "passed": true,
+          "not_applicable": true
+        },
+        "staggered_drop_timing": {
+          "passed": true,
+          "not_applicable": true
+        },
+        "object_object_contact": {
+          "passed": true,
+          "not_applicable": true
+        }
+      }
+    },
+    "pybullet_solver": {
+      "physics_hz": 240,
+      "fixed_timestep_s": 0.00416667,
+      "solver_iterations": 160,
+      "num_substeps": 1
+    },
+    "collision_summary": {
+      "pairs": [
+        {
+          "pair": [
+            "drop_bounce_sphere",
+            "ground"
+          ],
+          "samples": 218,
+          "first_frame": 12.2,
+          "max_force": 2067.89921
+        }
+      ]
+    }
+  },
+  "camera_framing_audit": {
+    "passed": true,
+    "gate": "establishing_full_scene_window",
+    "object_count": 1,
+    "max_visible_objects": 1,
+    "all_visible_frame_count": 68,
+    "longest_all_visible_run_frames": 68,
+    "min_required_contiguous_frames": 8,
+    "all_visible_frame_examples": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "worst_frame": {
+      "frame": 0,
+      "visible_count": 0,
+      "missing": [
+        "drop_bounce_sphere"
+      ]
+    },
+    "strict_extent_visible": {
+      "max_visible_objects": 1,
+      "all_visible_frame_count": 66,
+      "longest_all_visible_run_frames": 66,
+      "all_visible_frame_examples": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "worst_frame": {
+        "frame": 0,
+        "visible_count": 0,
+        "missing": [
+          "drop_bounce_sphere"
+        ]
+      },
+      "safe_margin": 0.92,
+      "radius_scale": 0.8
+    },
+    "visibility_gate_params": {
+      "safe_margin": 0.96,
+      "radius_scale": 0.2,
+      "min_fraction": 0.08
+    },
+    "projection_model": "approximate pinhole frustum using camera position/look_at/lens; the hard gate requires a continuous full-scene window where every dynamic object center plus a small radius margin is visible, while strict_extent_visible records a more conservative body-extent check"
+  },
+  "orientation_format": "wxyz",
+  "video": "videos/clip_0006_cam_static_view_1002_phys_drop_bounce_0100.mp4",
+  "frames_dir": "frames/clip_0006_cam_static_view_1002_phys_drop_bounce_0100",
+  "source_run_id": "kubric_batch_v2_blocks_pilot_0000",
+  "source_clip_id": "clip_0006_cam_static_view_1002_phys_drop_bounce_0100",
+  "review_sample_run_id": "kubric_batch_v2_blocks_pilot_0000_review_sample"
+}

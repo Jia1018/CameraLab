@@ -27,10 +27,16 @@ In the current bank generator, `scene_id` is explicit. A "same physics" pair mea
 
 ## Environment After Restart
 
-The Blender binary used here is:
+The Blender binary used here is the persistent Blender 3.6.5 unpacked under `/workspace/writeable`:
 
 ```bash
-/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender
+/workspace/writeable/blender-3.6.5-linux-x64/blender
+```
+
+If that directory is missing but the downloaded tarball is still present, unpack it again:
+
+```bash
+tar -xf /workspace/blender-3.6.5-linux-x64.tar.xz -C /workspace/writeable
 ```
 
 On a fresh container, install the small system libraries Blender needs:
@@ -43,14 +49,18 @@ apt-get install -y libsm6 libice6 libxext6 libegl1 libegl-mesa0 libgl1 libxi6 li
 Verify Blender can start:
 
 ```bash
-/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender --background --version
+/workspace/writeable/blender-3.6.5-linux-x64/blender --background --version
 ```
 
 Expected version is Blender `3.6.5`. If `ldd` reports missing libraries, check with:
 
 ```bash
-ldd /workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender | grep 'not found'
+ldd /workspace/writeable/blender-3.6.5-linux-x64/blender | grep 'not found'
 ```
+
+Do not use Blender 5.1.2 with the current Kubric environment. Blender 5.1.2 bundles Python 3.13, while `/workspace/writeable/environments/kubric_official` is Python 3.10; `--python-use-system-env` reaches the package path but NumPy C extensions cannot load across that Python ABI boundary.
+
+The container can expose many CPU IDs even when the cgroup quota and memory are much smaller. In the current environment we observed 124 visible CPUs, about 16 CPU quota, 128GiB memory limit, and no swap. The official renderer therefore defaults to `KUBRIC_BLENDER_THREADS=4`, passing `-t 4` to Blender and setting common numeric-library thread env vars. Override `KUBRIC_BLENDER_THREADS` only when you intentionally want a different render/memory tradeoff; use `0` to let Blender auto-thread.
 
 The Python environments live under `/workspace/writeable/environments/`. The review-bank environment used here is `/workspace/writeable/environments/kubric_review`; it contains `pybullet`, `opencv-python-headless`, `pillow`, `imageio`, and `numpy`. The official Kubric test environment is `/workspace/writeable/environments/kubric_official`. The WHAC environment is `/workspace/writeable/environments/whac/.venv`. Blender-only scripts are run by Blender's bundled Python.
 
@@ -89,8 +99,9 @@ Run the official Kubric Blender renderer smoke test:
 ```bash
 PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python \
 PYTHONPATH=/workspace/writeable/environments/kubric_official/lib/python3.10/site-packages \
-/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender \
+/workspace/writeable/blender-3.6.5-linux-x64/blender \
   --background \
+  -t 4 \
   --python scripts/kubric_official_smoke.py \
   -- \
   --mode render \
@@ -231,8 +242,9 @@ From this repository:
 ```bash
 cd /workspace/writeable/code/camera_motion_disentangle
 
-/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender \
+/workspace/writeable/blender-3.6.5-linux-x64/blender \
   --background \
+  -t 4 \
   --python scripts/generate_blender_bank_pairs.py \
   -- --run-id blender_bank_v3 --clips 72 --pairs 180
 

@@ -21,7 +21,7 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RUN_ROOT = PROJECT_ROOT / "site" / "assets" / "runs"
-DEFAULT_BLENDER = Path("/workspace/writeable/code/WHAC/blender-3.6.5-linux-x64/blender")
+DEFAULT_BLENDER = Path(os.environ.get("KUBRIC_BLENDER_BIN", "/workspace/writeable/blender-3.6.5-linux-x64/blender"))
 
 FPS = 24
 PHYSICS_HZ = 240
