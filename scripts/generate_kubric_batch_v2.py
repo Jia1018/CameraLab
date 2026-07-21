@@ -1105,6 +1105,7 @@ def main() -> None:
     parser.add_argument("--same-camera-fraction", type=float, default=-1.0)
     parser.add_argument("--max-pair-attempts", type=int, default=64)
     parser.add_argument("--progress-watch-interval", type=float, default=60.0)
+    parser.add_argument("--resource-watch-interval", type=float, default=10.0)
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--no-render", action="store_true")
     args = parser.parse_args()
@@ -1139,6 +1140,7 @@ def main() -> None:
     write_progress(run_dir, Path(sys.executable))
     if not args.no_render:
         progress_watcher: subprocess.Popen[bytes] | None = None
+        resource_watcher: subprocess.Popen[bytes] | None = None
         if args.progress_watch_interval > 0:
             progress_watcher = subprocess.Popen(
                 [
@@ -1153,12 +1155,32 @@ def main() -> None:
                     "--until-complete",
                 ]
             )
+        if args.resource_watch_interval > 0:
+            resource_watcher = subprocess.Popen(
+                [
+                    sys.executable,
+                    str(gen.PROJECT_ROOT / "scripts" / "watch_run_resources.py"),
+                    "--run-dir",
+                    str(run_dir),
+                    "--interval",
+                    str(args.resource_watch_interval),
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
         try:
             gen.render_with_blender(args.blender_bin, jobs_path, args.kubric_site_packages)
             write_progress(run_dir, Path(sys.executable))
             gen.encode_videos(jobs_path)
             write_progress(run_dir, Path(sys.executable))
         finally:
+            if resource_watcher is not None and resource_watcher.poll() is None:
+                resource_watcher.terminate()
+                try:
+                    resource_watcher.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    resource_watcher.kill()
+                    resource_watcher.wait()
             if progress_watcher is not None and progress_watcher.poll() is None:
                 progress_watcher.terminate()
                 try:
@@ -1167,6 +1189,16 @@ def main() -> None:
                     progress_watcher.kill()
                     progress_watcher.wait()
             write_progress(run_dir, Path(sys.executable))
+            subprocess.run(
+                [
+                    sys.executable,
+                    str(gen.PROJECT_ROOT / "scripts" / "watch_run_resources.py"),
+                    "--run-dir",
+                    str(run_dir),
+                    "--once",
+                ],
+                check=False,
+            )
     else:
         write_progress(run_dir, Path(sys.executable))
     manifest = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))

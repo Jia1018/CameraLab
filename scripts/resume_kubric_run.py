@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -30,6 +31,43 @@ def log_event(run_dir: Path, message: str) -> None:
     timestamp = datetime.now(timezone.utc).isoformat()
     with (run_dir / "resume_parent.log").open("a", encoding="utf-8") as log_file:
         print(f"{timestamp} {message}", file=log_file, flush=True)
+
+
+def start_resource_watcher(run_dir: Path, interval: float) -> subprocess.Popen[bytes] | None:
+    if interval <= 0:
+        return None
+    return subprocess.Popen(
+        [
+            sys.executable,
+            str(gen.PROJECT_ROOT / "scripts" / "watch_run_resources.py"),
+            "--run-dir",
+            str(run_dir),
+            "--interval",
+            str(interval),
+        ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+
+
+def stop_resource_watcher(run_dir: Path, watcher: subprocess.Popen[bytes] | None) -> None:
+    if watcher is not None and watcher.poll() is None:
+        watcher.terminate()
+        try:
+            watcher.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            watcher.kill()
+            watcher.wait()
+    subprocess.run(
+        [
+            sys.executable,
+            str(gen.PROJECT_ROOT / "scripts" / "watch_run_resources.py"),
+            "--run-dir",
+            str(run_dir),
+            "--once",
+        ],
+        check=False,
+    )
 
 
 def frame_job_complete(job: dict[str, Any], row_by_clip: dict[str, dict[str, Any]]) -> bool:
@@ -135,48 +173,53 @@ def main() -> None:
     parser.add_argument("--blender-bin", type=Path, default=gen.DEFAULT_BLENDER)
     parser.add_argument("--kubric-site-packages", type=Path, default=gen.DEFAULT_KUBRIC_SITE_PACKAGES)
     parser.add_argument("--python-bin", type=Path, default=DEFAULT_PYTHON)
+    parser.add_argument("--resource-watch-interval", type=float, default=10.0)
     parser.add_argument("--skip-render", action="store_true")
     parser.add_argument("--skip-encode", action="store_true")
     args = parser.parse_args()
 
     log_event(args.run_dir, "resume: started")
-    jobs_payload = read_jobs(args.run_dir)
-    progress = write_progress(args.run_dir, args.python_bin)
-    log_event(
-        args.run_dir,
-        f"resume: initial phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
-        f"videos={progress['videos_complete']}/{progress['jobs_total']}",
-    )
-    rows = {row["clip_id"]: row for row in progress["jobs"]}
-    if not args.skip_render:
-        render_missing(
-            run_dir=args.run_dir,
-            blender_bin=args.blender_bin,
-            kubric_site_packages=args.kubric_site_packages,
-            jobs_payload=jobs_payload,
-            rows=rows,
-        )
+    resource_watcher = start_resource_watcher(args.run_dir, args.resource_watch_interval)
+    try:
+        jobs_payload = read_jobs(args.run_dir)
         progress = write_progress(args.run_dir, args.python_bin)
         log_event(
             args.run_dir,
-            f"resume: after render phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+            f"resume: initial phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
             f"videos={progress['videos_complete']}/{progress['jobs_total']}",
         )
         rows = {row["clip_id"]: row for row in progress["jobs"]}
-    if not args.skip_encode:
-        encode_missing(args.run_dir, jobs_payload, rows)
-        progress = write_progress(args.run_dir, args.python_bin)
-        log_event(
-            args.run_dir,
-            f"resume: after encode phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
-            f"videos={progress['videos_complete']}/{progress['jobs_total']}",
+        if not args.skip_render:
+            render_missing(
+                run_dir=args.run_dir,
+                blender_bin=args.blender_bin,
+                kubric_site_packages=args.kubric_site_packages,
+                jobs_payload=jobs_payload,
+                rows=rows,
+            )
+            progress = write_progress(args.run_dir, args.python_bin)
+            log_event(
+                args.run_dir,
+                f"resume: after render phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+                f"videos={progress['videos_complete']}/{progress['jobs_total']}",
+            )
+            rows = {row["clip_id"]: row for row in progress["jobs"]}
+        if not args.skip_encode:
+            encode_missing(args.run_dir, jobs_payload, rows)
+            progress = write_progress(args.run_dir, args.python_bin)
+            log_event(
+                args.run_dir,
+                f"resume: after encode phase={progress['phase']} frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+                f"videos={progress['videos_complete']}/{progress['jobs_total']}",
+            )
+        log_event(args.run_dir, "resume: finished")
+        print(
+            f"resume status: {progress['phase']} "
+            f"frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+            f"videos={progress['videos_complete']}/{progress['jobs_total']}"
         )
-    log_event(args.run_dir, "resume: finished")
-    print(
-        f"resume status: {progress['phase']} "
-        f"frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
-        f"videos={progress['videos_complete']}/{progress['jobs_total']}"
-    )
+    finally:
+        stop_resource_watcher(args.run_dir, resource_watcher)
 
 
 if __name__ == "__main__":

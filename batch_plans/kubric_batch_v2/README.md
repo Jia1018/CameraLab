@@ -6,34 +6,32 @@ future review sessions.
 
 ## Current Status
 
-As of 2026-07-12, the first real production pilot batch is complete:
-`kubric_batch_v2_pilot_0001` contains 100 pair groups / 200 clips, 640x480,
-variable pair lengths, official Kubric/PyBullet/Blender rendering, and resumable
+As of 2026-07-21, the shared-factor block pilot is complete and reviewed:
+`kubric_batch_v2_blocks_pilot_0000` contains 50 blocks / 200 clips, 640x480,
+variable group lengths, official Kubric/PyBullet/Blender rendering, and resumable
 progress tracking under `/workspace/writeable/datasets/camera_motion_disentangle`.
-A compact website review subset, `kubric_batch_v2_pilot_0001_review_sample`,
-exports 24 pair groups / 48 clips and covers all 9 camera families and all 21
-physics families. Human review found the diversity acceptable.
+A compact website review subset, `kubric_batch_v2_blocks_pilot_0000_review_sample`,
+exports 16 blocks / 64 clips and covers all 9 camera families and all 21 physics
+families. Human review found the diversity acceptable.
 
-The next implementation phase upgrades the sampler from only two-clip pairs to
-small shared-factor blocks. In block mode, a same-camera group can contain one
-camera trajectory with multiple different physics programs, and a same-physics
-group can contain one physical simulation with multiple different camera
-trajectories. The no-render block audit `kubric_shared_block_fullpool_audit_v0`
-passed with 24 blocks / 96 clips, all 9 camera families, all 21 physics
-families, 12 same-camera blocks, 12 same-physics blocks, block size 4, variable
-durations from 2.96s to 6.96s, and zero framing/physics/contact failures. The
-1k-5k group training-scale batch has not started yet.
+The first formal production shard is `kubric_batch_v2_blocks_shard_0000`. Its
+metadata/audit stage completed with 200 shared-factor blocks / 800 clips, all 9
+camera families, all 21 physics families, 100 same-camera blocks, 100
+same-physics blocks, block size 4, and variable durations from 2.96s to 6.96s.
+It is the first non-review shard to render from the accepted batch-v2 baseline.
+The accepted run lives outside git under
+`/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v2_blocks_shard_0000`.
+Only later compact review samples should be copied into `site/` and `docs/`.
 
-The latest pre-production reviews expand object motion coverage to 2/3/4 dynamic
-object templates, keep explicit static/baseline/brisk camera speed bands, change
-the capsule shape check from an upright prop to a horizontal floor capsule, and
-separately audit dynamic cylinder/capsule behavior. After the mixed-drop review,
+The current generator expands object motion coverage to 2/3/4 dynamic object
+templates, keeps explicit static/baseline/brisk camera speed bands, uses
+horizontal floor-contact capsule examples rather than upright capsule props, and
+separately audits dynamic cylinder/capsule behavior. After the mixed-drop review,
 the batch sampler rejects clips unless the camera has a continuous establishing
 window where all dynamic objects are visible together. Mixed-drop cases are also
 stratified into optional-contact, required-contact, and forbidden-contact
 families, so the dataset contains both collision and non-collision falling-object
-examples by construction. The next rendered pilot should use shared-factor block
-sampling before scaling to the first 1k-5k group training batch.
+examples by construction.
 
 ## Goal
 
@@ -473,3 +471,15 @@ and records stricter body-extent visibility diagnostics in each clip metadata. T
 audit, `kubric_shared_block_fullpool_audit_v0`, covered 24 blocks / 96 clips with all 9
 camera families and all 21 physics families, 12 same-camera blocks, 12
 same-physics blocks, block size 4, and zero framing/physics/contact failures.
+
+## Operational Notes
+
+Use Blender 3.6.5 with the Python 3.10 Kubric environment. Blender 5.x bundles a
+newer Python and is not the target runtime for the current scripts.
+
+Long renders should use the generated `progress.json`, `resume_parent.log`,
+`render.log`, and `resource_usage.jsonl` files. `progress.json` records frame and
+video completion for resume; `resource_usage.jsonl` records cgroup memory,
+selected Blender/ffmpeg process RSS, memory events, disk usage, and the latest
+progress snapshot every few seconds during render/resume. This is intended to
+separate true OOM from external container recycle or parent-process interruption.
