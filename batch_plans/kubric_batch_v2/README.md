@@ -478,8 +478,14 @@ Use Blender 3.6.5 with the Python 3.10 Kubric environment. Blender 5.x bundles a
 newer Python and is not the target runtime for the current scripts.
 
 Long renders should use the generated `progress.json`, `resume_parent.log`,
-`render.log`, and `resource_usage.jsonl` files. `progress.json` records frame and
-video completion for resume; `resource_usage.jsonl` records cgroup memory,
-selected Blender/ffmpeg process RSS, memory events, disk usage, and the latest
-progress snapshot every few seconds during render/resume. This is intended to
-separate true OOM from external container recycle or parent-process interruption.
+`render.log` or `resume_render.log`, and `resource_usage.jsonl` files.
+`progress.json` records frame and video completion for resume; `resource_usage.jsonl`
+records cgroup memory, selected Blender/ffmpeg process RSS, memory events, disk
+usage, and the latest progress snapshot every few seconds during render/resume.
+This is intended to separate true OOM from external container recycle or
+parent-process interruption.
+
+For unattended review export, run `scripts/finalize_kubric_review_sample.py` in a
+background session. It waits until a source batch is complete, exports a compact
+coverage-oriented sample into `site/assets/runs`, generates preview sheets, and
+syncs `site/` to `docs/`. It intentionally does not commit automatically.
