@@ -33,6 +33,26 @@ def log_event(run_dir: Path, message: str) -> None:
         print(f"{timestamp} {message}", file=log_file, flush=True)
 
 
+def start_progress_watcher(run_dir: Path, python_bin: Path, interval: float) -> subprocess.Popen[bytes] | None:
+    if interval <= 0:
+        return None
+    return subprocess.Popen(
+        [
+            sys.executable,
+            str(gen.PROJECT_ROOT / "scripts" / "update_kubric_progress.py"),
+            "--run-dir",
+            str(run_dir),
+            "--python-bin",
+            str(python_bin),
+            "--watch",
+            str(interval),
+            "--until-complete",
+        ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+
+
 def start_resource_watcher(run_dir: Path, interval: float) -> subprocess.Popen[bytes] | None:
     if interval <= 0:
         return None
@@ -50,7 +70,7 @@ def start_resource_watcher(run_dir: Path, interval: float) -> subprocess.Popen[b
     )
 
 
-def stop_resource_watcher(run_dir: Path, watcher: subprocess.Popen[bytes] | None) -> None:
+def stop_watcher(watcher: subprocess.Popen[bytes] | None) -> None:
     if watcher is not None and watcher.poll() is None:
         watcher.terminate()
         try:
@@ -58,6 +78,10 @@ def stop_resource_watcher(run_dir: Path, watcher: subprocess.Popen[bytes] | None
         except subprocess.TimeoutExpired:
             watcher.kill()
             watcher.wait()
+
+
+def stop_resource_watcher(run_dir: Path, watcher: subprocess.Popen[bytes] | None) -> None:
+    stop_watcher(watcher)
     subprocess.run(
         [
             sys.executable,
@@ -173,12 +197,14 @@ def main() -> None:
     parser.add_argument("--blender-bin", type=Path, default=gen.DEFAULT_BLENDER)
     parser.add_argument("--kubric-site-packages", type=Path, default=gen.DEFAULT_KUBRIC_SITE_PACKAGES)
     parser.add_argument("--python-bin", type=Path, default=DEFAULT_PYTHON)
+    parser.add_argument("--progress-watch-interval", type=float, default=60.0)
     parser.add_argument("--resource-watch-interval", type=float, default=10.0)
     parser.add_argument("--skip-render", action="store_true")
     parser.add_argument("--skip-encode", action="store_true")
     args = parser.parse_args()
 
     log_event(args.run_dir, "resume: started")
+    progress_watcher = start_progress_watcher(args.run_dir, args.python_bin, args.progress_watch_interval)
     resource_watcher = start_resource_watcher(args.run_dir, args.resource_watch_interval)
     try:
         jobs_payload = read_jobs(args.run_dir)
@@ -220,6 +246,8 @@ def main() -> None:
         )
     finally:
         stop_resource_watcher(args.run_dir, resource_watcher)
+        stop_watcher(progress_watcher)
+        write_progress(args.run_dir, args.python_bin)
 
 
 if __name__ == "__main__":
