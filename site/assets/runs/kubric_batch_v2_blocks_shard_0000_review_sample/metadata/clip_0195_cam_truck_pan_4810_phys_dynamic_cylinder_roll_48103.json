@@ -1,0 +1,8216 @@
+{
+  "clip_id": "clip_0195_cam_truck_pan_4810_phys_dynamic_cylinder_roll_48103",
+  "pair_group_id": "block_0048_same_camera",
+  "pair_kind": "same_camera",
+  "camera_id": "cam_truck_pan_4810",
+  "camera_family": "truck_pan",
+  "physics_id": "phys_dynamic_cylinder_roll_48103",
+  "physics_family": "phys_dynamic_cylinder_roll",
+  "scene_id": "scene_neutral_tall_panel",
+  "fps": 24,
+  "frames_count": 72,
+  "duration_s": 2.95833,
+  "resolution": [
+    640,
+    480
+  ],
+  "generator": "official_kubric_batch_v2_pair_sampler",
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "camera_spec": {
+    "id": "cam_truck_pan_4810",
+    "family_id": "truck_pan",
+    "primitives": [
+      "truck",
+      "counter_pan",
+      "off_center_start"
+    ],
+    "speed_class": "fast",
+    "path_model": "linear",
+    "start_position": [
+      2.3796,
+      -4.2873,
+      1.42907
+    ],
+    "start_target": [
+      0.14974,
+      0.0,
+      0.3234
+    ],
+    "position_delta": [
+      -2.30237,
+      0.10332,
+      0.0
+    ],
+    "target_delta": [
+      -0.24196,
+      -0.00415,
+      0.0
+    ],
+    "average_linear_velocity_mps": [
+      -0.77827,
+      0.03492,
+      0.0
+    ],
+    "roll_start_deg": 0.11158,
+    "roll_delta_deg": 1.4534,
+    "roll_velocity_deg_s_avg": 0.49129,
+    "lens_mm": 33.72585,
+    "lens_delta_mm": -0.31854,
+    "lens_velocity_mm_s_avg": -0.10768,
+    "speed_curve": {
+      "type": "ease_in_out"
+    },
+    "motion_distribution": "camera endpoints and average speeds are clipped Gaussian samples; per-frame motion follows the stored speed_curve, so most moving trajectories have within-clip speed variation",
+    "speed_sampling_band": "brisk",
+    "speed_multiplier": 1.26334,
+    "speed_sampling_note": "brisk samples are capped around 1.5x the baseline camera-motion scale"
+  },
+  "physics_spec": {
+    "id": "phys_dynamic_cylinder_roll_48103",
+    "kind": "dynamic_cylinder_ground_motion",
+    "speed_class": "medium",
+    "description": "A horizontal procedural cylinder rolls and slides across the floor under PyBullet dynamics.",
+    "sample_model": "cylinder radius/depth, mass, velocity, angular velocity, friction, restitution, color, and material profile are clipped Gaussian samples.",
+    "expected_contacts": [
+      [
+        "rolling_cylinder",
+        "ground"
+      ]
+    ],
+    "bodies": [
+      {
+        "name": "rolling_cylinder",
+        "shape": "cylinder",
+        "asset_kind": "procedural_mesh",
+        "radius": 0.17788,
+        "height": 0.46889,
+        "depth": 0.46889,
+        "long_axis": "y",
+        "half_extents": [
+          0.17788,
+          0.23444,
+          0.17788
+        ],
+        "size": [
+          0.35576,
+          0.46888,
+          0.35576
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "position": [
+          -0.95,
+          -0.26,
+          0.17788
+        ],
+        "velocity": [
+          1.21022,
+          0.18,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          -4.17671,
+          0.12
+        ],
+        "mass": 1.12293,
+        "restitution": 0.42413,
+        "friction": 0.30816,
+        "static": false,
+        "color": [
+          0.36592,
+          0.69361,
+          0.25806,
+          1.0
+        ],
+        "material": {
+          "profile": "satin",
+          "roughness": 0.45916,
+          "specular": 0.32337,
+          "metallic": 0.0,
+          "specular_tint": 0.00346,
+          "ior": 1.35878,
+          "transmission": 0.0,
+          "transmission_roughness": 0.0
+        },
+        "appearance": {
+          "color_source": "sampled_hsv",
+          "role": "rolling_cylinder",
+          "palette_name": null,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          }
+        },
+        "bottom_offset": 0.17788,
+        "bounding_radius": 0.29429,
+        "role": "dynamic"
+      }
+    ],
+    "family_id": "phys_dynamic_cylinder_roll",
+    "base_id": "phys_dynamic_cylinder_roll",
+    "sample_seed": 94452392
+  },
+  "scene_spec": {
+    "id": "scene_neutral_tall_panel",
+    "ground_color": [
+      0.62,
+      0.61,
+      0.65,
+      1.0
+    ],
+    "back_wall_color": [
+      0.74,
+      0.72,
+      0.78,
+      1.0
+    ],
+    "side_wall_color": [
+      0.67,
+      0.66,
+      0.72,
+      1.0
+    ],
+    "wall_height": 2.75,
+    "wall_style": "wall_panels",
+    "floor_style": "plain",
+    "static_props": [
+      {
+        "name": "far_side_reference_block",
+        "shape": "box",
+        "half_extents": [
+          0.22,
+          0.2,
+          0.14
+        ],
+        "position": [
+          3.25,
+          2.05,
+          0.14
+        ],
+        "color": [
+          0.4,
+          0.42,
+          0.48,
+          1.0
+        ],
+        "collider": true
+      }
+    ],
+    "selection_note": "shared by both clips in a pair; varied across pairs"
+  },
+  "camera_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "progress": 0.0,
+      "position": [
+        2.3796,
+        -4.2873,
+        1.42907
+      ],
+      "look_at": [
+        0.14974,
+        0.0,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7598,
+        0.6053,
+        0.14863,
+        0.18499
+      ],
+      "roll_deg": 0.11158,
+      "lens_mm": 33.72585
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "progress": 0.00059,
+      "position": [
+        2.37824,
+        -4.28724,
+        1.42907
+      ],
+      "look_at": [
+        0.1496,
+        -0.0,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.75983,
+        0.60531,
+        0.14856,
+        0.18491
+      ],
+      "roll_deg": 0.11244,
+      "lens_mm": 33.72566
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "progress": 0.00234,
+      "position": [
+        2.37422,
+        -4.28706,
+        1.42907
+      ],
+      "look_at": [
+        0.14917,
+        -1e-05,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.75992,
+        0.60532,
+        0.14837,
+        0.18465
+      ],
+      "roll_deg": 0.11497,
+      "lens_mm": 33.72511
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "progress": 0.00521,
+      "position": [
+        2.36762,
+        -4.28676,
+        1.42907
+      ],
+      "look_at": [
+        0.14848,
+        -2e-05,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76006,
+        0.60534,
+        0.14806,
+        0.18423
+      ],
+      "roll_deg": 0.11915,
+      "lens_mm": 33.72419
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "progress": 0.00916,
+      "position": [
+        2.3585,
+        -4.28635,
+        1.42907
+      ],
+      "look_at": [
+        0.14752,
+        -4e-05,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76026,
+        0.60537,
+        0.14763,
+        0.18365
+      ],
+      "roll_deg": 0.1249,
+      "lens_mm": 33.72293
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "progress": 0.01418,
+      "position": [
+        2.34695,
+        -4.28583,
+        1.42907
+      ],
+      "look_at": [
+        0.14631,
+        -6e-05,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76052,
+        0.60541,
+        0.14709,
+        0.18292
+      ],
+      "roll_deg": 0.13219,
+      "lens_mm": 33.72133
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "progress": 0.02022,
+      "position": [
+        2.33305,
+        -4.28521,
+        1.42907
+      ],
+      "look_at": [
+        0.14485,
+        -8e-05,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76082,
+        0.60546,
+        0.14643,
+        0.18203
+      ],
+      "roll_deg": 0.14096,
+      "lens_mm": 33.71941
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "progress": 0.02724,
+      "position": [
+        2.31687,
+        -4.28449,
+        1.42907
+      ],
+      "look_at": [
+        0.14315,
+        -0.00011,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76117,
+        0.60551,
+        0.14566,
+        0.18099
+      ],
+      "roll_deg": 0.15118,
+      "lens_mm": 33.71717
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "progress": 0.03523,
+      "position": [
+        2.2985,
+        -4.28366,
+        1.42907
+      ],
+      "look_at": [
+        0.14122,
+        -0.00015,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76157,
+        0.60557,
+        0.14479,
+        0.1798
+      ],
+      "roll_deg": 0.16278,
+      "lens_mm": 33.71463
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "progress": 0.04413,
+      "position": [
+        2.27799,
+        -4.28274,
+        1.42907
+      ],
+      "look_at": [
+        0.13906,
+        -0.00018,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76202,
+        0.60564,
+        0.14381,
+        0.17848
+      ],
+      "roll_deg": 0.17572,
+      "lens_mm": 33.71179
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "progress": 0.05392,
+      "position": [
+        2.25545,
+        -4.28173,
+        1.42907
+      ],
+      "look_at": [
+        0.13669,
+        -0.00022,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7625,
+        0.60571,
+        0.14273,
+        0.17701
+      ],
+      "roll_deg": 0.18995,
+      "lens_mm": 33.70867
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "progress": 0.06457,
+      "position": [
+        2.23093,
+        -4.28063,
+        1.42907
+      ],
+      "look_at": [
+        0.13412,
+        -0.00027,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76303,
+        0.60579,
+        0.14155,
+        0.17541
+      ],
+      "roll_deg": 0.20543,
+      "lens_mm": 33.70528
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "progress": 0.07604,
+      "position": [
+        2.20452,
+        -4.27944,
+        1.42907
+      ],
+      "look_at": [
+        0.13134,
+        -0.00032,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7636,
+        0.60587,
+        0.14028,
+        0.17368
+      ],
+      "roll_deg": 0.2221,
+      "lens_mm": 33.70163
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "progress": 0.0883,
+      "position": [
+        2.1763,
+        -4.27818,
+        1.42907
+      ],
+      "look_at": [
+        0.12838,
+        -0.00037,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7642,
+        0.60596,
+        0.1389,
+        0.17181
+      ],
+      "roll_deg": 0.23991,
+      "lens_mm": 33.69772
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "progress": 0.10131,
+      "position": [
+        2.14635,
+        -4.27683,
+        1.42907
+      ],
+      "look_at": [
+        0.12523,
+        -0.00042,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76483,
+        0.60605,
+        0.13744,
+        0.16982
+      ],
+      "roll_deg": 0.25882,
+      "lens_mm": 33.69358
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "progress": 0.11504,
+      "position": [
+        2.11473,
+        -4.27541,
+        1.42907
+      ],
+      "look_at": [
+        0.1219,
+        -0.00048,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7655,
+        0.60615,
+        0.13589,
+        0.16771
+      ],
+      "roll_deg": 0.27878,
+      "lens_mm": 33.6892
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "progress": 0.12946,
+      "position": [
+        2.08153,
+        -4.27392,
+        1.42907
+      ],
+      "look_at": [
+        0.11842,
+        -0.00054,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7662,
+        0.60625,
+        0.13425,
+        0.16547
+      ],
+      "roll_deg": 0.29974,
+      "lens_mm": 33.68461
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "progress": 0.14454,
+      "position": [
+        2.04682,
+        -4.27237,
+        1.42907
+      ],
+      "look_at": [
+        0.11477,
+        -0.0006,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76692,
+        0.60636,
+        0.13253,
+        0.16312
+      ],
+      "roll_deg": 0.32165,
+      "lens_mm": 33.67981
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "progress": 0.16023,
+      "position": [
+        2.01069,
+        -4.27075,
+        1.42907
+      ],
+      "look_at": [
+        0.11097,
+        -0.00066,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76766,
+        0.60646,
+        0.13072,
+        0.16065
+      ],
+      "roll_deg": 0.34446,
+      "lens_mm": 33.67481
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "progress": 0.17651,
+      "position": [
+        1.97321,
+        -4.26906,
+        1.42907
+      ],
+      "look_at": [
+        0.10703,
+        -0.00073,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76843,
+        0.60658,
+        0.12884,
+        0.15807
+      ],
+      "roll_deg": 0.36812,
+      "lens_mm": 33.66962
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "progress": 0.19334,
+      "position": [
+        1.93445,
+        -4.26732,
+        1.42907
+      ],
+      "look_at": [
+        0.10296,
+        -0.0008,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.76921,
+        0.60669,
+        0.12688,
+        0.15538
+      ],
+      "roll_deg": 0.39259,
+      "lens_mm": 33.66426
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "progress": 0.2107,
+      "position": [
+        1.8945,
+        -4.26553,
+        1.42907
+      ],
+      "look_at": [
+        0.09876,
+        -0.00087,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77001,
+        0.6068,
+        0.12485,
+        0.15258
+      ],
+      "roll_deg": 0.41781,
+      "lens_mm": 33.65873
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "progress": 0.22854,
+      "position": [
+        1.85342,
+        -4.26369,
+        1.42907
+      ],
+      "look_at": [
+        0.09444,
+        -0.00095,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77083,
+        0.60692,
+        0.12274,
+        0.14969
+      ],
+      "roll_deg": 0.44374,
+      "lens_mm": 33.65305
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "progress": 0.24683,
+      "position": [
+        1.81131,
+        -4.2618,
+        1.42907
+      ],
+      "look_at": [
+        0.09002,
+        -0.00102,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77165,
+        0.60704,
+        0.12057,
+        0.1467
+      ],
+      "roll_deg": 0.47032,
+      "lens_mm": 33.64722
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "progress": 0.26554,
+      "position": [
+        1.76823,
+        -4.25986,
+        1.42907
+      ],
+      "look_at": [
+        0.08549,
+        -0.0011,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77248,
+        0.60716,
+        0.11834,
+        0.14361
+      ],
+      "roll_deg": 0.49752,
+      "lens_mm": 33.64126
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "progress": 0.28464,
+      "position": [
+        1.72426,
+        -4.25789,
+        1.42907
+      ],
+      "look_at": [
+        0.08087,
+        -0.00118,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77332,
+        0.60728,
+        0.11604,
+        0.14043
+      ],
+      "roll_deg": 0.52527,
+      "lens_mm": 33.63518
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "progress": 0.30409,
+      "position": [
+        1.67948,
+        -4.25588,
+        1.42907
+      ],
+      "look_at": [
+        0.07616,
+        -0.00126,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77417,
+        0.6074,
+        0.11368,
+        0.13717
+      ],
+      "roll_deg": 0.55354,
+      "lens_mm": 33.62899
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "progress": 0.32385,
+      "position": [
+        1.63397,
+        -4.25384,
+        1.42907
+      ],
+      "look_at": [
+        0.07138,
+        -0.00134,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77501,
+        0.60751,
+        0.11127,
+        0.13382
+      ],
+      "roll_deg": 0.58227,
+      "lens_mm": 33.62269
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "progress": 0.34391,
+      "position": [
+        1.5878,
+        -4.25177,
+        1.42907
+      ],
+      "look_at": [
+        0.06653,
+        -0.00143,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77585,
+        0.60763,
+        0.10881,
+        0.1304
+      ],
+      "roll_deg": 0.61141,
+      "lens_mm": 33.6163
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "progress": 0.36421,
+      "position": [
+        1.54105,
+        -4.24967,
+        1.42907
+      ],
+      "look_at": [
+        0.06162,
+        -0.00151,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77668,
+        0.60775,
+        0.1063,
+        0.12691
+      ],
+      "roll_deg": 0.64092,
+      "lens_mm": 33.60983
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "progress": 0.38473,
+      "position": [
+        1.4938,
+        -4.24755,
+        1.42907
+      ],
+      "look_at": [
+        0.05665,
+        -0.0016,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77751,
+        0.60786,
+        0.10374,
+        0.12335
+      ],
+      "roll_deg": 0.67075,
+      "lens_mm": 33.6033
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "progress": 0.40544,
+      "position": [
+        1.44613,
+        -4.24541,
+        1.42907
+      ],
+      "look_at": [
+        0.05164,
+        -0.00168,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77833,
+        0.60798,
+        0.10115,
+        0.11973
+      ],
+      "roll_deg": 0.70084,
+      "lens_mm": 33.5967
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "progress": 0.4263,
+      "position": [
+        1.39811,
+        -4.24326,
+        1.42907
+      ],
+      "look_at": [
+        0.04659,
+        -0.00177,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77914,
+        0.60809,
+        0.09852,
+        0.11605
+      ],
+      "roll_deg": 0.73116,
+      "lens_mm": 33.59006
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "progress": 0.44727,
+      "position": [
+        1.34982,
+        -4.24109,
+        1.42907
+      ],
+      "look_at": [
+        0.04152,
+        -0.00186,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.77993,
+        0.60819,
+        0.09585,
+        0.11232
+      ],
+      "roll_deg": 0.76164,
+      "lens_mm": 33.58338
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "progress": 0.46833,
+      "position": [
+        1.30133,
+        -4.23891,
+        1.42907
+      ],
+      "look_at": [
+        0.03642,
+        -0.00194,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78071,
+        0.6083,
+        0.09316,
+        0.10854
+      ],
+      "roll_deg": 0.79225,
+      "lens_mm": 33.57667
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "progress": 0.48944,
+      "position": [
+        1.25273,
+        -4.23673,
+        1.42907
+      ],
+      "look_at": [
+        0.03132,
+        -0.00203,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78147,
+        0.6084,
+        0.09045,
+        0.10473
+      ],
+      "roll_deg": 0.82293,
+      "lens_mm": 33.56994
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "progress": 0.51056,
+      "position": [
+        1.2041,
+        -4.23455,
+        1.42907
+      ],
+      "look_at": [
+        0.0262,
+        -0.00212,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78221,
+        0.6085,
+        0.08772,
+        0.10089
+      ],
+      "roll_deg": 0.85363,
+      "lens_mm": 33.56322
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "progress": 0.53167,
+      "position": [
+        1.1555,
+        -4.23237,
+        1.42907
+      ],
+      "look_at": [
+        0.0211,
+        -0.00221,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78293,
+        0.6086,
+        0.08497,
+        0.09702
+      ],
+      "roll_deg": 0.88431,
+      "lens_mm": 33.55649
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "progress": 0.55273,
+      "position": [
+        1.10701,
+        -4.23019,
+        1.42907
+      ],
+      "look_at": [
+        0.016,
+        -0.00229,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78362,
+        0.60869,
+        0.08221,
+        0.09313
+      ],
+      "roll_deg": 0.91492,
+      "lens_mm": 33.54978
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "progress": 0.5737,
+      "position": [
+        1.05872,
+        -4.22802,
+        1.42907
+      ],
+      "look_at": [
+        0.01093,
+        -0.00238,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78429,
+        0.60878,
+        0.07945,
+        0.08923
+      ],
+      "roll_deg": 0.9454,
+      "lens_mm": 33.5431
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "progress": 0.59456,
+      "position": [
+        1.0107,
+        -4.22587,
+        1.42907
+      ],
+      "look_at": [
+        0.00588,
+        -0.00247,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78494,
+        0.60886,
+        0.07669,
+        0.08532
+      ],
+      "roll_deg": 0.97572,
+      "lens_mm": 33.53646
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "progress": 0.61527,
+      "position": [
+        0.96303,
+        -4.22373,
+        1.42907
+      ],
+      "look_at": [
+        0.00087,
+        -0.00255,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78555,
+        0.60894,
+        0.07394,
+        0.08142
+      ],
+      "roll_deg": 1.00581,
+      "lens_mm": 33.52986
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "progress": 0.63579,
+      "position": [
+        0.91578,
+        -4.22161,
+        1.42907
+      ],
+      "look_at": [
+        -0.0041,
+        -0.00264,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78614,
+        0.60902,
+        0.0712,
+        0.07753
+      ],
+      "roll_deg": 1.03564,
+      "lens_mm": 33.52333
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "progress": 0.65609,
+      "position": [
+        0.86903,
+        -4.21951,
+        1.42907
+      ],
+      "look_at": [
+        -0.00901,
+        -0.00272,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7867,
+        0.60909,
+        0.06847,
+        0.07365
+      ],
+      "roll_deg": 1.06515,
+      "lens_mm": 33.51686
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "progress": 0.67615,
+      "position": [
+        0.82286,
+        -4.21744,
+        1.42907
+      ],
+      "look_at": [
+        -0.01386,
+        -0.00281,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78723,
+        0.60916,
+        0.06576,
+        0.0698
+      ],
+      "roll_deg": 1.09429,
+      "lens_mm": 33.51047
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "progress": 0.69591,
+      "position": [
+        0.77735,
+        -4.2154,
+        1.42907
+      ],
+      "look_at": [
+        -0.01864,
+        -0.00289,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78773,
+        0.60922,
+        0.06308,
+        0.06599
+      ],
+      "roll_deg": 1.12302,
+      "lens_mm": 33.50417
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "progress": 0.71536,
+      "position": [
+        0.73257,
+        -4.21339,
+        1.42907
+      ],
+      "look_at": [
+        -0.02335,
+        -0.00297,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7882,
+        0.60928,
+        0.06044,
+        0.06222
+      ],
+      "roll_deg": 1.15129,
+      "lens_mm": 33.49798
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "progress": 0.73446,
+      "position": [
+        0.6886,
+        -4.21142,
+        1.42907
+      ],
+      "look_at": [
+        -0.02797,
+        -0.00305,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78863,
+        0.60934,
+        0.05783,
+        0.0585
+      ],
+      "roll_deg": 1.17904,
+      "lens_mm": 33.4919
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "progress": 0.75317,
+      "position": [
+        0.64552,
+        -4.20948,
+        1.42907
+      ],
+      "look_at": [
+        -0.0325,
+        -0.00313,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78904,
+        0.60939,
+        0.05526,
+        0.05483
+      ],
+      "roll_deg": 1.20624,
+      "lens_mm": 33.48594
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "progress": 0.77146,
+      "position": [
+        0.60341,
+        -4.20759,
+        1.42907
+      ],
+      "look_at": [
+        -0.03692,
+        -0.0032,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78942,
+        0.60943,
+        0.05274,
+        0.05123
+      ],
+      "roll_deg": 1.23282,
+      "lens_mm": 33.48011
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "progress": 0.7893,
+      "position": [
+        0.56233,
+        -4.20575,
+        1.42907
+      ],
+      "look_at": [
+        -0.04124,
+        -0.00328,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.78977,
+        0.60948,
+        0.05028,
+        0.04771
+      ],
+      "roll_deg": 1.25875,
+      "lens_mm": 33.47443
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "progress": 0.80666,
+      "position": [
+        0.52238,
+        -4.20396,
+        1.42907
+      ],
+      "look_at": [
+        -0.04544,
+        -0.00335,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79009,
+        0.60951,
+        0.04788,
+        0.04427
+      ],
+      "roll_deg": 1.28397,
+      "lens_mm": 33.4689
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "progress": 0.82349,
+      "position": [
+        0.48362,
+        -4.20222,
+        1.42907
+      ],
+      "look_at": [
+        -0.04951,
+        -0.00342,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79038,
+        0.60955,
+        0.04554,
+        0.04092
+      ],
+      "roll_deg": 1.30844,
+      "lens_mm": 33.46354
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "progress": 0.83977,
+      "position": [
+        0.44614,
+        -4.20053,
+        1.42907
+      ],
+      "look_at": [
+        -0.05345,
+        -0.00349,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79065,
+        0.60958,
+        0.04327,
+        0.03767
+      ],
+      "roll_deg": 1.3321,
+      "lens_mm": 33.45835
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "progress": 0.85546,
+      "position": [
+        0.41001,
+        -4.19891,
+        1.42907
+      ],
+      "look_at": [
+        -0.05725,
+        -0.00355,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79088,
+        0.60961,
+        0.04108,
+        0.03453
+      ],
+      "roll_deg": 1.35491,
+      "lens_mm": 33.45335
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "progress": 0.87054,
+      "position": [
+        0.3753,
+        -4.19736,
+        1.42907
+      ],
+      "look_at": [
+        -0.0609,
+        -0.00361,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7911,
+        0.60963,
+        0.03897,
+        0.03151
+      ],
+      "roll_deg": 1.37682,
+      "lens_mm": 33.44855
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "progress": 0.88496,
+      "position": [
+        0.3421,
+        -4.19587,
+        1.42907
+      ],
+      "look_at": [
+        -0.06438,
+        -0.00367,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79129,
+        0.60966,
+        0.03695,
+        0.0286
+      ],
+      "roll_deg": 1.39778,
+      "lens_mm": 33.44396
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "progress": 0.89869,
+      "position": [
+        0.31048,
+        -4.19445,
+        1.42907
+      ],
+      "look_at": [
+        -0.06771,
+        -0.00373,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79146,
+        0.60967,
+        0.03502,
+        0.02583
+      ],
+      "roll_deg": 1.41774,
+      "lens_mm": 33.43958
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "progress": 0.9117,
+      "position": [
+        0.28053,
+        -4.1931,
+        1.42907
+      ],
+      "look_at": [
+        -0.07086,
+        -0.00378,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7916,
+        0.60969,
+        0.03319,
+        0.0232
+      ],
+      "roll_deg": 1.43665,
+      "lens_mm": 33.43544
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "progress": 0.92396,
+      "position": [
+        0.25231,
+        -4.19184,
+        1.42907
+      ],
+      "look_at": [
+        -0.07382,
+        -0.00383,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79173,
+        0.6097,
+        0.03146,
+        0.02072
+      ],
+      "roll_deg": 1.45446,
+      "lens_mm": 33.43153
+    },
+    {
+      "frame": 60,
+      "time_s": 2.5,
+      "progress": 0.93543,
+      "position": [
+        0.2259,
+        -4.19065,
+        1.42907
+      ],
+      "look_at": [
+        -0.0766,
+        -0.00388,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79184,
+        0.60972,
+        0.02984,
+        0.01839
+      ],
+      "roll_deg": 1.47113,
+      "lens_mm": 33.42788
+    },
+    {
+      "frame": 61,
+      "time_s": 2.54167,
+      "progress": 0.94608,
+      "position": [
+        0.20138,
+        -4.18955,
+        1.42907
+      ],
+      "look_at": [
+        -0.07917,
+        -0.00393,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79194,
+        0.60973,
+        0.02833,
+        0.01623
+      ],
+      "roll_deg": 1.48661,
+      "lens_mm": 33.42449
+    },
+    {
+      "frame": 62,
+      "time_s": 2.58333,
+      "progress": 0.95587,
+      "position": [
+        0.17884,
+        -4.18854,
+        1.42907
+      ],
+      "look_at": [
+        -0.08154,
+        -0.00397,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79202,
+        0.60973,
+        0.02695,
+        0.01424
+      ],
+      "roll_deg": 1.50084,
+      "lens_mm": 33.42137
+    },
+    {
+      "frame": 63,
+      "time_s": 2.625,
+      "progress": 0.96477,
+      "position": [
+        0.15833,
+        -4.18762,
+        1.42907
+      ],
+      "look_at": [
+        -0.0837,
+        -0.004,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79209,
+        0.60974,
+        0.02569,
+        0.01242
+      ],
+      "roll_deg": 1.51378,
+      "lens_mm": 33.41853
+    },
+    {
+      "frame": 64,
+      "time_s": 2.66667,
+      "progress": 0.97276,
+      "position": [
+        0.13996,
+        -4.18679,
+        1.42907
+      ],
+      "look_at": [
+        -0.08563,
+        -0.00404,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79214,
+        0.60975,
+        0.02456,
+        0.0108
+      ],
+      "roll_deg": 1.52538,
+      "lens_mm": 33.41599
+    },
+    {
+      "frame": 65,
+      "time_s": 2.70833,
+      "progress": 0.97978,
+      "position": [
+        0.12378,
+        -4.18607,
+        1.42907
+      ],
+      "look_at": [
+        -0.08733,
+        -0.00407,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79219,
+        0.60975,
+        0.02356,
+        0.00936
+      ],
+      "roll_deg": 1.5356,
+      "lens_mm": 33.41375
+    },
+    {
+      "frame": 66,
+      "time_s": 2.75,
+      "progress": 0.98582,
+      "position": [
+        0.10988,
+        -4.18545,
+        1.42907
+      ],
+      "look_at": [
+        -0.08879,
+        -0.00409,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79222,
+        0.60975,
+        0.0227,
+        0.00813
+      ],
+      "roll_deg": 1.54437,
+      "lens_mm": 33.41183
+    },
+    {
+      "frame": 67,
+      "time_s": 2.79167,
+      "progress": 0.99084,
+      "position": [
+        0.09833,
+        -4.18493,
+        1.42907
+      ],
+      "look_at": [
+        -0.09,
+        -0.00411,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79225,
+        0.60975,
+        0.02199,
+        0.0071
+      ],
+      "roll_deg": 1.55166,
+      "lens_mm": 33.41023
+    },
+    {
+      "frame": 68,
+      "time_s": 2.83333,
+      "progress": 0.99479,
+      "position": [
+        0.08921,
+        -4.18452,
+        1.42907
+      ],
+      "look_at": [
+        -0.09096,
+        -0.00413,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79227,
+        0.60976,
+        0.02143,
+        0.00629
+      ],
+      "roll_deg": 1.55741,
+      "lens_mm": 33.40897
+    },
+    {
+      "frame": 69,
+      "time_s": 2.875,
+      "progress": 0.99766,
+      "position": [
+        0.08261,
+        -4.18422,
+        1.42907
+      ],
+      "look_at": [
+        -0.09165,
+        -0.00414,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.79229,
+        0.60976,
+        0.02102,
+        0.00571
+      ],
+      "roll_deg": 1.56159,
+      "lens_mm": 33.40805
+    },
+    {
+      "frame": 70,
+      "time_s": 2.91667,
+      "progress": 0.99941,
+      "position": [
+        0.07859,
+        -4.18404,
+        1.42907
+      ],
+      "look_at": [
+        -0.09208,
+        -0.00415,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7923,
+        0.60976,
+        0.02077,
+        0.00535
+      ],
+      "roll_deg": 1.56412,
+      "lens_mm": 33.4075
+    },
+    {
+      "frame": 71,
+      "time_s": 2.95833,
+      "progress": 1.0,
+      "position": [
+        0.07723,
+        -4.18398,
+        1.42907
+      ],
+      "look_at": [
+        -0.09222,
+        -0.00415,
+        0.3234
+      ],
+      "quaternion_wxyz": [
+        0.7923,
+        0.60976,
+        0.02069,
+        0.00523
+      ],
+      "roll_deg": 1.56498,
+      "lens_mm": 33.40731
+    }
+  ],
+  "physics_frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.95,
+            -0.26,
+            0.17788
+          ],
+          "orientation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "linear_velocity": [
+            1.21022,
+            0.18,
+            0.0
+          ],
+          "angular_velocity": [
+            0.0,
+            -4.17671,
+            0.12
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "time_s": 0.04167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.90008,
+            -0.25265,
+            0.17761
+          ],
+          "orientation_wxyz": [
+            0.99642,
+            0.00025,
+            -0.08445,
+            0.00241
+          ],
+          "linear_velocity": [
+            1.18452,
+            0.17403,
+            0.04517
+          ],
+          "angular_velocity": [
+            0.1533,
+            -3.85443,
+            0.11543
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "time_s": 0.08333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.85114,
+            -0.24539,
+            0.1772
+          ],
+          "orientation_wxyz": [
+            0.9867,
+            0.0003,
+            -0.16248,
+            0.00448
+          ],
+          "linear_velocity": [
+            1.15999,
+            0.1705,
+            0.06599
+          ],
+          "angular_velocity": [
+            0.34184,
+            -3.56205,
+            0.11388
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "time_s": 0.125,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.8032,
+            -0.23824,
+            0.17723
+          ],
+          "orientation_wxyz": [
+            0.97241,
+            0.00132,
+            -0.2332,
+            0.00616
+          ],
+          "linear_velocity": [
+            1.14233,
+            0.1717,
+            -0.04028
+          ],
+          "angular_velocity": [
+            -0.08097,
+            -3.42788,
+            0.07473
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "time_s": 0.16667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.75625,
+            -0.23118,
+            0.1776
+          ],
+          "orientation_wxyz": [
+            0.95457,
+            0.00222,
+            -0.29789,
+            0.0075
+          ],
+          "linear_velocity": [
+            1.11621,
+            0.17081,
+            0.0023
+          ],
+          "angular_velocity": [
+            -0.04201,
+            -3.08078,
+            0.06129
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "time_s": 0.20833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.71028,
+            -0.22402,
+            0.1775
+          ],
+          "orientation_wxyz": [
+            0.934,
+            0.00362,
+            -0.35717,
+            0.00842
+          ],
+          "linear_velocity": [
+            1.08929,
+            0.17336,
+            0.04462
+          ],
+          "angular_velocity": [
+            -0.07256,
+            -2.84601,
+            0.04782
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "time_s": 0.25,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.66533,
+            -0.21696,
+            0.1777
+          ],
+          "orientation_wxyz": [
+            0.91212,
+            0.00429,
+            -0.4098,
+            0.00933
+          ],
+          "linear_velocity": [
+            1.06878,
+            0.16971,
+            -0.00244
+          ],
+          "angular_velocity": [
+            0.03805,
+            -2.67957,
+            0.05102
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "time_s": 0.29167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.62135,
+            -0.21001,
+            0.17788
+          ],
+          "orientation_wxyz": [
+            0.88891,
+            0.00499,
+            -0.45795,
+            0.01005
+          ],
+          "linear_velocity": [
+            1.04382,
+            0.16757,
+            0.01395
+          ],
+          "angular_velocity": [
+            -0.03418,
+            -2.39754,
+            0.03698
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "time_s": 0.33333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.57835,
+            -0.20318,
+            0.17786
+          ],
+          "orientation_wxyz": [
+            0.866,
+            0.00612,
+            -0.49989,
+            0.0104
+          ],
+          "linear_velocity": [
+            1.02379,
+            0.16115,
+            -0.03343
+          ],
+          "angular_velocity": [
+            0.15355,
+            -2.25786,
+            0.04342
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "time_s": 0.375,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.53632,
+            -0.1964,
+            0.17797
+          ],
+          "orientation_wxyz": [
+            0.84262,
+            0.00688,
+            -0.53835,
+            0.01072
+          ],
+          "linear_velocity": [
+            0.99723,
+            0.16494,
+            0.01045
+          ],
+          "angular_velocity": [
+            -0.04717,
+            -1.9983,
+            0.02104
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "time_s": 0.41667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.49526,
+            -0.18971,
+            0.17779
+          ],
+          "orientation_wxyz": [
+            0.82102,
+            0.00787,
+            -0.57075,
+            0.01068
+          ],
+          "linear_velocity": [
+            0.97748,
+            0.15672,
+            -0.04062
+          ],
+          "angular_velocity": [
+            0.25089,
+            -1.80243,
+            0.03319
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "time_s": 0.45833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.45514,
+            -0.18311,
+            0.17706
+          ],
+          "orientation_wxyz": [
+            0.79916,
+            0.00825,
+            -0.60096,
+            0.01081
+          ],
+          "linear_velocity": [
+            0.94987,
+            0.15192,
+            0.03737
+          ],
+          "angular_velocity": [
+            0.27442,
+            -1.70942,
+            0.02999
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "time_s": 0.5,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.41607,
+            -0.17676,
+            0.17803
+          ],
+          "orientation_wxyz": [
+            0.77998,
+            0.00853,
+            -0.62566,
+            0.01089
+          ],
+          "linear_velocity": [
+            0.9284,
+            0.15281,
+            -0.00267
+          ],
+          "angular_velocity": [
+            -0.06555,
+            -1.36843,
+            0.00283
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "time_s": 0.54167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.37791,
+            -0.17058,
+            0.17815
+          ],
+          "orientation_wxyz": [
+            0.76347,
+            0.00912,
+            -0.64569,
+            0.01059
+          ],
+          "linear_velocity": [
+            0.90668,
+            0.14542,
+            -0.01813
+          ],
+          "angular_velocity": [
+            0.13869,
+            -1.18203,
+            0.00992
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "time_s": 0.58333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.3407,
+            -0.16449,
+            0.17776
+          ],
+          "orientation_wxyz": [
+            0.74768,
+            0.00916,
+            -0.66392,
+            0.01053
+          ],
+          "linear_velocity": [
+            0.88353,
+            0.1467,
+            -0.02949
+          ],
+          "angular_velocity": [
+            -0.07277,
+            -1.16212,
+            -0.00904
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "time_s": 0.625,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.30448,
+            -0.15859,
+            0.17793
+          ],
+          "orientation_wxyz": [
+            0.73258,
+            0.00948,
+            -0.68054,
+            0.01008
+          ],
+          "linear_velocity": [
+            0.85746,
+            0.14065,
+            0.02744
+          ],
+          "angular_velocity": [
+            -0.00301,
+            -0.87881,
+            -0.01111
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "time_s": 0.66667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.26923,
+            -0.15287,
+            0.17824
+          ],
+          "orientation_wxyz": [
+            0.72291,
+            0.00933,
+            -0.69081,
+            0.00988
+          ],
+          "linear_velocity": [
+            0.83517,
+            0.13406,
+            0.01963
+          ],
+          "angular_velocity": [
+            0.04162,
+            -0.49884,
+            -0.01136
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "time_s": 0.70833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.23493,
+            -0.14729,
+            0.17833
+          ],
+          "orientation_wxyz": [
+            0.71811,
+            0.00927,
+            -0.69581,
+            0.00945
+          ],
+          "linear_velocity": [
+            0.81164,
+            0.13382,
+            0.01651
+          ],
+          "angular_velocity": [
+            -0.0235,
+            -0.18122,
+            -0.02313
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "time_s": 0.75,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.20159,
+            -0.14189,
+            0.17838
+          ],
+          "orientation_wxyz": [
+            0.71764,
+            0.00893,
+            -0.6963,
+            0.00909
+          ],
+          "linear_velocity": [
+            0.78856,
+            0.13006,
+            0.01457
+          ],
+          "angular_velocity": [
+            -0.03403,
+            0.10951,
+            -0.02985
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "time_s": 0.79167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.16922,
+            -0.13666,
+            0.17838
+          ],
+          "orientation_wxyz": [
+            0.72144,
+            0.00832,
+            -0.69237,
+            0.0088
+          ],
+          "linear_velocity": [
+            0.76652,
+            0.123,
+            0.00435
+          ],
+          "angular_velocity": [
+            -0.00629,
+            0.40577,
+            -0.03216
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "time_s": 0.83333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.13779,
+            -0.13159,
+            0.17809
+          ],
+          "orientation_wxyz": [
+            0.72992,
+            0.00763,
+            -0.68344,
+            0.00838
+          ],
+          "linear_velocity": [
+            0.7448,
+            0.12118,
+            -0.02807
+          ],
+          "angular_velocity": [
+            -0.13092,
+            0.73923,
+            -0.04722
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "time_s": 0.875,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.1073,
+            -0.12675,
+            0.17758
+          ],
+          "orientation_wxyz": [
+            0.74396,
+            0.00733,
+            -0.66814,
+            0.0075
+          ],
+          "linear_velocity": [
+            0.72194,
+            0.11009,
+            -0.0224
+          ],
+          "angular_velocity": [
+            0.22584,
+            1.1635,
+            -0.02718
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "time_s": 0.91667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.07789,
+            -0.12217,
+            0.17836
+          ],
+          "orientation_wxyz": [
+            0.75933,
+            0.00603,
+            -0.65063,
+            0.00723
+          ],
+          "linear_velocity": [
+            0.69593,
+            0.10465,
+            0.02266
+          ],
+          "angular_velocity": [
+            0.01158,
+            1.1107,
+            -0.05369
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "time_s": 0.95833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.0494,
+            -0.11783,
+            0.17861
+          ],
+          "orientation_wxyz": [
+            0.77487,
+            0.00507,
+            -0.63206,
+            0.00636
+          ],
+          "linear_velocity": [
+            0.6738,
+            0.10062,
+            0.00479
+          ],
+          "angular_velocity": [
+            -0.01573,
+            1.2265,
+            -0.06586
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "time_s": 1.0,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            -0.02182,
+            -0.11378,
+            0.17822
+          ],
+          "orientation_wxyz": [
+            0.79251,
+            0.00419,
+            -0.60982,
+            0.00519
+          ],
+          "linear_velocity": [
+            0.65399,
+            0.09208,
+            -0.03652
+          ],
+          "angular_velocity": [
+            0.09062,
+            1.48095,
+            -0.06682
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "time_s": 1.04167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.00483,
+            -0.1102,
+            0.17817
+          ],
+          "orientation_wxyz": [
+            0.81357,
+            0.00306,
+            -0.58144,
+            0.00405
+          ],
+          "linear_velocity": [
+            0.62727,
+            0.07935,
+            0.02935
+          ],
+          "angular_velocity": [
+            -0.02455,
+            1.76282,
+            -0.08255
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "time_s": 1.08333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.03049,
+            -0.10706,
+            0.17863
+          ],
+          "orientation_wxyz": [
+            0.83466,
+            0.00187,
+            -0.55076,
+            0.00263
+          ],
+          "linear_velocity": [
+            0.60589,
+            0.07306,
+            0.00344
+          ],
+          "angular_velocity": [
+            -0.01716,
+            1.84669,
+            -0.09389
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "time_s": 1.125,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.05532,
+            -0.10436,
+            0.17797
+          ],
+          "orientation_wxyz": [
+            0.85679,
+            0.00061,
+            -0.51567,
+            0.00112
+          ],
+          "linear_velocity": [
+            0.58794,
+            0.05678,
+            -0.03049
+          ],
+          "angular_velocity": [
+            -0.00351,
+            2.14442,
+            -0.08666
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "time_s": 1.16667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.07914,
+            -0.10227,
+            0.17856
+          ],
+          "orientation_wxyz": [
+            0.87914,
+            -0.00031,
+            -0.47656,
+            -0.00068
+          ],
+          "linear_velocity": [
+            0.56268,
+            0.04735,
+            -0.01246
+          ],
+          "angular_velocity": [
+            -0.11302,
+            2.16929,
+            -0.10907
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "time_s": 1.20833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.1021,
+            -0.10067,
+            0.17809
+          ],
+          "orientation_wxyz": [
+            0.90089,
+            -0.00133,
+            -0.43405,
+            -0.00244
+          ],
+          "linear_velocity": [
+            0.54358,
+            0.03032,
+            -0.02873
+          ],
+          "angular_velocity": [
+            0.019,
+            2.41706,
+            -0.08575
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "time_s": 1.25,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.12413,
+            -0.09989,
+            0.17868
+          ],
+          "orientation_wxyz": [
+            0.92225,
+            -0.00162,
+            -0.38656,
+            -0.00427
+          ],
+          "linear_velocity": [
+            0.51849,
+            0.01396,
+            0.01169
+          ],
+          "angular_velocity": [
+            0.01509,
+            2.52056,
+            -0.08563
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "time_s": 1.29167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.14535,
+            -0.09959,
+            0.17787
+          ],
+          "orientation_wxyz": [
+            0.94205,
+            -0.00205,
+            -0.33541,
+            -0.00557
+          ],
+          "linear_velocity": [
+            0.503,
+            0.00025,
+            -0.04292
+          ],
+          "angular_velocity": [
+            0.03531,
+            2.76561,
+            -0.03861
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "time_s": 1.33333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.16587,
+            -0.09975,
+            0.17872
+          ],
+          "orientation_wxyz": [
+            0.95959,
+            -0.00169,
+            -0.28134,
+            -0.00593
+          ],
+          "linear_velocity": [
+            0.48833,
+            -0.00564,
+            -0.00102
+          ],
+          "angular_velocity": [
+            0.03153,
+            2.7303,
+            0.00033
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "time_s": 1.375,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.18631,
+            -0.10003,
+            0.17838
+          ],
+          "orientation_wxyz": [
+            0.9741,
+            -0.00116,
+            -0.22601,
+            -0.00611
+          ],
+          "linear_velocity": [
+            0.48706,
+            -0.00686,
+            0.03886
+          ],
+          "angular_velocity": [
+            0.02288,
+            2.7193,
+            -0.00554
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "time_s": 1.41667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.20645,
+            -0.10027,
+            0.17863
+          ],
+          "orientation_wxyz": [
+            0.98528,
+            -0.00105,
+            -0.17081,
+            -0.00615
+          ],
+          "linear_velocity": [
+            0.4841,
+            -0.00561,
+            -0.01802
+          ],
+          "angular_velocity": [
+            0.0314,
+            2.70856,
+            0.00019
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "time_s": 1.45833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.22674,
+            -0.10053,
+            0.1785
+          ],
+          "orientation_wxyz": [
+            0.99339,
+            -0.001,
+            -0.11461,
+            -0.0061
+          ],
+          "linear_velocity": [
+            0.48307,
+            -0.00833,
+            0.02693
+          ],
+          "angular_velocity": [
+            0.04667,
+            2.7038,
+            -0.00181
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "time_s": 1.5,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.24687,
+            -0.10083,
+            0.1782
+          ],
+          "orientation_wxyz": [
+            0.99827,
+            -0.00035,
+            -0.0585,
+            -0.00616
+          ],
+          "linear_velocity": [
+            0.48669,
+            -0.00595,
+            -0.03076
+          ],
+          "angular_velocity": [
+            0.03333,
+            2.72748,
+            -1e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "time_s": 1.54167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.26693,
+            -0.10117,
+            0.17871
+          ],
+          "orientation_wxyz": [
+            0.99998,
+            -0.00038,
+            -0.00245,
+            -0.00613
+          ],
+          "linear_velocity": [
+            0.47612,
+            -0.00871,
+            0.01127
+          ],
+          "angular_velocity": [
+            0.04873,
+            2.662,
+            -0.00208
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "time_s": 1.58333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.2869,
+            -0.10147,
+            0.17773
+          ],
+          "orientation_wxyz": [
+            0.99855,
+            0.00047,
+            0.05342,
+            -0.00613
+          ],
+          "linear_velocity": [
+            0.48352,
+            -0.00758,
+            -0.0685
+          ],
+          "angular_velocity": [
+            0.13571,
+            2.71716,
+            -0.00267
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "time_s": 1.625,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.30673,
+            -0.1017,
+            0.17867
+          ],
+          "orientation_wxyz": [
+            0.99406,
+            0.0005,
+            0.10864,
+            -0.00603
+          ],
+          "linear_velocity": [
+            0.47396,
+            -0.00714,
+            -0.00192
+          ],
+          "angular_velocity": [
+            0.03992,
+            2.65028,
+            -0.00094
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "time_s": 1.66667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.32663,
+            -0.10197,
+            0.17823
+          ],
+          "orientation_wxyz": [
+            0.98652,
+            0.00048,
+            0.16355,
+            -0.00587
+          ],
+          "linear_velocity": [
+            0.4754,
+            -0.00862,
+            0.04058
+          ],
+          "angular_velocity": [
+            0.05142,
+            2.61535,
+            0.02963
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "time_s": 1.70833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.3462,
+            -0.10227,
+            0.17859
+          ],
+          "orientation_wxyz": [
+            0.97616,
+            0.00113,
+            0.217,
+            -0.00554
+          ],
+          "linear_velocity": [
+            0.46918,
+            -0.0063,
+            -0.01393
+          ],
+          "angular_velocity": [
+            0.03521,
+            2.62468,
+            -0.0006
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "time_s": 1.75,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.36579,
+            -0.10247,
+            0.17858
+          ],
+          "orientation_wxyz": [
+            0.9628,
+            0.00129,
+            0.27015,
+            -0.00545
+          ],
+          "linear_velocity": [
+            0.46448,
+            -0.00675,
+            0.02707
+          ],
+          "angular_velocity": [
+            0.03894,
+            2.60007,
+            -0.00081
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "time_s": 1.79167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.38511,
+            -0.10271,
+            0.17845
+          ],
+          "orientation_wxyz": [
+            0.94681,
+            0.0018,
+            0.32175,
+            -0.0053
+          ],
+          "linear_velocity": [
+            0.46601,
+            -0.0054,
+            -0.0251
+          ],
+          "angular_velocity": [
+            0.03021,
+            2.60948,
+            -6e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "time_s": 1.83333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.40429,
+            -0.10291,
+            0.17851
+          ],
+          "orientation_wxyz": [
+            0.92822,
+            0.00176,
+            0.37199,
+            -0.00525
+          ],
+          "linear_velocity": [
+            0.45221,
+            -0.0075,
+            0.0211
+          ],
+          "angular_velocity": [
+            0.042,
+            2.53009,
+            -0.00174
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "time_s": 1.875,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.42317,
+            -0.1032,
+            0.17807
+          ],
+          "orientation_wxyz": [
+            0.90728,
+            0.00241,
+            0.42049,
+            -0.00498
+          ],
+          "linear_velocity": [
+            0.45598,
+            -0.00709,
+            -0.05501
+          ],
+          "angular_velocity": [
+            0.13442,
+            2.55772,
+            -0.00249
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "time_s": 1.91667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.44211,
+            -0.10341,
+            0.17869
+          ],
+          "orientation_wxyz": [
+            0.88369,
+            0.0024,
+            0.46803,
+            -0.00498
+          ],
+          "linear_velocity": [
+            0.45049,
+            -0.00669,
+            0.01164
+          ],
+          "angular_velocity": [
+            0.03741,
+            2.5191,
+            -0.00113
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "time_s": 1.95833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.46099,
+            -0.10365,
+            0.17795
+          ],
+          "orientation_wxyz": [
+            0.85773,
+            0.00287,
+            0.51407,
+            -0.00473
+          ],
+          "linear_velocity": [
+            0.45857,
+            -0.00486,
+            -0.03858
+          ],
+          "angular_velocity": [
+            0.0273,
+            2.57365,
+            0.00014
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "time_s": 2.0,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.47992,
+            -0.10388,
+            0.17867
+          ],
+          "orientation_wxyz": [
+            0.8293,
+            0.00292,
+            0.55877,
+            -0.00468
+          ],
+          "linear_velocity": [
+            0.45121,
+            -0.00663,
+            0.00528
+          ],
+          "angular_velocity": [
+            0.03704,
+            2.52267,
+            -0.00109
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "time_s": 2.04167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.49889,
+            -0.10409,
+            0.17787
+          ],
+          "orientation_wxyz": [
+            0.79846,
+            0.00295,
+            0.60202,
+            -0.00464
+          ],
+          "linear_velocity": [
+            0.45941,
+            0.00189,
+            0.01027
+          ],
+          "angular_velocity": [
+            -0.21167,
+            2.57984,
+            0.0154
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "time_s": 2.08333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.51773,
+            -0.10433,
+            0.17873
+          ],
+          "orientation_wxyz": [
+            0.76569,
+            0.00338,
+            0.64318,
+            -0.00423
+          ],
+          "linear_velocity": [
+            0.45053,
+            -0.00609,
+            -0.00393
+          ],
+          "angular_velocity": [
+            0.03405,
+            2.51926,
+            -0.00073
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "time_s": 2.125,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.5367,
+            -0.10451,
+            0.17807
+          ],
+          "orientation_wxyz": [
+            0.73044,
+            0.00343,
+            0.68295,
+            -0.0042
+          ],
+          "linear_velocity": [
+            0.45567,
+            -0.00342,
+            0.05603
+          ],
+          "angular_velocity": [
+            0.09463,
+            2.54393,
+            0.00187
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "time_s": 2.16667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.55552,
+            -0.10477,
+            0.17864
+          ],
+          "orientation_wxyz": [
+            0.6935,
+            0.00379,
+            0.72044,
+            -0.00385
+          ],
+          "linear_velocity": [
+            0.4517,
+            -0.00622,
+            -0.01007
+          ],
+          "angular_velocity": [
+            0.03474,
+            2.52618,
+            -0.00084
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "time_s": 2.20833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.57452,
+            -0.10497,
+            0.17844
+          ],
+          "orientation_wxyz": [
+            0.6544,
+            0.00374,
+            0.75613,
+            -0.0036
+          ],
+          "linear_velocity": [
+            0.45368,
+            -0.0054,
+            0.03173
+          ],
+          "angular_velocity": [
+            0.03771,
+            2.51237,
+            0.02258
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "time_s": 2.25,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.59326,
+            -0.10519,
+            0.17855
+          ],
+          "orientation_wxyz": [
+            0.61396,
+            0.00403,
+            0.78932,
+            -0.00314
+          ],
+          "linear_velocity": [
+            0.45077,
+            -0.00478,
+            -0.01748
+          ],
+          "angular_velocity": [
+            0.02677,
+            2.52262,
+            -7e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "time_s": 2.29167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.61207,
+            -0.10543,
+            0.17838
+          ],
+          "orientation_wxyz": [
+            0.57174,
+            0.00384,
+            0.82042,
+            -0.00315
+          ],
+          "linear_velocity": [
+            0.4447,
+            -0.00762,
+            0.02909
+          ],
+          "angular_velocity": [
+            0.04172,
+            2.47367,
+            0.01013
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "time_s": 2.33333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.63052,
+            -0.1057,
+            0.17841
+          ],
+          "orientation_wxyz": [
+            0.52867,
+            0.00411,
+            0.84881,
+            -0.00274
+          ],
+          "linear_velocity": [
+            0.4452,
+            -0.00584,
+            -0.02207
+          ],
+          "angular_velocity": [
+            0.03263,
+            2.49269,
+            -0.00089
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "time_s": 2.375,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.64913,
+            -0.10589,
+            0.17855
+          ],
+          "orientation_wxyz": [
+            0.48367,
+            0.00421,
+            0.87524,
+            -0.00261
+          ],
+          "linear_velocity": [
+            0.44265,
+            -0.00636,
+            0.02197
+          ],
+          "angular_velocity": [
+            0.03562,
+            2.47662,
+            -0.00131
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "time_s": 2.41667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.66759,
+            -0.10613,
+            0.17821
+          ],
+          "orientation_wxyz": [
+            0.43785,
+            0.00451,
+            0.89903,
+            -0.00206
+          ],
+          "linear_velocity": [
+            0.44541,
+            -0.0062,
+            -0.05162
+          ],
+          "angular_velocity": [
+            0.13021,
+            2.49689,
+            -0.00218
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "time_s": 2.45833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.6862,
+            -0.10631,
+            0.17861
+          ],
+          "orientation_wxyz": [
+            0.3904,
+            0.00446,
+            0.92063,
+            -0.00212
+          ],
+          "linear_velocity": [
+            0.44231,
+            -0.0061,
+            0.01625
+          ],
+          "angular_velocity": [
+            0.03416,
+            2.47416,
+            -0.00113
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "time_s": 2.5,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.7047,
+            -0.10653,
+            0.17807
+          ],
+          "orientation_wxyz": [
+            0.34225,
+            0.00466,
+            0.9396,
+            -0.00163
+          ],
+          "linear_velocity": [
+            0.44888,
+            -0.00236,
+            -0.02588
+          ],
+          "angular_velocity": [
+            -0.00402,
+            2.51736,
+            0.00137
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "time_s": 2.54167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.7233,
+            -0.10672,
+            0.17864
+          ],
+          "orientation_wxyz": [
+            0.29285,
+            0.00465,
+            0.95615,
+            -0.00163
+          ],
+          "linear_velocity": [
+            0.44261,
+            -0.00598,
+            0.01158
+          ],
+          "angular_velocity": [
+            0.03344,
+            2.47493,
+            -0.00105
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "time_s": 2.58333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.74186,
+            -0.10696,
+            0.17787
+          ],
+          "orientation_wxyz": [
+            0.2428,
+            0.00481,
+            0.97006,
+            -0.00106
+          ],
+          "linear_velocity": [
+            0.44946,
+            -0.00605,
+            -0.06236
+          ],
+          "angular_velocity": [
+            0.12918,
+            2.52459,
+            -0.00263
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "time_s": 2.625,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.7602,
+            -0.10713,
+            0.17878
+          ],
+          "orientation_wxyz": [
+            0.19276,
+            0.00476,
+            0.98123,
+            -0.00096
+          ],
+          "linear_velocity": [
+            0.4369,
+            -0.00456,
+            0.00424
+          ],
+          "angular_velocity": [
+            0.02549,
+            2.44268,
+            -0.00015
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "time_s": 2.66667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.77856,
+            -0.10734,
+            0.17773
+          ],
+          "orientation_wxyz": [
+            0.14205,
+            0.00479,
+            0.98985,
+            -0.00075
+          ],
+          "linear_velocity": [
+            0.44747,
+            -0.00601,
+            -0.04085
+          ],
+          "angular_velocity": [
+            0.02705,
+            2.51388,
+            3e-05
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "time_s": 2.70833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.79693,
+            -0.10758,
+            0.17867
+          ],
+          "orientation_wxyz": [
+            0.09127,
+            0.00506,
+            0.99581,
+            -0.00031
+          ],
+          "linear_velocity": [
+            0.43769,
+            -0.00304,
+            0.00209
+          ],
+          "angular_velocity": [
+            0.01722,
+            2.44746,
+            0.00075
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "time_s": 2.75,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.81535,
+            -0.10777,
+            0.1778
+          ],
+          "orientation_wxyz": [
+            0.03973,
+            0.00509,
+            0.9992,
+            0.00022
+          ],
+          "linear_velocity": [
+            0.44548,
+            -0.0127,
+            0.01
+          ],
+          "angular_velocity": [
+            0.2673,
+            2.5166,
+            -0.00358
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "time_s": 2.79167,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.83368,
+            -0.10793,
+            0.17869
+          ],
+          "orientation_wxyz": [
+            -0.01151,
+            0.00506,
+            0.99992,
+            0.00018
+          ],
+          "linear_velocity": [
+            0.43859,
+            -0.00327,
+            -0.00258
+          ],
+          "angular_velocity": [
+            0.01833,
+            2.45194,
+            0.00061
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "time_s": 2.83333,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.85213,
+            -0.10811,
+            0.17807
+          ],
+          "orientation_wxyz": [
+            -0.06311,
+            0.00509,
+            0.99799,
+            0.0006
+          ],
+          "linear_velocity": [
+            0.44266,
+            -0.00541,
+            0.05397
+          ],
+          "angular_velocity": [
+            -0.03641,
+            2.45714,
+            -0.01367
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "time_s": 2.875,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.87035,
+            -0.10825,
+            0.17867
+          ],
+          "orientation_wxyz": [
+            -0.11382,
+            0.0051,
+            0.99349,
+            0.00069
+          ],
+          "linear_velocity": [
+            0.43661,
+            -0.00345,
+            -0.0076
+          ],
+          "angular_velocity": [
+            0.0193,
+            2.44185,
+            0.00062
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "time_s": 2.91667,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.88872,
+            -0.10846,
+            0.17826
+          ],
+          "orientation_wxyz": [
+            -0.1648,
+            0.00503,
+            0.98631,
+            0.00113
+          ],
+          "linear_velocity": [
+            0.43919,
+            -0.00351,
+            0.03714
+          ],
+          "angular_velocity": [
+            0.01343,
+            2.46072,
+            0.00149
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "time_s": 2.95833,
+      "objects": [
+        {
+          "name": "rolling_cylinder",
+          "shape": "cylinder",
+          "radius": 0.17788,
+          "size": [
+            0.35576,
+            0.46888,
+            0.35576
+          ],
+          "half_extents": [
+            0.17788,
+            0.23444,
+            0.17788
+          ],
+          "height": 0.46889,
+          "depth": 0.46889,
+          "cylinder_depth": null,
+          "long_axis": "y",
+          "bottom_offset": 0.17788,
+          "bounding_radius": 0.29429,
+          "color": [
+            0.36592,
+            0.69361,
+            0.25806,
+            1.0
+          ],
+          "material": {
+            "profile": "satin",
+            "roughness": 0.45916,
+            "specular": 0.32337,
+            "metallic": 0.0,
+            "specular_tint": 0.00346,
+            "ior": 1.35878,
+            "transmission": 0.0,
+            "transmission_roughness": 0.0
+          },
+          "appearance": {
+            "color_source": "sampled_hsv",
+            "role": "rolling_cylinder",
+            "palette_name": null,
+            "color": [
+              0.36592,
+              0.69361,
+              0.25806,
+              1.0
+            ],
+            "material": {
+              "profile": "satin",
+              "roughness": 0.45916,
+              "specular": 0.32337,
+              "metallic": 0.0,
+              "specular_tint": 0.00346,
+              "ior": 1.35878,
+              "transmission": 0.0,
+              "transmission_roughness": 0.0
+            }
+          },
+          "role": "dynamic",
+          "position": [
+            0.90688,
+            -0.10858,
+            0.17867
+          ],
+          "orientation_wxyz": [
+            -0.21466,
+            0.005,
+            0.97667,
+            0.00121
+          ],
+          "linear_velocity": [
+            0.43615,
+            -0.00343,
+            -0.01186
+          ],
+          "angular_velocity": [
+            0.0192,
+            2.43957,
+            0.00062
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_audit": {
+    "expected_contacts": [
+      [
+        "rolling_cylinder",
+        "ground"
+      ]
+    ],
+    "expected_airborne_contacts": [],
+    "expected_contacts_passed": true,
+    "collision_log_contacts_passed": true,
+    "visual_contacts_passed": true,
+    "physics_plausibility_passed": true,
+    "physics_plausibility": {
+      "passed": true,
+      "checks": {
+        "finite_motion": {
+          "passed": true,
+          "bad_values": [],
+          "max_speed_mps": 1.22353,
+          "max_abs_position_m": 0.95
+        },
+        "penetration": {
+          "passed": true,
+          "min_ground_gap_m": -0.00082,
+          "min_pair_gap_m": 999.0,
+          "max_allowed_ground_penetration_m": 0.045,
+          "max_allowed_pair_penetration_m": 0.085,
+          "worst_ground": {
+            "frame": 11,
+            "object": "rolling_cylinder",
+            "gap_m": -0.00082
+          },
+          "worst_pair": null
+        },
+        "floating_rebound": {
+          "passed": true,
+          "events": []
+        },
+        "sudden_stop": {
+          "passed": true,
+          "events": []
+        },
+        "bounce_completion": {
+          "passed": true,
+          "not_applicable": true
+        },
+        "airborne_contacts": {
+          "passed": true,
+          "not_applicable": true
+        },
+        "staggered_drop_timing": {
+          "passed": true,
+          "not_applicable": true
+        },
+        "object_object_contact": {
+          "passed": true,
+          "not_applicable": true
+        }
+      }
+    },
+    "pybullet_solver": {
+      "physics_hz": 240,
+      "fixed_timestep_s": 0.00416667,
+      "solver_iterations": 160,
+      "num_substeps": 1
+    },
+    "collision_summary": {
+      "pairs": [
+        {
+          "pair": [
+            "ground",
+            "rolling_cylinder"
+          ],
+          "samples": 1326,
+          "first_frame": 0.1,
+          "max_force": 33.02114
+        }
+      ]
+    }
+  },
+  "camera_framing_audit": {
+    "passed": true,
+    "gate": "establishing_full_scene_window",
+    "object_count": 1,
+    "max_visible_objects": 1,
+    "all_visible_frame_count": 72,
+    "longest_all_visible_run_frames": 72,
+    "min_required_contiguous_frames": 8,
+    "all_visible_frame_examples": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "worst_frame": {
+      "frame": 0,
+      "visible_count": 1,
+      "missing": []
+    },
+    "strict_extent_visible": {
+      "max_visible_objects": 1,
+      "all_visible_frame_count": 72,
+      "longest_all_visible_run_frames": 72,
+      "all_visible_frame_examples": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "worst_frame": {
+        "frame": 0,
+        "visible_count": 1,
+        "missing": []
+      },
+      "safe_margin": 0.92,
+      "radius_scale": 0.8
+    },
+    "visibility_gate_params": {
+      "safe_margin": 0.96,
+      "radius_scale": 0.2,
+      "min_fraction": 0.08
+    },
+    "projection_model": "approximate pinhole frustum using camera position/look_at/lens; the hard gate requires a continuous full-scene window where every dynamic object center plus a small radius margin is visible, while strict_extent_visible records a more conservative body-extent check"
+  },
+  "orientation_format": "wxyz",
+  "video": "videos/clip_0195_cam_truck_pan_4810_phys_dynamic_cylinder_roll_48103.mp4",
+  "frames_dir": "frames/clip_0195_cam_truck_pan_4810_phys_dynamic_cylinder_roll_48103",
+  "source_run_id": "kubric_batch_v2_blocks_shard_0000",
+  "source_clip_id": "clip_0195_cam_truck_pan_4810_phys_dynamic_cylinder_roll_48103",
+  "review_sample_run_id": "kubric_batch_v2_blocks_shard_0000_review_sample"
+}

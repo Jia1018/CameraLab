@@ -1,0 +1,44 @@
+seed: 17
+
+dataset:
+  root: /workspace/writeable/datasets/CamXTime
+  num_frames: 16
+  crop_size: 384
+  camera_stride: 2
+  time_stride: 2
+  tubelet_size: 2
+  samples_per_epoch: 500
+  expected_grid_size: 120
+
+backbone:
+  repo_path: /workspace/code/vjepa2
+  model_name: vjepa2_1_vit_base_384
+  checkpoint_path: /workspace/writeable/checkpoints/vjepa2/vjepa2_1_vitb_dist_vitG_384.pt
+  patch_size: 16
+
+model:
+  model_dim: 384
+  depth: 2
+  num_heads: 8
+  mlp_ratio: 4.0
+  dropout: 0.0
+  max_temporal_tokens: 32
+
+loss:
+  reconstruction: 1.0
+  cosine: 0.1
+  camera_supervision: 0.0
+  camera_invariance: 0.0
+  content_invariance: 0.0
+
+train:
+  batch_size: 1
+  num_workers: 2
+  learning_rate: 0.0001
+  weight_decay: 0.05
+  steps: 500
+  log_every: 10
+  save_every: 100
+  output_dir: /workspace/writeable/checkpoints/camera_motion_disentangle/first_wave/a0_swap_only_seed17
+  dtype: bfloat16
+
