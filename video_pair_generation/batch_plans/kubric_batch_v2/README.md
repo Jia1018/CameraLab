@@ -333,12 +333,17 @@ audits:
 - camera framing contains at least one continuous establishing window, currently
   0.33-0.75 seconds depending on clip length, where every dynamic object is inside
   the approximate camera frustum;
+- camera trajectories remain above the scene floor for every frame; downward
+  crane/tilt paths use a 0.62m minimum camera height so speed multipliers cannot
+  push the camera through the floor;
 - finite object motion and finite camera transforms for all frames;
 - same-camera and same-physics pair contracts compare exactly against metadata.
 
 Rendered review audits:
 
 - MP4 exists and has expected frame count;
+- encoded MP4 has no continuous full-frame black segment; this check runs before
+  atomic publication and before temporary PNG frames are deleted;
 - preview contact sheets are generated;
 - rendered video is not noisy, blocky, or too compressed for inspection;
 - visible actors match the metadata and scenario labels.

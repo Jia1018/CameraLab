@@ -28,6 +28,9 @@ DEFAULT_KUBRIC_SITE_PACKAGES = Path(
     "/workspace/writeable/environments/kubric_official/lib/python3.10/site-packages"
 )
 DEFAULT_BLENDER_THREADS = 4
+BLACK_FRAME_MIN_DURATION_S = 0.02
+BLACK_FRAME_PIXEL_THRESHOLD = 0.08
+BLACK_FRAME_PICTURE_RATIO = 0.98
 
 FPS = 24
 PHYSICS_HZ = 240
@@ -2082,7 +2085,39 @@ def expected_video_properties(job: dict[str, Any]) -> tuple[int, tuple[int, int]
     return int(expected_frames), (int(expected_width), int(expected_height))
 
 
-def validate_video_job(job: dict[str, Any], video_path: Path | None = None) -> None:
+def detect_black_video_segments(video_path: Path) -> list[str]:
+    result = subprocess.run(
+        [
+            "ffmpeg",
+            "-nostdin",
+            "-hide_banner",
+            "-loglevel",
+            "info",
+            "-i",
+            str(video_path),
+            "-vf",
+            (
+                f"blackdetect=d={BLACK_FRAME_MIN_DURATION_S}:"
+                f"pix_th={BLACK_FRAME_PIXEL_THRESHOLD}:pic_th={BLACK_FRAME_PICTURE_RATIO}"
+            ),
+            "-an",
+            "-f",
+            "null",
+            "-",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return [line.strip() for line in result.stderr.splitlines() if "black_start:" in line]
+
+
+def validate_video_job(
+    job: dict[str, Any],
+    video_path: Path | None = None,
+    *,
+    reject_black_frames: bool = False,
+) -> None:
     path = video_path or Path(job["video"])
     if not path.exists() or path.stat().st_size <= 0:
         raise RuntimeError(f"encoded video is missing or empty: {path}")
@@ -2100,6 +2135,10 @@ def validate_video_job(job: dict[str, Any], video_path: Path | None = None) -> N
         raise RuntimeError(
             f"encoded video frame-count mismatch for {path}: {reported_frames} != {expected_frames}"
         )
+    if reject_black_frames:
+        black_segments = detect_black_video_segments(path)
+        if black_segments:
+            raise RuntimeError(f"encoded video contains black frames: {path}: {black_segments[-1]}")
 
 
 def encode_video_job(job: dict[str, Any], fps: int) -> Path:
@@ -2142,7 +2181,7 @@ def encode_video_job(job: dict[str, Any], fps: int) -> Path:
             ],
             check=True,
         )
-        validate_video_job(job, tmp_video_path)
+        validate_video_job(job, tmp_video_path, reject_black_frames=True)
         tmp_video_path.replace(video_path)
     except Exception:
         tmp_video_path.unlink(missing_ok=True)

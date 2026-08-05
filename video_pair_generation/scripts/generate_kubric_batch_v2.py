@@ -33,6 +33,8 @@ from update_kubric_progress import write_progress
 RUN_ROOT = gen.PROJECT_ROOT / "site" / "assets" / "runs"
 DEFAULT_RUN_ID = "kubric_batch_v2_review_0000"
 DEFAULT_SEED = 20260724
+DEFAULT_MIN_CAMERA_HEIGHT_M = 0.50
+CRANE_TILT_MIN_CAMERA_HEIGHT_M = 0.62
 
 CAMERA_FAMILIES = [
     "static_view",
@@ -243,6 +245,35 @@ def scale_tuple(values: tuple[float, float, float], scale: float) -> tuple[float
     return tuple(float(value) * scale for value in values)
 
 
+def minimum_camera_height(family: str) -> float:
+    if family == "crane_tilt":
+        return CRANE_TILT_MIN_CAMERA_HEIGHT_M
+    return DEFAULT_MIN_CAMERA_HEIGHT_M
+
+
+def constrain_linear_camera_height(
+    family: str,
+    start_position: tuple[float, float, float],
+    position_delta: tuple[float, float, float],
+) -> tuple[tuple[float, float, float], dict[str, Any]]:
+    min_height = minimum_camera_height(family)
+    requested_end_height = float(start_position[2]) + float(position_delta[2])
+    constrained_delta = tuple(float(value) for value in position_delta)
+    was_clamped = requested_end_height < min_height
+    if was_clamped:
+        constrained_delta = (
+            constrained_delta[0],
+            constrained_delta[1],
+            min_height - float(start_position[2]),
+        )
+    return constrained_delta, {
+        "minimum_height_m": min_height,
+        "requested_end_height_m": round(requested_end_height, 5),
+        "end_height_m": round(float(start_position[2]) + constrained_delta[2], 5),
+        "endpoint_was_clamped": was_clamped,
+    }
+
+
 def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int) -> dict[str, Any]:
     duration_s = max((frames - 1) / gen.FPS, 1e-6)
     sign = side_sign(rng)
@@ -253,8 +284,8 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
 
     def build_camera(**kwargs: Any) -> dict[str, Any]:
         extra = dict(kwargs.pop("extra", {}) or {})
-        if family != "static_view":
-            if kwargs.get("path_model") == "orbit":
+        if kwargs.get("path_model") == "orbit":
+            if family != "static_view":
                 if "orbit_delta_deg" in extra:
                     original_delta = float(extra["orbit_delta_deg"])
                     delta_sign = 1.0 if original_delta >= 0.0 else -1.0
@@ -262,8 +293,15 @@ def sample_camera(rng: random.Random, family: str, instance_id: int, frames: int
                     extra["orbit_delta_deg"] = round(scaled_delta, 5)
                     radius = float(extra.get("orbit_radius_m", 0.0))
                     extra["speed_class"] = speed_class(abs(math.radians(scaled_delta) * radius), duration_s)
-            else:
+        else:
+            if family != "static_view":
                 kwargs["position_delta"] = scale_tuple(kwargs["position_delta"], speed_gain)
+            kwargs["position_delta"], height_constraint = constrain_linear_camera_height(
+                family,
+                kwargs["start_position"],
+                kwargs["position_delta"],
+            )
+            extra["height_constraint"] = height_constraint
         extra["speed_sampling_band"] = speed_variant["band"]
         extra["speed_multiplier"] = speed_variant["multiplier"]
         extra["speed_sampling_note"] = speed_variant["note"]
@@ -773,6 +811,24 @@ def camera_framing_audit(
     }
 
 
+def camera_path_audit(camera: dict[str, Any], camera_frames: list[dict[str, Any]]) -> dict[str, Any]:
+    min_required_height = minimum_camera_height(str(camera["family_id"]))
+    positions = [frame.get("position", []) for frame in camera_frames]
+    finite = bool(positions) and all(
+        len(position) == 3 and all(math.isfinite(float(value)) for value in position)
+        for position in positions
+    )
+    min_height = min((float(position[2]) for position in positions if len(position) == 3), default=float("-inf"))
+    passed = finite and min_height >= min_required_height - 1e-5
+    return {
+        "passed": passed,
+        "gate": "finite_path_and_floor_clearance",
+        "finite_transforms": finite,
+        "minimum_height_m": round(min_height, 5) if math.isfinite(min_height) else None,
+        "minimum_required_height_m": min_required_height,
+    }
+
+
 def write_clip_metadata(
     *,
     run_dir: Path,
@@ -791,6 +847,9 @@ def write_clip_metadata(
     frames = int(spec["frames"])
     clip_id = f"clip_{clip_index:04d}_{camera['id']}_{physics['id']}"
     camera_frames = camera_records(camera, frames)
+    path_audit = camera_path_audit(camera, camera_frames)
+    if not path_audit["passed"]:
+        raise RuntimeError(f"{clip_id}: camera path audit failed: {path_audit}")
     framing = camera_framing_audit(camera_frames, physics_frames, width, height)
     if not framing["passed"]:
         raise RuntimeError(
@@ -824,6 +883,7 @@ def write_clip_metadata(
         "camera_frames": camera_frames,
         "physics_frames": physics_frames,
         "quality_audit": quality,
+        "camera_path_audit": path_audit,
         "camera_framing_audit": framing,
         "orientation_format": "wxyz",
         "video": str(video_rel),
