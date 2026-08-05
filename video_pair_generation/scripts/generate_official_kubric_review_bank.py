@@ -2044,48 +2044,78 @@ def render_one_job(job: dict[str, Any]) -> None:
     renderer.render(png_filepath=str(frames_dir / "frame_"), exr_filepath=None)
 
 
-def render_jobs_main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--render-jobs", type=Path, required=True)
-    args = parser.parse_args(blender_argv())
-    payload = json.loads(args.render_jobs.read_text(encoding="utf-8"))
-    for idx, job in enumerate(payload["jobs"], start=1):
-        print(f"[{idx}/{len(payload['jobs'])}] rendering {job['clip_id']}", flush=True)
-        render_one_job(job)
+def video_probe(video_path: Path) -> dict[str, Any]:
+    result = subprocess.run(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-select_streams",
+            "v:0",
+            "-show_entries",
+            "stream=width,height,nb_frames",
+            "-of",
+            "json",
+            str(video_path),
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    payload = json.loads(result.stdout)
+    streams = payload.get("streams", [])
+    if len(streams) != 1:
+        raise RuntimeError(f"expected one video stream in {video_path}, found {len(streams)}")
+    return streams[0]
 
 
-def render_with_blender(blender_bin: Path, jobs_path: Path, kubric_site_packages: Path) -> None:
-    env = os.environ.copy()
-    env["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
-    existing = env.get("PYTHONPATH")
-    env["PYTHONPATH"] = str(kubric_site_packages) if not existing else f"{kubric_site_packages}:{existing}"
-    configure_blender_runtime_env(env)
-    log_path = jobs_path.with_name("render.log")
-    with log_path.open("w", encoding="utf-8") as log_file:
-        subprocess.run(
-            [
-                str(blender_bin),
-                "--background",
-                *blender_thread_args(),
-                "--python",
-                str(Path(__file__).resolve()),
-                "--",
-                "--render-jobs",
-                str(jobs_path),
-            ],
-            check=True,
-            stdout=log_file,
-            stderr=subprocess.STDOUT,
-            env=env,
+def expected_video_properties(job: dict[str, Any]) -> tuple[int, tuple[int, int]]:
+    expected_frames = job.get("frames_count")
+    resolution = job.get("resolution")
+    if expected_frames is None or resolution is None:
+        metadata = json.loads(Path(job["metadata"]).read_text(encoding="utf-8"))
+        if expected_frames is None:
+            expected_frames = metadata["frames_count"]
+        if resolution is None:
+            resolution = metadata["resolution"]
+    expected_width, expected_height = resolution
+    return int(expected_frames), (int(expected_width), int(expected_height))
+
+
+def validate_video_job(job: dict[str, Any], video_path: Path | None = None) -> None:
+    path = video_path or Path(job["video"])
+    if not path.exists() or path.stat().st_size <= 0:
+        raise RuntimeError(f"encoded video is missing or empty: {path}")
+    expected_frames, (expected_width, expected_height) = expected_video_properties(job)
+    stream = video_probe(path)
+    actual_width = int(stream["width"])
+    actual_height = int(stream["height"])
+    if (actual_width, actual_height) != (int(expected_width), int(expected_height)):
+        raise RuntimeError(
+            f"encoded video resolution mismatch for {path}: "
+            f"{actual_width}x{actual_height} != {expected_width}x{expected_height}"
+        )
+    reported_frames = stream.get("nb_frames")
+    if reported_frames not in (None, "N/A") and int(reported_frames) != expected_frames:
+        raise RuntimeError(
+            f"encoded video frame-count mismatch for {path}: {reported_frames} != {expected_frames}"
         )
 
 
-def encode_videos(jobs_path: Path) -> None:
-    payload = json.loads(jobs_path.read_text(encoding="utf-8"))
-    for job in payload["jobs"]:
-        frames_dir = Path(job["frames_dir"])
-        video_path = Path(job["video"])
-        video_path.parent.mkdir(parents=True, exist_ok=True)
+def encode_video_job(job: dict[str, Any], fps: int) -> Path:
+    frames_dir = Path(job["frames_dir"])
+    video_path = Path(job["video"])
+    tmp_video_path = video_path.with_name(f"{video_path.name}.tmp.mp4")
+    expected_frames, _ = expected_video_properties(job)
+    rendered_frames = sum(1 for _ in frames_dir.glob("frame_*.png")) if frames_dir.exists() else 0
+    if rendered_frames != expected_frames:
+        raise RuntimeError(
+            f"cannot encode incomplete frames for {job['clip_id']}: "
+            f"{rendered_frames} != {expected_frames}"
+        )
+    video_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_video_path.unlink(missing_ok=True)
+    try:
         subprocess.run(
             [
                 "ffmpeg",
@@ -2093,7 +2123,7 @@ def encode_videos(jobs_path: Path) -> None:
                 "-loglevel",
                 "error",
                 "-framerate",
-                str(payload["fps"]),
+                str(fps),
                 "-start_number",
                 "1",
                 "-i",
@@ -2108,10 +2138,89 @@ def encode_videos(jobs_path: Path) -> None:
                 "18",
                 "-movflags",
                 "+faststart",
-                str(video_path),
+                str(tmp_video_path),
             ],
             check=True,
         )
+        validate_video_job(job, tmp_video_path)
+        tmp_video_path.replace(video_path)
+    except Exception:
+        tmp_video_path.unlink(missing_ok=True)
+        raise
+    return video_path
+
+
+def cleanup_job_frames(job: dict[str, Any]) -> None:
+    frames_dir = Path(job["frames_dir"])
+    if frames_dir.exists():
+        shutil.rmtree(frames_dir)
+
+
+def render_jobs_main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--render-jobs", type=Path, required=True)
+    parser.add_argument("--encode-after-render", action="store_true")
+    parser.add_argument("--cleanup-frames-after-encode", action="store_true")
+    args = parser.parse_args(blender_argv())
+    if args.cleanup_frames_after_encode and not args.encode_after_render:
+        raise SystemExit("--cleanup-frames-after-encode requires --encode-after-render")
+    payload = json.loads(args.render_jobs.read_text(encoding="utf-8"))
+    total = len(payload["jobs"])
+    for idx, job in enumerate(payload["jobs"], start=1):
+        print(f"[{idx}/{total}] rendering {job['clip_id']}", flush=True)
+        render_one_job(job)
+        if args.encode_after_render:
+            video_path = encode_video_job(job, int(payload["fps"]))
+            print(f"[{idx}/{total}] encoded {job['clip_id']} bytes={video_path.stat().st_size}", flush=True)
+            if args.cleanup_frames_after_encode:
+                cleanup_job_frames(job)
+                print(f"[{idx}/{total}] cleaned frames {job['clip_id']}", flush=True)
+
+
+def render_with_blender(
+    blender_bin: Path,
+    jobs_path: Path,
+    kubric_site_packages: Path,
+    *,
+    encode_after_render: bool = False,
+    cleanup_frames_after_encode: bool = False,
+) -> None:
+    env = os.environ.copy()
+    env["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+    existing = env.get("PYTHONPATH")
+    env["PYTHONPATH"] = str(kubric_site_packages) if not existing else f"{kubric_site_packages}:{existing}"
+    configure_blender_runtime_env(env)
+    log_path = jobs_path.with_name("render.log")
+    with log_path.open("w", encoding="utf-8") as log_file:
+        command = [
+            str(blender_bin),
+            "--background",
+            *blender_thread_args(),
+            "--python",
+            str(Path(__file__).resolve()),
+            "--",
+            "--render-jobs",
+            str(jobs_path),
+        ]
+        if encode_after_render:
+            command.append("--encode-after-render")
+        if cleanup_frames_after_encode:
+            command.append("--cleanup-frames-after-encode")
+        subprocess.run(
+            command,
+            check=True,
+            stdout=log_file,
+            stderr=subprocess.STDOUT,
+            env=env,
+        )
+
+
+def encode_videos(jobs_path: Path, *, cleanup_frames_after_encode: bool = False) -> None:
+    payload = json.loads(jobs_path.read_text(encoding="utf-8"))
+    for job in payload["jobs"]:
+        encode_video_job(job, int(payload["fps"]))
+        if cleanup_frames_after_encode:
+            cleanup_job_frames(job)
 
 
 def generate_main() -> None:

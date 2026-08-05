@@ -1,0 +1,3536 @@
+{
+  "project": "camera_motion_disentangle",
+  "run_id": "kubric_batch_v2_blocks_shard_0001_review_sample",
+  "generator": "kubric_review_sample_export",
+  "description": "Compact coverage-oriented review sample exported from a larger official-Kubric batch run.",
+  "fps": 24,
+  "resolution": [
+    640,
+    480
+  ],
+  "seed": 20260731,
+  "simulator": "official kubric.simulator.PyBullet",
+  "renderer": "official kubric.renderer.Blender",
+  "review_strategy": "coverage-oriented shared-factor block sampling; each group contains multiple clips sharing camera or physics",
+  "shared_factor_group_policy": {
+    "group_mode": "shared_factor_blocks",
+    "groups_requested": 200,
+    "clips_per_group": 4,
+    "same_camera_groups": "one exact camera trajectory and scene paired with multiple physics programs",
+    "same_physics_scene_groups": "one exact physics simulation and scene paired with multiple camera trajectories",
+    "global_grid_policy": "small local blocks are sampled for reusable supervision; the full global camera x physics cartesian product is not rendered"
+  },
+  "pair_contract": {
+    "same_camera": "all clips in a same-camera group reuse identical camera_frames, scene_id, fps, and frames_count; physics differs",
+    "same_physics_scene": "all clips in a same-physics group reuse identical physics_frames, scene_id, fps, and frames_count; camera differs",
+    "length_policy": "clips inside a group have identical length; different groups sample different lengths"
+  },
+  "duration_sampling": {
+    "distribution": "clipped Gaussian rounded to frame_multiple",
+    "frames_mean": 108.0,
+    "frames_std": 24.0,
+    "frames_min": 72,
+    "frames_max": 168,
+    "frame_multiple": 12
+  },
+  "camera_motion_model": "camera endpoints, roll, lens, target drift, and orbit parameters are sampled from clipped Gaussian templates; speed_curve controls within-clip acceleration/deceleration",
+  "physics_sampling_model": "object sizes, aspect ratios, masses, initial velocities, angular velocities, friction, restitution, colors, and material profiles are sampled from clipped Gaussian templates",
+  "quality_filters": "Every accepted clip must pass expected-contact checks, physics plausibility audits, and camera framing audits before metadata or render jobs are accepted.",
+  "camera_framing_filter": {
+    "gate": "establishing_full_scene_window",
+    "requirement": "at least one continuous segment where all dynamic object centers plus a small radius margin are inside the approximate camera frustum",
+    "min_contiguous_frames": "max(8, min(18, round(frame_count * 0.08)))",
+    "diagnostics": "metadata also records strict_extent_visible with a larger body-radius margin"
+  },
+  "camera_family_reference": [
+    "static_view",
+    "dolly_in",
+    "dolly_out",
+    "truck_pan",
+    "crane_tilt",
+    "top_down_drift",
+    "orbit_arc",
+    "low_truck_roll",
+    "diagonal_combo"
+  ],
+  "physics_family_reference": [
+    "phys_static_mixed_pair",
+    "phys_drop_bounce",
+    "phys_multi_drop_bounce",
+    "phys_airborne_drop_collision",
+    "phys_airborne_sphere_box_collision",
+    "phys_airborne_box_box_collision",
+    "phys_airborne_sphere_cylinder_collision",
+    "phys_airborne_chain_collision",
+    "phys_drop_hits_dynamic_box",
+    "phys_two_sphere_collision",
+    "phys_sphere_hits_tall_block",
+    "phys_box_sphere_collision",
+    "phys_four_body_scatter",
+    "phys_three_body_chain",
+    "phys_four_body_crossfire",
+    "phys_dynamic_cylinder_roll",
+    "phys_dynamic_capsule_roll",
+    "phys_sphere_hits_dynamic_cylinder",
+    "phys_randomized_mixed_drop_scene",
+    "phys_randomized_mixed_drop_collision",
+    "phys_randomized_mixed_drop_no_collision"
+  ],
+  "coverage_summary": {
+    "camera_families": {
+      "orbit_arc": 10,
+      "top_down_drift": 19,
+      "dolly_in": 9,
+      "static_view": 10,
+      "crane_tilt": 14,
+      "diagonal_combo": 12,
+      "truck_pan": 7,
+      "dolly_out": 7,
+      "low_truck_roll": 8
+    },
+    "physics_families": {
+      "phys_static_mixed_pair": 7,
+      "phys_airborne_drop_collision": 6,
+      "phys_airborne_sphere_cylinder_collision": 6,
+      "phys_two_sphere_collision": 2,
+      "phys_box_sphere_collision": 10,
+      "phys_four_body_crossfire": 2,
+      "phys_sphere_hits_dynamic_cylinder": 3,
+      "phys_randomized_mixed_drop_no_collision": 5,
+      "phys_airborne_chain_collision": 4,
+      "phys_sphere_hits_tall_block": 4,
+      "phys_three_body_chain": 8,
+      "phys_dynamic_capsule_roll": 3,
+      "phys_four_body_scatter": 9,
+      "phys_multi_drop_bounce": 9,
+      "phys_airborne_box_box_collision": 4,
+      "phys_drop_hits_dynamic_box": 7,
+      "phys_randomized_mixed_drop_collision": 2,
+      "phys_drop_bounce": 1,
+      "phys_airborne_sphere_box_collision": 2,
+      "phys_dynamic_cylinder_roll": 1,
+      "phys_randomized_mixed_drop_scene": 1
+    },
+    "pair_kinds": {
+      "same_camera": 14,
+      "same_physics": 10
+    },
+    "duration_s_min": 2.95833,
+    "duration_s_max": 6.95833,
+    "frames_min": 72,
+    "frames_max": 168
+  },
+  "sample_failure_count": 488,
+  "sample_failures": [
+    {
+      "group_index": 8,
+      "attempt": 0,
+      "kind": "same_camera",
+      "error": "phys_four_body_crossfire_8002 / scene_green_low_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "group_index": 10,
+      "attempt": 0,
+      "kind": "same_camera",
+      "error": "phys_three_body_chain_10001 / scene_gray_low_wall_tint_0010: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "group_index": 10,
+      "attempt": 1,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_collision_10103 / scene_blue_tall_wall: physics plausibility audit failed: ['penetration', 'staggered_drop_timing']"
+    },
+    {
+      "group_index": 10,
+      "attempt": 2,
+      "kind": "same_camera",
+      "error": "phys_three_body_chain_10201 / scene_warm_panel_wall_tint_0012: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "group_index": 10,
+      "attempt": 3,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_collision_10303 / scene_green_low_wall: physics plausibility audit failed: ['finite_motion', 'penetration', 'staggered_drop_timing']"
+    },
+    {
+      "group_index": 12,
+      "attempt": 0,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_12002 / scene_warm_panel_wall_tint_0012: physics plausibility audit failed: ['penetration', 'staggered_drop_timing']"
+    },
+    {
+      "group_index": 12,
+      "attempt": 1,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_12102 / scene_green_low_wall_tint_0013: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "group_index": 12,
+      "attempt": 2,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_12202 / scene_neutral_tall_panel_tint_0014: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "group_index": 12,
+      "attempt": 3,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_12302 / scene_gray_low_wall: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "group_index": 12,
+      "attempt": 4,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_scene_12402 / scene_blue_tall_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 0,
+      "kind": "same_camera",
+      "error": "phys_four_body_crossfire_14000 / scene_neutral_tall_panel: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 1,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14102 / scene_gray_low_wall_tint_0015: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 2,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14202 / scene_blue_tall_wall: physics plausibility audit failed: ['staggered_drop_timing', 'object_object_contact']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 3,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14302 / scene_warm_panel_wall: physics plausibility audit failed: ['object_object_contact']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 4,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14402 / scene_green_low_wall: physics plausibility audit failed: ['staggered_drop_timing']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 5,
+      "kind": "same_camera",
+      "error": "clip_0058_cam_top_down_drift_1450_phys_randomized_mixed_drop_no_collision_14502: camera framing audit failed: max_visible=4/4, longest_all_visible_run=5 < 8"
+    },
+    {
+      "group_index": 14,
+      "attempt": 6,
+      "kind": "same_camera",
+      "error": "phys_four_body_crossfire_14600 / scene_gray_low_wall: physics plausibility audit failed: ['penetration']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 7,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14702 / scene_blue_tall_wall: physics plausibility audit failed: ['object_object_contact']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 8,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14802 / scene_warm_panel_wall_tint_0022: physics plausibility audit failed: ['penetration', 'staggered_drop_timing']"
+    },
+    {
+      "group_index": 14,
+      "attempt": 9,
+      "kind": "same_camera",
+      "error": "phys_randomized_mixed_drop_no_collision_14902 / scene_green_low_wall_tint_0023: physics plausibility audit failed: ['staggered_drop_timing']"
+    }
+  ],
+  "clips": [
+    {
+      "clip_id": "clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000",
+      "camera_id": "cam_orbit_arc_16800",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_static_mixed_pair_168000",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0168_same_camera"
+      ],
+      "video": "videos/clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000.mp4",
+      "metadata": "metadata/clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000"
+    },
+    {
+      "clip_id": "clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001",
+      "camera_id": "cam_orbit_arc_16800",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_airborne_drop_collision_168001",
+      "physics_family": "phys_airborne_drop_collision",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "airborne_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0168_same_camera"
+      ],
+      "video": "videos/clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001.mp4",
+      "metadata": "metadata/clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001"
+    },
+    {
+      "clip_id": "clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002",
+      "camera_id": "cam_orbit_arc_16800",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_airborne_sphere_cylinder_collision_168002",
+      "physics_family": "phys_airborne_sphere_cylinder_collision",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "airborne_sphere_cylinder_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0168_same_camera"
+      ],
+      "video": "videos/clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002.mp4",
+      "metadata": "metadata/clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002"
+    },
+    {
+      "clip_id": "clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003",
+      "camera_id": "cam_orbit_arc_16800",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_two_sphere_collision_168003",
+      "physics_family": "phys_two_sphere_collision",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "two_body_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0168_same_camera"
+      ],
+      "video": "videos/clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003.mp4",
+      "metadata": "metadata/clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003"
+    },
+    {
+      "clip_id": "clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300",
+      "camera_id": "cam_top_down_drift_16030",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_box_sphere_collision_160300",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 168,
+      "duration_s": 6.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0158_same_camera"
+      ],
+      "video": "videos/clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300.mp4",
+      "metadata": "metadata/clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300"
+    },
+    {
+      "clip_id": "clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301",
+      "camera_id": "cam_top_down_drift_16030",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_four_body_crossfire_160301",
+      "physics_family": "phys_four_body_crossfire",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 168,
+      "duration_s": 6.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "four_body_crossfire_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0158_same_camera"
+      ],
+      "video": "videos/clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301.mp4",
+      "metadata": "metadata/clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301"
+    },
+    {
+      "clip_id": "clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302",
+      "camera_id": "cam_top_down_drift_16030",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_sphere_hits_dynamic_cylinder_160302",
+      "physics_family": "phys_sphere_hits_dynamic_cylinder",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 168,
+      "duration_s": 6.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "sphere_dynamic_cylinder_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0158_same_camera"
+      ],
+      "video": "videos/clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302.mp4",
+      "metadata": "metadata/clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302"
+    },
+    {
+      "clip_id": "clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303",
+      "camera_id": "cam_top_down_drift_16030",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_randomized_mixed_drop_no_collision_160303",
+      "physics_family": "phys_randomized_mixed_drop_no_collision",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 168,
+      "duration_s": 6.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "randomized_mixed_drop_no_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0158_same_camera"
+      ],
+      "video": "videos/clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303.mp4",
+      "metadata": "metadata/clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303"
+    },
+    {
+      "clip_id": "clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100",
+      "camera_id": "cam_dolly_in_2810",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_airborne_chain_collision_28100",
+      "physics_family": "phys_airborne_chain_collision",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "airborne_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "fast",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0028_same_camera"
+      ],
+      "video": "videos/clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100.mp4",
+      "metadata": "metadata/clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100"
+    },
+    {
+      "clip_id": "clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101",
+      "camera_id": "cam_dolly_in_2810",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_sphere_hits_tall_block_28101",
+      "physics_family": "phys_sphere_hits_tall_block",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "fast",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0028_same_camera"
+      ],
+      "video": "videos/clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101.mp4",
+      "metadata": "metadata/clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101"
+    },
+    {
+      "clip_id": "clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102",
+      "camera_id": "cam_dolly_in_2810",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_three_body_chain_28102",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "fast",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0028_same_camera"
+      ],
+      "video": "videos/clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102.mp4",
+      "metadata": "metadata/clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102"
+    },
+    {
+      "clip_id": "clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103",
+      "camera_id": "cam_dolly_in_2810",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_dynamic_capsule_roll_28103",
+      "physics_family": "phys_dynamic_capsule_roll",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "dynamic_capsule_ground_motion",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "fast",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0028_same_camera"
+      ],
+      "video": "videos/clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103.mp4",
+      "metadata": "metadata/clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103"
+    },
+    {
+      "clip_id": "clip_0468_cam_static_view_117000_phys_four_body_scatter_11700",
+      "camera_id": "cam_static_view_117000",
+      "camera_family": "static_view",
+      "physics_id": "phys_four_body_scatter_11700",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0117_same_physics_scene"
+      ],
+      "video": "videos/clip_0468_cam_static_view_117000_phys_four_body_scatter_11700.mp4",
+      "metadata": "metadata/clip_0468_cam_static_view_117000_phys_four_body_scatter_11700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0468_cam_static_view_117000_phys_four_body_scatter_11700"
+    },
+    {
+      "clip_id": "clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700",
+      "camera_id": "cam_crane_tilt_117001",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_four_body_scatter_11700",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.78642
+      },
+      "pair_groups": [
+        "block_0117_same_physics_scene"
+      ],
+      "video": "videos/clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700.mp4",
+      "metadata": "metadata/clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700"
+    },
+    {
+      "clip_id": "clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700",
+      "camera_id": "cam_diagonal_combo_117002",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_four_body_scatter_11700",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0117_same_physics_scene"
+      ],
+      "video": "videos/clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700.mp4",
+      "metadata": "metadata/clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700"
+    },
+    {
+      "clip_id": "clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700",
+      "camera_id": "cam_truck_pan_117003",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_four_body_scatter_11700",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0117_same_physics_scene"
+      ],
+      "video": "videos/clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700.mp4",
+      "metadata": "metadata/clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700"
+    },
+    {
+      "clip_id": "clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700",
+      "camera_id": "cam_dolly_out_2070",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_randomized_mixed_drop_no_collision_20700",
+      "physics_family": "phys_randomized_mixed_drop_no_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "randomized_mixed_drop_no_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0020_same_camera"
+      ],
+      "video": "videos/clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700.mp4",
+      "metadata": "metadata/clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700"
+    },
+    {
+      "clip_id": "clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701",
+      "camera_id": "cam_dolly_out_2070",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_multi_drop_bounce_20701",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0020_same_camera"
+      ],
+      "video": "videos/clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701.mp4",
+      "metadata": "metadata/clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701"
+    },
+    {
+      "clip_id": "clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702",
+      "camera_id": "cam_dolly_out_2070",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_airborne_box_box_collision_20702",
+      "physics_family": "phys_airborne_box_box_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "airborne_box_box_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0020_same_camera"
+      ],
+      "video": "videos/clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702.mp4",
+      "metadata": "metadata/clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702"
+    },
+    {
+      "clip_id": "clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703",
+      "camera_id": "cam_dolly_out_2070",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_drop_hits_dynamic_box_20703",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0020_same_camera"
+      ],
+      "video": "videos/clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703.mp4",
+      "metadata": "metadata/clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703"
+    },
+    {
+      "clip_id": "clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400",
+      "camera_id": "cam_low_truck_roll_12440",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_randomized_mixed_drop_collision_124400",
+      "physics_family": "phys_randomized_mixed_drop_collision",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "randomized_mixed_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0124_same_camera"
+      ],
+      "video": "videos/clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400.mp4",
+      "metadata": "metadata/clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400"
+    },
+    {
+      "clip_id": "clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401",
+      "camera_id": "cam_low_truck_roll_12440",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_drop_bounce_124401",
+      "physics_family": "phys_drop_bounce",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0124_same_camera"
+      ],
+      "video": "videos/clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401.mp4",
+      "metadata": "metadata/clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401"
+    },
+    {
+      "clip_id": "clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402",
+      "camera_id": "cam_low_truck_roll_12440",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_airborne_sphere_box_collision_124402",
+      "physics_family": "phys_airborne_sphere_box_collision",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "airborne_sphere_box_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0124_same_camera"
+      ],
+      "video": "videos/clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402.mp4",
+      "metadata": "metadata/clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402"
+    },
+    {
+      "clip_id": "clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403",
+      "camera_id": "cam_low_truck_roll_12440",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_airborne_chain_collision_124403",
+      "physics_family": "phys_airborne_chain_collision",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "airborne_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0124_same_camera"
+      ],
+      "video": "videos/clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403.mp4",
+      "metadata": "metadata/clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403"
+    },
+    {
+      "clip_id": "clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200",
+      "camera_id": "cam_orbit_arc_9620",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_four_body_scatter_96200",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0096_same_camera"
+      ],
+      "video": "videos/clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200.mp4",
+      "metadata": "metadata/clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200"
+    },
+    {
+      "clip_id": "clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201",
+      "camera_id": "cam_orbit_arc_9620",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_dynamic_cylinder_roll_96201",
+      "physics_family": "phys_dynamic_cylinder_roll",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "dynamic_cylinder_ground_motion",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0096_same_camera"
+      ],
+      "video": "videos/clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201.mp4",
+      "metadata": "metadata/clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201"
+    },
+    {
+      "clip_id": "clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202",
+      "camera_id": "cam_orbit_arc_9620",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_randomized_mixed_drop_scene_96202",
+      "physics_family": "phys_randomized_mixed_drop_scene",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "randomized_mixed_drop_scene",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0096_same_camera"
+      ],
+      "video": "videos/clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202.mp4",
+      "metadata": "metadata/clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202"
+    },
+    {
+      "clip_id": "clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203",
+      "camera_id": "cam_orbit_arc_9620",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_static_mixed_pair_96203",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_green_low_wall",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0096_same_camera"
+      ],
+      "video": "videos/clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203.mp4",
+      "metadata": "metadata/clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203"
+    },
+    {
+      "clip_id": "clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700",
+      "camera_id": "cam_diagonal_combo_197000",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_drop_hits_dynamic_box_19700",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.45849
+      },
+      "pair_groups": [
+        "block_0197_same_physics_scene"
+      ],
+      "video": "videos/clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700.mp4",
+      "metadata": "metadata/clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700"
+    },
+    {
+      "clip_id": "clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700",
+      "camera_id": "cam_truck_pan_197001",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_drop_hits_dynamic_box_19700",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0197_same_physics_scene"
+      ],
+      "video": "videos/clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700.mp4",
+      "metadata": "metadata/clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700"
+    },
+    {
+      "clip_id": "clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700",
+      "camera_id": "cam_low_truck_roll_197002",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_drop_hits_dynamic_box_19700",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0197_same_physics_scene"
+      ],
+      "video": "videos/clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700.mp4",
+      "metadata": "metadata/clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700"
+    },
+    {
+      "clip_id": "clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700",
+      "camera_id": "cam_dolly_out_197003",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_drop_hits_dynamic_box_19700",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0197_same_physics_scene"
+      ],
+      "video": "videos/clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700.mp4",
+      "metadata": "metadata/clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700"
+    },
+    {
+      "clip_id": "clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100",
+      "camera_id": "cam_static_view_171000",
+      "camera_family": "static_view",
+      "physics_id": "phys_airborne_drop_collision_17100",
+      "physics_family": "phys_airborne_drop_collision",
+      "scene_id": "scene_blue_tall_wall_tint_0171",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "airborne_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0171_same_physics_scene"
+      ],
+      "video": "videos/clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100.mp4",
+      "metadata": "metadata/clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100"
+    },
+    {
+      "clip_id": "clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100",
+      "camera_id": "cam_crane_tilt_171001",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_airborne_drop_collision_17100",
+      "physics_family": "phys_airborne_drop_collision",
+      "scene_id": "scene_blue_tall_wall_tint_0171",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "airborne_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.51827,
+        "first_fraction": 0.64339
+      },
+      "pair_groups": [
+        "block_0171_same_physics_scene"
+      ],
+      "video": "videos/clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100.mp4",
+      "metadata": "metadata/clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100"
+    },
+    {
+      "clip_id": "clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100",
+      "camera_id": "cam_diagonal_combo_171002",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_airborne_drop_collision_17100",
+      "physics_family": "phys_airborne_drop_collision",
+      "scene_id": "scene_blue_tall_wall_tint_0171",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "airborne_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.22916
+      },
+      "pair_groups": [
+        "block_0171_same_physics_scene"
+      ],
+      "video": "videos/clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100.mp4",
+      "metadata": "metadata/clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100"
+    },
+    {
+      "clip_id": "clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100",
+      "camera_id": "cam_truck_pan_171003",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_airborne_drop_collision_17100",
+      "physics_family": "phys_airborne_drop_collision",
+      "scene_id": "scene_blue_tall_wall_tint_0171",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "airborne_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0171_same_physics_scene"
+      ],
+      "video": "videos/clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100.mp4",
+      "metadata": "metadata/clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100"
+    },
+    {
+      "clip_id": "clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400",
+      "camera_id": "cam_top_down_drift_14140",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_four_body_crossfire_141400",
+      "physics_family": "phys_four_body_crossfire",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "four_body_crossfire_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0140_same_camera"
+      ],
+      "video": "videos/clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400.mp4",
+      "metadata": "metadata/clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400"
+    },
+    {
+      "clip_id": "clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401",
+      "camera_id": "cam_top_down_drift_14140",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_sphere_hits_dynamic_cylinder_141401",
+      "physics_family": "phys_sphere_hits_dynamic_cylinder",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "sphere_dynamic_cylinder_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0140_same_camera"
+      ],
+      "video": "videos/clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401.mp4",
+      "metadata": "metadata/clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401"
+    },
+    {
+      "clip_id": "clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402",
+      "camera_id": "cam_top_down_drift_14140",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_randomized_mixed_drop_no_collision_141402",
+      "physics_family": "phys_randomized_mixed_drop_no_collision",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "randomized_mixed_drop_no_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0140_same_camera"
+      ],
+      "video": "videos/clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402.mp4",
+      "metadata": "metadata/clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402"
+    },
+    {
+      "clip_id": "clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403",
+      "camera_id": "cam_top_down_drift_14140",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_multi_drop_bounce_141403",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 72,
+      "duration_s": 2.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0140_same_camera"
+      ],
+      "video": "videos/clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403.mp4",
+      "metadata": "metadata/clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403"
+    },
+    {
+      "clip_id": "clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900",
+      "camera_id": "cam_crane_tilt_139000",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_three_body_chain_13900",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.67928
+      },
+      "pair_groups": [
+        "block_0139_same_physics_scene"
+      ],
+      "video": "videos/clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900.mp4",
+      "metadata": "metadata/clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900"
+    },
+    {
+      "clip_id": "clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900",
+      "camera_id": "cam_diagonal_combo_139001",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_three_body_chain_13900",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0139_same_physics_scene"
+      ],
+      "video": "videos/clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900.mp4",
+      "metadata": "metadata/clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900"
+    },
+    {
+      "clip_id": "clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900",
+      "camera_id": "cam_truck_pan_139002",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_three_body_chain_13900",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0139_same_physics_scene"
+      ],
+      "video": "videos/clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900.mp4",
+      "metadata": "metadata/clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900"
+    },
+    {
+      "clip_id": "clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900",
+      "camera_id": "cam_low_truck_roll_139003",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_three_body_chain_13900",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0139_same_physics_scene"
+      ],
+      "video": "videos/clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900.mp4",
+      "metadata": "metadata/clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900"
+    },
+    {
+      "clip_id": "clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500",
+      "camera_id": "cam_top_down_drift_10450",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_randomized_mixed_drop_no_collision_104500",
+      "physics_family": "phys_randomized_mixed_drop_no_collision",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "randomized_mixed_drop_no_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.34,
+        "first_fraction": 0.46954
+      },
+      "pair_groups": [
+        "block_0104_same_camera"
+      ],
+      "video": "videos/clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500.mp4",
+      "metadata": "metadata/clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500"
+    },
+    {
+      "clip_id": "clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501",
+      "camera_id": "cam_top_down_drift_10450",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_multi_drop_bounce_104501",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.34,
+        "first_fraction": 0.46954
+      },
+      "pair_groups": [
+        "block_0104_same_camera"
+      ],
+      "video": "videos/clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501.mp4",
+      "metadata": "metadata/clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501"
+    },
+    {
+      "clip_id": "clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502",
+      "camera_id": "cam_top_down_drift_10450",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_airborne_box_box_collision_104502",
+      "physics_family": "phys_airborne_box_box_collision",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "airborne_box_box_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.34,
+        "first_fraction": 0.46954
+      },
+      "pair_groups": [
+        "block_0104_same_camera"
+      ],
+      "video": "videos/clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502.mp4",
+      "metadata": "metadata/clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502"
+    },
+    {
+      "clip_id": "clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503",
+      "camera_id": "cam_top_down_drift_10450",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_drop_hits_dynamic_box_104503",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.34,
+        "first_fraction": 0.46954
+      },
+      "pair_groups": [
+        "block_0104_same_camera"
+      ],
+      "video": "videos/clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503.mp4",
+      "metadata": "metadata/clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503"
+    },
+    {
+      "clip_id": "clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000",
+      "camera_id": "cam_static_view_0000",
+      "camera_family": "static_view",
+      "physics_id": "phys_static_mixed_pair_0000",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 144,
+      "duration_s": 5.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0000_same_camera"
+      ],
+      "video": "videos/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000.mp4",
+      "metadata": "metadata/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000"
+    },
+    {
+      "clip_id": "clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001",
+      "camera_id": "cam_static_view_0000",
+      "camera_family": "static_view",
+      "physics_id": "phys_airborne_drop_collision_0001",
+      "physics_family": "phys_airborne_drop_collision",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 144,
+      "duration_s": 5.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "airborne_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0000_same_camera"
+      ],
+      "video": "videos/clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001.mp4",
+      "metadata": "metadata/clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001"
+    },
+    {
+      "clip_id": "clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002",
+      "camera_id": "cam_static_view_0000",
+      "camera_family": "static_view",
+      "physics_id": "phys_airborne_sphere_cylinder_collision_0002",
+      "physics_family": "phys_airborne_sphere_cylinder_collision",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 144,
+      "duration_s": 5.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "airborne_sphere_cylinder_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0000_same_camera"
+      ],
+      "video": "videos/clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002.mp4",
+      "metadata": "metadata/clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002"
+    },
+    {
+      "clip_id": "clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003",
+      "camera_id": "cam_static_view_0000",
+      "camera_family": "static_view",
+      "physics_id": "phys_two_sphere_collision_0003",
+      "physics_family": "phys_two_sphere_collision",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 144,
+      "duration_s": 5.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "two_body_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0000_same_camera"
+      ],
+      "video": "videos/clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003.mp4",
+      "metadata": "metadata/clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003"
+    },
+    {
+      "clip_id": "clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100",
+      "camera_id": "cam_dolly_in_13610",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_sphere_hits_tall_block_136100",
+      "physics_family": "phys_sphere_hits_tall_block",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.78769
+      },
+      "pair_groups": [
+        "block_0136_same_camera"
+      ],
+      "video": "videos/clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100.mp4",
+      "metadata": "metadata/clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100"
+    },
+    {
+      "clip_id": "clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101",
+      "camera_id": "cam_dolly_in_13610",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_three_body_chain_136101",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.78769
+      },
+      "pair_groups": [
+        "block_0136_same_camera"
+      ],
+      "video": "videos/clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101.mp4",
+      "metadata": "metadata/clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101"
+    },
+    {
+      "clip_id": "clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102",
+      "camera_id": "cam_dolly_in_13610",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_dynamic_capsule_roll_136102",
+      "physics_family": "phys_dynamic_capsule_roll",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "dynamic_capsule_ground_motion",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.78769
+      },
+      "pair_groups": [
+        "block_0136_same_camera"
+      ],
+      "video": "videos/clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102.mp4",
+      "metadata": "metadata/clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102"
+    },
+    {
+      "clip_id": "clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103",
+      "camera_id": "cam_dolly_in_13610",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_randomized_mixed_drop_collision_136103",
+      "physics_family": "phys_randomized_mixed_drop_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "randomized_mixed_drop_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.78769
+      },
+      "pair_groups": [
+        "block_0136_same_camera"
+      ],
+      "video": "videos/clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103.mp4",
+      "metadata": "metadata/clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103"
+    },
+    {
+      "clip_id": "clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300",
+      "camera_id": "cam_static_view_153000",
+      "camera_family": "static_view",
+      "physics_id": "phys_airborne_sphere_cylinder_collision_15300",
+      "physics_family": "phys_airborne_sphere_cylinder_collision",
+      "scene_id": "scene_green_low_wall_tint_0153",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "airborne_sphere_cylinder_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0153_same_physics_scene"
+      ],
+      "video": "videos/clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300.mp4",
+      "metadata": "metadata/clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300"
+    },
+    {
+      "clip_id": "clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300",
+      "camera_id": "cam_crane_tilt_153001",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_airborne_sphere_cylinder_collision_15300",
+      "physics_family": "phys_airborne_sphere_cylinder_collision",
+      "scene_id": "scene_green_low_wall_tint_0153",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "airborne_sphere_cylinder_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.73494
+      },
+      "pair_groups": [
+        "block_0153_same_physics_scene"
+      ],
+      "video": "videos/clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300.mp4",
+      "metadata": "metadata/clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300"
+    },
+    {
+      "clip_id": "clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300",
+      "camera_id": "cam_diagonal_combo_153002",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_airborne_sphere_cylinder_collision_15300",
+      "physics_family": "phys_airborne_sphere_cylinder_collision",
+      "scene_id": "scene_green_low_wall_tint_0153",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "airborne_sphere_cylinder_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.16202
+      },
+      "pair_groups": [
+        "block_0153_same_physics_scene"
+      ],
+      "video": "videos/clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300.mp4",
+      "metadata": "metadata/clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300"
+    },
+    {
+      "clip_id": "clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300",
+      "camera_id": "cam_truck_pan_153003",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_airborne_sphere_cylinder_collision_15300",
+      "physics_family": "phys_airborne_sphere_cylinder_collision",
+      "scene_id": "scene_green_low_wall_tint_0153",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "airborne_sphere_cylinder_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0153_same_physics_scene"
+      ],
+      "video": "videos/clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300.mp4",
+      "metadata": "metadata/clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300"
+    },
+    {
+      "clip_id": "clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000",
+      "camera_id": "cam_diagonal_combo_17000",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_multi_drop_bounce_170000",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_gray_low_wall_tint_0170",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.58445,
+        "first_fraction": 0.18
+      },
+      "pair_groups": [
+        "block_0170_same_camera"
+      ],
+      "video": "videos/clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000.mp4",
+      "metadata": "metadata/clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000"
+    },
+    {
+      "clip_id": "clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001",
+      "camera_id": "cam_diagonal_combo_17000",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_airborne_box_box_collision_170001",
+      "physics_family": "phys_airborne_box_box_collision",
+      "scene_id": "scene_gray_low_wall_tint_0170",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "airborne_box_box_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.58445,
+        "first_fraction": 0.18
+      },
+      "pair_groups": [
+        "block_0170_same_camera"
+      ],
+      "video": "videos/clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001.mp4",
+      "metadata": "metadata/clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001"
+    },
+    {
+      "clip_id": "clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002",
+      "camera_id": "cam_diagonal_combo_17000",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_drop_hits_dynamic_box_170002",
+      "physics_family": "phys_drop_hits_dynamic_box",
+      "scene_id": "scene_gray_low_wall_tint_0170",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "drop_then_object_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.58445,
+        "first_fraction": 0.18
+      },
+      "pair_groups": [
+        "block_0170_same_camera"
+      ],
+      "video": "videos/clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002.mp4",
+      "metadata": "metadata/clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002"
+    },
+    {
+      "clip_id": "clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003",
+      "camera_id": "cam_diagonal_combo_17000",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_box_sphere_collision_170003",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_gray_low_wall_tint_0170",
+      "frames_count": 84,
+      "duration_s": 3.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.58445,
+        "first_fraction": 0.18
+      },
+      "pair_groups": [
+        "block_0170_same_camera"
+      ],
+      "video": "videos/clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003.mp4",
+      "metadata": "metadata/clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003"
+    },
+    {
+      "clip_id": "clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000",
+      "camera_id": "cam_crane_tilt_11200",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_airborne_chain_collision_112000",
+      "physics_family": "phys_airborne_chain_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "airborne_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.79728
+      },
+      "pair_groups": [
+        "block_0112_same_camera"
+      ],
+      "video": "videos/clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000.mp4",
+      "metadata": "metadata/clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000"
+    },
+    {
+      "clip_id": "clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001",
+      "camera_id": "cam_crane_tilt_11200",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_sphere_hits_tall_block_112001",
+      "physics_family": "phys_sphere_hits_tall_block",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.79728
+      },
+      "pair_groups": [
+        "block_0112_same_camera"
+      ],
+      "video": "videos/clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001.mp4",
+      "metadata": "metadata/clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001"
+    },
+    {
+      "clip_id": "clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002",
+      "camera_id": "cam_crane_tilt_11200",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_three_body_chain_112002",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.79728
+      },
+      "pair_groups": [
+        "block_0112_same_camera"
+      ],
+      "video": "videos/clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002.mp4",
+      "metadata": "metadata/clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002"
+    },
+    {
+      "clip_id": "clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003",
+      "camera_id": "cam_crane_tilt_11200",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_dynamic_capsule_roll_112003",
+      "physics_family": "phys_dynamic_capsule_roll",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "dynamic_capsule_ground_motion",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.79728
+      },
+      "pair_groups": [
+        "block_0112_same_camera"
+      ],
+      "video": "videos/clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003.mp4",
+      "metadata": "metadata/clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003"
+    },
+    {
+      "clip_id": "clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100",
+      "camera_id": "cam_truck_pan_21000",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_static_mixed_pair_2100",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0021_same_physics_scene"
+      ],
+      "video": "videos/clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100.mp4",
+      "metadata": "metadata/clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100"
+    },
+    {
+      "clip_id": "clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100",
+      "camera_id": "cam_low_truck_roll_21001",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_static_mixed_pair_2100",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.53697,
+        "first_fraction": 0.38497
+      },
+      "pair_groups": [
+        "block_0021_same_physics_scene"
+      ],
+      "video": "videos/clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100.mp4",
+      "metadata": "metadata/clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100"
+    },
+    {
+      "clip_id": "clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100",
+      "camera_id": "cam_dolly_out_21002",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_static_mixed_pair_2100",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0021_same_physics_scene"
+      ],
+      "video": "videos/clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100.mp4",
+      "metadata": "metadata/clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100"
+    },
+    {
+      "clip_id": "clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100",
+      "camera_id": "cam_orbit_arc_21003",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_static_mixed_pair_2100",
+      "physics_family": "phys_static_mixed_pair",
+      "scene_id": "scene_blue_tall_wall",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "multi_object_static",
+      "physics_speed_class": "none",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0021_same_physics_scene"
+      ],
+      "video": "videos/clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100.mp4",
+      "metadata": "metadata/clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100"
+    },
+    {
+      "clip_id": "clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500",
+      "camera_id": "cam_top_down_drift_95000",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_box_sphere_collision_9500",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_gray_low_wall_tint_0095",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0095_same_physics_scene"
+      ],
+      "video": "videos/clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500.mp4",
+      "metadata": "metadata/clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500"
+    },
+    {
+      "clip_id": "clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500",
+      "camera_id": "cam_static_view_95001",
+      "camera_family": "static_view",
+      "physics_id": "phys_box_sphere_collision_9500",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_gray_low_wall_tint_0095",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0095_same_physics_scene"
+      ],
+      "video": "videos/clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500.mp4",
+      "metadata": "metadata/clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500"
+    },
+    {
+      "clip_id": "clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500",
+      "camera_id": "cam_crane_tilt_95002",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_box_sphere_collision_9500",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_gray_low_wall_tint_0095",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0095_same_physics_scene"
+      ],
+      "video": "videos/clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500.mp4",
+      "metadata": "metadata/clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500"
+    },
+    {
+      "clip_id": "clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500",
+      "camera_id": "cam_diagonal_combo_95003",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_box_sphere_collision_9500",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_gray_low_wall_tint_0095",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.15
+      },
+      "pair_groups": [
+        "block_0095_same_physics_scene"
+      ],
+      "video": "videos/clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500.mp4",
+      "metadata": "metadata/clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500"
+    },
+    {
+      "clip_id": "clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900",
+      "camera_id": "cam_top_down_drift_149000",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_multi_drop_bounce_14900",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0149_same_physics_scene"
+      ],
+      "video": "videos/clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900.mp4",
+      "metadata": "metadata/clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900"
+    },
+    {
+      "clip_id": "clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900",
+      "camera_id": "cam_static_view_149001",
+      "camera_family": "static_view",
+      "physics_id": "phys_multi_drop_bounce_14900",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0149_same_physics_scene"
+      ],
+      "video": "videos/clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900.mp4",
+      "metadata": "metadata/clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900"
+    },
+    {
+      "clip_id": "clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900",
+      "camera_id": "cam_crane_tilt_149002",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_multi_drop_bounce_14900",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "two_stage",
+        "split": 0.44351,
+        "first_fraction": 0.50951
+      },
+      "pair_groups": [
+        "block_0149_same_physics_scene"
+      ],
+      "video": "videos/clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900.mp4",
+      "metadata": "metadata/clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900"
+    },
+    {
+      "clip_id": "clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900",
+      "camera_id": "cam_diagonal_combo_149003",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_multi_drop_bounce_14900",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_neutral_tall_panel",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 2.04329
+      },
+      "pair_groups": [
+        "block_0149_same_physics_scene"
+      ],
+      "video": "videos/clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900.mp4",
+      "metadata": "metadata/clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900"
+    },
+    {
+      "clip_id": "clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320",
+      "camera_id": "cam_orbit_arc_33200",
+      "camera_family": "orbit_arc",
+      "physics_id": "phys_four_body_scatter_3320",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "orbit",
+        "arc",
+        "look_at_center"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "fast",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0033_same_physics_scene"
+      ],
+      "video": "videos/clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320.mp4",
+      "metadata": "metadata/clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320"
+    },
+    {
+      "clip_id": "clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320",
+      "camera_id": "cam_dolly_in_33201",
+      "camera_family": "dolly_in",
+      "physics_id": "phys_four_body_scatter_3320",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "dolly_in",
+        "off_axis_start",
+        "mild_zoom"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0033_same_physics_scene"
+      ],
+      "video": "videos/clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320.mp4",
+      "metadata": "metadata/clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320"
+    },
+    {
+      "clip_id": "clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320",
+      "camera_id": "cam_top_down_drift_33202",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_four_body_scatter_3320",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.88819
+      },
+      "pair_groups": [
+        "block_0033_same_physics_scene"
+      ],
+      "video": "videos/clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320.mp4",
+      "metadata": "metadata/clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320"
+    },
+    {
+      "clip_id": "clip_0135_cam_static_view_33203_phys_four_body_scatter_3320",
+      "camera_id": "cam_static_view_33203",
+      "camera_family": "static_view",
+      "physics_id": "phys_four_body_scatter_3320",
+      "physics_family": "phys_four_body_scatter",
+      "scene_id": "scene_gray_low_wall",
+      "frames_count": 120,
+      "duration_s": 4.95833,
+      "camera_primitives": [
+        "static",
+        "off_center_start"
+      ],
+      "physics_kind": "four_body_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "none",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0033_same_physics_scene"
+      ],
+      "video": "videos/clip_0135_cam_static_view_33203_phys_four_body_scatter_3320.mp4",
+      "metadata": "metadata/clip_0135_cam_static_view_33203_phys_four_body_scatter_3320.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0135_cam_static_view_33203_phys_four_body_scatter_3320"
+    },
+    {
+      "clip_id": "clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200",
+      "camera_id": "cam_crane_tilt_13020",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_airborne_sphere_box_collision_130200",
+      "physics_family": "phys_airborne_sphere_box_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "airborne_sphere_box_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.81993
+      },
+      "pair_groups": [
+        "block_0130_same_camera"
+      ],
+      "video": "videos/clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200.mp4",
+      "metadata": "metadata/clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200"
+    },
+    {
+      "clip_id": "clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201",
+      "camera_id": "cam_crane_tilt_13020",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_airborne_chain_collision_130201",
+      "physics_family": "phys_airborne_chain_collision",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "airborne_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.81993
+      },
+      "pair_groups": [
+        "block_0130_same_camera"
+      ],
+      "video": "videos/clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201.mp4",
+      "metadata": "metadata/clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201"
+    },
+    {
+      "clip_id": "clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202",
+      "camera_id": "cam_crane_tilt_13020",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_sphere_hits_tall_block_130202",
+      "physics_family": "phys_sphere_hits_tall_block",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "dynamic_static_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.81993
+      },
+      "pair_groups": [
+        "block_0130_same_camera"
+      ],
+      "video": "videos/clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202.mp4",
+      "metadata": "metadata/clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202"
+    },
+    {
+      "clip_id": "clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203",
+      "camera_id": "cam_crane_tilt_13020",
+      "camera_family": "crane_tilt",
+      "physics_id": "phys_three_body_chain_130203",
+      "physics_family": "phys_three_body_chain",
+      "scene_id": "scene_warm_panel_wall",
+      "frames_count": 132,
+      "duration_s": 5.45833,
+      "camera_primitives": [
+        "crane",
+        "tilt",
+        "height_change"
+      ],
+      "physics_kind": "three_body_chain_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_out",
+        "power": 1.81993
+      },
+      "pair_groups": [
+        "block_0130_same_camera"
+      ],
+      "video": "videos/clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203.mp4",
+      "metadata": "metadata/clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203"
+    },
+    {
+      "clip_id": "clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900",
+      "camera_id": "cam_top_down_drift_12590",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_sphere_hits_dynamic_cylinder_125900",
+      "physics_family": "phys_sphere_hits_dynamic_cylinder",
+      "scene_id": "scene_blue_tall_wall_tint_0161",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "sphere_dynamic_cylinder_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0122_same_camera"
+      ],
+      "video": "videos/clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900.mp4",
+      "metadata": "metadata/clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900"
+    },
+    {
+      "clip_id": "clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901",
+      "camera_id": "cam_top_down_drift_12590",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_randomized_mixed_drop_no_collision_125901",
+      "physics_family": "phys_randomized_mixed_drop_no_collision",
+      "scene_id": "scene_blue_tall_wall_tint_0161",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "randomized_mixed_drop_no_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0122_same_camera"
+      ],
+      "video": "videos/clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901.mp4",
+      "metadata": "metadata/clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901"
+    },
+    {
+      "clip_id": "clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902",
+      "camera_id": "cam_top_down_drift_12590",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_multi_drop_bounce_125902",
+      "physics_family": "phys_multi_drop_bounce",
+      "scene_id": "scene_blue_tall_wall_tint_0161",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "multi_object_gravity_bounce",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0122_same_camera"
+      ],
+      "video": "videos/clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902.mp4",
+      "metadata": "metadata/clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902"
+    },
+    {
+      "clip_id": "clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903",
+      "camera_id": "cam_top_down_drift_12590",
+      "camera_family": "top_down_drift",
+      "physics_id": "phys_airborne_box_box_collision_125903",
+      "physics_family": "phys_airborne_box_box_collision",
+      "scene_id": "scene_blue_tall_wall_tint_0161",
+      "frames_count": 96,
+      "duration_s": 3.95833,
+      "camera_primitives": [
+        "top_down",
+        "ceiling_start",
+        "drift"
+      ],
+      "physics_kind": "airborne_box_box_collision",
+      "physics_speed_class": "mixed",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0122_same_camera"
+      ],
+      "video": "videos/clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903.mp4",
+      "metadata": "metadata/clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903"
+    },
+    {
+      "clip_id": "clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900",
+      "camera_id": "cam_diagonal_combo_179000",
+      "camera_family": "diagonal_combo",
+      "physics_id": "phys_box_sphere_collision_17900",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_neutral_tall_panel_tint_0179",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "diagonal_move",
+        "pan_tilt_combo",
+        "off_axis_start"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "linear"
+      },
+      "pair_groups": [
+        "block_0179_same_physics_scene"
+      ],
+      "video": "videos/clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900.mp4",
+      "metadata": "metadata/clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900"
+    },
+    {
+      "clip_id": "clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900",
+      "camera_id": "cam_truck_pan_179001",
+      "camera_family": "truck_pan",
+      "physics_id": "phys_box_sphere_collision_17900",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_neutral_tall_panel_tint_0179",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "truck",
+        "counter_pan",
+        "off_center_start"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in",
+        "power": 1.77204
+      },
+      "pair_groups": [
+        "block_0179_same_physics_scene"
+      ],
+      "video": "videos/clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900.mp4",
+      "metadata": "metadata/clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900"
+    },
+    {
+      "clip_id": "clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900",
+      "camera_id": "cam_low_truck_roll_179002",
+      "camera_family": "low_truck_roll",
+      "physics_id": "phys_box_sphere_collision_17900",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_neutral_tall_panel_tint_0179",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "low_start",
+        "truck",
+        "roll"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "slow",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0179_same_physics_scene"
+      ],
+      "video": "videos/clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900.mp4",
+      "metadata": "metadata/clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900"
+    },
+    {
+      "clip_id": "clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900",
+      "camera_id": "cam_dolly_out_179003",
+      "camera_family": "dolly_out",
+      "physics_id": "phys_box_sphere_collision_17900",
+      "physics_family": "phys_box_sphere_collision",
+      "scene_id": "scene_neutral_tall_panel_tint_0179",
+      "frames_count": 108,
+      "duration_s": 4.45833,
+      "camera_primitives": [
+        "dolly_out",
+        "low_or_mid_start",
+        "mild_zoom_out"
+      ],
+      "physics_kind": "box_sphere_collision",
+      "physics_speed_class": "medium",
+      "camera_speed_class": "medium",
+      "speed_curve": {
+        "type": "ease_in_out"
+      },
+      "pair_groups": [
+        "block_0179_same_physics_scene"
+      ],
+      "video": "videos/clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900.mp4",
+      "metadata": "metadata/clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900.json",
+      "source_run_id": "kubric_batch_v2_blocks_shard_0001",
+      "source_clip_id": "clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900"
+    }
+  ],
+  "pair_groups": [
+    {
+      "group_id": "block_0168_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory orbit_arc, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000",
+        "clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001",
+        "clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002",
+        "clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0158_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory top_down_drift, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300",
+        "clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301",
+        "clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302",
+        "clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 168,
+      "duration_s": 6.95833
+    },
+    {
+      "group_id": "block_0028_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory dolly_in, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100",
+        "clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101",
+        "clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102",
+        "clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 72,
+      "duration_s": 2.95833
+    },
+    {
+      "group_id": "block_0117_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_four_body_scatter, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0468_cam_static_view_117000_phys_four_body_scatter_11700",
+        "clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700",
+        "clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700",
+        "clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 132,
+      "duration_s": 5.45833
+    },
+    {
+      "group_id": "block_0020_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory dolly_out, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700",
+        "clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701",
+        "clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702",
+        "clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0124_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory low_truck_roll, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400",
+        "clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401",
+        "clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402",
+        "clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0096_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory orbit_arc, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200",
+        "clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201",
+        "clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202",
+        "clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 72,
+      "duration_s": 2.95833
+    },
+    {
+      "group_id": "block_0197_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_drop_hits_dynamic_box, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700",
+        "clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700",
+        "clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700",
+        "clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 120,
+      "duration_s": 4.95833
+    },
+    {
+      "group_id": "block_0171_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_airborne_drop_collision, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100",
+        "clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100",
+        "clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100",
+        "clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 72,
+      "duration_s": 2.95833
+    },
+    {
+      "group_id": "block_0140_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory top_down_drift, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400",
+        "clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401",
+        "clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402",
+        "clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 72,
+      "duration_s": 2.95833
+    },
+    {
+      "group_id": "block_0139_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_three_body_chain, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900",
+        "clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900",
+        "clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900",
+        "clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0104_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory top_down_drift, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500",
+        "clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501",
+        "clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502",
+        "clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 84,
+      "duration_s": 3.45833
+    },
+    {
+      "group_id": "block_0000_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory static_view, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000",
+        "clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001",
+        "clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002",
+        "clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 144,
+      "duration_s": 5.95833
+    },
+    {
+      "group_id": "block_0136_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory dolly_in, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100",
+        "clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101",
+        "clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102",
+        "clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0153_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_airborne_sphere_cylinder_collision, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300",
+        "clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300",
+        "clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300",
+        "clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0170_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory diagonal_combo, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000",
+        "clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001",
+        "clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002",
+        "clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 84,
+      "duration_s": 3.45833
+    },
+    {
+      "group_id": "block_0112_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory crane_tilt, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000",
+        "clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001",
+        "clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002",
+        "clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 120,
+      "duration_s": 4.95833
+    },
+    {
+      "group_id": "block_0021_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_static_mixed_pair, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100",
+        "clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100",
+        "clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100",
+        "clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 108,
+      "duration_s": 4.45833
+    },
+    {
+      "group_id": "block_0095_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_box_sphere_collision, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500",
+        "clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500",
+        "clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500",
+        "clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 108,
+      "duration_s": 4.45833
+    },
+    {
+      "group_id": "block_0149_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_multi_drop_bounce, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900",
+        "clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900",
+        "clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900",
+        "clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0033_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_four_body_scatter, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320",
+        "clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320",
+        "clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320",
+        "clip_0135_cam_static_view_33203_phys_four_body_scatter_3320"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 120,
+      "duration_s": 4.95833
+    },
+    {
+      "group_id": "block_0130_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory crane_tilt, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200",
+        "clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201",
+        "clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202",
+        "clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 132,
+      "duration_s": 5.45833
+    },
+    {
+      "group_id": "block_0122_same_camera",
+      "kind": "same_camera",
+      "group_structure": "same_camera_block",
+      "group_size": 4,
+      "title": "Same camera trajectory top_down_drift, 4 different physics programs",
+      "controlled_factor": "camera_id/scene_id/frames",
+      "varied_factor": "physics_id",
+      "clip_ids": [
+        "clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900",
+        "clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901",
+        "clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902",
+        "clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903"
+      ],
+      "tags": [
+        "same_camera",
+        "same_scene",
+        "different_physics",
+        "shared_factor_block"
+      ],
+      "frames_count": 96,
+      "duration_s": 3.95833
+    },
+    {
+      "group_id": "block_0179_same_physics_scene",
+      "kind": "same_physics_scene",
+      "group_structure": "same_physics_block",
+      "group_size": 4,
+      "title": "Same physics and scene phys_box_sphere_collision, 4 different camera trajectories",
+      "controlled_factor": "physics_id/scene_id/frames",
+      "varied_factor": "camera_id",
+      "clip_ids": [
+        "clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900",
+        "clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900",
+        "clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900",
+        "clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900"
+      ],
+      "tags": [
+        "same_physics",
+        "same_scene",
+        "different_camera",
+        "shared_factor_block"
+      ],
+      "frames_count": 108,
+      "duration_s": 4.45833
+    }
+  ],
+  "ambiguous_equivalence_groups": [],
+  "source_run": {
+    "run_id": "kubric_batch_v2_blocks_shard_0001",
+    "run_dir": "/workspace/writeable/datasets/camera_motion_disentangle/kubric_batch_v2_blocks_shard_0001"
+  },
+  "review_sample": {
+    "selected_pair_groups": 24,
+    "selected_clips": 96,
+    "selection_seed": 20260731,
+    "selection_policy": "greedy coverage over camera families, physics families, pair kinds, physics kinds, speed classes, and duration bins; only complete pair groups with videos are eligible",
+    "exported_at_utc": "2026-08-05T09:14:24.796377+00:00"
+  }
+}

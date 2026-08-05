@@ -1,0 +1,441 @@
+# kubric_batch_v2_blocks_shard_0001_review_sample
+
+Generator: `kubric_review_sample_export`
+
+## Pair Groups
+
+- `block_0168_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000, clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001, clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002, clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003
+- `block_0158_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300, clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301, clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302, clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303
+- `block_0028_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100, clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101, clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102, clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103
+- `block_0117_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0468_cam_static_view_117000_phys_four_body_scatter_11700, clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700, clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700, clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700
+- `block_0020_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700, clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701, clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702, clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703
+- `block_0124_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400, clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401, clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402, clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403
+- `block_0096_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200, clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201, clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202, clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203
+- `block_0197_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700, clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700, clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700, clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700
+- `block_0171_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100, clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100, clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100, clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100
+- `block_0140_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400, clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401, clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402, clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403
+- `block_0139_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900, clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900, clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900, clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900
+- `block_0104_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500, clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501, clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502, clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503
+- `block_0000_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000, clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001, clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002, clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003
+- `block_0136_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100, clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101, clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102, clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103
+- `block_0153_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300, clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300, clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300, clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300
+- `block_0170_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000, clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001, clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002, clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003
+- `block_0112_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000, clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001, clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002, clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003
+- `block_0021_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100, clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100, clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100, clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100
+- `block_0095_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500, clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500, clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500, clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500
+- `block_0149_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900, clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900, clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900, clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900
+- `block_0033_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320, clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320, clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320, clip_0135_cam_static_view_33203_phys_four_body_scatter_3320
+- `block_0130_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200, clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201, clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202, clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203
+- `block_0122_same_camera`: controlled `camera_id/scene_id/frames`, varied `physics_id`
+  clips: clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900, clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901, clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902, clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903
+- `block_0179_same_physics_scene`: controlled `physics_id/scene_id/frames`, varied `camera_id`
+  clips: clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900, clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900, clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900, clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900
+
+## Clips
+
+- `clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000`: camera `cam_orbit_arc_16800`, physics `phys_static_mixed_pair_168000`
+  preview: `previews/clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000_sheet.png`
+  video: `videos/clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000.mp4`
+  metadata: `metadata/clip_0672_cam_orbit_arc_16800_phys_static_mixed_pair_168000.json`
+- `clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001`: camera `cam_orbit_arc_16800`, physics `phys_airborne_drop_collision_168001`
+  preview: `previews/clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001_sheet.png`
+  video: `videos/clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001.mp4`
+  metadata: `metadata/clip_0673_cam_orbit_arc_16800_phys_airborne_drop_collision_168001.json`
+- `clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002`: camera `cam_orbit_arc_16800`, physics `phys_airborne_sphere_cylinder_collision_168002`
+  preview: `previews/clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002_sheet.png`
+  video: `videos/clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002.mp4`
+  metadata: `metadata/clip_0674_cam_orbit_arc_16800_phys_airborne_sphere_cylinder_collision_168002.json`
+- `clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003`: camera `cam_orbit_arc_16800`, physics `phys_two_sphere_collision_168003`
+  preview: `previews/clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003_sheet.png`
+  video: `videos/clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003.mp4`
+  metadata: `metadata/clip_0675_cam_orbit_arc_16800_phys_two_sphere_collision_168003.json`
+- `clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300`: camera `cam_top_down_drift_16030`, physics `phys_box_sphere_collision_160300`
+  preview: `previews/clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300_sheet.png`
+  video: `videos/clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300.mp4`
+  metadata: `metadata/clip_0632_cam_top_down_drift_16030_phys_box_sphere_collision_160300.json`
+- `clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301`: camera `cam_top_down_drift_16030`, physics `phys_four_body_crossfire_160301`
+  preview: `previews/clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301_sheet.png`
+  video: `videos/clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301.mp4`
+  metadata: `metadata/clip_0633_cam_top_down_drift_16030_phys_four_body_crossfire_160301.json`
+- `clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302`: camera `cam_top_down_drift_16030`, physics `phys_sphere_hits_dynamic_cylinder_160302`
+  preview: `previews/clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302_sheet.png`
+  video: `videos/clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302.mp4`
+  metadata: `metadata/clip_0634_cam_top_down_drift_16030_phys_sphere_hits_dynamic_cylinder_160302.json`
+- `clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303`: camera `cam_top_down_drift_16030`, physics `phys_randomized_mixed_drop_no_collision_160303`
+  preview: `previews/clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303_sheet.png`
+  video: `videos/clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303.mp4`
+  metadata: `metadata/clip_0635_cam_top_down_drift_16030_phys_randomized_mixed_drop_no_collision_160303.json`
+- `clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100`: camera `cam_dolly_in_2810`, physics `phys_airborne_chain_collision_28100`
+  preview: `previews/clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100_sheet.png`
+  video: `videos/clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100.mp4`
+  metadata: `metadata/clip_0112_cam_dolly_in_2810_phys_airborne_chain_collision_28100.json`
+- `clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101`: camera `cam_dolly_in_2810`, physics `phys_sphere_hits_tall_block_28101`
+  preview: `previews/clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101_sheet.png`
+  video: `videos/clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101.mp4`
+  metadata: `metadata/clip_0113_cam_dolly_in_2810_phys_sphere_hits_tall_block_28101.json`
+- `clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102`: camera `cam_dolly_in_2810`, physics `phys_three_body_chain_28102`
+  preview: `previews/clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102_sheet.png`
+  video: `videos/clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102.mp4`
+  metadata: `metadata/clip_0114_cam_dolly_in_2810_phys_three_body_chain_28102.json`
+- `clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103`: camera `cam_dolly_in_2810`, physics `phys_dynamic_capsule_roll_28103`
+  preview: `previews/clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103_sheet.png`
+  video: `videos/clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103.mp4`
+  metadata: `metadata/clip_0115_cam_dolly_in_2810_phys_dynamic_capsule_roll_28103.json`
+- `clip_0468_cam_static_view_117000_phys_four_body_scatter_11700`: camera `cam_static_view_117000`, physics `phys_four_body_scatter_11700`
+  preview: `previews/clip_0468_cam_static_view_117000_phys_four_body_scatter_11700_sheet.png`
+  video: `videos/clip_0468_cam_static_view_117000_phys_four_body_scatter_11700.mp4`
+  metadata: `metadata/clip_0468_cam_static_view_117000_phys_four_body_scatter_11700.json`
+- `clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700`: camera `cam_crane_tilt_117001`, physics `phys_four_body_scatter_11700`
+  preview: `previews/clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700_sheet.png`
+  video: `videos/clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700.mp4`
+  metadata: `metadata/clip_0469_cam_crane_tilt_117001_phys_four_body_scatter_11700.json`
+- `clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700`: camera `cam_diagonal_combo_117002`, physics `phys_four_body_scatter_11700`
+  preview: `previews/clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700_sheet.png`
+  video: `videos/clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700.mp4`
+  metadata: `metadata/clip_0470_cam_diagonal_combo_117002_phys_four_body_scatter_11700.json`
+- `clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700`: camera `cam_truck_pan_117003`, physics `phys_four_body_scatter_11700`
+  preview: `previews/clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700_sheet.png`
+  video: `videos/clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700.mp4`
+  metadata: `metadata/clip_0471_cam_truck_pan_117003_phys_four_body_scatter_11700.json`
+- `clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700`: camera `cam_dolly_out_2070`, physics `phys_randomized_mixed_drop_no_collision_20700`
+  preview: `previews/clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700_sheet.png`
+  video: `videos/clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700.mp4`
+  metadata: `metadata/clip_0080_cam_dolly_out_2070_phys_randomized_mixed_drop_no_collision_20700.json`
+- `clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701`: camera `cam_dolly_out_2070`, physics `phys_multi_drop_bounce_20701`
+  preview: `previews/clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701_sheet.png`
+  video: `videos/clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701.mp4`
+  metadata: `metadata/clip_0081_cam_dolly_out_2070_phys_multi_drop_bounce_20701.json`
+- `clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702`: camera `cam_dolly_out_2070`, physics `phys_airborne_box_box_collision_20702`
+  preview: `previews/clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702_sheet.png`
+  video: `videos/clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702.mp4`
+  metadata: `metadata/clip_0082_cam_dolly_out_2070_phys_airborne_box_box_collision_20702.json`
+- `clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703`: camera `cam_dolly_out_2070`, physics `phys_drop_hits_dynamic_box_20703`
+  preview: `previews/clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703_sheet.png`
+  video: `videos/clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703.mp4`
+  metadata: `metadata/clip_0083_cam_dolly_out_2070_phys_drop_hits_dynamic_box_20703.json`
+- `clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400`: camera `cam_low_truck_roll_12440`, physics `phys_randomized_mixed_drop_collision_124400`
+  preview: `previews/clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400_sheet.png`
+  video: `videos/clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400.mp4`
+  metadata: `metadata/clip_0496_cam_low_truck_roll_12440_phys_randomized_mixed_drop_collision_124400.json`
+- `clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401`: camera `cam_low_truck_roll_12440`, physics `phys_drop_bounce_124401`
+  preview: `previews/clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401_sheet.png`
+  video: `videos/clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401.mp4`
+  metadata: `metadata/clip_0497_cam_low_truck_roll_12440_phys_drop_bounce_124401.json`
+- `clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402`: camera `cam_low_truck_roll_12440`, physics `phys_airborne_sphere_box_collision_124402`
+  preview: `previews/clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402_sheet.png`
+  video: `videos/clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402.mp4`
+  metadata: `metadata/clip_0498_cam_low_truck_roll_12440_phys_airborne_sphere_box_collision_124402.json`
+- `clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403`: camera `cam_low_truck_roll_12440`, physics `phys_airborne_chain_collision_124403`
+  preview: `previews/clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403_sheet.png`
+  video: `videos/clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403.mp4`
+  metadata: `metadata/clip_0499_cam_low_truck_roll_12440_phys_airborne_chain_collision_124403.json`
+- `clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200`: camera `cam_orbit_arc_9620`, physics `phys_four_body_scatter_96200`
+  preview: `previews/clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200_sheet.png`
+  video: `videos/clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200.mp4`
+  metadata: `metadata/clip_0384_cam_orbit_arc_9620_phys_four_body_scatter_96200.json`
+- `clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201`: camera `cam_orbit_arc_9620`, physics `phys_dynamic_cylinder_roll_96201`
+  preview: `previews/clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201_sheet.png`
+  video: `videos/clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201.mp4`
+  metadata: `metadata/clip_0385_cam_orbit_arc_9620_phys_dynamic_cylinder_roll_96201.json`
+- `clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202`: camera `cam_orbit_arc_9620`, physics `phys_randomized_mixed_drop_scene_96202`
+  preview: `previews/clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202_sheet.png`
+  video: `videos/clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202.mp4`
+  metadata: `metadata/clip_0386_cam_orbit_arc_9620_phys_randomized_mixed_drop_scene_96202.json`
+- `clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203`: camera `cam_orbit_arc_9620`, physics `phys_static_mixed_pair_96203`
+  preview: `previews/clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203_sheet.png`
+  video: `videos/clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203.mp4`
+  metadata: `metadata/clip_0387_cam_orbit_arc_9620_phys_static_mixed_pair_96203.json`
+- `clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700`: camera `cam_diagonal_combo_197000`, physics `phys_drop_hits_dynamic_box_19700`
+  preview: `previews/clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700_sheet.png`
+  video: `videos/clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700.mp4`
+  metadata: `metadata/clip_0788_cam_diagonal_combo_197000_phys_drop_hits_dynamic_box_19700.json`
+- `clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700`: camera `cam_truck_pan_197001`, physics `phys_drop_hits_dynamic_box_19700`
+  preview: `previews/clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700_sheet.png`
+  video: `videos/clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700.mp4`
+  metadata: `metadata/clip_0789_cam_truck_pan_197001_phys_drop_hits_dynamic_box_19700.json`
+- `clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700`: camera `cam_low_truck_roll_197002`, physics `phys_drop_hits_dynamic_box_19700`
+  preview: `previews/clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700_sheet.png`
+  video: `videos/clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700.mp4`
+  metadata: `metadata/clip_0790_cam_low_truck_roll_197002_phys_drop_hits_dynamic_box_19700.json`
+- `clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700`: camera `cam_dolly_out_197003`, physics `phys_drop_hits_dynamic_box_19700`
+  preview: `previews/clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700_sheet.png`
+  video: `videos/clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700.mp4`
+  metadata: `metadata/clip_0791_cam_dolly_out_197003_phys_drop_hits_dynamic_box_19700.json`
+- `clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100`: camera `cam_static_view_171000`, physics `phys_airborne_drop_collision_17100`
+  preview: `previews/clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100_sheet.png`
+  video: `videos/clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100.mp4`
+  metadata: `metadata/clip_0684_cam_static_view_171000_phys_airborne_drop_collision_17100.json`
+- `clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100`: camera `cam_crane_tilt_171001`, physics `phys_airborne_drop_collision_17100`
+  preview: `previews/clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100_sheet.png`
+  video: `videos/clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100.mp4`
+  metadata: `metadata/clip_0685_cam_crane_tilt_171001_phys_airborne_drop_collision_17100.json`
+- `clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100`: camera `cam_diagonal_combo_171002`, physics `phys_airborne_drop_collision_17100`
+  preview: `previews/clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100_sheet.png`
+  video: `videos/clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100.mp4`
+  metadata: `metadata/clip_0686_cam_diagonal_combo_171002_phys_airborne_drop_collision_17100.json`
+- `clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100`: camera `cam_truck_pan_171003`, physics `phys_airborne_drop_collision_17100`
+  preview: `previews/clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100_sheet.png`
+  video: `videos/clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100.mp4`
+  metadata: `metadata/clip_0687_cam_truck_pan_171003_phys_airborne_drop_collision_17100.json`
+- `clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400`: camera `cam_top_down_drift_14140`, physics `phys_four_body_crossfire_141400`
+  preview: `previews/clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400_sheet.png`
+  video: `videos/clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400.mp4`
+  metadata: `metadata/clip_0560_cam_top_down_drift_14140_phys_four_body_crossfire_141400.json`
+- `clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401`: camera `cam_top_down_drift_14140`, physics `phys_sphere_hits_dynamic_cylinder_141401`
+  preview: `previews/clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401_sheet.png`
+  video: `videos/clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401.mp4`
+  metadata: `metadata/clip_0561_cam_top_down_drift_14140_phys_sphere_hits_dynamic_cylinder_141401.json`
+- `clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402`: camera `cam_top_down_drift_14140`, physics `phys_randomized_mixed_drop_no_collision_141402`
+  preview: `previews/clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402_sheet.png`
+  video: `videos/clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402.mp4`
+  metadata: `metadata/clip_0562_cam_top_down_drift_14140_phys_randomized_mixed_drop_no_collision_141402.json`
+- `clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403`: camera `cam_top_down_drift_14140`, physics `phys_multi_drop_bounce_141403`
+  preview: `previews/clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403_sheet.png`
+  video: `videos/clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403.mp4`
+  metadata: `metadata/clip_0563_cam_top_down_drift_14140_phys_multi_drop_bounce_141403.json`
+- `clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900`: camera `cam_crane_tilt_139000`, physics `phys_three_body_chain_13900`
+  preview: `previews/clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900_sheet.png`
+  video: `videos/clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900.mp4`
+  metadata: `metadata/clip_0556_cam_crane_tilt_139000_phys_three_body_chain_13900.json`
+- `clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900`: camera `cam_diagonal_combo_139001`, physics `phys_three_body_chain_13900`
+  preview: `previews/clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900_sheet.png`
+  video: `videos/clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900.mp4`
+  metadata: `metadata/clip_0557_cam_diagonal_combo_139001_phys_three_body_chain_13900.json`
+- `clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900`: camera `cam_truck_pan_139002`, physics `phys_three_body_chain_13900`
+  preview: `previews/clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900_sheet.png`
+  video: `videos/clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900.mp4`
+  metadata: `metadata/clip_0558_cam_truck_pan_139002_phys_three_body_chain_13900.json`
+- `clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900`: camera `cam_low_truck_roll_139003`, physics `phys_three_body_chain_13900`
+  preview: `previews/clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900_sheet.png`
+  video: `videos/clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900.mp4`
+  metadata: `metadata/clip_0559_cam_low_truck_roll_139003_phys_three_body_chain_13900.json`
+- `clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500`: camera `cam_top_down_drift_10450`, physics `phys_randomized_mixed_drop_no_collision_104500`
+  preview: `previews/clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500_sheet.png`
+  video: `videos/clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500.mp4`
+  metadata: `metadata/clip_0416_cam_top_down_drift_10450_phys_randomized_mixed_drop_no_collision_104500.json`
+- `clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501`: camera `cam_top_down_drift_10450`, physics `phys_multi_drop_bounce_104501`
+  preview: `previews/clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501_sheet.png`
+  video: `videos/clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501.mp4`
+  metadata: `metadata/clip_0417_cam_top_down_drift_10450_phys_multi_drop_bounce_104501.json`
+- `clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502`: camera `cam_top_down_drift_10450`, physics `phys_airborne_box_box_collision_104502`
+  preview: `previews/clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502_sheet.png`
+  video: `videos/clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502.mp4`
+  metadata: `metadata/clip_0418_cam_top_down_drift_10450_phys_airborne_box_box_collision_104502.json`
+- `clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503`: camera `cam_top_down_drift_10450`, physics `phys_drop_hits_dynamic_box_104503`
+  preview: `previews/clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503_sheet.png`
+  video: `videos/clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503.mp4`
+  metadata: `metadata/clip_0419_cam_top_down_drift_10450_phys_drop_hits_dynamic_box_104503.json`
+- `clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000`: camera `cam_static_view_0000`, physics `phys_static_mixed_pair_0000`
+  preview: `previews/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000_sheet.png`
+  video: `videos/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000.mp4`
+  metadata: `metadata/clip_0000_cam_static_view_0000_phys_static_mixed_pair_0000.json`
+- `clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001`: camera `cam_static_view_0000`, physics `phys_airborne_drop_collision_0001`
+  preview: `previews/clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001_sheet.png`
+  video: `videos/clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001.mp4`
+  metadata: `metadata/clip_0001_cam_static_view_0000_phys_airborne_drop_collision_0001.json`
+- `clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002`: camera `cam_static_view_0000`, physics `phys_airborne_sphere_cylinder_collision_0002`
+  preview: `previews/clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002_sheet.png`
+  video: `videos/clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002.mp4`
+  metadata: `metadata/clip_0002_cam_static_view_0000_phys_airborne_sphere_cylinder_collision_0002.json`
+- `clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003`: camera `cam_static_view_0000`, physics `phys_two_sphere_collision_0003`
+  preview: `previews/clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003_sheet.png`
+  video: `videos/clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003.mp4`
+  metadata: `metadata/clip_0003_cam_static_view_0000_phys_two_sphere_collision_0003.json`
+- `clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100`: camera `cam_dolly_in_13610`, physics `phys_sphere_hits_tall_block_136100`
+  preview: `previews/clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100_sheet.png`
+  video: `videos/clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100.mp4`
+  metadata: `metadata/clip_0544_cam_dolly_in_13610_phys_sphere_hits_tall_block_136100.json`
+- `clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101`: camera `cam_dolly_in_13610`, physics `phys_three_body_chain_136101`
+  preview: `previews/clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101_sheet.png`
+  video: `videos/clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101.mp4`
+  metadata: `metadata/clip_0545_cam_dolly_in_13610_phys_three_body_chain_136101.json`
+- `clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102`: camera `cam_dolly_in_13610`, physics `phys_dynamic_capsule_roll_136102`
+  preview: `previews/clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102_sheet.png`
+  video: `videos/clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102.mp4`
+  metadata: `metadata/clip_0546_cam_dolly_in_13610_phys_dynamic_capsule_roll_136102.json`
+- `clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103`: camera `cam_dolly_in_13610`, physics `phys_randomized_mixed_drop_collision_136103`
+  preview: `previews/clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103_sheet.png`
+  video: `videos/clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103.mp4`
+  metadata: `metadata/clip_0547_cam_dolly_in_13610_phys_randomized_mixed_drop_collision_136103.json`
+- `clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300`: camera `cam_static_view_153000`, physics `phys_airborne_sphere_cylinder_collision_15300`
+  preview: `previews/clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300_sheet.png`
+  video: `videos/clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300.mp4`
+  metadata: `metadata/clip_0612_cam_static_view_153000_phys_airborne_sphere_cylinder_collision_15300.json`
+- `clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300`: camera `cam_crane_tilt_153001`, physics `phys_airborne_sphere_cylinder_collision_15300`
+  preview: `previews/clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300_sheet.png`
+  video: `videos/clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300.mp4`
+  metadata: `metadata/clip_0613_cam_crane_tilt_153001_phys_airborne_sphere_cylinder_collision_15300.json`
+- `clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300`: camera `cam_diagonal_combo_153002`, physics `phys_airborne_sphere_cylinder_collision_15300`
+  preview: `previews/clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300_sheet.png`
+  video: `videos/clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300.mp4`
+  metadata: `metadata/clip_0614_cam_diagonal_combo_153002_phys_airborne_sphere_cylinder_collision_15300.json`
+- `clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300`: camera `cam_truck_pan_153003`, physics `phys_airborne_sphere_cylinder_collision_15300`
+  preview: `previews/clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300_sheet.png`
+  video: `videos/clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300.mp4`
+  metadata: `metadata/clip_0615_cam_truck_pan_153003_phys_airborne_sphere_cylinder_collision_15300.json`
+- `clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000`: camera `cam_diagonal_combo_17000`, physics `phys_multi_drop_bounce_170000`
+  preview: `previews/clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000_sheet.png`
+  video: `videos/clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000.mp4`
+  metadata: `metadata/clip_0680_cam_diagonal_combo_17000_phys_multi_drop_bounce_170000.json`
+- `clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001`: camera `cam_diagonal_combo_17000`, physics `phys_airborne_box_box_collision_170001`
+  preview: `previews/clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001_sheet.png`
+  video: `videos/clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001.mp4`
+  metadata: `metadata/clip_0681_cam_diagonal_combo_17000_phys_airborne_box_box_collision_170001.json`
+- `clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002`: camera `cam_diagonal_combo_17000`, physics `phys_drop_hits_dynamic_box_170002`
+  preview: `previews/clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002_sheet.png`
+  video: `videos/clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002.mp4`
+  metadata: `metadata/clip_0682_cam_diagonal_combo_17000_phys_drop_hits_dynamic_box_170002.json`
+- `clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003`: camera `cam_diagonal_combo_17000`, physics `phys_box_sphere_collision_170003`
+  preview: `previews/clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003_sheet.png`
+  video: `videos/clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003.mp4`
+  metadata: `metadata/clip_0683_cam_diagonal_combo_17000_phys_box_sphere_collision_170003.json`
+- `clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000`: camera `cam_crane_tilt_11200`, physics `phys_airborne_chain_collision_112000`
+  preview: `previews/clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000_sheet.png`
+  video: `videos/clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000.mp4`
+  metadata: `metadata/clip_0448_cam_crane_tilt_11200_phys_airborne_chain_collision_112000.json`
+- `clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001`: camera `cam_crane_tilt_11200`, physics `phys_sphere_hits_tall_block_112001`
+  preview: `previews/clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001_sheet.png`
+  video: `videos/clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001.mp4`
+  metadata: `metadata/clip_0449_cam_crane_tilt_11200_phys_sphere_hits_tall_block_112001.json`
+- `clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002`: camera `cam_crane_tilt_11200`, physics `phys_three_body_chain_112002`
+  preview: `previews/clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002_sheet.png`
+  video: `videos/clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002.mp4`
+  metadata: `metadata/clip_0450_cam_crane_tilt_11200_phys_three_body_chain_112002.json`
+- `clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003`: camera `cam_crane_tilt_11200`, physics `phys_dynamic_capsule_roll_112003`
+  preview: `previews/clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003_sheet.png`
+  video: `videos/clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003.mp4`
+  metadata: `metadata/clip_0451_cam_crane_tilt_11200_phys_dynamic_capsule_roll_112003.json`
+- `clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100`: camera `cam_truck_pan_21000`, physics `phys_static_mixed_pair_2100`
+  preview: `previews/clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100_sheet.png`
+  video: `videos/clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100.mp4`
+  metadata: `metadata/clip_0084_cam_truck_pan_21000_phys_static_mixed_pair_2100.json`
+- `clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100`: camera `cam_low_truck_roll_21001`, physics `phys_static_mixed_pair_2100`
+  preview: `previews/clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100_sheet.png`
+  video: `videos/clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100.mp4`
+  metadata: `metadata/clip_0085_cam_low_truck_roll_21001_phys_static_mixed_pair_2100.json`
+- `clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100`: camera `cam_dolly_out_21002`, physics `phys_static_mixed_pair_2100`
+  preview: `previews/clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100_sheet.png`
+  video: `videos/clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100.mp4`
+  metadata: `metadata/clip_0086_cam_dolly_out_21002_phys_static_mixed_pair_2100.json`
+- `clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100`: camera `cam_orbit_arc_21003`, physics `phys_static_mixed_pair_2100`
+  preview: `previews/clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100_sheet.png`
+  video: `videos/clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100.mp4`
+  metadata: `metadata/clip_0087_cam_orbit_arc_21003_phys_static_mixed_pair_2100.json`
+- `clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500`: camera `cam_top_down_drift_95000`, physics `phys_box_sphere_collision_9500`
+  preview: `previews/clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500_sheet.png`
+  video: `videos/clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500.mp4`
+  metadata: `metadata/clip_0380_cam_top_down_drift_95000_phys_box_sphere_collision_9500.json`
+- `clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500`: camera `cam_static_view_95001`, physics `phys_box_sphere_collision_9500`
+  preview: `previews/clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500_sheet.png`
+  video: `videos/clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500.mp4`
+  metadata: `metadata/clip_0381_cam_static_view_95001_phys_box_sphere_collision_9500.json`
+- `clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500`: camera `cam_crane_tilt_95002`, physics `phys_box_sphere_collision_9500`
+  preview: `previews/clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500_sheet.png`
+  video: `videos/clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500.mp4`
+  metadata: `metadata/clip_0382_cam_crane_tilt_95002_phys_box_sphere_collision_9500.json`
+- `clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500`: camera `cam_diagonal_combo_95003`, physics `phys_box_sphere_collision_9500`
+  preview: `previews/clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500_sheet.png`
+  video: `videos/clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500.mp4`
+  metadata: `metadata/clip_0383_cam_diagonal_combo_95003_phys_box_sphere_collision_9500.json`
+- `clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900`: camera `cam_top_down_drift_149000`, physics `phys_multi_drop_bounce_14900`
+  preview: `previews/clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900_sheet.png`
+  video: `videos/clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900.mp4`
+  metadata: `metadata/clip_0596_cam_top_down_drift_149000_phys_multi_drop_bounce_14900.json`
+- `clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900`: camera `cam_static_view_149001`, physics `phys_multi_drop_bounce_14900`
+  preview: `previews/clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900_sheet.png`
+  video: `videos/clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900.mp4`
+  metadata: `metadata/clip_0597_cam_static_view_149001_phys_multi_drop_bounce_14900.json`
+- `clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900`: camera `cam_crane_tilt_149002`, physics `phys_multi_drop_bounce_14900`
+  preview: `previews/clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900_sheet.png`
+  video: `videos/clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900.mp4`
+  metadata: `metadata/clip_0598_cam_crane_tilt_149002_phys_multi_drop_bounce_14900.json`
+- `clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900`: camera `cam_diagonal_combo_149003`, physics `phys_multi_drop_bounce_14900`
+  preview: `previews/clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900_sheet.png`
+  video: `videos/clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900.mp4`
+  metadata: `metadata/clip_0599_cam_diagonal_combo_149003_phys_multi_drop_bounce_14900.json`
+- `clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320`: camera `cam_orbit_arc_33200`, physics `phys_four_body_scatter_3320`
+  preview: `previews/clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320_sheet.png`
+  video: `videos/clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320.mp4`
+  metadata: `metadata/clip_0132_cam_orbit_arc_33200_phys_four_body_scatter_3320.json`
+- `clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320`: camera `cam_dolly_in_33201`, physics `phys_four_body_scatter_3320`
+  preview: `previews/clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320_sheet.png`
+  video: `videos/clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320.mp4`
+  metadata: `metadata/clip_0133_cam_dolly_in_33201_phys_four_body_scatter_3320.json`
+- `clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320`: camera `cam_top_down_drift_33202`, physics `phys_four_body_scatter_3320`
+  preview: `previews/clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320_sheet.png`
+  video: `videos/clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320.mp4`
+  metadata: `metadata/clip_0134_cam_top_down_drift_33202_phys_four_body_scatter_3320.json`
+- `clip_0135_cam_static_view_33203_phys_four_body_scatter_3320`: camera `cam_static_view_33203`, physics `phys_four_body_scatter_3320`
+  preview: `previews/clip_0135_cam_static_view_33203_phys_four_body_scatter_3320_sheet.png`
+  video: `videos/clip_0135_cam_static_view_33203_phys_four_body_scatter_3320.mp4`
+  metadata: `metadata/clip_0135_cam_static_view_33203_phys_four_body_scatter_3320.json`
+- `clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200`: camera `cam_crane_tilt_13020`, physics `phys_airborne_sphere_box_collision_130200`
+  preview: `previews/clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200_sheet.png`
+  video: `videos/clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200.mp4`
+  metadata: `metadata/clip_0520_cam_crane_tilt_13020_phys_airborne_sphere_box_collision_130200.json`
+- `clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201`: camera `cam_crane_tilt_13020`, physics `phys_airborne_chain_collision_130201`
+  preview: `previews/clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201_sheet.png`
+  video: `videos/clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201.mp4`
+  metadata: `metadata/clip_0521_cam_crane_tilt_13020_phys_airborne_chain_collision_130201.json`
+- `clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202`: camera `cam_crane_tilt_13020`, physics `phys_sphere_hits_tall_block_130202`
+  preview: `previews/clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202_sheet.png`
+  video: `videos/clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202.mp4`
+  metadata: `metadata/clip_0522_cam_crane_tilt_13020_phys_sphere_hits_tall_block_130202.json`
+- `clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203`: camera `cam_crane_tilt_13020`, physics `phys_three_body_chain_130203`
+  preview: `previews/clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203_sheet.png`
+  video: `videos/clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203.mp4`
+  metadata: `metadata/clip_0523_cam_crane_tilt_13020_phys_three_body_chain_130203.json`
+- `clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900`: camera `cam_top_down_drift_12590`, physics `phys_sphere_hits_dynamic_cylinder_125900`
+  preview: `previews/clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900_sheet.png`
+  video: `videos/clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900.mp4`
+  metadata: `metadata/clip_0488_cam_top_down_drift_12590_phys_sphere_hits_dynamic_cylinder_125900.json`
+- `clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901`: camera `cam_top_down_drift_12590`, physics `phys_randomized_mixed_drop_no_collision_125901`
+  preview: `previews/clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901_sheet.png`
+  video: `videos/clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901.mp4`
+  metadata: `metadata/clip_0489_cam_top_down_drift_12590_phys_randomized_mixed_drop_no_collision_125901.json`
+- `clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902`: camera `cam_top_down_drift_12590`, physics `phys_multi_drop_bounce_125902`
+  preview: `previews/clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902_sheet.png`
+  video: `videos/clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902.mp4`
+  metadata: `metadata/clip_0490_cam_top_down_drift_12590_phys_multi_drop_bounce_125902.json`
+- `clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903`: camera `cam_top_down_drift_12590`, physics `phys_airborne_box_box_collision_125903`
+  preview: `previews/clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903_sheet.png`
+  video: `videos/clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903.mp4`
+  metadata: `metadata/clip_0491_cam_top_down_drift_12590_phys_airborne_box_box_collision_125903.json`
+- `clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900`: camera `cam_diagonal_combo_179000`, physics `phys_box_sphere_collision_17900`
+  preview: `previews/clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900_sheet.png`
+  video: `videos/clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900.mp4`
+  metadata: `metadata/clip_0716_cam_diagonal_combo_179000_phys_box_sphere_collision_17900.json`
+- `clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900`: camera `cam_truck_pan_179001`, physics `phys_box_sphere_collision_17900`
+  preview: `previews/clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900_sheet.png`
+  video: `videos/clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900.mp4`
+  metadata: `metadata/clip_0717_cam_truck_pan_179001_phys_box_sphere_collision_17900.json`
+- `clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900`: camera `cam_low_truck_roll_179002`, physics `phys_box_sphere_collision_17900`
+  preview: `previews/clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900_sheet.png`
+  video: `videos/clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900.mp4`
+  metadata: `metadata/clip_0718_cam_low_truck_roll_179002_phys_box_sphere_collision_17900.json`
+- `clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900`: camera `cam_dolly_out_179003`, physics `phys_box_sphere_collision_17900`
+  preview: `previews/clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900_sheet.png`
+  video: `videos/clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900.mp4`
+  metadata: `metadata/clip_0719_cam_dolly_out_179003_phys_box_sphere_collision_17900.json`

@@ -22,6 +22,8 @@ def read_json(path: Path) -> dict[str, Any]:
 
 
 def expected_frames(job: dict[str, Any]) -> int:
+    if "frames_count" in job:
+        return int(job["frames_count"])
     metadata_path = Path(job["metadata"])
     if not metadata_path.exists():
         return 0
@@ -57,12 +59,17 @@ def build_progress(run_dir: Path, python_bin: Path) -> dict[str, Any]:
     jobs_payload = read_json(jobs_path)
     manifest = read_json(manifest_path) if manifest_path.exists() else {}
     jobs = jobs_payload.get("jobs", [])
-    log_event = last_render_log_event(run_dir / "render.log")
+    render_logs = [run_dir / "render.log", run_dir / "resume_render.log"]
+    render_logs = [path for path in render_logs if path.exists()]
+    latest_render_log = max(render_logs, key=lambda path: path.stat().st_mtime) if render_logs else run_dir / "render.log"
+    log_event = last_render_log_event(latest_render_log)
 
     job_rows = []
     frames_expected_total = 0
     frames_rendered_total = 0
     rendered_jobs_complete = 0
+    processed_jobs_complete = 0
+    frames_cleaned_after_encode = 0
     videos_complete = 0
     active_job = log_event.get("clip_id") if log_event else None
 
@@ -74,9 +81,13 @@ def build_progress(run_dir: Path, python_bin: Path) -> dict[str, Any]:
         final_frame = frames_dir / f"frame_{expected:04d}.png" if expected else frames_dir / "frame_0001.png"
         frames_complete = expected > 0 and rendered >= expected and final_frame.exists()
         video_complete = video_path.exists() and video_path.stat().st_size > 0
+        processed_complete = frames_complete or video_complete
+        frames_cleaned = video_complete and rendered == 0
         frames_expected_total += expected
         frames_rendered_total += min(rendered, expected)
         rendered_jobs_complete += int(frames_complete)
+        processed_jobs_complete += int(processed_complete)
+        frames_cleaned_after_encode += int(frames_cleaned)
         videos_complete += int(video_complete)
         job_rows.append(
             {
@@ -84,19 +95,21 @@ def build_progress(run_dir: Path, python_bin: Path) -> dict[str, Any]:
                 "expected_frames": expected,
                 "rendered_frames": rendered,
                 "frames_complete": frames_complete,
+                "processed_complete": processed_complete,
+                "frames_cleaned_after_encode": frames_cleaned,
                 "video_complete": video_complete,
                 "frames_dir": str(frames_dir),
                 "video": str(video_path),
             }
         )
 
-    all_frames_complete = bool(jobs) and rendered_jobs_complete == len(jobs)
+    all_processed_complete = bool(jobs) and processed_jobs_complete == len(jobs)
     all_videos_complete = bool(jobs) and videos_complete == len(jobs)
     if all_videos_complete:
         phase = "complete"
-    elif all_frames_complete:
+    elif all_processed_complete:
         phase = "encoding_or_waiting_for_encode"
-    elif frames_rendered_total > 0:
+    elif processed_jobs_complete > 0 or frames_rendered_total > 0:
         phase = "rendering"
     else:
         phase = "metadata_ready"
@@ -124,10 +137,12 @@ def build_progress(run_dir: Path, python_bin: Path) -> dict[str, Any]:
         "frames_rendered_total": frames_rendered_total,
         "frames_progress": round(frames_rendered_total / frames_expected_total, 5) if frames_expected_total else 0.0,
         "rendered_jobs_complete": rendered_jobs_complete,
+        "processed_jobs_complete": processed_jobs_complete,
+        "frames_cleaned_after_encode": frames_cleaned_after_encode,
         "videos_complete": videos_complete,
         "complete": all_videos_complete,
         "resume_command": resume_command,
-        "note": "Use resume_command after an interrupted run; it skips completed frame directories and completed videos.",
+        "note": "Use resume_command after an interrupted run; completed videos are final artifacts and cleaned frame directories are not rerendered.",
         "jobs": job_rows,
     }
     return progress
@@ -154,7 +169,8 @@ def main() -> None:
         progress = write_progress(args.run_dir, args.python_bin)
         print(
             f"{progress['updated_at_utc']} {progress['phase']} "
-            f"frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
+            f"processed={progress['processed_jobs_complete']}/{progress['jobs_total']} "
+            f"retained_frames={progress['frames_rendered_total']}/{progress['frames_expected_total']} "
             f"videos={progress['videos_complete']}/{progress['jobs_total']}",
             flush=True,
         )

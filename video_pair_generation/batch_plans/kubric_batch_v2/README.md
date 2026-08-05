@@ -489,3 +489,41 @@ For unattended review export, run `scripts/finalize_kubric_review_sample.py` in 
 background session. It waits until a source batch is complete, exports a compact
 coverage-oriented sample into `site/assets/runs`, generates preview sheets, and
 syncs `site/` to `docs/`. It intentionally does not commit automatically.
+
+## Formal Shared-Factor Shards
+
+Formal batch shards use 200 shared-factor blocks with four clips per block: 100
+same-camera blocks and 100 same-physics-and-scene blocks. This produces 800 clips
+per shard without constructing the full global camera-by-physics Cartesian
+product. Each shard must cover all currently admitted camera and physics
+families, use 640x480 at 24 FPS, and sample pair-group durations from 72-168
+frames. Pair members share duration, while different blocks vary independently.
+
+The initial production tranche targets five shards, `0000` through `0004`:
+1,000 blocks and 4,000 rendered clips in total. Shards are released one at a
+time rather than launched concurrently. `0001` must finish its coverage review
+before `0002`-`0004` are started. After the five-shard tranche is used for a
+first training run, coverage and model results determine whether to expand to
+10-25 total shards; that larger scale is not automatic.
+
+`kubric_batch_v2_blocks_shard_0000` is complete with seed `20260725`: 200
+blocks, 800 validated MP4s, all nine camera families, all 21 admitted physics
+families, and no retained PNG frames. Its compact GitHub Pages review is
+`kubric_batch_v2_blocks_shard_0000_review_sample`.
+
+`kubric_batch_v2_blocks_shard_0001` uses seed `20260731` with the same
+stratified contract. Run or resume it with:
+
+```bash
+tmux new-session -d -s kubric_bv2_shard0001 \\
+  "cd /workspace/writeable/code/camera_motion_disentangle && \\
+   video_pair_generation/batch_plans/kubric_batch_v2/run_shard_0001.sh"
+```
+
+The driver preserves an existing manifest, resumes only missing clips, encodes
+and validates each clip immediately after Blender renders it, then deletes that
+clip's PNG frames. This bounds temporary storage to roughly one clip instead of
+an entire shard. After all 800 MP4s complete, it exports 24 complete blocks to
+`site/assets/runs/kubric_batch_v2_blocks_shard_0001_review_sample`, builds
+previews, and syncs the review into `docs/`. Re-running the same driver after a
+machine shutdown continues from `progress.json` and existing validated MP4s.

@@ -853,6 +853,8 @@ def write_clip_metadata(
         "metadata": str(run_dir / metadata_rel),
         "frames_dir": str(run_dir / frames_rel),
         "video": str(run_dir / video_rel),
+        "frames_count": frames,
+        "resolution": [width, height],
     }
     return clip, job
 
@@ -1108,6 +1110,11 @@ def main() -> None:
     parser.add_argument("--resource-watch-interval", type=float, default=10.0)
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--no-render", action="store_true")
+    parser.add_argument(
+        "--cleanup-frames-after-encode",
+        action="store_true",
+        help="Encode and validate each rendered clip immediately, then remove its PNG frames.",
+    )
     args = parser.parse_args()
 
     if args.groups is not None:
@@ -1169,9 +1176,16 @@ def main() -> None:
                 stderr=subprocess.DEVNULL,
             )
         try:
-            gen.render_with_blender(args.blender_bin, jobs_path, args.kubric_site_packages)
+            gen.render_with_blender(
+                args.blender_bin,
+                jobs_path,
+                args.kubric_site_packages,
+                encode_after_render=args.cleanup_frames_after_encode,
+                cleanup_frames_after_encode=args.cleanup_frames_after_encode,
+            )
             write_progress(run_dir, Path(sys.executable))
-            gen.encode_videos(jobs_path)
+            if not args.cleanup_frames_after_encode:
+                gen.encode_videos(jobs_path)
             write_progress(run_dir, Path(sys.executable))
         finally:
             if resource_watcher is not None and resource_watcher.poll() is None:
